@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-italic.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-500italic.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-700italic.woff2" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/main.b08bd0bebf8696d6e0721ea912fc942d2e018815e609a192ddd77659741fd8de510a1a3a0d1cd7bd55ad1a7f8e3a2e3c2e48a324657efd41d6bfbf25b0025873.css" integrity="sha512-sIvQvr&#43;Gltbgch6pEvyULS4BiBXmCaGS3dd2WXQf2N5RCho6DRzXvVWtGn&#43;OOi48LkijJGV&#43;/UHWv78lsAJYcw==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>raspi IoT - Home Smart Mesh</title>
+<meta name="description" content="raspberry pi server for home automation. &#39;No limits&#39; to what you can do with python and node.js services interfaced with javascript web apps. This Fremwork is a lightweight mqtt interconnect between devices (HW), services (Automation) and webapps (UI).">
+<link rel="canonical" href="/docs/raspi/readme/">
+<meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:image" content="/doks.png">
+    <meta name="twitter:title" content="raspi IoT">
+<meta name="twitter:description" content="raspberry pi server for home automation. &#39;No limits&#39; to what you can do with python and node.js services interfaced with javascript web apps. This Fremwork is a lightweight mqtt interconnect between devices (HW), services (Automation) and webapps (UI).">
+
+<meta name="twitter:site" content="@henkverlinde">
+<meta name="twitter:creator" content="@henkverlinde">
+
+<meta property="og:title" content="raspi IoT">
+<meta property="og:description" content="raspberry pi server for home automation. &#39;No limits&#39; to what you can do with python and node.js services interfaced with javascript web apps. This Fremwork is a lightweight mqtt interconnect between devices (HW), services (Automation) and webapps (UI).">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/docs/raspi/readme/">
+
+  <meta property="og:image" content="/doks.png"/>
+    <meta property="article:published_time" content="2020-10-06T08:48:57+00:00">
+  <meta property="article:modified_time" content="2020-10-06T08:48:57+00:00">
+  <meta property="og:site_name" content="Home Smart Mesh">
+
+<meta property="article:publisher" content="https://www.facebook.com/verlinde.henk">
+<meta property="article:author" content="https://www.facebook.com/verlinde.henk">
+<meta property="og:locale" content="en_US">
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "name": "Home",
+        "item": "\/"
+    },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "name": "Docsraspireadme",
+        "item": "\/docsraspireadme\/"
+    }]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+  
+</head>
+  <body class="docs single">
+    <div class="header-bar fixed-top"></div>
+<header class="navbar fixed-top navbar-expand-md navbar-light">
+  <div class="container">
+    <input class="menu-btn order-0" type="checkbox" id="menu-btn">
+    <label class="menu-icon d-md-none" for="menu-btn"><span class="navicon"></span></label>
+    <a class="navbar-brand order-1 order-md-0 mr-auto" href="/">Home Smart Mesh</a>
+    <button id="mode" class="btn btn-link order-2 order-md-4" type="button" aria-label="Toggle mode">
+      <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+      <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+    </button>
+    <ul class="navbar-nav social-nav order-3 order-md-5">
+      <li class="nav-item">
+          <a class="nav-link" href="https://github.com/HomeSmartMesh"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><span class="ml-2 sr-only">GitHub</span></a>
+        </li>
+      </ul>
+    <div class="collapse navbar-collapse order-4 order-md-1">
+      <ul class="navbar-nav main-nav mr-auto order-5 order-md-2"><li class="nav-item active">
+            <a class="nav-link" href="/docs/raspi/readme/">Docs</a>
+          </li>
+        </ul>
+      <div class="break order-6 d-md-none"></div>
+      <form class="navbar-form flex-grow-1 order-7 order-md-3">
+        <input id="userinput" class="form-control is-search" type="search" placeholder="Search docs..." aria-label="Search docs..." autocomplete="off">
+        <div id="suggestions" class="shadow bg-white rounded"></div>
+      </form>
+    </div>
+  </div>
+</header>
+    <div class="wrap container" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar">
+			<nav class="docs-links" aria-label="Main navigation">
+				<h3>Raspi</h3>
+  <ul class="list-unstyled">
+    <li><a class="docs-link active" href="/docs/raspi/readme/">raspi IoT</a></li>
+    </ul>
+  <h3>nRF Mesh</h3>
+  <ul class="list-unstyled">
+    <li><a class="docs-link" href="/docs/nrf/readme/">RF Mesh</a></li>
+    </ul>
+  <h3>Webapps</h3>
+  <ul class="list-unstyled">
+    <li><a class="docs-link" href="/docs/webapps/home3d/">Home 3D</a></li>
+    </ul>
+  
+			</nav>        
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+    <h3>On this page</h3>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#software">Software</a></li>
+    <li><a href="#hardware">Hardware</a></li>
+    <li><a href="#smart-home-3d-webapp">Smart home 3D webapp</a></li>
+    <li><a href="#led-panel-webapp">Led Panel webapp</a></li>
+    <li><a href="#home-heating-app">Home heating app</a>
+      <ul>
+        <li><a href="#web-heat-control">web heat control</a></li>
+        <li><a href="#python-heat-windows-monitor">python heat windows monitor</a></li>
+        <li><a href="#docu-references">docu references</a></li>
+      </ul>
+    </li>
+    <li><a href="#bed-heating-app">Bed Heating app</a>
+      <ul>
+        <li><a href="#bed-heating-hardware">Bed Heating hardware</a></li>
+      </ul>
+    </li>
+    <li><a href="#roborock-chat">Roborock chat</a></li>
+    <li><a href="#hue-light-control">Hue Light control</a></li>
+    <li><a href="#phantom-load-cut">Phantom Load cut</a>
+      <ul>
+        <li><a href="#features">Features</a></li>
+      </ul>
+    </li>
+    <li><a href="#heat-cut">Heat cut</a></li>
+    <li><a href="#home-status">Home status</a></li>
+    <li><a href="#roborock-button">Roborock button</a></li>
+    <li><a href="#zigbeegraphview">zigbee/graphview</a>
+      <ul>
+        <li><a href="#features-1">Features</a></li>
+        <li><a href="#inactive-hosted-page">Inactive hosted page</a></li>
+        <li><a href="#logging">Logging</a></li>
+        <li><a href="#transport-browserconsole">transport-browserconsole</a></li>
+      </ul>
+    </li>
+    <li><a href="#support">Support</a></li>
+    <li><a href="#safety-warning">Safety warning</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		<h1>raspi IoT</h1>
+			<p class="lead">raspberry pi server for home automation. 'No limits' to what you can do with python and node.js services interfaced with javascript web apps. This Fremwork is a lightweight mqtt interconnect between devices (HW), services (Automation) and webapps (UI).</p>
+			<h2 id="software">Software<a href="#software" class="anchor" aria-hidden="true">#</a> </h2>
+<figure>
+    <img src="/images/software.png" width="600"/> 
+</figure>
+
+<ul>
+<li>Raspbian OS</li>
+<li>Main services
+<ul>
+<li>Mosquitto : https://mosquitto.org/</li>
+<li>influxDB : https://www.influxdata.com/products/influxdb-overview/</li>
+<li>mqtt2influx : <a href="./py/influx">py/influx</a></li>
+<li>Grafana : https://grafana.com/</li>
+<li>graphql sensors : <a href="./js/graphql">js/graphql</a></li>
+</ul>
+</li>
+<li>x to mqtt
+<ul>
+<li>Zigbee2mqtt : https://www.zigbee2mqtt.io/</li>
+<li>nrf2mqtt : <a href="https://github.com/nRFMesh/nRF52_Mesh/tree/master/raspi/nrf_mesh">github nRF52_Mesh nrf_mesh</a></li>
+<li>miflora2mqtt : https://github.com/RaymondMouthaan/miflora-mqtt-daemon</li>
+<li>telegram bots2mqtt : <a href="./js/telegraf">js/telegraf</a> based on https://github.com/telegraf/telegraf</li>
+</ul>
+</li>
+<li>automation services
+<ul>
+<li>Light control : <a href="./py/hue">py/hue</a></li>
+<li>Phantom Load cut : <a href="./js/pc_control">js/pc_control</a></li>
+<li>Heat cut : <a href="./py/heating">py/heating</a></li>
+<li>Home status : <a href="./py/home_status">py/home_status</a></li>
+<li>Roborock button : <a href="./py/hover">py/hover</a></li>
+</ul>
+</li>
+<li>user interface
+<ul>
+<li>3D webapp : https://github.com/HomeSmartMesh/smart_home_3d_webapp</li>
+<li>Led panel : <a href="./js/leds_panel">js/leds_panel</a></li>
+<li>Bed heating : <a href="./js/bed_heating">js/bed_heating</a></li>
+<li>Roborock Chat : <a href="./js/telegraf/hover_poll.js">js/telegraf/hover_poll.js</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="hardware">Hardware<a href="#hardware" class="anchor" aria-hidden="true">#</a> </h2>
+<figure>
+    <img src="/images/devices.png" width="600"/> 
+</figure>
+
+<ul>
+<li>Zigbee
+<ul>
+<li>Hue Light with Hue gateway</li>
+<li>Eurotronics thermostats with zigbee2mqtt</li>
+<li>Aquara sensors with Zigbee2mqtt</li>
+</ul>
+</li>
+<li>WiFi
+<ul>
+<li>ESP32 bed heater</li>
+<li>ESP32 neopixels led panel</li>
+<li>Shelly power control and monitor</li>
+<li>Roborock with valetudeo server : https://github.com/Hypfer/Valetudo</li>
+</ul>
+</li>
+<li>Custom RF
+<ul>
+<li>nRF52 sensors with <a href="https://github.com/nRFMesh/nRF52_Mesh">nRF52 Mesh</a></li>
+</ul>
+</li>
+<li>ESP32
+<ul>
+<li>led panel : <a href="https://github.com/HomeSmartMesh/esp32_iot/tree/master/rgb_led">github esp32_iot rgb_led</a></li>
+<li>bed heating <a href="https://github.com/HomeSmartMesh/esp32_iot/tree/master/bed_heater">github esp32_iot bed_heater</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="smart-home-3d-webapp">Smart home 3D webapp<a href="#smart-home-3d-webapp" class="anchor" aria-hidden="true">#</a> </h2>
+<figure>
+    <img src="/images/floor_temperature.png" width="600"/> 
+</figure>
+
+<p>Attempt to unify interfaces in one app. Result is quite a success though requires a beast GPU and quite some effort to arrange 3D details and camera positioning to get a nice user experiance out of it.</p>
+<ul>
+<li>Has it&rsquo;s own github repo : https://github.com/HomeSmartMesh/smart_home_3d_webapp</li>
+<li>Hackaday project : https://hackaday.io/project/169046-smart-home-3d-webapp</li>
+<li>Even a Hackaday Blog entry : https://hackaday.com/2019/12/29/the-smart-home-gains-an-extra-dimension/</li>
+</ul>
+<h2 id="led-panel-webapp">Led Panel webapp<a href="#led-panel-webapp" class="anchor" aria-hidden="true">#</a> </h2>
+<p><figure>
+    <img src="/images/led_panel_app.jpg" width="600"/> 
+</figure>
+
+<figure>
+    <img src="/images/ledpanel.jpg" width="600"/> 
+</figure>
+</p>
+<ul>
+<li>Hackaday project : https://hackaday.io/project/162825-neopixels-animations-on-esp32-mqtt-json-webapp</li>
+</ul>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/LMJBS6VYZzk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="home-heating-app">Home heating app<a href="#home-heating-app" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="web-heat-control">web heat control<a href="#web-heat-control" class="anchor" aria-hidden="true">#</a> </h3>
+<figure>
+    <img src="/images/demo.gif" width="600"/> 
+</figure>
+
+<p>The control of the heating has a feedback that ensures the execution of the command. The green displayed numbers represent the time since the last status of the zigbee device. Once a slider is modified and a command is sent, a feedback shall be received within few seconds and the time since last message should drop to <code>0 mn</code></p>
+<h3 id="python-heat-windows-monitor">python heat windows monitor<a href="#python-heat-windows-monitor" class="anchor" aria-hidden="true">#</a> </h3>
+<ol>
+<li>adjust your mqtt configuration in <a href="raspi/heat/config.json">config.json</a></li>
+<li>adjust the eurotronic heater topic and apertures (apertures are the contact sensors list)</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json">    <span class="s2">&#34;heatings&#34;</span><span class="err">:</span><span class="p">{</span>
+        <span class="nt">&#34;living heat&#34;</span><span class="p">:{</span>
+            <span class="nt">&#34;topic&#34;</span><span class="p">:</span><span class="s2">&#34;lzig/living heat/set&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;Apertures&#34;</span><span class="p">:[</span>
+                <span class="s2">&#34;balcony door&#34;</span><span class="p">,</span>
+                <span class="s2">&#34;balcony window right&#34;</span><span class="p">,</span>
+                <span class="s2">&#34;balcony window left&#34;</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div><ol start="3">
+<li>add the contact sensors to the mqtt subscriptions as well</li>
+<li>run the script <code>python raspi/heat.py</code></li>
+</ol>
+<p>example eurotronic mqtt payload</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="err">zig/living</span> <span class="err">heat</span> <span class="p">{</span>
+    <span class="nt">&#34;current_heating_setpoint&#34;</span><span class="p">:</span><span class="mi">17</span><span class="p">,</span>
+    <span class="nt">&#34;eurotronic_system_mode&#34;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&#34;local_temperature&#34;</span><span class="p">:</span><span class="mf">18.49</span><span class="p">,</span>
+    <span class="nt">&#34;occupied_heating_setpoint&#34;</span><span class="p">:</span><span class="mi">21</span><span class="p">,</span>
+    <span class="nt">&#34;unoccupied_heating_setpoint&#34;</span><span class="p">:</span><span class="mi">16</span><span class="p">,</span>
+    <span class="nt">&#34;eurotronic_error_status&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&#34;pi_heating_demand&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&#34;battery&#34;</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span>
+    <span class="nt">&#34;linkquality&#34;</span><span class="p">:</span><span class="mi">44</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="docu-references">docu references<a href="#docu-references" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li><a href="http://danielstern.ca/range.css/#/">slider editing web page</a></li>
+<li><a href="https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/">slider css docu</a></li>
+<li>https://www.w3schools.com/jsref/dom_obj_event.asp</li>
+<li>https://www.w3schools.com/jsref/dom_obj_all.asp</li>
+<li>https://patrickhlauke.github.io/touch/</li>
+<li>on release working : https://codepen.io/mhartington/pen/HKGno</li>
+</ul>
+<h2 id="bed-heating-app">Bed Heating app<a href="#bed-heating-app" class="anchor" aria-hidden="true">#</a> </h2>
+<figure>
+    <img src="/images/bed_heating.png" width="400"/> 
+</figure>
+
+<ul>
+<li>web app : <a href="./js/bed_heating/">js/bed_heater</a></li>
+</ul>
+<h3 id="bed-heating-hardware">Bed Heating hardware<a href="#bed-heating-hardware" class="anchor" aria-hidden="true">#</a> </h3>
+<figure>
+    <img src="/images/esp_32_bed_heater.png" width="200"/> 
+</figure>
+
+<ul>
+<li>ESP32 firmware : <a href="https://github.com/HomeSmartMesh/esp32_iot/tree/master/bed_heater">github esp32_iot bed_heater</a></li>
+<li>using a Shelly 1 pm : https://shelly.cloud/shelly-1pm-wifi-smart-relay-home-automation/</li>
+<li>A standard off the shelf bed heating matrass</li>
+<li>A Solid state relay</li>
+</ul>
+<h2 id="roborock-chat">Roborock chat<a href="#roborock-chat" class="anchor" aria-hidden="true">#</a> </h2>
+<figure>
+    <img src="/images/hover_chat.png" width="600"/> 
+</figure>
+
+<ul>
+<li>using the amazing node.js telegraf framework : https://github.com/telegraf/telegraf</li>
+<li>Roborock Chat : <a href="./js/telegraf/hover_poll.js">js/telegraf/hover_poll.js</a></li>
+</ul>
+<h2 id="hue-light-control">Hue Light control<a href="#hue-light-control" class="anchor" aria-hidden="true">#</a> </h2>
+<ul>
+<li>Controls all the Hue light bulbs from Aquara sensor switches using the <a href="https://developers.meethue.com/develop/get-started-2/">HUE rest API</a></li>
+<li>custom functions
+<ul>
+<li>Long press for minimal dimming</li>
+<li>Toggle on of or Toggle dim states</li>
+</ul>
+</li>
+<li><a href="./py/hue">py/hue</a></li>
+</ul>
+<h2 id="phantom-load-cut">Phantom Load cut<a href="#phantom-load-cut" class="anchor" aria-hidden="true">#</a> </h2>
+<ul>
+<li>Some home devices especially device clusters such as TV sets and surroundings or PC and surroundings do have a significant cumulated power usage when in a standby mode.</li>
+<li>Who likes to pay money for non used electricity ?</li>
+<li>Who likes to keep remembering each time and toggling switching on locations hard to access ?</li>
+<li>This scrips <a href="./js/pc_control">js/pc_control</a> comes to the rescue and does this for you in a smart way.</li>
+</ul>
+<h3 id="features">Features<a href="#features" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>configurable standby power level. For example a TV set with sound system consumes 100 W to 200 W but when on standby, still ~ 11 W</li>
+<li>a shelly socket provides a real time power usage through mqtt</li>
+<li>if the device is in standby &lt; 12 W for more than 5 min, the shelly device is ordered to cut the power resulting in 1 W for the shelly device power usage (wifi connection). Therefore a permanent 10 W is saved.</li>
+<li>Low Motion sensors attached to the chair or to the remote control order the shelly to switch on again. False positive is not a problem and only costs 10W standby consumption for 5 more min before cutting again.</li>
+<li>If the TV started really to be used and power is &gt; 12 W, then the standby power cut system is not doing anything so that the user enjoys watching TV until the next TV switch off cycle.</li>
+</ul>
+<h2 id="heat-cut">Heat cut<a href="#heat-cut" class="anchor" aria-hidden="true">#</a> </h2>
+<figure>
+    <img src="/images/heat_windows.png" width="600"/> 
+</figure>
+
+<ul>
+<li>
+<p>Hackaday page : <a href="https://hackaday.io/project/124114-nrf5-custom-mesh-network/log/168774-aqara-and-eurotronics-hand-in-hand-to-save-energy">Aquara and Eurotronics hand in hand to save energy</a></p>
+</li>
+<li>
+<p>Opening a window without remembering to switch the heating off can cost a peak of heat that consists of the major power cost of the whole day !</p>
+</li>
+<li>
+<p>The smart detection based on temperature drop is no reliable and only acts late sometimes when not necessary.</p>
+</li>
+<li>
+<p>With a simple aquara contact switch the system is now reliable</p>
+</li>
+<li>
+<p>Python service : <a href="./py/heating">py/heating</a></p>
+</li>
+</ul>
+<h2 id="home-status">Home status<a href="#home-status" class="anchor" aria-hidden="true">#</a> </h2>
+<figure>
+    <img src="/images/shelly_status.png" width="150"/> 
+</figure>
+
+<ul>
+<li>Leaving home, in a hurry, no time to walk through the house or to start smartphone apps to know if the heating is forgotten in one room or if a window is left open in another.</li>
+<li>With this script <a href="./py/home_status">py/home_status</a>, you see the home status right next to the house door before leaving</li>
+<li>Any window is open : The status light is blue</li>
+<li>Any heater is active : The status is red</li>
+<li>Both red and blue can be combined</li>
+</ul>
+<p>How does this work. In a controlled environemnt where the wifi is reliable, there is no need for wifi status as it is always on. Therefore the led status disable function can be re-used for another purpose. This provide the nicest integration of led status including power supply, mqtt connection without even blocking the socket for other usage.</p>
+<p>Below are the control URLs to turn led color on and off :</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json">    <span class="s2">&#34;status&#34;</span><span class="err">:</span><span class="p">{</span>
+        <span class="nt">&#34;red&#34;</span><span class="p">:{</span>
+            <span class="nt">&#34;on&#34;</span><span class="p">:</span><span class="s2">&#34;http://10.0.0.48/settings/?led_power_disable=false&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;off&#34;</span><span class="p">:</span><span class="s2">&#34;http://10.0.0.48/settings/?led_power_disable=true&#34;</span>
+        <span class="p">},</span>
+        <span class="nt">&#34;blue&#34;</span><span class="p">:{</span>
+            <span class="nt">&#34;on&#34;</span><span class="p">:</span><span class="s2">&#34;http://10.0.0.48/settings/?led_status_disable=false&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;off&#34;</span><span class="p">:</span><span class="s2">&#34;http://10.0.0.48/settings/?led_status_disable=true&#34;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div><h2 id="roborock-button">Roborock button<a href="#roborock-button" class="anchor" aria-hidden="true">#</a> </h2>
+<p>As Roborock <a href="https://github.com/Hypfer/Valetudo">valetudo</a> provides an mqtt interface, all it takes is this script <a href="./py/hover">py/hover</a> to order cleaning of a room or a section with a click on an aquara zigbee button.</p>
+<h2 id="zigbeegraphview">zigbee/graphview<a href="#zigbeegraphview" class="anchor" aria-hidden="true">#</a> </h2>
+<p><a href="./zigbee/graph_view/">zigbee/graph_view</a></p>
+<figure>
+    <img src="/images/zig_demo.gif" width="600"/> 
+</figure>
+
+<h3 id="features-1">Features<a href="#features-1" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>configurable ip, port and mqtt base name</li>
+<li>multiple hosts for those using mulitple zigbee2mqtt instances.</li>
+<li>svg pan zoom for simpleefficient viewing. graphs can be so huge that text gets tiny.</li>
+<li>red buttons for change graph layout algorithm. Depending on the network, some algos can be more convenient than others</li>
+</ul>
+<p>Note that the following viewer is hosted on github and has therefore a secure connection that shall not swap to a local home connection.</p>
+<h3 id="inactive-hosted-page">Inactive hosted page<a href="#inactive-hosted-page" class="anchor" aria-hidden="true">#</a> </h3>
+<p><a href="https://homesmartmesh.github.io/raspi/zigbee/graph_view/index.html">link to inactive viewer</a></p>
+<p>In order to use this script, it is required to host it locally on local raspberry py, see <a href="zigbee/graph_view/deploy.sh">deploy</a> script for deployment convenience. Direct usage from the link would require to authorise cross origin on chrome symbol on right of the adress bar.</p>
+<h3 id="logging">Logging<a href="#logging" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="logio">Log.io<a href="#logio" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>exposing log files to webapps :</li>
+<li><code>js/log.io/server.json</code></li>
+<li>https://github.com/NarrativeScience/log.io</li>
+</ul>
+<h3 id="transport-browserconsole">transport-browserconsole<a href="#transport-browserconsole" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>https://www.npmjs.com/package/winston-transport-browserconsole</li>
+</ul>
+<h2 id="support">Support<a href="#support" class="anchor" aria-hidden="true">#</a> </h2>
+<ul>
+<li>I&rsquo;m using the scripts from this repo, they are running 24/7 and have a stunning reliability. Total system failure rate is nearing that of the HW devices. No reboots ever required.</li>
+<li>Each service has a log file to trace back unintended behavior and complex logic.</li>
+<li>I&rsquo;ll provide support for any question or suggestion on https://github.com/HomeSmartMesh/raspi/issues</li>
+</ul>
+<h2 id="safety-warning">Safety warning<a href="#safety-warning" class="anchor" aria-hidden="true">#</a> </h2>
+<ul>
+<li>Power Sockets have deadly voltage and should not be self altered</li>
+<li>Usage of certified products such as Shelly or others is recommended for any high voltage product</li>
+<li>hacking custom scripts to control equipment might improve safety in case you add power cut off to a lower power for each section and device, but might also alter your food if your fridge inadvertantly goes off due to a wrong configuration
+<ul>
+<li>reboot state</li>
+<li>safety power too low</li>
+</ul>
+</li>
+<li>Any heat power control custom script must necessarily have another safe switch to fully cut the power when away or device is inattended.</li>
+</ul>
+
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/docs/webapps/home3d/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Home 3D
+				</div>
+			</div>
+		</a>
+	<a class="ml-auto" href="/docs/nrf/readme/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					RF Mesh &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a href="https://getdoks.org/">Doks</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-right">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+    <script src="/index.min.144026cdd5ee1ceea5fb96d367d563bd98f36d68a7d896a7ba4d01924ad3773dfeb6df1146a7c681a4764284c753173bc12fafc57176f9903e4544dccbca75ab.js" integrity="sha512-FEAmzdXuHO6l&#43;5bTZ9VjvZjzbWin2Januk0BkkrTdz3&#43;tt8RRqfGgaR2QoTHUxc7wS&#43;vxXF2&#43;ZA&#43;RUTcy8p1qw==" crossorigin="anonymous" defer></script>
+  <script src="/main.bb2ecd2a1b89d7a6d989848afb223e1541c872e586d2432d1266c89e7b5c691b7a58434d6708694782a06efe9f1b6aa15cdc9b03d74ce0c73ac119c150be1814.js" integrity="sha512-uy7NKhuJ16bZiYSK&#43;yI&#43;FUHIcuWG0kMtEmbInntcaRt6WENNZwhpR4Kgbv6fG2qhXNybA9dM4Mc6wRnBUL4YFA==" crossorigin="anonymous" defer></script>
+
+  </body>
+</html>
