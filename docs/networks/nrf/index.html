@@ -1,0 +1,989 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-italic.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-500italic.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-700italic.woff2" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/main.b6e816496ba0dba59cda0fb3c64b5fb82994de0693a406adb7630403432a56029f73e983ae93679c80c1238413451c60c152f082f78f483ae97649ad860b35be.css" integrity="sha512-tugWSWug26Wc2g&#43;zxktfuCmU3gaTpAatt2MEA0MqVgKfc&#43;mDrpNnnIDBI4QTRRxgwVLwgvePSDrpdkmthgs1vg==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>nRF Mesh - Home Smart Mesh</title>
+<meta name="description" content="A simpler, more efficient alternative to Z-x, BL-x, Thread, standard RF protocols. Open source SW is provided for off the shelf nRF SoC tags and dongles.">
+<link rel="canonical" href="/docs/networks/nrf/">
+<meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:image" content="/doks.png">
+    <meta name="twitter:title" content="nRF Mesh">
+<meta name="twitter:description" content="A simpler, more efficient alternative to Z-x, BL-x, Thread, standard RF protocols. Open source SW is provided for off the shelf nRF SoC tags and dongles.">
+
+<meta name="twitter:site" content="@henkverlinde">
+<meta name="twitter:creator" content="@henkverlinde">
+
+<meta property="og:title" content="nRF Mesh">
+<meta property="og:description" content="A simpler, more efficient alternative to Z-x, BL-x, Thread, standard RF protocols. Open source SW is provided for off the shelf nRF SoC tags and dongles.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/docs/networks/nrf/">
+
+  <meta property="og:image" content="/doks.png"/>
+    <meta property="article:published_time" content="2020-10-06T08:48:57+00:00">
+  <meta property="article:modified_time" content="2020-10-06T08:48:57+00:00">
+  <meta property="og:site_name" content="Home Smart Mesh">
+
+<meta property="article:publisher" content="https://www.facebook.com/verlinde.henk">
+<meta property="article:author" content="https://www.facebook.com/verlinde.henk">
+<meta property="og:locale" content="en_US">
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "name": "Home",
+        "item": "\/"
+    },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "name": "Docsnetworksnrf",
+        "item": "\/docsnetworksnrf\/"
+    }]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+  
+</head>
+  <body class="docs single">
+    <div class="header-bar fixed-top"></div>
+<header class="navbar fixed-top navbar-expand-md navbar-light">
+  <script src="/js/svg-pan-zoom.min.js"></script>
+  <div class="container">
+    <input class="menu-btn order-0" type="checkbox" id="menu-btn">
+    <label class="menu-icon d-md-none" for="menu-btn"><span class="navicon"></span></label>
+    <a class="navbar-brand order-1 order-md-0 mr-auto" href="/">Home Smart Mesh</a>
+    <button id="mode" class="btn btn-link order-2 order-md-4" type="button" aria-label="Toggle mode">
+      <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+      <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+    </button>
+    <ul class="navbar-nav social-nav order-3 order-md-5">
+      <li class="nav-item">
+          <a class="nav-link" href="https://github.com/HomeSmartMesh"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><span class="ml-2 sr-only">GitHub</span></a>
+        </li>
+      </ul>
+    <div class="collapse navbar-collapse order-4 order-md-1">
+      <ul class="navbar-nav main-nav mr-auto order-5 order-md-2"><li class="nav-item active">
+            <a class="nav-link" href="/docs/raspi/readme/">Docs</a>
+          </li>
+        </ul>
+      <div class="break order-6 d-md-none"></div>
+      <form class="navbar-form flex-grow-1 order-7 order-md-3">
+        <input id="userinput" class="form-control is-search" type="search" placeholder="Search docs..." aria-label="Search docs..." autocomplete="off">
+        <div id="suggestions" class="shadow bg-white rounded"></div>
+      </form>
+    </div>
+  </div>
+</header>
+    <div class="wrap container" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar">
+			<nav class="docs-links" aria-label="Main navigation">
+				<h3>Raspi</h3>
+  <ul class="list-unstyled">
+    <li><a class="docs-link" href="/docs/raspi/readme/">raspi IoT</a></li>
+    </ul>
+  <h3>Mesh Networks</h3>
+  <ul class="list-unstyled">
+    <li><a class="docs-link active" href="/docs/networks/nrf/">nRF Mesh</a></li>
+    <li><a class="docs-link" href="/docs/networks/thread/">Thread</a></li>
+    </ul>
+  <h3>Webapps</h3>
+  <ul class="list-unstyled">
+    <li><a class="docs-link" href="/docs/webapps/home3d/">Home 3D</a></li>
+    </ul>
+  
+			</nav>        
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+    <h3>On this page</h3>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#static-demo">Static Demo</a></li>
+    <li><a href="#nrf52-applications">nRF52 Applications</a>
+      <ul>
+        <li><a href="#01-sensor-tag">01 sensor tag</a></li>
+        <li><a href="#04-uart-dongle">04 uart dongle</a></li>
+        <li><a href="#08-usb-dongle-nrf52840-dongle">08 usb dongle (nRF52840-dongle)</a></li>
+      </ul>
+    </li>
+    <li><a href="#drivers--custom-mesh-protocol">Drivers &amp; Custom Mesh protocol</a>
+      <ul>
+        <li><a href="#drivers">./drivers/</a></li>
+        <li><a href="#protocol-overview">Protocol Overview</a></li>
+        <li><a href="#protocol-description">Protocol Description</a></li>
+        <li><a href="#packet-format">Packet Format</a></li>
+        <li><a href="#alive-trace-routing">Alive trace routing</a></li>
+      </ul>
+    </li>
+    <li><a href="#printed-circuit-boards">Printed Circuit Boards</a>
+      <ul>
+        <li><a href="#tools">./tools/</a></li>
+        <li><a href="#nrf5_sdk_1500_prf">./nRF5_SDK_15.0.0_prf/</a></li>
+      </ul>
+    </li>
+    <li><a href="#dependencies">Dependencies</a>
+      <ul>
+        <li><a href="#details-about-the-nrf52-frimware-environment">Details about the nRF52 Frimware environment</a></li>
+        <li><a href="#cool-defines-and-data-configuration">Cool defines and data configuration</a></li>
+        <li><a href="#simple-board-switch">simple board switch</a></li>
+        <li><a href="#ppi-automation">PPI automation</a></li>
+      </ul>
+    </li>
+    <li><a href="#nrf52-sensor-tag">nRF52 Sensor Tag</a>
+      <ul>
+        <li><a href="#design">Design</a></li>
+        <li><a href="#mounted-pcbs">Mounted PCBs</a></li>
+        <li><a href="#low-power-configuration">Low Power configuration</a></li>
+        <li><a href="#low-power-measures">Low Power measures</a></li>
+      </ul>
+    </li>
+    <li><a href="#nrf52-dongle">nRF52 Dongle</a>
+      <ul>
+        <li><a href="#software">Software</a></li>
+        <li><a href="#hardware">Hardware</a></li>
+        <li><a href="#from-the-inside">From the inside</a></li>
+        <li><a href="#pinout">pinout</a></li>
+        <li><a href="#needle-adapter">Needle adapter</a></li>
+      </ul>
+    </li>
+    <li><a href="#raspi-host-controller-interface">Raspi Host Controller Interface</a>
+      <ul>
+        <li><a href="#hci-mqtt-test-vector">HCI MQTT Test vector</a></li>
+      </ul>
+    </li>
+    <li><a href="#more-nrf52-applications">More nRF52 Applications</a>
+      <ul>
+        <li><a href="#02-acell-tag">02 acell tag</a></li>
+        <li><a href="#03-buttons">03 buttons</a></li>
+        <li><a href="#05-rotary-decoder">05 rotary decoder</a></li>
+        <li><a href="#06-bldc-52832">06 bldc 52832</a></li>
+        <li><a href="#07-bldc-52840">07 bldc 52840</a></li>
+      </ul>
+    </li>
+    <li><a href="#python-scripts">Python scripts</a>
+      <ul>
+        <li><a href="#raspberry-pi-scripts-moved-to-github-raspihttpsgithubcomhomesmartmeshraspi-prject">Raspberry pi scripts moved to <a href="https://github.com/HomeSmartMesh/raspi">github raspi</a> Prject</a></li>
+      </ul>
+    </li>
+    <li><a href="#home-smart-mesh-detailed-design">Home Smart Mesh detailed design</a></li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		<h1>nRF Mesh</h1>
+			<p class="lead">A simpler, more efficient alternative to Z-x, BL-x, Thread, standard RF protocols. Open source SW is provided for off the shelf nRF SoC tags and dongles.</p>
+			
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="https://github.com/nRFMesh/nRF52_Mesh" role="button" target="_blank">nRF Mesh Github Repo</a>
+        </div>
+    </div>
+</div>
+
+<h2 id="features">Features<a href="#features" class="anchor" aria-hidden="true">#</a> </h2>
+<figure>
+    <img src="/images/nRF52-features.png" width="100%"/> 
+</figure>
+
+<ul>
+<li>2.4 GHz 2 Mbps Mesh Network
+<ul>
+<li>tested with 300 packets / second</li>
+</ul>
+</li>
+<li>Flash time automated database config</li>
+<li>Zero install time configuration
+<ul>
+<li>No association, No pairing, No factory resets</li>
+</ul>
+</li>
+<li>Router = Coordinator = Repeater = Sniffer = CLI</li>
+<li>text serial line protocol</li>
+<li>Multiple Network endpoints
+<ul>
+<li>No single point of failure</li>
+</ul>
+</li>
+<li>Server, Dongles, Sensors
+<ul>
+<li>Full Stack Open Source (no softdevices required)</li>
+<li>HW On the shelves</li>
+<li>optional DIY HW</li>
+</ul>
+</li>
+<li>Alive trace routing
+<ul>
+<li>a heartbeat message that gives info about the age and RF tx/rx hops through the route</li>
+</ul>
+</li>
+</ul>
+<p>see below the <a href="#drivers--custom-mesh-protocol">Drivers &amp; Custom Mesh protocol</a> section for the RF Protocol details</p>
+<h2 id="description">Description<a href="#description" class="anchor" aria-hidden="true">#</a> </h2>
+<ul>
+<li>2 Mbps (e.g. Zgibee is at 250 Kbps to have a higher range), lowering the bitrate does not improve the range enough to get rid of repeaters, and once you need repeaters these are continuous listeners and require permanent power anyway, so the strategy is to have a repeater for every slot of the house and those repeaters can have power amplifiers and the range problem is solved keeping the high bitrate feature.</li>
+<li>successfull stress tests including up to 300 packets / second.</li>
+<li>This <a href="./nodes.json">nodes.json</a> configuration file contains the short id for device unique identifier (uid64) and other configurations such as the channel, the sleep time, the required function,&hellip; Note that a python script using jLink API automate the flashing process as the uid is read every time from the attached device and matches the parameters to be flashed from the config file.</li>
+<li>As the short id (8 bits) is flashed, there is no association process required and all sensor devices can act as a pure beacons (no listening required) which considerably increases battery life time. We can keep arguing about the need of an acknowledged protocol for sensors logging, I do not think it is required as the feedback of battery level and rssi are both logged as well so the user knows if the sensor is in a healthy position or not.</li>
+<li>Router = Coordinator = Repeater = Sniffer = CLI : actually, a configuration activates the repeat functionality in case someone wants a completely stealth sniffer and this config does not require a different FW. There is nothing to coordinate as the mesh is fully dynamic with a flood and time to live concept. And every dongle has a CLI in text mode to report heard packets and takes commands as text input.</li>
+<li>A consequence of the simplified design allows to have multiple dongles in different locations listening to the network and reporting it to mqtt which avoids any single point of failure. By design there is no id 0 privileged coordinator and end devices do not require to know any particular associated address, they just wake up, broadcast and sleep.</li>
+<li>As visible in the gif animations below, Open Source SW is provided for all steps, devices firmware and server python code.</li>
+</ul>
+<h2 id="static-demo">Static Demo<a href="#static-demo" class="anchor" aria-hidden="true">#</a> </h2>
+<ul>
+<li>
+<p><a href="https://github.com/nRFMesh/nRF52_Mesh/tree/master/applications/04_uart_dongle">UART : dongle firmware - directory</a></p>
+</li>
+<li>
+<p><a href="https://github.com/nRFMesh/nRF52_Mesh/tree/master/applications/08_usb_dongle">USB : dongle firmware - directory</a></p>
+<p>cu -l /dev/ttyACM0 -s 460800</p>
+</li>
+</ul>
+<figure>
+    <img src="/images/nrf_serial.gif" width="100%"/> 
+</figure>
+
+<p>subscribe to topic</p>
+<pre><code>mosquitto_sub -t 'nrf/#' -v | ts
+</code></pre>
+<p>start nrf_mesh <a href="https://github.com/HomeSmartMesh/raspi/tree/master/py/nrf_mesh">py/nrf_mesh</a> from <a href="https://github.com/HomeSmartMesh/raspi/">raspi</a> Project</p>
+<pre><code>python3 nrf_mesh.py
+</code></pre>
+<figure>
+    <img src="/images/nrf_mqtt.gif" width="100%"/> 
+</figure>
+
+<p>This custom sensors RF mesh can expand to cover a home area. Onces connected to services provided in the <a href="https://github.com/HomeSmartMesh/raspi">raspi</a> project, including python scripts, influxdb and grafana, the end result dashboard looks like this</p>
+<figure>
+    <img src="/images/grafana-dashboard.png" width="100%"/> 
+</figure>
+
+<hr>
+<h2 id="nrf52-applications">nRF52 Applications<a href="#nrf52-applications" class="anchor" aria-hidden="true">#</a> </h2>
+<pre><code>cd ./applications/
+</code></pre>
+<p>only the main applications are listed here, for further details about all applications see below the <a href="#More-nRF52-Applications">More nRF52 Applications</a> section</p>
+<h3 id="01-sensor-tag">01 sensor tag<a href="#01-sensor-tag" class="anchor" aria-hidden="true">#</a> </h3>
+<pre><code>application/01_sensortag&gt; make flash
+application/01_sensortag&gt; make paramw
+</code></pre>
+<figure>
+    <img src="/images/nRF52832_sensortag.png" width="300"/> 
+</figure>
+
+<ul>
+<li>Status : deployed &gt; 1 year</li>
+<li>nRF52832 module</li>
+<li>Temperature, Humidity, Pressure : BME280</li>
+<li>Light : MAX44009</li>
+<li>Smooth graphana logs with cyclic broadcast ~ 30 sec =&gt; battery life ~ 6 month on CR2032</li>
+<li><code>make paramw</code> detects the device uid and writes the config parameters available in <a href="./nodes.json">nodes.json</a></li>
+</ul>
+<h3 id="04-uart-dongle">04 uart dongle<a href="#04-uart-dongle" class="anchor" aria-hidden="true">#</a> </h3>
+<pre><code>application/04_uart_dongle&gt; make flash
+application/04_uart_dongle&gt; make paramw
+</code></pre>
+<figure>
+    <img src="/images/dongle.png" width="200"/> 
+</figure>
+
+<ul>
+<li>Status : deployed &gt; 1 year</li>
+<li>buy : &ldquo;nRF52832 BLE USB UART dongle&rdquo;</li>
+<li>custom firmware and pogo-pins jtag adapter see below</li>
+<li>RF Mesh repeater + RF Mesh to Host interface</li>
+<li><code>make paramw</code> detects the device uid and writes the config parameters available in <a href="./nodes.json">nodes.json</a></li>
+</ul>
+<h3 id="08-usb-dongle-nrf52840-dongle">08 usb dongle (nRF52840-dongle)<a href="#08-usb-dongle-nrf52840-dongle" class="anchor" aria-hidden="true">#</a> </h3>
+<pre><code>application/08_usb_dongle&gt; make flash
+application/08_usb_dongle&gt; make paramw
+</code></pre>
+<figure>
+    <img src="/images/nRF52840-dongle-debug.png" width="100%"/> 
+</figure>
+
+<ul>
+<li>buy : &ldquo;nRF52840 usb dongle&rdquo;</li>
+<li>custom firmware for RF mesh</li>
+<li>RF Mesh repeater + RF Mesh to Host interface</li>
+<li>buffered USB CDC tx and rx</li>
+<li><code>make paramw</code> detects the device uid and writes the config parameters available in <a href="./nodes.json">nodes.json</a></li>
+<li>pogo-pins jtag adapter 3dprint :
+<ul>
+<li><a href="https://a360.co/3jr91PD">Version two CAD Model</a></li>
+<li><a href="https://a360.co/2CDqeTA">Version one Fusion360 CAD model</a></li>
+</ul>
+</li>
+</ul>
+<figure>
+    <img src="/images/pogo-versions.jpg" width="100%"/> 
+</figure>
+
+<hr>
+<h2 id="drivers--custom-mesh-protocol">Drivers &amp; Custom Mesh protocol<a href="#drivers--custom-mesh-protocol" class="anchor" aria-hidden="true">#</a> </h2>
+<pre><code>cd ./drivers/
+</code></pre>
+<h3 id="drivers">./drivers/<a href="#drivers" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Contains the custom drivers for this project from which the <a href="./drivers/mesh.c">mesh.c</a> a light weight Mesh Protocol connecting all the devices using a custom RF protocol (without softdevice)</p>
+<ul>
+<li>Sleepy nodes (low power) and router nodes (always listening)</li>
+<li>single layer ultra simple rpotocol. App into mac with unique ids to small ids mapping</li>
+<li>A simple alternative to the Bluetooth Mesh and Zigbee Thread IPV6</li>
+</ul>
+<figure>
+    <img src="/images/mesh.png" width="100%"/> 
+</figure>
+
+<ul>
+<li>Low power node : Mesh node that can be a sensor Tag that wakes up on RTC or on sensor value interrupt to log a parameter. Can also be a button that wakes up on a press PIO interrupt.</li>
+<li>Router node : Mesh node that cooperates with the Low power nodes, the router has to be a device that keeps listening permanently on the same RF channel, this might require ~ 13 mA. Example router devices are light controllers, server’s RF dongle or USB powered sensors and status devices.</li>
+<li>Server : A Raspberry pi running linux. The RF signals come through the serial port or with a USB adapter, then published on MQTT, from which Python scripts inject signals on the Database, connected to Grafana web server. Note that there can be multiple router dongles connected to servers.</li>
+</ul>
+<h3 id="protocol-overview">Protocol Overview<a href="#protocol-overview" class="anchor" aria-hidden="true">#</a> </h3>
+<p>The Home Smart Mesh project introduce an RF Mesh protocol which is a complete stack implementation to allow devices to communicate in a Mesh Network Topology. This protocol implementation is using the nRF SDK 15 it is using the Radio module through a modified Enhanced Shock-burst custom protocol. Implementations range from nRF24L01+ with an STM8L and STM32 to the nRF51 and nRF52 families that add features such as RSSI and bigger packets sizes.</p>
+<h3 id="protocol-description">Protocol Description<a href="#protocol-description" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>100% Open source Mesh RF Stack</li>
+<li>Ported on STM8L, STM32, nRF51 and nRF52</li>
+<li>Concept designed for Low Power Nodes and Router Nodes</li>
+<li>Same radio channel configured for the whole network</li>
+<li>Single channel allows maximum power save with unlimited sleep periods, and random wake up with button press or sensor event.</li>
+<li>Mesh with flooding broadcast, where every message has its own configurable time to live. This brings multiple advantages of usage simplicity.</li>
+<li>Short addresses allow efficient packets sizes. Possibility for extensions with short address reuse and exception addresses to allow unlimited network size.</li>
+<li>For simplicity purpose, security is a matter of application payload content.</li>
+<li>The stack is so small that the RAM and ROM are left for the application logic, not requiring a network co-processor.</li>
+</ul>
+<h4 id="protocol-mesh-broadcast">Protocol Mesh Broadcast<a href="#protocol-mesh-broadcast" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>A simple flood mechanism is implemented where every router repeats the signal heard decrementing the time to live to avoid infinite propagation.</li>
+<li>Future extensions can extend the routing by gathering statistics and deciding of the optimal path in a decentralized fashion. Note that small installations in a home do not bring any significant advantage, thus the interest for a simple protocol for such use case.</li>
+</ul>
+<h4 id="protocol-mesh-directed-messages-with-ack">Protocol Mesh Directed messages with ack<a href="#protocol-mesh-directed-messages-with-ack" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>This type of communication uses a source and destination addresses</li>
+<li>Only the node recognizing itself as destination will send a packet as acknowledge</li>
+<li>The acknowledge packet is propagated the same way, until it reaches the source, which make it an end to end acknowledge</li>
+<li>If the source did not got an acknowledge back while it was requested, it can retry the transmission again.</li>
+</ul>
+<h3 id="packet-format">Packet Format<a href="#packet-format" class="anchor" aria-hidden="true">#</a> </h3>
+<p>custom stack vs softdevices : This protocol is using the direct Radio module capabilities and does not require the sofdevices. The softdevices are Nordic firmware that are closed source and distributed as binaries, they have higher privileges than the user application. Softdevices guarantee that the RF functions keep always working as the user application is untrusted. This comes at a big price to pay, as the rest of the SoC cannot be properly used, no free configuration of interrupts for example, they have also a big memory footprint that prevents safe double paged firmware updates.</p>
+<figure>
+    <img src="/images/packet.png" width="100%"/> 
+</figure>
+
+<p>The configuration has discarded the usage of S0 and S1 which are intended for compatibility with other protocols which require a certain number of bits on the air that do not map to 8 aligned to form bytes in memory.</p>
+<figure>
+    <img src="/images/protocol.png" width="100%"/> 
+</figure>
+
+<p>the RF Payload Format contains another software header. That is the header used to manage the packets in the mesh network.</p>
+<ul>
+<li>control: bit 7 defines whether a packet is to be broadcasted or has a target destination. Bits 6 and 5 allow safe communication with acknowledge, and a request response type. That allows the sw stack to handle the acknowledge and re-transmission. bit 3 allows streaming of messages without acknowledge.</li>
+<li>pid: is defining the application function which maps to a particular payload serialization</li>
+<li>Source and dest: are the Node Id, and are unique within every mesh. Although 8 bits, exceptions allow further reserved sizes.</li>
+<li>Time to live : used by the routers to know when to drop the packet.</li>
+</ul>
+<h3 id="alive-trace-routing">Alive trace routing<a href="#alive-trace-routing" class="anchor" aria-hidden="true">#</a> </h3>
+<figure>
+    <img src="/images/alive-trace-route.png" width="100%"/> 
+</figure>
+
+<ul>
+<li>All Nodes including the low power, send a periodic “alive” packet</li>
+<li>The initiator includes a counter that informs about the live cycle count</li>
+<li>Every retransmission appends information about
+<ul>
+<li>Received RSSI (Radio Signal Strength Indicator)</li>
+<li>The Node Id of the Router performing the re transmission</li>
+<li>Transmission power with which the packet has been re transmitted</li>
+</ul>
+</li>
+</ul>
+<figure>
+    <img src="/images/alive-json.png" width="100%"/> 
+</figure>
+
+<ul>
+<li>The “alive” packet that reaches the server’s dongle has the full route information</li>
+<li>Multiple paths can reach the server for the same original broadcast</li>
+<li>A single “alive” packet can provide link status of the complete mesh netwrok</li>
+<li>The signal route information is packed in a json structure</li>
+<li>json structures are broadcasted on the jNodes topics path</li>
+</ul>
+<hr>
+<h2 id="printed-circuit-boards">Printed Circuit Boards<a href="#printed-circuit-boards" class="anchor" aria-hidden="true">#</a> </h2>
+<pre><code>cd ./boards/
+</code></pre>
+<p>Schematics, PCBs and boards headers for the SensorTag and the Dongle used by the nRF52 firmware</p>
+<h3 id="tools">./tools/<a href="#tools" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Contains the fancy Makefile extensions that allow :</p>
+<ul>
+<li>switch power on and off using a Segger jlink</li>
+<li>read and write parameters matching the device&rsquo;s unique identifier read from the HW registers</li>
+</ul>
+<h3 id="nrf5_sdk_1500_prf">./nRF5_SDK_15.0.0_prf/<a href="#nrf5_sdk_1500_prf" class="anchor" aria-hidden="true">#</a> </h3>
+<p>This is a submodule that minifies the nRF15 SDK for the content required by this repository.
+When compiling the nRF applications firmware don&rsquo;t forget to call the submodule update command, it is also possible to do that without git by going to the repository link, downloading it and placing it under the same path. Although if you do not use git command line at this stage, you might want to consider following a git tutorial.</p>
+<pre><code>git submodule update --init
+</code></pre>
+<h2 id="dependencies">Dependencies<a href="#dependencies" class="anchor" aria-hidden="true">#</a> </h2>
+<ul>
+<li>For the Raspberry pi tools and scripts see full installation steps in the <a href="https://www.homesmartmesh.com/install/">Installation</a> website page</li>
+<li>For the nRF52 firmare :
+<ul>
+<li>GNU Tools ARM Embedded version 6 2017-q2-update, referenced from the SDK Makefile.windows</li>
+<li>Python <a href="https://github.com/square/pylink">jlink wrapper</a>. Used in Makefile and tools of this repo, more on <a href="http://pylink.readthedocs.io/en/latest/pylink.html">pylink.readthedocs</a>. Note that it has to be used with a 32 bit python version referenced in the tools scripts as <strong>C:\Python27\python.exe</strong>. wrapper scripts already availabe in the tools directory</li>
+</ul>
+</li>
+</ul>
+<h3 id="details-about-the-nrf52-frimware-environment">Details about the nRF52 Frimware environment<a href="#details-about-the-nrf52-frimware-environment" class="anchor" aria-hidden="true">#</a> </h3>
+<figure>
+    <img src="/images/pylink.png" width="100%"/> 
+</figure>
+
+<ul>
+<li><code>nodes.json</code> is provided locally in this repo and the docker command <a href="./nodes-server.sh">nodes-server.sh</a> can also serve it at http://hostname:8080/nodes.json</li>
+</ul>
+<figure>
+    <img src="/images/nodes.json.png" width="100%"/> 
+</figure>
+
+<p>The parameters here are used by external tools to have a consistent undersanding of the mesh network. From simple id to name translation, to location display according to coordinates down to user data flashing.</p>
+<h3 id="cool-defines-and-data-configuration">Cool defines and data configuration<a href="#cool-defines-and-data-configuration" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="sdk-config-tool">sdk config tool<a href="#sdk-config-tool" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Once in the application directory just use <code>make conf</code> to call a cmsis <a href="http://helmpcb.com/software/cmsis-configuration-wizard">configuration wizard</a>, as provided in the SDK. Note that it was here extended to make the user drivers shared and configurable as well, e.g. the I²C frequency of the <strong>Application</strong> in the screenshot</p>
+<figure>
+    <img src="/images/cmsis-wizard.png" width="100%"/> 
+</figure>
+
+<h4 id="automated-mesh-devices-configuration">Automated mesh devices configuration<a href="#automated-mesh-devices-configuration" class="anchor" aria-hidden="true">#</a> </h4>
+<p>User data flashing is done with Pylink which reads in <a href="tools%5Cuicr.py">uicr.py</a> the registers of the attached device, look it up in the <strong>config</strong> file, retrives which parameters should be flashed, the mapping of parameters to CUSTOMER_X registers come from &ldquo;uicr_map.json&rdquo;.</p>
+<h3 id="simple-board-switch">simple board switch<a href="#simple-board-switch" class="anchor" aria-hidden="true">#</a> </h3>
+<p>The repo contais a directory for boards declaration &ldquo;boards/&rdquo; and a directory for applications &ldquo;applications/&rdquo;. Although every application targets a particular board, it is possible to use any application for any other board. In the makefile a sinlge line has to be edited</p>
+<pre><code>USED_BOARD := BOARD_NRF52_SENSOR_TAG
+</code></pre>
+<h3 id="ppi-automation">PPI automation<a href="#ppi-automation" class="anchor" aria-hidden="true">#</a> </h3>
+<p>The programmable peripheral interconnect is used for &ldquo;real&rdquo; real-time operations rf time synch,&hellip;</p>
+<figure>
+    <img src="/images/ppi.svg" width="100%"/> 
+</figure>
+
+<h2 id="nrf52-sensor-tag">nRF52 Sensor Tag<a href="#nrf52-sensor-tag" class="anchor" aria-hidden="true">#</a> </h2>
+<p>This board is based on modules, it is very simple to solder and allows selection of any other I²C sensor modules.</p>
+<h3 id="design">Design<a href="#design" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="module">Module<a href="#module" class="anchor" aria-hidden="true">#</a> </h4>
+<figure>
+    <img src="/images/module_size.png" width="100%"/> 
+</figure>
+
+<h4 id="schematics">Schematics<a href="#schematics" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Here a screenshot of the schematics which design files are also available in the <a href="boards/nrf52_sensortag/pcb">board subdirectory</a></p>
+<figure>
+    <img src="/images/schematics_pinout.png" width="100%"/> 
+</figure>
+
+<h3 id="mounted-pcbs">Mounted PCBs<a href="#mounted-pcbs" class="anchor" aria-hidden="true">#</a> </h3>
+<p>It is possible to mount either CR2032 or CR2477</p>
+<figure>
+    <img src="/images/mounted.png" width="100%"/> 
+</figure>
+
+<p>It is based on a market available nRF52832 module seen below</p>
+<h3 id="low-power-configuration">Low Power configuration<a href="#low-power-configuration" class="anchor" aria-hidden="true">#</a> </h3>
+<table>
+<thead>
+<tr>
+<th>Flags to clear</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NRFX_UARTE_ENABLED</td>
+</tr>
+<tr>
+<td>NRFX_UART_ENABLED</td>
+</tr>
+<tr>
+<td>UART_ENABLED</td>
+</tr>
+<tr>
+<td>UART0_ENABLED</td>
+</tr>
+<tr>
+<td>NRF_FPRINTF_ENABLED</td>
+</tr>
+<tr>
+<td>NRF_LOG_BACKEND_UART_ENABLED</td>
+</tr>
+<tr>
+<td>NRF_LOG_STR_FORMATTER_TIMESTAMP_FORMAT_ENABLED</td>
+</tr>
+<tr>
+<td>NRF_LOG_ENABLED</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>removed nrf_drv_uart.c from Makefile</li>
+<li>Required nRF52832 Errata [89] TWI: Static 400 uA current while using GPIOTE</li>
+</ul>
+<h3 id="low-power-measures">Low Power measures<a href="#low-power-measures" class="anchor" aria-hidden="true">#</a> </h3>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Current</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RTC + RAM</td>
+<td>9.6 uA</td>
+</tr>
+<tr>
+<td>// + Sensors</td>
+<td>22 uA</td>
+</tr>
+<tr>
+<td>// without TWI Woraround</td>
+<td>470 uA</td>
+</tr>
+<tr>
+<td>Uart Log</td>
+<td>500 uA</td>
+</tr>
+<tr>
+<td>Uart Log + HF</td>
+<td>700 uA</td>
+</tr>
+</tbody>
+</table>
+<h2 id="nrf52-dongle">nRF52 Dongle<a href="#nrf52-dongle" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="software">Software<a href="#software" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="rf-to-serial-gateway">RF to Serial Gateway<a href="#rf-to-serial-gateway" class="anchor" aria-hidden="true">#</a> </h4>
+<p>The node connected through serial port will report messages in text format</p>
+<ol>
+<li>Local Events</li>
+</ol>
+<p>Upon startup such message is sent</p>
+<pre><code>nodeid:75;channel:10;reset:1
+</code></pre>
+<ol start="2">
+<li>Listening</li>
+</ol>
+<p>Upon activation of the uicr config <code>is_listening</code> the node starts acting as a gatewy that will report messages through serial in text mode</p>
+<pre><code>rssi:-50;id:73;ctrl:0x81;src:73;alive:68;tx_power:0
+</code></pre>
+<ol start="3">
+<li>commands requests and responses</li>
+</ol>
+<p>It is possible to reconfigure the Node on runtime and manage manage a mesh network by sending messages</p>
+<pre><code>cmd:0x0102
+cmd:0x&lt;command id&gt;&lt;arguments&gt;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Command id</th>
+<th>Function</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x01</td>
+<td>Set Node Id</td>
+<td>Node Mesh Short Identifier</td>
+</tr>
+<tr>
+<td>0x02</td>
+<td>Get Node Id</td>
+<td></td>
+</tr>
+<tr>
+<td>0x03</td>
+<td>Set RF Channel</td>
+<td>0:2400 MHz - 100:2500 MHz</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>Get RF Channel</td>
+<td></td>
+</tr>
+<tr>
+<td>0x05</td>
+<td>Set Tx Power</td>
+<td>0x04: +4dBm - 0xD8: -40dBm</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>Get Tx Power</td>
+<td></td>
+</tr>
+<tr>
+<td>0x07</td>
+<td>Set Bitrate</td>
+<td>tbd</td>
+</tr>
+<tr>
+<td>0x08</td>
+<td>Get Bitrate</td>
+<td></td>
+</tr>
+<tr>
+<td>0x09</td>
+<td>Set CRC</td>
+<td>0 : No CRC - 1 : 8bit - 2 : 16 bit</td>
+</tr>
+<tr>
+<td>0x0A</td>
+<td>Get CRC</td>
+<td></td>
+</tr>
+<tr>
+<td>0x0B</td>
+<td>Set UICR</td>
+<td>used uicr registers</td>
+</tr>
+<tr>
+<td>0x0C</td>
+<td>Get UICR</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="command-examples">Command examples<a href="#command-examples" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Set channel 10/0x0A</p>
+<pre><code>cmd:0x030A
+</code></pre>
+<p>get channel</p>
+<pre><code>cmd:0x04
+</code></pre>
+<p>Set Tx Power to  -4dBm/0xFC</p>
+<pre><code>cmd:0x05FC
+</code></pre>
+<p>Set UICR e.g. RF Channel @ CUSTOMER[1] to channel 10</p>
+<pre><code>cmd:0x0B010A
+</code></pre>
+<p>Send message, directed (not broadcast) with ttl = 2, ping(75/0x4B) from 73/0x49</p>
+<pre><code>msg:0x7201494B
+</code></pre>
+<p>Send message to execute on the RF target node 75/0x4B the command Set Tx Power to -4 dBm</p>
+<pre><code>msg:0x72EC494B05FC
+</code></pre>
+<p>Send message to execute on the RF target node 75/0x4B the command Set channel to 0x0A</p>
+<pre><code>msg:0x72EC494B030A
+</code></pre>
+<p>Send request to execute on the RF target node 75/0x4B the command Set channel to 0x0A
+The only difference to the previous example is that an intermediate ack for the request is not required before getting the response</p>
+<pre><code>msg:0x22EC494B030A
+</code></pre>
+<h4 id="switch-between-serial-serial-and-log-over-uart">Switch between serial SERIAL and LOG over UART<a href="#switch-between-serial-serial-and-log-over-uart" class="anchor" aria-hidden="true">#</a> </h4>
+<p>run</p>
+<pre><code>make conf
+</code></pre>
+<p>then switch both flags :</p>
+<ul>
+<li>nRF_Log/NRF_LOG_BACKEND_UART_ENABLED</li>
+<li>Application/APP_SERIAL_ENABLED
+don&rsquo;t forget to save</li>
+</ul>
+<h4 id="serial-mode">Serial mode<a href="#serial-mode" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li>
+<p>NRF_SERIAL_MODE_IRQ flag is not used by the driver and has equivalent function as NRF_SERIAL_MODE_DMA</p>
+</li>
+<li>
+<p>ser_send() must be used with a variable in memory as DMA cannot read from Code in Flash</p>
+</li>
+</ul>
+<h3 id="hardware">Hardware<a href="#hardware" class="anchor" aria-hidden="true">#</a> </h3>
+<p>A usb dongle from the market that includes a <strong>2104</strong> serial to usb converter. Keyword search on shopping websites : <strong>nRF52832 USB dongle</strong>. Aka &ldquo;nRF52832-YJ-17017-USB-UART&rdquo;</p>
+<p><figure>
+    <img src="/images/dongle.png" width="200"/> 
+</figure>
+
+<br/></p>
+<h3 id="from-the-inside">From the inside<a href="#from-the-inside" class="anchor" aria-hidden="true">#</a> </h3>
+<p><figure>
+    <img src="/images/components.png" width="300"/> <figcaption>
+            <h4>Components</h4>
+        </figcaption>
+</figure>
+
+<figure>
+    <img src="/images/back_swdio.png" width="300"/> <figcaption>
+            <h4>SWDIO pins</h4>
+        </figcaption>
+</figure>
+
+<br/></p>
+<h3 id="pinout">pinout<a href="#pinout" class="anchor" aria-hidden="true">#</a> </h3>
+<table>
+<thead>
+<tr>
+<th>nRF52</th>
+<th>pin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rx</td>
+<td>P0.05</td>
+</tr>
+<tr>
+<td>Tx</td>
+<td>P0.06</td>
+</tr>
+<tr>
+<td>CTS</td>
+<td>P0.07</td>
+</tr>
+<tr>
+<td>RTS</td>
+<td>P0.08</td>
+</tr>
+<tr>
+<td>LED1</td>
+<td>P0.28</td>
+</tr>
+<tr>
+<td>LED2</td>
+<td>P0.29</td>
+</tr>
+</tbody>
+</table>
+<h3 id="needle-adapter">Needle adapter<a href="#needle-adapter" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Making a needle adapter is made easier with 3d printing. The used pogo pin is seen below</p>
+<figure>
+    <img src="/images/pogo-pin%200.5mm%20x%2016.35mm.png" width="300"/> <figcaption>
+            <h4>Pogo pin</h4>
+        </figcaption>
+</figure>
+
+<p>The adapter model still in preparation can be found <a href="https://a360.co/2IcKZK9">here</a>. It should look something like this:</p>
+<p><figure>
+    <img src="/images/adapter.png" width="300"/> <figcaption>
+            <h4>Adapter</h4>
+        </figcaption>
+</figure>
+
+<br/>
+<figure>
+    <img src="/images/pogo-pin%20adapter.jpg" width="200"/> <figcaption>
+            <h4>Adapter</h4>
+        </figcaption>
+</figure>
+</p>
+<h2 id="raspi-host-controller-interface">Raspi Host Controller Interface<a href="#raspi-host-controller-interface" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="hci-mqtt-test-vector">HCI MQTT Test vector<a href="#hci-mqtt-test-vector" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="commands">Commands<a href="#commands" class="anchor" aria-hidden="true">#</a> </h4>
+<p>get mesh node id of attached dongle</p>
+<pre><code>mosquitto_pub -t 'cmd/request/get_node_id' -m ''
+</code></pre>
+<p>Response</p>
+<pre><code>cmd/response/get_node_id {&quot;cmd&quot;: &quot;get_node_id&quot;, &quot;node_id&quot;: &quot;73&quot;}
+</code></pre>
+<p>get channel of attached dongle</p>
+<pre><code>mosquitto_pub -t 'cmd/request/get_channel' -m ''
+</code></pre>
+<p>Response</p>
+<pre><code>cmd/response/get_channel {&quot;cmd&quot;: &quot;get_channel&quot;, &quot;channel&quot;: &quot;2&quot;}
+</code></pre>
+<h4 id="remote-commands">Remote Commands<a href="#remote-commands" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Request to set remote node 74 on RF channel 2</p>
+<pre><code>mosquitto_pub -t 'remote_cmd/request/set_channel' -m '{&quot;channel&quot;:2,&quot;remote&quot;:74}'
+</code></pre>
+<p>Response</p>
+<pre><code>remote_cmd/response/set_channel {&quot;pid&quot;: &quot;236&quot;, &quot;ctrl&quot;: &quot;0x02&quot;, &quot;src&quot;: &quot;74&quot;, &quot;dest&quot;: &quot;73&quot;, &quot;cmd&quot;: &quot;set_channel&quot;, &quot;set&quot;: &quot;2&quot;, &quot;get&quot;: &quot;2&quot;}
+</code></pre>
+<h4 id="actions">Actions<a href="#actions" class="anchor" aria-hidden="true">#</a> </h4>
+<p>Ping node 74</p>
+<pre><code>mosquitto_pub -t 'Nodes/79/ping' -m '{&quot;remote&quot;:&quot;74&quot;}'
+</code></pre>
+<p>Aknowledge</p>
+<pre><code>Nodes/79/ack 1
+</code></pre>
+<h2 id="more-nrf52-applications">More nRF52 Applications<a href="#more-nrf52-applications" class="anchor" aria-hidden="true">#</a> </h2>
+<pre><code>cd ./applications/
+</code></pre>
+<h3 id="02-acell-tag">02 acell tag<a href="#02-acell-tag" class="anchor" aria-hidden="true">#</a> </h3>
+<pre><code>application/02_accell_tag&gt; make flash
+</code></pre>
+<figure>
+    <img src="/images/motion_tag.png" width="300"/> 
+</figure>
+
+<ul>
+<li>Status : experimental, low battery life</li>
+<li>nRF52832 module</li>
+<li>MPU-6050 module</li>
+<li>interrupt pio from MPU-6050</li>
+</ul>
+<h3 id="03-buttons">03 buttons<a href="#03-buttons" class="anchor" aria-hidden="true">#</a> </h3>
+<pre><code>application/03_buttons&gt; make flash
+</code></pre>
+<figure>
+    <img src="/images/buttons.png" width="300"/> 
+</figure>
+
+<ul>
+<li>Status : experiemntal, low battery life</li>
+<li>nRF52832 module</li>
+<li>x6 buttons</li>
+</ul>
+<h3 id="05-rotary-decoder">05 rotary decoder<a href="#05-rotary-decoder" class="anchor" aria-hidden="true">#</a> </h3>
+<pre><code>application/05_rotary_decoder&gt; make flash
+</code></pre>
+<figure>
+    <img src="/images/rf_encoder.png" width="100%"/> 
+</figure>
+
+<ul>
+<li>buy : &ldquo;600 pulses Optical Rotary encoder&rdquo;</li>
+<li>custom wiring +5V, encoder pullups to +3.3 V</li>
+<li>rf timestamp synchronisation</li>
+<li>HW capture of timestamp</li>
+<li>RF Mesh log of modulo 600 position with timestamp</li>
+<li>4 ms status on change, otherwise 4 s reminder</li>
+</ul>
+<h3 id="06-bldc-52832">06 bldc 52832<a href="#06-bldc-52832" class="anchor" aria-hidden="true">#</a> </h3>
+<pre><code>application/06_bldc_52832&gt; make flash
+</code></pre>
+<figure>
+    <img src="/images/bldc_control.png" width="100%"/> 
+</figure>
+
+<ul>
+<li>Status : RF magnetic angle control OK, rest is in development</li>
+<li>nRF52832 sensor tag board used</li>
+<li>buy : &ldquo;L6234d breakout&rdquo;</li>
+<li>custom wiring power supply 9.6 V / nRF powered with 3.3 V separately</li>
+<li>RF bldc control : magnetic angle, voltage ratio, speed, absolute angle</li>
+</ul>
+<h3 id="07-bldc-52840">07 bldc 52840<a href="#07-bldc-52840" class="anchor" aria-hidden="true">#</a> </h3>
+<pre><code>application/07_usb_dongle&gt; make flash
+</code></pre>
+<figure>
+    <img src="/images/nrf52840-usb-dongle.png" width="300"/> 
+</figure>
+
+<ul>
+<li>Status : preparation</li>
+<li>previous application &ldquo;03 bldc 52832&rdquo; ported to the nRF52840-dongle</li>
+</ul>
+<h2 id="python-scripts">Python scripts<a href="#python-scripts" class="anchor" aria-hidden="true">#</a> </h2>
+<pre><code>cd ./raspi/
+</code></pre>
+<h3 id="raspberry-pi-scripts-moved-to-github-raspihttpsgithubcomhomesmartmeshraspi-prject">Raspberry pi scripts moved to <a href="https://github.com/HomeSmartMesh/raspi">github raspi</a> Prject<a href="#raspberry-pi-scripts-moved-to-github-raspihttpsgithubcomhomesmartmeshraspi-prject" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Below is a description of the <code>raspi</code> directory, but the content is no longer updated and represents a draft in compaision to the follow up project with raspberry pi services and IoT Software stack : https://github.com/HomeSmartMesh/raspi</p>
+<p>The server&rsquo;s python scripts running also on a raspberry pi</p>
+<ul>
+<li>./raspi/hue : aqara sensors from mqtt to hue light automation through the hue gateway REST API</li>
+<li>./raspi/rf_uart : the interface to the serial port that transfers data between MQTT and the RF mesh</li>
+<li>./raspi/heat : eurotronics through zigbee2mqtt automation from aqara zigbee2mqtt windows contact sensors</li>
+<li>./raspi/bathroom : fan automation controlled with button, shelly light switch and humidity sensor</li>
+<li>./raspi/conbee : the ConBee script to turn the Xiaomi Zibbee devices events into MQTT</li>
+<li>./raspi/rf_stm32 : interface to leagacy devices, bed heater and retro light</li>
+<li>./raspi/ruler/ : json configurable rules through sensors and actuators MQTT topics and a separate python rules file</li>
+<li>./raspi/influx/ : the <a href="https://www.influxdata.com/time-series-database/">influx</a> client that listens to MQTT and grabs standard sesnors patterns to be sent to the database</li>
+<li>./raspi/grafana : <a href="https://grafana.com/grafana">Grafana</a> is used as a dashboard, it is a webserver interface that is installed on the raspberry pi (or on the docker image). Some dashboards examples are provided in this directory, where the queries are matching the way how the influx client has recorded the sensors data.</li>
+<li>./raspi/wemo/ : The wemo switch smart socket interface, provides power sensing and sends the Watt value to MQTT</li>
+<li>./raspi/milight : The milight RF gateway client (require the wifi to RF milight bridge HW)</li>
+<li>Data collection into a time series database</li>
+</ul>
+<h2 id="home-smart-mesh-detailed-design">Home Smart Mesh detailed design<a href="#home-smart-mesh-detailed-design" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Functions call graph. Fifos dataflow between interrupts and main loop.</p>
+
+
+
+<embed id="svg-46fab039f128fa08" type="image/svg+xml" style="width:100%;cursor:grab;"  src="/images/nrf_mesh.svg" />
+<script>
+  document.getElementById('svg-46fab039f128fa08').addEventListener('load', function(){
+    let params = {
+          panEnabled: true,
+          zoomEnabled: true,
+          dblClickZoomEnabled: true,
+          controlIconsEnabled: true,
+          mouseWheelZoomEnabled: false,
+          preventMouseEventsDefault: true,
+          zoomScaleSensitivity: 0.6,
+          minZoom: 0.5,
+          maxZoom: 3,
+           fit: true
+          , contain: true
+          , center: true
+          , refreshRate: 'auto'
+      };
+      svgPanZoom('#svg-46fab039f128fa08'        ,params);
+  })
+</script>
+
+
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a class="ml-auto" href="/docs/networks/thread/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Thread &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a href="https://getdoks.org/">Doks</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-right">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+    <script src="/index.min.3749360de691e6638a61a5584e45d1a83589f9bf5cc88ca4c2205ae8061d3a301d8f473864a29657ebb46c3ca37005e54a6409bdc144d20f782f968b31a5e1cb.js" integrity="sha512-N0k2DeaR5mOKYaVYTkXRqDWJ&#43;b9cyIykwiBa6AYdOjAdj0c4ZKKWV&#43;u0bDyjcAXlSmQJvcFE0g94L5aLMaXhyw==" crossorigin="anonymous" defer></script>
+  <script src="/main.bb2ecd2a1b89d7a6d989848afb223e1541c872e586d2432d1266c89e7b5c691b7a58434d6708694782a06efe9f1b6aa15cdc9b03d74ce0c73ac119c150be1814.js" integrity="sha512-uy7NKhuJ16bZiYSK&#43;yI&#43;FUHIcuWG0kMtEmbInntcaRt6WENNZwhpR4Kgbv6fG2qhXNybA9dM4Mc6wRnBUL4YFA==" crossorigin="anonymous" defer></script>
+
+  </body>
+</html>
