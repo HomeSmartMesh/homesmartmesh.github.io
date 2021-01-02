@@ -9,6 +9,13 @@
     </url>
     
     <url>
+      <loc>/docs/networks/zigbee/</loc>
+      <lastmod>2020-10-06T08:48:57+00:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
       <loc>/docs/networks/thread/</loc>
       <lastmod>2020-10-06T08:48:57+00:00</lastmod>
       <changefreq>weekly</changefreq>

@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-italic.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-500italic.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-700italic.woff2" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/main.f7abfeaffcfd3e682d4b09b5d4b5830396148413d3173cdad4f5c70a7d91032b8b67c6a436ca22a9060fea1e1ad16cdff587ac7db91717bcf4f02fec349b21fe.css" integrity="sha512-96v&#43;r/z9PmgtSwm11LWDA5YUhBPTFzza1PXHCn2RAyuLZ8akNsoiqQYP6h4a0Wzf9YesfbkXF7z08C/sNJsh/g==" crossorigin="anonymous">
+<noscript><style>img.lazyload { display: none; }</style></noscript>
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Zigbee - Home Smart Mesh</title>
+<meta name="description" content="Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default.">
+<link rel="canonical" href="/docs/networks/zigbee/">
+<meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:image" content="/doks.png">
+    <meta name="twitter:title" content="Zigbee">
+<meta name="twitter:description" content="Devices Overview Below are examples of used devices in this project
+  As in the above figure, I kept all the light with the hue gateway for a reliable function, and opted for zigbee2mqtt for all other non lighting devices.
+For a detailed list of used devices and their documentation see the devices list section
+Frameworks Philips Hue ✅ Philips Hue have an open API that can run in a local network, therefore allowing third party apps integration.">
+
+<meta name="twitter:site" content="@henkverlinde">
+<meta name="twitter:creator" content="@henkverlinde">
+
+<meta property="og:title" content="Zigbee">
+<meta property="og:description" content="Devices Overview Below are examples of used devices in this project
+  As in the above figure, I kept all the light with the hue gateway for a reliable function, and opted for zigbee2mqtt for all other non lighting devices.
+For a detailed list of used devices and their documentation see the devices list section
+Frameworks Philips Hue ✅ Philips Hue have an open API that can run in a local network, therefore allowing third party apps integration.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/docs/networks/zigbee/">
+
+  <meta property="og:image" content="/doks.png"/>
+    <meta property="article:published_time" content="2020-10-06T08:48:57+00:00">
+  <meta property="article:modified_time" content="2020-10-06T08:48:57+00:00">
+  <meta property="og:site_name" content="Home Smart Mesh">
+
+<meta property="article:publisher" content="https://www.facebook.com/verlinde.henk">
+<meta property="article:author" content="https://www.facebook.com/verlinde.henk">
+<meta property="og:locale" content="en_US">
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position":  1 ,
+        "name": "Home",
+        "item": "\/"
+    },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "name": "Docsnetworkszigbee",
+        "item": "\/docsnetworkszigbee\/"
+    }]
+}
+</script>
+
+  <meta name="theme-color" content="#fff">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+  
+</head>
+  <body class="docs single">
+    <div class="header-bar fixed-top"></div>
+<header class="navbar fixed-top navbar-expand-md navbar-light">
+  <script src="/js/svg-pan-zoom.min.js"></script>
+  <div class="container">
+    <input class="menu-btn order-0" type="checkbox" id="menu-btn">
+    <label class="menu-icon d-md-none" for="menu-btn"><span class="navicon"></span></label>
+    <a class="navbar-brand order-1 order-md-0 mr-auto" href="/">Home Smart Mesh</a>
+    <button id="mode" class="btn btn-link order-2 order-md-4" type="button" aria-label="Toggle mode">
+      <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+      <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+    </button>
+    <ul class="navbar-nav social-nav order-3 order-md-5">
+      <li class="nav-item">
+          <a class="nav-link" href="https://github.com/HomeSmartMesh"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><span class="ml-2 sr-only">GitHub</span></a>
+        </li>
+      </ul>
+    <div class="collapse navbar-collapse order-4 order-md-1">
+      <ul class="navbar-nav main-nav mr-auto order-5 order-md-2"><li class="nav-item active">
+            <a class="nav-link" href="/docs/raspi/readme/">Docs</a>
+          </li>
+        </ul>
+      <div class="break order-6 d-md-none"></div>
+      <form class="navbar-form flex-grow-1 order-7 order-md-3">
+        <input id="userinput" class="form-control is-search" type="search" placeholder="Search docs..." aria-label="Search docs..." autocomplete="off">
+        <div id="suggestions" class="shadow bg-white rounded"></div>
+      </form>
+    </div>
+  </div>
+</header>
+    <div class="wrap container" role="document">
+      <div class="content">
+        
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar">
+			<nav class="docs-links" aria-label="Main navigation">
+				<h3>Raspi</h3>
+  <ul class="list-unstyled">
+    <li><a class="docs-link" href="/docs/raspi/readme/">raspi IoT</a></li>
+    </ul>
+  <h3>Mesh Networks</h3>
+  <ul class="list-unstyled">
+    <li><a class="docs-link" href="/docs/networks/nrf/">nRF Mesh</a></li>
+    <li><a class="docs-link active" href="/docs/networks/zigbee/">Zigbee</a></li>
+    <li><a class="docs-link" href="/docs/networks/thread/">Thread</a></li>
+    </ul>
+  <h3>Webapps</h3>
+  <ul class="list-unstyled">
+    <li><a class="docs-link" href="/docs/webapps/home3d/">Home 3D</a></li>
+    </ul>
+  
+			</nav>        
+		</div>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+    <h3>On this page</h3>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#devices-overview">Devices Overview</a></li>
+    <li><a href="#frameworks">Frameworks</a>
+      <ul>
+        <li><a href="#philips-hue">Philips Hue</a></li>
+        <li><a href="#zigbee2mqtt">Zigbee2mqtt</a></li>
+      </ul>
+    </li>
+    <li><a href="#standard">Standard</a>
+      <ul>
+        <li><a href="#specification">Specification</a></li>
+        <li><a href="#layers-architecture">Layers Architecture</a></li>
+      </ul>
+    </li>
+    <li><a href="#firmware">Firmware</a>
+      <ul>
+        <li><a href="#zboss">ZBOSS</a></li>
+        <li><a href="#nordic-integration">Nordic integration</a></li>
+        <li><a href="#ti-z-stack">TI Z-Stack</a></li>
+      </ul>
+    </li>
+    <li><a href="#wireshark-sniffing">Wireshark sniffing</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#devices-list">Devices List</a>
+      <ul>
+        <li><a href="#ti-mcus">TI MCUs</a></li>
+        <li><a href="#ti-dongles">TI Dongles</a></li>
+        <li><a href="#ti-based-dongles">TI based dongles</a></li>
+        <li><a href="#nordik-dongle-dev-kit">Nordik Dongle dev kit</a></li>
+        <li><a href="#eurotronics-heating">Eurotronics Heating</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		<h1>Zigbee</h1>
+			<p class="lead"></p>
+			<h2 id="devices-overview">Devices Overview<a href="#devices-overview" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Below are examples of used devices in this project</p>
+<figure>
+    <img src="/images/zigbee_devices.png" width="600"/> 
+</figure>
+
+<p>As in the above figure, I kept all the light with the hue gateway for a reliable function, and opted for zigbee2mqtt for all other non lighting devices.</p>
+<p>For a detailed list of used devices and their documentation see the <a href="#devices-list">devices list</a> section</p>
+<h2 id="frameworks">Frameworks<a href="#frameworks" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="philips-hue">Philips Hue<a href="#philips-hue" class="anchor" aria-hidden="true">#</a> </h3>
+
+
+
+
+<div class="center">
+  <img
+    src="/images/hue.png"
+    alt=""
+    width="150"
+    decoding="async"
+  />
+</div>
+
+<p>✅ Philips Hue have an open API that can run in a local network, therefore allowing third party apps integration. This API has been tested in this project, it is of professional grade and reliable.</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="https://developers.meethue.com/develop/get-started-2/" role="button" target="_blank">meethue developers</a>
+        </div>
+    </div>
+</div>
+
+<ul>
+<li>The <a href="/docs/webapps/home3d/">Smart Home3D webapp</a> is using the hue API, and advanced light groups dimming with 3d sliders</li>
+</ul>
+<h3 id="zigbee2mqtt">Zigbee2mqtt<a href="#zigbee2mqtt" class="anchor" aria-hidden="true">#</a> </h3>
+<p>✅ The most popular framework that enables DIY fans to use even non-standard devices on standard gateways</p>
+<p>❌ as this project is diconnected from the devices vendors integration testing, some instabilities and interoperabilites issues might be expected for some devices</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="https://www.zigbee2mqtt.io/" role="button" target="_blank">zigbee2mqtt.io</a>
+        </div>
+    </div>
+</div>
+
+<h4 id="useful-commands">Useful commands<a href="#useful-commands" class="anchor" aria-hidden="true">#</a> </h4>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">&gt; <span class="nb">cd</span> /opt/zigbee2mqtt
+&gt; ./update
+&gt; sudo systemctl restart zigbee2mqtt
+&gt; nano /opt/zigbee2mqtt/data/configuration.yaml
+&gt; nano /opt/zigbee2mqtt/data/database.db
+&gt; pub <span class="s1">&#39;lzig/bridge/config/permit_join&#39;</span> -m <span class="s1">&#39;true&#39;</span>
+&gt; pub <span class="s1">&#39;lzig/bridge/config/force_remove&#39;</span> -m <span class="s1">&#39;0x00158d0012341234&#39;</span>
+</code></pre></div><h4 id="links">Links<a href="#links" class="anchor" aria-hidden="true">#</a> </h4>
+<ul>
+<li><a href="https://github.com/Koenkk/zigbee2mqtt">github repo</a></li>
+<li><a href="https://www.zigbee2mqtt.io/getting_started/running_zigbee2mqtt.html">install</a></li>
+<li><a href="https://www.zigbee2mqtt.io/information/supported_devices.html">supported devices</a></li>
+<li><a href="https://github.com/Tropicao/zigbridge/blob/master/doc/firmware_instructions.md">firmware</a></li>
+<li><a href="https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html">mqtt messages</a></li>
+</ul>
+<h2 id="standard">Standard<a href="#standard" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="specification">Specification<a href="#specification" class="anchor" aria-hidden="true">#</a> </h3>
+<ul>
+<li>ZLL : Zigbee Light Link, Easy - No Coordinator <code>13001r00ZB_MWG-ZigBee_Light_Link_Standard.pdf</code></li>
+<li>ZHA : Zigbee Home Automation <code>075367r03ZB_AFG-Home_Automation_Profile_for_Public_Download.pdf</code>, see also Silicon Labs ZLL Fundamentals <code>UG103.9</code></li>
+<li>ZGP : Zigbee Green Power</li>
+<li>HAP : Homekit Accessory Protocol</li>
+<li>CLIP : Connected Light Internet Protocol</li>
+<li>ZHA + ZLL + … <code>webcom_zigbee_rg2017.pdf</code></li>
+<li>Security <code>us-15-Zillner-ZigBee-Exploited-The-Good-The-Bad-And-The-Ugly-wp.pdf</code></li>
+<li>Zigbee Pro 2015 : <code>docs-05-3474-21-0csg-zigbee-specification.pdf</code></li>
+<li>ZCL : Zigbee Cluster Library <code>07-5123-06-zigbee-cluster-library-specification.pdf</code></li>
+<li>Zigbee 3 : Zigbee 3.0 Base Device Behavior Specification <code>docs-13-0402-13-00zi-Base-Device-Behavior-Specification-2.pdf</code></li>
+</ul>
+<p>For the latest version of the standard documents please refer to the Zigbee alliance official website
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="https://zigbeealliance.org/" role="button" target="_blank">zigbeealliance.org</a>
+        </div>
+    </div>
+</div>
+</p>
+<h3 id="layers-architecture">Layers Architecture<a href="#layers-architecture" class="anchor" aria-hidden="true">#</a> </h3>
+<p>In this Figure from the <code>Zigbee Pro 2015 Page2</code>, We see the multiple layers, mainly the physical, the MAC, the network and the application. It is therefore not appropriate to compare Zigbee with other networking protocols such as wifi given that the zigbee includes standardisation of the Application layer (APL)
+
+
+
+
+<div class="center">
+  <img
+    src="/images/zigbee_stack_arch.png"
+    alt=""
+    width="100%"
+    decoding="async"
+  />
+</div>
+</p>
+<h2 id="firmware">Firmware<a href="#firmware" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="zboss">ZBOSS<a href="#zboss" class="anchor" aria-hidden="true">#</a> </h3>
+<p>ZBOSS 3.0 and 2.1 are independent, portable, high-performance Zigbee® software protocol stacks</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="https://dsr-zboss.com/" role="button" target="_blank">dsr-zboss.com</a>
+        </div>
+    </div>
+</div>
+
+<h3 id="nordic-integration">Nordic integration<a href="#nordic-integration" class="anchor" aria-hidden="true">#</a> </h3>
+<p>The ZBOSS is used in Nordic devices either as lower stack with the application running on the same SoC or used as a Network Coprocessor</p>
+<figure>
+    <img src="/images/zigbee_platform_design_split.svg" width="600"/> 
+</figure>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="https://infocenter.nordicsemi.com/index.jsp?topic=%2Fsdk_tz_v4.0.0%2Findex.html" role="button" target="_blank">Nordic Zigbee design</a>
+        </div>
+    </div>
+</div>
+
+<h3 id="ti-z-stack">TI Z-Stack<a href="#ti-z-stack" class="anchor" aria-hidden="true">#</a> </h3>
+
+
+
+
+<div class="center">
+  <img
+    src="/images/stack_3_0.jpg"
+    alt=""
+    width="200"
+    decoding="async"
+  />
+</div>
+
+<p>This is the Stack used by <a href="#zigbee2mqtt">Zigbee2mqtt</a></p>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="https://www.ti.com/tool/Z-STACK" role="button" target="_blank">TI Z-Stack</a>
+        </div>
+    </div>
+</div>
+
+<p>reference documents to be accessed through TI website</p>
+<ul>
+<li>ressource guide</li>
+<li>Z-Stack ZNP (ZNP Protocol)</li>
+<li>Z-Stack Monitor and Test API</li>
+</ul>
+<h2 id="wireshark-sniffing">Wireshark sniffing<a href="#wireshark-sniffing" class="anchor" aria-hidden="true">#</a> </h2>
+<ul>
+<li>
+<p>Observing the network is mandatory for experiemnting with zigbee devices, as it&rsquo;s sometimes not possible to identify the source of the issue (end device or coordinator) without looking at the air messages.</p>
+</li>
+<li>
+<p>Note that an RF sniffer for 802.15.4 is enough to sniff zigbee as the zigbee higher layer protocol dissection is supported by wireshark</p>
+</li>
+<li>
+<p><a href="https://github.com/NordicSemiconductor/nRF-Sniffer-for-802.15.4">nRF Sniffer for 802.15.4</a></p>
+</li>
+<li>
+<p><a href="https://www.ti.com/tool/PACKET-SNIFFER">TI packet sniffer</a></p>
+</li>
+</ul>
+<h4 id="filters">Filters<a href="#filters" class="anchor" aria-hidden="true">#</a> </h4>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Expression</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zigbee</td>
+<td>zbee_nwk</td>
+</tr>
+<tr>
+<td>IEEE 802.15.4</td>
+<td>wpan.src64</td>
+</tr>
+<tr>
+<td>Zigbee Network</td>
+<td>zbee_nwk.src64</td>
+</tr>
+<tr>
+<td>Short Address</td>
+<td>zbee_nwk.src</td>
+</tr>
+<tr>
+<td>Short Address</td>
+<td>zbee_nwk.dst</td>
+</tr>
+<tr>
+<td></td>
+<td>zbee_nwk &amp;&amp; (zbee_nwk.src64 != 00:12:4b:00:18:00:00:00) &amp;&amp; (zbee_nwk.src64 !=</td>
+</tr>
+<tr>
+<td></td>
+<td>zbee_nwk &amp;&amp; (wpan.dst16 != 0xffff) &amp;&amp; !((wpan.src16 == 0x0000) &amp;&amp;(wpan.dst16 == 0xd9be))</td>
+</tr>
+<tr>
+<td></td>
+<td>zbee_zdp.ext_addr == 00:15:8d:00:02:00:00:00</td>
+</tr>
+<tr>
+<td></td>
+<td>wpan.dst_pan == 0x35ad</td>
+</tr>
+<tr>
+<td></td>
+<td>!(wpan.src_pan == 0x1a62) &amp;&amp; !(wpan.dst_pan == 0xffff) &amp;&amp; !(wpan.dst16 == 0xffff)</td>
+</tr>
+<tr>
+<td></td>
+<td>!(wpan.src_pan == 0x2c52) &amp;&amp; !(wpan.dst_pan == 0x2c52) &amp;&amp; !(wpan.dst_pan == 0xffff) &amp;&amp; !</td>
+</tr>
+<tr>
+<td>ack</td>
+<td>(wpan.frame_type == 0x2)</td>
+</tr>
+<tr>
+<td>exlude broadcasts</td>
+<td>(wpan.dst16 != 0xffff)</td>
+</tr>
+<tr>
+<td>no route no bcst</td>
+<td>zbee_nwk &amp;&amp; (wpan.dst16 != 0xffff) &amp;&amp; (wpan.src16 != 0xd9be) &amp;&amp; (wpan.</td>
+</tr>
+<tr>
+<td>coord to router</td>
+<td>!((wpan.src16 == 0x0000) &amp;&amp;(wpan.dst16 == 0xd9be))</td>
+</tr>
+</tbody>
+</table>
+<h4 id="coloring-rules">Coloring rules<a href="#coloring-rules" class="anchor" aria-hidden="true">#</a> </h4>
+<p><code>MAC,	wpan.src64 == 00:15:8d:00:00:11:22:33</code></p>
+<h2 id="devices-list">Devices List<a href="#devices-list" class="anchor" aria-hidden="true">#</a> </h2>
+<h3 id="ti-mcus">TI MCUs<a href="#ti-mcus" class="anchor" aria-hidden="true">#</a> </h3>
+<table>
+<thead>
+<tr>
+<th>Chip</th>
+<th>Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.ti.com/product/CC2531">CC2531</a></td>
+<td>USB, 8051, IEEE 802.15.4 &amp; Zigbee</td>
+</tr>
+<tr>
+<td><a href="https://www.ti.com/product/CC2530">CC2530</a></td>
+<td>No USB, 8051</td>
+</tr>
+<tr>
+<td>CC2591</td>
+<td>range extender</td>
+</tr>
+<tr>
+<td>CC2592</td>
+<td>range extender</td>
+</tr>
+<tr>
+<td>CC2533</td>
+<td>remote control</td>
+</tr>
+<tr>
+<td><a href="https://www.ti.com/lit/ds/swrs096d/swrs096d.pdf">CC2538 datasheet</a></td>
+<td>USB, ARM M3, + 6LoWPAN</td>
+</tr>
+<tr>
+<td><a href="https://www.ti.com/lit/ds/symlink/cc2630.pdf">CC2630 datasheet</a></td>
+<td>ARM-M3, ARM-M0, No USB</td>
+</tr>
+<tr>
+<td>CC2652R</td>
+<td>ARM-M4F, ARM-M0, No USB</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>instructive reference : <a href="https://www.ti.com/lit/wp/swry010a/swry010a.pdf">TI wireless connectivity</a></li>
+</ul>
+<h3 id="ti-dongles">TI Dongles<a href="#ti-dongles" class="anchor" aria-hidden="true">#</a> </h3>
+
+
+
+
+<div class="center">
+  <img
+    src="/images/CC2531EMK.png"
+    alt=""
+    width="200"
+    decoding="async"
+  />
+</div>
+
+<ul>
+<li><a href="https://www.ti.com/tool/CC2531EMK">CC2531EMK</a></li>
+<li><a href="https://www.zigbee2mqtt.io/information/supported_adapters.html#texas-instruments-cc2531">Zigbee2mqtt guide</a></li>
+</ul>
+<h3 id="ti-based-dongles">TI based dongles<a href="#ti-based-dongles" class="anchor" aria-hidden="true">#</a> </h3>
+<h4 id="gb2530">GB2530<a href="#gb2530" class="anchor" aria-hidden="true">#</a> </h4>
+<p>
+
+
+
+<div class="center">
+  <img
+    src="/images/GB2530.png"
+    alt=""
+    width="300"
+    decoding="async"
+  />
+</div>
+
+This dongle has an additional amplifier chip.</p>
+<ul>
+<li>GBAN GB2530-S = CC2530 + RFX2401</li>
+<li>GBAN GB2530-H = CC2530 + CC2591</li>
+<li><a href="https://de.aliexpress.com/item/4000112752493.html?spm=a2g0s.9042311.0.0.27424c4dL0oeWU">Aliexpress</a></li>
+</ul>
+<p>required config for zigbee2mqtt</p>
+<div class="highlight"><pre class="chroma"><code class="language-ini" data-lang="ini"><span class="na">advanced:</span>
+  <span class="na">rtscts: false</span>
+</code></pre></div><h4 id="cc2652-based">CC2652 based<a href="#cc2652-based" class="anchor" aria-hidden="true">#</a> </h4>
+<p>This dongle is based on the 2nd generation chips that are more powerful (including ARM-M4F and ARM-M0) also has more memory to handle more zigbee paired devices.</p>
+<p>
+
+
+
+<div class="center">
+  <img
+    src="/images/CC2652.png"
+    alt=""
+    width="200"
+    decoding="async"
+  />
+</div>
+
+</br>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="https://www.tindie.com/products/electrolama/zzh-cc2652r-multiprotocol-rf-stick/" role="button" target="_blank">Product page</a>
+        </div>
+    </div>
+</div>
+</p>
+<ul>
+<li><a href="https://www.zigbee2mqtt.io/information/supported_adapters.html#electrolama-zig-a-zig-ah-zzh">Zigbee2mqtt guide</a></li>
+</ul>
+<h3 id="nordik-dongle-dev-kit">Nordik Dongle dev kit<a href="#nordik-dongle-dev-kit" class="anchor" aria-hidden="true">#</a> </h3>
+<p>Unfortunately not supported by Zigbee2mqtt, but there&rsquo;s chance in case they move to a ZBOSS common stack. Nevertheless, it&rsquo;s possible to use it as a sniffer give the zigbee being the stame standard in the air physical layer.</p>
+<p>
+
+
+
+<div class="center">
+  <img
+    src="/images/nrf52840-usb-dongle.png"
+    alt=""
+    width="200"
+    decoding="async"
+  />
+</div>
+
+</br>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="https://www.nordicsemi.com/Software-and-tools/Development-Kits/nRF52840-Dongle" role="button" target="_blank">Product page</a>
+        </div>
+    </div>
+</div>
+</p>
+<ul>
+<li>
+<p>cheap, around 9€ <a href="https://www.mouser.de/ProductDetail/Nordic-Semiconductor/nRF52840-Dongle?qs=gTYE2QTfZfTbdrOaMHWEZg==">on Mouser</a></p>
+</li>
+<li>
+<p>See also its usage in the <a href="/docs/networks/nrf/#08-usb-dongle-nrf52840-dongle">custom mesh framework</a>.</p>
+</li>
+</ul>
+<h3 id="eurotronics-heating">Eurotronics Heating<a href="#eurotronics-heating" class="anchor" aria-hidden="true">#</a> </h3>
+<p>
+
+
+
+<div class="center">
+  <img
+    src="/images/eurotronics_heat.png"
+    alt=""
+    width="200"
+    decoding="async"
+  />
+</div>
+
+</br>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="https://eurotronic.org/produkte/zigbee-heizkoerperthermostat/spirit-zigbee/" role="button" target="_blank">Product page</a>
+        </div>
+    </div>
+</div>
+</p>
+<ul>
+<li><a href="https://eurotronic.org/wp-content/uploads/2019/01/Spirit_ZigBee_BAL_web_DE_view_V9.pdf">User Manual</a> including details about the used clusters and attributes</li>
+</ul>
+<p>usefull commands</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">&gt; pub <span class="s1">&#39;lzig/office heat/set&#39;</span> -m <span class="s1">&#39;{&#34;current_heating_setpoint&#34;: 9}&#39;</span>
+&gt; pub <span class="s1">&#39;zig/living heat/set&#39;</span> -m <span class="s1">&#39;{&#34;current_system_mode&#34;: 16}&#39;</span>
+&gt; pub <span class="s1">&#39;zig/living heat/set&#39;</span> -m <span class="s1">&#39;{&#34;current_system_mode&#34;: 32}&#39;</span>
+</code></pre></div><p>Provided measures</p>
+<ul>
+<li>current_heating_setpoint</li>
+<li>occupied_heating_setpoint</li>
+<li>unoccupied_heating_setpoint</li>
+<li>eurotronic_system_mode</li>
+<li>pi_heating_demand</li>
+<li>eurotronic_error_status</li>
+<li>battery</li>
+<li>linkquality</li>
+<li>local_temperature</li>
+</ul>
+<p>Used in applications</p>
+<ul>
+<li><a href="/docs/raspi/readme/#home-heating-app">Home heating app</a></li>
+<li><a href="/docs/raspi/readme/#heat-cut">Heat cut rule</a></li>
+</ul>
+<p>❌ Unresolved mystery : it happened few times in 2 years that a device starts spontaneously heating with full power after a sort of connection loss or self reset. Not funny when this happens in summer, especially when someone is not at home. No answer from the support.</p>
+
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="/docs/networks/nrf/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; nRF Mesh
+				</div>
+			</div>
+		</a>
+	<a class="ml-auto" href="/docs/networks/thread/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Thread &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
+		</main>
+	</div>
+
+      </div>
+    </div>
+    
+    
+    <footer class="footer text-muted">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 order-last order-lg-first">
+        <ul class="list-inline">
+          <li class="list-inline-item">Powered by <a href="https://getdoks.org/">Doks</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 order-first order-lg-last text-lg-right">
+        <ul class="list-inline">
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+    <script src="/index.min.5627e38df7291e67b9efe0e7a70f89892be3cd242c15a5e3595c9495615d993774b72492208c50a08ea22f99762d30ebd98dac004e747a967d1083b9f63fe122.js" integrity="sha512-VifjjfcpHme57&#43;Dnpw&#43;JiSvjzSQsFaXjWVyUlWFdmTd0tySSIIxQoI6iL5l2LTDr2Y2sAE50epZ9EIO59j/hIg==" crossorigin="anonymous" defer></script>
+  <script src="/main.bb2ecd2a1b89d7a6d989848afb223e1541c872e586d2432d1266c89e7b5c691b7a58434d6708694782a06efe9f1b6aa15cdc9b03d74ce0c73ac119c150be1814.js" integrity="sha512-uy7NKhuJ16bZiYSK&#43;yI&#43;FUHIcuWG0kMtEmbInntcaRt6WENNZwhpR4Kgbv6fG2qhXNybA9dM4Mc6wRnBUL4YFA==" crossorigin="anonymous" defer></script>
+
+  </body>
+</html>
