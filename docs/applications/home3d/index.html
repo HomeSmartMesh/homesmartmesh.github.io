@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <meta name="generator" content="Hugo 0.79.1" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Control your home like a Video Game served from your local pi. See your 3d rooms model real time colored with your temperature sensor">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Home 3D" />
+<meta property="og:description" content="Control your home like a Video Game served from your local pi. See your 3d rooms model real time colored with your temperature sensor" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://homesmartmesh.github.com/docs/applications/home3d/" />
+<meta property="article:published_time" content="2021-01-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-01T00:00:00+00:00" />
+<title>Home 3D | Home Smart Mesh</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0f40b4e83b0db00d11c595295e7f5f85f51436d20a5b6790534cb30c9f46a201.css" integrity="sha256-D0C06DsNsA0RxZUpXn9fhfUUNtIKW2eQU0yzDJ9GogE=">
+<script defer src="/en.search.min.82ed01c2c033f91e2611e9da789274c3266db7d2d8cf3b86fd0d3bf75f5c8ef9.js" integrity="sha256-gu0BwsAz&#43;R4mEenaeJJ0wyZtt9LYzzuG/Q07919cjvk="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>Home Smart Mesh</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-26e813df4c1d2ae66edc7adef58c4759" class="toggle"  />
+    <label for="section-26e813df4c1d2ae66edc7adef58c4759" class="flex justify-between">
+      <a  class="">Frameworks</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/frameworks/raspi_iot/" class="">raspi IoT</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fd30b4440ee3b12d4d859ee39730f3c4" class="toggle"  />
+    <label for="section-fd30b4440ee3b12d4d859ee39730f3c4" class="flex justify-between">
+      <a  class="">Networks</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/networks/nrf/" class="">custom RF Mesh</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/networks/zigbee/" class="">Zigbee</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/networks/thread/" class="">Thread</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-12172a40edce1e57d2d7d6a535923101" class="toggle"  />
+    <label for="section-12172a40edce1e57d2d7d6a535923101" class="flex justify-between">
+      <a  class="">Microcontrollers</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/microcontrollers/esp32/" class="">esp32</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/microcontrollers/esp32/ttgo-t-display/" class="">TTGO T-Display</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/microcontrollers/esp32/m5stick-plus/" class="">M5 Stick Plus</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/microcontrollers/esp32/fisheye-cam-ov36/" class="">Fisheye Cam OV3660</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/microcontrollers/esp32/ttgo-t5-epaper/" class="">TTGO T5-EPaper</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/microcontrollers/riscv/" class="">Risc-V</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/microcontrollers/stm32/" class="">STM32</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/microcontrollers/nrf52/" class="">nRF52</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f968e44b046e92fca937aafe0fe389d9" class="toggle" checked />
+    <label for="section-f968e44b046e92fca937aafe0fe389d9" class="flex justify-between">
+      <a  class="">Applications</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/applications/home3d/" class=" active">Home 3D</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <script src="/js/svg-pan-zoom.min.js"></script>
+<div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Home 3D</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#first-time-usage">First time usage</a>
+          <ul>
+            <li><a href="#activate-hue-bridge-connection">activate hue bridge connection</a></li>
+            <li><a href="#activate-mqtt-connection">activate mqtt connection</a></li>
+            <li><a href="#live-demo">Live demo</a></li>
+            <li><a href="#demo-light-control-with-power-log">Demo light control with power log</a></li>
+          </ul>
+        </li>
+        <li><a href="#concept">Concept</a></li>
+        <li><a href="#hue-lights-usage">Hue lights usage</a>
+          <ul>
+            <li><a href="#hue-features">Hue features</a></li>
+            <li><a href="#hue-config-in-blender">Hue config in blender</a></li>
+            <li><a href="#hue-events-application-code">Hue events application code</a></li>
+            <li><a href="#hue-light-groups">Hue light groups</a></li>
+            <li><a href="#tested-hue-light-types">tested hue light types</a></li>
+            <li><a href="#demo-light-groups">demo light groups</a></li>
+            <li><a href="#demo-light-and-group-dimming">demo light and group dimming</a></li>
+            <li><a href="#mqtt-config-in-blender">Mqtt config in blender</a></li>
+            <li><a href="#mqtt-events-application-code">Mqtt events application code</a></li>
+            <li><a href="#mqtt-temperature-sensors-on-room-floor-color">Mqtt temperature sensors on room floor color</a></li>
+          </ul>
+        </li>
+        <li><a href="#blender-home-model">blender home model</a></li>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#dependencies">Dependencies</a>
+          <ul>
+            <li><a href="#web_three_interface">web_three_interface</a></li>
+          </ul>
+        </li>
+        <li><a href="#features">Features</a>
+          <ul>
+            <li><a href="#planned-features">Planned Features</a></li>
+            <li><a href="#issues-and-limitations">issues and limitations</a></li>
+            <li><a href="#local-host-vs-remote-host">Local host vs remote host</a></li>
+          </ul>
+        </li>
+        <li><a href="#performance">Performance</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown">
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="https://github.com/HomeSmartMesh/smart_home_3d_webapp" role="button" >Webapp 3D Github Repo</a>
+        </div>
+    </div>
+</div>
+
+<h2 id="first-time-usage">
+  First time usage
+  <a class="anchor" href="#first-time-usage">#</a>
+</h2>
+<ol>
+<li>host this project on your local raspberry pi or see <a href="#Local-host-vs-remote-host">&lsquo;Local host vs Remote host&rsquo; section</a> on how to use the live demo</li>
+<li>create your own glTF model from blender (optional)</li>
+</ol>
+<h3 id="activate-hue-bridge-connection">
+  activate hue bridge connection
+  <a class="anchor" href="#activate-hue-bridge-connection">#</a>
+</h3>
+<figure>
+    <img src="/images/hue_register.gif" width="600"/> 
+</figure>
+
+<ol>
+<li>adjust the light names to match your hue lights names</li>
+<li>press the Hue Gateway authorisation button (on the real device)</li>
+<li>Click on the 3d model of the hue gateway</li>
+<li>An alert will apear on the screen to wait for confirmation</li>
+<li>The user creation will proceed and the username will be stored as local storage (ctrl+j in chrome to oben the debug window)</li>
+</ol>
+<h3 id="activate-mqtt-connection">
+  activate mqtt connection
+  <a class="anchor" href="#activate-mqtt-connection">#</a>
+</h3>
+<figure>
+    <img src="/images/mqtt_activate.gif" width="600"/> 
+</figure>
+
+<ol>
+<li>adjust the mqtt topic names to match your mqtt devices</li>
+<li>install a mosquitto version with websocket support</li>
+<li>Click on the 3d model of the mosquitto gateway</li>
+</ol>
+<h3 id="live-demo">
+  Live demo
+  <a class="anchor" href="#live-demo">#</a>
+</h3>
+<p>Link to <a href="https://homesmartmesh.github.io/smart_home_3d_webapp/">Github .io live demo</a></p>
+<h3 id="demo-light-control-with-power-log">
+  Demo light control with power log
+  <a class="anchor" href="#demo-light-control-with-power-log">#</a>
+</h3>
+<figure>
+    <img src="/images/demo1.gif" width="600"/> 
+</figure>
+
+<p>We see in this demo a home 3d model augmented with interactive mesh items. Some meshes represent light bulbs and generate events when the user clicks on them. Those events are handled by a hue light client that interacts with the real hue gateway. The hue client publishes as events the actual state of the switched light, and that state is updated by the mesh bulb color and the associated 3d light.</p>
+<p>As a demonstration for the reaction time of the real light switching on and off, we can see in the gif animation the power consumption log of the light switched. This log comes from a <a href="https://shelly.cloud/shelly-25-wifi-smart-relay-roller-shutter-home-automation/">shelly 2.5 device</a> with power monitoring capabilites. This measure device is itself powering up the hue light. Note that the slow power up and down ramp are due to the hue effect of slow variation when switching on and off.</p>
+<h2 id="concept">
+  Concept
+  <a class="anchor" href="#concept">#</a>
+</h2>
+<figure>
+    <img src="/images/concept.png" width="600"/> 
+</figure>
+
+<p>Home automation connected to 3d events in javascript</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">send_custom_event</span>(<span style="color:#e6db74">&#34;three_param&#34;</span>,{<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;Kitchen&#34;</span>, <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0.3</span>});
+<span style="color:#a6e22e">send_custom_event</span>(<span style="color:#e6db74">&#34;three_param&#34;</span>,{<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;Kitchen&#34;</span>, <span style="color:#a6e22e">light</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0.3</span>});
+<span style="color:#a6e22e">send_custom_event</span>(<span style="color:#e6db74">&#34;three_param&#34;</span>,{<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;Kitchen&#34;</span>, <span style="color:#a6e22e">anim</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0.3</span>});
+<span style="color:#a6e22e">send_custom_event</span>(<span style="color:#e6db74">&#34;three_param&#34;</span>,{<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;Kitchen&#34;</span>, <span style="color:#a6e22e">pull</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0.3</span>});
+<span style="color:#a6e22e">send_custom_event</span>(<span style="color:#e6db74">&#34;three_param&#34;</span>,{<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;Kitchen&#34;</span>, <span style="color:#a6e22e">push</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0.3</span>});
+</code></pre></div><img src="https://github.com/HomeSmartMesh/web_three_interface/raw/master/12_multiple_parameters/media/demo.gif" width="400">
+<p>See <code>three_param</code> running in a <a href="https://homesmartmesh.github.io/web_three_interface/12_multiple_parameters/">live demo</a></p>
+<h2 id="hue-lights-usage">
+  Hue lights usage
+  <a class="anchor" href="#hue-lights-usage">#</a>
+</h2>
+<p>Note : This project is not related to the hue devices supplier and is a simple user of the provided API.</p>
+<h3 id="hue-features">
+  Hue features
+  <a class="anchor" href="#hue-features">#</a>
+</h3>
+<ul>
+<li>All individual lights and lightgroups visible and usable on the same view (not possible with other hue apps)</li>
+<li>Correct display of light status. On off and grayed when not reachable (other apps might show out of reach lights same color as the ones switched on)</li>
+<li>Click/Touch light to control on-off</li>
+<li>Cilck/Touch lightgroup to control on / off (using any_on)</li>
+<li>hold and use 3d slider to adjust the light brightness (lights and groups)</li>
+<li>hold and control allows to dim light up gradually out of zero without a bang in case of previous dim state was high, and it is possible to jump to previous dim state by switch on with touch or click (other apps dissociate switch on and dimming functions, so that if left at high dim level, you have to switch it on on full brightness first before being able to dim it lower)</li>
+<li>3d light bulbs and 3d light brightness vary in sync when controlling the 3d slider (groups slider on exit only)</li>
+<li>webapp lights kept in sync even when used externally. Configurable polling is used (default is 2 sec), event <code>hue_all_lights</code> only sent on changes (shallow compare)</li>
+</ul>
+<h3 id="hue-config-in-blender">
+  Hue config in blender
+  <a class="anchor" href="#hue-config-in-blender">#</a>
+</h3>
+<figure>
+    <img src="/images/hue_blender.png" width="500"/> 
+</figure>
+
+<p>configuration of hue light name in blender Light bulb object Custom properties.</p>
+<h3 id="hue-events-application-code">
+  Hue events application code
+  <a class="anchor" href="#hue-events-application-code">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">addEventListener</span>( <span style="color:#e6db74">&#39;hue_lights_on_startup&#39;</span>, <span style="color:#a6e22e">onHueStartup</span>, <span style="color:#66d9ef">false</span> );
+window.<span style="color:#a6e22e">addEventListener</span>( <span style="color:#e6db74">&#39;hue_light_state&#39;</span>, <span style="color:#a6e22e">onHueLightState</span>, <span style="color:#66d9ef">false</span> );
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onHueLightState</span>(<span style="color:#a6e22e">e</span>){
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">hue_mesh_name</span>[<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">detail</span>.<span style="color:#a6e22e">name</span>];
+    <span style="color:#a6e22e">send_custom_event</span>(<span style="color:#e6db74">&#34;three_param&#34;</span>,{<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">light</span><span style="color:#f92672">:</span><span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">detail</span>.<span style="color:#a6e22e">on</span>});
+}
+</code></pre></div><p>lights broadcast their state on startup and as a feedback when updated from javascript</p>
+<h3 id="hue-light-groups">
+  Hue light groups
+  <a class="anchor" href="#hue-light-groups">#</a>
+</h3>
+<ul>
+<li>Lightgroup are optional and the individual light items configuration does not differ depending on if they are part of a light group or not.</li>
+<li>only the hue gateway lightgroup is being used. That means a lightgroup has to be created with the hue app before it can be used in this webapp.</li>
+</ul>
+<figure>
+    <img src="/images/hue_lightgroup_structure.png" width="300"/> 
+</figure>
+
+<p>Indiviual lights have to be attached to a parent mesh that have these custom properties</p>
+<figure>
+    <img src="/images/hue_light_groups.png" width="500"/> 
+</figure>
+
+<ul>
+<li>a lightgroup shall also have a <code>hue</code> field, the only differerence is that it has no blender light item and does have a <code>type:lightgroup</code> property.</li>
+<li>as the hue gateway allow it, a normal light and a lightgroup can have the same name.</li>
+</ul>
+<h3 id="tested-hue-light-types">
+  tested hue light types
+  <a class="anchor" href="#tested-hue-light-types">#</a>
+</h3>
+<ul>
+<li>productname: Hue color spot
+<ul>
+<li>modelid: LCG002</li>
+<li>type: Extended color light</li>
+<li>config:{archetype:wallspot}</li>
+<li>state:{on, bri, hue, sat, effect, xy, ct}</li>
+<li>capabilities:{control:{mindimlevel, maxlumen, ct:{min,max}, colorgamuttype, colorgamut:[0,1,2]}}</li>
+</ul>
+</li>
+<li>productname: Hue ambiance spot
+<ul>
+<li>modelid: LTW013</li>
+<li>type: Color temperature light</li>
+<li>config:{archetype:singlespot}</li>
+<li>state:{color,bri,ct}</li>
+<li>capabilities:{control:{mindimlevel, maxlumen, ct:{min,max}}}</li>
+</ul>
+</li>
+<li>productname: &ldquo;Hue white lamp&rdquo;
+<ul>
+<li>modelid: LWB010</li>
+<li>type: Dimmable light</li>
+<li>config:{archetype:classicbulb}</li>
+<li>state:{on, bri}</li>
+<li>capabilities:{control:{mindimlevel, maxlumen}}</li>
+</ul>
+</li>
+<li>productname: Hue filament bulb
+<ul>
+<li>modelid: LWO001</li>
+<li>type: Dimmable light</li>
+<li>config:{archetype:vintagebulb}</li>
+<li>state:{on, bri}</li>
+<li>capabilities:{control:{mindimlevel, maxlumen}}</li>
+</ul>
+</li>
+<li>productname: Color temperature light
+<ul>
+<li>modelid: RS 128 T</li>
+<li>type: Color temperature light</li>
+<li>config:{archetype:wallspot}</li>
+<li>state:{on, bri, ct}</li>
+<li>capabilities:{control:{ct:{min,max}}}</li>
+</ul>
+</li>
+<li>productname: Color temperature light
+<ul>
+<li>modelid: RB 148 T</li>
+<li>type: Color temperature light</li>
+<li>config:{archetype:candlebulb}</li>
+<li>state:{on, bri, ct}</li>
+<li>capabilities:{control:{ct:{min,max}}}</li>
+</ul>
+</li>
+</ul>
+<p>ct unit is Mired M = 1000000/T; <a href="https://en.wikipedia.org/wiki/Mired">Mired</a></p>
+<h3 id="demo-light-groups">
+  demo light groups
+  <a class="anchor" href="#demo-light-groups">#</a>
+</h3>
+<figure>
+    <img src="/images/lightgroup.gif" width="600"/> 
+</figure>
+
+<h3 id="demo-light-and-group-dimming">
+  demo light and group dimming
+  <a class="anchor" href="#demo-light-and-group-dimming">#</a>
+</h3>
+<figure>
+    <img src="/images/light_dimming.gif" width="600"/> 
+</figure>
+
+<h3 id="mqtt-config-in-blender">
+  Mqtt config in blender
+  <a class="anchor" href="#mqtt-config-in-blender">#</a>
+</h3>
+<figure>
+    <img src="/images/mqtt_blender.png" width="500"/> 
+</figure>
+
+<p>The mqtt topic has to be assigned to an <code>mqtt</code> custom property</p>
+<h3 id="mqtt-events-application-code">
+  Mqtt events application code
+  <a class="anchor" href="#mqtt-events-application-code">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">addEventListener</span>( <span style="color:#e6db74">&#39;mqtt_message&#39;</span>, <span style="color:#a6e22e">onMqttMessage</span>, <span style="color:#66d9ef">false</span>);
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onMqttMessage</span>(<span style="color:#a6e22e">e</span>){
+    ...
+	<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">userData</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;heating&#34;</span>){
+		<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">heating_demand</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">detail</span>.<span style="color:#a6e22e">payload</span>.<span style="color:#a6e22e">pi_heating_demand</span>;
+		<span style="color:#a6e22e">send_custom_event</span>(<span style="color:#e6db74">&#39;three_param&#39;</span>,{<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#a6e22e">obj_name</span>,<span style="color:#a6e22e">color</span><span style="color:#f92672">:</span><span style="color:#a6e22e">heating_demand</span>});
+	}
+}
+</code></pre></div><h3 id="mqtt-temperature-sensors-on-room-floor-color">
+  Mqtt temperature sensors on room floor color
+  <a class="anchor" href="#mqtt-temperature-sensors-on-room-floor-color">#</a>
+</h3>
+<figure>
+    <img src="/images/floor_temperature.png" width="500"/> 
+</figure>
+
+<h2 id="blender-home-model">
+  blender home model
+  <a class="anchor" href="#blender-home-model">#</a>
+</h2>
+<figure>
+    <img src="/images/blender_model.png" width="600"/> 
+</figure>
+
+<p><a href="https://drive.google.com/drive/folders/1DFyGKp_6VMN4Vp36PCXglEsV0zEX9iyz?usp=sharing">blender file download from google drive</a></p>
+<p>The blender model export in .glTF is already part of this repo. So you would only need the blender file in case you&rsquo;d like a template to start with and customise.</p>
+<p>Files within the <a href="https://drive.google.com/drive/folders/1DFyGKp_6VMN4Vp36PCXglEsV0zEX9iyz?usp=sharing">project&rsquo;s google drive folder</a> will have commit ids to match them with this repo.</p>
+<p>The created home model should have custom properties. It is also possible to use the repo&rsquo;s home model file and edit it as it is a json format : <code>./3d_models/home.gltf</code>. It is possible to rename the <code>hue: </code> field with your own hue lights names as known by the hue gateway.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    <span style="color:#e6db74">&#34;extras&#34;</span> <span style="color:#960050;background-color:#1e0010">:</span> {
+        <span style="color:#f92672">&#34;mouseEvent&#34;</span> : <span style="color:#e6db74">&#34;true&#34;</span>,
+        <span style="color:#f92672">&#34;type&#34;</span> : <span style="color:#e6db74">&#34;light&#34;</span>,
+        <span style="color:#f92672">&#34;hue&#34;</span> : <span style="color:#e6db74">&#34;Bathroom main&#34;</span>
+</code></pre></div><h2 id="requirements">
+  Requirements
+  <a class="anchor" href="#requirements">#</a>
+</h2>
+<ul>
+<li>mqtt usage require a mosquitto with websocket support, see this guide on how to <a href="https://gist.github.com/smoofit/dafa493aec8d41ea057370dbfde3f3fc">install mosquitto with websockets</a></li>
+</ul>
+<h2 id="dependencies">
+  Dependencies
+  <a class="anchor" href="#dependencies">#</a>
+</h2>
+<ul>
+<li><a href="https://threejs.org/">three.js</a></li>
+<li><a href="https://github.com/blargoner/jshue">jsHue.js</a></li>
+<li><a href="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js">mqttws31</a></li>
+<li><a href="https://github.com/HomeSmartMesh/web_three_interface">web_three_interface</a></li>
+</ul>
+<h3 id="web_three_interface">
+  web_three_interface
+  <a class="anchor" href="#web_three_interface">#</a>
+</h3>
+<p>The <a href="https://github.com/HomeSmartMesh/web_three_interface">web_three_interface</a> is not a direct dependency but is used as a boiler plate for 3d interactive meshes. It is still a useful repo that helps understand the workflow step by step with increasingly complex demo, and also debug in case one step is failing.</p>
+<h2 id="features">
+  Features
+  <a class="anchor" href="#features">#</a>
+</h2>
+<ul>
+<li>3d interactions with click and hold</li>
+<li>3d slider positioning relative to child world coordinate</li>
+<li>glTF model with custom properties (hue, mqtt, mouse)</li>
+<li>mqtt: events forward to javascript events</li>
+<li>stats and fps. (can be disabled in <a href="./config.js">config.json</a>)</li>
+<li>heaters pi_heating_demand on heater mesh colors</li>
+<li>rooms temperature on floor color</li>
+<li>EffectComposer and outlinePass for app selected interactive objects (<code>three_param:outline</code>)</li>
+</ul>
+<h3 id="planned-features">
+  Planned Features
+  <a class="anchor" href="#planned-features">#</a>
+</h3>
+<ul>
+<li>
+<p>enhance 3d slider with more info about limits and states</p>
+</li>
+<li>
+<p>adjust heating with 3d slider</p>
+</li>
+<li>
+<p>hue light dimming : required visible difference between minimal dimm and off</p>
+</li>
+<li>
+<p>directional light to reflect room sensors ambient light</p>
+</li>
+<li>
+<p>add windows open close with colors</p>
+</li>
+<li>
+<p>use lower poly mesh</p>
+</li>
+<li>
+<p>add coap support through node server (split, back+front) but keep the same front</p>
+</li>
+<li>
+<p>add android native app with sockets and coap permissions</p>
+</li>
+<li>
+<p>add fallback support with a websocket/socket wrapper <a href="https://github.com/novnc/websockify">https://github.com/novnc/websockify</a></p>
+</li>
+<li>
+<p>fall back on interactive demo mode from within the same app</p>
+</li>
+<li>
+<p>meta light groups with parenting</p>
+</li>
+<li>
+<p>add direct mqtt support wtihout websockets through node server</p>
+</li>
+</ul>
+<h3 id="issues-and-limitations">
+  issues and limitations
+  <a class="anchor" href="#issues-and-limitations">#</a>
+</h3>
+<ul>
+<li>no material animation supported by gltf, so fallback on a mutateColor custom property</li>
+<li>No Custom Properties export for Light Object Data Properties (green), only Object Properties (orange)</li>
+<li>gltf-blender : No area light export possible <a href="https://github.com/KhronosGroup/glTF-Blender-IO/issues/786">github issue</a></li>
+<li>three.js : RectAreaLight <a href="https://threejs.org/docs/#api/en/lights/RectAreaLight">has limitations and conditions</a> <a href="https://threejs.org/examples/webgl_lights_rectarealight.html">RectAreaLight demo</a></li>
+</ul>
+<h3 id="local-host-vs-remote-host">
+  Local host vs remote host
+  <a class="anchor" href="#local-host-vs-remote-host">#</a>
+</h3>
+<ul>
+<li>
+<p>preffered and recommended way : host this repo on your own local rapsberry pi webserver. A vpn is recommended as a solution to remotely get into your local netwrok. Any sort of port exposing and https secure hosting will require a complete security check and would be run with an unknown risk.</p>
+</li>
+<li>
+<p>non preferred way : but can be used for test and demonstration purpose, directly from github.io : <a href="https://homesmartmesh.github.io/smart_home_3d_webapp/">https://homesmartmesh.github.io/smart_home_3d_webapp/</a></p>
+</li>
+</ul>
+<p>Limitation when using from github .io :</p>
+<ul>
+<li>Github .io are the exact deployment of this same repo, the master branch is deployed so is not stable and might not run as it did the last time you used it.</li>
+<li>Network safety : As the hue.js script is using http, a mixed content http/https error will happen when using from github .io as it is an https server. It is still possible to override this safety.</li>
+<li>It is not possible to customize your own 3d model</li>
+<li>It is not possible to update the name of your hue lights (you could still rename some to match the <code>./3d_models/home.gltf</code> content)</li>
+</ul>
+<h2 id="performance">
+  Performance
+  <a class="anchor" href="#performance">#</a>
+</h2>
+<p><a href="https://webglreport.com/">webgl report website</a></p>
+<p>test model : 8000 triangls</p>
+<ul>
+<li>PC wtih NVIDIA GeForce GTX 745 : 30 FPS, 5 ms</li>
+<li>Samsung galaxy S10 : 60 FPS</li>
+<li>Samsung galaxy S5 : 14 FPS</li>
+<li>Samsung galaxy Tab pro (SM-P900) :  N.A (does not fully load, simplified scene with 3000 tri at 2 FPS)</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#first-time-usage">First time usage</a>
+          <ul>
+            <li><a href="#activate-hue-bridge-connection">activate hue bridge connection</a></li>
+            <li><a href="#activate-mqtt-connection">activate mqtt connection</a></li>
+            <li><a href="#live-demo">Live demo</a></li>
+            <li><a href="#demo-light-control-with-power-log">Demo light control with power log</a></li>
+          </ul>
+        </li>
+        <li><a href="#concept">Concept</a></li>
+        <li><a href="#hue-lights-usage">Hue lights usage</a>
+          <ul>
+            <li><a href="#hue-features">Hue features</a></li>
+            <li><a href="#hue-config-in-blender">Hue config in blender</a></li>
+            <li><a href="#hue-events-application-code">Hue events application code</a></li>
+            <li><a href="#hue-light-groups">Hue light groups</a></li>
+            <li><a href="#tested-hue-light-types">tested hue light types</a></li>
+            <li><a href="#demo-light-groups">demo light groups</a></li>
+            <li><a href="#demo-light-and-group-dimming">demo light and group dimming</a></li>
+            <li><a href="#mqtt-config-in-blender">Mqtt config in blender</a></li>
+            <li><a href="#mqtt-events-application-code">Mqtt events application code</a></li>
+            <li><a href="#mqtt-temperature-sensors-on-room-floor-color">Mqtt temperature sensors on room floor color</a></li>
+          </ul>
+        </li>
+        <li><a href="#blender-home-model">blender home model</a></li>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#dependencies">Dependencies</a>
+          <ul>
+            <li><a href="#web_three_interface">web_three_interface</a></li>
+          </ul>
+        </li>
+        <li><a href="#features">Features</a>
+          <ul>
+            <li><a href="#planned-features">Planned Features</a></li>
+            <li><a href="#issues-and-limitations">issues and limitations</a></li>
+            <li><a href="#local-host-vs-remote-host">Local host vs remote host</a></li>
+          </ul>
+        </li>
+        <li><a href="#performance">Performance</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

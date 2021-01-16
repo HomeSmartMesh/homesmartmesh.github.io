@@ -1,183 +1,486 @@
-<!doctype html>
-<html lang="en-US">
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
-<link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-italic.woff2" type="font/woff2" crossorigin>
-<link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-500.woff2" type="font/woff2" crossorigin>
-<link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-500italic.woff2" type="font/woff2" crossorigin>
-<link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-700.woff2" type="font/woff2" crossorigin>
-<link rel="preload" as="font" href="/fonts/vendor/jost/jost-v4-latin-700italic.woff2" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/main.a65777214f583916ac9b2e7a8df9c5b87aad8693ac999774ed2380793aff5ad3558fffb9b956faf890524567c1791a10afca9f545f9321a21e28c168da7766b4.css" integrity="sha512-pld3IU9YORasmy56jfnFuHqthpOsmZd07SOAeTr/WtNVj/&#43;5uVb6&#43;JBSRWfBeRoQr8qfVF&#43;TIaIeKMFo2ndmtA==" crossorigin="anonymous">
-<noscript><style>img.lazyload { display: none; }</style></noscript>
-  <meta name="robots" content="index, follow">
-  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <title>Home Smart Mesh - DIY Home Auomation</title>
-<meta name="description" content="Mesh of sensors, zigbee, custom RF, BT, wifi, all to MQTT Gateways on Raspberry Pi with database, dashboard and webapps.">
-<link rel="canonical" href="/">
-<meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:image" content="/hsm.png">
-    <meta name="twitter:title" content="Home Smart Mesh">
-<meta name="twitter:description" content="Mesh of sensors, zigbee, custom RF, BT, wifi, all to MQTT Gateways on Raspberry Pi with database, dashboard and webapps.">
+<!DOCTYPE html>
+<html lang="en" dir=>
 
-<meta name="twitter:site" content="@henkverlinde">
-<meta name="twitter:creator" content="@henkverlinde">
+<head>
+  <meta name="generator" content="Hugo 0.79.1" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Overview of the website content">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Home Smart Mesh" />
+<meta property="og:description" content="Overview of the website content" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://homesmartmesh.github.com/" />
+<meta property="og:updated_time" content="2020-10-06T08:48:23+00:00" />
+<title>Home Smart Mesh | Home Smart Mesh</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.0f40b4e83b0db00d11c595295e7f5f85f51436d20a5b6790534cb30c9f46a201.css" integrity="sha256-D0C06DsNsA0RxZUpXn9fhfUUNtIKW2eQU0yzDJ9GogE=">
+<script defer src="/en.search.min.82ed01c2c033f91e2611e9da789274c3266db7d2d8cf3b86fd0d3bf75f5c8ef9.js" integrity="sha256-gu0BwsAz&#43;R4mEenaeJJ0wyZtt9LYzzuG/Q07919cjvk="></script>
+<link rel="alternate" type="application/rss+xml" href="http://homesmartmesh.github.com/index.xml" title="Home Smart Mesh" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
 
-<meta property="og:title" content="Home Smart Mesh">
-<meta property="og:description" content="Mesh of sensors, zigbee, custom RF, BT, wifi, all to MQTT Gateways on Raspberry Pi with database, dashboard and webapps.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="/">
-
-  <meta property="og:image" content="/hsm.png"/>
-    <meta property="og:updated_time" content="2020-12-31T00:00:00+00:00">
-  <meta property="og:site_name" content="Home Smart Mesh">
-
-<meta property="article:publisher" content="https://www.facebook.com/verlinde.henk">
-<meta property="article:author" content="https://www.facebook.com/verlinde.henk">
-<meta property="og:locale" content="en_US">
-
-<link rel="alternate" type="application/rss&#43;xml" href="/index.xml">
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "url": "\/",
-      "name": "Home Smart Mesh",
-      "logo": "\/hsm.png",
-      "sameAs": [
-        "",
-        "https:\/\/www.linkedin.com\/in\/wassfila\/",
-        "https:\/\/github.com\/HomeSmartMesh"
-      ]
-    }
-    </script>
-  <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-        "@type": "ListItem",
-        "position":  1 ,
-        "name": "Home",
-        "item": "\/"
-    }]
-}
-</script>
-
-  <meta name="theme-color" content="#fff">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
   
 </head>
-  <body class="home">
-    <div class="header-bar fixed-top"></div>
-<header class="navbar fixed-top navbar-expand-md navbar-light">
-  <script src="/js/svg-pan-zoom.min.js"></script>
-  <div class="container">
-    <input class="menu-btn order-0" type="checkbox" id="menu-btn">
-    <label class="menu-icon d-md-none" for="menu-btn"><span class="navicon"></span></label>
-    <a class="navbar-brand order-1 order-md-0 mr-auto" href="/">Home Smart Mesh</a>
-    <button id="mode" class="btn btn-link order-2 order-md-4" type="button" aria-label="Toggle mode">
-      <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
-      <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
-    </button>
-    <ul class="navbar-nav social-nav order-3 order-md-5">
-      <li class="nav-item">
-          <a class="nav-link" href="https://github.com/HomeSmartMesh"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><span class="ml-2 sr-only">GitHub</span></a>
+
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>Home Smart Mesh</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-26e813df4c1d2ae66edc7adef58c4759" class="toggle"  />
+    <label for="section-26e813df4c1d2ae66edc7adef58c4759" class="flex justify-between">
+      <a  class="">Frameworks</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/frameworks/raspi_iot/" class="">raspi IoT</a>
+  
+
         </li>
-      </ul>
-    <div class="collapse navbar-collapse order-4 order-md-1">
-      <ul class="navbar-nav main-nav mr-auto order-5 order-md-2"><li class="nav-item">
-            <a class="nav-link" href="/docs/raspi/readme/">Docs</a>
-          </li>
-        </ul>
-      <div class="break order-6 d-md-none"></div>
-      <form class="navbar-form flex-grow-1 order-7 order-md-3">
-        <input id="userinput" class="form-control is-search" type="search" placeholder="Search docs..." aria-label="Search docs..." autocomplete="off">
-        <div id="suggestions" class="shadow bg-white rounded"></div>
-      </form>
-    </div>
-  </div>
-</header>
-    <div class="wrap container" role="document">
-      <div class="content">
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fd30b4440ee3b12d4d859ee39730f3c4" class="toggle"  />
+    <label for="section-fd30b4440ee3b12d4d859ee39730f3c4" class="flex justify-between">
+      <a  class="">Networks</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/networks/nrf/" class="">custom RF Mesh</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/networks/zigbee/" class="">Zigbee</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/networks/thread/" class="">Thread</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-12172a40edce1e57d2d7d6a535923101" class="toggle"  />
+    <label for="section-12172a40edce1e57d2d7d6a535923101" class="flex justify-between">
+      <a  class="">Microcontrollers</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/microcontrollers/esp32/" class="">esp32</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/microcontrollers/esp32/ttgo-t-display/" class="">TTGO T-Display</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/microcontrollers/esp32/m5stick-plus/" class="">M5 Stick Plus</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/microcontrollers/esp32/fisheye-cam-ov36/" class="">Fisheye Cam OV3660</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/microcontrollers/esp32/ttgo-t5-epaper/" class="">TTGO T5-EPaper</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/microcontrollers/riscv/" class="">Risc-V</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/microcontrollers/stm32/" class="">STM32</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/microcontrollers/nrf52/" class="">nRF52</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f968e44b046e92fca937aafe0fe389d9" class="toggle"  />
+    <label for="section-f968e44b046e92fca937aafe0fe389d9" class="flex justify-between">
+      <a  class="">Applications</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.com/docs/applications/home3d/" class="">Home 3D</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
         
-<section class="section container-fluid mt-n3 pb-5">
-  <div class="row justify-content-center">
-    <div class="col-lg-9 text-center">
-      <p class="lead">Mesh of sensors, zigbee, custom RF, BT, wifi, all to MQTT Gateways on Raspberry Pi with database, dashboard and webapps.</p>
-    </div>
-  </div>
-  <div class="row justify-content-center">
-    <div class="col-lg-16 text-center"><h2 id="home-automation-mind-map">Home Automation Mind Map</h2>
+  <script src="/js/svg-pan-zoom.min.js"></script>
+<div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Home Smart Mesh</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h2 id="home-automation-mind-map">
+  Home Automation Mind Map
+  <a class="anchor" href="#home-automation-mind-map">#</a>
+</h2>
 
 
 
-<embed id="svg-9c6db5665e5455cd" type="image/svg+xml" width=100% src="images/home%20automation.svg" />
+<div class="container">
+  <div class="row">
+      <div class="col text-center">
+          <a id="btn-4d35411556b95c5f" class="book-btn" role="button" >Full Screen</a>
+      </div>
+</div>
+<embed id="svg-4d35411556b95c5f" type="image/svg+xml" width=100% src="/images/home%20automation.svg" />
 <script>
-  document.getElementById('svg-9c6db5665e5455cd').addEventListener('load', function(){
+  function setup_svg_panzoom(){
     let params = {
           panEnabled: true,
           zoomEnabled: true,
           dblClickZoomEnabled: true,
-          controlIconsEnabled: true,
-          mouseWheelZoomEnabled: false,
+          controlIconsEnabled: false,
+          mouseWheelZoomEnabled: true,
           preventMouseEventsDefault: true,
           zoomScaleSensitivity: 0.6,
           minZoom: 0.5,
-          maxZoom: 3,
+          maxZoom: 4,
            fit: true
           , contain: true
           , center: true
           , refreshRate: 'auto'
       };
-      svgPanZoom('#svg-9c6db5665e5455cd'        ,params);
-  })
-</script>
+      let svg_pz = svgPanZoom('#svg-4d35411556b95c5f'        ,params);
+      window["svg_4d35411556b95c5f"] = svg_pz
+      let button = document.getElementById("btn-4d35411556b95c5f");
+      button.onclick = ()=>{
+          var elem = document.getElementById("svg-4d35411556b95c5f");
+          if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+          } else if (elem.webkitRequestFullscreen) {  
+          elem.webkitRequestFullscreen();
+          } else if (elem.msRequestFullscreen) {  
+          elem.msRequestFullscreen();
+          }
+      };
+  }
+  function reset_position(){
+    window["svg_4d35411556b95c5f"].resize()
+    window["svg_4d35411556b95c5f"].fit()
+    window["svg_4d35411556b95c5f"].center()
+  }
+  document.getElementById('svg-4d35411556b95c5f').addEventListener('load', setup_svg_panzoom)
+  window.addEventListener('resize', reset_position)
+ </script>
 
-<h1 id="networks">Networks</h1>
-<section class="section section-sm">
-  <div class="container">
-    <div class="row justify-content-center text-center mt-lg">
-      
-      <div class="col-lg">
-        <h2 id="custom-mesh">Custom Mesh</h2>
+<h1 id="networks">
+  Networks
+  <a class="anchor" href="#networks">#</a>
+</h1>
+<div class="book-columns flex flex-wrap  text-center">
+  
+  <div class="flex-even markdown-inner">
+    <h2 id="custom-mesh">Custom Mesh</h2>
 <figure>
     <img src="/images/nRF52832_sensortag.png" height="100"/> 
 </figure>
 <div class="container">
     <div class="row">
         <div class="col text-center">
-        <a class="btn btn-secondary btn-lg px-4 mb-2" href="/docs/networks/nrf/" role="button" >nRF Mesh Doc</a>
+        <a class="btn btn-secondary btn-lg px-4 mb-2" href="http://homesmartmesh.github.com/docs/networks/nrf/" role="button" >nRF Mesh Doc</a>
         </div>
     </div>
 </div>
 <p>✅ A simpler, more efficient alternative to Z-x, BL-x, Thread, standard RF protocols.</p>
 <p>✅ Open source SW is provided for off the shelf nRF SoC tags and dongles.</p>
 
-      </div>
-      
-      <div class="col-lg">
-        <h2 id="wifi">Wifi</h2>
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <h2 id="wifi">Wifi</h2>
 <p>✅ Universal, Simple, secure</p>
 <p>❌ Range issues and password hussle</p>
 
-      </div>
-      
-      <div class="col-lg">
-        <h2 id="zigbee">Zigbee</h2>
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <h2 id="zigbee">Zigbee</h2>
 <figure>
     <img src="/images/zigbee.png" height="100"/> 
 </figure>
 <div class="container">
     <div class="row">
         <div class="col text-center">
-        <a class="btn btn-secondary btn-lg px-4 mb-2" href="/docs/networks/zigbee/" role="button" >Zigbee Doc</a>
+        <a class="btn btn-secondary btn-lg px-4 mb-2" href="http://homesmartmesh.github.com/docs/networks/zigbee/" role="button" >Zigbee Doc</a>
         </div>
     </div>
 </div>
@@ -185,215 +488,250 @@
 <p>✅ Low Power</p>
 <p>❌ difficult pairing and attributes discovery unreliable</p>
 
-      </div>
-      
-    </div>
   </div>
-</section>
+  
+</div>
 
-<section class="section section-sm">
-  <div class="container">
-    <div class="row justify-content-center text-center mt-lg">
-      
-      <div class="col-lg">
-        <h2 id="thread">Thread</h2>
+<div class="book-columns flex flex-wrap  text-center">
+  
+  <div class="flex-even markdown-inner">
+    <h2 id="thread">Thread</h2>
 <p>✅ IPv6 generic gateway
-      </div>
-      
-      <div class="col-lg">
-        <h2 id="bluetooth">Bluetooth</h2>
-
-      </div>
-      
-    </div>
   </div>
-</section>
+  
+  <div class="flex-even markdown-inner">
+    <h2 id="bluetooth">Bluetooth</h2>
 
-<p><figure>
-    <img src="/images/networks_deployment.png" width="600"/> 
-</figure>
+  </div>
+  
+</div>
+
+<p>
+
+
+
+<div class="center">
+  <img
+    src="/images/networks_deployment.png"
+    alt=""
+    width="600"
+    decoding="async"
+  />
+</div>
 
 When deploying multiple networks, it&rsquo;s important to select non interfering channels.
 Above is an example deployment of wifi and  zigbee along a custom RF.</p>
-<h1 id="frameworks">Frameworks</h1>
-<section class="section section-sm">
-  <div class="container">
-    <div class="row justify-content-center text-center mt-lg">
-      
-      <div class="col-lg">
-        <h2 id="custom-diy">Custom DIY</h2>
+<h1 id="frameworks">
+  Frameworks
+  <a class="anchor" href="#frameworks">#</a>
+</h1>
+<div class="book-columns flex flex-wrap  text-center">
+  
+  <div class="flex-even markdown-inner">
+    <h2 id="custom-diy">Custom DIY</h2>
 <figure>
     <img src="/images/pi_logo.png" height="100"/> 
 </figure>
 <div class="container">
     <div class="row">
         <div class="col text-center">
-        <a class="btn btn-secondary btn-lg px-4 mb-2" href="/docs/raspi/readme/" role="button" >Raspi Doc</a>
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="http://homesmartmesh.github.com/docs/raspi/readme/" role="button" >Raspi Doc</a>
         </div>
     </div>
 </div>
 <p>Best way to learn and dive deep. Sensors to MQTT to influx to Grafana. With Python and Node.js scripts ruling the automation.
-      </div>
-      
-      <div class="col-lg">
-        <h2 id="home-assistant">Home Assistant</h2>
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <h2 id="home-assistant">Home Assistant</h2>
 <figure>
     <img src="/images/hassio.png" height="100"/> 
 </figure>
 <div class="container">
     <div class="row">
         <div class="col text-center">
-        <a class="btn btn-primary btn-lg px-4 mb-2" href="https://www.home-assistant.io/" role="button" target="_blank">website</a>
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="https://www.home-assistant.io/" role="button" >website</a>
         </div>
     </div>
 </div>
 
-      </div>
-      
-      <div class="col-lg">
-        <h2 id="openhab">OpenHAB</h2>
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <h2 id="openhab">OpenHAB</h2>
 <figure>
     <img src="/images/openhab.png" height="100"/> 
 </figure>
 <div class="container">
     <div class="row">
         <div class="col text-center">
-        <a class="btn btn-primary btn-lg px-4 mb-2" href="https://www.openhab.org/" role="button" target="_blank">website</a>
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="https://www.openhab.org/" role="button" >website</a>
         </div>
     </div>
 </div>
 
-      </div>
-      
-    </div>
   </div>
-</section>
+  
+</div>
 
-<h1 id="applications">Applications</h1>
-<section class="section section-sm">
-  <div class="container">
-    <div class="row justify-content-center text-center mt-lg">
-      
-      <div class="col-lg">
-        <h2 id="webapps">Webapps</h2>
+<h1 id="applications">
+  Applications
+  <a class="anchor" href="#applications">#</a>
+</h1>
+<div class="book-columns flex flex-wrap  text-center">
+  
+  <div class="flex-even markdown-inner">
+    <h2 id="webapps">Webapps</h2>
 <figure>
     <img src="/images/floor_temperature.png" height="100"/> 
 </figure>
 <div class="container">
     <div class="row">
         <div class="col text-center">
-        <a class="btn btn-secondary btn-lg px-4 mb-2" href="/docs/webapps/home3d/" role="button" >Webapps Doc</a>
+        <a class="btn btn-secondary btn-lg px-4 mb-2" href="http://homesmartmesh.github.com/docs/webapps/home3d/" role="button" >Webapps Doc</a>
         </div>
     </div>
 </div>
 <p>Smart Home 3d : Control your home like a Video Game served from your local pi. See your 3d rooms model real time colored with your temperature sensor.
-      </div>
-      
-      <div class="col-lg">
-        Voronoi Editor, Graphysics
-      </div>
-      
-    </div>
   </div>
-</section>
+  
+  <div class="flex-even markdown-inner">
+    Voronoi Editor, Graphysics
+  </div>
+  
+</div>
 
-<h2 id="home-automation-devices">Home Automation Devices</h2>
+<h2 id="home-automation-devices">
+  Home Automation Devices
+  <a class="anchor" href="#home-automation-devices">#</a>
+</h2>
 
 
 
-<embed id="svg-6f06a9a91889587d" type="image/svg+xml" width=100% src="images/devices.svg" />
+<div class="container">
+  <div class="row">
+      <div class="col text-center">
+          <a id="btn-22b6dfefdac5d157" class="book-btn" role="button" >Full Screen</a>
+      </div>
+</div>
+<embed id="svg-22b6dfefdac5d157" type="image/svg+xml" width=100% src="/images/devices.svg" />
 <script>
-  document.getElementById('svg-6f06a9a91889587d').addEventListener('load', function(){
+  function setup_svg_panzoom(){
     let params = {
           panEnabled: true,
           zoomEnabled: true,
           dblClickZoomEnabled: true,
-          controlIconsEnabled: true,
-          mouseWheelZoomEnabled: false,
+          controlIconsEnabled: false,
+          mouseWheelZoomEnabled: true,
           preventMouseEventsDefault: true,
           zoomScaleSensitivity: 0.6,
           minZoom: 0.5,
-          maxZoom: 3,
+          maxZoom: 4,
            fit: true
           , contain: true
           , center: true
           , refreshRate: 'auto'
       };
-      svgPanZoom('#svg-6f06a9a91889587d'        ,params);
-  })
-</script>
+      let svg_pz = svgPanZoom('#svg-22b6dfefdac5d157'        ,params);
+      window["svg_22b6dfefdac5d157"] = svg_pz
+      let button = document.getElementById("btn-22b6dfefdac5d157");
+      button.onclick = ()=>{
+          var elem = document.getElementById("svg-22b6dfefdac5d157");
+          if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+          } else if (elem.webkitRequestFullscreen) {  
+          elem.webkitRequestFullscreen();
+          } else if (elem.msRequestFullscreen) {  
+          elem.msRequestFullscreen();
+          }
+      };
+  }
+  function reset_position(){
+    window["svg_22b6dfefdac5d157"].resize()
+    window["svg_22b6dfefdac5d157"].fit()
+    window["svg_22b6dfefdac5d157"].center()
+  }
+  document.getElementById('svg-22b6dfefdac5d157').addEventListener('load', setup_svg_panzoom)
+  window.addEventListener('resize', reset_position)
+ </script>
 
-<section class="section section-sm">
-  <div class="container">
-    <div class="row justify-content-left text-left mt-lg">
-      
-      <div class="col-lg">
-        <p>Here we can see a partitioning into Vendors specific Gateways and Open Gateways for which the Raspberry pi is an ideal open Hardware standard.</p>
+<div class="book-columns flex flex-wrap">
+  
+  <div class="flex-even markdown-inner">
+    <p>Here we can see a partitioning into Vendors specific Gateways and Open Gateways for which the Raspberry pi is an ideal open Hardware standard.</p>
 <p>The same partitioning is done for the devices,  where the ESP32 and the Arduino are a major player in the DIY electronics. More and more users are crossing the step of bravery of building their own garage opener, which might be less secure as a protocol, but as it is limited to local network can occur much less risk than vendors devices that could be Hacked from the other side of the world.</p>
 
-      </div>
-      
-    </div>
   </div>
-</section>
+  
+</div>
 
-<section class="section section-sm">
-  <div class="container">
-    <div class="row justify-content-left text-left mt-lg">
-      
-      <div class="col-lg">
-        <h2 id="networks">Networks</h2>
+<div class="book-columns flex flex-wrap">
+  
+  <div class="flex-even markdown-inner">
+    <h2 id="networks">Networks</h2>
 <p>Ethernet and wifi being used by most generic consumer devices is very convenient and is used wherever it is possible. Even smaller devices with relatively low power (ESP32) can use wifi, which solves all communication questions. Usage of websocket allow browsers and webapps to be independent from proxy servers which increases the flexibility of the client servers architecture and allows clients to run on any device (Smartphone / PC : mac, win,linux).  MQTT lowers the application overhead in comparison to REST API and solves all communication scenarios with client polling and server based events notification.</p>
 <p>The 2.4 GHz range clusters in two groups, user centered environment and Autonomous server based environment. The user, expected to be armed with a smartphone, has placed the Bluetooth as main protocol for device to user direct interactions. Although Bluetooth is catching up by adding support for Mesh, this mixes of concerns in order to win market over mesh based devices has kept support for Bluetooth mesh marginal. Zigbee, based on the 802.15.4 standard, has well succeeded into providing products suited for home applications. Currently support is added for sub GHz, but most devices operate in the 2.4 GHz. Limitations from both frequency and transmission power have been solved by the mesh protocol, where light bulbs, as first target of Zigbee, play the role of routers. If to think about a mesh at home, what a better location for a router than in the center of the room, under the ceiling for obstacle avoidance and in a powered spot to allow permanent radio listening and routing, and this is where the light bulbs are usually placed.</p>
 <p>Zigbee has been struggling with profiles compatibility which challenges users’s understanding and trust of compatibility. The standard’s focus moved from ZLL (Zigbee Light Link) to ZHA (Zigbee Home Automation), then to Zigbee 3.0 keeping retro compatibility at device level (not routing level). Is Thread going to supersede Zigbee ? The question is rather when ? Thread, using ipv6, provides a generic resolution of addresses  between local networks and internet which is standard define and vendor free. In order to catch up and not to lose the market, the Zigbee alliance are pushing the “dot dot” to grow to application level of both protocols, and hope to allow products smoothly transit and support both. At the same time, Thread comes with concept allowing MQTT-SN (Sensor’s Network) to run at the node level, which does not fit in the zigbee profile.</p>
 <p>How can a user invest in a home equipment without getting deprecated before the installation is complete ? How can a user use his favorite User Interface with his favorite Light bulbs and Sensors ? And this without requiring Hacker’s skills ? These are still open questions.</p>
 
-      </div>
-      
-      <div class="col-lg">
-        <h2 id="frameworks-applications-assistants">Frameworks, Applications, Assistants</h2>
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <h2 id="frameworks-applications-assistants">Frameworks, Applications, Assistants</h2>
 <p>Two main frameworks appeared in order to answer the compatibility issues and interoperability problems. OpenHAB and Home Assistant. Both try to be compatible with most smart devices available in the market, and provide a common interface that allow control and creation of rules.  While the success is undeniable for the compatibility and control of many devices, the user interface still obey the rules of physics, being either ugly and functional, nice looking but annoying to use, or both nice and practical but require a genius skills for configuration. It is legitimate to try to invent a new language for writing rules, so that the non developers have to learn a special programming language anyway, one they cannot use anywhere other than in one app, and the developers are extremely annoyed with the limitations, still have to memorize more key words and deal with issues of immature programming concepts only observed in the early stages of standard languages development. The custom environments, if they have a well isolated configuration  or one custom prepared configuration, they can compete with open frameworks or even with consumer grade applications.</p>
 <p>Philips Hue and Phoscon are listed here because the light bulbs are the first successful product in home automation. By successful, it is meant that the product is truly smart, without degradation of the basic functionality, like a PC that needs 5 minutes to boot that makes you wish you sent the mail by post. Philips Hue has the limitation of not having a concept for event based API notification. Despite their connection to closed protocol IFTTT, they do not allow PUTs to custom local URLs. Phoscon on the other hand, do provide a websocket clean concept to notify of events.</p>
 <p>Assistants are listed here as part of the Automation scene, Alexa, Google and Apple Home. These assistants are here to help on particular circumstances where voice control is suited. Two regressions in the quality of life can happen from their usage. First, if the voice becomes the only way to actuate a device, that turns things as simple and quick as pressing a button into shouting at night and begging and repeating just to switch a TV on. Second, all complex orders that would require  complete paragraph of description to get you what you want, while with a slider, the space geometry is intuitive enough to save you that pain. Same for selecting a particular channel, or opening the window just enough to let a bit of wind and not too much not to let a cat through.</p>
 <p>The smartest environment is definitely the one that knows what you want so that you don’t need to ask. Know’s that you’re reading a book so adjusts the light on reading level where you are, so the less screens and the less talk required, the smarter is the environment.</p>
 
-      </div>
-      
-    </div>
   </div>
-</section>
+  
+</div>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
 
 </div>
-  </div>
-</section>
 
-      </div>
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
-    
-<section class="section container-fluid mt-n3 pb-5">
-  <div class="row justify-content-center">
-  </div>
-</section>
 
     
-    <footer class="footer text-muted">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 order-last order-lg-first">
-        <ul class="list-inline">
-          <li class="list-inline-item">Author's guthub profile github <a href="https://github.com/wassfila">wassfila</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-8 order-first order-lg-last text-lg-right">
-        <ul class="list-inline">
-          </ul>
-      </div>
-    </div>
-  </div>
-</footer>
-    
-    <script src="/index.min.e45c53bab7e3f3b422f924e52bdc05c60e4439e5998230a7bdd80abd35c5d7255179e87767d421390cec104ca8dc9a634e313c9fe561020d62385b4e2a8a776e.js" integrity="sha512-5FxTurfj87Qi&#43;STlK9wFxg5EOeWZgjCnvdgKvTXF1yVReeh3Z9QhOQzsEEyo3JpjTjE8n&#43;VhAg1iOFtOKop3bg==" crossorigin="anonymous" defer></script>
-  <script src="/main.bb2ecd2a1b89d7a6d989848afb223e1541c872e586d2432d1266c89e7b5c691b7a58434d6708694782a06efe9f1b6aa15cdc9b03d74ce0c73ac119c150be1814.js" integrity="sha512-uy7NKhuJ16bZiYSK&#43;yI&#43;FUHIcuWG0kMtEmbInntcaRt6WENNZwhpR4Kgbv6fG2qhXNybA9dM4Mc6wRnBUL4YFA==" crossorigin="anonymous" defer></script>
+  </main>
 
-  </body>
+  
+</body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

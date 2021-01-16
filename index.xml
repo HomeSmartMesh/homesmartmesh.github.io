@@ -1,23 +1,94 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home Smart Mesh on </title>
-    <link>/</link>
-    <description>Recent content in Home Smart Mesh on </description>
+    <title>Home Smart Mesh</title>
+    <link>http://homesmartmesh.github.com/</link>
+    <description>Recent content on Home Smart Mesh</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate>
-    
-        <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
+    <language>en-us</language>
+    <lastBuildDate>Tue, 06 Oct 2020 08:48:23 +0000</lastBuildDate><atom:link href="http://homesmartmesh.github.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TTGO T-Display</title>
+      <link>http://homesmartmesh.github.com/docs/microcontrollers/esp32/ttgo-t-display/</link>
+      <pubDate>Fri, 25 Dec 2020 00:00:00 +0900</pubDate>
+      
+      <guid>http://homesmartmesh.github.com/docs/microcontrollers/esp32/ttgo-t-display/</guid>
+      <description>Simple Example# t-display_controller  dependencies# TFT_eSPI_ttgo_t-display  fork from Bodmer/TFT_eSPI   GfxUi  lib_deps = https://github.com/ESP32Home/TFT_eSPI_ttgo_t-display.git#2.3.4_t-display https://github.com/ESP32Home/GfxUi.git#v1.0.1 Example##include &amp;lt;Arduino.h&amp;gt;#include &amp;lt;TFT_eSPI.h&amp;gt;#include &amp;lt;SPI.h&amp;gt;#include &amp;#34;GfxUi.h&amp;#34;#include &amp;lt;SPIFFS.h&amp;gt; TFT_eSPI tft = TFT_eSPI(135, 240); GfxUi ui = GfxUi(&amp;amp;tft); void setup() { Serial.begin(115200); tft.init(); tft.setRotation(3); SPIFFS.begin(true);//FORMAT_SPIFFS_IF_FAILED  ui.drawBmp(&amp;#34;/esp_home.bmp&amp;#34;, 0, 0);//&amp;#39;ui&amp;#39; needs tft and SPIFF  tft.setCursor(0, 0); tft.setTextColor(TFT_GREEN); tft.setTextSize(2); tft.drawString(&amp;#34;Hello TFT World&amp;#34;, tft.width() / 2, tft.height() / 2 ); } void loop() { } Display# IPS ST7789V 1,14 Zoll 135x240  Suppliers# Aliexpress ~ 10€  </description>
+    </item>
     
     <item>
-      <title>Docs</title>
-      <link>/docs/</link>
-      <pubDate>Tue, 06 Oct 2020 08:48:23 +0000</pubDate>
+      <title>custom RF Mesh</title>
+      <link>http://homesmartmesh.github.com/docs/networks/nrf/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
-      <guid>/docs/</guid>
-      <description></description>
+      <guid>http://homesmartmesh.github.com/docs/networks/nrf/</guid>
+      <description>nRF Mesh Github RepoFeatures#   2.4 GHz 2 Mbps Mesh Network  tested with 300 packets / second   Flash time automated database config Zero install time configuration  No association, No pairing, No factory resets   Router = Coordinator = Repeater = Sniffer = CLI text serial line protocol Multiple Network endpoints  No single point of failure   Server, Dongles, Sensors  Full Stack Open Source (no softdevices required) HW On the shelves optional DIY HW   Alive trace routing  a heartbeat message that gives info about the age and RF tx/rx hops through the route    see below the Drivers &amp;amp; Custom Mesh protocol section for the RF Protocol details</description>
+    </item>
+    
+    <item>
+      <title>raspi IoT</title>
+      <link>http://homesmartmesh.github.com/docs/frameworks/raspi_iot/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
+      
+      <guid>http://homesmartmesh.github.com/docs/frameworks/raspi_iot/</guid>
+      <description>Raspi Github RepoSoftware#   Raspbian OS Main services  Mosquitto : https://mosquitto.org/ influxDB : https://www.influxdata.com/products/influxdb-overview/ mqtt2influx : py/influx Grafana : https://grafana.com/ graphql sensors : js/graphql   x to mqtt  Zigbee2mqtt : https://www.zigbee2mqtt.io/ nrf2mqtt : github nRF52_Mesh nrf_mesh miflora2mqtt : https://github.com/RaymondMouthaan/miflora-mqtt-daemon telegram bots2mqtt : js/telegraf based on https://github.com/telegraf/telegraf   automation services  Light control : py/hue Phantom Load cut : js/pc_control Heat cut : py/heating Home status : py/home_status Roborock button : py/hover   user interface  3D webapp : https://github.</description>
+    </item>
+    
+    <item>
+      <title>M5 Stick Plus</title>
+      <link>http://homesmartmesh.github.com/docs/microcontrollers/esp32/m5stick-plus/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0900</pubDate>
+      
+      <guid>http://homesmartmesh.github.com/docs/microcontrollers/esp32/m5stick-plus/</guid>
+      <description> 6-Axis IMU IR transmitter Microphone RTC LCD (1.14 inch) Lipo Battery Passive Buzzer  Product page# m5stack M5StickC Plus $14  Display# 1.14 inch 135x240 Color TFT LCD ST7789v2  </description>
+    </item>
+    
+    <item>
+      <title>Zigbee</title>
+      <link>http://homesmartmesh.github.com/docs/networks/zigbee/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
+      
+      <guid>http://homesmartmesh.github.com/docs/networks/zigbee/</guid>
+      <description>Devices Overview#Below are examples of used devices in this project
+  As in the above figure, I kept all the light with the hue gateway for a reliable function, and opted for zigbee2mqtt for all other non lighting devices.
+For a detailed list of used devices and their documentation see the devices list section
+Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in a local network, therefore allowing third party apps integration.</description>
+    </item>
+    
+    <item>
+      <title>Fisheye Cam OV3660</title>
+      <link>http://homesmartmesh.github.com/docs/microcontrollers/esp32/fisheye-cam-ov36/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0900</pubDate>
+      
+      <guid>http://homesmartmesh.github.com/docs/microcontrollers/esp32/fisheye-cam-ov36/</guid>
+      <description> 3 Mega Pixels OV3660 Fisheye lens DFOV 120° Ultra low power, sleep current 2μA 270mAh battery PSRAM 8MB  Source code# Arduino ESP-IDF  Product page# Fisheye Timer camera $20  </description>
+    </item>
+    
+    <item>
+      <title>Thread</title>
+      <link>http://homesmartmesh.github.com/docs/networks/thread/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
+      
+      <guid>http://homesmartmesh.github.com/docs/networks/thread/</guid>
+      <description>Open ThreadFull Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.6,minZoom: 0.5,maxZoom: 4,fit: true, contain: true, center: true, refreshRate: &#39;auto&#39;};let svg_pz = svgPanZoom(&#39;#svg-99adc38e71d7d1e9&#39; ,params);window[&#34;svg_99adc38e71d7d1e9&#34;] = svg_pzlet button = document.getElementById(&#34;btn-99adc38e71d7d1e9&#34;);button.onclick = ()={var elem = document.getElementById(&#34;svg-99adc38e71d7d1e9&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.</description>
+    </item>
+    
+    <item>
+      <title>Home 3D</title>
+      <link>http://homesmartmesh.github.com/docs/applications/home3d/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://homesmartmesh.github.com/docs/applications/home3d/</guid>
+      <description>Webapp 3D Github RepoFirst time usage# host this project on your local raspberry pi or see &amp;lsquo;Local host vs Remote host&amp;rsquo; section on how to use the live demo create your own glTF model from blender (optional)  activate hue bridge connection#   adjust the light names to match your hue lights names press the Hue Gateway authorisation button (on the real device) Click on the 3d model of the hue gateway An alert will apear on the screen to wait for confirmation The user creation will proceed and the username will be stored as local storage (ctrl+j in chrome to oben the debug window)  activate mqtt connection#   adjust the mqtt topic names to match your mqtt devices install a mosquitto version with websocket support Click on the 3d model of the mosquitto gateway  Live demo#Link to Github .</description>
+    </item>
+    
+    <item>
+      <title>TTGO T5-EPaper</title>
+      <link>http://homesmartmesh.github.com/docs/microcontrollers/esp32/ttgo-t5-epaper/</link>
+      <pubDate>Fri, 25 Dec 2020 00:00:00 +0900</pubDate>
+      
+      <guid>http://homesmartmesh.github.com/docs/microcontrollers/esp32/ttgo-t5-epaper/</guid>
+      <description>Simple example# epaper-TTGO-T5_1_2-hello  dependencies# GxEPD  lib_ldf_mode = deep+ lib_deps =GxEPD@3.1.0 Example##include &amp;lt;SPIFFS.h&amp;gt;#include &amp;lt;epaper.h&amp;gt; EPaper epaper; void setup() { Serial.begin(115200); SPIFFS.begin(); epaper.init(); epaper.display.fillScreen(GxEPD_WHITE); epaper.drawBitmap(&amp;#34;/esp_home.bmp&amp;#34;, 0, 50, true); epaper.displayText(&amp;#34;Hello simple&amp;#34;, 20, EPaper::RIGHT_ALIGNMENT); epaper.display.update(); } void loop() { } Display# GxGDEW029Z10 2,9 Zoll White / Black / Red 296x128  References# LilyGo epaper ESP-IDF repo LilyGO/ESP32_T5Epaper_2.9inch  fork from loboris/ESP32_ePaper_example   LilyGo epaper platformio-arduino repo Xinyuan-LilyGO/T5-Ink-Screen-Series  fork from TTGO-EPaper-Series   Waveshare specification pdf 2.</description>
     </item>
     
   </channel>
