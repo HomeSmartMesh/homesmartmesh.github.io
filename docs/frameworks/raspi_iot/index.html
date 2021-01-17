@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.0f40b4e83b0db00d11c595295e7f5f85f51436d20a5b6790534cb30c9f46a201.css" integrity="sha256-D0C06DsNsA0RxZUpXn9fhfUUNtIKW2eQU0yzDJ9GogE=">
-<script defer src="/en.search.min.82ed01c2c033f91e2611e9da789274c3266db7d2d8cf3b86fd0d3bf75f5c8ef9.js" integrity="sha256-gu0BwsAz&#43;R4mEenaeJJ0wyZtt9LYzzuG/Q07919cjvk="></script>
+<script defer src="/en.search.min.32034a5539a1a552e769acecea5da14b580748c732bb719ff720ffae631b4179.js" integrity="sha256-MgNKVTmhpVLnaazs6l2hS1gHSMcyu3Gf9yD/rmMbQXk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -393,6 +393,13 @@ https://github.com/alex-shpak/hugo-book
       <ul>
         <li><a href="#software">Software</a></li>
         <li><a href="#hardware">Hardware</a></li>
+        <li><a href="#meta-website">Meta website</a>
+          <ul>
+            <li><a href="#what-is-it-">What is it ?</a></li>
+            <li><a href="#how-does-it-work-">How does it work ?</a></li>
+            <li><a href="#demo-video">Demo video</a></li>
+          </ul>
+        </li>
         <li><a href="#smart-home-3d-webapp">Smart home 3D webapp</a></li>
         <li><a href="#led-panel-webapp">Led Panel webapp</a></li>
         <li><a href="#home-heating-app">Home heating app</a>
@@ -530,6 +537,77 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
+<h2 id="meta-website">
+  Meta website
+  <a class="anchor" href="#meta-website">#</a>
+</h2>
+<figure>
+    <img src="/images/meta_website.png" width="100%"/> 
+</figure>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="btn btn-primary btn-lg px-4 mb-2" href="https://github.com/HomeSmartMesh/raspi/tree/master/web/overview" role="button" >website source code</a>
+        </div>
+    </div>
+</div>
+
+<h3 id="what-is-it-">
+  What is it ?
+  <a class="anchor" href="#what-is-it-">#</a>
+</h3>
+<ul>
+<li>Hugo : a website as easy to customise as writing markdown</li>
+<li>Menu : All webapps and websites can be organised in a hierarchical menu</li>
+<li>Full screen : Each website is embedded on an iframe that can toggle to full screen mode or open in a new page</li>
+</ul>
+<h3 id="how-does-it-work-">
+  How does it work ?
+  <a class="anchor" href="#how-does-it-work-">#</a>
+</h3>
+<ul>
+<li>create a new file : <code>homeassistant.md</code></li>
+</ul>
+<figure>
+    <img src="/images/hugo_md_file.png" width="200"/> 
+</figure>
+
+<ul>
+<li>call <code>hugo server</code> to test or <code>hugo</code> to generate the website (more details on <a href="https://gohugo.io/getting-started/">using hugo</a>)</li>
+<li>this will already create a new menu entry</li>
+</ul>
+<figure>
+    <img src="/images/hugo_menu.png" width="200"/> 
+</figure>
+
+<ul>
+<li>Fill it with the link to your webapp instance</li>
+</ul>
+<figure>
+    <img src="/images/hugo_markdown.png" width="400"/> 
+</figure>
+
+<ul>
+<li><code>weight</code> : defines the order in the menu entry</li>
+<li><code>title</code> : The text that will appear on the menu entry</li>
+<li><code>BookToC</code> : Table Of Content not required so that the iframe can be wider</li>
+<li><code>...{&lt; iframe...</code> : call of the <code>iframe</code> html shortcode file that has been added in the <code>layouts\shortcodes</code> directory</li>
+</ul>
+<figure>
+    <img src="/images/hugo_shortcodes.png" width="200"/> 
+</figure>
+
+<h3 id="demo-video">
+  Demo video
+  <a class="anchor" href="#demo-video">#</a>
+</h3>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/OUtunnrMKI4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
 <h2 id="smart-home-3d-webapp">
   Smart home 3D webapp
   <a class="anchor" href="#smart-home-3d-webapp">#</a>
@@ -860,6 +938,13 @@ https://github.com/alex-shpak/hugo-book
       <ul>
         <li><a href="#software">Software</a></li>
         <li><a href="#hardware">Hardware</a></li>
+        <li><a href="#meta-website">Meta website</a>
+          <ul>
+            <li><a href="#what-is-it-">What is it ?</a></li>
+            <li><a href="#how-does-it-work-">How does it work ?</a></li>
+            <li><a href="#demo-video">Demo video</a></li>
+          </ul>
+        </li>
         <li><a href="#smart-home-3d-webapp">Smart home 3D webapp</a></li>
         <li><a href="#led-panel-webapp">Led Panel webapp</a></li>
         <li><a href="#home-heating-app">Home heating app</a>
