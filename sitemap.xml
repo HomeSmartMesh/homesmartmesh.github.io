@@ -8,7 +8,7 @@
   </url>
   
   <url>
-    <loc>http://homesmartmesh.github.io/docs/microcontrollers/esp32/ttgo-t-display/</loc>
+    <loc>http://homesmartmesh.github.io/docs/microcontrollers/esp32/datasheets/</loc>
     <lastmod>2020-12-25T00:00:00+09:00</lastmod>
   </url>
   
@@ -33,13 +33,13 @@
   </url>
   
   <url>
-    <loc>http://homesmartmesh.github.io/docs/microcontrollers/esp32/m5stick-plus/</loc>
+    <loc>http://homesmartmesh.github.io/docs/microcontrollers/</loc>
     <lastmod>2020-12-26T00:00:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://homesmartmesh.github.io/docs/microcontrollers/</loc>
-    <lastmod>2020-12-26T00:00:00+09:00</lastmod>
+    <loc>http://homesmartmesh.github.io/docs/microcontrollers/esp32/debugger/</loc>
+    <lastmod>2020-12-25T00:00:00+09:00</lastmod>
   </url>
   
   <url>
@@ -52,8 +52,8 @@
   </url>
   
   <url>
-    <loc>http://homesmartmesh.github.io/docs/microcontrollers/esp32/fisheye-cam-ov36/</loc>
-    <lastmod>2020-12-26T00:00:00+09:00</lastmod>
+    <loc>http://homesmartmesh.github.io/docs/microcontrollers/esp32/software/</loc>
+    <lastmod>2020-12-25T00:00:00+09:00</lastmod>
   </url>
   
   <url>
@@ -76,12 +76,27 @@
   </url>
   
   <url>
+    <loc>http://homesmartmesh.github.io/docs/microcontrollers/nrf52/</loc>
+  </url>
+  
+  <url>
+    <loc>http://homesmartmesh.github.io/docs/microcontrollers/esp32/fisheye-cam-ov36/</loc>
+    <lastmod>2020-12-26T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://homesmartmesh.github.io/docs/microcontrollers/esp32/ttgo-t-display/</loc>
+    <lastmod>2020-12-25T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://homesmartmesh.github.io/docs/microcontrollers/esp32/ttgo-t5-epaper/</loc>
     <lastmod>2020-12-25T00:00:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://homesmartmesh.github.io/docs/microcontrollers/nrf52/</loc>
+    <loc>http://homesmartmesh.github.io/docs/microcontrollers/esp32/m5stick-plus/</loc>
+    <lastmod>2020-12-26T00:00:00+09:00</lastmod>
   </url>
   
   <url>

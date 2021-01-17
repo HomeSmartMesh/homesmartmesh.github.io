@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.0f40b4e83b0db00d11c595295e7f5f85f51436d20a5b6790534cb30c9f46a201.css" integrity="sha256-D0C06DsNsA0RxZUpXn9fhfUUNtIKW2eQU0yzDJ9GogE=">
-<script defer src="/en.search.min.32034a5539a1a552e769acecea5da14b580748c732bb719ff720ffae631b4179.js" integrity="sha256-MgNKVTmhpVLnaazs6l2hS1gHSMcyu3Gf9yD/rmMbQXk="></script>
+<script defer src="/en.search.min.2196b1160c59fec4a4801c591b4079912175138f41708327d596e406899df793.js" integrity="sha256-IZaxFgxZ/sSkgBxZG0B5kSF1E49BcIMn1ZbkBomd95M="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -166,7 +166,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-12172a40edce1e57d2d7d6a535923101" class="toggle" checked />
     <label for="section-12172a40edce1e57d2d7d6a535923101" class="flex justify-between">
-      <a  class="">Microcontrollers</a>
+      <a href="http://homesmartmesh.github.io/docs/microcontrollers/" class="">Microcontrollers</a>
       <span>▾</span>
     </label>
   
@@ -181,7 +181,11 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://homesmartmesh.github.io/docs/microcontrollers/esp32/" class="">esp32</a>
+    <input type="checkbox" id="section-7d13b6f646948a6d212145f583c29a47" class="toggle" checked />
+    <label for="section-7d13b6f646948a6d212145f583c29a47" class="flex justify-between">
+      <a href="http://homesmartmesh.github.io/docs/microcontrollers/esp32/" class="">esp32</a>
+      <span>▾</span>
+    </label>
   
 
           
@@ -194,7 +198,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://homesmartmesh.github.io/docs/microcontrollers/esp32/ttgo-t-display/" class="">TTGO T-Display</a>
+    <a href="http://homesmartmesh.github.io/docs/microcontrollers/esp32/datasheets/" class="">Datasheets</a>
   
 
         </li>
@@ -207,7 +211,20 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://homesmartmesh.github.io/docs/microcontrollers/esp32/m5stick-plus/" class="">M5 Stick Plus</a>
+    <a href="http://homesmartmesh.github.io/docs/microcontrollers/esp32/debugger/" class="">Debug</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.io/docs/microcontrollers/esp32/software/" class="">Software</a>
   
 
         </li>
@@ -233,7 +250,33 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="http://homesmartmesh.github.io/docs/microcontrollers/esp32/ttgo-t-display/" class="">TTGO T-Display</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="http://homesmartmesh.github.io/docs/microcontrollers/esp32/ttgo-t5-epaper/" class="">TTGO T5-EPaper</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.io/docs/microcontrollers/esp32/m5stick-plus/" class="">M5 Stick Plus</a>
   
 
         </li>
@@ -350,6 +393,24 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/HomeSmartMesh/website" target="_blank" rel="noopener">
+        Website Repo
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/wassfila" target="_blank" rel="noopener">
+        Author
+      </a>
+  </li>
+  
+</ul>
+
+
 
 
 
@@ -391,8 +452,19 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li>
       <ul>
-        <li><a href="#source-code">Source code</a></li>
         <li><a href="#product-page">Product page</a></li>
+        <li><a href="#platformio-porting">Platformio porting</a>
+          <ul>
+            <li><a href="#board-definition">board definition</a></li>
+            <li><a href="#pins-declaration">pins declaration</a></li>
+          </ul>
+        </li>
+        <li><a href="#applications">Applications</a>
+          <ul>
+            <li><a href="#wakeup">wakeup</a></li>
+            <li><a href="#webcam">webcam</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -414,14 +486,6 @@ https://github.com/alex-shpak/hugo-book
 <li>270mAh battery</li>
 <li>PSRAM 8MB</li>
 </ul>
-<h2 id="source-code">
-  Source code
-  <a class="anchor" href="#source-code">#</a>
-</h2>
-<ul>
-<li><a href="https://github.com/m5stack/TimerCam-arduino">Arduino</a></li>
-<li><a href="https://github.com/m5stack/TimerCam-idf">ESP-IDF</a></li>
-</ul>
 <h2 id="product-page">
   Product page
   <a class="anchor" href="#product-page">#</a>
@@ -429,6 +493,90 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="https://m5stack.com/collections/m5-unit/products/esp32-psram-timer-camera-fisheye-ov3660">Fisheye Timer camera $20</a></li>
 </ul>
+<h2 id="platformio-porting">
+  Platformio porting
+  <a class="anchor" href="#platformio-porting">#</a>
+</h2>
+<h3 id="board-definition">
+  board definition
+  <a class="anchor" href="#board-definition">#</a>
+</h3>
+<ul>
+<li>local file : <code>boards\m5stack-timer-cam.json</code></li>
+<li>should be added to the <a href="https://github.com/platformio/platform-espressif32/tree/master/boards">platformio/platform-espressif32</a> repo</li>
+<li>still missing from v2.1.0</li>
+</ul>
+<h3 id="pins-declaration">
+  pins declaration
+  <a class="anchor" href="#pins-declaration">#</a>
+</h3>
+<ul>
+<li>file required <code>pins_arduino.h</code></li>
+<li>available on <a href="https://github.com/espressif/arduino-esp32/blob/master/variants/m5stack_timer_cam/pins_arduino.h">pins_arduino.h@1.0.5</a> not yet released</li>
+</ul>
+<h2 id="applications">
+  Applications
+  <a class="anchor" href="#applications">#</a>
+</h2>
+<h3 id="wakeup">
+  wakeup
+  <a class="anchor" href="#wakeup">#</a>
+</h3>
+<ul>
+<li><a href="https://github.com/m5stack/TimerCam-arduino/tree/master/examples/wakeup">m5stack/Arduino wakeup example</a></li>
+<li><a href="https://github.com/ESP32Home/timercam_wakeup">sep32home/Platformio wakeup example</a></li>
+</ul>
+
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>Build info</span>
+      <span>...</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      <pre><code class="language-log" data-lang="log">PACKAGES:
+ - framework-arduinoespressif32 0.0.0+sha.b05bdf6
+ - tool-esptoolpy 1.30000.201119 (3.0.0)
+ - toolchain-xtensa32 2.50200.80 (5.2.0)
+Dependency Graph
+|-- &lt;Timer-CAM&gt; 0.0.1
+</code></pre>
+    </div>
+  </label>
+</div>
+
+<h3 id="webcam">
+  webcam
+  <a class="anchor" href="#webcam">#</a>
+</h3>
+<ul>
+<li><a href="https://github.com/m5stack/TimerCam-arduino/tree/master/examples/web_cam">m5stack/Arduino webcam example</a></li>
+<li><a href="https://github.com/ESP32Home/timercam_webcam">esp32home/Platformio webcam example</a></li>
+</ul>
+
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>Build info</span>
+      <span>...</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      <p>Note <code>app_httpd</code> is part of the <code>Timer-CAM</code> lib</p>
+<pre><code class="language-log" data-lang="log">PACKAGES:
+ - framework-arduinoespressif32 0.0.0+sha.b05bdf6
+ - tool-esptoolpy 1.30000.201119 (3.0.0)
+ - tool-mkspiffs 2.230.0 (2.30)
+ - toolchain-xtensa32 2.50200.80 (5.2.0)
+Dependency Graph
+|-- &lt;Timer-CAM&gt; 0.0.1   
+|-- &lt;WiFi&gt; 1.0
+</code></pre>
+    </div>
+  </label>
+</div>
+
 </article>
  
       
@@ -465,8 +613,19 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li>
       <ul>
-        <li><a href="#source-code">Source code</a></li>
         <li><a href="#product-page">Product page</a></li>
+        <li><a href="#platformio-porting">Platformio porting</a>
+          <ul>
+            <li><a href="#board-definition">board definition</a></li>
+            <li><a href="#pins-declaration">pins declaration</a></li>
+          </ul>
+        </li>
+        <li><a href="#applications">Applications</a>
+          <ul>
+            <li><a href="#wakeup">wakeup</a></li>
+            <li><a href="#webcam">webcam</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>

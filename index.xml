@@ -8,12 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 06 Oct 2020 08:48:23 +0000</lastBuildDate><atom:link href="http://homesmartmesh.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>TTGO T-Display</title>
-      <link>http://homesmartmesh.github.io/docs/microcontrollers/esp32/ttgo-t-display/</link>
+      <title>Datasheets</title>
+      <link>http://homesmartmesh.github.io/docs/microcontrollers/esp32/datasheets/</link>
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0900</pubDate>
       
-      <guid>http://homesmartmesh.github.io/docs/microcontrollers/esp32/ttgo-t-display/</guid>
-      <description>Simple Example# t-display_controller  dependencies# TFT_eSPI_ttgo_t-display  fork from Bodmer/TFT_eSPI   GfxUi  lib_deps = https://github.com/ESP32Home/TFT_eSPI_ttgo_t-display.git#2.3.4_t-display https://github.com/ESP32Home/GfxUi.git#v1.0.1 Example##include &amp;lt;Arduino.h&amp;gt;#include &amp;lt;TFT_eSPI.h&amp;gt;#include &amp;lt;SPI.h&amp;gt;#include &amp;#34;GfxUi.h&amp;#34;#include &amp;lt;SPIFFS.h&amp;gt; TFT_eSPI tft = TFT_eSPI(135, 240); GfxUi ui = GfxUi(&amp;amp;tft); void setup() { Serial.begin(115200); tft.init(); tft.setRotation(3); SPIFFS.begin(true);//FORMAT_SPIFFS_IF_FAILED  ui.drawBmp(&amp;#34;/esp_home.bmp&amp;#34;, 0, 0);//&amp;#39;ui&amp;#39; needs tft and SPIFF  tft.setCursor(0, 0); tft.setTextColor(TFT_GREEN); tft.setTextSize(2); tft.drawString(&amp;#34;Hello TFT World&amp;#34;, tft.width() / 2, tft.height() / 2 ); } void loop() { } Display# IPS ST7789V 1,14 Zoll 135x240  Suppliers# Aliexpress ~ 10€  </description>
+      <guid>http://homesmartmesh.github.io/docs/microcontrollers/esp32/datasheets/</guid>
+      <description>ESP32#Datasheet# Datasheet  Blockdiagram#Memory Map#Power Modes#WROOM Datasheet# ESP32-WROOM-32 Datasheet  Pin Layout#ESP32-S2#Datasheet# ESP32-S2 Datasheet  Block Diagram#Memory#Power Modes#S2 Technical Reference Manual# TRM  </description>
     </item>
     
     <item>
@@ -35,12 +35,12 @@
     </item>
     
     <item>
-      <title>M5 Stick Plus</title>
-      <link>http://homesmartmesh.github.io/docs/microcontrollers/esp32/m5stick-plus/</link>
-      <pubDate>Sat, 26 Dec 2020 00:00:00 +0900</pubDate>
+      <title>Debug</title>
+      <link>http://homesmartmesh.github.io/docs/microcontrollers/esp32/debugger/</link>
+      <pubDate>Fri, 25 Dec 2020 00:00:00 +0900</pubDate>
       
-      <guid>http://homesmartmesh.github.io/docs/microcontrollers/esp32/m5stick-plus/</guid>
-      <description> 6-Axis IMU IR transmitter Microphone RTC LCD (1.14 inch) Lipo Battery Passive Buzzer  Product page# m5stack M5StickC Plus $14  Display# 1.14 inch 135x240 Color TFT LCD ST7789v2  </description>
+      <guid>http://homesmartmesh.github.io/docs/microcontrollers/esp32/debugger/</guid>
+      <description>PlatformIO# ESP-Prog  Pinout#Connection#Official Guide# Espressif - ESP Prog Guide  </description>
     </item>
     
     <item>
@@ -56,12 +56,12 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in a
     </item>
     
     <item>
-      <title>Fisheye Cam OV3660</title>
-      <link>http://homesmartmesh.github.io/docs/microcontrollers/esp32/fisheye-cam-ov36/</link>
-      <pubDate>Sat, 26 Dec 2020 00:00:00 +0900</pubDate>
+      <title>Software</title>
+      <link>http://homesmartmesh.github.io/docs/microcontrollers/esp32/software/</link>
+      <pubDate>Fri, 25 Dec 2020 00:00:00 +0900</pubDate>
       
-      <guid>http://homesmartmesh.github.io/docs/microcontrollers/esp32/fisheye-cam-ov36/</guid>
-      <description> 3 Mega Pixels OV3660 Fisheye lens DFOV 120° Ultra low power, sleep current 2μA 270mAh battery PSRAM 8MB  Source code# Arduino ESP-IDF  Product page# Fisheye Timer camera $20  </description>
+      <guid>http://homesmartmesh.github.io/docs/microcontrollers/esp32/software/</guid>
+      <description>Arduino ESP32# platform package as an idf component  ESP-IDF# esp-idf esp-iot-solution mesh-dev-framework mdf prog guide  </description>
     </item>
     
     <item>
@@ -83,12 +83,39 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in a
     </item>
     
     <item>
+      <title>Fisheye Cam OV3660</title>
+      <link>http://homesmartmesh.github.io/docs/microcontrollers/esp32/fisheye-cam-ov36/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0900</pubDate>
+      
+      <guid>http://homesmartmesh.github.io/docs/microcontrollers/esp32/fisheye-cam-ov36/</guid>
+      <description>3 Mega Pixels OV3660 Fisheye lens DFOV 120° Ultra low power, sleep current 2μA 270mAh battery PSRAM 8MB  Product page# Fisheye Timer camera $20  Platformio porting#board definition# local file : boards\m5stack-timer-cam.json should be added to the platformio/platform-espressif32 repo still missing from v2.1.0  pins declaration# file required pins_arduino.h available on pins_arduino.h@1.0.5 not yet released  Applications#wakeup# m5stack/Arduino wakeup example sep32home/Platformio wakeup example  Build info.</description>
+    </item>
+    
+    <item>
+      <title>TTGO T-Display</title>
+      <link>http://homesmartmesh.github.io/docs/microcontrollers/esp32/ttgo-t-display/</link>
+      <pubDate>Fri, 25 Dec 2020 00:00:00 +0900</pubDate>
+      
+      <guid>http://homesmartmesh.github.io/docs/microcontrollers/esp32/ttgo-t-display/</guid>
+      <description>Simple Example# t-display_controller  dependencies# TFT_eSPI_ttgo_t-display  fork from Bodmer/TFT_eSPI   GfxUi  lib_deps = https://github.com/ESP32Home/TFT_eSPI_ttgo_t-display.git#2.3.4_t-display https://github.com/ESP32Home/GfxUi.git#v1.0.1 Example##include &amp;lt;Arduino.h&amp;gt;#include &amp;lt;TFT_eSPI.h&amp;gt;#include &amp;lt;SPI.h&amp;gt;#include &amp;#34;GfxUi.h&amp;#34;#include &amp;lt;SPIFFS.h&amp;gt; TFT_eSPI tft = TFT_eSPI(135, 240); GfxUi ui = GfxUi(&amp;amp;tft); void setup() { Serial.begin(115200); tft.init(); tft.setRotation(3); SPIFFS.begin(true);//FORMAT_SPIFFS_IF_FAILED  ui.drawBmp(&amp;#34;/esp_home.bmp&amp;#34;, 0, 0);//&amp;#39;ui&amp;#39; needs tft and SPIFF  tft.setCursor(0, 0); tft.setTextColor(TFT_GREEN); tft.setTextSize(2); tft.drawString(&amp;#34;Hello TFT World&amp;#34;, tft.width() / 2, tft.height() / 2 ); } void loop() { } Display# IPS ST7789V 1,14 Zoll 135x240  Suppliers# Aliexpress ~ 10€  </description>
+    </item>
+    
+    <item>
       <title>TTGO T5-EPaper</title>
       <link>http://homesmartmesh.github.io/docs/microcontrollers/esp32/ttgo-t5-epaper/</link>
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0900</pubDate>
       
       <guid>http://homesmartmesh.github.io/docs/microcontrollers/esp32/ttgo-t5-epaper/</guid>
       <description>Simple example# epaper-TTGO-T5_1_2-hello  dependencies# GxEPD  lib_ldf_mode = deep+ lib_deps =GxEPD@3.1.0 Example##include &amp;lt;SPIFFS.h&amp;gt;#include &amp;lt;epaper.h&amp;gt; EPaper epaper; void setup() { Serial.begin(115200); SPIFFS.begin(); epaper.init(); epaper.display.fillScreen(GxEPD_WHITE); epaper.drawBitmap(&amp;#34;/esp_home.bmp&amp;#34;, 0, 50, true); epaper.displayText(&amp;#34;Hello simple&amp;#34;, 20, EPaper::RIGHT_ALIGNMENT); epaper.display.update(); } void loop() { } Display# GxGDEW029Z10 2,9 Zoll White / Black / Red 296x128  References# LilyGo epaper ESP-IDF repo LilyGO/ESP32_T5Epaper_2.9inch  fork from loboris/ESP32_ePaper_example   LilyGo epaper platformio-arduino repo Xinyuan-LilyGO/T5-Ink-Screen-Series  fork from TTGO-EPaper-Series   Waveshare specification pdf 2.</description>
+    </item>
+    
+    <item>
+      <title>M5 Stick Plus</title>
+      <link>http://homesmartmesh.github.io/docs/microcontrollers/esp32/m5stick-plus/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 +0900</pubDate>
+      
+      <guid>http://homesmartmesh.github.io/docs/microcontrollers/esp32/m5stick-plus/</guid>
+      <description> 6-Axis IMU IR transmitter Microphone RTC LCD (1.14 inch) Lipo Battery Passive Buzzer  Product page# m5stack M5StickC Plus $14  Display# 1.14 inch 135x240 Color TFT LCD ST7789v2  </description>
     </item>
     
   </channel>
