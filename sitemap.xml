@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://homesmartmesh.github.io/docs/3dprinting/benchy/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://homesmartmesh.github.io/docs/microcontrollers/esp32/</loc>
     <lastmod>2020-12-26T00:00:00+09:00</lastmod>
   </url>
@@ -18,7 +23,17 @@
   </url>
   
   <url>
+    <loc>http://homesmartmesh.github.io/docs/frameworks/grafana/light/</loc>
+    <lastmod>2020-10-06T08:48:57+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://homesmartmesh.github.io/docs/frameworks/raspi_iot/</loc>
+    <lastmod>2020-10-06T08:48:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://homesmartmesh.github.io/docs/frameworks/grafana/sensors/</loc>
     <lastmod>2020-10-06T08:48:57+00:00</lastmod>
   </url>
   
@@ -77,6 +92,16 @@
   
   <url>
     <loc>http://homesmartmesh.github.io/docs/microcontrollers/nrf52/</loc>
+  </url>
+  
+  <url>
+    <loc>http://homesmartmesh.github.io/docs/3dprinting/</loc>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://homesmartmesh.github.io/docs/frameworks/grafana/</loc>
+    <lastmod>2020-10-06T08:48:23+00:00</lastmod>
   </url>
   
   <url>

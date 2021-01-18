@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grafana Snapshots on Home Smart Mesh</title>
+    <link>http://homesmartmesh.github.io/docs/frameworks/grafana/</link>
+    <description>Recent content in Grafana Snapshots on Home Smart Mesh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 06 Oct 2020 08:48:23 +0000</lastBuildDate><atom:link href="http://homesmartmesh.github.io/docs/frameworks/grafana/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Light rooms</title>
+      <link>http://homesmartmesh.github.io/docs/frameworks/grafana/light/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
+      
+      <guid>http://homesmartmesh.github.io/docs/frameworks/grafana/light/</guid>
+      <description>Room light east and west#Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-bc6c51b9555f0ff6&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-bc6c51b9555f0ff6&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};</description>
+    </item>
+    
+    <item>
+      <title>Temperature</title>
+      <link>http://homesmartmesh.github.io/docs/frameworks/grafana/sensors/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
+      
+      <guid>http://homesmartmesh.github.io/docs/frameworks/grafana/sensors/</guid>
+      <description>Hot summer#Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-388b84c89c2369b2&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-388b84c89c2369b2&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};Xiaomi Aqara vs DIY BME280#Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-f8d70b01c18b3285&#34;);button.onclick = ()={var elem = document.</description>
+    </item>
+    
+  </channel>
+</rss>
