@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.0f40b4e83b0db00d11c595295e7f5f85f51436d20a5b6790534cb30c9f46a201.css" integrity="sha256-D0C06DsNsA0RxZUpXn9fhfUUNtIKW2eQU0yzDJ9GogE=">
-<script defer src="/en.search.min.4c2a67744cd7cbb16d699587ecdf0bc4784df07196761c091ab29ad9f2588648.js" integrity="sha256-TCpndEzXy7FtaZWH7N8LxHhN8HGWdhwJGrKa2fJYhkg="></script>
+<script defer src="/en.search.min.25a4de629bf1cc55c654b94cf95959924848bce5145fb8ebc950894095842945.js" integrity="sha256-JaTeYpvxzFXGVLlM&#43;VlZkkhIvOUUX7jryVCJQJWEKUU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -424,6 +424,19 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.io/docs/applications/voronoi/" class="">Voronoi</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -454,6 +467,32 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://homesmartmesh.github.io/docs/3dprinting/light/" class="">Smart Switch Cover</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.io/docs/3dprinting/light_socket/" class="">Smart Switch Cover</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.io/docs/3dprinting/voronoi/" class="">Voronoi Shapes</a>
   
 
         </li>
@@ -1189,7 +1228,7 @@ https://github.com/alex-shpak/hugo-book
   Home status
   <a class="anchor" href="#home-status">#</a>
 </h2>
-
+<p>
 
 
 
@@ -1202,16 +1241,47 @@ https://github.com/alex-shpak/hugo-book
   />
 </div>
 
+
+
+
+
+<div class="text-center">
+  <img
+    src="/images/home_status.png"
+    alt=""
+    width=""
+    decoding="async"
+  />
+</div>
+</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://github.com/HomeSmartMesh/raspi/tree/master/py/home_status" role="button" target="_blank">home status service (Github repo)</a>
+        </div>
+    </div>
+</div>
+
 <ul>
 <li>Leaving home, in a hurry, no time to walk through the house or to start smartphone apps to know if the heating is forgotten in one room or if a window is left open in another.</li>
-<li>With this script <a href="./py/home_status">py/home_status</a>, you see the home status right next to the house door before leaving</li>
+<li>With this script, you see the home status right next to the house door before leaving</li>
 <li>Any window is open : The status light is blue</li>
 <li>Any heater is active : The status is red</li>
 <li>Both red and blue can be combined</li>
 </ul>
 <p>How does this work. In a controlled environemnt where the wifi is reliable, there is no need for wifi status as it is always on. Therefore the led status disable function can be re-used for another purpose. This provide the nicest integration of led status including power supply, mqtt connection without even blocking the socket for other usage.</p>
-<p>Below are the control URLs to turn led color on and off :</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    <span style="color:#e6db74">&#34;status&#34;</span><span style="color:#960050;background-color:#1e0010">:</span>{
+<p>Below are the control URLs to turn led color on and off
+
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>json Config example. Click to expand...</span>
+      <span>↕</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    <span style="color:#e6db74">&#34;status&#34;</span><span style="color:#960050;background-color:#1e0010">:</span>{
         <span style="color:#f92672">&#34;red&#34;</span>:{
             <span style="color:#f92672">&#34;on&#34;</span>:<span style="color:#e6db74">&#34;http://10.0.0.48/settings/?led_power_disable=false&#34;</span>,
             <span style="color:#f92672">&#34;off&#34;</span>:<span style="color:#e6db74">&#34;http://10.0.0.48/settings/?led_power_disable=true&#34;</span>
@@ -1221,7 +1291,38 @@ https://github.com/alex-shpak/hugo-book
             <span style="color:#f92672">&#34;off&#34;</span>:<span style="color:#e6db74">&#34;http://10.0.0.48/settings/?led_status_disable=true&#34;</span>
         }
     }
-</code></pre></div><h2 id="roborock-button">
+</code></pre></div>
+    </div>
+  </label>
+</div>
+</p>
+<p>
+
+
+
+<div class="text-center">
+  <img
+    src="/images/3dprinting/cover_switch_socket.png"
+    alt=""
+    width="400"
+    decoding="async"
+  />
+</div>
+
+
+
+
+
+  
+
+
+<div class="col text-center">
+<a  href="/docs/3dprinting/light_socket/"   class="book-btn">
+   3D print a Switch and Socket Cover 
+</a>
+</div>
+</p>
+<h2 id="roborock-button">
   Roborock button
   <a class="anchor" href="#roborock-button">#</a>
 </h2>

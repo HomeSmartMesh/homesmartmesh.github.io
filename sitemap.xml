@@ -3,7 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://homesmartmesh.github.io/docs/applications/home3d/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://homesmartmesh.github.io/docs/3dprinting/light/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://homesmartmesh.github.io/docs/3dprinting/light_socket/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -40,6 +50,11 @@
   <url>
     <loc>http://homesmartmesh.github.io/docs/frameworks/</loc>
     <lastmod>2020-10-06T08:48:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://homesmartmesh.github.io/docs/applications/voronoi/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -81,11 +96,6 @@
   </url>
   
   <url>
-    <loc>http://homesmartmesh.github.io/docs/applications/home3d/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://homesmartmesh.github.io/docs/applications/</loc>
     <lastmod>2020-12-31T00:00:00+00:00</lastmod>
   </url>
@@ -97,6 +107,11 @@
   <url>
     <loc>http://homesmartmesh.github.io/docs/3dprinting/</loc>
     <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://homesmartmesh.github.io/docs/3dprinting/voronoi/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
