@@ -17,7 +17,7 @@
     </item>
     
     <item>
-      <title>Smart Switch Cover</title>
+      <title>Switch Cover</title>
       <link>http://homesmartmesh.github.io/docs/3dprinting/light/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
@@ -25,15 +25,6 @@
       <description>Cover Dumb Switch with Smart Switch#Download STL                             01 black and white 3dprints
 02 black and white breakout
 03 black and white back side</description>
-    </item>
-    
-    <item>
-      <title>Switch Socket Cover</title>
-      <link>http://homesmartmesh.github.io/docs/3dprinting/light_socket/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://homesmartmesh.github.io/docs/3dprinting/light_socket/</guid>
-      <description>Cover Dumb Switch and smart Socket#Download STLApplication#More details on the raspberry pi service </description>
     </item>
     
     <item>
@@ -82,6 +73,15 @@
     </item>
     
     <item>
+      <title>Switch Socket Cover</title>
+      <link>http://homesmartmesh.github.io/docs/3dprinting/light_socket/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://homesmartmesh.github.io/docs/3dprinting/light_socket/</guid>
+      <description>Cover Dumb Switch and smart Socket#Download STLApplication#More details on the raspberry pi service </description>
+    </item>
+    
+    <item>
       <title>Voronoi</title>
       <link>http://homesmartmesh.github.io/docs/applications/voronoi/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
@@ -112,6 +112,15 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in a
     </item>
     
     <item>
+      <title>ESP32 remote</title>
+      <link>http://homesmartmesh.github.io/docs/3dprinting/esp32_remote/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://homesmartmesh.github.io/docs/3dprinting/esp32_remote/</guid>
+      <description>ESP32 Case for up/down remote control#Download STL models zipApplication#More details on the ESP32 Arduino code </description>
+    </item>
+    
+    <item>
       <title>Software</title>
       <link>http://homesmartmesh.github.io/docs/microcontrollers/esp32/software/</link>
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0900</pubDate>
@@ -135,7 +144,7 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in a
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>http://homesmartmesh.github.io/docs/3dprinting/voronoi/</guid>
-      <description>Webapp#Voronoi Generator Tool Fantasy pen holder#Download STLFantasy Turtle Flower#Download STLGirafe round#Download STL</description>
+      <description>Webapp#Voronoi Generator Tool Cells Circle#Download STLFantasy pen holder#Download STLFantasy Turtle Flower#Download STLGirafe round#Download STL</description>
     </item>
     
     <item>
@@ -153,7 +162,7 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in a
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0900</pubDate>
       
       <guid>http://homesmartmesh.github.io/docs/microcontrollers/esp32/ttgo-t-display/</guid>
-      <description>Simple Example# t-display_controller  dependencies# TFT_eSPI_ttgo_t-display  fork from Bodmer/TFT_eSPI   GfxUi  lib_deps = https://github.com/ESP32Home/TFT_eSPI_ttgo_t-display.git#2.3.4_t-display https://github.com/ESP32Home/GfxUi.git#v1.0.1 Example##include &amp;lt;Arduino.h&amp;gt;#include &amp;lt;TFT_eSPI.h&amp;gt;#include &amp;lt;SPI.h&amp;gt;#include &amp;#34;GfxUi.h&amp;#34;#include &amp;lt;SPIFFS.h&amp;gt; TFT_eSPI tft = TFT_eSPI(135, 240); GfxUi ui = GfxUi(&amp;amp;tft); void setup() { Serial.begin(115200); tft.init(); tft.setRotation(3); SPIFFS.begin(true);//FORMAT_SPIFFS_IF_FAILED  ui.drawBmp(&amp;#34;/esp_home.bmp&amp;#34;, 0, 0);//&amp;#39;ui&amp;#39; needs tft and SPIFF  tft.setCursor(0, 0); tft.setTextColor(TFT_GREEN); tft.setTextSize(2); tft.drawString(&amp;#34;Hello TFT World&amp;#34;, tft.width() / 2, tft.height() / 2 ); } void loop() { } 3D printed case#Display# IPS ST7789V 1,14 Zoll 135x240  Suppliers# Aliexpress ~ 10€  Applications#Thermostat control#Project Github RepoFeatures</description>
+      <description>Simple Example# t-display_controller  dependencies# TFT_eSPI_ttgo_t-display  fork from Bodmer/TFT_eSPI   GfxUi  lib_deps = https://github.com/ESP32Home/TFT_eSPI_ttgo_t-display.git#2.3.4_t-display https://github.com/ESP32Home/GfxUi.git#v1.0.1 Example Code#click to expand the example code...↕#include &amp;lt;Arduino.h&amp;gt;#include &amp;lt;TFT_eSPI.h&amp;gt;#include &amp;lt;SPI.h&amp;gt;#include &amp;#34;GfxUi.h&amp;#34;#include &amp;lt;SPIFFS.h&amp;gt; TFT_eSPI tft = TFT_eSPI(135, 240); GfxUi ui = GfxUi(&amp;amp;tft); void setup() { Serial.begin(115200); tft.init(); tft.setRotation(3); SPIFFS.begin(true);//FORMAT_SPIFFS_IF_FAILED  ui.drawBmp(&amp;#34;/esp_home.bmp&amp;#34;, 0, 0);//&amp;#39;ui&amp;#39; needs tft and SPIFF  tft.</description>
     </item>
     
     <item>

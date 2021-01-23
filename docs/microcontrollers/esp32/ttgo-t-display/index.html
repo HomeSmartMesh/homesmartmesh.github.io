@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.0f40b4e83b0db00d11c595295e7f5f85f51436d20a5b6790534cb30c9f46a201.css" integrity="sha256-D0C06DsNsA0RxZUpXn9fhfUUNtIKW2eQU0yzDJ9GogE=">
-<script defer src="/en.search.min.8a5c9f5fe4b859f7f561d138dd5ec71c7d7bfdf20d27e3b26af6bfcc3f71ff2a.js" integrity="sha256-ilyfX&#43;S4Wff1YdE43V7HHH17/fINJ&#43;Oyava/zD9x/yo="></script>
+<script defer src="/en.search.min.67721d0a565c4456fb82f3122d36f7447e235b7a07b3a3f2f958d7d3f6131602.js" integrity="sha256-Z3IdClZcRFb7gvMSLTb3RH4jW3oHs6Py&#43;VjX0/YTFgI="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -466,7 +466,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://homesmartmesh.github.io/docs/3dprinting/light/" class="">Smart Switch Cover</a>
+    <a href="http://homesmartmesh.github.io/docs/3dprinting/light/" class="">Switch Cover</a>
   
 
         </li>
@@ -480,6 +480,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://homesmartmesh.github.io/docs/3dprinting/light_socket/" class="">Switch Socket Cover</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://homesmartmesh.github.io/docs/3dprinting/esp32_remote/" class="">ESP32 remote</a>
   
 
         </li>
@@ -579,7 +592,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#simple-example">Simple Example</a>
           <ul>
             <li><a href="#dependencies">dependencies</a></li>
-            <li><a href="#example">Example</a></li>
+            <li><a href="#example-code">Example Code</a></li>
           </ul>
         </li>
         <li><a href="#3d-printed-case">3D printed case</a></li>
@@ -603,7 +616,19 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><p><img src="/images/ttgo_t-display.png" alt="img" /></p>
+  <article class="markdown">
+
+
+
+<div class="text-center">
+  <img
+    src="/images/ttgo_t-display.png"
+    alt=""
+    width=""
+    decoding="async"
+  />
+</div>
+
 <h2 id="simple-example">
   Simple Example
   <a class="anchor" href="#simple-example">#</a>
@@ -626,11 +651,20 @@ https://github.com/alex-shpak/hugo-book
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#a6e22e">lib_deps</span> <span style="color:#f92672">=</span>    <span style="color:#e6db74">
 </span><span style="color:#e6db74">    https://github.com/ESP32Home/TFT_eSPI_ttgo_t-display.git#2.3.4_t-display
 </span><span style="color:#e6db74">    https://github.com/ESP32Home/GfxUi.git#v1.0.1</span>
-</code></pre></div><h3 id="example">
-  Example
-  <a class="anchor" href="#example">#</a>
+</code></pre></div><h3 id="example-code">
+  Example Code
+  <a class="anchor" href="#example-code">#</a>
 </h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Arduino.h&gt;</span><span style="color:#75715e">
+
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>click to expand the example code...</span>
+      <span>↕</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Arduino.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;TFT_eSPI.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;SPI.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;GfxUi.h&#34;</span><span style="color:#75715e">
@@ -659,23 +693,41 @@ GfxUi ui <span style="color:#f92672">=</span> GfxUi(<span style="color:#f92672">
 {
 
 }
-</code></pre></div><h2 id="3d-printed-case">
+</code></pre></div>
+    </div>
+  </label>
+</div>
+
+<h2 id="3d-printed-case">
   3D printed case
   <a class="anchor" href="#3d-printed-case">#</a>
 </h2>
-
+<p>
 
 
 
 <div class="text-center">
   <img
-    src="/images/esp32/display-control-app-unpacked.png"
+    src="/images/3dprinting/esp32_remote.png"
     alt=""
-    width="500"
+    width=""
     decoding="async"
   />
 </div>
 
+
+
+
+
+  
+
+
+<div class="col text-center">
+<a  href="/docs/3dprinting/esp32_remote/"   class="book-btn">
+   STL Model for 3D printing 
+</a>
+</div>
+</p>
 <h2 id="display">
   Display
   <a class="anchor" href="#display">#</a>
@@ -700,7 +752,7 @@ GfxUi ui <span style="color:#f92672">=</span> GfxUi(<span style="color:#f92672">
   Thermostat control
   <a class="anchor" href="#thermostat-control">#</a>
 </h3>
-
+<p>
 
 
 
@@ -713,6 +765,19 @@ GfxUi ui <span style="color:#f92672">=</span> GfxUi(<span style="color:#f92672">
   />
 </div>
 
+
+
+
+
+<div class="text-center">
+  <img
+    src="/images/esp32/esp32_remote.png"
+    alt=""
+    width=""
+    decoding="async"
+  />
+</div>
+</p>
 
 <div class="container">
     <div class="row">
@@ -823,7 +888,7 @@ Dependency Graph
         <li><a href="#simple-example">Simple Example</a>
           <ul>
             <li><a href="#dependencies">dependencies</a></li>
-            <li><a href="#example">Example</a></li>
+            <li><a href="#example-code">Example Code</a></li>
           </ul>
         </li>
         <li><a href="#3d-printed-case">3D printed case</a></li>

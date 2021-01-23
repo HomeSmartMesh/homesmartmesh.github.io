@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 17 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://homesmartmesh.github.io/docs/3dprinting/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Smart Switch Cover</title>
+      <title>Switch Cover</title>
       <link>http://homesmartmesh.github.io/docs/3dprinting/light/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
@@ -28,12 +28,21 @@
     </item>
     
     <item>
+      <title>ESP32 remote</title>
+      <link>http://homesmartmesh.github.io/docs/3dprinting/esp32_remote/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://homesmartmesh.github.io/docs/3dprinting/esp32_remote/</guid>
+      <description>ESP32 Case for up/down remote control#Download STL models zipApplication#More details on the ESP32 Arduino code </description>
+    </item>
+    
+    <item>
       <title>Voronoi Shapes</title>
       <link>http://homesmartmesh.github.io/docs/3dprinting/voronoi/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>http://homesmartmesh.github.io/docs/3dprinting/voronoi/</guid>
-      <description>Webapp#Voronoi Generator Tool Fantasy pen holder#Download STLFantasy Turtle Flower#Download STLGirafe round#Download STL</description>
+      <description>Webapp#Voronoi Generator Tool Cells Circle#Download STLFantasy pen holder#Download STLFantasy Turtle Flower#Download STLGirafe round#Download STL</description>
     </item>
     
   </channel>
