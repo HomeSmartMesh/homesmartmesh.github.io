@@ -37,12 +37,46 @@
     </item>
     
     <item>
+      <title>Handbag hanger</title>
+      <link>http://homesmartmesh.github.io/docs/3dprinting/handbag_hanger/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://homesmartmesh.github.io/docs/3dprinting/handbag_hanger/</guid>
+      <description>Handbag hanger#Download STL</description>
+    </item>
+    
+    <item>
+      <title>Under desk shelf</title>
+      <link>http://homesmartmesh.github.io/docs/3dprinting/under_desk_shelf/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://homesmartmesh.github.io/docs/3dprinting/under_desk_shelf/</guid>
+      <description>Under desk shelf#                             01 shelf overview
+02 shelf top view
+03 joint close up
+04 joint placement
+05 closer view</description>
+    </item>
+    
+    <item>
+      <title>House model</title>
+      <link>http://homesmartmesh.github.io/docs/3dprinting/house/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://homesmartmesh.github.io/docs/3dprinting/house/</guid>
+      <description>House Model#                             01 c a d model vs real model
+02 front view
+03 side view
+04 side view 2</description>
+    </item>
+    
+    <item>
       <title>Voronoi Shapes</title>
       <link>http://homesmartmesh.github.io/docs/3dprinting/voronoi/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>http://homesmartmesh.github.io/docs/3dprinting/voronoi/</guid>
-      <description>Webapp#Voronoi Generator Tool Cells Circle#Download STLFantasy pen holder#Download STLFantasy Turtle Flower#Download STLGirafe round#Download STL</description>
+      <description>Webapp#Voronoi Generator Tool Cells Circle#Download STLFantasy pen holder#Download STLFantasy Turtle Flower#Download STLGirafe round#Download STL</description>
     </item>
     
   </channel>
