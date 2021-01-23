@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.0f40b4e83b0db00d11c595295e7f5f85f51436d20a5b6790534cb30c9f46a201.css" integrity="sha256-D0C06DsNsA0RxZUpXn9fhfUUNtIKW2eQU0yzDJ9GogE=">
-<script defer src="/en.search.min.06333019f160452018411e241b23b43f768c3e51dcb41488737625a1b5d235cd.js" integrity="sha256-BjMwGfFgRSAYQR4kGyO0P3aMPlHctBSIc3YlobXSNc0="></script>
+<script defer src="/en.search.min.35639c6296c2692f90ea387869dc5276df93f125a645802fb3e084a069496eba.js" integrity="sha256-NWOcYpbCaS&#43;Q6jh4adxSdt&#43;T8SWmRYAvs&#43;CEoGlJbro="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -453,7 +453,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://homesmartmesh.github.io/docs/3dprinting/benchy/" class="">Benchy</a>
+    <a href="http://homesmartmesh.github.io/docs/3dprinting/home/" class="">Smart Switch Cover</a>
   
 
         </li>
@@ -512,7 +512,8 @@ https://github.com/alex-shpak/hugo-book
     <div class="book-page">
       <header class="book-header">
         
-  <script src="/js/stl_viewer/stl_viewer.min.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script src="/js/stl_viewer/stl_viewer.min.js"></script>
 <script src="/js/svg-pan-zoom.min.js"></script>
 <div class="flex align-center justify-between">
   <label for="menu-control">
@@ -1013,6 +1014,19 @@ https://github.com/alex-shpak/hugo-book
   Hue Light control
   <a class="anchor" href="#hue-light-control">#</a>
 </h2>
+
+
+
+
+<div class="text-center">
+  <img
+    src="/images/aqara%20hue%20zigbee.png"
+    alt=""
+    width=""
+    decoding="async"
+  />
+</div>
+
 <ul>
 <li>Controls all the Hue light bulbs from Aquara sensor switches using the <a href="https://developers.meethue.com/develop/get-started-2/">HUE rest API</a></li>
 <li>custom functions
@@ -1021,8 +1035,75 @@ https://github.com/alex-shpak/hugo-book
 <li>Toggle on of or Toggle dim states</li>
 </ul>
 </li>
-<li><a href="./py/hue">py/hue</a></li>
 </ul>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://github.com/HomeSmartMesh/raspi/tree/master/py/hue" role="button" target="_blank">hue ruler service (Github repo)</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>Config example. Click to expand...</span>
+      <span>↕</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{  
+    <span style="color:#f92672">&#34;bridges&#34;</span>:{
+        <span style="color:#f92672">&#34;LivingRoom&#34;</span>:<span style="color:#e6db74">&#34;10.0.0.38&#34;</span>,
+        <span style="color:#f92672">&#34;username_config&#34;</span>:<span style="color:#e6db74">&#34;/home/pi/.python_hue&#34;</span>
+    },
+    <span style="color:#f92672">&#34;mqtt&#34;</span>:{
+        <span style="color:#f92672">&#34;host&#34;</span>:<span style="color:#e6db74">&#34;10.0.0.42&#34;</span>,
+        <span style="color:#f92672">&#34;port&#34;</span>:<span style="color:#ae81ff">1883</span>,
+        <span style="color:#f92672">&#34;keepalive&#34;</span>:<span style="color:#ae81ff">60</span>,
+        <span style="color:#f92672">&#34;client_id&#34;</span>:<span style="color:#e6db74">&#34;hue_client&#34;</span>,
+        <span style="color:#f92672">&#34;subscriptions&#34;</span>:[
+                            <span style="color:#e6db74">&#34;mzig/bed light button&#34;</span>,
+                            <span style="color:#e6db74">&#34;mzig/bed nic button&#34;</span>,
+                            <span style="color:#e6db74">&#34;mzig/living double switch&#34;</span>,
+                            <span style="color:#e6db74">&#34;lzig/bedroom switch&#34;</span>,
+                            <span style="color:#e6db74">&#34;lzig/volume white&#34;</span>,
+                            <span style="color:#e6db74">&#34;lzig/office switch&#34;</span>,
+                            <span style="color:#e6db74">&#34;lzig/hallway entrance switch&#34;</span>,
+                            <span style="color:#e6db74">&#34;lzig/hallway living switch&#34;</span>,
+                            <span style="color:#e6db74">&#34;lzig/hallway corridor switch&#34;</span>
+                        ],
+        <span style="color:#f92672">&#34;actions&#34;</span>   :[],
+        <span style="color:#f92672">&#34;publish&#34;</span> :<span style="color:#66d9ef">true</span>,
+        <span style="color:#f92672">&#34;subscribe&#34;</span> :<span style="color:#66d9ef">true</span>
+    },
+    <span style="color:#f92672">&#34;lightmap&#34;</span>:{
+        <span style="color:#f92672">&#34;hallway&#34;</span>:{
+            <span style="color:#f92672">&#34;action&#34;</span>:<span style="color:#e6db74">&#34;light_list_clicks&#34;</span>,
+            <span style="color:#f92672">&#34;sensors&#34;</span>:[
+                <span style="color:#e6db74">&#34;hallway entrance switch&#34;</span>,
+                <span style="color:#e6db74">&#34;hallway living switch&#34;</span>,
+                <span style="color:#e6db74">&#34;hallway corridor switch&#34;</span>
+            ],
+            <span style="color:#f92672">&#34;lights&#34;</span>:[
+                <span style="color:#e6db74">&#34;Entrance White 1&#34;</span>,
+                <span style="color:#e6db74">&#34;Entrance White 2&#34;</span>,
+                <span style="color:#e6db74">&#34;Entrance White 3&#34;</span>
+            ]
+        }
+    },
+    <span style="color:#f92672">&#34;log&#34;</span>:{
+        <span style="color:#f92672">&#34;logfile&#34;</span>:<span style="color:#e6db74">&#34;/home/pi/share/hue(date).log&#34;</span>,
+        <span style="color:#f92672">&#34;level&#34;</span>:<span style="color:#e6db74">&#34;Info&#34;</span>
+    }
+}
+</code></pre></div>
+    </div>
+  </label>
+</div>
+
 <h2 id="phantom-load-cut">
   Phantom Load cut
   <a class="anchor" href="#phantom-load-cut">#</a>
