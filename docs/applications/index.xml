@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Applications on Home Smart Mesh</title>
-    <link>http://homesmartmesh.github.io/docs/applications/</link>
+    <link>https://homesmartmesh.github.io/docs/applications/</link>
     <description>Recent content in Applications on Home Smart Mesh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://homesmartmesh.github.io/docs/applications/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://homesmartmesh.github.io/docs/applications/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Home 3D</title>
-      <link>http://homesmartmesh.github.io/docs/applications/home3d/</link>
+      <link>https://homesmartmesh.github.io/docs/applications/home3d/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://homesmartmesh.github.io/docs/applications/home3d/</guid>
+      <guid>https://homesmartmesh.github.io/docs/applications/home3d/</guid>
       <description>Webapp 3D Github RepoFirst time usage# host this project on your local raspberry pi or see &amp;lsquo;Local host vs Remote host&amp;rsquo; section on how to use the live demo create your own glTF model from blender (optional)  activate hue bridge connection#   adjust the light names to match your hue lights names press the Hue Gateway authorisation button (on the real device) Click on the 3d model of the hue gateway An alert will apear on the screen to wait for confirmation The user creation will proceed and the username will be stored as local storage (ctrl+j in chrome to oben the debug window)  activate mqtt connection#   adjust the mqtt topic names to match your mqtt devices install a mosquitto version with websocket support Click on the 3d model of the mosquitto gateway  Live demo#Link to Github .</description>
     </item>
     
     <item>
       <title>Voronoi</title>
-      <link>http://homesmartmesh.github.io/docs/applications/voronoi/</link>
+      <link>https://homesmartmesh.github.io/docs/applications/voronoi/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://homesmartmesh.github.io/docs/applications/voronoi/</guid>
+      <guid>https://homesmartmesh.github.io/docs/applications/voronoi/</guid>
       <description>Webapp#runs with chrome as a web browser Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-f7ccb353b1174faa&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-f7ccb353b1174faa&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};Github repo#Voronoi generator webapp Github Repo3d printing#Voronoi STL Models Description#Parametric Voronoi generator with real time editing and SVG export</description>
     </item>
     
