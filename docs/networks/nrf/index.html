@@ -12,11 +12,11 @@
 <meta property="og:url" content="https://homesmartmesh.github.io/docs/networks/nrf/" />
 <meta property="article:published_time" content="2020-10-06T08:48:57+00:00" />
 <meta property="article:modified_time" content="2020-10-06T08:48:57+00:00" />
-<title>custom RF Mesh | Home Smart Mesh</title>
+<title>custom RF Mesh | Open Smart Mesh</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.0f40b4e83b0db00d11c595295e7f5f85f51436d20a5b6790534cb30c9f46a201.css" integrity="sha256-D0C06DsNsA0RxZUpXn9fhfUUNtIKW2eQU0yzDJ9GogE=">
-<script defer src="/en.search.min.4dfa4ebf96adfc514af3911db11f9710e03d837690eb7fe8ebda3892941590e5.js" integrity="sha256-TfpOv5at/FFK85EdsR&#43;XEOA9g3aQ63/o69o4kpQVkOU="></script>
+<script defer src="/en.search.min.eb142dccd120926042a54177e694ca0b5ff0fe70475c8953a80c1ab8eb1649b7.js" integrity="sha256-6xQtzNEgkmBCpUF35pTKC1/w/nBHXIlTqAwauOsWSbc="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -33,7 +33,7 @@ https://github.com/alex-shpak/hugo-book
       
   <nav>
 <h2 class="book-brand">
-  <a href="/"><span>Home Smart Mesh</span>
+  <a href="/"><span>Open Smart Mesh</span>
   </a>
 </h2>
 
@@ -710,7 +710,7 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#raspberry-pi-scripts-moved-to-the-raspi-project">Raspberry pi scripts moved to the &lsquo;raspi&rsquo; Project</a></li>
           </ul>
         </li>
-        <li><a href="#home-smart-mesh-detailed-design">Home Smart Mesh detailed design</a></li>
+        <li><a href="#detailed-design">detailed design</a></li>
       </ul>
     </li>
   </ul>
@@ -922,7 +922,7 @@ application/08_usb_dongle&gt; make paramw
   Protocol Overview
   <a class="anchor" href="#protocol-overview">#</a>
 </h3>
-<p>The Home Smart Mesh project introduce an RF Mesh protocol which is a complete stack implementation to allow devices to communicate in a Mesh Network Topology. This protocol implementation is using the nRF SDK 15 it is using the Radio module through a modified Enhanced Shock-burst custom protocol. Implementations range from nRF24L01+ with an STM8L and STM32 to the nRF51 and nRF52 families that add features such as RSSI and bigger packets sizes.</p>
+<p>This project introduce an RF Mesh protocol which is a complete stack implementation to allow devices to communicate in a Mesh Network Topology. This protocol implementation is using the nRF SDK 15 it is using the Radio module through a modified Enhanced Shock-burst custom protocol. Implementations range from nRF24L01+ with an STM8L and STM32 to the nRF51 and nRF52 families that add features such as RSSI and bigger packets sizes.</p>
 <h3 id="protocol-description">
   Protocol Description
   <a class="anchor" href="#protocol-description">#</a>
@@ -1627,9 +1627,9 @@ don&rsquo;t forget to save</li>
 <li>./raspi/milight : The milight RF gateway client (require the wifi to RF milight bridge HW)</li>
 <li>Data collection into a time series database</li>
 </ul>
-<h2 id="home-smart-mesh-detailed-design">
-  Home Smart Mesh detailed design
-  <a class="anchor" href="#home-smart-mesh-detailed-design">#</a>
+<h2 id="detailed-design">
+  detailed design
+  <a class="anchor" href="#detailed-design">#</a>
 </h2>
 <p>Functions call graph. Fifos dataflow between interrupts and main loop.</p>
 
@@ -1787,7 +1787,7 @@ don&rsquo;t forget to save</li>
             <li><a href="#raspberry-pi-scripts-moved-to-the-raspi-project">Raspberry pi scripts moved to the &lsquo;raspi&rsquo; Project</a></li>
           </ul>
         </li>
-        <li><a href="#home-smart-mesh-detailed-design">Home Smart Mesh detailed design</a></li>
+        <li><a href="#detailed-design">detailed design</a></li>
       </ul>
     </li>
   </ul>

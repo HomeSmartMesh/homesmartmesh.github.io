@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Frameworks on Home Smart Mesh</title>
+    <title>Frameworks on Open Smart Mesh</title>
     <link>https://homesmartmesh.github.io/docs/frameworks/</link>
-    <description>Recent content in Frameworks on Home Smart Mesh</description>
+    <description>Recent content in Frameworks on Open Smart Mesh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 06 Oct 2020 08:48:23 +0000</lastBuildDate><atom:link href="https://homesmartmesh.github.io/docs/frameworks/index.xml" rel="self" type="application/rss+xml" />

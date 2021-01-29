@@ -1,6 +1,6 @@
 {
-  "name": "Home Smart Mesh",
-  "short_name": "Home Smart Mesh",
+  "name": "Open Smart Mesh",
+  "short_name": "Open Smart Mesh",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
