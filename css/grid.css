@@ -6,4 +6,5 @@
 
 .grid-hidden{
     display: none;
+    transition: display 1s linear;
 }
