@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Frameworks on Open Smart Mesh</title>
-    <link>https://homesmartmesh.github.io/docs/frameworks/</link>
-    <description>Recent content in Frameworks on Open Smart Mesh</description>
+    <title>Frameworks on Home Smart Mesh</title>
+    <link>https://www.homesmartmesh.com/docs/frameworks/</link>
+    <description>Recent content in Frameworks on Home Smart Mesh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Oct 2020 08:48:23 +0000</lastBuildDate><atom:link href="https://homesmartmesh.github.io/docs/frameworks/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Oct 2020 08:48:23 +0000</lastBuildDate><atom:link href="https://www.homesmartmesh.com/docs/frameworks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>raspi IoT</title>
-      <link>https://homesmartmesh.github.io/docs/frameworks/raspi_iot/</link>
+      <link>https://www.homesmartmesh.com/docs/frameworks/raspi_iot/</link>
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
-      <guid>https://homesmartmesh.github.io/docs/frameworks/raspi_iot/</guid>
+      <guid>https://www.homesmartmesh.com/docs/frameworks/raspi_iot/</guid>
       <description>Raspi Github RepoSoftware# Raspbian OS Main services  Mosquitto : https://mosquitto.org/ influxDB : https://www.influxdata.com/products/influxdb-overview/ mqtt2influx : py/influx Grafana : https://grafana.com/ graphql sensors : js/graphql   x to mqtt  Zigbee2mqtt : https://www.zigbee2mqtt.io/ nrf2mqtt : github nRF52_Mesh nrf_mesh miflora2mqtt : https://github.com/RaymondMouthaan/miflora-mqtt-daemon telegram bots2mqtt : js/telegraf based on https://github.com/telegraf/telegraf   automation services  Light control : py/hue Phantom Load cut : js/pc_control Heat cut : py/heating Home status : py/home_status Roborock button : py/hover   user interface  3D webapp : https://github.</description>
     </item>
     

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>3D Printing on Open Smart Mesh</title>
-    <link>https://homesmartmesh.github.io/docs/3dprinting/</link>
-    <description>Recent content in 3D Printing on Open Smart Mesh</description>
+    <title>3D Printing on Home Smart Mesh</title>
+    <link>https://www.homesmartmesh.com/docs/3dprinting/</link>
+    <description>Recent content in 3D Printing on Home Smart Mesh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://homesmartmesh.github.io/docs/3dprinting/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.homesmartmesh.com/docs/3dprinting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Switch Cover</title>
-      <link>https://homesmartmesh.github.io/docs/3dprinting/light/</link>
+      <link>https://www.homesmartmesh.com/docs/3dprinting/light/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://homesmartmesh.github.io/docs/3dprinting/light/</guid>
+      <guid>https://www.homesmartmesh.com/docs/3dprinting/light/</guid>
       <description>Cover Dumb Switch with Smart Switch#Download STL                             01 black and white 3dprints
 02 black and white breakout
 03 black and white back side</description>
@@ -20,38 +20,38 @@
     
     <item>
       <title>Switch Socket Cover</title>
-      <link>https://homesmartmesh.github.io/docs/3dprinting/light_socket/</link>
+      <link>https://www.homesmartmesh.com/docs/3dprinting/light_socket/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://homesmartmesh.github.io/docs/3dprinting/light_socket/</guid>
+      <guid>https://www.homesmartmesh.com/docs/3dprinting/light_socket/</guid>
       <description>Cover Dumb Switch and smart Socket#Download STLApplication#More details on the raspberry pi service </description>
     </item>
     
     <item>
       <title>ESP32 remote</title>
-      <link>https://homesmartmesh.github.io/docs/3dprinting/esp32_remote/</link>
+      <link>https://www.homesmartmesh.com/docs/3dprinting/esp32_remote/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://homesmartmesh.github.io/docs/3dprinting/esp32_remote/</guid>
+      <guid>https://www.homesmartmesh.com/docs/3dprinting/esp32_remote/</guid>
       <description>ESP32 Case for up/down remote control#Download STL models zipApplication#More details on the ESP32 Arduino code 3D printing creation requires sometimes quite a number of iterations
     </description>
     </item>
     
     <item>
       <title>Handbag hanger</title>
-      <link>https://homesmartmesh.github.io/docs/3dprinting/handbag_hanger/</link>
+      <link>https://www.homesmartmesh.com/docs/3dprinting/handbag_hanger/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://homesmartmesh.github.io/docs/3dprinting/handbag_hanger/</guid>
+      <guid>https://www.homesmartmesh.com/docs/3dprinting/handbag_hanger/</guid>
       <description>Handbag hanger#Download STL</description>
     </item>
     
     <item>
       <title>Under desk shelf</title>
-      <link>https://homesmartmesh.github.io/docs/3dprinting/under_desk_shelf/</link>
+      <link>https://www.homesmartmesh.com/docs/3dprinting/under_desk_shelf/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://homesmartmesh.github.io/docs/3dprinting/under_desk_shelf/</guid>
+      <guid>https://www.homesmartmesh.com/docs/3dprinting/under_desk_shelf/</guid>
       <description>Under desk shelf#                             01 shelf overview
 02 shelf top view
 03 joint close up
@@ -61,10 +61,10 @@
     
     <item>
       <title>House model</title>
-      <link>https://homesmartmesh.github.io/docs/3dprinting/house/</link>
+      <link>https://www.homesmartmesh.com/docs/3dprinting/house/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://homesmartmesh.github.io/docs/3dprinting/house/</guid>
+      <guid>https://www.homesmartmesh.com/docs/3dprinting/house/</guid>
       <description>House Model#                             01 c a d model vs real model
 02 front view
 03 side view
@@ -73,10 +73,10 @@
     
     <item>
       <title>Voronoi Shapes</title>
-      <link>https://homesmartmesh.github.io/docs/3dprinting/voronoi/</link>
+      <link>https://www.homesmartmesh.com/docs/3dprinting/voronoi/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://homesmartmesh.github.io/docs/3dprinting/voronoi/</guid>
+      <guid>https://www.homesmartmesh.com/docs/3dprinting/voronoi/</guid>
       <description>Webapp#Voronoi Generator Tool Cells Circle#Download STLFantasy pen holder#Download STLFantasy Turtle Flower#Download STLGirafe round#Download STL</description>
     </item>
     

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Networks on Open Smart Mesh</title>
-    <link>https://homesmartmesh.github.io/docs/networks/</link>
-    <description>Recent content in Networks on Open Smart Mesh</description>
+    <title>Networks on Home Smart Mesh</title>
+    <link>https://www.homesmartmesh.com/docs/networks/</link>
+    <description>Recent content in Networks on Home Smart Mesh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://homesmartmesh.github.io/docs/networks/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.homesmartmesh.com/docs/networks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>custom RF Mesh</title>
-      <link>https://homesmartmesh.github.io/docs/networks/nrf/</link>
+      <link>https://www.homesmartmesh.com/docs/networks/nrf/</link>
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
-      <guid>https://homesmartmesh.github.io/docs/networks/nrf/</guid>
+      <guid>https://www.homesmartmesh.com/docs/networks/nrf/</guid>
       <description>nRF Mesh Github RepoFeatures#   2.4 GHz 2 Mbps Mesh Network  tested with 300 packets / second   Flash time automated database config Zero install time configuration  No association, No pairing, No factory resets   Router = Coordinator = Repeater = Sniffer = CLI text serial line protocol Multiple Network endpoints  No single point of failure   Server, Dongles, Sensors  Full Stack Open Source (no softdevices required) HW On the shelves optional DIY HW   Alive trace routing  a heartbeat message that gives info about the age and RF tx/rx hops through the route    see below the Drivers &amp;amp; Custom Mesh protocol section for the RF Protocol details</description>
     </item>
     
     <item>
       <title>Zigbee</title>
-      <link>https://homesmartmesh.github.io/docs/networks/zigbee/</link>
+      <link>https://www.homesmartmesh.com/docs/networks/zigbee/</link>
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
-      <guid>https://homesmartmesh.github.io/docs/networks/zigbee/</guid>
+      <guid>https://www.homesmartmesh.com/docs/networks/zigbee/</guid>
       <description>Devices Overview#Below are examples of used devices in this project
   As in the above figure, I kept all the light with the hue gateway for a reliable function, and opted for zigbee2mqtt for all other non lighting devices.
 For a detailed list of used devices and their documentation see the devices list section
@@ -30,10 +30,10 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in a
     
     <item>
       <title>Thread</title>
-      <link>https://homesmartmesh.github.io/docs/networks/thread/</link>
+      <link>https://www.homesmartmesh.com/docs/networks/thread/</link>
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
-      <guid>https://homesmartmesh.github.io/docs/networks/thread/</guid>
+      <guid>https://www.homesmartmesh.com/docs/networks/thread/</guid>
       <description>Open ThreadFull Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.6,minZoom: 0.5,maxZoom: 4,fit: true, contain: true, center: true, refreshRate: &#39;auto&#39;};let svg_pz = svgPanZoom(&#39;#svg-99adc38e71d7d1e9&#39; ,params);window[&#34;svg_99adc38e71d7d1e9&#34;] = svg_pzlet button = document.getElementById(&#34;btn-99adc38e71d7d1e9&#34;);button.onclick = ()={var elem = document.getElementById(&#34;svg-99adc38e71d7d1e9&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.</description>
     </item>
     
