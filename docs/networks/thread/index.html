@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.0f40b4e83b0db00d11c595295e7f5f85f51436d20a5b6790534cb30c9f46a201.css" integrity="sha256-D0C06DsNsA0RxZUpXn9fhfUUNtIKW2eQU0yzDJ9GogE=">
-<script defer src="/en.search.min.df483c2eacf1f57eeb3c6bba3289d0c3d334e3165bab229e04435dc043148869.js" integrity="sha256-30g8Lqzx9X7rPGu6MonQw9M04xZbqyKeBENdwEMUiGk="></script>
+<script defer src="/en.search.min.dd6f05a4cfa4660c324fb04ac4c081ba88e5b9e66aa65662b212ea7c3c408538.js" integrity="sha256-3W8FpM&#43;kZgwyT7BKxMCBuojlueZqplZishLqfDxAhTg="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -655,7 +655,17 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav id="TableOfContents"></nav>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#concepts">Concepts</a></li>
+    <li><a href="#devices">devices</a></li>
+    <li><a href="#useful-commands">Useful commands</a>
+      <ul>
+        <li><a href="#cli-reference">cli reference</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
   </aside>
@@ -727,6 +737,123 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li>some elements have link to the corresponding websites</li>
 </ul>
+<h1 id="concepts">
+  Concepts
+  <a class="anchor" href="#concepts">#</a>
+</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://openthread.io/guides/thread-primer/ipv6-addressing" role="button" target="_blank">IPV6 adressing</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://openthread.io/guides/thread-primer/network-discovery" role="button" target="_blank">Network discovery</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://openthread.io/guides/border-router/docker/test-connectivity" role="button" target="_blank">test connectivity</a>
+        </div>
+    </div>
+</div>
+
+<h1 id="devices">
+  devices
+  <a class="anchor" href="#devices">#</a>
+</h1>
+<ul>
+<li>
+<p>border router : dongle connected to the raspberry pi</p>
+</li>
+<li>
+<p>test cli rfserv : command line dongle through serial monitor</p>
+</li>
+<li>
+<p>mqtt-sn : test device with mqtt-sn</p>
+</li>
+<li>
+<p><a href="https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Thread-topology-monitor">Topology Monitor</a> : GUI interface</p>
+</li>
+<li>
+<p><a href="https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Sniffer-for-Bluetooth-LE">Wireshark sniffer</a> : dongle that captures all frames and shows them on wireshark</p>
+</li>
+</ul>
+<h1 id="useful-commands">
+  Useful commands
+  <a class="anchor" href="#useful-commands">#</a>
+</h1>
+<details >
+  <summary>host wpantund wpanctl. Click to expand...</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo nano /etc/wpantund.conf
+
+sudo wpanctl status
+
+sudo wpanctl scan
+
+sudo wpanctl leave
+
+sudo wpanctl setprop w
+
+sudo wpanctl setprop Channel: <span style="color:#ae81ff">15</span>
+
+sudo wpanctl setprop Network:PANID 0x1234
+
+sudo wpanctl setprop Network:Key 00112233445566778899aabbccddeeff
+
+sudo wpanctl config-gateway -d <span style="color:#e6db74">&#34;fd11:22::&#34;</span>
+
+sudo wpanctl form <span style="color:#e6db74">&#34;nRF52840thread&#34;</span>
+
+sudo wpanctl permit-join <span style="color:#ae81ff">300</span>
+
+w join -n <span style="color:#e6db74">&#34;MeasureFall&#34;</span> -c <span style="color:#ae81ff">15</span> -k 00112233445566778899aabbccddeeff -p 0x1234
+</code></pre></div>
+  </div>
+</details>
+
+<h2 id="cli-reference">
+  cli reference
+  <a class="anchor" href="#cli-reference">#</a>
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://github.com/openthread/openthread/blob/master/src/cli/README.md" role="button" target="_blank">thread cli reference</a>
+        </div>
+    </div>
+</div>
+
+<details >
+  <summary>ncp cli. Click to expand...</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cu -l /dev/ttyACM0 -s <span style="color:#ae81ff">115200</span>
+
+panid 0xabcd
+
+ifconfig up
+
+thread start
+
+state
+
+ping fd00:0064:0123:4567::0808:0808
+</code></pre></div>
+  </div>
+</details>
+
 </article>
  
       
@@ -759,7 +886,17 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav id="TableOfContents"></nav>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#concepts">Concepts</a></li>
+    <li><a href="#devices">devices</a></li>
+    <li><a href="#useful-commands">Useful commands</a>
+      <ul>
+        <li><a href="#cli-reference">cli reference</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
  
     </aside>
