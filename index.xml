@@ -13,7 +13,7 @@
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/light/</guid>
-      <description>Cover Dumb Switch with Smart Switch#Download STL                             01 black and white 3dprints
+      <description>Cover Dumb Switch with Smart Switch#Download STL                             01 black and white 3dprints
 02 black and white breakout
 03 black and white back side</description>
     </item>
@@ -61,7 +61,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/raspi_iot/</guid>
-      <description>Raspi Github RepoSoftware# Raspbian OS Main services  Mosquitto : https://mosquitto.org/ influxDB : https://www.influxdata.com/products/influxdb-overview/ mqtt2influx : py/influx Grafana : https://grafana.com/ graphql sensors : js/graphql   x to mqtt  Zigbee2mqtt : https://www.zigbee2mqtt.io/ nrf2mqtt : github nRF52_Mesh nrf_mesh miflora2mqtt : https://github.com/RaymondMouthaan/miflora-mqtt-daemon telegram bots2mqtt : js/telegraf based on https://github.com/telegraf/telegraf   automation services  Light control : py/hue Phantom Load cut : js/pc_control Heat cut : py/heating Home status : py/home_status Roborock button : py/hover   user interface  3D webapp : https://github.</description>
+      <description>Raspi Github RepoSoftware# Raspbian OS Main services  Mosquitto : https://mosquitto.org/ influxDB : https://www.influxdata.com/products/influxdb-overview/ mqtt2influx : py/influx Grafana : https://grafana.com/ graphql sensors : js/graphql   x to mqtt  Zigbee2mqtt : https://www.zigbee2mqtt.io/ nrf2mqtt : github nRF52_Mesh nrf_mesh miflora2mqtt : https://github.com/RaymondMouthaan/miflora-mqtt-daemon telegram bots2mqtt : js/telegraf based on https://github.com/telegraf/telegraf   automation services  Light control : py/hue Phantom Load cut : js/pc_control Heat cut : py/heating Home status : py/home_status Roborock button : py/hover   user interface  3D webapp : https://github.</description>
     </item>
     
     <item>
@@ -88,7 +88,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/light_socket/</guid>
-      <description>Cover Dumb Switch and smart Socket#Download STLApplication#More details on the raspberry pi service </description>
+      <description>Cover Dumb Switch and smart Socket#Download STLApplication#More details on the raspberry pi service </description>
     </item>
     
     <item>
@@ -118,7 +118,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <description>Devices Overview#Below are examples of used devices in this project
   As in the above figure, I kept all the light with the hue gateway for a reliable function, and opted for zigbee2mqtt for all other non lighting devices.
 For a detailed list of used devices and their documentation see the devices list section
-Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in a local network, therefore allowing third party apps integration.</description>
+Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in a local network, therefore allowing third party apps integration.</description>
     </item>
     
     <item>
@@ -127,7 +127,7 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in a
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/esp32_remote/</guid>
-      <description>ESP32 Case for up/down remote control#Download STL models zipApplication#More details on the ESP32 Arduino code 3D printing creation requires sometimes quite a number of iterations
+      <description>ESP32 Case for up/down remote control#Download STL models zipApplication#More details on the ESP32 Arduino code 3D printing creation requires sometimes quite a number of iterations
     </description>
     </item>
     
@@ -155,7 +155,7 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in a
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/handbag_hanger/</guid>
-      <description>Handbag hanger#Download STL</description>
+      <description>Handbag hanger#Download STL</description>
     </item>
     
     <item>
@@ -189,7 +189,7 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in a
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/voronoi/</guid>
-      <description>Webapp#Voronoi Generator Tool Cells Circle#Download STLFantasy pen holder#Download STLFantasy Turtle Flower#Download STLGirafe round#Download STL</description>
+      <description>Webapp#Voronoi Generator Tool Cells Circle#Download STLFantasy pen holder#Download STLFantasy Turtle Flower#Download STLGirafe round#Download STL</description>
     </item>
     
     <item>

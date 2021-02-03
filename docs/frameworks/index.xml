@@ -13,7 +13,7 @@
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/raspi_iot/</guid>
-      <description>Raspi Github RepoSoftware# Raspbian OS Main services  Mosquitto : https://mosquitto.org/ influxDB : https://www.influxdata.com/products/influxdb-overview/ mqtt2influx : py/influx Grafana : https://grafana.com/ graphql sensors : js/graphql   x to mqtt  Zigbee2mqtt : https://www.zigbee2mqtt.io/ nrf2mqtt : github nRF52_Mesh nrf_mesh miflora2mqtt : https://github.com/RaymondMouthaan/miflora-mqtt-daemon telegram bots2mqtt : js/telegraf based on https://github.com/telegraf/telegraf   automation services  Light control : py/hue Phantom Load cut : js/pc_control Heat cut : py/heating Home status : py/home_status Roborock button : py/hover   user interface  3D webapp : https://github.</description>
+      <description>Raspi Github RepoSoftware# Raspbian OS Main services  Mosquitto : https://mosquitto.org/ influxDB : https://www.influxdata.com/products/influxdb-overview/ mqtt2influx : py/influx Grafana : https://grafana.com/ graphql sensors : js/graphql   x to mqtt  Zigbee2mqtt : https://www.zigbee2mqtt.io/ nrf2mqtt : github nRF52_Mesh nrf_mesh miflora2mqtt : https://github.com/RaymondMouthaan/miflora-mqtt-daemon telegram bots2mqtt : js/telegraf based on https://github.com/telegraf/telegraf   automation services  Light control : py/hue Phantom Load cut : js/pc_control Heat cut : py/heating Home status : py/home_status Roborock button : py/hover   user interface  3D webapp : https://github.</description>
     </item>
     
   </channel>
