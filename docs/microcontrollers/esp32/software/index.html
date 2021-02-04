@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.0f40b4e83b0db00d11c595295e7f5f85f51436d20a5b6790534cb30c9f46a201.css" integrity="sha256-D0C06DsNsA0RxZUpXn9fhfUUNtIKW2eQU0yzDJ9GogE=">
-<script defer src="/en.search.min.2e951a012e59a0b60137f38e576011475880b4a45c5f8baa8030827c360a5426.js" integrity="sha256-LpUaAS5ZoLYBN/OOV2ARR1iAtKRcX4uqgDCCfDYKVCY="></script>
+<script defer src="/en.search.min.f5935dcbec14452307992aba4cb0163cda864f8ff450ca8bb013e199efdc735d.js" integrity="sha256-9ZNdy&#43;wURSMHmSq6TLAWPNqGT4/0UMqLsBPhme/cc10="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -741,6 +741,25 @@ https://github.com/alex-shpak/hugo-book
 <p>on another linux host, copied <code>ca_cert.pem</code> then tested :</p>
 <pre><code>&gt;curl -v https://10.0.0.36:8070/simple_ota.bin --cacert ca_cert.pem &gt; simple_ota.bin
 </code></pre>
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/esp32/cert-test.png"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
 <p>Common Name (e.g. server FQDN or YOUR name) []:10.0.0.36</p>
 <pre><code>&gt;openssl req -x509 -newkey rsa:2048 -keyout ca_key.pem -out ca_cert.pem -days 365 -nodes
 &gt;openssl s_server -WWW -key ca_key.pem -cert ca_cert.pem -port 8070
