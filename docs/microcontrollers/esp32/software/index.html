@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.0f40b4e83b0db00d11c595295e7f5f85f51436d20a5b6790534cb30c9f46a201.css" integrity="sha256-D0C06DsNsA0RxZUpXn9fhfUUNtIKW2eQU0yzDJ9GogE=">
-<script defer src="/en.search.min.669c8f35df3a76ce9cf6321510f5972e8b22031f0994018707a2c11189dc998f.js" integrity="sha256-ZpyPNd86ds6c9jIVEPWXLosiAx8JlAGHB6LBEYncmY8="></script>
+<script defer src="/en.search.min.edd2e9a569688f363f061b305efb8fd8716c85b6cc2386b4366079f1889773c5.js" integrity="sha256-7dLppWlojzY/BhswXvuP2HFshbbMI4a0NmB58YiXc8U="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -660,7 +660,11 @@ https://github.com/alex-shpak/hugo-book
     <li>
       <ul>
         <li><a href="#arduino-esp32">Arduino ESP32</a></li>
-        <li><a href="#esp-idf">ESP-IDF</a></li>
+        <li><a href="#esp-idf">ESP-IDF</a>
+          <ul>
+            <li><a href="#over-the-air-update">Over The Air Update</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -692,6 +696,369 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="https://github.com/espressif/esp-mdf">mesh-dev-framework</a></li>
 <li><a href="https://docs.espressif.com/projects/esp-mdf/en/latest/">mdf prog guide</a></li>
 </ul>
+<h3 id="over-the-air-update">
+  Over The Air Update
+  <a class="anchor" href="#over-the-air-update">#</a>
+</h3>
+<pre><code>&gt;get_idf
+&gt;idf.py set-target esp32
+</code></pre>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://github.com/espressif/esp-idf/tree/master/examples/system/ota" role="button" target="_blank">OTA Github Readme</a>
+        </div>
+    </div>
+</div>
+
+<pre><code>&gt;idf.py menuconfig
+</code></pre>
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/esp32/ota-config.png"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
+<pre><code>http://127.0.0.1:5500/hello-world.bin
+
+&gt;idf.py -p ttyUSB0 flash monitor
+</code></pre>
+<details >
+  <summary>Log output, click to expand...</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wass@wass-vb:~/esp/simple_ota_example$ idf.py -p /dev/ttyUSB0 flash monitor
+Executing action: flash
+Running ninja in directory /home/wass/esp/simple_ota_example/build
+Executing <span style="color:#e6db74">&#34;ninja flash&#34;</span>...
+<span style="color:#f92672">[</span>1/4<span style="color:#f92672">]</span> Performing build step <span style="color:#66d9ef">for</span> <span style="color:#e6db74">&#39;bootloader&#39;</span>
+ninja: no work to <span style="color:#66d9ef">do</span>.
+<span style="color:#f92672">[</span>1/2<span style="color:#f92672">]</span> cd /home/wass/esp/esp-idf/components/esptool_py <span style="color:#f92672">&amp;&amp;</span> /usr/bin/cm...d<span style="color:#e6db74">&#34; -P /home/wass/esp/esp-idf/components/esptool_py/run_esptool.cmake
+</span><span style="color:#e6db74">esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x8000 partition_table/partition-table.bin 0xd000 ota_data_initial.bin 0x1000 bootloader/bootloader.bin 0x10000 simple_ota.bin
+</span><span style="color:#e6db74">esptool.py v3.0-dev
+</span><span style="color:#e6db74">Serial port /dev/ttyUSB0
+</span><span style="color:#e6db74">Connecting.....
+</span><span style="color:#e6db74">Chip is ESP32-D0WDQ6 (revision 1)
+</span><span style="color:#e6db74">Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+</span><span style="color:#e6db74">Crystal is 40MHz
+</span><span style="color:#e6db74">MAC: 10:52:1c:67:b1:10
+</span><span style="color:#e6db74">Uploading stub...
+</span><span style="color:#e6db74">Running stub...
+</span><span style="color:#e6db74">Stub running...
+</span><span style="color:#e6db74">Changing baud rate to 460800
+</span><span style="color:#e6db74">Changed.
+</span><span style="color:#e6db74">Configuring flash size...
+</span><span style="color:#e6db74">Compressed 3072 bytes to 138...
+</span><span style="color:#e6db74">Writing at 0x00008000... (100 %)
+</span><span style="color:#e6db74">Wrote 3072 bytes (138 compressed) at 0x00008000 in 0.0 seconds (effective 2801.9 kbit/s)...
+</span><span style="color:#e6db74">Hash of data verified.
+</span><span style="color:#e6db74">Compressed 8192 bytes to 31...
+</span><span style="color:#e6db74">Writing at 0x0000d000... (100 %)
+</span><span style="color:#e6db74">Wrote 8192 bytes (31 compressed) at 0x0000d000 in 0.0 seconds (effective 14189.4 kbit/s)...
+</span><span style="color:#e6db74">Hash of data verified.
+</span><span style="color:#e6db74">Compressed 25024 bytes to 15395...
+</span><span style="color:#e6db74">Writing at 0x00001000... (100 %)
+</span><span style="color:#e6db74">Wrote 25024 bytes (15395 compressed) at 0x00001000 in 0.4 seconds (effective 552.6 kbit/s)...
+</span><span style="color:#e6db74">Hash of data verified.
+</span><span style="color:#e6db74">Compressed 815728 bytes to 514732...
+</span><span style="color:#e6db74">Writing at 0x00010000... (3 %)
+</span><span style="color:#e6db74">Writing at 0x00014000... (6 %)
+</span><span style="color:#e6db74">Writing at 0x00018000... (9 %)
+</span><span style="color:#e6db74">Writing at 0x0001c000... (12 %)
+</span><span style="color:#e6db74">Writing at 0x00020000... (15 %)
+</span><span style="color:#e6db74">Writing at 0x00024000... (18 %)
+</span><span style="color:#e6db74">Writing at 0x00028000... (21 %)
+</span><span style="color:#e6db74">Writing at 0x0002c000... (25 %)
+</span><span style="color:#e6db74">Writing at 0x00030000... (28 %)
+</span><span style="color:#e6db74">Writing at 0x00034000... (31 %)
+</span><span style="color:#e6db74">Writing at 0x00038000... (34 %)
+</span><span style="color:#e6db74">Writing at 0x0003c000... (37 %)
+</span><span style="color:#e6db74">Writing at 0x00040000... (40 %)
+</span><span style="color:#e6db74">Writing at 0x00044000... (43 %)
+</span><span style="color:#e6db74">Writing at 0x00048000... (46 %)
+</span><span style="color:#e6db74">Writing at 0x0004c000... (50 %)
+</span><span style="color:#e6db74">Writing at 0x00050000... (53 %)
+</span><span style="color:#e6db74">Writing at 0x00054000... (56 %)
+</span><span style="color:#e6db74">Writing at 0x00058000... (59 %)
+</span><span style="color:#e6db74">Writing at 0x0005c000... (62 %)
+</span><span style="color:#e6db74">Writing at 0x00060000... (65 %)
+</span><span style="color:#e6db74">Writing at 0x00064000... (68 %)
+</span><span style="color:#e6db74">Writing at 0x00068000... (71 %)
+</span><span style="color:#e6db74">Writing at 0x0006c000... (75 %)
+</span><span style="color:#e6db74">Writing at 0x00070000... (78 %)
+</span><span style="color:#e6db74">Writing at 0x00074000... (81 %)
+</span><span style="color:#e6db74">Writing at 0x00078000... (84 %)
+</span><span style="color:#e6db74">Writing at 0x0007c000... (87 %)
+</span><span style="color:#e6db74">Writing at 0x00080000... (90 %)
+</span><span style="color:#e6db74">Writing at 0x00084000... (93 %)
+</span><span style="color:#e6db74">Writing at 0x00088000... (96 %)
+</span><span style="color:#e6db74">Writing at 0x0008c000... (100 %)
+</span><span style="color:#e6db74">Wrote 815728 bytes (514732 compressed) at 0x00010000 in 12.2 seconds (effective 535.5 kbit/s)...
+</span><span style="color:#e6db74">Hash of data verified.
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">Leaving...
+</span><span style="color:#e6db74">Hard resetting via RTS pin...
+</span><span style="color:#e6db74">Executing action: monitor
+</span><span style="color:#e6db74">Running idf_monitor in directory /home/wass/esp/simple_ota_example
+</span><span style="color:#e6db74">Executing &#34;</span>/home/wass/.espressif/python_env/idf4.3_py3.8_env/bin/python /home/wass/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b <span style="color:#ae81ff">115200</span> --toolchain-prefix xtensa-esp32-elf- /home/wass/esp/simple_ota_example/build/simple_ota.elf -m <span style="color:#e6db74">&#39;/home/wass/.espressif/python_env/idf4.3_py3.8_env/bin/python&#39;</span> <span style="color:#e6db74">&#39;/home/wass/esp/esp-idf/tools/idf.py&#39;</span> <span style="color:#e6db74">&#39;-p&#39;</span> <span style="color:#e6db74">&#39;/dev/ttyUSB0&#39;</span><span style="color:#e6db74">&#34;...
+</span><span style="color:#e6db74">--- idf_monitor on /dev/ttyUSB0 115200 ---
+</span><span style="color:#e6db74">--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+</span><span style="color:#e6db74">ets Jun  8 2016 00:22:57
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+</span><span style="color:#e6db74">configsip: 0, SPIWP:0xee
+</span><span style="color:#e6db74">clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+</span><span style="color:#e6db74">mode:DIO, clock div:2
+</span><span style="color:#e6db74">load:0x3fff0030,len:4
+</span><span style="color:#e6db74">load:0x3fff0034,len:6928
+</span><span style="color:#e6db74">ho 0 tail 12 room 4
+</span><span style="color:#e6db74">load:0x40078000,len:14328
+</span><span style="color:#e6db74">ho 0 tail 12 room 4
+</span><span style="color:#e6db74">load:0x40080400,len:3660
+</span><span style="color:#e6db74">0x40080400: _init at ??:?
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">entry 0x40080678
+</span><span style="color:#e6db74">I (32) boot: ESP-IDF v4.3-dev-1561-g357a27760 2nd stage bootloader
+</span><span style="color:#e6db74">I (32) boot: compile time 18:10:59
+</span><span style="color:#e6db74">I (32) boot: chip revision: 1
+</span><span style="color:#e6db74">I (36) boot_comm: chip revision: 1, min. bootloader chip revision: 0
+</span><span style="color:#e6db74">I (43) boot.esp32: SPI Speed      : 40MHz
+</span><span style="color:#e6db74">I (48) boot.esp32: SPI Mode       : DIO
+</span><span style="color:#e6db74">I (52) boot.esp32: SPI Flash Size : 4MB
+</span><span style="color:#e6db74">I (57) boot: Enabling RNG early entropy source...
+</span><span style="color:#e6db74">I (62) boot: Partition Table:
+</span><span style="color:#e6db74">I (66) boot: ## Label            Usage          Type ST Offset   Length
+</span><span style="color:#e6db74">I (73) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+</span><span style="color:#e6db74">I (81) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+</span><span style="color:#e6db74">I (88) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+</span><span style="color:#e6db74">I (96) boot:  3 factory          factory app      00 00 00010000 00100000
+</span><span style="color:#e6db74">I (103) boot:  4 ota_0            OTA app          00 10 00110000 00100000
+</span><span style="color:#e6db74">I (111) boot:  5 ota_1            OTA app          00 11 00210000 00100000
+</span><span style="color:#e6db74">I (118) boot: End of partition table
+</span><span style="color:#e6db74">I (123) boot: Defaulting to factory image
+</span><span style="color:#e6db74">I (127) boot_comm: chip revision: 1, min. application chip revision: 0
+</span><span style="color:#e6db74">I (134) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x1e510 (124176) map
+</span><span style="color:#e6db74">I (191) esp_image: segment 1: paddr=0x0002e538 vaddr=0x3ffb0000 size=0x01ae0 (  6880) load
+</span><span style="color:#e6db74">I (194) esp_image: segment 2: paddr=0x00030020 vaddr=0x400d0020 size=0x90374 (590708) map
+</span><span style="color:#e6db74">0x400d0020: _stext at ??:?
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">I (422) esp_image: segment 3: paddr=0x000c039c vaddr=0x3ffb1ae0 size=0x02428 (  9256) load
+</span><span style="color:#e6db74">I (426) esp_image: segment 4: paddr=0x000c27cc vaddr=0x40080000 size=0x00404 (  1028) load
+</span><span style="color:#e6db74">0x40080000: _WindowOverflow4 at /home/wass/esp/esp-idf/components/freertos/xtensa/xtensa_vectors.S:1730
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">I (429) esp_image: segment 5: paddr=0x000c2bd8 vaddr=0x40080404 size=0x1466c ( 83564) load
+</span><span style="color:#e6db74">I (486) boot: Loaded app from partition at offset 0x10000
+</span><span style="color:#e6db74">I (486) boot: Disabling RNG early entropy source...
+</span><span style="color:#e6db74">I (498) cpu_start: Pro cpu up.
+</span><span style="color:#e6db74">I (498) cpu_start: Starting app cpu, entry point is 0x40081150
+</span><span style="color:#e6db74">0x40081150: call_start_cpu1 at /home/wass/esp/esp-idf/components/esp_system/port/cpu_start.c:124
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">I (0) cpu_start: App cpu up.
+</span><span style="color:#e6db74">I (512) cpu_start: Pro cpu start user code
+</span><span style="color:#e6db74">I (512) cpu_start: cpu freq: 160000000
+</span><span style="color:#e6db74">I (512) cpu_start: Application information:
+</span><span style="color:#e6db74">I (516) cpu_start: Project name:     simple_ota
+</span><span style="color:#e6db74">I (522) cpu_start: App version:      1
+</span><span style="color:#e6db74">I (526) cpu_start: Compile time:     Feb  4 2021 18:10:53
+</span><span style="color:#e6db74">I (532) cpu_start: ELF file SHA256:  16c58cb2140dc9a6...
+</span><span style="color:#e6db74">I (538) cpu_start: ESP-IDF:          v4.3-dev-1561-g357a27760
+</span><span style="color:#e6db74">I (545) heap_init: Initializing. RAM available for dynamic allocation:
+</span><span style="color:#e6db74">I (552) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+</span><span style="color:#e6db74">I (558) heap_init: At 3FFB7D30 len 000282D0 (160 KiB): DRAM
+</span><span style="color:#e6db74">I (564) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+</span><span style="color:#e6db74">I (570) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+</span><span style="color:#e6db74">I (577) heap_init: At 40094A70 len 0000B590 (45 KiB): IRAM
+</span><span style="color:#e6db74">I (584) spi_flash: detected chip: generic
+</span><span style="color:#e6db74">I (588) spi_flash: flash io: dio
+</span><span style="color:#e6db74">I (593) cpu_start: Starting scheduler on PRO CPU.
+</span><span style="color:#e6db74">I (0) cpu_start: Starting scheduler on APP CPU.
+</span><span style="color:#e6db74">I (1037) wifi:wifi driver task: 3ffc1b2c, prio:23, stack:6656, core=0
+</span><span style="color:#e6db74">I (1037) system_api: Base MAC address is not set
+</span><span style="color:#e6db74">I (1037) system_api: read default base MAC address from EFUSE
+</span><span style="color:#e6db74">I (1077) wifi:wifi firmware version: a94a000
+</span><span style="color:#e6db74">I (1077) wifi:wifi certification version: v7.0
+</span><span style="color:#e6db74">I (1077) wifi:config NVS flash: enabled
+</span><span style="color:#e6db74">I (1077) wifi:config nano formating: disabled
+</span><span style="color:#e6db74">I (1087) wifi:Init data frame dynamic rx buffer num: 32
+</span><span style="color:#e6db74">I (1087) wifi:Init management frame dynamic rx buffer num: 32
+</span><span style="color:#e6db74">I (1097) wifi:Init management short buffer num: 32
+</span><span style="color:#e6db74">I (1097) wifi:Init dynamic tx buffer num: 32
+</span><span style="color:#e6db74">I (1107) wifi:Init static rx buffer size: 1600
+</span><span style="color:#e6db74">I (1107) wifi:Init static rx buffer num: 10
+</span><span style="color:#e6db74">I (1107) wifi:Init dynamic rx buffer num: 32
+</span><span style="color:#e6db74">I (1117) wifi_init: rx ba win: 6
+</span><span style="color:#e6db74">I (1117) wifi_init: tcpip mbox: 32
+</span><span style="color:#e6db74">I (1127) wifi_init: udp mbox: 6
+</span><span style="color:#e6db74">I (1127) wifi_init: tcp mbox: 6
+</span><span style="color:#e6db74">I (1127) wifi_init: tcp tx win: 5744
+</span><span style="color:#e6db74">I (1137) wifi_init: tcp rx win: 5744
+</span><span style="color:#e6db74">I (1137) wifi_init: tcp mss: 1440
+</span><span style="color:#e6db74">I (1147) wifi_init: WiFi IRAM OP enabled
+</span><span style="color:#e6db74">I (1147) wifi_init: WiFi RX IRAM OP enabled
+</span><span style="color:#e6db74">I (1157) example_connect: Connecting to N-WLAN...
+</span><span style="color:#e6db74">W (1157) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">Brownout detector was triggered
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">ets Jun  8 2016 00:22:57
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+</span><span style="color:#e6db74">configsip: 0, SPIWP:0xee
+</span><span style="color:#e6db74">clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+</span><span style="color:#e6db74">mode:DIO, clock div:2
+</span><span style="color:#e6db74">load:0x3fff0030,len:4
+</span><span style="color:#e6db74">load:0x3fff0034,len:6928
+</span><span style="color:#e6db74">ho 0 tail 12 room 4
+</span><span style="color:#e6db74">load:0x40078000,len:14328
+</span><span style="color:#e6db74">ho 0 tail 12 room 4
+</span><span style="color:#e6db74">load:0x40080400,len:3660
+</span><span style="color:#e6db74">0x40080400: _init at ??:?
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">entry 0x40080678
+</span><span style="color:#e6db74">I (32) boot: ESP-IDF v4.3-dev-1561-g357a27760 2nd stage bootloader
+</span><span style="color:#e6db74">I (32) boot: compile time 18:10:59
+</span><span style="color:#e6db74">I (33) boot: chip revision: 1
+</span><span style="color:#e6db74">I (37) boot_comm: chip revision: 1, min. bootloader chip revision: 0
+</span><span style="color:#e6db74">I (44) boot.esp32: SPI Speed      : 40MHz
+</span><span style="color:#e6db74">I (49) boot.esp32: SPI Mode       : DIO
+</span><span style="color:#e6db74">I (53) boot.esp32: SPI Flash Size : 4MB
+</span><span style="color:#e6db74">I (58) boot: Enabling RNG early entropy source...
+</span><span style="color:#e6db74">I (63) boot: Partition Table:
+</span><span style="color:#e6db74">I (67) boot: ## Label            Usage          Type ST Offset   Length
+</span><span style="color:#e6db74">I (74) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+</span><span style="color:#e6db74">I (82) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+</span><span style="color:#e6db74">I (89) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+</span><span style="color:#e6db74">I (97) boot:  3 factory          factory app      00 00 00010000 00100000
+</span><span style="color:#e6db74">I (104) boot:  4 ota_0            OTA app          00 10 00110000 00100000
+</span><span style="color:#e6db74">I (112) boot:  5 ota_1            OTA app          00 11 00210000 00100000
+</span><span style="color:#e6db74">I (119) boot: End of partition table
+</span><span style="color:#e6db74">I (123) boot: Defaulting to factory image
+</span><span style="color:#e6db74">I (128) boot_comm: chip revision: 1, min. application chip revision: 0
+</span><span style="color:#e6db74">I (135) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x1e510 (124176) map
+</span><span style="color:#e6db74">I (192) esp_image: segment 1: paddr=0x0002e538 vaddr=0x3ffb0000 size=0x01ae0 (  6880) load
+</span><span style="color:#e6db74">I (195) esp_image: segment 2: paddr=0x00030020 vaddr=0x400d0020 size=0x90374 (590708) map
+</span><span style="color:#e6db74">0x400d0020: _stext at ??:?
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">I (423) esp_image: segment 3: paddr=0x000c039c vaddr=0x3ffb1ae0 size=0x02428 (  9256) load
+</span><span style="color:#e6db74">I (427) esp_image: segment 4: paddr=0x000c27cc vaddr=0x40080000 size=0x00404 (  1028) load
+</span><span style="color:#e6db74">0x40080000: _WindowOverflow4 at /home/wass/esp/esp-idf/components/freertos/xtensa/xtensa_vectors.S:1730
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">I (430) esp_image: segment 5: paddr=0x000c2bd8 vaddr=0x40080404 size=0x1466c ( 83564) load
+</span><span style="color:#e6db74">I (487) boot: Loaded app from partition at offset 0x10000
+</span><span style="color:#e6db74">I (487) boot: Disabling RNG early entropy source...
+</span><span style="color:#e6db74">I (498) cpu_start: Pro cpu up.
+</span><span style="color:#e6db74">I (499) cpu_start: Starting app cpu, entry point is 0x40081150
+</span><span style="color:#e6db74">0x40081150: call_start_cpu1 at /home/wass/esp/esp-idf/components/esp_system/port/cpu_start.c:124
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">I (483) cpu_start: App cpu up.
+</span><span style="color:#e6db74">I (513) cpu_start: Pro cpu start user code
+</span><span style="color:#e6db74">I (513) cpu_start: cpu freq: 160000000
+</span><span style="color:#e6db74">I (513) cpu_start: Application information:
+</span><span style="color:#e6db74">I (518) cpu_start: Project name:     simple_ota
+</span><span style="color:#e6db74">I (523) cpu_start: App version:      1
+</span><span style="color:#e6db74">I (527) cpu_start: Compile time:     Feb  4 2021 18:10:53
+</span><span style="color:#e6db74">I (533) cpu_start: ELF file SHA256:  16c58cb2140dc9a6...
+</span><span style="color:#e6db74">I (539) cpu_start: ESP-IDF:          v4.3-dev-1561-g357a27760
+</span><span style="color:#e6db74">I (546) heap_init: Initializing. RAM available for dynamic allocation:
+</span><span style="color:#e6db74">I (553) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+</span><span style="color:#e6db74">I (559) heap_init: At 3FFB7D30 len 000282D0 (160 KiB): DRAM
+</span><span style="color:#e6db74">I (565) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+</span><span style="color:#e6db74">I (571) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+</span><span style="color:#e6db74">I (578) heap_init: At 40094A70 len 0000B590 (45 KiB): IRAM
+</span><span style="color:#e6db74">I (585) spi_flash: detected chip: generic
+</span><span style="color:#e6db74">I (589) spi_flash: flash io: dio
+</span><span style="color:#e6db74">I (594) cpu_start: Starting scheduler on PRO CPU.
+</span><span style="color:#e6db74">I (0) cpu_start: Starting scheduler on APP CPU.
+</span><span style="color:#e6db74">I (698) wifi:wifi driver task: 3ffc2024, prio:23, stack:6656, core=0
+</span><span style="color:#e6db74">I (698) system_api: Base MAC address is not set
+</span><span style="color:#e6db74">I (698) system_api: read default base MAC address from EFUSE
+</span><span style="color:#e6db74">I (718) wifi:wifi firmware version: a94a000
+</span><span style="color:#e6db74">I (718) wifi:wifi certification version: v7.0
+</span><span style="color:#e6db74">I (718) wifi:config NVS flash: enabled
+</span><span style="color:#e6db74">I (718) wifi:config nano formating: disabled
+</span><span style="color:#e6db74">I (728) wifi:Init data frame dynamic rx buffer num: 32
+</span><span style="color:#e6db74">I (728) wifi:Init management frame dynamic rx buffer num: 32
+</span><span style="color:#e6db74">I (738) wifi:Init management short buffer num: 32
+</span><span style="color:#e6db74">I (738) wifi:Init dynamic tx buffer num: 32
+</span><span style="color:#e6db74">I (748) wifi:Init static rx buffer size: 1600
+</span><span style="color:#e6db74">I (748) wifi:Init static rx buffer num: 10
+</span><span style="color:#e6db74">I (748) wifi:Init dynamic rx buffer num: 32
+</span><span style="color:#e6db74">I (758) wifi_init: rx ba win: 6
+</span><span style="color:#e6db74">I (758) wifi_init: tcpip mbox: 32
+</span><span style="color:#e6db74">I (758) wifi_init: udp mbox: 6
+</span><span style="color:#e6db74">I (768) wifi_init: tcp mbox: 6
+</span><span style="color:#e6db74">I (768) wifi_init: tcp tx win: 5744
+</span><span style="color:#e6db74">I (778) wifi_init: tcp rx win: 5744
+</span><span style="color:#e6db74">I (778) wifi_init: tcp mss: 1440
+</span><span style="color:#e6db74">I (778) wifi_init: WiFi IRAM OP enabled
+</span><span style="color:#e6db74">I (788) wifi_init: WiFi RX IRAM OP enabled
+</span><span style="color:#e6db74">I (788) example_connect: Connecting to N-WLAN...
+</span><span style="color:#e6db74">W (798) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration
+</span><span style="color:#e6db74">I (948) phy: phy_version: 4500, 0cd6843, Sep 17 2020, 15:37:07, 0, 2
+</span><span style="color:#e6db74">I (958) wifi:mode : sta (10:52:1c:67:b1:10)
+</span><span style="color:#e6db74">I (968) wifi:enable tsf
+</span><span style="color:#e6db74">I (968) example_connect: Waiting for IP(s)
+</span><span style="color:#e6db74">I (1568) wifi:new:&lt;5,1&gt;, old:&lt;1,0&gt;, ap:&lt;255,255&gt;, sta:&lt;5,1&gt;, prof:1
+</span><span style="color:#e6db74">I (2308) wifi:state: init -&gt; auth (b0)
+</span><span style="color:#e6db74">I (2308) wifi:state: auth -&gt; assoc (0)
+</span><span style="color:#e6db74">I (2318) wifi:state: assoc -&gt; run (10)
+</span><span style="color:#e6db74">I (2368) wifi:connected with N-WLAN, aid = 9, channel 5, 40U, bssid = 2c:30:33:9c:bf:c0
+</span><span style="color:#e6db74">I (2368) wifi:security: WPA2-PSK, phy: bgn, rssi: -84
+</span><span style="color:#e6db74">I (2368) wifi:pm start, type: 1
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">I (2378) wifi:AP&#39;s beacon interval = 102400 us, DTIM period = 2
+</span><span style="color:#e6db74">W (3098) wifi:&lt;ba-add&gt;idx:0 (ifx:0, 2c:30:33:9c:bf:c0), tid:6, ssn:2, winSize:64
+</span><span style="color:#e6db74">I (3688) example_connect: Got IPv6 event: Interface &#34;</span>example_connect: sta<span style="color:#e6db74">&#34; address: fe80:0000:0000:0000:1252:1cff:fe67:b110, type: ESP_IP6_ADDR_IS_LINK_LOCAL
+</span><span style="color:#e6db74">I (5688) esp_netif_handlers: example_connect: sta ip: 10.0.0.32, mask: 255.255.255.0, gw: 10.0.0.1
+</span><span style="color:#e6db74">I (5688) example_connect: Got IPv4 event: Interface &#34;</span>example_connect: sta<span style="color:#e6db74">&#34; address: 10.0.0.32
+</span><span style="color:#e6db74">I (5698) example_connect: Connected to example_connect: sta
+</span><span style="color:#e6db74">I (5698) example_connect: - IPv4 address: 10.0.0.32
+</span><span style="color:#e6db74">I (5708) example_connect: - IPv6 address: fe80:0000:0000:0000:1252:1cff:fe67:b110, type: ESP_IP6_ADDR_IS_LINK_LOCAL
+</span><span style="color:#e6db74">I (5718) wifi:Set ps type: 0
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">I (5718) simple_ota_example: Starting OTA example
+</span><span style="color:#e6db74">E (5738) TRANS_TCP: [sock=54] delayed connect error: Connection reset by peer
+</span><span style="color:#e6db74">E (5738) HTTP_CLIENT: Connection failed, sock &lt; 0
+</span><span style="color:#e6db74">E (5738) esp_https_ota: Failed to open HTTP connection: ESP_ERR_HTTP_CONNECT
+</span><span style="color:#e6db74">E (5748) esp_https_ota: Failed to establish HTTP connection
+</span><span style="color:#e6db74">E (5758) simple_ota_example: Firmware upgrade failed
+</span></code></pre></div>
+  </div>
+</details>
+
+<p>error message :</p>
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/esp32/ota-error.png"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
 </article>
  
       
@@ -729,7 +1096,11 @@ https://github.com/alex-shpak/hugo-book
     <li>
       <ul>
         <li><a href="#arduino-esp32">Arduino ESP32</a></li>
-        <li><a href="#esp-idf">ESP-IDF</a></li>
+        <li><a href="#esp-idf">ESP-IDF</a>
+          <ul>
+            <li><a href="#over-the-air-update">Over The Air Update</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>

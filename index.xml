@@ -137,7 +137,7 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in 
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0900</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/software/</guid>
-      <description>Arduino ESP32# platform package as an idf component  ESP-IDF# esp-idf esp-iot-solution mesh-dev-framework mdf prog guide  </description>
+      <description>Arduino ESP32# platform package as an idf component  ESP-IDF# esp-idf esp-iot-solution mesh-dev-framework mdf prog guide  Over The Air Update#&amp;gt;get_idf&amp;gt;idf.py set-target esp32 OTA Github Readme&amp;gt;idf.py menuconfig http://127.0.0.1:5500/hello-world.bin&amp;gt;idf.py -p ttyUSB0 flash monitor Log output, click to expand...wass@wass-vb:~/esp/simple_ota_example$ idf.py -p /dev/ttyUSB0 flash monitor Executing action: flash Running ninja in directory /home/wass/esp/simple_ota_example/build Executing &amp;#34;ninja flash&amp;#34;.</description>
     </item>
     
     <item>
