@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.0f40b4e83b0db00d11c595295e7f5f85f51436d20a5b6790534cb30c9f46a201.css" integrity="sha256-D0C06DsNsA0RxZUpXn9fhfUUNtIKW2eQU0yzDJ9GogE=">
-<script defer src="/en.search.min.edd2e9a569688f363f061b305efb8fd8716c85b6cc2386b4366079f1889773c5.js" integrity="sha256-7dLppWlojzY/BhswXvuP2HFshbbMI4a0NmB58YiXc8U="></script>
+<script defer src="/en.search.min.2e951a012e59a0b60137f38e576011475880b4a45c5f8baa8030827c360a5426.js" integrity="sha256-LpUaAS5ZoLYBN/OOV2ARR1iAtKRcX4uqgDCCfDYKVCY="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -733,9 +733,17 @@ https://github.com/alex-shpak/hugo-book
   
 </div>
 
-<pre><code>http://127.0.0.1:5500/hello-world.bin
+<pre><code>https://10.0.0.36:8070/hello-world.bin
 
-&gt;idf.py -p ttyUSB0 flash monitor
+&gt;cp ca_cert.pem ../simple_ota_example/server_certs/
+&gt;idf.py -p /dev/ttyUSB0 flash monitor
+</code></pre>
+<p>on another linux host, copied <code>ca_cert.pem</code> then tested :</p>
+<pre><code>&gt;curl -v https://10.0.0.36:8070/simple_ota.bin --cacert ca_cert.pem &gt; simple_ota.bin
+</code></pre>
+<p>Common Name (e.g. server FQDN or YOUR name) []:10.0.0.36</p>
+<pre><code>&gt;openssl req -x509 -newkey rsa:2048 -keyout ca_key.pem -out ca_cert.pem -days 365 -nodes
+&gt;openssl s_server -WWW -key ca_key.pem -cert ca_cert.pem -port 8070
 </code></pre>
 <details >
   <summary>Log output, click to expand...</summary>
@@ -1025,21 +1033,67 @@ ninja: no work to <span style="color:#66d9ef">do</span>.
 </span><span style="color:#e6db74">I (5688) esp_netif_handlers: example_connect: sta ip: 10.0.0.32, mask: 255.255.255.0, gw: 10.0.0.1
 </span><span style="color:#e6db74">I (5688) example_connect: Got IPv4 event: Interface &#34;</span>example_connect: sta<span style="color:#e6db74">&#34; address: 10.0.0.32
 </span><span style="color:#e6db74">I (5698) example_connect: Connected to example_connect: sta
-</span><span style="color:#e6db74">I (5698) example_connect: - IPv4 address: 10.0.0.32
-</span><span style="color:#e6db74">I (5708) example_connect: - IPv6 address: fe80:0000:0000:0000:1252:1cff:fe67:b110, type: ESP_IP6_ADDR_IS_LINK_LOCAL
-</span><span style="color:#e6db74">I (5718) wifi:Set ps type: 0
+</span><span style="color:#e6db74"> (6198) example_connect: - IPv4 address: 10.0.0.32
+</span><span style="color:#e6db74">I (6208) example_connect: - IPv6 address: fe80:0000:0000:0000:1252:1cff:fe67:b110, type: ESP_IP6_ADDR_IS_LINK_LOCAL
+</span><span style="color:#e6db74">I (6218) wifi:Set ps type: 0
 </span><span style="color:#e6db74">
-</span><span style="color:#e6db74">I (5718) simple_ota_example: Starting OTA example
-</span><span style="color:#e6db74">E (5738) TRANS_TCP: [sock=54] delayed connect error: Connection reset by peer
-</span><span style="color:#e6db74">E (5738) HTTP_CLIENT: Connection failed, sock &lt; 0
-</span><span style="color:#e6db74">E (5738) esp_https_ota: Failed to open HTTP connection: ESP_ERR_HTTP_CONNECT
-</span><span style="color:#e6db74">E (5748) esp_https_ota: Failed to establish HTTP connection
-</span><span style="color:#e6db74">E (5758) simple_ota_example: Firmware upgrade failed
+</span><span style="color:#e6db74">I (6218) simple_ota_example: Starting OTA example
+</span><span style="color:#e6db74">W (6278) wifi:&lt;ba-add&gt;idx:1 (ifx:0, 2c:30:33:9c:bf:c0), tid:0, ssn:0, winSize:64
+</span><span style="color:#e6db74">I (8168) esp_https_ota: Starting OTA...
+</span><span style="color:#e6db74">I (8168) esp_https_ota: Writing to partition subtype 16 at offset 0x110000
+</span><span style="color:#e6db74">D (26758) HTTP_CLIENT: esp_transport_read returned:-1 and errno:128 
+</span><span style="color:#e6db74">I (26758) esp_https_ota: Connection closed
+</span><span style="color:#e6db74">I (26758) esp_image: segment 0: paddr=0x00110020 vaddr=0x3f400020 size=0x1e558 (124248) map
+</span><span style="color:#e6db74">I (26808) esp_image: segment 1: paddr=0x0012e580 vaddr=0x3ffb0000 size=0x01a98 (  6808) 
+</span><span style="color:#e6db74">I (26808) esp_image: segment 2: paddr=0x00130020 vaddr=0x400d0020 size=0x90374 (590708) map
+</span><span style="color:#e6db74">0x400d0020: _stext at ??:?
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">I (27008) esp_image: segment 3: paddr=0x001c039c vaddr=0x3ffb1a98 size=0x02470 (  9328) 
+</span><span style="color:#e6db74">I (27018) esp_image: segment 4: paddr=0x001c2814 vaddr=0x40080000 size=0x00404 (  1028) 
+</span><span style="color:#e6db74">0x40080000: _WindowOverflow4 at /home/wass/esp/esp-idf/components/freertos/xtensa/xtensa_vectors.S:1730
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">I (27018) esp_image: segment 5: paddr=0x001c2c20 vaddr=0x40080404 size=0x1466c ( 83564) 
+</span><span style="color:#e6db74">I (27058) esp_image: segment 0: paddr=0x00110020 vaddr=0x3f400020 size=0x1e558 (124248) map
+</span><span style="color:#e6db74">I (27108) esp_image: segment 1: paddr=0x0012e580 vaddr=0x3ffb0000 size=0x01a98 (  6808) 
+</span><span style="color:#e6db74">I (27108) esp_image: segment 2: paddr=0x00130020 vaddr=0x400d0020 size=0x90374 (590708) map
+</span><span style="color:#e6db74">0x400d0020: _stext at ??:?
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">I (27308) esp_image: segment 3: paddr=0x001c039c vaddr=0x3ffb1a98 size=0x02470 (  9328) 
+</span><span style="color:#e6db74">I (27308) esp_image: segment 4: paddr=0x001c2814 vaddr=0x40080000 size=0x00404 (  1028) 
+</span><span style="color:#e6db74">0x40080000: _WindowOverflow4 at /home/wass/esp/esp-idf/components/freertos/xtensa/xtensa_vectors.S:1730
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">I (27318) esp_image: segment 5: paddr=0x001c2c20 vaddr=0x40080404 size=0x1466c ( 83564) 
+</span><span style="color:#e6db74">I (27408) wifi:state: run -&gt; init (0)
+</span><span style="color:#e6db74">I (27408) wifi:pm stop, total sleep time: 2993121 us / 25102797 us
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">W (27408) wifi:&lt;ba-del&gt;idx
+</span><span style="color:#e6db74">W (27408) wifi:&lt;ba-del&gt;idx
+</span><span style="color:#e6db74">I (27408) wifi:new:&lt;5,0&gt;, old:&lt;5,1&gt;, ap:&lt;255,255&gt;, sta:&lt;5,1&gt;, prof:1
+</span><span style="color:#e6db74">W (27418) wifi:hmac tx: ifx0 stop, discard
+</span><span style="color:#e6db74">I (27448) wifi:flush txq
+</span><span style="color:#e6db74">I (27448) wifi:stop sw txq
+</span><span style="color:#e6db74">I (27448) wifi:lmac stop hw txq
+</span><span style="color:#e6db74">I (27448) wifi:Deinit lldesc rx mblock:10
+</span><span style="color:#e6db74">ets Jun  8 2016 00:22:57
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+</span><span style="color:#e6db74">configsip: 0, SPIWP:0xee
+</span><span style="color:#e6db74">clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+</span><span style="color:#e6db74">mode:DIO, clock div:2
+</span><span style="color:#e6db74">load:0x3fff0030,len:4
+</span><span style="color:#e6db74">load:0x3fff0034,len:6928
+</span><span style="color:#e6db74">ho 0 tail 12 room 4
+</span><span style="color:#e6db74">load:0x40078000,len:14328
+</span><span style="color:#e6db74">ho 0 tail 12 room 4
+</span><span style="color:#e6db74">load:0x40080400,len:3660
+</span><span style="color:#e6db74">0x40080400: _init at ??:?
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">entry 0x40080678
 </span></code></pre></div>
   </div>
 </details>
 
-<p>error message :</p>
+<p>error message (various reasons, certificate not copied, wrong filename,&hellip;) :</p>
 
 
 
@@ -1059,6 +1113,46 @@ ninja: no work to <span style="color:#66d9ef">do</span>.
   
 </div>
 
+<p>success message :</p>
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/esp32/ota-success.png"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
+<p>server log :
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/esp32/server.png"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+</p>
 </article>
  
       

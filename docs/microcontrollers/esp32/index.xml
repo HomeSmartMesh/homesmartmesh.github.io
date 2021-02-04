@@ -31,7 +31,8 @@
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0900</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/software/</guid>
-      <description>Arduino ESP32# platform package as an idf component  ESP-IDF# esp-idf esp-iot-solution mesh-dev-framework mdf prog guide  Over The Air Update#&amp;gt;get_idf&amp;gt;idf.py set-target esp32 OTA Github Readme&amp;gt;idf.py menuconfig http://127.0.0.1:5500/hello-world.bin&amp;gt;idf.py -p ttyUSB0 flash monitor Log output, click to expand...wass@wass-vb:~/esp/simple_ota_example$ idf.py -p /dev/ttyUSB0 flash monitor Executing action: flash Running ninja in directory /home/wass/esp/simple_ota_example/build Executing &amp;#34;ninja flash&amp;#34;.</description>
+      <description>Arduino ESP32# platform package as an idf component  ESP-IDF# esp-idf esp-iot-solution mesh-dev-framework mdf prog guide  Over The Air Update#&amp;gt;get_idf&amp;gt;idf.py set-target esp32 OTA Github Readme&amp;gt;idf.py menuconfig https://10.0.0.36:8070/hello-world.bin&amp;gt;cp ca_cert.pem ../simple_ota_example/server_certs/&amp;gt;idf.py -p /dev/ttyUSB0 flash monitor on another linux host, copied ca_cert.pem then tested :
+&amp;gt;curl -v https://10.0.0.36:8070/simple_ota.bin --cacert ca_cert.pem &amp;gt; simple_ota.</description>
     </item>
     
     <item>
