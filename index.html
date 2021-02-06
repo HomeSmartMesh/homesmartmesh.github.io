@@ -15,7 +15,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.0f40b4e83b0db00d11c595295e7f5f85f51436d20a5b6790534cb30c9f46a201.css" integrity="sha256-D0C06DsNsA0RxZUpXn9fhfUUNtIKW2eQU0yzDJ9GogE=">
-<script defer src="/en.search.min.f5935dcbec14452307992aba4cb0163cda864f8ff450ca8bb013e199efdc735d.js" integrity="sha256-9ZNdy&#43;wURSMHmSq6TLAWPNqGT4/0UMqLsBPhme/cc10="></script>
+<script defer src="/en.search.min.f7861eb12b497895cd3bc7f969b7f146b927d209c6cb96327c02bb713447d378.js" integrity="sha256-94YesStJeJXNO8f5abfxRrkn0gnGy5YyfAK7cTRH03g="></script>
 <link rel="alternate" type="application/rss+xml" href="https://www.homesmartmesh.com/index.xml" title="Home Smart Mesh" />
 <!--
 Made with Book Theme
@@ -663,42 +663,65 @@ https://github.com/alex-shpak/hugo-book
 <script src="/js/grid.js" type="module"></script>
 
 <div class="container ml-auto text-center">
-  <div class="btn-group flex-wrap" role="group" id="buttons-2a00875ce400bf70">
+  <div class="btn-group flex-wrap grid-buttons-bar" role="group" id="buttons-2a00875ce400bf70" data-selection="">
     
-    <a type="button" class="book-btn grid-button" data-filter="All">
+    <a  type="button" 
+        class="book-btn grid-button selected" 
+        data-filter="All"
+      >
       All
     </a>
     
-    <a type="button" class="book-btn grid-button" data-filter="Frameworks">
+    <a  type="button" 
+        class="book-btn grid-button " 
+        data-filter="Frameworks"
+      >
       Frameworks
     </a>
     
-    <a type="button" class="book-btn grid-button" data-filter="Applications">
+    <a  type="button" 
+        class="book-btn grid-button " 
+        data-filter="Applications"
+      >
       Applications
     </a>
     
-    <a type="button" class="book-btn grid-button" data-filter="Microcontrollers">
+    <a  type="button" 
+        class="book-btn grid-button " 
+        data-filter="Microcontrollers"
+      >
       Microcontrollers
     </a>
     
-    <a type="button" class="book-btn grid-button" data-filter="Network">
+    <a  type="button" 
+        class="book-btn grid-button " 
+        data-filter="Network"
+      >
       Network
     </a>
     
   </div>
 </div>
-<div  id="grid-2a00875ce400bf70" data-slot="150" >
+<div  id="grid-2a00875ce400bf70" 
+      class="grid"
+      data-scale="1"
+      data-side-min="300" 
+      >
    
    
   
-  
-  
-  
-   
-    <div class="grid-child card markdown-inner" data-tags="Frameworks,Applications,Network" data-width="300" >
-      <h2 class="card-title text-center">Raspi IoT</h2>
-    <div class="text-center">
-  <a >
+    
+    
+    
+     
+      <div  class="card markdown-inner" 
+            data-tags="Frameworks,Applications,Network" 
+            data-width="300"
+            data-height="150"
+            >
+        <h2>Raspi IoT</h2>
+      <div class="text-center">
+  <a  href="docs/raspi/readme/" >
     <img
     src="/images/raspi_iot.png"
     alt=""
@@ -719,15 +742,19 @@ https://github.com/alex-shpak/hugo-book
 <p>Sensors to MQTT to influx to Grafana.</p>
 <p>Multiple Python and Node.js standalone services</p>
 
-  </div>
+    </div>
   
-  
-  
-  
-   
-    <div class="grid-child card markdown-inner" data-tags="Network,Microcontrollers,nRF52" data-width="300" >
-      <h2 class="card-title text-center">Simple RF Mesh</h2>
-    <div class="text-center">
+    
+    
+    
+     
+      <div  class="card markdown-inner" 
+            data-tags="Network,Microcontrollers,nRF52" 
+            data-width="300"
+            data-height="150"
+            >
+        <h2>Simple RF Mesh</h2>
+      <div class="text-center">
   <a >
     <img
     src="/images/nRF52_mesh.png"
@@ -748,15 +775,19 @@ https://github.com/alex-shpak/hugo-book
 <p>A simpler, more efficient alternative to Z-x, BL-x, Thread, standard RF protocols.</p>
 <p>Custom HW but also SW for nRF SoC tags and dongles on the market.</p>
 
-  </div>
+    </div>
   
-  
-  
-  
-   
-    <div class="grid-child card markdown-inner" data-tags="Microcontrollers,ESP32" data-width="300" >
-      <h2 class="card-title text-center">ESP32 Programs</h2>
-    <div class="text-center">
+    
+    
+    
+     
+      <div  class="card markdown-inner" 
+            data-tags="Microcontrollers,ESP32" 
+            data-width="300"
+            data-height="150"
+            >
+        <h2>ESP32 Programs</h2>
+      <div class="text-center">
   <a >
     <img
     src="/images/espressif.png"
@@ -778,37 +809,45 @@ https://github.com/alex-shpak/hugo-book
 <p>filesystem with json config</p>
 <p>MQTT Timer camera, e-ink, remote control,&hellip;</p>
 
-  </div>
+    </div>
   
-  
-  
-  
-   
-    <div class="grid-child card markdown-inner" data-tags="Frameworks,Applications,Microcontrollers,Network" data-width="600" >
-      <h2 class="card-title text-center">Discord Server</h2>
-    <div class="text-center">
+    
+    
+    
+     
+      <div  class="card markdown-inner" 
+            data-tags="Frameworks,Applications,Microcontrollers,Network" 
+            data-width="600"
+            data-height="150"
+            >
+        <h2>Discord Server</h2>
+      <div class="text-center">
     <iframe src="https://discord.com/widget?id=780126809671991328&theme=dark" width="350" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 </div>
 <p>An <a href="https://discord.gg/57cZapWHkC">invitation</a> to talk and chat with live suggestions and feedback
-  </div>
+    </div>
   
-  
-  
-  
-   
-    <div class="grid-child card markdown-inner" data-tags="" data-width="300" >
-      <h2 class="card-title text-center">3D Printing</h2>
-    <a href="/docs/3dprinting/">
-  <div class="text-center" >
+    
+    
+    
+     
+      <div  class="card markdown-inner" 
+            data-tags="" 
+            data-width="300"
+            data-height="150"
+            >
+        <h2>3D Printing</h2>
+      <div class="text-center">
+  <a  href="/docs/3dprinting/" >
     <img
-      src="/images/3dprinting/3dmodels.png"
-      alt=""
-      width=""
-      height="100"
-      decoding="async"
-    />
-  </div>
-</a>
+    src="/images/3dprinting/3dmodels.png"
+    alt=""
+    width=""
+    height="100"
+    decoding="async"
+  />
+  </a>
+</div>
 <p>3D Models for Smart Home, electronics and house utilities</p>
 <div class="container">
     <div class="row">
@@ -818,15 +857,19 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 
-  </div>
+    </div>
   
-  
-  
-  
-   
-    <div class="grid-child card markdown-inner" data-tags="Frameworks,Applications" data-width="600" >
-      <h2 class="card-title text-center">Smart Home 3D</h2>
-    <div class="text-center">
+    
+    
+    
+     
+      <div  class="card markdown-inner" 
+            data-tags="Frameworks,Applications" 
+            data-width="600"
+            data-height="150"
+            >
+        <h2>Smart Home 3D</h2>
+      <div class="text-center">
   <a >
     <img
     src="/images/floor_temperature.png"
@@ -845,15 +888,19 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 <p>Smart Home 3d : Control your home like a Video Game served from your local pi. See your 3d rooms model real time colored with your temperature sensor.
-  </div>
+    </div>
   
-  
-  
-  
-   
-    <div class="grid-child card markdown-inner" data-tags="Network" data-width="300" >
-      <h2 class="card-title text-center">Zigbee</h2>
-    <div class="text-center">
+    
+    
+    
+     
+      <div  class="card markdown-inner" 
+            data-tags="Network" 
+            data-width="300"
+            data-height="150"
+            >
+        <h2>Zigbee</h2>
+      <div class="text-center">
   <a >
     <img
     src="/images/zigbee.png"
@@ -875,15 +922,19 @@ https://github.com/alex-shpak/hugo-book
 <p>References for deeper dive in the Zigbee standard</p>
 <p>References for DIY coordinators and software</p>
 
-  </div>
+    </div>
   
-  
-  
-  
-   
-    <div class="grid-child card markdown-inner" data-tags="Network" data-width="300" >
-      <h2 class="card-title text-center">Thread</h2>
-    <div class="text-center">
+    
+    
+    
+     
+      <div  class="card markdown-inner" 
+            data-tags="Network" 
+            data-width="300"
+            data-height="150"
+            >
+        <h2>Thread</h2>
+      <div class="text-center">
   <a >
     <img
     src="/images/threadgrouplogo.ico"
@@ -904,15 +955,19 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 
-  </div>
+    </div>
   
-  
-  
-  
-   
-    <div class="grid-child card markdown-inner" data-tags="Network" data-width="600" >
-      <h2 class="card-title text-center">Zigbee Wifi Channels</h2>
-    <div class="text-center">
+    
+    
+    
+     
+      <div  class="card markdown-inner" 
+            data-tags="Network" 
+            data-width="600"
+            data-height="150"
+            >
+        <h2>Zigbee Wifi Channels</h2>
+      <div class="text-center">
   <a >
     <img
     src="/images/networks_deployment.png"
@@ -924,15 +979,19 @@ https://github.com/alex-shpak/hugo-book
   </a>
 </div>
 
-  </div>
+    </div>
   
-  
-  
-  
-   
-    <div class="grid-child card markdown-inner" data-tags="Frameworks" data-width="150" >
-      <h2 class="card-title text-center">Home Assistant</h2>
-    <div class="text-center">
+    
+    
+    
+     
+      <div  class="card markdown-inner" 
+            data-tags="Frameworks" 
+            data-width="150"
+            data-height="150"
+            >
+        <h2>Home Assistant</h2>
+      <div class="text-center">
   <a >
     <img
     src="/images/hassio.png"
@@ -951,15 +1010,19 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 
-  </div>
+    </div>
   
-  
-  
-  
-   
-    <div class="grid-child card markdown-inner" data-tags="Frameworks" data-width="150" >
-      <h2 class="card-title text-center">Open HAB</h2>
-    <div class="text-center">
+    
+    
+    
+     
+      <div  class="card markdown-inner" 
+            data-tags="Frameworks" 
+            data-width="150"
+            data-height="150"
+            >
+        <h2>Open HAB</h2>
+      <div class="text-center">
   <a >
     <img
     src="/images/openhab.png"
@@ -978,63 +1041,78 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 
-  </div>
+    </div>
   
 </div>
 <script type="module">
   import {defined} from "/js/web-js-utils.js"
   import {Grid} from "/js/grid.js"
-  function get_custom_div_props(){
-      return {
-          width:Math.round(Math.random()*200)+100,
-          height : Math.round(Math.random()*200)+100,
-          r : 150,
-          g : Math.round(Math.random()*155)+100,
-          b : Math.round(Math.random()*155)+100
-      }
-  }
-  let main_div = document.getElementById("grid-2a00875ce400bf70");
-  let grid = new Grid(main_div,main_div.getAttribute("data-slot"))
-  var items = main_div.childNodes;
-  for(let i=0; i<items.length; i++) {
-    let item = items[i]
-      if ((defined(item.hasAttribute)) && (item.classList.contains("grid-child"))) {
-        grid.set_div(item);
-      }
-  }
+  let grid_div = document.getElementById("grid-2a00875ce400bf70");
+  let grid = new Grid(grid_div);
+  grid_div.querySelectorAll(".card").forEach((item)=>{
+    grid.scale_card(item);
+  })
+  grid.apply()
 
   let buttons_bar = document.getElementById("buttons-2a00875ce400bf70");
 
-  let buttons = buttons_bar.getElementsByClassName("book-btn");
-  for(let i=0; i<buttons.length; i++) {
-    let button = buttons[i]
+  buttons_bar.querySelectorAll(".grid-button").forEach((button)=>{
     button.addEventListener("click",(e)=>{
-        let filter = e.target.getAttribute("data-filter")
-        let main_div = document.getElementById("grid-2a00875ce400bf70");
-        var items = main_div.getElementsByClassName("grid-child");
-        for(let i=0; i<items.length; i++) {
-          let item = items[i]
-          if(filter == "All"){
-            item.classList.remove("grid-hidden")
+        let filter = e.target.getAttribute("data-filter");
+        let grid_div = document.getElementById("grid-2a00875ce400bf70");
+
+        if(!e.shiftKey){
+          buttons_bar.querySelectorAll(".grid-button").forEach((button)=>{
+            button.classList.remove("selected")
+          });
+        }
+        
+        if(e.target.classList.contains("selected")){
+          if((e.shiftKey)){
+            e.target.classList.remove("selected")
+          }
+        }else{
+          e.target.classList.add("selected")
+        }
+
+
+        
+        let selection_list = []
+        buttons_bar.querySelectorAll(".grid-button").forEach((button)=>{
+            if(button.classList.contains("selected")){
+              selection_list.push(button.getAttribute("data-filter"));
+            }
+        });
+        if(selection_list.length == 0){
+          selection_list.push("All");
+          buttons_bar.querySelectorAll(".grid-button").forEach((button)=>{
+            if(button.getAttribute("data-filter") == "All"){
+              button.classList.add("selected");
+            }
+          });
+        }
+        
+        grid_div.querySelectorAll(".card").forEach((card)=>{
+          if(selection_list.includes("All")){
+            card.classList.remove("grid-hidden")
           }else{
-            if(item.hasAttribute("data-tags")){
-              if(item.getAttribute("data-tags").split(',').includes(filter)){
-                item.classList.remove("grid-hidden")
+            if(card.hasAttribute("data-tags")){
+              let tags_list = card.getAttribute("data-tags").split(',');
+              if(tags_list.some(r=>selection_list.includes(r))){
+                card.classList.remove("grid-hidden")
                 
               }else{
-                item.classList.add("grid-hidden")
+                card.classList.add("grid-hidden")
                 
               }
             }else{
-              item.classList.add("grid-hidden")
+              card.classList.add("grid-hidden")
               
             }
           }
-        }
+        })
     })
-  }
-
-  grid.apply()
+  })
 
 </script>
 

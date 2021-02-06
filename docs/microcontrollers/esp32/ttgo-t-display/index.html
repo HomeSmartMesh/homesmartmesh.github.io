@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.0f40b4e83b0db00d11c595295e7f5f85f51436d20a5b6790534cb30c9f46a201.css" integrity="sha256-D0C06DsNsA0RxZUpXn9fhfUUNtIKW2eQU0yzDJ9GogE=">
-<script defer src="/en.search.min.f5935dcbec14452307992aba4cb0163cda864f8ff450ca8bb013e199efdc735d.js" integrity="sha256-9ZNdy&#43;wURSMHmSq6TLAWPNqGT4/0UMqLsBPhme/cc10="></script>
+<script defer src="/en.search.min.f7861eb12b497895cd3bc7f969b7f146b927d209c6cb96327c02bb713447d378.js" integrity="sha256-94YesStJeJXNO8f5abfxRrkn0gnGy5YyfAK7cTRH03g="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -731,16 +731,10 @@ https://github.com/alex-shpak/hugo-book
   Example Code
   <a class="anchor" href="#example-code">#</a>
 </h3>
-
-<div class="book-expand">
-  <label>
-    <div class="book-expand-head flex justify-between">
-      <span>click to expand the example code...</span>
-      <span>↕</span>
-    </div>
-    <input type="checkbox" class="hidden" />
-    <div class="book-expand-content markdown-inner">
-      <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Arduino.h&gt;</span><span style="color:#75715e">
+<details >
+  <summary>click to expand the example code...</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Arduino.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;TFT_eSPI.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;SPI.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;GfxUi.h&#34;</span><span style="color:#75715e">
@@ -770,9 +764,8 @@ GfxUi ui <span style="color:#f92672">=</span> GfxUi(<span style="color:#f92672">
 
 }
 </code></pre></div>
-    </div>
-  </label>
-</div>
+  </div>
+</details>
 
 <h2 id="3d-printed-case">
   3D printed case
@@ -900,16 +893,10 @@ GfxUi ui <span style="color:#f92672">=</span> GfxUi(<span style="color:#f92672">
 <li>Json payload</li>
 <li>LCD Graphics splash screen</li>
 </ul>
-
-<div class="book-expand">
-  <label>
-    <div class="book-expand-head flex justify-between">
-      <span>Build info</span>
-      <span>...</span>
-    </div>
-    <input type="checkbox" class="hidden" />
-    <div class="book-expand-content markdown-inner">
-      <pre><code class="language-log" data-lang="log">PACKAGES:
+<details >
+  <summary>Build info</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-log" data-lang="log">PACKAGES:
  - framework-arduinoespressif32 3.10004.201016 (1.0.4)
  - tool-esptoolpy 1.30000.201119 (3.0.0)
  - toolchain-xtensa32 2.50200.80 (5.2.0)
@@ -939,9 +926,8 @@ Dependency Graph
 |-- &lt;Wire&gt; 1.0.1
 |-- &lt;Button2&gt;
 </code></pre>
-    </div>
-  </label>
-</div>
+  </div>
+</details>
 
 </article>
  

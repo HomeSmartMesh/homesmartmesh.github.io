@@ -1,31 +1,19 @@
 
-import {html,css,suid} from "/js/web-js-utils.js"
+import {css,suid} from "/js/web-js-utils.js"
 
 //restricting to a singleton (one instance), for easier parents retriaval
 let that = null
 
-function scale_grid(parent,sheet,props){
-    const id = `div_${suid()}`;
-
+function scale_grid(element,sheet){
+    const id = element.id;
+    let grid_side = element.getAttribute("data-side-min")
     sheet.insertRule(/*css*/`
     #${id} {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(${props.grid_side}px, 1fr));
-        grid-gap: 10px;
-        align-items: top;
-        justify-items: top;
+        grid-template-columns: repeat(auto-fit, minmax(${grid_side}px, 1fr));
     }
     `);
-    let comp = html(parent,/*html*/`
-        <div    id=${id} 
-                class="main" 
-                data-side-min=${props.grid_side} 
-                data-max-sides=${props.max_sides} 
-                data-scale="1" 
-        />
-    `);
-    comp.addEventListener('wheel',onWheel);
-    return comp;
+    element.addEventListener('wheel',onWheel);
+    return element;
 }
 
 
@@ -34,8 +22,8 @@ function onWheel(e){
         return;
     }
     console.log(`wheel on ${e.target.tagName} : ${e.target.id}`)
-    let main_element = that.main_div
-    let scale = main_element.getAttribute("data-scale");
+    let grid_div = that.grid_div
+    let scale = grid_div.getAttribute("data-scale");
     const min_scale = 0.5;
     const max_scale = 2;
     if(e.deltaY > 0){
@@ -48,12 +36,12 @@ function onWheel(e){
     }else if(scale < min_scale){
         scale = min_scale;
     }
-    main_element.setAttribute("data-scale",scale.toFixed(2));
+    grid_div.setAttribute("data-scale",scale.toFixed(2));
     console.log(`scale = ${scale}`);
-    const elements = main_element.children;
-    const min_width = Math.round(main_element.getAttribute("data-side-min") * scale);
-    //console.log(`id = ${main_element.id} ; min width= '${min_width}'`);
-    main_element.style.gridTemplateColumns = `repeat(auto-fit, minmax(${min_width}px, 1fr))`;
+    const elements = grid_div.children;
+    const min_width = Math.round(grid_div.getAttribute("data-side-min") * scale);
+    //console.log(`id = ${grid_div.id} ; min width= '${min_width}'`);
+    grid_div.style.gridTemplateColumns = `repeat(auto-fit, minmax(${min_width}px, 1fr))`;
     for(let i=0;i<elements.length;i++){
         const element = elements[i];
         element.style.width = element.getAttribute("data-width") * scale;
@@ -66,64 +54,27 @@ function onWheel(e){
 class Grid{
     /**
      * 
-     * @param {*} parent : parent element
-     * @param {*} grid_side : slots unit to be used for the grid
-     * @param {*} max_sides : max number of slots that an element can take, still only 2 is supported
+     * @param {*} element : already created grid element
      */
-    constructor(parent,grid_side,max_sides=2){
+    constructor(element){
         this.sheet = new CSSStyleSheet()
-        this.main_div = scale_grid(parent,this.sheet,{grid_side:grid_side,max_sides:max_sides});
-        //console.log(JSON.stringify(this.main_div))
+        this.grid_div = scale_grid(element,this.sheet);
+        //console.log(JSON.stringify(this.grid_div))
         that = this
     }
 
-    get_div(props){
-        let parent = this.main_div
-        const side_size = parent.getAttribute("data-side-min");
-        const max_nb_sides = parent.getAttribute("data-max-sides");
-        const width = props.width;
-        const height = props.height;
-        const id = `div_${suid()}`;
-        const width_span = Math.ceil(width/side_size);
-        const height_span = Math.ceil(height/side_size);
-        css(this.sheet,/*css*/`
-        #${id} {
-            width:${width};
-            grid-column:span ${width_span};
-            grid-row:span ${height_span};
-            height:${height};
-            background: rgb(${props.r},${props.g},${props.b});
-            //align-self: center;
-            //justify-self: center;
-        }
-        `);
-        let c_comp = html(parent,/*html*/`
-            <div id=${id} class="child" data-width=${width} data-height=${height} />
-        `);
-        c_comp.addEventListener('wheel',onWheel);
-        return c_comp;
-    }
-
-    set_div(div){
-        let parent = this.main_div
-        parent.appendChild(div)
-        const side_size = parent.getAttribute("data-side-min");
+    scale_card(div){
+        const side_size = this.grid_div.getAttribute("data-side-min");
         let width = div.getAttribute("data-width");
-        let height = 150;
-        div.setAttribute("data-height",height);
+        let height = div.getAttribute("data-height");
         const id = `div_${suid()}`;
         div.id = id;
         const width_span = Math.ceil(width/side_size);
         const height_span = Math.ceil(height/side_size);
         css(this.sheet,/*css*/`
         #${id} {
-            width:${width};
             grid-column:span ${width_span};
             grid-row:span ${height_span};
-            height:${height};
-            background: rgb(48,54,60);
-            align-self: top;
-            justify-self: top;
         }
         `);
         div.addEventListener('wheel',onWheel);
@@ -137,7 +88,7 @@ class Grid{
         element.style.width = width;
         element.style.height = height;
 
-        const side_size = this.main_div.getAttribute("data-side-min");
+        const side_size = this.grid_div.getAttribute("data-side-min");
         const width_span = Math.ceil(width/side_size);
         const height_span = Math.ceil(height/side_size);
         element.style.gridColumn = `span ${width_span}`;
