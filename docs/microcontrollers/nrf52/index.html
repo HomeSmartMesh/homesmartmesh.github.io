@@ -5,7 +5,7 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="nRF52840 Dongle# nRF52840 ARM M4 64 MHz 1024 KB ROM - 256 KB RAM Bluetooth 5, Mesh 802.15.4, Thread, Zigbee USB 2 Product Page  Applications  custom mesh coordinator    nRF52823 UART# nRF52832 ARM M4 64 MHz 512 KB ROM - 64 KB RAM Bluetooth Low Energy, mesh  Application  custom mesh to coordinator    ">
+<meta name="description" content="AllBoardnRF52840 Dongle nRF52840 ARM M4 64 MHz 1024 KB ROM - 256 KB RAM Bluetooth 5, Mesh 802.15.4, Thread, Zigbee USB 2 Product Page  Application custom mesh coordinatornRF52823 UART nRF52832 ARM M4 64 MHz 512 KB ROM - 64 KB RAM Bluetooth Low Energy, mesh  Application custom mesh coordinatorimport {defined} from &#34;">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="nRF52" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
@@ -14,8 +14,8 @@
 <title>nRF52 | Home Smart Mesh</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.0f40b4e83b0db00d11c595295e7f5f85f51436d20a5b6790534cb30c9f46a201.css" integrity="sha256-D0C06DsNsA0RxZUpXn9fhfUUNtIKW2eQU0yzDJ9GogE=">
-<script defer src="/en.search.min.0d61875ad172546ec57114803f37cb263636132d34cd0814ad27af531bb9926d.js" integrity="sha256-DWGHWtFyVG7FcRSAPzfLJjY2Ey00zQgUrSevUxu5km0="></script>
+<link rel="stylesheet" href="/book.min.dec40e7bd0b3dd429b50ea978ea7613d3965b4718e14c60ed1912ca4f6685d4f.css" integrity="sha256-3sQOe9Cz3UKbUOqXjqdhPTlltHGOFMYO0ZEspPZoXU8=">
+<script defer src="/en.search.min.0eb6a6adcce9357eafe09c8c97855b1289691f736a4dd9fae5af8258db098782.js" integrity="sha256-DramrczpNX6v4JyMl4VbEolpH3NqTdn65a&#43;CWNsJh4I="></script>
 <link rel="alternate" type="application/rss+xml" href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/index.xml" title="Home Smart Mesh" />
 <!--
 Made with Book Theme
@@ -670,10 +670,10 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#nrf52840-dongle">nRF52840 Dongle</a>
       <ul>
-        <li><a href="#nrf52840-dongle">nRF52840 Dongle</a></li>
-        <li><a href="#nrf52823-uart">nRF52823 UART</a></li>
+        <li><a href="#serial-wire-debug-pinout">Serial wire debug pinout</a></li>
+        <li><a href="#pogo-pin-adapter">pogo pin adapter</a></li>
       </ul>
     </li>
   </ul>
@@ -687,14 +687,61 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h2 id="nrf52840-dongle">
-  nRF52840 Dongle
-  <a class="anchor" href="#nrf52840-dongle">#</a>
-</h2>
-<div class="book-columns flex flex-wrap">
+  <article class="markdown">
+
+
+<link rel="stylesheet" href="/css/grid.css" />
+<script src="/js/grid.js" type="module"></script>
+
+<div class="container ml-auto text-center">
+  <div class="btn-group flex-wrap grid-buttons-bar" role="group" id="buttons-72ed4a008387cdfb" data-selection="">
+    
+    <a  type="button" 
+        class="book-btn grid-button selected" 
+        data-filter="All"
+      >
+      All
+    </a>
+    
+    <a  type="button" 
+        class="book-btn grid-button " 
+        data-filter="Board"
+      >
+      Board
+    </a>
+    
+  </div>
+</div>
+<div  id="grid-72ed4a008387cdfb" 
+      class="grid"
+      data-scale="1"
+      data-side-min="300" 
+      >
+   
+   
   
-  <div class="flex-even markdown-inner">
-    <ul>
+    
+    
+    
+     
+      <div  class="card markdown-inner" 
+            data-tags="Board,USB" 
+            data-width="200"
+            data-height="150"
+            >
+        <h2>nRF52840 Dongle</h2>
+      <div class="text-center">
+  <a >
+    <img
+    src="/images/nRF52840-Dongle.jpg"
+    alt=""
+    width="300"
+    height=""
+    decoding="async"
+  />
+  </a>
+</div>
+<ul>
 <li><a href="https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52840">nRF52840</a></li>
 <li>ARM M4 64 MHz</li>
 <li>1024 KB ROM - 256 KB RAM</li>
@@ -703,48 +750,196 @@ https://github.com/alex-shpak/hugo-book
 <li>USB 2</li>
 <li><a href="https://www.nordicsemi.com/Software-and-tools/Development-Kits/nRF52840-Dongle/GetStarted">Product Page</a></li>
 </ul>
-<h3 id="applications">Applications</h3>
-<ul>
-<li><a href="https://github.com/nRFMesh/nRF52_Mesh#08-usb-dongle-nrf52840-dongle">custom mesh coordinator</a></li>
-</ul>
-
-  </div>
-  
-  <div class="flex-even markdown-inner">
-    <figure>
-    <img src="/images/nRF52840-Dongle.jpg" width="300"/> 
-</figure>
-
-  </div>
-  
+<h3 id="application">Application</h3>
+<div class="col text-center">
+<a  href="/docs/networks/nrf/#08-usb-dongle-nrf52840-dongle"   class="book-btn">
+  custom mesh coordinator
+</a>
 </div>
 
-<h2 id="nrf52823-uart">
-  nRF52823 UART
-  <a class="anchor" href="#nrf52823-uart">#</a>
-</h2>
-<div class="book-columns flex flex-wrap">
+    </div>
   
-  <div class="flex-even markdown-inner">
-    <ul>
+    
+    
+    
+     
+      <div  class="card markdown-inner" 
+            data-tags="Board,UART" 
+            data-width="200"
+            data-height="150"
+            >
+        <h2>nRF52823 UART</h2>
+      <div class="text-center">
+  <a >
+    <img
+    src="/images/nRF52-uart.png"
+    alt=""
+    width="200"
+    height=""
+    decoding="async"
+  />
+  </a>
+</div>
+<ul>
 <li><a href="https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52832">nRF52832</a></li>
 <li>ARM M4 64 MHz</li>
 <li>512 KB ROM - 64 KB RAM</li>
 <li>Bluetooth Low Energy, mesh</li>
 </ul>
 <h3 id="application">Application</h3>
-<ul>
-<li><a href="https://github.com/nRFMesh/nRF52_Mesh#04-uart-dongle">custom mesh to coordinator</a></li>
-</ul>
+<div class="col text-center">
+<a  href="/docs/networks/nrf/#04-uart-dongle"   class="book-btn">
+  custom mesh coordinator
+</a>
+</div>
 
-  </div>
+    </div>
   
-  <div class="flex-even markdown-inner">
-    <figure>
-    <img src="/images/nRF52-uart.png" width="200"/> 
-</figure>
+</div>
+<script type="module">
+  import {defined} from "/js/web-js-utils.js"
+  import {Grid} from "/js/grid.js"
+  let grid_div = document.getElementById("grid-72ed4a008387cdfb");
+  let grid = new Grid(grid_div);
+  grid_div.querySelectorAll(".card").forEach((item)=>{
+    grid.scale_card(item);
+  })
+  grid.apply()
 
-  </div>
+  let buttons_bar = document.getElementById("buttons-72ed4a008387cdfb");
+
+  buttons_bar.querySelectorAll(".grid-button").forEach((button)=>{
+    button.addEventListener("click",(e)=>{
+        let filter = e.target.getAttribute("data-filter");
+        let grid_div = document.getElementById("grid-72ed4a008387cdfb");
+
+        if(!e.shiftKey){
+          buttons_bar.querySelectorAll(".grid-button").forEach((button)=>{
+            button.classList.remove("selected")
+          });
+        }
+        
+        if(e.target.classList.contains("selected")){
+          if((e.shiftKey)){
+            e.target.classList.remove("selected")
+          }
+        }else{
+          e.target.classList.add("selected")
+        }
+
+
+        
+        let selection_list = []
+        buttons_bar.querySelectorAll(".grid-button").forEach((button)=>{
+            if(button.classList.contains("selected")){
+              selection_list.push(button.getAttribute("data-filter"));
+            }
+        });
+        if(selection_list.length == 0){
+          selection_list.push("All");
+          buttons_bar.querySelectorAll(".grid-button").forEach((button)=>{
+            if(button.getAttribute("data-filter") == "All"){
+              button.classList.add("selected");
+            }
+          });
+        }
+        
+        grid_div.querySelectorAll(".card").forEach((card)=>{
+          if(selection_list.includes("All")){
+            card.classList.remove("grid-hidden")
+          }else{
+            if(card.hasAttribute("data-tags")){
+              let tags_list = card.getAttribute("data-tags").split(',');
+              if(tags_list.some(r=>selection_list.includes(r))){
+                card.classList.remove("grid-hidden")
+                
+              }else{
+                card.classList.add("grid-hidden")
+                
+              }
+            }else{
+              card.classList.add("grid-hidden")
+              
+            }
+          }
+        })
+    })
+  })
+
+</script>
+
+<h1 id="nrf52840-dongle">
+  nRF52840 Dongle
+  <a class="anchor" href="#nrf52840-dongle">#</a>
+</h1>
+<h2 id="serial-wire-debug-pinout">
+  Serial wire debug pinout
+  <a class="anchor" href="#serial-wire-debug-pinout">#</a>
+</h2>
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/thread_sensortag/serial_wire_debug.png"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
+<h2 id="pogo-pin-adapter">
+  pogo pin adapter
+  <a class="anchor" href="#pogo-pin-adapter">#</a>
+</h2>
+
+
+
+
+<div >
+    <model-viewer 
+        id="692c20da07937056"
+        src="/models/nrf/pogo_adapter_swd.glb"
+        style="width:100%;height: 400px; "
+        exposure="0.2"
+        auto-rotate camera-controls >
+    </model-viewer>
+</div>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://www.homesmartmesh.com/models/nrf/nRF52840_usb_pogo_top.zip" role="button" target="_blank">Download STL models zip</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/thread_sensortag/pogo_pin_adapter.png"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
   
 </div>
 
@@ -782,10 +977,10 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#nrf52840-dongle">nRF52840 Dongle</a>
       <ul>
-        <li><a href="#nrf52840-dongle">nRF52840 Dongle</a></li>
-        <li><a href="#nrf52823-uart">nRF52823 UART</a></li>
+        <li><a href="#serial-wire-debug-pinout">Serial wire debug pinout</a></li>
+        <li><a href="#pogo-pin-adapter">pogo pin adapter</a></li>
       </ul>
     </li>
   </ul>

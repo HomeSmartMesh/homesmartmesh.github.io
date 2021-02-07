@@ -5,9 +5,11 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Repo#schematics 07/02/2021 commit fe9999Components Consumption#Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-72f656aff13f2aff&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-72f656aff13f2aff&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};Schematics#Full Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.">
+<meta name="description" content="Concept#The Thread sensorTag is based on an nRF52840 which is integrated inside an ISP1807. On the tag, the used sensors are the BME280 for Temperature, Humidity, Pressure and
+nRF52840ISP1807BME280MAX44009Repo#schematics 07/02/2021 commit fe9999Components Consumption#Full screenOpen in a new pagevar button = document.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Thread SensorTag" />
-<meta property="og:description" content="Repo#schematics 07/02/2021 commit fe9999Components Consumption#Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-72f656aff13f2aff&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-72f656aff13f2aff&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};Schematics#Full Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0." />
+<meta property="og:description" content="Concept#The Thread sensorTag is based on an nRF52840 which is integrated inside an ISP1807. On the tag, the used sensors are the BME280 for Temperature, Humidity, Pressure and
+nRF52840ISP1807BME280MAX44009Repo#schematics 07/02/2021 commit fe9999Components Consumption#Full screenOpen in a new pagevar button = document." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.homesmartmesh.com/docs/frameworks/thread_sensortag/" />
 <meta property="article:published_time" content="2021-02-07T08:48:57+00:00" />
@@ -15,8 +17,8 @@
 <title>Thread SensorTag | Home Smart Mesh</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.0f40b4e83b0db00d11c595295e7f5f85f51436d20a5b6790534cb30c9f46a201.css" integrity="sha256-D0C06DsNsA0RxZUpXn9fhfUUNtIKW2eQU0yzDJ9GogE=">
-<script defer src="/en.search.min.0d61875ad172546ec57114803f37cb263636132d34cd0814ad27af531bb9926d.js" integrity="sha256-DWGHWtFyVG7FcRSAPzfLJjY2Ey00zQgUrSevUxu5km0="></script>
+<link rel="stylesheet" href="/book.min.dec40e7bd0b3dd429b50ea978ea7613d3965b4718e14c60ed1912ca4f6685d4f.css" integrity="sha256-3sQOe9Cz3UKbUOqXjqdhPTlltHGOFMYO0ZEspPZoXU8=">
+<script defer src="/en.search.min.0eb6a6adcce9357eafe09c8c97855b1289691f736a4dd9fae5af8258db098782.js" integrity="sha256-DramrczpNX6v4JyMl4VbEolpH3NqTdn65a&#43;CWNsJh4I="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -670,11 +672,17 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
+    <li><a href="#concept">Concept</a></li>
     <li><a href="#repo">Repo</a></li>
     <li><a href="#components-consumption">Components Consumption</a></li>
     <li><a href="#schematics">Schematics</a></li>
     <li><a href="#board">Board</a></li>
     <li><a href="#3d-board-model">3D Board model</a></li>
+    <li><a href="#firmware">Firmware</a>
+      <ul>
+        <li><a href="#breadboard-testing">Breadboard testing</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -686,7 +694,67 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="repo">
+  <article class="markdown"><h1 id="concept">
+  Concept
+  <a class="anchor" href="#concept">#</a>
+</h1>
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/thread_sensortag/concept.png"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
+<p>The Thread sensorTag is based on an <code>nRF52840</code> which is integrated inside an <code>ISP1807</code>. On the tag, the used sensors are the <code>BME280</code> for Temperature, Humidity, Pressure and</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52840" role="button" target="_blank">nRF52840</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://www.insightsip.com/products/bluetooth-smart-modules/isp1807" role="button" target="_blank">ISP1807</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://www.bosch-sensortec.com/products/environmental-sensors/humidity-sensors-bme280/" role="button" target="_blank">BME280</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://www.maximintegrated.com/en/products/interface/sensor-interface/MAX44009.html" role="button" target="_blank">MAX44009</a>
+        </div>
+    </div>
+</div>
+
+<h1 id="repo">
   Repo
   <a class="anchor" href="#repo">#</a>
 </h1>
@@ -858,6 +926,33 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+<h1 id="firmware">
+  Firmware
+  <a class="anchor" href="#firmware">#</a>
+</h1>
+<h2 id="breadboard-testing">
+  Breadboard testing
+  <a class="anchor" href="#breadboard-testing">#</a>
+</h2>
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/thread_sensortag/breadboard_test.png"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
 </article>
  
       
@@ -892,11 +987,17 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
+    <li><a href="#concept">Concept</a></li>
     <li><a href="#repo">Repo</a></li>
     <li><a href="#components-consumption">Components Consumption</a></li>
     <li><a href="#schematics">Schematics</a></li>
     <li><a href="#board">Board</a></li>
     <li><a href="#3d-board-model">3D Board model</a></li>
+    <li><a href="#firmware">Firmware</a>
+      <ul>
+        <li><a href="#breadboard-testing">Breadboard testing</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
