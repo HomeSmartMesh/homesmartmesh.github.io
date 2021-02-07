@@ -74,6 +74,15 @@ Final application#This repository has boilerplates samples. A real use case e
     </item>
     
     <item>
+      <title>Thread SensorTag</title>
+      <link>https://www.homesmartmesh.com/docs/frameworks/thread_sensortag/</link>
+      <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/frameworks/thread_sensortag/</guid>
+      <description>Repo#schematics 07/02/2021 commit fe9999Components Consumption#Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-72f656aff13f2aff&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-72f656aff13f2aff&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};Schematics#Full Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.</description>
+    </item>
+    
+    <item>
       <title>Home 3D</title>
       <link>https://www.homesmartmesh.com/docs/applications/home3d/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
