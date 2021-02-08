@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.cfb348884ab1f8a1b7892d0e92bd51579d8206560f1f4938487faefb09446fcd.css" integrity="sha256-z7NIiEqx&#43;KG3iS0Okr1RV52CBlYPH0k4SH&#43;u&#43;wlEb80=">
-<script defer src="/en.search.min.661102935182499395a0105689d53a8e68c29ec2124e2e279592033a008e23d4.js" integrity="sha256-ZhECk1GCSZOVoBBWidU6jmjCnsISTi4nlZIDOgCOI9Q="></script>
+<script defer src="/en.search.min.d0b1f9ee58de2516d16765c18741bb6ad72a4139908f6e7ad4755ef4a33e1e70.js" integrity="sha256-0LH57ljeJRbRZ2XBh0G7atcqQTmQj2561HVe9KM&#43;HnA="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -674,11 +674,15 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#documentation">Documentation</a></li>
     <li><a href="#tools">Tools</a></li>
     <li><a href="#devices">devices</a></li>
-    <li><a href="#boarder-router">Boarder router</a>
+    <li><a href="#boarder-router">Boarder Router</a>
       <ul>
-        <li><a href="#ncp-for-nrf-service">ncp for nRF service</a></li>
-        <li><a href="#ncp-for-openthread-service">ncp for openthread service</a></li>
+        <li><a href="#nordic-firmware">Nordic Firmware</a></li>
+        <li><a href="#open-thread-firmware">Open Thread Firmware</a></li>
+        <li><a href="#nordic-raspi-ready-image">Nordic Raspi ready image</a></li>
+        <li><a href="#openthread-raspi-docker">OpenThread Raspi docker</a></li>
+        <li><a href="#form-a-network">Form a network</a></li>
         <li><a href="#wireshark-sniffing">wireshark sniffing</a></li>
+        <li><a href="#test-with-cli">test with cli</a></li>
       </ul>
     </li>
     <li><a href="#useful-commands">Useful commands</a>
@@ -875,33 +879,21 @@ https://github.com/alex-shpak/hugo-book
 </li>
 </ul>
 <h1 id="boarder-router">
-  Boarder router
+  Boarder Router
   <a class="anchor" href="#boarder-router">#</a>
 </h1>
-<h2 id="ncp-for-nrf-service">
-  ncp for nRF service
-  <a class="anchor" href="#ncp-for-nrf-service">#</a>
+<h2 id="nordic-firmware">
+  Nordic Firmware
+  <a class="anchor" href="#nordic-firmware">#</a>
 </h2>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a class="book-btn" href="https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK-for-Thread-and-Zigbee/Download#infotabs" role="button" target="_blank">Download the nRF5 SDK for Thread and Zigbee...</a>
-        </div>
-    </div>
-</div>
-
 <p>build and flash the ncp example</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;cd <span style="color:#e6db74">&#34;examples\thread\ncp\ftd\usb\pca10059\mbr\armgcc\Makefile&#34;</span>
 &gt;make
+&gt;make flash_mbr
 &gt;make flash
-</code></pre></div><ul>
-<li>connect the USB dongle with the ncp firmware on the raspberry pi</li>
-<li>on the raspberry pi run</li>
-</ul>
-<h2 id="ncp-for-openthread-service">
-  ncp for openthread service
-  <a class="anchor" href="#ncp-for-openthread-service">#</a>
+</code></pre></div><h2 id="open-thread-firmware">
+  Open Thread Firmware
+  <a class="anchor" href="#open-thread-firmware">#</a>
 </h2>
 
 <div class="container">
@@ -912,6 +904,28 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 
+<p>nrfjprog -f nrf52 &ndash;program ot-ncp-ftd-gd81d769e-nrf52840.hex &ndash;sectorerase</p>
+<p>nrfjprog -f nrf52 &ndash;chiperase &ndash;program ot-ncp-ftd-gd81d769e-nrf52840.hex &ndash;reset</p>
+<h2 id="nordic-raspi-ready-image">
+  Nordic Raspi ready image
+  <a class="anchor" href="#nordic-raspi-ready-image">#</a>
+</h2>
+<ul>
+<li>download a ready raspberry pi image</li>
+</ul>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK-for-Thread-and-Zigbee/Download#infotabs" role="button" target="_blank">Download the nRF5 SDK for Thread and Zigbee...</a>
+        </div>
+    </div>
+</div>
+
+<h2 id="openthread-raspi-docker">
+  OpenThread Raspi docker
+  <a class="anchor" href="#openthread-raspi-docker">#</a>
+</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run --sysctl <span style="color:#e6db74">&#34;net.ipv6.conf.all.disable_ipv6=0 \
 </span><span style="color:#e6db74">        net.ipv4.conf.all.forwarding=1 net.ipv6.conf.all.forwarding=1&#34;</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>        -p 8080:80 --dns<span style="color:#f92672">=</span>127.0.0.1 -it --volume <span style="color:#ae81ff">\
@@ -926,7 +940,11 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 
-<p>Upon success you should be able to connect on the raspberry pi url <code>http://10.0.0.53:8080/</code></p>
+<h2 id="form-a-network">
+  Form a network
+  <a class="anchor" href="#form-a-network">#</a>
+</h2>
+<p>Upon success you should be able to connect on the raspberry pi url <code>http://10.0.0.41/</code></p>
 
 
 
@@ -946,8 +964,9 @@ https://github.com/alex-shpak/hugo-book
   
 </div>
 
-<p>After trying forming a network and on not success such error might appear</p>
-<p>otbr-agent[196]: [CRIT]-PLAT&mdash;-: Init() at ../../third_party/openthread/repo/src/lib/spinel/radio_spinel_impl.hpp:255: RadioSpinelIncompatible</p>
+<ul>
+<li>on the left menu click on <code>Join</code> then select the required paramters (e.g. Channel,&hellip;) then click on <code>FORM</code></li>
+</ul>
 <h2 id="wireshark-sniffing">
   wireshark sniffing
   <a class="anchor" href="#wireshark-sniffing">#</a>
@@ -956,6 +975,85 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li>Flash the <code>nrf802154_sniffer_dongle.hex</code></li>
 </ul>
+<p>When Forming a network, some Pakets can be sniffed including advertisment</p>
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/thread_sensortag/wireshark_startup.png"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
+<h2 id="test-with-cli">
+  test with cli
+  <a class="anchor" href="#test-with-cli">#</a>
+</h2>
+<p>build and flash the cli example</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;cd <span style="color:#e6db74">&#34;examples\thread\cli\ftd\usb\pca10059\mbr\armgcc\Makefile&#34;</span>
+&gt;make
+&gt;make flash_mbr
+&gt;make flash
+</code></pre></div><p>on the cli</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;panid 0x1234
+&gt;panid
+&gt;channel <span style="color:#ae81ff">13</span>
+&gt;channel
+&gt;networkname OpenThreadDemo
+&gt;networkname
+&gt;extpanid <span style="color:#ae81ff">1111111122222222</span>
+&gt;masterkey
+&gt;ifconfig up
+&gt;thread start
+&gt;state
+</code></pre></div><p>Note <code>masterkey</code> command is for the <code>Network Key</code></p>
+<p>at this stage the <code>state</code> command should log <code>child</code></p>
+<p>wireshark should log the join as follows</p>
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/thread_sensortag/child_join.png"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
+<ul>
+<li>it&rsquo;s possible to ping with the router ip</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;ping fe80::c85c:d0c4:1103:31d5
+Done
+&gt; <span style="color:#ae81ff">16</span> bytes from fe80:0:0:0:c85c:d0c4:1103:31d5: icmp_seq<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span> hlim<span style="color:#f92672">=</span><span style="color:#ae81ff">64</span> time<span style="color:#f92672">=</span>12ms
+</code></pre></div><p>a good exercice is to commition a device through CLI</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://openthread.io/guides/border-router/external-commissioning" role="button" target="_blank">External commitioning...</a>
+        </div>
+    </div>
+</div>
+
 <h1 id="useful-commands">
   Useful commands
   <a class="anchor" href="#useful-commands">#</a>
@@ -1064,11 +1162,15 @@ ping fd00:0064:0123:4567::0808:0808
     <li><a href="#documentation">Documentation</a></li>
     <li><a href="#tools">Tools</a></li>
     <li><a href="#devices">devices</a></li>
-    <li><a href="#boarder-router">Boarder router</a>
+    <li><a href="#boarder-router">Boarder Router</a>
       <ul>
-        <li><a href="#ncp-for-nrf-service">ncp for nRF service</a></li>
-        <li><a href="#ncp-for-openthread-service">ncp for openthread service</a></li>
+        <li><a href="#nordic-firmware">Nordic Firmware</a></li>
+        <li><a href="#open-thread-firmware">Open Thread Firmware</a></li>
+        <li><a href="#nordic-raspi-ready-image">Nordic Raspi ready image</a></li>
+        <li><a href="#openthread-raspi-docker">OpenThread Raspi docker</a></li>
+        <li><a href="#form-a-network">Form a network</a></li>
         <li><a href="#wireshark-sniffing">wireshark sniffing</a></li>
+        <li><a href="#test-with-cli">test with cli</a></li>
       </ul>
     </li>
     <li><a href="#useful-commands">Useful commands</a>
