@@ -15,8 +15,8 @@
 <title>Thread | Home Smart Mesh</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.dec40e7bd0b3dd429b50ea978ea7613d3965b4718e14c60ed1912ca4f6685d4f.css" integrity="sha256-3sQOe9Cz3UKbUOqXjqdhPTlltHGOFMYO0ZEspPZoXU8=">
-<script defer src="/en.search.min.0eb6a6adcce9357eafe09c8c97855b1289691f736a4dd9fae5af8258db098782.js" integrity="sha256-DramrczpNX6v4JyMl4VbEolpH3NqTdn65a&#43;CWNsJh4I="></script>
+<link rel="stylesheet" href="/book.min.cfb348884ab1f8a1b7892d0e92bd51579d8206560f1f4938487faefb09446fcd.css" integrity="sha256-z7NIiEqx&#43;KG3iS0Okr1RV52CBlYPH0k4SH&#43;u&#43;wlEb80=">
+<script defer src="/en.search.min.661102935182499395a0105689d53a8e68c29ec2124e2e279592033a008e23d4.js" integrity="sha256-ZhECk1GCSZOVoBBWidU6jmjCnsISTi4nlZIDOgCOI9Q="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -671,9 +671,19 @@ https://github.com/alex-shpak/hugo-book
   <nav id="TableOfContents">
   <ul>
     <li><a href="#concepts">Concepts</a></li>
+    <li><a href="#documentation">Documentation</a></li>
+    <li><a href="#tools">Tools</a></li>
     <li><a href="#devices">devices</a></li>
+    <li><a href="#boarder-router">Boarder router</a>
+      <ul>
+        <li><a href="#ncp-for-nrf-service">ncp for nRF service</a></li>
+        <li><a href="#ncp-for-openthread-service">ncp for openthread service</a></li>
+        <li><a href="#wireshark-sniffing">wireshark sniffing</a></li>
+      </ul>
+    </li>
     <li><a href="#useful-commands">Useful commands</a>
       <ul>
+        <li><a href="#flash">flash</a></li>
         <li><a href="#cli-reference">cli reference</a></li>
       </ul>
     </li>
@@ -781,6 +791,68 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 
+<h1 id="documentation">
+  Documentation
+  <a class="anchor" href="#documentation">#</a>
+</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://www.threadgroup.org/ThreadSpec" role="button" target="_blank">request the specification...</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://infocenter.nordicsemi.com/topic/struct_sdk/struct/sdk_thread_zigbee_latest.html" role="button" target="_blank">nRF SDK for Thread and Zigbee v4.1.0...</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK-for-Thread-and-Zigbee/Download#infotabs" role="button" target="_blank">download the SDK</a>
+        </div>
+    </div>
+</div>
+
+<h1 id="tools">
+  Tools
+  <a class="anchor" href="#tools">#</a>
+</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Connect-for-desktop/Download#infotabs" role="button" target="_blank">nRF Connect for desktop...</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Command-Line-Tools/Download#infotabs" role="button" target="_blank">nRF Command Line Tools...</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads/7-2018-q2-update" role="button" target="_blank">GNU Arm Embedded Toolchain v7-2018-q2</a>
+        </div>
+    </div>
+</div>
+
 <h1 id="devices">
   devices
   <a class="anchor" href="#devices">#</a>
@@ -802,11 +874,98 @@ https://github.com/alex-shpak/hugo-book
 <p><a href="https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Sniffer-for-Bluetooth-LE">Wireshark sniffer</a> : dongle that captures all frames and shows them on wireshark</p>
 </li>
 </ul>
+<h1 id="boarder-router">
+  Boarder router
+  <a class="anchor" href="#boarder-router">#</a>
+</h1>
+<h2 id="ncp-for-nrf-service">
+  ncp for nRF service
+  <a class="anchor" href="#ncp-for-nrf-service">#</a>
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK-for-Thread-and-Zigbee/Download#infotabs" role="button" target="_blank">Download the nRF5 SDK for Thread and Zigbee...</a>
+        </div>
+    </div>
+</div>
+
+<p>build and flash the ncp example</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;cd <span style="color:#e6db74">&#34;examples\thread\ncp\ftd\usb\pca10059\mbr\armgcc\Makefile&#34;</span>
+&gt;make
+&gt;make flash
+</code></pre></div><ul>
+<li>connect the USB dongle with the ncp firmware on the raspberry pi</li>
+<li>on the raspberry pi run</li>
+</ul>
+<h2 id="ncp-for-openthread-service">
+  ncp for openthread service
+  <a class="anchor" href="#ncp-for-openthread-service">#</a>
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://openthread.io/platforms/co-processor/firmware#download_nrf52840_firmware_image" role="button" target="_blank">nRF52840 ncp firmare...</a>
+        </div>
+    </div>
+</div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run --sysctl <span style="color:#e6db74">&#34;net.ipv6.conf.all.disable_ipv6=0 \
+</span><span style="color:#e6db74">        net.ipv4.conf.all.forwarding=1 net.ipv6.conf.all.forwarding=1&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        -p 8080:80 --dns<span style="color:#f92672">=</span>127.0.0.1 -it --volume <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        /dev/ttyACM0:/dev/ttyACM0 --privileged openthread/otbr <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        --radio-url spinel+hdlc+uart:///dev/ttyACM0
+</code></pre></div>
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://openthread.io/guides/border-router/docker/run" role="button" target="_blank">More details on &#39;Run OTBR Docker&#39;...</a>
+        </div>
+    </div>
+</div>
+
+<p>Upon success you should be able to connect on the raspberry pi url <code>http://10.0.0.53:8080/</code></p>
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/thread_sensortag/OTBR_server.png"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
+<p>After trying forming a network and on not success such error might appear</p>
+<p>otbr-agent[196]: [CRIT]-PLAT&mdash;-: Init() at ../../third_party/openthread/repo/src/lib/spinel/radio_spinel_impl.hpp:255: RadioSpinelIncompatible</p>
+<h2 id="wireshark-sniffing">
+  wireshark sniffing
+  <a class="anchor" href="#wireshark-sniffing">#</a>
+</h2>
+<p>git clone <a href="https://github.com/NordicSemiconductor/nRF-Sniffer-for-802.15.4">https://github.com/NordicSemiconductor/nRF-Sniffer-for-802.15.4</a></p>
+<ul>
+<li>Flash the <code>nrf802154_sniffer_dongle.hex</code></li>
+</ul>
 <h1 id="useful-commands">
   Useful commands
   <a class="anchor" href="#useful-commands">#</a>
 </h1>
-<details >
+<h2 id="flash">
+  flash
+  <a class="anchor" href="#flash">#</a>
+</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">nrfjprog -f NRF52 --chiperase --program &lt;path to the hex file&gt; --reset
+</code></pre></div><details >
   <summary>host wpantund wpanctl. Click to expand...</summary>
   <div class="markdown-inner">
     <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo nano /etc/wpantund.conf
@@ -902,9 +1061,19 @@ ping fd00:0064:0123:4567::0808:0808
   <nav id="TableOfContents">
   <ul>
     <li><a href="#concepts">Concepts</a></li>
+    <li><a href="#documentation">Documentation</a></li>
+    <li><a href="#tools">Tools</a></li>
     <li><a href="#devices">devices</a></li>
+    <li><a href="#boarder-router">Boarder router</a>
+      <ul>
+        <li><a href="#ncp-for-nrf-service">ncp for nRF service</a></li>
+        <li><a href="#ncp-for-openthread-service">ncp for openthread service</a></li>
+        <li><a href="#wireshark-sniffing">wireshark sniffing</a></li>
+      </ul>
+    </li>
     <li><a href="#useful-commands">Useful commands</a>
       <ul>
+        <li><a href="#flash">flash</a></li>
         <li><a href="#cli-reference">cli reference</a></li>
       </ul>
     </li>
