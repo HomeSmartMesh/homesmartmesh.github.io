@@ -5,6 +5,16 @@
     <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/</link>
     <description>Recent content in nRF52 on Home Smart Mesh</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Feb 2021 08:48:57 +0000</lastBuildDate><atom:link href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Thread SensorTag</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</link>
+      <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</guid>
+      <description>v1.0 MS8607 VEML6030#commitnRF52840MS88SF2MS86072VEML6030Schematics#Full Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.6,minZoom: 0.5,maxZoom: 4,fit: true, contain: true, center: true, refreshRate: &#39;auto&#39;};let svg_pz = svgPanZoom(&#39;#svg-5e84458ca2692f9c&#39; ,params);window[&#34;</description>
+    </item>
+    
   </channel>
 </rss>

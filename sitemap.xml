@@ -48,7 +48,12 @@
   </url>
   
   <url>
-    <loc>https://www.homesmartmesh.com/docs/frameworks/thread_sensortag/</loc>
+    <loc>https://www.homesmartmesh.com/docs/microcontrollers/</loc>
+    <lastmod>2021-02-07T08:48:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</loc>
     <lastmod>2021-02-07T08:48:57+00:00</lastmod>
   </url>
   
@@ -70,11 +75,6 @@
   <url>
     <loc>https://www.homesmartmesh.com/docs/networks/</loc>
     <lastmod>2020-12-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.homesmartmesh.com/docs/microcontrollers/</loc>
-    <lastmod>2020-12-26T00:00:00+09:00</lastmod>
   </url>
   
   <url>
@@ -111,6 +111,11 @@
   </url>
   
   <url>
+    <loc>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/</loc>
+    <lastmod>2021-02-07T08:48:57+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.homesmartmesh.com/docs/3dprinting/handbag_hanger/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url>
@@ -118,10 +123,6 @@
   <url>
     <loc>https://www.homesmartmesh.com/docs/applications/</loc>
     <lastmod>2020-12-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/</loc>
   </url>
   
   <url>

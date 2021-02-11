@@ -75,12 +75,11 @@ Final application#This repository has boilerplates samples. A real use case e
     
     <item>
       <title>Thread SensorTag</title>
-      <link>https://www.homesmartmesh.com/docs/frameworks/thread_sensortag/</link>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</link>
       <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
       
-      <guid>https://www.homesmartmesh.com/docs/frameworks/thread_sensortag/</guid>
-      <description>Concept#The Thread sensorTag is based on an nRF52840 which is integrated inside an ISP1807. On the tag, the used sensors are the BME280 for Temperature, Humidity, Pressure and
-nRF52840ISP1807BME280MAX44009Repo#schematics 07/02/2021 commit fe9999Components Consumption#Full screenOpen in a new pagevar button = document.</description>
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</guid>
+      <description>v1.0 MS8607 VEML6030#commitnRF52840MS88SF2MS86072VEML6030Schematics#Full Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.6,minZoom: 0.5,maxZoom: 4,fit: true, contain: true, center: true, refreshRate: &#39;auto&#39;};let svg_pz = svgPanZoom(&#39;#svg-5e84458ca2692f9c&#39; ,params);window[&#34;</description>
     </item>
     
     <item>
