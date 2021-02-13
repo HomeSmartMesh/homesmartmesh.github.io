@@ -32,7 +32,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/applications/voronoi/</guid>
-      <description>Webapp#runs with chrome as a web browser Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-f7ccb353b1174faa&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-f7ccb353b1174faa&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};Github repo#Voronoi generator webapp Github Repo3d printing#Voronoi STL Models Description#Parametric Voronoi generator with real time editing and SVG export</description>
+      <description>Webapp#runs with chrome as a web browser Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-f7ccb353b1174faa&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-f7ccb353b1174faa&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};Github repo#Voronoi generator webapp Github Repo3d printing#Voronoi STL Models Description#Parametric Voronoi generator with real time editing and SVG export</description>
     </item>
     
   </channel>

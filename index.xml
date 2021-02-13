@@ -13,7 +13,7 @@
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/light/</guid>
-      <description>Cover Dumb Switch with Smart Switch#Download STL                             01 black and white 3dprints
+      <description>Cover Dumb Switch with Smart Switch#STL Model                             01 black and white 3dprints
 02 black and white breakout
 03 black and white back side</description>
     </item>
@@ -74,12 +74,22 @@ Final application#This repository has boilerplates samples. A real use case e
     </item>
     
     <item>
+      <title>Project CHIP</title>
+      <link>https://www.homesmartmesh.com/docs/frameworks/chip/</link>
+      <pubDate>Fri, 12 Feb 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/frameworks/chip/</guid>
+      <description>Definition#We can consider the project CHIP Connected Home Over IP definition as in two folds :
+ a takeover of the Zigbee Cluster Library to be fit over the IP layer. The abstraction of all different transport protocols with IP  This will avoid that each transport (e.g. BT, Zigbee) have a custom app layer. It is interesting to notice that the Zigbee Alliance is driving this project whereas Zigbee itself does not map to an IP layer, and therefore Thread is the natural transition from Zigbee as both are 802.</description>
+    </item>
+    
+    <item>
       <title>Thread SensorTag</title>
       <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</link>
       <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</guid>
-      <description>v1.0 MS8607 VEML6030#commitnRF52840MS88SF2MS86072VEML6030Schematics#Full Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.6,minZoom: 0.5,maxZoom: 4,fit: true, contain: true, center: true, refreshRate: &#39;auto&#39;};let svg_pz = svgPanZoom(&#39;#svg-5e84458ca2692f9c&#39; ,params);window[&#34;</description>
+      <description>v1.0 MS8607 VEML6030#commitnRF52840MS88SF2MS86072VEML6030Schematics#Full Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.</description>
     </item>
     
     <item>
@@ -97,7 +107,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/light_socket/</guid>
-      <description>Cover Dumb Switch and smart Socket#Download STLApplication#More details on the raspberry pi service </description>
+      <description>Cover Dumb Switch and smart Socket#STL ModelApplication#More details on the raspberry pi service </description>
     </item>
     
     <item>
@@ -106,7 +116,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/applications/voronoi/</guid>
-      <description>Webapp#runs with chrome as a web browser Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-f7ccb353b1174faa&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-f7ccb353b1174faa&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};Github repo#Voronoi generator webapp Github Repo3d printing#Voronoi STL Models Description#Parametric Voronoi generator with real time editing and SVG export</description>
+      <description>Webapp#runs with chrome as a web browser Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-f7ccb353b1174faa&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-f7ccb353b1174faa&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};Github repo#Voronoi generator webapp Github Repo3d printing#Voronoi STL Models Description#Parametric Voronoi generator with real time editing and SVG export</description>
     </item>
     
     <item>
@@ -136,7 +146,7 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in 
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/esp32_remote/</guid>
-      <description>ESP32 Case for up/down remote control#Download STL models zipApplication#More details on the ESP32 Arduino code 3D printing creation requires sometimes quite a number of iterations
+      <description>ESP32 Case for up/down remote control#STL models zipApplication#More details on the ESP32 Arduino code 3D printing creation requires sometimes quite a number of iterations
     </description>
     </item>
     
@@ -165,7 +175,7 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in 
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/handbag_hanger/</guid>
-      <description>Handbag hanger#Download STL</description>
+      <description>Handbag hanger#STL Model</description>
     </item>
     
     <item>
@@ -199,7 +209,7 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in 
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/voronoi/</guid>
-      <description>Webapp#Voronoi Generator Tool Cells Circle#Download STLFantasy pen holder#Download STLFantasy Turtle Flower#Download STLGirafe round#Download STL</description>
+      <description>Webapp#Voronoi Generator Tool Cells Circle#STL ModelFantasy pen holder#STL ModelFantasy Turtle Flower#STL ModelGirafe round#STL Model</description>
     </item>
     
     <item>
