@@ -26,5 +26,14 @@
  a takeover of the Zigbee Cluster Library to be fit over the IP layer. The abstraction of all different transport protocols with IP  This will avoid that each transport (e.g. BT, Zigbee) have a custom app layer. It is interesting to notice that the Zigbee Alliance is driving this project whereas Zigbee itself does not map to an IP layer, and therefore Thread is the natural transition from Zigbee as both are 802.</description>
     </item>
     
+    <item>
+      <title>Home Assistant</title>
+      <link>https://www.homesmartmesh.com/docs/frameworks/home_assistant/</link>
+      <pubDate>Sat, 13 Feb 2021 08:48:57 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/frameworks/home_assistant/</guid>
+      <description>Official WebsiteBluetooth#BLE Bluetooth Low Energy# This is a simple integration that tracks BLE devices and beacons without even requiring pairing (privacy notice might be required)  BLE TrackerBluetooth Mesh# One investigation path for integrating Bluetooth mesh in Home Assistant is bridging it through an ip layer using the Bearer Layer of the BLE Architecture  BLE Mesh =&amp;gt; IP =&amp;gt; MQTT-SN =&amp;gt; MQTT =&amp;gt; Home Assistant</description>
+    </item>
+    
   </channel>
 </rss>

@@ -34,7 +34,7 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in 
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/networks/thread/</guid>
-      <description>Open ThreadFull Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.6,minZoom: 0.5,maxZoom: 4,fit: true, contain: true, center: true, refreshRate: &#39;auto&#39;};let svg_pz = svgPanZoom(&#39;#svg-99adc38e71d7d1e9&#39; ,params);window[&#34;svg_99adc38e71d7d1e9&#34;] = svg_pzlet button = document.getElementById(&#34;btn-99adc38e71d7d1e9&#34;);button.onclick = ()={var elem = document.getElementById(&#34;svg-99adc38e71d7d1e9&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.</description>
+      <description>Full Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.6,minZoom: 0.5,maxZoom: 4,fit: true, contain: true, center: true, refreshRate: &#39;auto&#39;};let svg_pz = svgPanZoom(&#39;#svg-99adc38e71d7d1e9&#39; ,params);window[&#34;svg_99adc38e71d7d1e9&#34;] = svg_pzlet button = document.getElementById(&#34;btn-99adc38e71d7d1e9&#34;);button.onclick = ()={var elem = document.getElementById(&#34;svg-99adc38e71d7d1e9&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.</description>
     </item>
     
   </channel>
