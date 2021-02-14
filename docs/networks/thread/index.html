@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.c341c4608b80b4aecc5c14d00cdff32d306efcba85333a5b3ac2d8dcba708901.js" integrity="sha256-w0HEYIuAtK7MXBTQDN/zLTBu/LqFMzpbOsLY3LpwiQE="></script>
+<script defer src="/en.search.min.ef168dbb0a7bcfdeaa808fa92fe7d29373dfa7ab6c6e9774adbc72d86a46fcab.js" integrity="sha256-7xaNuwp7z96qgI&#43;pL&#43;fSk3Pfp6tsbpd0rbxy2GpG/Ks="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -356,6 +356,19 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/" class="">Simple Mesh SensorTag</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/" class="">Thread SensorTag</a>
   
 
@@ -396,7 +409,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://www.homesmartmesh.com/docs/networks/nrf/" class="">custom RF Mesh</a>
+    <a href="https://www.homesmartmesh.com/docs/networks/nrf/" class="">Simple Mesh</a>
   
 
         </li>
@@ -716,7 +729,8 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#test-with-cli">test with cli</a></li>
         <li><a href="#mqtt-sn">MQTT-SN</a>
           <ul>
-            <li><a href="#mqtt-sn-gateway-data-flow">MQTT-SN Gateway data flow</a></li>
+            <li><a href="#firmware-flow-diagram">Firmware flow diagram</a></li>
+            <li><a href="#firmware-search-gateway">Firmware search gateway</a></li>
           </ul>
         </li>
       </ul>
@@ -1691,7 +1705,81 @@ Done
 <ul>
 <li>MQTT-SN actually has nothing to do with <code>Thread</code>, it is rather a protcol for a bridge that allows clients to interact with an MQTT Broquer with minimal payload and packets transfers, therefore, it is well adapted to ip over low power mesh networks such as Thread.</li>
 </ul>
-<p>Firmware example from Nordic SDK <code>examples\thread\mqttsn_sleepy_publisher</code></p>
+<p>Example firmware <code>mqttsn_sleepy_publisher</code> and <code>mqttsn_client_publisher</code> are a port of the nRFSDK example from PCA10056 which was the only supported board to the PCA10059, the nRF52840 USB dongle, therefore the search gateway, connect, publish sequence have been merged in on button and run cyclically on each new press.</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware/mqttsn_sleepy_publisher"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            mqttsn_sleepy_publisher
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware/mqttsn_client_publisher"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            mqttsn_client_publisher
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
 
 <div class="container">
     <div class="row">
@@ -1742,12 +1830,183 @@ Done
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl status paho-mqttsn-gateway.service
 sudo /usr/sbin/MQTT-SNGateway -f /etc/paho-mqtt-sn-gateway.conf
 sudo nano /etc/paho-mqtt-sn-gateway.conf
-</code></pre></div><p>Test vector</p>
+</code></pre></div><details >
+  <summary>paho-mqtt-sn-gateway.conf</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-conf" data-lang="conf">#**************************************************************************
+# Copyright (c) 2016-2019, Tomoaki Yamaguchi
+#
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License v1.0
+# and Eclipse Distribution License v1.0 which accompany this distribution.
+#
+# The Eclipse Public License is available at
+#    http://www.eclipse.org/legal/epl-v10.html
+# and the Eclipse Distribution License is available at
+#   http://www.eclipse.org/org/documents/edl-v10.php.
+#***************************************************************************
+#
+# config file of MQTT-SN Gateway
+#
+
+# IPv4 Address of iot.eclipse.org
+BrokerName=10.0.0.42
+BrokerPortNo=1883
+BrokerSecurePortNo=8883
+
+#
+# When AggregatingGateway=YES or ClientAuthentication=YES,
+# All clients must be specified by the ClientList File
+#
+
+ClientAuthentication=NO
+AggregatingGateway=NO
+QoS-1=NO
+Forwarder=NO
+
+#ClientsList=/path/to/your_clients.conf
+
+PredefinedTopic=NO
+#PredefinedTopicList=/path/to/your_predefinedTopic.conf
+
+#RootCAfile=/etc/ssl/certs/ca-certificates.crt
+#RootCApath=/etc/ssl/certs/
+#CertsFile=/path/to/certKey.pem
+#PrivateKey=/path/to/privateKey.pem
+
+GatewayID=1
+GatewayName=PahoGateway-01
+KeepAlive=900
+#LoginID=your_ID
+#Password=your_Password
+
+
+# UDP
+GatewayPortNo=10000
+MulticastIP=225.1.1.1
+MulticastPortNo=1883
+
+# GatewayUDP6Broadcast address is set to all Thread devices address
+# in order to enable Thread Sleepy Devices to receive multicast messages
+# sent from the gateway.
+# UDP6
+GatewayUDP6Port = 47193
+GatewayUDP6Broadcast = ff03::1
+GatewayUDP6If = wpan0
+
+# XBee
+Baudrate=38400
+SerialDevice=/dev/ttyUSB0
+ApiMode=2
+
+# LOG
+ShearedMemory=NO;
+</code></pre>
+  </div>
+</details>
+
+<p>Test vector for sending a <code>SEARCHGW</code> message to the MQTT-SQ gateway service</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#send (Length 3)(MsgType SEARCHGW=1)(Radius 1)</span>
 echo -n -e <span style="color:#e6db74">&#34;030101&#34;</span> | xxd -r -p | nc -u fd11:1111:1122:0:98bf:60c7:9431:ee90 <span style="color:#ae81ff">47193</span>
-</code></pre></div><h3 id="mqtt-sn-gateway-data-flow">
-  MQTT-SN Gateway data flow
-  <a class="anchor" href="#mqtt-sn-gateway-data-flow">#</a>
+</code></pre></div><h3 id="firmware-flow-diagram">
+  Firmware flow diagram
+  <a class="anchor" href="#firmware-flow-diagram">#</a>
+</h3>
+<p>running the firmware example <code>mqtt_client_publisher</code> results in the following logs</p>
+<details >
+  <summary>MQTT-SN gateway log</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pi@raspberrypi:~ $ sudo /usr/sbin/MQTT-SNGateway -f /etc/paho-mqtt-sn-gateway.conf
+ClientList can not open the Predefined Topic List.     /etc/predefinedTopic.conf
+
+ ***************************************************************************
+ * MQTT-SN Transparent Gateway
+ * Part of Project Paho in Eclipse
+ * <span style="color:#f92672">(</span>http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt-sn.embedded-c.git/<span style="color:#f92672">)</span>
+ *
+ * Author : Tomoaki YAMAGUCHI
+ * Version: 1.3.1
+ ***************************************************************************
+
+<span style="color:#ae81ff">20210213</span> 194529.539 PahoGateway-01 has been started.
+
+ ConfigFile: /etc/paho-mqtt-sn-gateway.conf
+ SensorN/W:   Gateway Port: <span style="color:#ae81ff">47193</span> Broadcast Address: ff03::1 Interface: wpan0
+ Broker:     10.0.0.42 : 1883, <span style="color:#ae81ff">8883</span>
+ RootCApath: <span style="color:#f92672">(</span>null<span style="color:#f92672">)</span>
+ RootCAfile: <span style="color:#f92672">(</span>null<span style="color:#f92672">)</span>
+ CertKey:    <span style="color:#f92672">(</span>null<span style="color:#f92672">)</span>
+ PrivateKey: <span style="color:#f92672">(</span>null<span style="color:#f92672">)</span>
+
+
+
+<span style="color:#ae81ff">20210213</span> 194535.931   SEARCHGW          &lt;---  Client                              <span style="color:#ae81ff">03</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">01</span>
+<span style="color:#ae81ff">20210213</span> 194535.932   GWINFO            ---&gt;  Clients                             <span style="color:#ae81ff">03</span> <span style="color:#ae81ff">02</span> <span style="color:#ae81ff">01</span>
+
+<span style="color:#ae81ff">20210213</span> 194541.989   CONNECT           &lt;---  nRF52840_publisher                  <span style="color:#ae81ff">18</span> <span style="color:#ae81ff">04</span> <span style="color:#ae81ff">04</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">00</span> 3C 6E <span style="color:#ae81ff">52</span> <span style="color:#ae81ff">46</span> <span style="color:#ae81ff">35</span> <span style="color:#ae81ff">32</span> <span style="color:#ae81ff">38</span> <span style="color:#ae81ff">34</span> <span style="color:#ae81ff">30</span> 5F <span style="color:#ae81ff">70</span> <span style="color:#ae81ff">75</span> <span style="color:#ae81ff">62</span> 6C <span style="color:#ae81ff">69</span> <span style="color:#ae81ff">73</span> <span style="color:#ae81ff">68</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">72</span>
+<span style="color:#ae81ff">20210213</span> 194541.997   CONNECT           <span style="color:#f92672">===</span>&gt;  nRF52840_publisher                  <span style="color:#ae81ff">10</span> 1E <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">04</span> 4D <span style="color:#ae81ff">51</span> <span style="color:#ae81ff">54</span> <span style="color:#ae81ff">54</span> <span style="color:#ae81ff">04</span> <span style="color:#ae81ff">02</span> <span style="color:#ae81ff">00</span> 3C <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">12</span> 6E <span style="color:#ae81ff">52</span> <span style="color:#ae81ff">46</span> <span style="color:#ae81ff">35</span> <span style="color:#ae81ff">32</span> <span style="color:#ae81ff">38</span> <span style="color:#ae81ff">34</span> <span style="color:#ae81ff">30</span> 5F <span style="color:#ae81ff">70</span> <span style="color:#ae81ff">75</span> <span style="color:#ae81ff">62</span> 6C <span style="color:#ae81ff">69</span> <span style="color:#ae81ff">73</span> <span style="color:#ae81ff">68</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">72</span>
+<span style="color:#ae81ff">20210213</span> 194542.042   CONNACK           &lt;<span style="color:#f92672">===</span>  nRF52840_publisher                  <span style="color:#ae81ff">20</span> <span style="color:#ae81ff">02</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">00</span>
+<span style="color:#ae81ff">20210213</span> 194542.042   CONNACK           ---&gt;  nRF52840_publisher                  <span style="color:#ae81ff">03</span> <span style="color:#ae81ff">05</span> <span style="color:#ae81ff">00</span>
+
+<span style="color:#ae81ff">20210213</span> 194542.055   REGISTER    <span style="color:#ae81ff">0001</span>  &lt;---  nRF52840_publisher                  1D 0A <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">01</span> 6E <span style="color:#ae81ff">52</span> <span style="color:#ae81ff">46</span> <span style="color:#ae81ff">35</span> <span style="color:#ae81ff">32</span> <span style="color:#ae81ff">38</span> <span style="color:#ae81ff">34</span> <span style="color:#ae81ff">30</span> 5F <span style="color:#ae81ff">72</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">73</span> 6F <span style="color:#ae81ff">75</span> <span style="color:#ae81ff">72</span> <span style="color:#ae81ff">63</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">73</span> 2F 6C <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">64</span> <span style="color:#ae81ff">33</span>
+<span style="color:#ae81ff">20210213</span> 194542.056   REGACK      <span style="color:#ae81ff">0001</span>  ---&gt;  nRF52840_publisher                  <span style="color:#ae81ff">07</span> 0B <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">00</span>
+
+<span style="color:#ae81ff">20210213</span> 194550.331   PUBLISH     <span style="color:#ae81ff">0002</span>  &lt;---  nRF52840_publisher                  <span style="color:#ae81ff">08</span> 0C <span style="color:#ae81ff">20</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">02</span> <span style="color:#ae81ff">01</span>
+<span style="color:#ae81ff">20210213</span> 194550.331   PUBLISH     0002  <span style="color:#f92672">===</span>&gt;  nRF52840_publisher                  <span style="color:#ae81ff">32</span> 1C <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">17</span> 6E <span style="color:#ae81ff">52</span> <span style="color:#ae81ff">46</span> <span style="color:#ae81ff">35</span> <span style="color:#ae81ff">32</span> <span style="color:#ae81ff">38</span> <span style="color:#ae81ff">34</span> <span style="color:#ae81ff">30</span> 5F <span style="color:#ae81ff">72</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">73</span> 6F <span style="color:#ae81ff">75</span> <span style="color:#ae81ff">72</span> <span style="color:#ae81ff">63</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">73</span> 2F 6C <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">64</span> <span style="color:#ae81ff">33</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">02</span> <span style="color:#ae81ff">01</span>
+<span style="color:#ae81ff">20210213</span> 194550.338   PUBACK      <span style="color:#ae81ff">0002</span>  &lt;<span style="color:#f92672">===</span>  nRF52840_publisher                  <span style="color:#ae81ff">40</span> <span style="color:#ae81ff">02</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">02</span>
+<span style="color:#ae81ff">20210213</span> 194550.338   PUBACK      <span style="color:#ae81ff">0002</span>  ---&gt;  nRF52840_publisher                  <span style="color:#ae81ff">07</span> 0D <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">02</span> <span style="color:#ae81ff">00</span>
+
+<span style="color:#ae81ff">20210213</span> 194557.499   PUBLISH     <span style="color:#ae81ff">0003</span>  &lt;---  nRF52840_publisher                  <span style="color:#ae81ff">08</span> 0C <span style="color:#ae81ff">20</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">03</span> <span style="color:#ae81ff">00</span>
+<span style="color:#ae81ff">20210213</span> 194557.500   PUBLISH     0003  <span style="color:#f92672">===</span>&gt;  nRF52840_publisher                  <span style="color:#ae81ff">32</span> 1C <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">17</span> 6E <span style="color:#ae81ff">52</span> <span style="color:#ae81ff">46</span> <span style="color:#ae81ff">35</span> <span style="color:#ae81ff">32</span> <span style="color:#ae81ff">38</span> <span style="color:#ae81ff">34</span> <span style="color:#ae81ff">30</span> 5F <span style="color:#ae81ff">72</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">73</span> 6F <span style="color:#ae81ff">75</span> <span style="color:#ae81ff">72</span> <span style="color:#ae81ff">63</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">73</span> 2F 6C <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">64</span> <span style="color:#ae81ff">33</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">03</span> <span style="color:#ae81ff">00</span>
+<span style="color:#ae81ff">20210213</span> 194557.515   PUBACK      <span style="color:#ae81ff">0003</span>  &lt;<span style="color:#f92672">===</span>  nRF52840_publisher                  <span style="color:#ae81ff">40</span> <span style="color:#ae81ff">02</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">03</span>
+<span style="color:#ae81ff">20210213</span> 194557.516   PUBACK      <span style="color:#ae81ff">0003</span>  ---&gt;  nRF52840_publisher                  <span style="color:#ae81ff">07</span> 0D <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">03</span> <span style="color:#ae81ff">00</span>
+
+<span style="color:#ae81ff">20210213</span> 194602.541   PUBLISH     <span style="color:#ae81ff">0004</span>  &lt;---  nRF52840_publisher                  <span style="color:#ae81ff">08</span> 0C <span style="color:#ae81ff">20</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">04</span> <span style="color:#ae81ff">01</span>
+<span style="color:#ae81ff">20210213</span> 194602.542   PUBLISH     0004  <span style="color:#f92672">===</span>&gt;  nRF52840_publisher                  <span style="color:#ae81ff">32</span> 1C <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">17</span> 6E <span style="color:#ae81ff">52</span> <span style="color:#ae81ff">46</span> <span style="color:#ae81ff">35</span> <span style="color:#ae81ff">32</span> <span style="color:#ae81ff">38</span> <span style="color:#ae81ff">34</span> <span style="color:#ae81ff">30</span> 5F <span style="color:#ae81ff">72</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">73</span> 6F <span style="color:#ae81ff">75</span> <span style="color:#ae81ff">72</span> <span style="color:#ae81ff">63</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">73</span> 2F 6C <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">64</span> <span style="color:#ae81ff">33</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">04</span> <span style="color:#ae81ff">01</span>
+<span style="color:#ae81ff">20210213</span> 194602.547   PUBACK      <span style="color:#ae81ff">0004</span>  &lt;<span style="color:#f92672">===</span>  nRF52840_publisher                  <span style="color:#ae81ff">40</span> <span style="color:#ae81ff">02</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">04</span>
+<span style="color:#ae81ff">20210213</span> 194602.547   PUBACK      <span style="color:#ae81ff">0004</span>  ---&gt;  nRF52840_publisher                  <span style="color:#ae81ff">07</span> 0D <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">04</span> <span style="color:#ae81ff">00</span>
+</code></pre></div>
+  </div>
+</details>
+
+<details >
+  <summary>Firmware J-Link RTT log</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&lt;info&gt; app_timer: RTC: initialized.
+&lt;info&gt; app: Thread version   : OPENTHREAD/20191113-00534-gc6a258e3; NRF52840; Apr  <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">2020</span> 21:53:43
+&lt;info&gt; app: Network name     : OpenThreadDemo
+&lt;info&gt; app: Thread interface has been enabled.
+&lt;info&gt; app: 802.15.4 Channel : <span style="color:#ae81ff">13</span>
+&lt;info&gt; app: 802.15.4 PAN ID  : 0x1234
+&lt;info&gt; app: Radio mode       : rx-on-when-idle
+&lt;warning&gt; app_timer: RTC instance already initialized.
+&lt;info&gt; app: State changed! Flags: 0x0117D33D Current role: <span style="color:#ae81ff">1</span>
+&lt;info&gt; app: State changed! &lt;info&gt; app: <span style="color:#f92672">(</span>0<span style="color:#f92672">)</span>
+&lt;info&gt; app: MQTT-SN event: Client has found an active gateway.
+&lt;info&gt; app: MQTT-SN event: Client has found an active gateway.
+&lt;info&gt; app: MQTT-SN event: Gateway discovery procedure has finished.
+&lt;info&gt; app: MQTT-SN event: Gateway discovery result: 0x0.
+&lt;info&gt; app: <span style="color:#f92672">(</span>1<span style="color:#f92672">)</span>
+&lt;info&gt; app: Wake up first time
+&lt;info&gt; app: MQTT-SN event: Client connected.
+&lt;info&gt; app: MQTT-SN event: Client registered topic.
+&lt;info&gt; app: MQTT-SN event: Topic has been registered with ID: 1.
+&lt;info&gt; app: <span style="color:#f92672">(</span>2<span style="color:#f92672">)</span>
+&lt;info&gt; app: Wake up next times
+&lt;info&gt; app: MQTT-SN event: Client has successfully published content.
+&lt;info&gt; app: <span style="color:#f92672">(</span>2<span style="color:#f92672">)</span>
+&lt;info&gt; app: Wake up next times
+&lt;info&gt; app: MQTT-SN event: Client has successfully published content.
+&lt;info&gt; app: <span style="color:#f92672">(</span>2<span style="color:#f92672">)</span>
+&lt;info&gt; app: Wake up next times
+&lt;info&gt; app: MQTT-SN event: Client has successfully published content.
+</code></pre></div>
+  </div>
+</details>
+
+<h3 id="firmware-search-gateway">
+  Firmware search gateway
+  <a class="anchor" href="#firmware-search-gateway">#</a>
 </h3>
 
 
@@ -1951,7 +2210,8 @@ eui64
         <li><a href="#test-with-cli">test with cli</a></li>
         <li><a href="#mqtt-sn">MQTT-SN</a>
           <ul>
-            <li><a href="#mqtt-sn-gateway-data-flow">MQTT-SN Gateway data flow</a></li>
+            <li><a href="#firmware-flow-diagram">Firmware flow diagram</a></li>
+            <li><a href="#firmware-search-gateway">Firmware search gateway</a></li>
           </ul>
         </li>
       </ul>

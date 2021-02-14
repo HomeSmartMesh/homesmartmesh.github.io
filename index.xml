@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home Smart Mesh</title>
+    <title>Smart Home Hardware Softwar Development on Home Smart Mesh</title>
     <link>https://www.homesmartmesh.com/</link>
-    <description>Recent content on Home Smart Mesh</description>
+    <description>Recent content in Smart Home Hardware Softwar Development on Home Smart Mesh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 06 Oct 2020 08:48:23 +0000</lastBuildDate><atom:link href="https://www.homesmartmesh.com/index.xml" rel="self" type="application/rss+xml" />
@@ -38,15 +38,6 @@ Final application#This repository has boilerplates samples. A real use case e
     </item>
     
     <item>
-      <title>custom RF Mesh</title>
-      <link>https://www.homesmartmesh.com/docs/networks/nrf/</link>
-      <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
-      
-      <guid>https://www.homesmartmesh.com/docs/networks/nrf/</guid>
-      <description>nRF Mesh Github RepoFeatures#   2.4 GHz 2 Mbps Mesh Network  tested with 300 packets / second   Flash time automated database config Zero install time configuration  No association, No pairing, No factory resets   Router = Coordinator = Repeater = Sniffer = CLI text serial line protocol Multiple Network endpoints  No single point of failure   Server, Dongles, Sensors  Full Stack Open Source (no softdevices required) HW On the shelves optional DIY HW   Alive trace routing  a heartbeat message that gives info about the age and RF tx/rx hops through the route    see below the Drivers &amp;amp; Custom Mesh protocol section for the RF Protocol details</description>
-    </item>
-    
-    <item>
       <title>Light rooms</title>
       <link>https://www.homesmartmesh.com/docs/frameworks/grafana/light/</link>
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
@@ -65,12 +56,35 @@ Final application#This repository has boilerplates samples. A real use case e
     </item>
     
     <item>
+      <title>Simple Mesh</title>
+      <link>https://www.homesmartmesh.com/docs/networks/nrf/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/networks/nrf/</guid>
+      <description>nRF Mesh Github RepoFeatures#   2.4 GHz 2 Mbps Mesh Network  tested with 300 packets / second   Flash time automated database config Zero install time configuration  No association, No pairing, No factory resets   Router = Coordinator = Repeater = Sniffer = CLI text serial line protocol Multiple Network endpoints  No single point of failure   Server, Dongles, Sensors  Full Stack Open Source (no softdevices required) HW On the shelves optional DIY HW   Alive trace routing  a heartbeat message that gives info about the age and RF tx/rx hops through the route    see below the Drivers &amp;amp; Custom Mesh protocol section for the RF Protocol details</description>
+    </item>
+    
+    <item>
       <title>Temperature</title>
       <link>https://www.homesmartmesh.com/docs/frameworks/grafana/sensors/</link>
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/grafana/sensors/</guid>
       <description>Hot summer#Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-388b84c89c2369b2&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-388b84c89c2369b2&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};Xiaomi Aqara vs DIY BME280#Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-f8d70b01c18b3285&#34;);button.onclick = ()={var elem = document.</description>
+    </item>
+    
+    <item>
+      <title>Simple Mesh SensorTag</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</link>
+      <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</guid>
+      <description>v1.0 BME280 MAX44009#concept
+board render
+repo directorynRF52832BME280MAX44009Schematics#svg
+Board#svg
+3D Board model#glb
+Firmware#repo directory</description>
     </item>
     
     <item>

@@ -6,7 +6,21 @@
     <description>Recent content in nRF52 on Home Smart Mesh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Feb 2021 08:48:57 +0000</lastBuildDate><atom:link href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Feb 2021 08:00:00 +0000</lastBuildDate><atom:link href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple Mesh SensorTag</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</link>
+      <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</guid>
+      <description>v1.0 BME280 MAX44009#concept
+board render
+repo directorynRF52832BME280MAX44009Schematics#svg
+Board#svg
+3D Board model#glb
+Firmware#repo directory</description>
+    </item>
+    
     <item>
       <title>Thread SensorTag</title>
       <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</link>
