@@ -13,8 +13,7 @@
       <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</guid>
-      <description>v1.0 BME280 MAX44009#concept
-board render
+      <description>Networks / Simple MeshFrameworks / Raspi IoTconcept#board render
 repo directorynRF52832BME280MAX44009Schematics#svg
 Board#svg
 3D Board model#glb
@@ -27,7 +26,16 @@ Firmware#repo directory</description>
       <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</guid>
-      <description>v1.0 MS8607 VEML6030#commitnRF52840MS88SF2MS86072VEML6030Schematics#Full Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.</description>
+      <description>Networks / ThreadFrameworks / CHIPv1.0 MS8607 VEML6030#commitnRF52840MS88SF2MS86072VEML6030Schematics#Full Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.</description>
+    </item>
+    
+    <item>
+      <title>nRF52840 USB dongle</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</link>
+      <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</guid>
+      <description>Product Page nRF52840 ARM M4 64 MHz 1024 KB ROM - 256 KB RAM Bluetooth 5, Mesh 802.15.4, Thread, Zigbee USB 2 GetStarted)  Applications# custom mesh coordinator  nRF52840 Dongle#Serial wire debug pinout#pogo pin adapter#STL models zip</description>
     </item>
     
   </channel>

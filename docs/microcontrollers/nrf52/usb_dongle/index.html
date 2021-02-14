@@ -5,14 +5,15 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="snapshot">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Temperature" />
-<meta property="og:description" content="snapshot" />
+<meta name="description" content="Nordic&#39;s official dev kit PCA10059 in a form of a usb dongle for the nRF52840">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="nRF52840 USB dongle" />
+<meta property="og:description" content="Nordic&#39;s official dev kit PCA10059 in a form of a usb dongle for the nRF52840" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.homesmartmesh.com/docs/frameworks/grafana/sensors/" />
-<meta property="article:published_time" content="2020-10-06T08:48:57+00:00" />
-<meta property="article:modified_time" content="2020-10-06T08:48:57+00:00" />
-<title>Temperature | Home Smart Mesh</title>
+<meta property="og:url" content="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/" />
+<meta property="og:image" content="https://www.homesmartmesh.com/images/nrf_usb_dongle.png" />
+<meta property="article:published_time" content="2021-02-14T08:00:00+00:00" />
+<meta property="article:modified_time" content="2021-02-14T08:00:00+00:00" />
+<title>nRF52840 USB dongle | Home Smart Mesh</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
@@ -68,7 +69,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-26e813df4c1d2ae66edc7adef58c4759" class="toggle" checked />
+    <input type="checkbox" id="section-26e813df4c1d2ae66edc7adef58c4759" class="toggle"  />
     <label for="section-26e813df4c1d2ae66edc7adef58c4759" class="flex justify-between">
       <a  class="">Frameworks</a>
       <span>▾</span>
@@ -124,7 +125,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-443ec93a58930053545c45ba7289aa1d" class="toggle" checked />
+    <input type="checkbox" id="section-443ec93a58930053545c45ba7289aa1d" class="toggle"  />
     <label for="section-443ec93a58930053545c45ba7289aa1d" class="flex justify-between">
       <a  class="">Grafana Snapshots</a>
       <span>▾</span>
@@ -154,7 +155,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://www.homesmartmesh.com/docs/frameworks/grafana/sensors/" class=" active">Temperature</a>
+    <a href="https://www.homesmartmesh.com/docs/frameworks/grafana/sensors/" class="">Temperature</a>
   
 
         </li>
@@ -177,7 +178,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-12172a40edce1e57d2d7d6a535923101" class="toggle"  />
+    <input type="checkbox" id="section-12172a40edce1e57d2d7d6a535923101" class="toggle" checked />
     <label for="section-12172a40edce1e57d2d7d6a535923101" class="flex justify-between">
       <a href="https://www.homesmartmesh.com/docs/microcontrollers/" class="">Microcontrollers</a>
       <span>▾</span>
@@ -382,7 +383,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/" class="">nRF52840 USB dongle</a>
+    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/" class=" active">nRF52840 USB dongle</a>
   
 
         </li>
@@ -707,93 +708,228 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Temperature</strong>
+  <strong>nRF52840 USB dongle</strong>
 
   <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
     
   </label>
 </div>
 
 
   
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#applications">Applications</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#nrf52840-dongle">nRF52840 Dongle</a>
+      <ul>
+        <li><a href="#serial-wire-debug-pinout">Serial wire debug pinout</a></li>
+        <li><a href="#pogo-pin-adapter">pogo pin adapter</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
  
       </header>
 
       
       
-  <article class="markdown"><h1 id="hot-summer">
-  Hot summer
-  <a class="anchor" href="#hot-summer">#</a>
-</h1>
-
-
-
-
+  <article class="markdown">
 <div class="container">
     <div class="row">
         <div class="col text-center">
-            <a id="btn-388b84c89c2369b2" class="book-btn" role="button" >Full screen</a>
-            <a class="book-btn" href="https://snapshot.raintank.io/dashboard/snapshot/djis26g71G3AGKqUuBi9DvvAtL21sUBA?orgId=2&amp;kiosk=tv" role="button" target="_blank">Open in a new page</a>
-        </div>
-</div>
-<iframe id="ifm-388b84c89c2369b2" src="https://snapshot.raintank.io/dashboard/snapshot/djis26g71G3AGKqUuBi9DvvAtL21sUBA?orgId=2&amp;kiosk=tv" width=100% height=840 frameborder="0" ></iframe>
+        <a  class="book-btn"
+            
+                href="https://www.nordicsemi.com/Software-and-tools/Development-Kits/nRF52840-Dongle/"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            Product Page
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
 
-<script>
-    var button = document.getElementById("btn-388b84c89c2369b2");
-    button.onclick = ()=>{
-        var elem = document.getElementById("ifm-388b84c89c2369b2");
-        if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-        } else if (elem.webkitRequestFullscreen) {  
-        elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) {  
-        elem.msRequestFullscreen();
-        }
-    };
-</script>
 
-<h1 id="xiaomi-aqara-vs-diy-bme280">
-  Xiaomi Aqara vs DIY BME280
-  <a class="anchor" href="#xiaomi-aqara-vs-diy-bme280">#</a>
-</h1>
-
-
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-            <a id="btn-f8d70b01c18b3285" class="book-btn" role="button" >Full screen</a>
-            <a class="book-btn" href="https://snapshot.raintank.io/dashboard/snapshot/8kVT5bYwUXp9naxrqUNz537KG4QPus8G?orgId=2&amp;kiosk=tv" role="button" target="_blank">Open in a new page</a>
-        </div>
-</div>
-<iframe id="ifm-f8d70b01c18b3285" src="https://snapshot.raintank.io/dashboard/snapshot/8kVT5bYwUXp9naxrqUNz537KG4QPus8G?orgId=2&amp;kiosk=tv" width=100% height=840 frameborder="0" ></iframe>
-
-<script>
-    var button = document.getElementById("btn-f8d70b01c18b3285");
-    button.onclick = ()=>{
-        var elem = document.getElementById("ifm-f8d70b01c18b3285");
-        if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-        } else if (elem.webkitRequestFullscreen) {  
-        elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) {  
-        elem.msRequestFullscreen();
-        }
-    };
-</script>
-
-<h1 id="sensor-tag-application">
-  Sensor Tag Application
-  <a class="anchor" href="#sensor-tag-application">#</a>
-</h1>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a class="btn btn-primary btn-lg px-4 mb-2" href="https://www.homesmartmesh.com/docs/networks/nrf/" role="button" >nRF Sensor Tag</a>
-        </div>
+                
+            
+        </a>
     </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/nrf_usb_dongle.png"
+    alt=""
+    width="400px"
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
+<ul>
+<li><a href="https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52840">nRF52840</a></li>
+<li>ARM M4 64 MHz</li>
+<li>1024 KB ROM - 256 KB RAM</li>
+<li>Bluetooth 5, Mesh</li>
+<li>802.15.4, Thread, Zigbee</li>
+<li>USB 2
+GetStarted)</li>
+</ul>
+<h3 id="applications">
+  Applications
+  <a class="anchor" href="#applications">#</a>
+</h3>
+<ul>
+<li><a href="https://github.com/nRFMesh/nRF52_Mesh#08-usb-dongle-nrf52840-dongle">custom mesh coordinator</a></li>
+</ul>
+<h1 id="nrf52840-dongle">
+  nRF52840 Dongle
+  <a class="anchor" href="#nrf52840-dongle">#</a>
+</h1>
+<h2 id="serial-wire-debug-pinout">
+  Serial wire debug pinout
+  <a class="anchor" href="#serial-wire-debug-pinout">#</a>
+</h2>
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/thread_sensortag/serial_wire_debug.png"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
+<h2 id="pogo-pin-adapter">
+  pogo pin adapter
+  <a class="anchor" href="#pogo-pin-adapter">#</a>
+</h2>
+
+
+
+
+<div >
+    <model-viewer 
+        id="692c20da07937056"
+        src="/models/nrf/pogo_adapter_swd.glb"
+        style="width:100%;height: 400px; "
+        exposure="0.2"
+        auto-rotate camera-controls >
+    </model-viewer>
+</div>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.homesmartmesh.com/models/nrf/nRF52840_usb_pogo_top.zip"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            STL models zip
+            
+            
+                
+                
+
+
+                
+                <svg    class="download"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                        >
+                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
+                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
+                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
+                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
+                </svg>
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/thread_sensortag/pogo_pin_adapter.png"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
 </div>
 
 </article>
@@ -825,6 +961,31 @@ https://github.com/alex-shpak/hugo-book
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#applications">Applications</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#nrf52840-dongle">nRF52840 Dongle</a>
+      <ul>
+        <li><a href="#serial-wire-debug-pinout">Serial wire debug pinout</a></li>
+        <li><a href="#pogo-pin-adapter">pogo pin adapter</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
     
   </main>
 

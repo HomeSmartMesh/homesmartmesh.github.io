@@ -61,7 +61,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/networks/nrf/</guid>
-      <description>nRF Mesh Github RepoFeatures#   2.4 GHz 2 Mbps Mesh Network  tested with 300 packets / second   Flash time automated database config Zero install time configuration  No association, No pairing, No factory resets   Router = Coordinator = Repeater = Sniffer = CLI text serial line protocol Multiple Network endpoints  No single point of failure   Server, Dongles, Sensors  Full Stack Open Source (no softdevices required) HW On the shelves optional DIY HW   Alive trace routing  a heartbeat message that gives info about the age and RF tx/rx hops through the route    see below the Drivers &amp;amp; Custom Mesh protocol section for the RF Protocol details</description>
+      <description>Simple Mesh SensorTagSimple Mesh RepoFeatures#     2.4 GHz 2 Mbps Mesh Network  tested with 300 packets / second   Flash time automated database config Zero install time configuration  No association, No pairing, No factory resets   Router = Coordinator = Repeater = Sniffer = CLI text serial line protocol Multiple Network endpoints  No single point of failure   Server, Dongles, Sensors  Full Stack Open Source (no softdevices required) HW On the shelves optional DIY HW   Alive trace routing  a heartbeat message that gives info about the age and RF tx/rx hops through the route    see below the Drivers &amp;amp; Custom Mesh protocol section for the RF Protocol details</description>
     </item>
     
     <item>
@@ -79,8 +79,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</guid>
-      <description>v1.0 BME280 MAX44009#concept
-board render
+      <description>Networks / Simple MeshFrameworks / Raspi IoTconcept#board render
 repo directorynRF52832BME280MAX44009Schematics#svg
 Board#svg
 3D Board model#glb
@@ -103,7 +102,7 @@ Firmware#repo directory</description>
       <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</guid>
-      <description>v1.0 MS8607 VEML6030#commitnRF52840MS88SF2MS86072VEML6030Schematics#Full Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.</description>
+      <description>Networks / ThreadFrameworks / CHIPv1.0 MS8607 VEML6030#commitnRF52840MS88SF2MS86072VEML6030Schematics#Full Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.</description>
     </item>
     
     <item>
@@ -152,6 +151,15 @@ Firmware#repo directory</description>
   As in the above figure, I kept all the light with the hue gateway for a reliable function, and opted for zigbee2mqtt for all other non lighting devices.
 For a detailed list of used devices and their documentation see the devices list section
 Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in a local network, therefore allowing third party apps integration.</description>
+    </item>
+    
+    <item>
+      <title>nRF52840 USB dongle</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</link>
+      <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</guid>
+      <description>Product Page nRF52840 ARM M4 64 MHz 1024 KB ROM - 256 KB RAM Bluetooth 5, Mesh 802.15.4, Thread, Zigbee USB 2 GetStarted)  Applications# custom mesh coordinator  nRF52840 Dongle#Serial wire debug pinout#pogo pin adapter#STL models zip</description>
     </item>
     
     <item>
