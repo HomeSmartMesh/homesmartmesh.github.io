@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.0485ccb2296a4c8b447a11533b66967a837c661359f9bec08576fc50b74178bd.js" integrity="sha256-BIXMsilqTItEehFTO2aWeoN8ZhNZ&#43;b7AhXb8ULdBeL0="></script>
+<script defer src="/en.search.min.0ccfadb4f829b264611c0cddafc1fa5974fc3018de591ef4f65bbcf0b55037a4.js" integrity="sha256-DM&#43;ttPgpsmRhHAzdr8H6WXT8MBjeWR709lu88LVQN6Q="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -734,7 +734,11 @@ https://github.com/alex-shpak/hugo-book
       <ul>
         <li><a href="#nordic---firmware">Nordic - Firmware</a></li>
         <li><a href="#nordic---raspi-ready-image">Nordic - Raspi ready image</a></li>
-        <li><a href="#open-thread---firmware">Open Thread - Firmware</a></li>
+        <li><a href="#open-thread---firmware">Open Thread - Firmware</a>
+          <ul>
+            <li><a href="#manual-build">Manual Build</a></li>
+          </ul>
+        </li>
         <li><a href="#openthread---raspi-docker">OpenThread - Raspi docker</a></li>
         <li><a href="#nrf-connect">nRF Connect</a></li>
         <li><a href="#form-a-network">Form a network</a></li>
@@ -754,6 +758,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#cli-reference">cli reference</a></li>
       </ul>
     </li>
+    <li><a href="#thread-over-zephyr">Thread over Zephyr</a></li>
   </ul>
 </nav>
 
@@ -1450,7 +1455,62 @@ https://github.com/alex-shpak/hugo-book
   I could not find build instructions, e.g. missing tools &lsquo;aclocal&rsquo;,&hellip; the &lsquo;OpenThread&rsquo; BR is at the moment not yet tested
 </blockquote>
 
-<h2 id="openthread---raspi-docker">
+<h3 id="manual-build">
+  Manual Build
+  <a class="anchor" href="#manual-build">#</a>
+</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://openthread.io/guides/build#how_to_build_openthread"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            How to build
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  git clone https://github.com/openthread/openthread
+  sudo ./script/bootstrap
+  ./bootstrap
+  ./configure --enable-cli --enable-radio-only
+  make
+</code></pre></div><h2 id="openthread---raspi-docker">
   OpenThread - Raspi docker
   <a class="anchor" href="#openthread---raspi-docker">#</a>
 </h2>
@@ -2169,7 +2229,75 @@ eui64
   </div>
 </details>
 
-</article>
+<h1 id="thread-over-zephyr">
+  Thread over Zephyr
+  <a class="anchor" href="#thread-over-zephyr">#</a>
+</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://docs.zephyrproject.org/2.3.0/getting_started/index.html"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            Getting Started details...
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<p>on windows steps are</p>
+<ul>
+<li>Installing <code>choco</code></li>
+<li>Installing <code>west</code> dependencies with <code>choco</code></li>
+<li>installing <code>west</code> with <code>pip</code></li>
+<li>the retrieving the repo and building are performed through <code>west</code></li>
+<li>The compiler toolchain as multiple options
+<ul>
+<li>Zephyr own SDK, not available on windows</li>
+<li>GNU ARM Embedded : to be installed on a path without spaces</li>
+</ul>
+</li>
+</ul>
+<p>e.g. for a path <code>&quot;D:\tools\gnu_arm_embedded\9_2020-q2-update\bin\arm-none-eabi-gcc.exe&quot;</code> <code>GNUARMEMB_TOOLCHAIN_PATH</code> shall be set to <code>D:\tools\gnu_arm_embedded\9_2020-q2-update</code></p>
+<p>building an nRF52840 Dongle sample</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">west build -p auto -b nrf52840dongle_nrf52840 samples<span style="color:#ae81ff">\b</span>asic<span style="color:#ae81ff">\b</span>linky
+</code></pre></div><p>the west flash seems to eraze the MBR (Master boot record) region of the dongle and not update it, so to get the program running, everytime I flash with <code>west</code> I have to reflash the mbr again with the nRF-SDK</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nRF5_SDK_for_Thread_and_Zigbee_v4.1.0_32ce5f8<span style="color:#ae81ff">\e</span>xamples<span style="color:#ae81ff">\t</span>hread<span style="color:#ae81ff">\c</span>li<span style="color:#ae81ff">\f</span>td<span style="color:#ae81ff">\u</span>sb<span style="color:#ae81ff">\p</span>ca10059<span style="color:#ae81ff">\m</span>br<span style="color:#ae81ff">\a</span>rmgcc&gt;make flash_mbr
+</code></pre></div></article>
  
       
 
@@ -2215,7 +2343,11 @@ eui64
       <ul>
         <li><a href="#nordic---firmware">Nordic - Firmware</a></li>
         <li><a href="#nordic---raspi-ready-image">Nordic - Raspi ready image</a></li>
-        <li><a href="#open-thread---firmware">Open Thread - Firmware</a></li>
+        <li><a href="#open-thread---firmware">Open Thread - Firmware</a>
+          <ul>
+            <li><a href="#manual-build">Manual Build</a></li>
+          </ul>
+        </li>
         <li><a href="#openthread---raspi-docker">OpenThread - Raspi docker</a></li>
         <li><a href="#nrf-connect">nRF Connect</a></li>
         <li><a href="#form-a-network">Form a network</a></li>
@@ -2235,6 +2367,7 @@ eui64
         <li><a href="#cli-reference">cli reference</a></li>
       </ul>
     </li>
+    <li><a href="#thread-over-zephyr">Thread over Zephyr</a></li>
   </ul>
 </nav>
 

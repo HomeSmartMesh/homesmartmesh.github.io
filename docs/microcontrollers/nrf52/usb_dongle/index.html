@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.0485ccb2296a4c8b447a11533b66967a837c661359f9bec08576fc50b74178bd.js" integrity="sha256-BIXMsilqTItEehFTO2aWeoN8ZhNZ&#43;b7AhXb8ULdBeL0="></script>
+<script defer src="/en.search.min.0ccfadb4f829b264611c0cddafc1fa5974fc3018de591ef4f65bbcf0b55037a4.js" integrity="sha256-DM&#43;ttPgpsmRhHAzdr8H6WXT8MBjeWR709lu88LVQN6Q="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -734,7 +734,12 @@ https://github.com/alex-shpak/hugo-book
     </li>
     <li><a href="#nrf52840-dongle">nRF52840 Dongle</a>
       <ul>
-        <li><a href="#serial-wire-debug-pinout">Serial wire debug pinout</a></li>
+        <li><a href="#pinout">Pinout</a>
+          <ul>
+            <li><a href="#serial-wire-debug">Serial Wire Debug</a></li>
+            <li><a href="#leds">LEDS</a></li>
+          </ul>
+        </li>
         <li><a href="#pogo-pin-adapter">pogo pin adapter</a></li>
       </ul>
     </li>
@@ -796,22 +801,14 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-
-
-
-
-
-<div class="text-center">
-  <a >
-    <img
-    src="/images/nrf_usb_dongle.png"
-    alt=""
-    width="400px"
-    height=""
-    decoding="async"
-  />
-  </a>
-  
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/nrf_usb_dongle.png" />
+    </div>
+    <a href="/images/nrf_usb_dongle.png" itemprop="contentUrl"></a>
+  </figure>
 </div>
 
 <ul>
@@ -834,10 +831,14 @@ GetStarted)</li>
   nRF52840 Dongle
   <a class="anchor" href="#nrf52840-dongle">#</a>
 </h1>
-<h2 id="serial-wire-debug-pinout">
-  Serial wire debug pinout
-  <a class="anchor" href="#serial-wire-debug-pinout">#</a>
+<h2 id="pinout">
+  Pinout
+  <a class="anchor" href="#pinout">#</a>
 </h2>
+<h3 id="serial-wire-debug">
+  Serial Wire Debug
+  <a class="anchor" href="#serial-wire-debug">#</a>
+</h3>
 
 
 
@@ -857,6 +858,16 @@ GetStarted)</li>
   
 </div>
 
+<h3 id="leds">
+  LEDS
+  <a class="anchor" href="#leds">#</a>
+</h3>
+<ul>
+<li>LED1 Green : <code>P0.06</code></li>
+<li>LED2 Green : <code>P0.08</code></li>
+<li>LED2 Green : <code>P1.09</code></li>
+<li>LED2 Blue  : <code>P0.12</code></li>
+</ul>
 <h2 id="pogo-pin-adapter">
   pogo pin adapter
   <a class="anchor" href="#pogo-pin-adapter">#</a>
@@ -977,7 +988,12 @@ GetStarted)</li>
     </li>
     <li><a href="#nrf52840-dongle">nRF52840 Dongle</a>
       <ul>
-        <li><a href="#serial-wire-debug-pinout">Serial wire debug pinout</a></li>
+        <li><a href="#pinout">Pinout</a>
+          <ul>
+            <li><a href="#serial-wire-debug">Serial Wire Debug</a></li>
+            <li><a href="#leds">LEDS</a></li>
+          </ul>
+        </li>
         <li><a href="#pogo-pin-adapter">pogo pin adapter</a></li>
       </ul>
     </li>

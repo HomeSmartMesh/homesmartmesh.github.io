@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.0485ccb2296a4c8b447a11533b66967a837c661359f9bec08576fc50b74178bd.js" integrity="sha256-BIXMsilqTItEehFTO2aWeoN8ZhNZ&#43;b7AhXb8ULdBeL0="></script>
+<script defer src="/en.search.min.0ccfadb4f829b264611c0cddafc1fa5974fc3018de591ef4f65bbcf0b55037a4.js" integrity="sha256-DM&#43;ttPgpsmRhHAzdr8H6WXT8MBjeWR709lu88LVQN6Q="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -726,8 +726,12 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#concept">concept</a>
       <ul>
         <li><a href="#schematics">Schematics</a></li>
-        <li><a href="#board">Board</a></li>
-        <li><a href="#3d-board-model">3D Board model</a></li>
+        <li><a href="#board">Board</a>
+          <ul>
+            <li><a href="#top">Top</a></li>
+            <li><a href="#bottom">Bottom</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li><a href="#firmware">Firmware</a></li>
@@ -983,17 +987,168 @@ https://github.com/alex-shpak/hugo-book
   Schematics
   <a class="anchor" href="#schematics">#</a>
 </h2>
-<p>svg</p>
+
+
+
+<div class="container">
+  <div class="row">
+      <div class="col text-center">
+          <a id="btn-6a12406b91bfd841" class="book-btn" role="button" >Full Screen</a>
+      </div>
+</div>
+<embed id="svg-6a12406b91bfd841" type="image/svg+xml" width=100% src="/images/simplemesh_sensortag/schematics.svg"  style="background-color:white"/>
+<script>
+  function setup_svg_panzoom(){
+    let params = {
+          panEnabled: true,
+          zoomEnabled: true,
+          dblClickZoomEnabled: true,
+          controlIconsEnabled: false,
+          mouseWheelZoomEnabled: true,
+          preventMouseEventsDefault: true,
+          zoomScaleSensitivity: 0.6,
+          minZoom: 0.5,
+          maxZoom: 4,
+           fit: true
+          , contain: true
+          , center: true
+          , refreshRate: 'auto'
+      };
+      let svg_pz = svgPanZoom('#svg-6a12406b91bfd841'        ,params);
+      window["svg_6a12406b91bfd841"] = svg_pz
+      let button = document.getElementById("btn-6a12406b91bfd841");
+      button.onclick = ()=>{
+          var elem = document.getElementById("svg-6a12406b91bfd841");
+          if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+          } else if (elem.webkitRequestFullscreen) {  
+          elem.webkitRequestFullscreen();
+          } else if (elem.msRequestFullscreen) {  
+          elem.msRequestFullscreen();
+          }
+      };
+  }
+  function reset_position(){
+    window["svg_6a12406b91bfd841"].resize()
+    window["svg_6a12406b91bfd841"].fit()
+    window["svg_6a12406b91bfd841"].center()
+  }
+  document.getElementById('svg-6a12406b91bfd841').addEventListener('load', setup_svg_panzoom)
+  window.addEventListener('resize', reset_position)
+ </script>
+
 <h2 id="board">
   Board
   <a class="anchor" href="#board">#</a>
 </h2>
-<p>svg</p>
-<h2 id="3d-board-model">
-  3D Board model
-  <a class="anchor" href="#3d-board-model">#</a>
-</h2>
-<p>glb</p>
+<h3 id="top">
+  Top
+  <a class="anchor" href="#top">#</a>
+</h3>
+
+
+
+<div class="container">
+  <div class="row">
+      <div class="col text-center">
+          <a id="btn-20b964f8115478bc" class="book-btn" role="button" >Full Screen</a>
+      </div>
+</div>
+<embed id="svg-20b964f8115478bc" type="image/svg+xml" width=100% src="/images/simplemesh_sensortag/top.svg"  style="background-color:white"/>
+<script>
+  function setup_svg_panzoom(){
+    let params = {
+          panEnabled: true,
+          zoomEnabled: true,
+          dblClickZoomEnabled: true,
+          controlIconsEnabled: false,
+          mouseWheelZoomEnabled: true,
+          preventMouseEventsDefault: true,
+          zoomScaleSensitivity: 0.6,
+          minZoom: 0.5,
+          maxZoom: 4,
+           fit: true
+          , contain: true
+          , center: true
+          , refreshRate: 'auto'
+      };
+      let svg_pz = svgPanZoom('#svg-20b964f8115478bc'        ,params);
+      window["svg_20b964f8115478bc"] = svg_pz
+      let button = document.getElementById("btn-20b964f8115478bc");
+      button.onclick = ()=>{
+          var elem = document.getElementById("svg-20b964f8115478bc");
+          if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+          } else if (elem.webkitRequestFullscreen) {  
+          elem.webkitRequestFullscreen();
+          } else if (elem.msRequestFullscreen) {  
+          elem.msRequestFullscreen();
+          }
+      };
+  }
+  function reset_position(){
+    window["svg_20b964f8115478bc"].resize()
+    window["svg_20b964f8115478bc"].fit()
+    window["svg_20b964f8115478bc"].center()
+  }
+  document.getElementById('svg-20b964f8115478bc').addEventListener('load', setup_svg_panzoom)
+  window.addEventListener('resize', reset_position)
+ </script>
+
+<h3 id="bottom">
+  Bottom
+  <a class="anchor" href="#bottom">#</a>
+</h3>
+
+
+
+<div class="container">
+  <div class="row">
+      <div class="col text-center">
+          <a id="btn-d7409ce4b8910249" class="book-btn" role="button" >Full Screen</a>
+      </div>
+</div>
+<embed id="svg-d7409ce4b8910249" type="image/svg+xml" width=100% src="/images/simplemesh_sensortag/bottom.svg"  style="background-color:white"/>
+<script>
+  function setup_svg_panzoom(){
+    let params = {
+          panEnabled: true,
+          zoomEnabled: true,
+          dblClickZoomEnabled: true,
+          controlIconsEnabled: false,
+          mouseWheelZoomEnabled: true,
+          preventMouseEventsDefault: true,
+          zoomScaleSensitivity: 0.6,
+          minZoom: 0.5,
+          maxZoom: 4,
+           fit: true
+          , contain: true
+          , center: true
+          , refreshRate: 'auto'
+      };
+      let svg_pz = svgPanZoom('#svg-d7409ce4b8910249'        ,params);
+      window["svg_d7409ce4b8910249"] = svg_pz
+      let button = document.getElementById("btn-d7409ce4b8910249");
+      button.onclick = ()=>{
+          var elem = document.getElementById("svg-d7409ce4b8910249");
+          if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+          } else if (elem.webkitRequestFullscreen) {  
+          elem.webkitRequestFullscreen();
+          } else if (elem.msRequestFullscreen) {  
+          elem.msRequestFullscreen();
+          }
+      };
+  }
+  function reset_position(){
+    window["svg_d7409ce4b8910249"].resize()
+    window["svg_d7409ce4b8910249"].fit()
+    window["svg_d7409ce4b8910249"].center()
+  }
+  document.getElementById('svg-d7409ce4b8910249').addEventListener('load', setup_svg_panzoom)
+  window.addEventListener('resize', reset_position)
+ </script>
+
 <h1 id="firmware">
   Firmware
   <a class="anchor" href="#firmware">#</a>
@@ -1072,8 +1227,12 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#concept">concept</a>
       <ul>
         <li><a href="#schematics">Schematics</a></li>
-        <li><a href="#board">Board</a></li>
-        <li><a href="#3d-board-model">3D Board model</a></li>
+        <li><a href="#board">Board</a>
+          <ul>
+            <li><a href="#top">Top</a></li>
+            <li><a href="#bottom">Bottom</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li><a href="#firmware">Firmware</a></li>
