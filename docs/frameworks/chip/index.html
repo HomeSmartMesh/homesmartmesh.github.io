@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.db4bd033fdb06be8cf8c91291a46c4a2f0dc45bbdde0ebc8d9af458c0f8ff84e.js" integrity="sha256-20vQM/2wa&#43;jPjJEpGkbEovDcRbvd4OvI2a9FjA&#43;P&#43;E4="></script>
+<script defer src="/en.search.min.2d2afe2d86bcf124719505f182b1df71f2db5dd1ec233db34b519bfa56f58ba5.js" integrity="sha256-LSr&#43;LYa88SRxlQXxgrHfcfLbXdHsIz2zS1Gb&#43;lb1i6U="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -722,9 +722,20 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#definition">Definition</a></li>
-    <li><a href="#links">Links</a></li>
-    <li><a href="#tools">Tools</a></li>
+    <li><a href="#overview">Overview</a>
+      <ul>
+        <li><a href="#definition">Definition</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#tools">Tools</a></li>
+      </ul>
+    </li>
+    <li><a href="#nrf-connect-integration">nRF Connect integration</a></li>
+    <li><a href="#building">Building</a>
+      <ul>
+        <li><a href="#default-build">default build</a></li>
+        <li><a href="#building-nrf-lighting-app">building nRF Lighting app</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -736,20 +747,24 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="definition">
+  <article class="markdown"><h1 id="overview">
+  Overview
+  <a class="anchor" href="#overview">#</a>
+</h1>
+<h2 id="definition">
   Definition
   <a class="anchor" href="#definition">#</a>
-</h1>
+</h2>
 <p>We can consider the project CHIP <code>Connected Home Over IP</code> definition as in two folds :</p>
 <ul>
 <li>a takeover of the Zigbee Cluster Library to be fit over the IP layer.</li>
 <li>The abstraction of all different transport protocols with IP</li>
 </ul>
 <p>This will avoid that each transport (e.g. BT, Zigbee) have a custom app layer. It is interesting to notice that the <code>Zigbee Alliance</code> is driving this project whereas Zigbee itself does not map to an IP layer, and therefore <code>Thread</code> is the natural transition from Zigbee as both are 802.15.4 compliant at the bottom and both will keep the same logic of the ZCL that devices are familiar with.</p>
-<h1 id="links">
+<h2 id="links">
   Links
   <a class="anchor" href="#links">#</a>
-</h1>
+</h2>
 
 <div class="container">
     <div class="row">
@@ -833,10 +848,10 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 
-<h1 id="tools">
+<h2 id="tools">
   Tools
   <a class="anchor" href="#tools">#</a>
-</h1>
+</h2>
 <p><strong>ZAP</strong> : ZCL Advaned Platform</p>
 <p><strong>ZCL</strong> : Zigbee Cluster Library</p>
 
@@ -883,7 +898,168 @@ https://github.com/alex-shpak/hugo-book
 
   npm install
   npm run zap
-</code></pre></div></article>
+</code></pre></div><h1 id="nrf-connect-integration">
+  nRF Connect integration
+  <a class="anchor" href="#nrf-connect-integration">#</a>
+</h1>
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/thread_sensortag/chip_nrfconnect_overview_simplified.svg"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
+<p>The above diagram taken from the CHIP repo link in the button below, shows the integration of a CHIP application on top of the nRF Connect SDK.</p>
+<p>The MPSL is only required if needed to combine both bluetooth and Thread. Also the softDevice is only needed for bluetooth but not for Thread.
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/project-chip/connectedhomeip/blob/master/docs/guides/nrfconnect_platform_overview.md"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            Reference in github CHIP repo
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+</p>
+<h1 id="building">
+  Building
+  <a class="anchor" href="#building">#</a>
+</h1>
+<h2 id="default-build">
+  default build
+  <a class="anchor" href="#default-build">#</a>
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/project-chip/connectedhomeip/blob/master/docs/BUILDING.md"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            How to
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone --recurse-submodules https://github.com/project-chip/connectedhomeip.git
+sudo apt-get install git gcc g++ python pkg-config libssl-dev libdbus-1-dev libglib2.0-dev libavahi-client-dev ninja-build python3-venv python3-dev unzip
+source scripts/activate.sh
+gn gen out/custom
+gn args --list out/custom
+</code></pre></div><p>important arguments :</p>
+<ul>
+<li>chip_device_platform : esp32, freertos, linux, nrfconnect,&hellip;</li>
+<li>chip_enable_openthread</li>
+<li>chip_enable_wifi</li>
+<li>target_cpu</li>
+<li>target_os</li>
+</ul>
+<h2 id="building-nrf-lighting-app">
+  building nRF Lighting app
+  <a class="anchor" href="#building-nrf-lighting-app">#</a>
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/project-chip/connectedhomeip/blob/master/examples/lighting-app/nrfconnect/README.md"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            How to
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+</article>
  
       
 
@@ -917,9 +1093,20 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#definition">Definition</a></li>
-    <li><a href="#links">Links</a></li>
-    <li><a href="#tools">Tools</a></li>
+    <li><a href="#overview">Overview</a>
+      <ul>
+        <li><a href="#definition">Definition</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#tools">Tools</a></li>
+      </ul>
+    </li>
+    <li><a href="#nrf-connect-integration">nRF Connect integration</a></li>
+    <li><a href="#building">Building</a>
+      <ul>
+        <li><a href="#default-build">default build</a></li>
+        <li><a href="#building-nrf-lighting-app">building nRF Lighting app</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

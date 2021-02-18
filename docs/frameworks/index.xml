@@ -22,7 +22,7 @@
       <pubDate>Fri, 12 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/chip/</guid>
-      <description>Definition#We can consider the project CHIP Connected Home Over IP definition as in two folds :
+      <description>Overview#Definition#We can consider the project CHIP Connected Home Over IP definition as in two folds :
  a takeover of the Zigbee Cluster Library to be fit over the IP layer. The abstraction of all different transport protocols with IP  This will avoid that each transport (e.g. BT, Zigbee) have a custom app layer. It is interesting to notice that the Zigbee Alliance is driving this project whereas Zigbee itself does not map to an IP layer, and therefore Thread is the natural transition from Zigbee as both are 802.</description>
     </item>
     
