@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.2d2afe2d86bcf124719505f182b1df71f2db5dd1ec233db34b519bfa56f58ba5.js" integrity="sha256-LSr&#43;LYa88SRxlQXxgrHfcfLbXdHsIz2zS1Gb&#43;lb1i6U="></script>
+<script defer src="/en.search.min.e8ad8efd6fc8e26b4ea4d3d13d1a277189f53c2b02cc8859204c3f3b51709df8.js" integrity="sha256-6K2O/W/I4mtOpNPRPRoncYn1PCsCzIhZIEw/O1Fwnfg="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -112,6 +112,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="https://www.homesmartmesh.com/docs/frameworks/home_assistant/" class="">Home Assistant</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://www.homesmartmesh.com/docs/frameworks/zephyr/" class="">Zephyr RTOS</a>
   
 
         </li>
@@ -730,12 +743,14 @@ https://github.com/alex-shpak/hugo-book
       </ul>
     </li>
     <li><a href="#nrf-connect-integration">nRF Connect integration</a></li>
-    <li><a href="#building">Building</a>
+    <li><a href="#linux">Linux</a>
       <ul>
-        <li><a href="#default-build">default build</a></li>
-        <li><a href="#building-nrf-lighting-app">building nRF Lighting app</a></li>
+        <li><a href="#install">install</a></li>
+        <li><a href="#build-lighting-app">build lighting app</a></li>
+        <li><a href="#build-default">build default</a></li>
       </ul>
     </li>
+    <li><a href="#windows">Windows</a></li>
   </ul>
 </nav>
 
@@ -960,13 +975,165 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 </p>
-<h1 id="building">
-  Building
-  <a class="anchor" href="#building">#</a>
+<h1 id="linux">
+  Linux
+  <a class="anchor" href="#linux">#</a>
 </h1>
-<h2 id="default-build">
-  default build
-  <a class="anchor" href="#default-build">#</a>
+<h2 id="install">
+  install
+  <a class="anchor" href="#install">#</a>
+</h2>
+<ul>
+<li>
+<p>Step 1, install Zephyr
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+            
+                href="https://www.homesmartmesh.com/docs/frameworks/zephyr/"
+            
+            role="button"
+        >
+            Install Zephyr
+            
+            
+        </a>
+    </div>
+    </div>
+</div>
+</p>
+</li>
+<li>
+<p>Step 2, install the toolchain
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/gs_installing.html#installing-the-toolchain"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            install the toolchain
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nano ~/.zephyrrc
+export ZEPHYR_TOOLCHAIN_VARIANT<span style="color:#f92672">=</span>gnuarmemb
+export GNUARMEMB_TOOLCHAIN_PATH<span style="color:#f92672">=</span>~/gnuarmemb/gcc-arm-none-eabi-9-2019-q4-major/
+</code></pre></div><ul>
+<li>Step 2, install nRF Connect SDK
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/gs_installing.html"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            install nRF Connect SDK
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir ~/ncs <span style="color:#f92672">&amp;&amp;</span> cd ~/ncs
+west init -m https://github.com/nrfconnect/sdk-nrf --mr v1.4.0
+west update
+west zephyr-export
+pip3 install --user -r zephyr/scripts/requirements.txt
+pip3 install --user -r nrf/scripts/requirements.txt
+pip3 install --user -r bootloader/mcuboot/scripts/requirements.txt
+</code></pre></div><p>then on every new session</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd ncs
+source zephyr/zephyr-env.sh
+</code></pre></div><ul>
+<li>step 3, from the same link above install gn</li>
+</ul>
+<h2 id="build-lighting-app">
+  build lighting app
+  <a class="anchor" href="#build-lighting-app">#</a>
+</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd connectedhomeip/examples/lighting-app/nrfconnect
+west build -b nrf52840dongle_nrf52840
+west flash
+nrfjprog --program build/zephyr/zephyr.hex -f NRF52
+</code></pre></div><p>configure</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">west build -b nrf52840dongle_nrf52840 -t menuconfig
+</code></pre></div><h2 id="build-default">
+  build default
+  <a class="anchor" href="#build-default">#</a>
 </h2>
 
 <div class="container">
@@ -1018,10 +1185,10 @@ gn args --list out/custom
 <li>target_cpu</li>
 <li>target_os</li>
 </ul>
-<h2 id="building-nrf-lighting-app">
-  building nRF Lighting app
-  <a class="anchor" href="#building-nrf-lighting-app">#</a>
-</h2>
+<h1 id="windows">
+  Windows
+  <a class="anchor" href="#windows">#</a>
+</h1>
 
 <div class="container">
     <div class="row">
@@ -1058,6 +1225,49 @@ gn args --list out/custom
     </div>
     </div>
 </div>
+
+<ul>
+<li>clone connectedhomeip repo</li>
+<li>install nRF Connect SDK v1.4.0</li>
+<li>configure the toolchain
+<ul>
+<li><code>ZEPHYR_TOOLCHAIN_VARIANT</code> to <code>gnuarmemb</code></li>
+<li><code>GNUARMEMB_TOOLCHAIN_PATH</code> to <code>D:\tools\gnu_arm_embedded\9_2020-q2-update</code></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd"><span style="color:#66d9ef">cd</span> connectedhomeip\examples\lighting-app\nrfconnect
+<span style="color:#e6db74">&#34;D:\tools\nrf\v1.4.0\zephyr\zephyr-env.cmd&#34;</span>
+west build -b nrf52840dongle_nrf52840
+
+</code></pre></div><details >
+  <summary>build error on windows</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">D:\Projects\connectedhomeip\examples\lighting-app\nrfconnect<span style="color:#75715e">&gt;west build -b nrf52840dongle_nrf52840</span>
+-- west build: generating a build system
+Including boilerplate (Zephyr base): D:/tools/nrf/v1.4.0/zephyr/cmake/app/boilerplate.cmake
+-- Application: D:/Projects/connectedhomeip/examples/lighting-app/nrfconnect
+-- Using NCS Toolchain 1.4.0 for building. (D:/tools/nrf/v1.4.99-dev1/toolchain/cmake)
+-- Zephyr version: 2.4.0 (D:/tools/nrf/v1.4.0/zephyr)
+-- Found Python3: D:/tools/nrf/v1.4.99-dev1/toolchain/opt/bin/python.exe (found suitable exact version <span style="color:#e6db74">&#34;3.8.2&#34;</span>) found components: Interpreter
+-- Found west (found suitable version <span style="color:#e6db74">&#34;0.7.2&#34;</span>, minimum required is <span style="color:#e6db74">&#34;0.7.1&#34;</span>)
+CMake Error at D:/tools/nrf/v1.4.0/zephyr/cmake/zephyr_module.cmake:48 (message):
+
+  D:/Projects/connectedhomeip/examples/lighting-app/nrfconnect/third_party/connectedhomeip/config/nrfconnect/chip-module,
+  given in ZEPHYR_EXTRA_MODULES, is not a valid zephyr module
+
+<span style="color:#66d9ef">Call</span> Stack (most recent call first):
+  D:/tools/nrf/v1.4.0/zephyr/cmake/app/boilerplate.cmake:150 (include)
+  D:/tools/nrf/v1.4.0/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:24 (include)
+  D:/tools/nrf/v1.4.0/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:35 (include_boilerplate)
+  CMakeLists.txt:26 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+FATAL ERROR: command exited with status 1: &#39;C:\Program Files\CMake\bin\cmake.EXE&#39; &#39;-DWEST_PYTHON=c:\users\user\appdata\local\programs\python\python39\python.exe&#39; &#39;-BD:\Projects\connectedhomeip\examples\lighting-app\nrfconnect\build&#39; &#39;-SD:\Projects\connectedhomeip\examples\lighting-app\nrfconnect&#39; -GNinja -DBOARD=nrf52840dongle_nrf52840
+</code></pre></div>
+  </div>
+</details>
 
 </article>
  
@@ -1101,12 +1311,14 @@ gn args --list out/custom
       </ul>
     </li>
     <li><a href="#nrf-connect-integration">nRF Connect integration</a></li>
-    <li><a href="#building">Building</a>
+    <li><a href="#linux">Linux</a>
       <ul>
-        <li><a href="#default-build">default build</a></li>
-        <li><a href="#building-nrf-lighting-app">building nRF Lighting app</a></li>
+        <li><a href="#install">install</a></li>
+        <li><a href="#build-lighting-app">build lighting app</a></li>
+        <li><a href="#build-default">build default</a></li>
       </ul>
     </li>
+    <li><a href="#windows">Windows</a></li>
   </ul>
 </nav>
 

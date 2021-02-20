@@ -199,6 +199,16 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in 
     </item>
     
     <item>
+      <title>Zephyr RTOS</title>
+      <link>https://www.homesmartmesh.com/docs/frameworks/zephyr/</link>
+      <pubDate>Sat, 20 Feb 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/frameworks/zephyr/</guid>
+      <description>Windows#Install#Getting Started details...The details are in the link above, the summary of the step for installing on windows are
+ Installing choco Installing west dependencies with choco installing west with pip the retrieving the repo and building are performed through west The compiler toolchain as multiple options  Zephyr own SDK, not available on windows GNU ARM Embedded : to be installed on a path without spaces    e.</description>
+    </item>
+    
+    <item>
       <title>Handbag hanger</title>
       <link>https://www.homesmartmesh.com/docs/3dprinting/handbag_hanger/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
