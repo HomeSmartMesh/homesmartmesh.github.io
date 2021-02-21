@@ -5,18 +5,18 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Relates to#Zephyr RTOSProject CHIPOverview#Full Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.6,minZoom: 0.5,maxZoom: 4,fit: true, contain: true, center: true, refreshRate: &#39;auto&#39;};let svg_pz = svgPanZoom(&#39;#svg-99adc38e71d7d1e9&#39; ,params);window[&#34;svg_99adc38e71d7d1e9&#34;] = svg_pzlet button = document.">
+<meta name="description" content="Build and setup instruction for a Thread network. Compilation from different platforms comapatible with the nRF dongle">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Thread" />
-<meta property="og:description" content="Relates to#Zephyr RTOSProject CHIPOverview#Full Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.6,minZoom: 0.5,maxZoom: 4,fit: true, contain: true, center: true, refreshRate: &#39;auto&#39;};let svg_pz = svgPanZoom(&#39;#svg-99adc38e71d7d1e9&#39; ,params);window[&#34;svg_99adc38e71d7d1e9&#34;] = svg_pzlet button = document." />
+<meta property="og:description" content="Build and setup instruction for a Thread network. Compilation from different platforms comapatible with the nRF dongle" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.homesmartmesh.com/docs/networks/thread/" />
 <meta property="article:published_time" content="2020-10-06T08:48:57+00:00" />
-<meta property="article:modified_time" content="2020-10-06T08:48:57+00:00" />
+<meta property="article:modified_time" content="2021-02-21T08:48:57+00:00" />
 <title>Thread | Home Smart Mesh</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.138469fa78b507d4d2e8f8e2c0e53761c140b1827e289d6e217d3b6de0414d3a.js" integrity="sha256-E4Rp&#43;ni1B9TS6PjiwOU3YcFAsYJ&#43;KJ1uIX07beBBTTo="></script>
+<script defer src="/en.search.min.31540225db3a72b152a0300e1fb6a98b63fbda4d0fa4b625a8ca1472d9632bb0.js" integrity="sha256-MVQCJds6crFSoDAOH7api2P72k0PpLYlqMoUctljK7A="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -759,6 +759,7 @@ https://github.com/alex-shpak/hugo-book
     </li>
     <li><a href="#radio-co-processor-rcp">Radio Co-Processor (RCP)</a>
       <ul>
+        <li><a href="#openthread">OpenThread</a></li>
         <li><a href="#zephyr-v2599">Zephyr v2.5.99</a></li>
       </ul>
     </li>
@@ -772,17 +773,8 @@ https://github.com/alex-shpak/hugo-book
     </li>
     <li><a href="#border-router">Border Router</a>
       <ul>
-        <li>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
-        <li><a href="#server-setup">Server Setup</a>
-          <ul>
-            <li><a href="#nordic---sdcard-image">Nordic - sdcard image</a></li>
-            <li><a href="#openthread---docker">OpenThread - docker</a></li>
-          </ul>
-        </li>
+        <li><a href="#openthread---docker">OpenThread - docker</a></li>
+        <li><a href="#nordic---sdcard-image">Nordic - sdcard image</a></li>
         <li><a href="#form-a-network">Form a network</a></li>
         <li><a href="#wireshark-sniffing">wireshark sniffing</a></li>
       </ul>
@@ -1457,7 +1449,7 @@ https://github.com/alex-shpak/hugo-book
 <p>A Thread network setup contains the following Nodes</p>
 <ul>
 <li>
-<p>network co.processor : dongle connected to the raspberry pi</p>
+<p>radio or network coprocessor : dongle connected to the raspberry pi</p>
 </li>
 <li>
 <p>border router host : services running on a raspberry pi</p>
@@ -1479,12 +1471,65 @@ https://github.com/alex-shpak/hugo-book
   Radio Co-Processor (RCP)
   <a class="anchor" href="#radio-co-processor-rcp">#</a>
 </h1>
-<p>This is the new version recommended by OpenThread for current and new versions aof border routers</p>
-<h2 id="zephyr-v2599">
+<p>This is the new version recommended by OpenThread for current and new versions aof border routers, see <a href="https://openthread.io/platforms#radio-co-processor-rcp">Vendor support RCP</a> for details.</p>
+<h2 id="openthread">
+  OpenThread
+  <a class="anchor" href="#openthread">#</a>
+</h2>
+<ul>
+<li>successfully tested with the <a href="#openthread---docker">OpenThread docker</a> raspberry pi image blow.</li>
+</ul>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/openthread/openthread/tree/master/examples/platforms/nrf528xx/nrf52840"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            nRF52840 Build instructions
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd ~/opentrhead
+./script/bootstrap
+make distclean
+make -f examples/Makefile-nrf52840 USB<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+arm-none-eabi-objcopy -O ihex output/nrf52840/bin/ot-rcp ~/share/ot-rcp.hex
+nrfjprog -f nrf52 --program ot-rcp.hex --sectorerase --verify
+</code></pre></div><h2 id="zephyr-v2599">
   Zephyr v2.5.99
   <a class="anchor" href="#zephyr-v2599">#</a>
 </h2>
 <ul>
+<li>
+<p>current status <code>Failing</code></p>
+</li>
 <li>
 <p>Zephyr version <code>2.5.99</code> has a <code>coprocessor</code> directory replacing the old <code>ncp</code></p>
 </li>
@@ -1516,10 +1561,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd zephyrproject/zephyr/samples/net/openthread/coprocessor
 west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prj.conf overlay-rcp.conf overlay-usb-nrf-br.conf&#34;</span>
-</code></pre></div><ul>
-<li>current status <code>Failed</code></li>
-</ul>
-<details >
+</code></pre></div><details >
   <summary>error details...</summary>
   <div class="markdown-inner">
     <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">FAILED: zephyr/CMakeFiles/zephyr.dir/drivers/ieee802154/ieee802154_nrf5.c.obj
@@ -1539,7 +1581,7 @@ FATAL ERROR: command exited with status 1: <span style="color:#e6db74">&#39;C:\P
   Network Co-Processor (NCP)
   <a class="anchor" href="#network-co-processor-ncp">#</a>
 </h1>
-<p>Note, see the RCP version above for recent border routers. Given the open source nature of OpenThread, it is quite challenging to find the right build instructions and version match to the right border router. Different NCP versions are listed here</p>
+<p>Note, see the RCP version above for recent border routers. Given the open source nature of OpenThread, it is quite challenging to find the right build instructions and version match to the right border router. See <a href="https://openthread.io/platforms#network-co-processor-ncp">Vendor support NCP</a> for mode details. Different NCP versions are listed here.</p>
 <h2 id="nordic---nrf-410">
   Nordic - nRF 4.1.0
   <a class="anchor" href="#nordic---nrf-410">#</a>
@@ -1736,9 +1778,10 @@ west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">
   Open Thread
   <a class="anchor" href="#open-thread">#</a>
 </h2>
-<p>Available pre-build firmware from <a href="https://openthread.io/platforms/co-processor/firmware">this page</a> is <code>ncp</code> not <code>rcp</code>therefore results in thsi error</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">a82cab962603 otbr-agent<span style="color:#f92672">[</span>196<span style="color:#f92672">]</span>: <span style="color:#f92672">[</span>CRIT<span style="color:#f92672">]</span>-PLAT----: Init<span style="color:#f92672">()</span> at ../../third_party/openthread/repo/src/lib/spinel/radio_spinel_impl.hpp:255: RadioSpinelIncompatible
-</code></pre></div>
+<ul>
+<li>Available pre-build ncp firmware</li>
+</ul>
+
 <div class="container">
     <div class="row">
         <div class="col text-center">
@@ -1785,143 +1828,19 @@ west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">
 </div>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">nrfjprog -f nrf52 --program ot-ncp-ftd-gd81d769e-nrf52840.hex --sectorerase --verify
-</code></pre></div><p>As explained in <a href="https://github.com/openthread/ot-br-posix/issues/642">this ticket</a>, rcp not ncp has to be built and used</p>
-<blockquote class="book-hint warning">
-  I could not find build instructions, e.g. missing tools &lsquo;aclocal&rsquo;,&hellip; the &lsquo;OpenThread&rsquo; BR is at the moment not yet tested
-</blockquote>
-
+</code></pre></div><ul>
+<li>for build instructions see the rcp building steps in the <a href="#openthread">rcp OpenThread</a> section, the build commands generates both npc and rcp elf files.</li>
+</ul>
 <h1 id="border-router">
   Border Router
   <a class="anchor" href="#border-router">#</a>
 </h1>
-<ul>
-<li>Border router solutions available from <code>Nordic</code> and from <code>Open Thread</code>.</li>
-<li>A border router requires
-<ul>
-<li>a USB dongle as <code>Network Co-Processor</code></li>
-<li>a <code>server</code> in our case on a raspberry pi</li>
-</ul>
-</li>
-</ul>
-<h4 id="manual-build">
-  Manual Build
-  <a class="anchor" href="#manual-build">#</a>
-</h4>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://openthread.io/guides/build#how_to_build_openthread"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            How to build
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  git clone https://github.com/openthread/openthread
-  sudo ./script/bootstrap
-  ./bootstrap
-  ./configure --enable-cli --enable-radio-only
-  make
-</code></pre></div><h2 id="server-setup">
-  Server Setup
-  <a class="anchor" href="#server-setup">#</a>
-</h2>
-<h3 id="nordic---sdcard-image">
-  Nordic - sdcard image
-  <a class="anchor" href="#nordic---sdcard-image">#</a>
-</h3>
-<ul>
-<li>download a ready raspberry pi image</li>
-<li>successfully tested with the Nordif Firmware from the SDK v4.1.0</li>
-</ul>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK-for-Thread-and-Zigbee/Download#infotabs"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            Download the nRF5 SDK for Thread and Zigbee...
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<h3 id="openthread---docker">
+<h2 id="openthread---docker">
   OpenThread - docker
   <a class="anchor" href="#openthread---docker">#</a>
-</h3>
+</h2>
 <ul>
-<li>Not successfull yet, even with the pre-built binaries available on the OpenThread website</li>
+<li>successfully tested with the OpenThread dongle firmware <a href="#openthread">detailed above</a></li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run --sysctl <span style="color:#e6db74">&#34;net.ipv6.conf.all.disable_ipv6=0 \
 </span><span style="color:#e6db74">        net.ipv4.conf.all.forwarding=1 net.ipv6.conf.all.forwarding=1&#34;</span> <span style="color:#ae81ff">\
@@ -1941,6 +1860,60 @@ west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">
             role="button"
         >
             More details on &#39;Run OTBR Docker&#39;...
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<h2 id="nordic---sdcard-image">
+  Nordic - sdcard image
+  <a class="anchor" href="#nordic---sdcard-image">#</a>
+</h2>
+<ul>
+<li>download a ready raspberry pi image</li>
+<li>successfully tested with the Nordif Firmware from the SDK v4.1.0</li>
+</ul>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK-for-Thread-and-Zigbee/Download#infotabs"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            Download the nRF5 SDK for Thread and Zigbee...
             
             
                 
@@ -2696,6 +2669,7 @@ west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">
     </li>
     <li><a href="#radio-co-processor-rcp">Radio Co-Processor (RCP)</a>
       <ul>
+        <li><a href="#openthread">OpenThread</a></li>
         <li><a href="#zephyr-v2599">Zephyr v2.5.99</a></li>
       </ul>
     </li>
@@ -2709,17 +2683,8 @@ west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">
     </li>
     <li><a href="#border-router">Border Router</a>
       <ul>
-        <li>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
-        <li><a href="#server-setup">Server Setup</a>
-          <ul>
-            <li><a href="#nordic---sdcard-image">Nordic - sdcard image</a></li>
-            <li><a href="#openthread---docker">OpenThread - docker</a></li>
-          </ul>
-        </li>
+        <li><a href="#openthread---docker">OpenThread - docker</a></li>
+        <li><a href="#nordic---sdcard-image">Nordic - sdcard image</a></li>
         <li><a href="#form-a-network">Form a network</a></li>
         <li><a href="#wireshark-sniffing">wireshark sniffing</a></li>
       </ul>
