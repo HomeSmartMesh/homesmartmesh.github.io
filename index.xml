@@ -47,7 +47,7 @@ Final application#This repository has boilerplates samples. A real use case e
     </item>
     
     <item>
-      <title>raspi IoT</title>
+      <title>Raspi IoT</title>
       <link>https://www.homesmartmesh.com/docs/frameworks/raspi_iot/</link>
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
@@ -61,7 +61,8 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/networks/nrf/</guid>
-      <description>Simple Mesh SensorTagSimple Mesh RepoFeatures#     2.4 GHz 2 Mbps Mesh Network  tested with 300 packets / second   Flash time automated database config Zero install time configuration  No association, No pairing, No factory resets   Router = Coordinator = Repeater = Sniffer = CLI text serial line protocol Multiple Network endpoints  No single point of failure   Server, Dongles, Sensors  Full Stack Open Source (no softdevices required) HW On the shelves optional DIY HW   Alive trace routing  a heartbeat message that gives info about the age and RF tx/rx hops through the route    see below the Drivers &amp;amp; Custom Mesh protocol section for the RF Protocol details</description>
+      <description>Simple Mesh Overview#A simpler, more efficient alternative to Z-x, BL-x, Thread, standard RF protocols. Open source SW is provided for custom and off the shelf nRF SoC tags and dongles.
+Simple Mesh SensorTagSimple Mesh RepoFeatures#     2.4 GHz 2 Mbps Mesh Network  tested with 300 packets / second   Flash time automated database config Zero install time configuration  No association, No pairing, No factory resets   Router = Coordinator = Repeater = Sniffer = CLI text serial line protocol Multiple Network endpoints  No single point of failure   Server, Dongles, Sensors  Full Stack Open Source (no softdevices required) HW On the shelves optional DIY HW   Alive trace routing  a heartbeat message that gives info about the age and RF tx/rx hops through the route    see below the Drivers &amp;amp; Custom Mesh protocol section for the RF Protocol details</description>
     </item>
     
     <item>
@@ -79,7 +80,8 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</guid>
-      <description>Networks / Simple MeshFrameworks / Raspi IoTconcept#board render
+      <description>Networks / Simple MeshFrameworks / Raspi IoTConcept#It is possible to mount either CR2032 or CR2477
+Hardware#board render
 repo directorynRF52832BME280MAX44009Schematics#Full Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.</description>
     </item>
     
@@ -89,8 +91,8 @@ repo directorynRF52832BME280MAX44009Schematics#Fu
       <pubDate>Fri, 12 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/chip/</guid>
-      <description>Overview#Definition#We can consider the project CHIP Connected Home Over IP definition as in two folds :
- a takeover of the Zigbee Cluster Library to be fit over the IP layer. The abstraction of all different transport protocols with IP  This will avoid that each transport (e.g. BT, Zigbee) have a custom app layer. It is interesting to notice that the Zigbee Alliance is driving this project whereas Zigbee itself does not map to an IP layer, and therefore Thread is the natural transition from Zigbee as both are 802.</description>
+      <description>Relates to#Zephyr RTOSThread ProtocolOverview#Definition#We can consider the project CHIP Connected Home Over IP definition as in two folds :
+ a takeover of the Zigbee Cluster Library to be fit over the IP layer. The abstraction of all different transport protocols with IP  This will avoid that each transport (e.</description>
     </item>
     
     <item>
@@ -140,15 +142,12 @@ commitnRF52840MS88SF2MS86072VEML6030Schematic
     </item>
     
     <item>
-      <title>Zigbee</title>
-      <link>https://www.homesmartmesh.com/docs/networks/zigbee/</link>
+      <title>Thread</title>
+      <link>https://www.homesmartmesh.com/docs/networks/thread/</link>
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
-      <guid>https://www.homesmartmesh.com/docs/networks/zigbee/</guid>
-      <description>Devices Overview#Below are examples of used devices in this project
-  As in the above figure, I kept all the light with the hue gateway for a reliable function, and opted for zigbee2mqtt for all other non lighting devices.
-For a detailed list of used devices and their documentation see the devices list section
-Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in a local network, therefore allowing third party apps integration.</description>
+      <guid>https://www.homesmartmesh.com/docs/networks/thread/</guid>
+      <description>Relates to#Zephyr RTOSProject CHIPOverview#Full Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.6,minZoom: 0.5,maxZoom: 4,fit: true, contain: true, center: true, refreshRate: &#39;auto&#39;};let svg_pz = svgPanZoom(&#39;#svg-99adc38e71d7d1e9&#39; ,params);window[&#34;svg_99adc38e71d7d1e9&#34;] = svg_pzlet button = document.</description>
     </item>
     
     <item>
@@ -190,12 +189,27 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in 
     </item>
     
     <item>
-      <title>Thread</title>
-      <link>https://www.homesmartmesh.com/docs/networks/thread/</link>
+      <title>Zigbee</title>
+      <link>https://www.homesmartmesh.com/docs/networks/zigbee/</link>
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
-      <guid>https://www.homesmartmesh.com/docs/networks/thread/</guid>
-      <description>Full Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.6,minZoom: 0.5,maxZoom: 4,fit: true, contain: true, center: true, refreshRate: &#39;auto&#39;};let svg_pz = svgPanZoom(&#39;#svg-99adc38e71d7d1e9&#39; ,params);window[&#34;svg_99adc38e71d7d1e9&#34;] = svg_pzlet button = document.getElementById(&#34;btn-99adc38e71d7d1e9&#34;);button.onclick = ()={var elem = document.getElementById(&#34;svg-99adc38e71d7d1e9&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.</description>
+      <guid>https://www.homesmartmesh.com/docs/networks/zigbee/</guid>
+      <description>Devices Overview#Below are examples of used devices in this project
+  As in the above figure, I kept all the light with the hue gateway for a reliable function, and opted for zigbee2mqtt for all other non lighting devices.
+For a detailed list of used devices and their documentation see the devices list section
+Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in a local network, therefore allowing third party apps integration.</description>
+    </item>
+    
+    <item>
+      <title>nRF52832 UART dongle</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/uart_dongle/</link>
+      <pubDate>Sun, 21 Feb 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/uart_dongle/</guid>
+      <description>Board#A usb dongle from the market that includes a 2104 serial to usb converter. Keyword search on shopping websites : nRF52832 USB dongle. Aka &amp;ldquo;nRF52832-YJ-17017-USB-UART&amp;rdquo;
+Software#RF to Serial Gateway#The node connected through serial port will report messages in text format
+ Local Events  Upon startup such message is sent
+nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_listening the node starts acting as a gatewy that will report messages through serial in text mode</description>
     </item>
     
     <item>
@@ -204,7 +218,7 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in 
       <pubDate>Sat, 20 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/zephyr/</guid>
-      <description>Windows#Install#Getting Started details...The details are in the link above, the summary of the step for installing on windows are
+      <description>Relates to#Thread ProtocolProject CHIPWindows#Install#Getting Started details...The details are in the link above, the summary of the step for installing on windows are
  Installing choco Installing west dependencies with choco installing west with pip the retrieving the repo and building are performed through west The compiler toolchain as multiple options  Zephyr own SDK, not available on windows GNU ARM Embedded : to be installed on a path without spaces    e.</description>
     </item>
     

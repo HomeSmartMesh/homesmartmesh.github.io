@@ -5,18 +5,19 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Categories" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.homesmartmesh.com/categories/" />
-
-<title>Categories | Home Smart Mesh</title>
+<meta name="description" content="nRF52832 with SIL2104 UART to USB converter">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="nRF52832 UART dongle" />
+<meta property="og:description" content="nRF52832 with SIL2104 UART to USB converter" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/uart_dongle/" />
+<meta property="og:image" content="https://www.homesmartmesh.com/images/nrf_usb_dongle.png" />
+<meta property="article:published_time" content="2021-02-21T08:00:00+00:00" />
+<meta property="article:modified_time" content="2021-02-21T08:00:00+00:00" />
+<title>nRF52832 UART dongle | Home Smart Mesh</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
 <script defer src="/en.search.min.138469fa78b507d4d2e8f8e2c0e53761c140b1827e289d6e217d3b6de0414d3a.js" integrity="sha256-E4Rp&#43;ni1B9TS6PjiwOU3YcFAsYJ&#43;KJ1uIX07beBBTTo="></script>
-<link rel="alternate" type="application/rss+xml" href="https://www.homesmartmesh.com/categories/index.xml" title="Home Smart Mesh" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -190,7 +191,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-12172a40edce1e57d2d7d6a535923101" class="toggle"  />
+    <input type="checkbox" id="section-12172a40edce1e57d2d7d6a535923101" class="toggle" checked />
     <label for="section-12172a40edce1e57d2d7d6a535923101" class="flex justify-between">
       <a href="https://www.homesmartmesh.com/docs/microcontrollers/" class="">Microcontrollers</a>
       <span>▾</span>
@@ -408,7 +409,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/uart_dongle/" class="">nRF52832 UART dongle</a>
+    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/uart_dongle/" class=" active">nRF52832 UART dongle</a>
   
 
         </li>
@@ -733,7 +734,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Categories</strong>
+  <strong>nRF52832 UART dongle</strong>
 
   <label for="toc-control">
     
@@ -746,27 +747,33 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
+  <nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
+    <li><a href="#board">Board</a></li>
+    <li><a href="#software">Software</a>
       <ul>
-      
+        <li><a href="#rf-to-serial-gateway">RF to Serial Gateway</a>
+          <ul>
+            <li><a href="#command-examples">Command examples</a></li>
+            <li><a href="#switch-between-serial-serial-and-log-over-uart">Switch between serial SERIAL and LOG over UART</a></li>
+            <li><a href="#serial-mode">Serial mode</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
+    <li><a href="#flashing">Flashing</a>
       <ul>
-      
+        <li><a href="#outside">outside</a></li>
+        <li><a href="#inside">inside</a>
+          <ul>
+            <li><a href="#components-side">Components side</a></li>
+            <li><a href="#swdio-pins-side">SWDIO pins side</a></li>
+          </ul>
+        </li>
+        <li><a href="#pinout">pinout</a></li>
+        <li><a href="#needle-adapter">Needle adapter</a></li>
       </ul>
     </li>
-    
-  
   </ul>
 </nav>
 
@@ -778,11 +785,351 @@ https://github.com/alex-shpak/hugo-book
 
       
       
+  <article class="markdown"><h1 id="board">
+  Board
+  <a class="anchor" href="#board">#</a>
+</h1>
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/dongle.png"
+    alt=""
+    width="200"
+    height=""
+    decoding="async"
+  />
+  </a>
   
+</div>
 
+<p>A usb dongle from the market that includes a <strong>2104</strong> serial to usb converter. Keyword search on shopping websites : <strong>nRF52832 USB dongle</strong>. Aka &ldquo;nRF52832-YJ-17017-USB-UART&rdquo;</p>
+<h1 id="software">
+  Software
+  <a class="anchor" href="#software">#</a>
+</h1>
+<h2 id="rf-to-serial-gateway">
+  RF to Serial Gateway
+  <a class="anchor" href="#rf-to-serial-gateway">#</a>
+</h2>
+<p>The node connected through serial port will report messages in text format</p>
+<ol>
+<li>Local Events</li>
+</ol>
+<p>Upon startup such message is sent</p>
+<pre><code>nodeid:75;channel:10;reset:1
+</code></pre>
+<ol start="2">
+<li>Listening</li>
+</ol>
+<p>Upon activation of the uicr config <code>is_listening</code> the node starts acting as a gatewy that will report messages through serial in text mode</p>
+<pre><code>rssi:-50;id:73;ctrl:0x81;src:73;alive:68;tx_power:0
+</code></pre>
+<ol start="3">
+<li>commands requests and responses</li>
+</ol>
+<p>It is possible to reconfigure the Node on runtime and manage manage a mesh network by sending messages</p>
+<pre><code>cmd:0x0102
+cmd:0x&lt;command id&gt;&lt;arguments&gt;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Command id</th>
+<th>Function</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x01</td>
+<td>Set Node Id</td>
+<td>Node Mesh Short Identifier</td>
+</tr>
+<tr>
+<td>0x02</td>
+<td>Get Node Id</td>
+<td></td>
+</tr>
+<tr>
+<td>0x03</td>
+<td>Set RF Channel</td>
+<td>0:2400 MHz - 100:2500 MHz</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>Get RF Channel</td>
+<td></td>
+</tr>
+<tr>
+<td>0x05</td>
+<td>Set Tx Power</td>
+<td>0x04: +4dBm - 0xD8: -40dBm</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>Get Tx Power</td>
+<td></td>
+</tr>
+<tr>
+<td>0x07</td>
+<td>Set Bitrate</td>
+<td>tbd</td>
+</tr>
+<tr>
+<td>0x08</td>
+<td>Get Bitrate</td>
+<td></td>
+</tr>
+<tr>
+<td>0x09</td>
+<td>Set CRC</td>
+<td>0 : No CRC - 1 : 8bit - 2 : 16 bit</td>
+</tr>
+<tr>
+<td>0x0A</td>
+<td>Get CRC</td>
+<td></td>
+</tr>
+<tr>
+<td>0x0B</td>
+<td>Set UICR</td>
+<td>used uicr registers</td>
+</tr>
+<tr>
+<td>0x0C</td>
+<td>Get UICR</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="command-examples">
+  Command examples
+  <a class="anchor" href="#command-examples">#</a>
+</h3>
+<p>Set channel 10/0x0A</p>
+<pre><code>cmd:0x030A
+</code></pre>
+<p>get channel</p>
+<pre><code>cmd:0x04
+</code></pre>
+<p>Set Tx Power to  -4dBm/0xFC</p>
+<pre><code>cmd:0x05FC
+</code></pre>
+<p>Set UICR e.g. RF Channel @ CUSTOMER[1] to channel 10</p>
+<pre><code>cmd:0x0B010A
+</code></pre>
+<p>Send message, directed (not broadcast) with ttl = 2, ping(75/0x4B) from 73/0x49</p>
+<pre><code>msg:0x7201494B
+</code></pre>
+<p>Send message to execute on the RF target node 75/0x4B the command Set Tx Power to -4 dBm</p>
+<pre><code>msg:0x72EC494B05FC
+</code></pre>
+<p>Send message to execute on the RF target node 75/0x4B the command Set channel to 0x0A</p>
+<pre><code>msg:0x72EC494B030A
+</code></pre>
+<p>Send request to execute on the RF target node 75/0x4B the command Set channel to 0x0A
+The only difference to the previous example is that an intermediate ack for the request is not required before getting the response</p>
+<pre><code>msg:0x22EC494B030A
+</code></pre>
+<h3 id="switch-between-serial-serial-and-log-over-uart">
+  Switch between serial SERIAL and LOG over UART
+  <a class="anchor" href="#switch-between-serial-serial-and-log-over-uart">#</a>
+</h3>
+<p>run</p>
+<pre><code>make conf
+</code></pre>
+<p>then switch both flags :</p>
+<ul>
+<li>nRF_Log/NRF_LOG_BACKEND_UART_ENABLED</li>
+<li>Application/APP_SERIAL_ENABLED
+don&rsquo;t forget to save</li>
+</ul>
+<h3 id="serial-mode">
+  Serial mode
+  <a class="anchor" href="#serial-mode">#</a>
+</h3>
+<ul>
+<li>
+<p>NRF_SERIAL_MODE_IRQ flag is not used by the driver and has equivalent function as NRF_SERIAL_MODE_DMA</p>
+</li>
+<li>
+<p>ser_send() must be used with a variable in memory as DMA cannot read from Code in Flash</p>
+</li>
+</ul>
+<h1 id="flashing">
+  Flashing
+  <a class="anchor" href="#flashing">#</a>
+</h1>
+<h2 id="outside">
+  outside
+  <a class="anchor" href="#outside">#</a>
+</h2>
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/dongle.png"
+    alt=""
+    width="200"
+    height=""
+    decoding="async"
+  />
+  </a>
   
+</div>
+
+<h2 id="inside">
+  inside
+  <a class="anchor" href="#inside">#</a>
+</h2>
+<h3 id="components-side">
+  Components side
+  <a class="anchor" href="#components-side">#</a>
+</h3>
 
 
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/components.png"
+    alt=""
+    width="300"
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
+<h3 id="swdio-pins-side">
+  SWDIO pins side
+  <a class="anchor" href="#swdio-pins-side">#</a>
+</h3>
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/back_swdio.png"
+    alt=""
+    width="300"
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
+<h2 id="pinout">
+  pinout
+  <a class="anchor" href="#pinout">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th>nRF52</th>
+<th>pin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rx</td>
+<td>P0.05</td>
+</tr>
+<tr>
+<td>Tx</td>
+<td>P0.06</td>
+</tr>
+<tr>
+<td>CTS</td>
+<td>P0.07</td>
+</tr>
+<tr>
+<td>RTS</td>
+<td>P0.08</td>
+</tr>
+<tr>
+<td>LED1</td>
+<td>P0.28</td>
+</tr>
+<tr>
+<td>LED2</td>
+<td>P0.29</td>
+</tr>
+</tbody>
+</table>
+<h2 id="needle-adapter">
+  Needle adapter
+  <a class="anchor" href="#needle-adapter">#</a>
+</h2>
+<p>Making a needle adapter is made easier with 3d printing. The used pogo pin is seen below</p>
+<figure>
+    <img src="/images/pogo-pin%200.5mm%20x%2016.35mm.png" width="300"/> <figcaption>
+            <h4>Pogo pin</h4>
+        </figcaption>
+</figure>
+
+<p>The adapter model still in preparation can be found <a href="https://a360.co/2IcKZK9">here</a>. It should look something like this:</p>
+<p>Adapter model
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/adapter.png"
+    alt=""
+    width="300"
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+</p>
+<p>Adapter
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/pogo-pin%20adapter.jpg"
+    alt=""
+    width="200"
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+</p>
+</article>
  
       
 
@@ -802,6 +1149,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -810,27 +1161,33 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
+  <nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
+    <li><a href="#board">Board</a></li>
+    <li><a href="#software">Software</a>
       <ul>
-      
+        <li><a href="#rf-to-serial-gateway">RF to Serial Gateway</a>
+          <ul>
+            <li><a href="#command-examples">Command examples</a></li>
+            <li><a href="#switch-between-serial-serial-and-log-over-uart">Switch between serial SERIAL and LOG over UART</a></li>
+            <li><a href="#serial-mode">Serial mode</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
+    <li><a href="#flashing">Flashing</a>
       <ul>
-      
+        <li><a href="#outside">outside</a></li>
+        <li><a href="#inside">inside</a>
+          <ul>
+            <li><a href="#components-side">Components side</a></li>
+            <li><a href="#swdio-pins-side">SWDIO pins side</a></li>
+          </ul>
+        </li>
+        <li><a href="#pinout">pinout</a></li>
+        <li><a href="#needle-adapter">Needle adapter</a></li>
       </ul>
     </li>
-    
-  
   </ul>
 </nav>
 

@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 06 Oct 2020 08:48:23 +0000</lastBuildDate><atom:link href="https://www.homesmartmesh.com/docs/frameworks/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>raspi IoT</title>
+      <title>Raspi IoT</title>
       <link>https://www.homesmartmesh.com/docs/frameworks/raspi_iot/</link>
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
@@ -22,8 +22,8 @@
       <pubDate>Fri, 12 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/chip/</guid>
-      <description>Overview#Definition#We can consider the project CHIP Connected Home Over IP definition as in two folds :
- a takeover of the Zigbee Cluster Library to be fit over the IP layer. The abstraction of all different transport protocols with IP  This will avoid that each transport (e.g. BT, Zigbee) have a custom app layer. It is interesting to notice that the Zigbee Alliance is driving this project whereas Zigbee itself does not map to an IP layer, and therefore Thread is the natural transition from Zigbee as both are 802.</description>
+      <description>Relates to#Zephyr RTOSThread ProtocolOverview#Definition#We can consider the project CHIP Connected Home Over IP definition as in two folds :
+ a takeover of the Zigbee Cluster Library to be fit over the IP layer. The abstraction of all different transport protocols with IP  This will avoid that each transport (e.</description>
     </item>
     
     <item>
@@ -41,7 +41,7 @@
       <pubDate>Sat, 20 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/zephyr/</guid>
-      <description>Windows#Install#Getting Started details...The details are in the link above, the summary of the step for installing on windows are
+      <description>Relates to#Thread ProtocolProject CHIPWindows#Install#Getting Started details...The details are in the link above, the summary of the step for installing on windows are
  Installing choco Installing west dependencies with choco installing west with pip the retrieving the repo and building are performed through west The compiler toolchain as multiple options  Zephyr own SDK, not available on windows GNU ARM Embedded : to be installed on a path without spaces    e.</description>
     </item>
     

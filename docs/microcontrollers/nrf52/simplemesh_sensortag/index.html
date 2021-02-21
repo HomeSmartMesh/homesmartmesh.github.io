@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.e8ad8efd6fc8e26b4ea4d3d13d1a277189f53c2b02cc8859204c3f3b51709df8.js" integrity="sha256-6K2O/W/I4mtOpNPRPRoncYn1PCsCzIhZIEw/O1Fwnfg="></script>
+<script defer src="/en.search.min.138469fa78b507d4d2e8f8e2c0e53761c140b1827e289d6e217d3b6de0414d3a.js" integrity="sha256-E4Rp&#43;ni1B9TS6PjiwOU3YcFAsYJ&#43;KJ1uIX07beBBTTo="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -86,7 +86,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://www.homesmartmesh.com/docs/frameworks/raspi_iot/" class="">raspi IoT</a>
+    <a href="https://www.homesmartmesh.com/docs/frameworks/raspi_iot/" class="">Raspi IoT</a>
   
 
         </li>
@@ -402,6 +402,19 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/uart_dongle/" class="">nRF52832 UART dongle</a>
+  
+
+        </li>
+      
+    
   </ul>
 
         </li>
@@ -449,7 +462,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://www.homesmartmesh.com/docs/networks/zigbee/" class="">Zigbee</a>
+    <a href="https://www.homesmartmesh.com/docs/networks/thread/" class="">Thread</a>
   
 
         </li>
@@ -462,7 +475,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://www.homesmartmesh.com/docs/networks/thread/" class="">Thread</a>
+    <a href="https://www.homesmartmesh.com/docs/networks/zigbee/" class="">Zigbee</a>
   
 
         </li>
@@ -736,18 +749,29 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#concept">concept</a>
+    <li><a href="#concept">Concept</a></li>
+    <li><a href="#hardware">Hardware</a>
       <ul>
         <li><a href="#schematics">Schematics</a></li>
         <li><a href="#board">Board</a>
           <ul>
             <li><a href="#top">Top</a></li>
             <li><a href="#bottom">Bottom</a></li>
+            <li><a href="#module">Module</a></li>
           </ul>
         </li>
       </ul>
     </li>
-    <li><a href="#firmware">Firmware</a></li>
+    <li><a href="#application">Application</a>
+      <ul>
+        <li><a href="#firmware">Firmware</a>
+          <ul>
+            <li><a href="#low-power-configuration">Low Power configuration</a></li>
+          </ul>
+        </li>
+        <li><a href="#low-power-measures">Low Power measures</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -798,7 +822,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 </p>
 <h1 id="concept">
-  concept
+  Concept
   <a class="anchor" href="#concept">#</a>
 </h1>
 
@@ -820,6 +844,30 @@ https://github.com/alex-shpak/hugo-book
   
 </div>
 
+<p>It is possible to mount either CR2032 or CR2477</p>
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/mounted.png"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
+<h1 id="hardware">
+  Hardware
+  <a class="anchor" href="#hardware">#</a>
+</h1>
 <p>board render</p>
 
 <div class="container">
@@ -1162,10 +1210,22 @@ https://github.com/alex-shpak/hugo-book
   window.addEventListener('resize', reset_position)
  </script>
 
-<h1 id="firmware">
+<h3 id="module">
+  Module
+  <a class="anchor" href="#module">#</a>
+</h3>
+<figure>
+    <img src="/images/module_size.png" width="100%"/> 
+</figure>
+
+<h1 id="application">
+  Application
+  <a class="anchor" href="#application">#</a>
+</h1>
+<h2 id="firmware">
   Firmware
   <a class="anchor" href="#firmware">#</a>
-</h1>
+</h2>
 
 <div class="container">
     <div class="row">
@@ -1203,6 +1263,81 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 
+<h3 id="low-power-configuration">
+  Low Power configuration
+  <a class="anchor" href="#low-power-configuration">#</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th>Flags to clear</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NRFX_UARTE_ENABLED</td>
+</tr>
+<tr>
+<td>NRFX_UART_ENABLED</td>
+</tr>
+<tr>
+<td>UART_ENABLED</td>
+</tr>
+<tr>
+<td>UART0_ENABLED</td>
+</tr>
+<tr>
+<td>NRF_FPRINTF_ENABLED</td>
+</tr>
+<tr>
+<td>NRF_LOG_BACKEND_UART_ENABLED</td>
+</tr>
+<tr>
+<td>NRF_LOG_STR_FORMATTER_TIMESTAMP_FORMAT_ENABLED</td>
+</tr>
+<tr>
+<td>NRF_LOG_ENABLED</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>removed nrf_drv_uart.c from Makefile</li>
+<li>Required nRF52832 Errata [89] TWI: Static 400 uA current while using GPIOTE</li>
+</ul>
+<h2 id="low-power-measures">
+  Low Power measures
+  <a class="anchor" href="#low-power-measures">#</a>
+</h2>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Current</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RTC + RAM</td>
+<td>9.6 uA</td>
+</tr>
+<tr>
+<td>// + Sensors</td>
+<td>22 uA</td>
+</tr>
+<tr>
+<td>// without TWI Woraround</td>
+<td>470 uA</td>
+</tr>
+<tr>
+<td>Uart Log</td>
+<td>500 uA</td>
+</tr>
+<tr>
+<td>Uart Log + HF</td>
+<td>700 uA</td>
+</tr>
+</tbody>
+</table>
 </article>
  
       
@@ -1237,18 +1372,29 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#concept">concept</a>
+    <li><a href="#concept">Concept</a></li>
+    <li><a href="#hardware">Hardware</a>
       <ul>
         <li><a href="#schematics">Schematics</a></li>
         <li><a href="#board">Board</a>
           <ul>
             <li><a href="#top">Top</a></li>
             <li><a href="#bottom">Bottom</a></li>
+            <li><a href="#module">Module</a></li>
           </ul>
         </li>
       </ul>
     </li>
-    <li><a href="#firmware">Firmware</a></li>
+    <li><a href="#application">Application</a>
+      <ul>
+        <li><a href="#firmware">Firmware</a>
+          <ul>
+            <li><a href="#low-power-configuration">Low Power configuration</a></li>
+          </ul>
+        </li>
+        <li><a href="#low-power-measures">Low Power measures</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
