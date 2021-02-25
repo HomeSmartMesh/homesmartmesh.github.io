@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.31540225db3a72b152a0300e1fb6a98b63fbda4d0fa4b625a8ca1472d9632bb0.js" integrity="sha256-MVQCJds6crFSoDAOH7api2P72k0PpLYlqMoUctljK7A="></script>
+<script defer src="/en.search.min.e5d7a2be6a89532bb3a623de176a0a09a95f1fbd7bb9b460bed12dce703b3e68.js" integrity="sha256-5deivmqJUyuzpiPeF2oKCalfH717ubRgvtEtznA7Pmg="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -785,6 +785,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#firmware-search-gateway">Firmware search gateway</a></li>
       </ul>
     </li>
+    <li><a href="#building-with-platformio">Building with Platformio</a></li>
     <li><a href="#chip-node">CHIP Node</a></li>
     <li><a href="#test-and-debug">Test and Debug</a>
       <ul>
@@ -1471,7 +1472,10 @@ https://github.com/alex-shpak/hugo-book
   Radio Co-Processor (RCP)
   <a class="anchor" href="#radio-co-processor-rcp">#</a>
 </h1>
-<p>This is the new version recommended by OpenThread for current and new versions aof border routers, see <a href="https://openthread.io/platforms#radio-co-processor-rcp">Vendor support RCP</a> for details.</p>
+<ul>
+<li>This is the new version recommended by OpenThread for current and new versions aof border routers, see <a href="https://openthread.io/platforms#radio-co-processor-rcp">Vendor support RCP</a> for details.</li>
+<li><a href="https://openthread.io/guides/build#how_to_build_openthread">How to build</a></li>
+</ul>
 <h2 id="openthread">
   OpenThread
   <a class="anchor" href="#openthread">#</a>
@@ -1516,11 +1520,17 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 
+<p>When using docker simply pull the environment</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker pull openthread/environment:latest
+docker run -it --rm openthread/environment bash
+</code></pre></div><p>then continue the same way on linux or docker from windows</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd ~/opentrhead
 ./script/bootstrap
+./bootstrap
 make distclean
 make -f examples/Makefile-nrf52840 USB<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
-arm-none-eabi-objcopy -O ihex output/nrf52840/bin/ot-rcp ~/share/ot-rcp.hex
+cd output/nrf52840/bin/
+arm-none-eabi-objcopy -O ihex ot-rcp ot-rcp.hex
 nrfjprog -f nrf52 --program ot-rcp.hex --sectorerase --verify
 </code></pre></div><h2 id="zephyr-v2599">
   Zephyr v2.5.99
@@ -2366,6 +2376,14 @@ ClientList can not open the Predefined Topic List.     /etc/predefinedTopic.conf
   window.addEventListener('resize', reset_position)
  </script>
 
+<h1 id="building-with-platformio">
+  Building with Platformio
+  <a class="anchor" href="#building-with-platformio">#</a>
+</h1>
+<ul>
+<li>although Zephyr is integrated in platformio, openthread is unfortunately not yet supported as of <code>PLATFORM: Nordic nRF52 (6.0.0+sha.d2e27c6)</code></li>
+<li>docs.platformio <a href="https://docs.platformio.org/en/latest/frameworks/zephyr.html#limitations">limitations</a></li>
+</ul>
 <h1 id="chip-node">
   CHIP Node
   <a class="anchor" href="#chip-node">#</a>
@@ -2695,6 +2713,7 @@ west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">
         <li><a href="#firmware-search-gateway">Firmware search gateway</a></li>
       </ul>
     </li>
+    <li><a href="#building-with-platformio">Building with Platformio</a></li>
     <li><a href="#chip-node">CHIP Node</a></li>
     <li><a href="#test-and-debug">Test and Debug</a>
       <ul>

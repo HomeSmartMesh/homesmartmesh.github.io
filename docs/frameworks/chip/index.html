@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.31540225db3a72b152a0300e1fb6a98b63fbda4d0fa4b625a8ca1472d9632bb0.js" integrity="sha256-MVQCJds6crFSoDAOH7api2P72k0PpLYlqMoUctljK7A="></script>
+<script defer src="/en.search.min.e5d7a2be6a89532bb3a623de176a0a09a95f1fbd7bb9b460bed12dce703b3e68.js" integrity="sha256-5deivmqJUyuzpiPeF2oKCalfH717ubRgvtEtznA7Pmg="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -756,15 +756,15 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#tools">Tools</a></li>
       </ul>
     </li>
-    <li><a href="#nrf-connect-integration">nRF Connect integration</a></li>
-    <li><a href="#linux">Linux</a>
+    <li><a href="#building-for-nrf52">Building for nRF52</a>
       <ul>
+        <li><a href="#nrf-connect-integration">nRF Connect integration</a></li>
+        <li><a href="#prerequisites">prerequisites</a></li>
         <li><a href="#install">install</a></li>
-        <li><a href="#build-lighting-app">build lighting app</a></li>
-        <li><a href="#build-default">build default</a></li>
+        <li><a href="#build-the-lighting-app">build the lighting app</a></li>
       </ul>
     </li>
-    <li><a href="#windows">Windows</a></li>
+    <li><a href="#building-for-esp32">Building for ESP32</a></li>
   </ul>
 </nav>
 
@@ -969,10 +969,14 @@ https://github.com/alex-shpak/hugo-book
 
   npm install
   npm run zap
-</code></pre></div><h1 id="nrf-connect-integration">
+</code></pre></div><h1 id="building-for-nrf52">
+  Building for nRF52
+  <a class="anchor" href="#building-for-nrf52">#</a>
+</h1>
+<h2 id="nrf-connect-integration">
   nRF Connect integration
   <a class="anchor" href="#nrf-connect-integration">#</a>
-</h1>
+</h2>
 
 
 
@@ -1031,10 +1035,61 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 </p>
-<h1 id="linux">
-  Linux
-  <a class="anchor" href="#linux">#</a>
-</h1>
+<h2 id="prerequisites">
+  prerequisites
+  <a class="anchor" href="#prerequisites">#</a>
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/project-chip/connectedhomeip/blob/master/docs/BUILDING.md"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            How to
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone --recurse-submodules https://github.com/project-chip/connectedhomeip.git
+sudo apt-get install git gcc g++ python pkg-config libssl-dev libdbus-1-dev libglib2.0-dev libavahi-client-dev ninja-build python3-venv python3-dev unzip
+cd connectedhomeip
+source scripts/activate.sh
+gn gen out/custom
+gn args --list out/custom
+</code></pre></div><p>important arguments :</p>
+<ul>
+<li>chip_device_platform : esp32, freertos, linux, nrfconnect,&hellip;</li>
+<li>chip_enable_openthread</li>
+<li>chip_enable_wifi</li>
+<li>target_cpu</li>
+<li>target_os</li>
+</ul>
 <h2 id="install">
   install
   <a class="anchor" href="#install">#</a>
@@ -1177,154 +1232,64 @@ source zephyr/zephyr-env.sh
 </code></pre></div><ul>
 <li>step 3, from the same link above install gn</li>
 </ul>
-<h2 id="build-lighting-app">
-  build lighting app
-  <a class="anchor" href="#build-lighting-app">#</a>
+<h2 id="build-the-lighting-app">
+  build the lighting app
+  <a class="anchor" href="#build-the-lighting-app">#</a>
 </h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd connectedhomeip/examples/lighting-app/nrfconnect
-west build -b nrf52840dongle_nrf52840
+west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prj.conf&#34;</span>
+west build -b nrf52840dk_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prj.conf&#34;</span>
 west flash
 nrfjprog --program build/zephyr/zephyr.hex -f NRF52
 </code></pre></div><p>configure</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">west build -b nrf52840dongle_nrf52840 -t menuconfig
-</code></pre></div><h2 id="build-default">
-  build default
-  <a class="anchor" href="#build-default">#</a>
-</h2>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/project-chip/connectedhomeip/blob/master/docs/BUILDING.md"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            How to
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone --recurse-submodules https://github.com/project-chip/connectedhomeip.git
-sudo apt-get install git gcc g++ python pkg-config libssl-dev libdbus-1-dev libglib2.0-dev libavahi-client-dev ninja-build python3-venv python3-dev unzip
-source scripts/activate.sh
-gn gen out/custom
-gn args --list out/custom
-</code></pre></div><p>important arguments :</p>
-<ul>
-<li>chip_device_platform : esp32, freertos, linux, nrfconnect,&hellip;</li>
-<li>chip_enable_openthread</li>
-<li>chip_enable_wifi</li>
-<li>target_cpu</li>
-<li>target_os</li>
-</ul>
-<h1 id="windows">
-  Windows
-  <a class="anchor" href="#windows">#</a>
-</h1>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/project-chip/connectedhomeip/blob/master/examples/lighting-app/nrfconnect/README.md"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            How to
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<ul>
-<li>clone connectedhomeip repo</li>
-<li>install nRF Connect SDK v1.4.0</li>
-<li>configure the toolchain
-<ul>
-<li><code>ZEPHYR_TOOLCHAIN_VARIANT</code> to <code>gnuarmemb</code></li>
-<li><code>GNUARMEMB_TOOLCHAIN_PATH</code> to <code>D:\tools\gnu_arm_embedded\9_2020-q2-update</code></li>
-</ul>
-</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd"><span style="color:#66d9ef">cd</span> connectedhomeip\examples\lighting-app\nrfconnect
-<span style="color:#e6db74">&#34;D:\tools\nrf\v1.4.0\zephyr\zephyr-env.cmd&#34;</span>
-west build -b nrf52840dongle_nrf52840
-
 </code></pre></div><details >
-  <summary>build error on windows</summary>
+  <summary>Build Error</summary>
   <div class="markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">D:\Projects\connectedhomeip\examples\lighting-app\nrfconnect<span style="color:#75715e">&gt;west build -b nrf52840dongle_nrf52840</span>
--- west build: generating a build system
-Including boilerplate (Zephyr base): D:/tools/nrf/v1.4.0/zephyr/cmake/app/boilerplate.cmake
--- Application: D:/Projects/connectedhomeip/examples/lighting-app/nrfconnect
--- Using NCS Toolchain 1.4.0 for building. (D:/tools/nrf/v1.4.99-dev1/toolchain/cmake)
--- Zephyr version: 2.4.0 (D:/tools/nrf/v1.4.0/zephyr)
--- Found Python3: D:/tools/nrf/v1.4.99-dev1/toolchain/opt/bin/python.exe (found suitable exact version <span style="color:#e6db74">&#34;3.8.2&#34;</span>) found components: Interpreter
--- Found west (found suitable version <span style="color:#e6db74">&#34;0.7.2&#34;</span>, minimum required is <span style="color:#e6db74">&#34;0.7.1&#34;</span>)
-CMake Error at D:/tools/nrf/v1.4.0/zephyr/cmake/zephyr_module.cmake:48 (message):
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">CMake Error at /usr/share/cmake-3.16/Modules/ExternalProject.cmake:3182 <span style="color:#f92672">(</span>add_custom_target<span style="color:#f92672">)</span>:
+  add_custom_target cannot create target <span style="color:#e6db74">&#34;chip-gn&#34;</span> because another target
+  with the same name already exists.  The existing target is a custom target
+  created in source directory
+  <span style="color:#e6db74">&#34;/home/wass/connectedhomeip/config/nrfconnect/chip-module&#34;</span>.  See
+  documentation <span style="color:#66d9ef">for</span> policy CMP0002 <span style="color:#66d9ef">for</span> more details.
+Call Stack <span style="color:#f92672">(</span>most recent call first<span style="color:#f92672">)</span>:
+  /home/wass/ncs/modules/lib/connectedhomeip/config/nrfconnect/chip-module/CMakeLists.txt:244 <span style="color:#f92672">(</span>ExternalProject_Add<span style="color:#f92672">)</span>
 
-  D:/Projects/connectedhomeip/examples/lighting-app/nrfconnect/third_party/connectedhomeip/config/nrfconnect/chip-module,
-  given in ZEPHYR_EXTRA_MODULES, is not a valid zephyr module
 
-<span style="color:#66d9ef">Call</span> Stack (most recent call first):
-  D:/tools/nrf/v1.4.0/zephyr/cmake/app/boilerplate.cmake:150 (include)
-  D:/tools/nrf/v1.4.0/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:24 (include)
-  D:/tools/nrf/v1.4.0/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:35 (include_boilerplate)
-  CMakeLists.txt:26 (find_package)
+CMake Error at /home/wass/ncs/zephyr/cmake/extensions.cmake:570 <span style="color:#f92672">(</span>add_library<span style="color:#f92672">)</span>:
+  add_library cannot create target <span style="color:#e6db74">&#34;chip&#34;</span> because another target with the
+  same name already exists.  The existing target is an interface library
+  created in source directory
+  <span style="color:#e6db74">&#34;/home/wass/connectedhomeip/config/nrfconnect/chip-module&#34;</span>.  See
+  documentation <span style="color:#66d9ef">for</span> policy CMP0002 <span style="color:#66d9ef">for</span> more details.
+Call Stack <span style="color:#f92672">(</span>most recent call first<span style="color:#f92672">)</span>:
+  /home/wass/ncs/modules/lib/connectedhomeip/config/nrfconnect/chip-module/CMakeLists.txt:268 <span style="color:#f92672">(</span>zephyr_interface_library_named<span style="color:#f92672">)</span>
+
+
+CMake Warning at /home/wass/ncs/zephyr/CMakeLists.txt:1349 <span style="color:#f92672">(</span>message<span style="color:#f92672">)</span>:
+  __ASSERT<span style="color:#f92672">()</span> statements are globally ENABLED
+
+
+CMake Warning at /home/wass/ncs/zephyr/CMakeLists.txt:1377 <span style="color:#f92672">(</span>message<span style="color:#f92672">)</span>:
+
+
+        The CMake build type was set to <span style="color:#e6db74">&#39;Debug&#39;</span>, but the optimization flag was set to <span style="color:#e6db74">&#39;-Os&#39;</span>.
+        This may be intentional and the warning can be turned off by setting the CMake variable <span style="color:#e6db74">&#39;NO_BUILD_TYPE_WARNING&#39;</span>
 
 
 -- Configuring incomplete, errors occurred!
-FATAL ERROR: command exited with status 1: &#39;C:\Program Files\CMake\bin\cmake.EXE&#39; &#39;-DWEST_PYTHON=c:\users\user\appdata\local\programs\python\python39\python.exe&#39; &#39;-BD:\Projects\connectedhomeip\examples\lighting-app\nrfconnect\build&#39; &#39;-SD:\Projects\connectedhomeip\examples\lighting-app\nrfconnect&#39; -GNinja -DBOARD=nrf52840dongle_nrf52840
+See also <span style="color:#e6db74">&#34;/home/wass/connectedhomeip/examples/lighting-app/nrfconnect/build/CMakeFiles/CMakeOutput.log&#34;</span>.
+See also <span style="color:#e6db74">&#34;/home/wass/connectedhomeip/examples/lighting-app/nrfconnect/build/CMakeFiles/CMakeError.log&#34;</span>.
+FATAL ERROR: command exited with status 1: /usr/bin/cmake -DWEST_PYTHON<span style="color:#f92672">=</span>/usr/bin/python3 -B/home/wass/connectedhomeip/examples/lighting-app/nrfconnect/build -S/home/wass/connectedhomeip/examples/lighting-app/nrfconnect -GNinja -DBOARD<span style="color:#f92672">=</span>nrf52840dongle_nrf52840
 </code></pre></div>
   </div>
 </details>
 
+<h1 id="building-for-esp32">
+  Building for ESP32
+  <a class="anchor" href="#building-for-esp32">#</a>
+</h1>
+<p><a href="https://github.com/project-chip/connectedhomeip/tree/master/examples/all-clusters-app/esp32">all clusters app</a> example</p>
 </article>
  
       
@@ -1367,15 +1332,15 @@ FATAL ERROR: command exited with status 1: &#39;C:\Program Files\CMake\bin\cmake
         <li><a href="#tools">Tools</a></li>
       </ul>
     </li>
-    <li><a href="#nrf-connect-integration">nRF Connect integration</a></li>
-    <li><a href="#linux">Linux</a>
+    <li><a href="#building-for-nrf52">Building for nRF52</a>
       <ul>
+        <li><a href="#nrf-connect-integration">nRF Connect integration</a></li>
+        <li><a href="#prerequisites">prerequisites</a></li>
         <li><a href="#install">install</a></li>
-        <li><a href="#build-lighting-app">build lighting app</a></li>
-        <li><a href="#build-default">build default</a></li>
+        <li><a href="#build-the-lighting-app">build the lighting app</a></li>
       </ul>
     </li>
-    <li><a href="#windows">Windows</a></li>
+    <li><a href="#building-for-esp32">Building for ESP32</a></li>
   </ul>
 </nav>
 

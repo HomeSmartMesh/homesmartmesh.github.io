@@ -80,7 +80,7 @@ Simple Mesh SensorTagSimple Mesh RepoFeatures#     2.4 GHz 2 Mbps
       <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</guid>
-      <description>Networks / Simple MeshFrameworks / Raspi IoTConcept#It is possible to mount either CR2032 or CR2477
+      <description>Networks / Simple MeshFrameworks / Raspi IoTTindie Product PageConcept#It is possible to mount either CR2032 or CR2477
 Hardware#board render
 repo directorynRF52832BME280MAX44009Schematics#Full Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.</description>
     </item>
