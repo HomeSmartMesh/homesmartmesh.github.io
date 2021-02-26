@@ -5,18 +5,18 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AllnRF52840nRF52832Thread SensorTagdetails...Simple Mesh SensorTagdetails...nRF52840 Dongle board codename : PCA10056 nRF52840 ARM M4 64 MHz 1024 KB ROM - 256 KB RAM Bluetooth 5, Mesh 802.15.4, Thread, Zigbee USB 2  details...nRF52823 UART nRF52832 ARM M4 64 MHz 512 KB ROM - 64 KB RAM Bluetooth Low Energy, mesh  Application custom mesh coordinatorimport {defined} from &#34;">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="nRF52" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/" />
-<meta property="og:updated_time" content="2021-02-21T08:00:00+00:00" />
-<title>nRF52 | Home Smart Mesh</title>
+<meta name="description" content="Relates to#ESP-Mesh WrapperGithub repo#Github repoStatus#Not satisfactory, as it is not reliable. The ESP-Now does not have a quality of service concept that ensures transmission like TCP, given the broadcast nature of the protocol. Also the handling of a wifi gateway does not allow a large enough listening time, so a wifi gateway is not possible and a serial one has to be developer.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="ESP-Now Wrapper" />
+<meta property="og:description" content="Relates to#ESP-Mesh WrapperGithub repo#Github repoStatus#Not satisfactory, as it is not reliable. The ESP-Now does not have a quality of service concept that ensures transmission like TCP, given the broadcast nature of the protocol. Also the handling of a wifi gateway does not allow a large enough listening time, so a wifi gateway is not possible and a serial one has to be developer." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.homesmartmesh.com/docs/microcontrollers/esp32/esp-now_wrapper/" />
+<meta property="article:published_time" content="2021-02-26T00:00:00+09:00" />
+<meta property="article:modified_time" content="2021-02-26T00:00:00+09:00" />
+<title>ESP-Now Wrapper | Home Smart Mesh</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
 <script defer src="/en.search.min.f5dad646480e9ab896c9d8b80da5b37f6c493baeb959fc2bb7c8af01cb077e93.js" integrity="sha256-9drWRkgOmriWydi4DaWzf2xJO665Wfwrt8ivAcsHfpM="></script>
-<link rel="alternate" type="application/rss+xml" href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/index.xml" title="Home Smart Mesh" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -207,7 +207,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-7d13b6f646948a6d212145f583c29a47" class="toggle"  />
+    <input type="checkbox" id="section-7d13b6f646948a6d212145f583c29a47" class="toggle" checked />
     <label for="section-7d13b6f646948a6d212145f583c29a47" class="flex justify-between">
       <a href="https://www.homesmartmesh.com/docs/microcontrollers/esp32/" class="">esp32</a>
       <span>▾</span>
@@ -315,7 +315,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://www.homesmartmesh.com/docs/microcontrollers/esp32/esp-now_wrapper/" class="">ESP-Now Wrapper</a>
+    <a href="https://www.homesmartmesh.com/docs/microcontrollers/esp32/esp-now_wrapper/" class=" active">ESP-Now Wrapper</a>
   
 
         </li>
@@ -382,7 +382,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/" class=" active">nRF52</a>
+    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/" class="">nRF52</a>
   
 
           
@@ -759,7 +759,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>nRF52</strong>
+  <strong>ESP-Now Wrapper</strong>
 
   <label for="toc-control">
     
@@ -772,7 +772,19 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav id="TableOfContents"></nav>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#relates-to">Relates to</a></li>
+    <li><a href="#github-repo">Github repo</a></li>
+    <li><a href="#status">Status</a></li>
+    <li><a href="#examples">Examples</a>
+      <ul>
+        <li><a href="#broadcast">Broadcast</a></li>
+        <li><a href="#mqtt-gateway">MQTT Gateway</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
   </aside>
@@ -782,250 +794,194 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown">
+  <article class="markdown"><h1 id="relates-to">
+  Relates to
+  <a class="anchor" href="#relates-to">#</a>
+</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+            
+                href="https://www.homesmartmesh.com/docs/microcontrollers/esp32/esp-mesh_wrapper/"
+            
+            role="button"
+        >
+            ESP-Mesh Wrapper
+            
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<h1 id="github-repo">
+  Github repo
+  <a class="anchor" href="#github-repo">#</a>
+</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/ESP32Home/ESPNowWrapper"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            Github repo
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
 
 
-<link rel="stylesheet" href="/css/grid.css" />
-<script src="/js/grid.js" type="module"></script>
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
 
-<div class="container ml-auto text-center">
-  <div class="btn-group flex-wrap grid-buttons-bar" role="group" id="buttons-72ed4a008387cdfb" data-selection="">
-    
-    <a  type="button" 
-        class="book-btn grid-button selected" 
-        data-filter="All"
-      >
-      All
-    </a>
-    
-    <a  type="button" 
-        class="book-btn grid-button " 
-        data-filter="nRF52840"
-      >
-      nRF52840
-    </a>
-    
-    <a  type="button" 
-        class="book-btn grid-button " 
-        data-filter="nRF52832"
-      >
-      nRF52832
-    </a>
-    
+<h1 id="status">
+  Status
+  <a class="anchor" href="#status">#</a>
+</h1>
+<blockquote class="book-hint warning">
+  Not satisfactory, as it is not reliable. The ESP-Now does not have a quality of service concept that ensures transmission like TCP, given the broadcast nature of the protocol. Also the handling of a wifi gateway does not allow a large enough listening time, so a wifi gateway is not possible and a serial one has to be developer.
+</blockquote>
+
+<h1 id="examples">
+  Examples
+  <a class="anchor" href="#examples">#</a>
+</h1>
+<h2 id="broadcast">
+  Broadcast
+  <a class="anchor" href="#broadcast">#</a>
+</h2>
+<details >
+  <summary>Arduino Broadcast example</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Arduino.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ArduinoJson.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;WiFi.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ConfigUtils.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;EspNowWrapper.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ESPStringUtils.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+DynamicJsonDocument <span style="color:#a6e22e">config</span>(<span style="color:#ae81ff">5</span><span style="color:#f92672">*</span><span style="color:#ae81ff">1024</span>);<span style="color:#75715e">//5 KB
+</span><span style="color:#75715e"></span>DynamicJsonDocument <span style="color:#a6e22e">secret</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">*</span><span style="color:#ae81ff">1024</span>);<span style="color:#75715e">//1 KB
+</span><span style="color:#75715e"></span>WiFiClient wifi;<span style="color:#75715e">//needed to stay on global scope
+</span><span style="color:#75715e"></span>NowApp espnow;
+
+<span style="color:#66d9ef">uint32_t</span> cycle_count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+String topic;
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">meshMessage</span>(String <span style="color:#f92672">&amp;</span>payload,String from){
+  Serial.printf(<span style="color:#e6db74">&#34;RX&gt; from(%s) =&gt; [%s]</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,from.c_str(),payload.c_str());
+}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
+  
+  Serial.begin(<span style="color:#ae81ff">115200</span>);
+  timelog(<span style="color:#e6db74">&#34;Boot ready&#34;</span>);
+
+  load_json(config,<span style="color:#e6db74">&#34;/config.json&#34;</span>);
+  load_json(secret,<span style="color:#e6db74">&#34;/secret.json&#34;</span>);
+  timelog(<span style="color:#e6db74">&#34;config loaded&#34;</span>);
+
+  String ssid <span style="color:#f92672">=</span> secret[<span style="color:#e6db74">&#34;wifi&#34;</span>][<span style="color:#e6db74">&#34;access_point&#34;</span>];
+  String pass <span style="color:#f92672">=</span> secret[<span style="color:#e6db74">&#34;wifi&#34;</span>][<span style="color:#e6db74">&#34;password&#34;</span>];
+  WiFi.mode(WIFI_MODE_STA);
+  timelog(<span style="color:#e6db74">&#34;config loaded&#34;</span>);
+
+
+  byte mac[<span style="color:#ae81ff">6</span>];
+  WiFi.macAddress(mac);
+  topic <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;espnow/&#34;</span><span style="color:#f92672">+</span>hextab_to_string(mac);
+
+  espnow.start(config,secret);
+  espnow.onMessage(meshMessage);
+
+  espnow.set_channel(config[<span style="color:#e6db74">&#34;wifi&#34;</span>][<span style="color:#e6db74">&#34;channel&#34;</span>]);
+
+  timelog(<span style="color:#e6db74">&#34;setup() done&#34;</span>);
+
+}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+  cycle_count<span style="color:#f92672">++</span>;
+  Serial.printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n\n</span><span style="color:#e6db74">&#34;</span>);
+  timelog(<span style="color:#e6db74">&#34;loop start cycle (&#34;</span><span style="color:#f92672">+</span>String(cycle_count)<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;)&#34;</span>);
+  espnow.print_info();
+  espnow.broadcast(<span style="color:#e6db74">&#34;Hello Everyone (&#34;</span><span style="color:#f92672">+</span>String(cycle_count)<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;)&#34;</span>);
+  delay(<span style="color:#ae81ff">5000</span>);
+}
+</code></pre></div>
   </div>
-</div>
-<div  id="grid-72ed4a008387cdfb" 
-      class="grid"
-      data-scale="1"
-      data-side-min="300" 
-      >
-   
-   
-  
-    
-    
-    
-     
-      <div  class="card markdown-inner" 
-            data-tags="Board,nRF52840,Thread" 
-            data-width="200"
-            data-height="150"
-            >
-        <h2>Thread SensorTag</h2>
-      <div class="text-center">
-  <a  href="/docs/microcontrollers/nrf52/thread_sensortag" >
-    <img
-    src="/images/thread_sensortag/concept.png"
-    alt=""
-    width="300px"
-    height=""
-    decoding="async"
-  />
-  </a>
-</div>
-<div class="col text-center">
-<a  href="/docs/microcontrollers/nrf52/thread_sensortag/"   class="book-btn">
-  details...
-</a>
-</div>
+</details>
 
-    </div>
-  
-    
-    
-    
-     
-      <div  class="card markdown-inner" 
-            data-tags="Board,nRF52832,SimpleMesh" 
-            data-width="200"
-            data-height="150"
-            >
-        <h2>Simple Mesh SensorTag</h2>
-      <div class="text-center">
-  <a  href="/docs/microcontrollers/nrf52/simplemesh_sensortag" >
-    <img
-    src="/images/simplemesh_sensortag.png"
-    alt=""
-    width="300"
-    height=""
-    decoding="async"
-  />
-  </a>
-</div>
-<div class="col text-center">
-<a  href="/docs/microcontrollers/nrf52/simplemesh_sensortag/"   class="book-btn">
-  details...
-</a>
-</div>
-
-    </div>
-  
-    
-    
-    
-     
-      <div  class="card markdown-inner" 
-            data-tags="Board,USB,nRF52840" 
-            data-width="200"
-            data-height="150"
-            >
-        <h2>nRF52840 Dongle</h2>
-      <div class="text-center">
-  <a  href="/docs/microcontrollers/nrf52/usb_dongle" >
-    <img
-    src="/images/nrf_usb_dongle.png"
-    alt=""
-    width="300"
-    height=""
-    decoding="async"
-  />
-  </a>
-</div>
-<ul>
-<li>board codename : PCA10056</li>
-<li>nRF52840</li>
-<li>ARM M4 64 MHz</li>
-<li>1024 KB ROM - 256 KB RAM</li>
-<li>Bluetooth 5, Mesh</li>
-<li>802.15.4, Thread, Zigbee</li>
-<li>USB 2</li>
-</ul>
-<div class="col text-center">
-<a  href="/docs/microcontrollers/nrf52/usb_dongle/"   class="book-btn">
-  details...
-</a>
-</div>
-
-    </div>
-  
-    
-    
-    
-     
-      <div  class="card markdown-inner" 
-            data-tags="Board,USB,nRF52832" 
-            data-width="200"
-            data-height="150"
-            >
-        <h2>nRF52823 UART</h2>
-      <div class="text-center">
-  <a >
-    <img
-    src="/images/nRF52-uart.png"
-    alt=""
-    width="200"
-    height=""
-    decoding="async"
-  />
-  </a>
-</div>
-<ul>
-<li><a href="https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52832">nRF52832</a></li>
-<li>ARM M4 64 MHz</li>
-<li>512 KB ROM - 64 KB RAM</li>
-<li>Bluetooth Low Energy, mesh</li>
-</ul>
-<h3 id="application">Application</h3>
-<div class="col text-center">
-<a  href="/docs/networks/nrf/#04-uart-dongle"   class="book-btn">
-  custom mesh coordinator
-</a>
-</div>
-
-    </div>
-  
-</div>
-<script type="module">
-  import {defined} from "/js/web-js-utils.js"
-  import {Grid} from "/js/grid.js"
-  let grid_div = document.getElementById("grid-72ed4a008387cdfb");
-  let grid = new Grid(grid_div);
-  grid_div.querySelectorAll(".card").forEach((item)=>{
-    grid.scale_card(item);
-  })
-  grid.apply()
-
-  let buttons_bar = document.getElementById("buttons-72ed4a008387cdfb");
-
-  buttons_bar.querySelectorAll(".grid-button").forEach((button)=>{
-    button.addEventListener("click",(e)=>{
-        let filter = e.target.getAttribute("data-filter");
-        let grid_div = document.getElementById("grid-72ed4a008387cdfb");
-
-        if(!e.shiftKey){
-          buttons_bar.querySelectorAll(".grid-button").forEach((button)=>{
-            button.classList.remove("selected")
-          });
-        }
-        
-        if(e.target.classList.contains("selected")){
-          if((e.shiftKey)){
-            e.target.classList.remove("selected")
-          }
-        }else{
-          e.target.classList.add("selected")
-        }
+<h2 id="mqtt-gateway">
+  MQTT Gateway
+  <a class="anchor" href="#mqtt-gateway">#</a>
+</h2>
+<blockquote class="book-hint danger">
+  Not successfully tested yet.
+</blockquote>
 
 
-        
-        let selection_list = []
-        buttons_bar.querySelectorAll(".grid-button").forEach((button)=>{
-            if(button.classList.contains("selected")){
-              selection_list.push(button.getAttribute("data-filter"));
-            }
-        });
-        if(selection_list.length == 0){
-          selection_list.push("All");
-          buttons_bar.querySelectorAll(".grid-button").forEach((button)=>{
-            if(button.getAttribute("data-filter") == "All"){
-              button.classList.add("selected");
-            }
-          });
-        }
-        
-        grid_div.querySelectorAll(".card").forEach((card)=>{
-          if(selection_list.includes("All")){
-            card.classList.remove("grid-hidden")
-          }else{
-            if(card.hasAttribute("data-tags")){
-              let tags_list = card.getAttribute("data-tags").split(',');
-              if(tags_list.some(r=>selection_list.includes(r))){
-                card.classList.remove("grid-hidden")
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/ESP32Home/ESPNowWrapper/blob/master/examples/espnow_mqtt_gateway.ino"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            espnow_mqtt_gateway.ino
+            
+            
                 
-              }else{
-                card.classList.add("grid-hidden")
                 
-              }
-            }else{
-              card.classList.add("grid-hidden")
-              
-            }
-          }
-        })
-    })
-  })
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
 
-</script>
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
 
 </article>
  
@@ -1059,7 +1015,19 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav id="TableOfContents"></nav>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#relates-to">Relates to</a></li>
+    <li><a href="#github-repo">Github repo</a></li>
+    <li><a href="#status">Status</a></li>
+    <li><a href="#examples">Examples</a>
+      <ul>
+        <li><a href="#broadcast">Broadcast</a></li>
+        <li><a href="#mqtt-gateway">MQTT Gateway</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
  
     </aside>

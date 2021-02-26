@@ -6,7 +6,7 @@
     <description>Recent content in esp32 on Home Smart Mesh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 26 Dec 2020 00:00:00 +0900</lastBuildDate><atom:link href="https://www.homesmartmesh.com/docs/microcontrollers/esp32/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Feb 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://www.homesmartmesh.com/docs/microcontrollers/esp32/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Datasheets</title>
       <link>https://www.homesmartmesh.com/docs/microcontrollers/esp32/datasheets/</link>
@@ -69,6 +69,24 @@
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/m5stick-plus/</guid>
       <description> 6-Axis IMU IR transmitter Microphone RTC LCD (1.14 inch) Lipo Battery Passive Buzzer  Product page# m5stack M5StickC Plus $14  Display# 1.14 inch 135x240 Color TFT LCD ST7789v2  </description>
+    </item>
+    
+    <item>
+      <title>ESP-Now Wrapper</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/esp32/esp-now_wrapper/</link>
+      <pubDate>Fri, 26 Feb 2021 00:00:00 +0900</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/esp-now_wrapper/</guid>
+      <description>Relates to#ESP-Mesh WrapperGithub repo#Github repoStatus#Not satisfactory, as it is not reliable. The ESP-Now does not have a quality of service concept that ensures transmission like TCP, given the broadcast nature of the protocol. Also the handling of a wifi gateway does not allow a large enough listening time, so a wifi gateway is not possible and a serial one has to be developer.</description>
+    </item>
+    
+    <item>
+      <title>ESP-Mesh Wrapper</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/esp32/esp-mesh_wrapper/</link>
+      <pubDate>Fri, 26 Feb 2021 00:00:00 +0900</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/esp-mesh_wrapper/</guid>
+      <description>Relates to#ESP-Now WrapperMesh Alternatives#ThreadZigbeeSimple MeshGithub repo#Github repoUsage# flash the data file system containing config files config.json and the passwords secret.json with the command  &amp;gt;pio run -t uploadfs  compile and flash  &amp;gt;pio run &amp;gt;pio run -t upload It&amp;rsquo;s enough repeat for multiple ESP boards and watch the serial output.</description>
     </item>
     
   </channel>
