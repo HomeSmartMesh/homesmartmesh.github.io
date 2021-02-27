@@ -5,15 +5,15 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A Sensor tag to monitor Light brightness with MAX44009, Temperature, Humidity and Pressure with BME280. The SoC is an nRF52832 that communicates through a Simple Mesh Framework">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Simple Mesh SensorTag" />
-<meta property="og:description" content="A Sensor tag to monitor Light brightness with MAX44009, Temperature, Humidity and Pressure with BME280. The SoC is an nRF52832 that communicates through a Simple Mesh Framework" />
+<meta name="description" content="Low power design with ESP-WROOM-32 module with 10 uA deep sleep">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="FireBeetle" />
+<meta property="og:description" content="Low power design with ESP-WROOM-32 module with 10 uA deep sleep" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/" />
-<meta property="og:image" content="https://www.homesmartmesh.com/images/simplemesh_sensortag.png" />
-<meta property="article:published_time" content="2021-02-14T08:00:00+00:00" />
-<meta property="article:modified_time" content="2021-02-14T08:00:00+00:00" />
-<title>Simple Mesh SensorTag | Home Smart Mesh</title>
+<meta property="og:url" content="https://www.homesmartmesh.com/docs/microcontrollers/esp32/fire-beetle/" />
+<meta property="og:image" content="https://www.homesmartmesh.com/images/esp32/firebeetle/3%20Charging.jpg" />
+<meta property="article:published_time" content="2021-02-27T00:00:00+09:00" />
+<meta property="article:modified_time" content="2021-02-27T00:00:00+09:00" />
+<title>FireBeetle | Home Smart Mesh</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
@@ -208,7 +208,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-7d13b6f646948a6d212145f583c29a47" class="toggle"  />
+    <input type="checkbox" id="section-7d13b6f646948a6d212145f583c29a47" class="toggle" checked />
     <label for="section-7d13b6f646948a6d212145f583c29a47" class="flex justify-between">
       <a href="https://www.homesmartmesh.com/docs/microcontrollers/esp32/" class="">esp32</a>
       <span>▾</span>
@@ -316,7 +316,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://www.homesmartmesh.com/docs/microcontrollers/esp32/fire-beetle/" class="">FireBeetle</a>
+    <a href="https://www.homesmartmesh.com/docs/microcontrollers/esp32/fire-beetle/" class=" active">FireBeetle</a>
   
 
         </li>
@@ -409,7 +409,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/" class=" active">Simple Mesh SensorTag</a>
+    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/" class="">Simple Mesh SensorTag</a>
   
 
         </li>
@@ -773,7 +773,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Simple Mesh SensorTag</strong>
+  <strong>FireBeetle</strong>
 
   <label for="toc-control">
     
@@ -788,27 +788,17 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#concept">Concept</a></li>
-    <li><a href="#hardware">Hardware</a>
+    <li><a href="#overview">Overview</a>
       <ul>
-        <li><a href="#schematics">Schematics</a></li>
-        <li><a href="#board">Board</a>
-          <ul>
-            <li><a href="#top">Top</a></li>
-            <li><a href="#bottom">Bottom</a></li>
-            <li><a href="#module">Module</a></li>
-          </ul>
-        </li>
+        <li><a href="#pins">PINS</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#related-products">Related products</a></li>
       </ul>
     </li>
-    <li><a href="#application">Application</a>
+    <li><a href="#applications">Applications</a>
       <ul>
-        <li><a href="#firmware">Firmware</a>
-          <ul>
-            <li><a href="#low-power-configuration">Low Power configuration</a></li>
-          </ul>
-        </li>
-        <li><a href="#low-power-measures">Low Power Measures</a></li>
+        <li><a href="#config">Config</a></li>
       </ul>
     </li>
   </ul>
@@ -822,57 +812,105 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><p>
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-            
-                href="https://www.homesmartmesh.com/docs/networks/nrf/"
-            
-            role="button"
-        >
-            Networks / Simple Mesh
-            
-            
-        </a>
-    </div>
-    </div>
+  <article class="markdown"><h1 id="overview">
+  Overview
+  <a class="anchor" href="#overview">#</a>
+</h1>
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/esp32/firebeetle_board.png"
+    alt=""
+    width="300"
+    height=""
+    decoding="async"
+  />
+  </a>
+  
 </div>
 
+<ul>
+<li>10 uA deep sleep current</li>
+<li>USB and external DC battery power inputs (3.3V - 5V)</li>
+<li>battery charging from USB external DC</li>
+<li>TP4056 Li-Ion battery charger</li>
+<li>RT9080 Low Drop out Linear Regulator</li>
+<li>supported by platformio (<code>board=firebeetle32</code>)</li>
+</ul>
+<h2 id="pins">
+  PINS
+  <a class="anchor" href="#pins">#</a>
+</h2>
+<ul>
+<li>LED (IO2)</li>
+<li>50 % VBAT (A0 - SENSOR_VP)</li>
+</ul>
+<h2 id="gallery">
+  Gallery
+  <a class="anchor" href="#gallery">#</a>
+</h2>
 
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-            
-                href="https://www.homesmartmesh.com/docs/frameworks/raspi_iot/"
-            
-            role="button"
-        >
-            Frameworks / Raspi IoT
-            
-            
-        </a>
-    </div>
-    </div>
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
+<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/esp32/firebeetle//1%20unboxing%20FireBeetle%20and%20solar.jpg');" >
+				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/esp32/firebeetle//1%20unboxing%20FireBeetle%20and%20solar.jpg" alt="1 unboxing fire beetle and solar" />
+				    </div>
+			      <figcaption>
+		          <p>1 unboxing fire beetle and solar</p>
+			      </figcaption>
+				    <a href="https://www.homesmartmesh.com//images/esp32/firebeetle//1%20unboxing%20FireBeetle%20and%20solar.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/esp32/firebeetle//2%20arranged%20Board%20solar%20charger.jpg');" >
+				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/esp32/firebeetle//2%20arranged%20Board%20solar%20charger.jpg" alt="2 arranged board solar charger" />
+				    </div>
+			      <figcaption>
+		          <p>2 arranged board solar charger</p>
+			      </figcaption>
+				    <a href="https://www.homesmartmesh.com//images/esp32/firebeetle//2%20arranged%20Board%20solar%20charger.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/esp32/firebeetle//3%20Charging.jpg');" >
+				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/esp32/firebeetle//3%20Charging.jpg" alt="3 charging" />
+				    </div>
+			      <figcaption>
+		          <p>3 charging</p>
+			      </figcaption>
+				    <a href="https://www.homesmartmesh.com//images/esp32/firebeetle//3%20Charging.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
 </div>
 
+<h2 id="links">
+  Links
+  <a class="anchor" href="#links">#</a>
+</h2>
 
 <div class="container">
     <div class="row">
         <div class="col text-center">
         <a  class="book-btn"
             
-                href="https://www.tindie.com/products/wassfila/nrf52-mesh-sensor-node/"
+                href="https://www.dfrobot.com/product-1590.html"
                 target="_blank"
             
             
             role="button"
         >
-            Tindie Product Page
+            FireBeetle - DFRobot
             
             
                 
@@ -905,68 +943,192 @@ https://github.com/alex-shpak/hugo-book
     </div>
     </div>
 </div>
-</p>
-<h1 id="concept">
-  Concept
-  <a class="anchor" href="#concept">#</a>
-</h1>
 
-
-
-
-
-
-<div class="text-center">
-  <a >
-    <img
-    src="/images/simplemesh_sensortag.png"
-    alt=""
-    width=""
-    height=""
-    decoding="async"
-  />
-  </a>
-  
-</div>
-
-<p>It is possible to mount either CR2032 or CR2477</p>
-
-
-
-
-
-
-<div class="text-center">
-  <a >
-    <img
-    src="/images/mounted.png"
-    alt=""
-    width=""
-    height=""
-    decoding="async"
-  />
-  </a>
-  
-</div>
-
-<h1 id="hardware">
-  Hardware
-  <a class="anchor" href="#hardware">#</a>
-</h1>
-<p>board render</p>
 
 <div class="container">
     <div class="row">
         <div class="col text-center">
         <a  class="book-btn"
             
-                href="https://github.com/nRFMesh/nRF52_Mesh/tree/master/boards/nrf52_sensortag"
+                href="https://wiki.dfrobot.com/FireBeetle_ESP32_IOT_Microcontroller%28V3.0%29__Supports_Wi-Fi_&amp;_Bluetooth__SKU__DFR0478"
                 target="_blank"
             
             
             role="button"
         >
-            repo directory
+            Wiki
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://raw.githubusercontent.com/DFRobot/Wiki/master/DFR0478/%5BDFR0478%5DFireBeetle%20Board-ESP32%28V4.0%29%E7%94%9F%E4%BA%A7%E6%A3%80%E6%9F%A5%E5%9B%BE.PDF"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            Schematics
+            
+            
+                
+                
+
+
+                
+                <svg    class="download"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                        >
+                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
+                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
+                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
+                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
+                </svg>
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/Robert-MARKII/Document/raw/master/FireBeetle%20Board-ESP32%20User%20Manual%20update.pdf"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            User Manual
+            
+            
+                
+                
+
+
+                
+                <svg    class="download"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                        >
+                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
+                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
+                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
+                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
+                </svg>
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<h2 id="related-products">
+  Related products
+  <a class="anchor" href="#related-products">#</a>
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.dfrobot.com/product-1781.html"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            Solar Power Manager Micro
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<h1 id="applications">
+  Applications
+  <a class="anchor" href="#applications">#</a>
+</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/ESP32Home/firebeetle_solar_small.git"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            ESP32 Program Github Repo
             
             
                 
@@ -991,460 +1153,93 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52832"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            nRF52832
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.bosch-sensortec.com/products/environmental-sensors/humidity-sensors-bme280/"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            BME280
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.maximintegrated.com/en/products/interface/sensor-interface/MAX44009.html"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            MAX44009
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<h2 id="schematics">
-  Schematics
-  <a class="anchor" href="#schematics">#</a>
+<h2 id="config">
+  Config
+  <a class="anchor" href="#config">#</a>
 </h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;mqtt&#34;</span> : {
+        <span style="color:#f92672">&#34;host&#34;</span>:<span style="color:#e6db74">&#34;10.0.0.42&#34;</span>,
+        <span style="color:#f92672">&#34;port&#34;</span>:<span style="color:#ae81ff">1883</span>,
+        <span style="color:#f92672">&#34;client_id&#34;</span>:<span style="color:#e6db74">&#34;esp_firebeetle_1&#34;</span>
+    },
+    <span style="color:#f92672">&#34;base_topic&#34;</span>:<span style="color:#e6db74">&#34;esp/firebeetle_1&#34;</span>,
+    <span style="color:#f92672">&#34;deep_sleep_sec&#34;</span>:<span style="color:#ae81ff">10</span>
+}
+</code></pre></div><details >
+  <summary>Build info...</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">PACKAGES:
+ - framework-arduinoespressif32 3.10004.201016 <span style="color:#f92672">(</span>1.0.4<span style="color:#f92672">)</span>
+ - tool-esptoolpy 1.30000.201119 <span style="color:#f92672">(</span>3.0.0<span style="color:#f92672">)</span>
+ - toolchain-xtensa32 2.50200.80 <span style="color:#f92672">(</span>5.2.0<span style="color:#f92672">)</span>
+ ...
+ Dependency Graph
+|-- &lt;WiFi&gt; 1.0
+|-- &lt;ArduinoJson&gt; 6.16.1
+|-- &lt;MQTT&gt; 2.4.7        
+|-- &lt;FS&gt; 1.0
+|-- &lt;SPIFFS&gt; 1.0        
+|   |-- &lt;FS&gt; 1.0   
+</code></pre></div>
+  </div>
+</details>
 
-
-
-<div class="container">
-  <div class="row">
-      <div class="col text-center">
-          <a id="btn-6a12406b91bfd841" class="book-btn" role="button" >Full Screen</a>
-      </div>
-</div>
-<embed id="svg-6a12406b91bfd841" type="image/svg+xml" width=100% src="/images/simplemesh_sensortag/schematics.svg"  style="background-color:white"/>
-<script>
-  function setup_svg_panzoom(){
-    let params = {
-          panEnabled: true,
-          zoomEnabled: true,
-          dblClickZoomEnabled: true,
-          controlIconsEnabled: false,
-          mouseWheelZoomEnabled: true,
-          preventMouseEventsDefault: true,
-          zoomScaleSensitivity: 0.6,
-          minZoom: 0.5,
-          maxZoom: 4,
-           fit: true
-          , contain: true
-          , center: true
-          , refreshRate: 'auto'
-      };
-      let svg_pz = svgPanZoom('#svg-6a12406b91bfd841'        ,params);
-      window["svg_6a12406b91bfd841"] = svg_pz
-      let button = document.getElementById("btn-6a12406b91bfd841");
-      button.onclick = ()=>{
-          var elem = document.getElementById("svg-6a12406b91bfd841");
-          if (elem.requestFullscreen) {
-          elem.requestFullscreen();
-          } else if (elem.webkitRequestFullscreen) {  
-          elem.webkitRequestFullscreen();
-          } else if (elem.msRequestFullscreen) {  
-          elem.msRequestFullscreen();
-          }
-      };
-  }
-  function reset_position(){
-    window["svg_6a12406b91bfd841"].resize()
-    window["svg_6a12406b91bfd841"].fit()
-    window["svg_6a12406b91bfd841"].center()
-  }
-  document.getElementById('svg-6a12406b91bfd841').addEventListener('load', setup_svg_panzoom)
-  window.addEventListener('resize', reset_position)
- </script>
-
-<h2 id="board">
-  Board
-  <a class="anchor" href="#board">#</a>
-</h2>
-<h3 id="top">
-  Top
-  <a class="anchor" href="#top">#</a>
-</h3>
-
-
-
-<div class="container">
-  <div class="row">
-      <div class="col text-center">
-          <a id="btn-20b964f8115478bc" class="book-btn" role="button" >Full Screen</a>
-      </div>
-</div>
-<embed id="svg-20b964f8115478bc" type="image/svg+xml" width=100% src="/images/simplemesh_sensortag/top.svg"  style="background-color:white"/>
-<script>
-  function setup_svg_panzoom(){
-    let params = {
-          panEnabled: true,
-          zoomEnabled: true,
-          dblClickZoomEnabled: true,
-          controlIconsEnabled: false,
-          mouseWheelZoomEnabled: true,
-          preventMouseEventsDefault: true,
-          zoomScaleSensitivity: 0.6,
-          minZoom: 0.5,
-          maxZoom: 4,
-           fit: true
-          , contain: true
-          , center: true
-          , refreshRate: 'auto'
-      };
-      let svg_pz = svgPanZoom('#svg-20b964f8115478bc'        ,params);
-      window["svg_20b964f8115478bc"] = svg_pz
-      let button = document.getElementById("btn-20b964f8115478bc");
-      button.onclick = ()=>{
-          var elem = document.getElementById("svg-20b964f8115478bc");
-          if (elem.requestFullscreen) {
-          elem.requestFullscreen();
-          } else if (elem.webkitRequestFullscreen) {  
-          elem.webkitRequestFullscreen();
-          } else if (elem.msRequestFullscreen) {  
-          elem.msRequestFullscreen();
-          }
-      };
-  }
-  function reset_position(){
-    window["svg_20b964f8115478bc"].resize()
-    window["svg_20b964f8115478bc"].fit()
-    window["svg_20b964f8115478bc"].center()
-  }
-  document.getElementById('svg-20b964f8115478bc').addEventListener('load', setup_svg_panzoom)
-  window.addEventListener('resize', reset_position)
- </script>
-
-<h3 id="bottom">
-  Bottom
-  <a class="anchor" href="#bottom">#</a>
-</h3>
-
-
-
-<div class="container">
-  <div class="row">
-      <div class="col text-center">
-          <a id="btn-d7409ce4b8910249" class="book-btn" role="button" >Full Screen</a>
-      </div>
-</div>
-<embed id="svg-d7409ce4b8910249" type="image/svg+xml" width=100% src="/images/simplemesh_sensortag/bottom.svg"  style="background-color:white"/>
-<script>
-  function setup_svg_panzoom(){
-    let params = {
-          panEnabled: true,
-          zoomEnabled: true,
-          dblClickZoomEnabled: true,
-          controlIconsEnabled: false,
-          mouseWheelZoomEnabled: true,
-          preventMouseEventsDefault: true,
-          zoomScaleSensitivity: 0.6,
-          minZoom: 0.5,
-          maxZoom: 4,
-           fit: true
-          , contain: true
-          , center: true
-          , refreshRate: 'auto'
-      };
-      let svg_pz = svgPanZoom('#svg-d7409ce4b8910249'        ,params);
-      window["svg_d7409ce4b8910249"] = svg_pz
-      let button = document.getElementById("btn-d7409ce4b8910249");
-      button.onclick = ()=>{
-          var elem = document.getElementById("svg-d7409ce4b8910249");
-          if (elem.requestFullscreen) {
-          elem.requestFullscreen();
-          } else if (elem.webkitRequestFullscreen) {  
-          elem.webkitRequestFullscreen();
-          } else if (elem.msRequestFullscreen) {  
-          elem.msRequestFullscreen();
-          }
-      };
-  }
-  function reset_position(){
-    window["svg_d7409ce4b8910249"].resize()
-    window["svg_d7409ce4b8910249"].fit()
-    window["svg_d7409ce4b8910249"].center()
-  }
-  document.getElementById('svg-d7409ce4b8910249').addEventListener('load', setup_svg_panzoom)
-  window.addEventListener('resize', reset_position)
- </script>
-
-<h3 id="module">
-  Module
-  <a class="anchor" href="#module">#</a>
-</h3>
-<figure>
-    <img src="/images/module_size.png" width="100%"/> 
-</figure>
-
-<h1 id="application">
-  Application
-  <a class="anchor" href="#application">#</a>
-</h1>
-<h2 id="firmware">
-  Firmware
-  <a class="anchor" href="#firmware">#</a>
-</h2>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/nRFMesh/nRF52_Mesh/tree/master/applications/01_sensortag"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            repo directory
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<h3 id="low-power-configuration">
-  Low Power configuration
-  <a class="anchor" href="#low-power-configuration">#</a>
-</h3>
-<table>
-<thead>
-<tr>
-<th>Flags to clear</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>NRFX_UARTE_ENABLED</td>
-</tr>
-<tr>
-<td>NRFX_UART_ENABLED</td>
-</tr>
-<tr>
-<td>UART_ENABLED</td>
-</tr>
-<tr>
-<td>UART0_ENABLED</td>
-</tr>
-<tr>
-<td>NRF_FPRINTF_ENABLED</td>
-</tr>
-<tr>
-<td>NRF_LOG_BACKEND_UART_ENABLED</td>
-</tr>
-<tr>
-<td>NRF_LOG_STR_FORMATTER_TIMESTAMP_FORMAT_ENABLED</td>
-</tr>
-<tr>
-<td>NRF_LOG_ENABLED</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>removed nrf_drv_uart.c from Makefile</li>
-<li>Required nRF52832 Errata [89] TWI: Static 400 uA current while using GPIOTE</li>
-</ul>
-<h2 id="low-power-measures">
-  Low Power Measures
-  <a class="anchor" href="#low-power-measures">#</a>
-</h2>
-<table>
-<thead>
-<tr>
-<th>Mode</th>
-<th>Current</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>RTC + RAM</td>
-<td>9.6 uA</td>
-</tr>
-<tr>
-<td>// + Sensors</td>
-<td>22 uA</td>
-</tr>
-<tr>
-<td>// without TWI Woraround</td>
-<td>470 uA</td>
-</tr>
-<tr>
-<td>Uart Log</td>
-<td>500 uA</td>
-</tr>
-<tr>
-<td>Uart Log + HF</td>
-<td>700 uA</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>250 us @ 12 mA</li>
-<li>1.5 ms @ 3.5 mA</li>
-<li>50 uA @ infinite</li>
-</ul>
+<details >
+  <summary>Platformio ini file ...</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[env]</span>
+<span style="color:#a6e22e">board</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">firebeetle32</span>
+<span style="color:#a6e22e">framework</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">arduino</span>
+<span style="color:#a6e22e">lib_deps</span> <span style="color:#f92672">=</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    WiFi
+</span><span style="color:#e6db74">    ArduinoJson@6.16.1
+</span><span style="color:#e6db74">    617@2.4.7   #MQTT 256dpi/arduino-mqtt</span>
+<span style="color:#a6e22e">lib_ldf_mode</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">deep+</span>
+<span style="color:#66d9ef">[env:firebeetle32]</span>
+<span style="color:#a6e22e">platform</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">espressif32</span>
+<span style="color:#a6e22e">monitor_speed</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">115200</span>
+</code></pre></div>
+  </div>
+</details>
 
 
 
 
-
-
-<div class="text-center">
-  <a >
-    <img
-    src="/images/simplemesh_sensortag/Power%20measures.png"
-    alt=""
-    width=""
-    height=""
-    decoding="async"
-  />
-  </a>
-  
+<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/esp32/firebeetle//1%20unboxing%20FireBeetle%20and%20solar.jpg');" >
+				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/esp32/firebeetle//1%20unboxing%20FireBeetle%20and%20solar.jpg" alt="1 unboxing fire beetle and solar" />
+				    </div>
+			      <figcaption>
+		          <p>1 unboxing fire beetle and solar</p>
+			      </figcaption>
+				    <a href="https://www.homesmartmesh.com//images/esp32/firebeetle//1%20unboxing%20FireBeetle%20and%20solar.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/esp32/firebeetle//2%20arranged%20Board%20solar%20charger.jpg');" >
+				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/esp32/firebeetle//2%20arranged%20Board%20solar%20charger.jpg" alt="2 arranged board solar charger" />
+				    </div>
+			      <figcaption>
+		          <p>2 arranged board solar charger</p>
+			      </figcaption>
+				    <a href="https://www.homesmartmesh.com//images/esp32/firebeetle//2%20arranged%20Board%20solar%20charger.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/esp32/firebeetle//3%20Charging.jpg');" >
+				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/esp32/firebeetle//3%20Charging.jpg" alt="3 charging" />
+				    </div>
+			      <figcaption>
+		          <p>3 charging</p>
+			      </figcaption>
+				    <a href="https://www.homesmartmesh.com//images/esp32/firebeetle//3%20Charging.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
 </div>
 
 </article>
@@ -1481,27 +1276,17 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#concept">Concept</a></li>
-    <li><a href="#hardware">Hardware</a>
+    <li><a href="#overview">Overview</a>
       <ul>
-        <li><a href="#schematics">Schematics</a></li>
-        <li><a href="#board">Board</a>
-          <ul>
-            <li><a href="#top">Top</a></li>
-            <li><a href="#bottom">Bottom</a></li>
-            <li><a href="#module">Module</a></li>
-          </ul>
-        </li>
+        <li><a href="#pins">PINS</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#related-products">Related products</a></li>
       </ul>
     </li>
-    <li><a href="#application">Application</a>
+    <li><a href="#applications">Applications</a>
       <ul>
-        <li><a href="#firmware">Firmware</a>
-          <ul>
-            <li><a href="#low-power-configuration">Low Power configuration</a></li>
-          </ul>
-        </li>
-        <li><a href="#low-power-measures">Low Power Measures</a></li>
+        <li><a href="#config">Config</a></li>
       </ul>
     </li>
   </ul>

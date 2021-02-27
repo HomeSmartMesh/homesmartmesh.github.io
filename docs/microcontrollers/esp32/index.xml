@@ -6,7 +6,7 @@
     <description>Recent content in esp32 on Home Smart Mesh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Feb 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://www.homesmartmesh.com/docs/microcontrollers/esp32/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Feb 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://www.homesmartmesh.com/docs/microcontrollers/esp32/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Datasheets</title>
       <link>https://www.homesmartmesh.com/docs/microcontrollers/esp32/datasheets/</link>
@@ -69,6 +69,16 @@
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/m5stick-plus/</guid>
       <description> 6-Axis IMU IR transmitter Microphone RTC LCD (1.14 inch) Lipo Battery Passive Buzzer  Product page# m5stack M5StickC Plus $14  Display# 1.14 inch 135x240 Color TFT LCD ST7789v2  </description>
+    </item>
+    
+    <item>
+      <title>FireBeetle</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/esp32/fire-beetle/</link>
+      <pubDate>Sat, 27 Feb 2021 00:00:00 +0900</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/fire-beetle/</guid>
+      <description>Overview# 10 uA deep sleep current USB and external DC battery power inputs (3.3V - 5V) battery charging from USB external DC TP4056 Li-Ion battery charger RT9080 Low Drop out Linear Regulator supported by platformio (board=firebeetle32)  PINS# LED (IO2) 50 % VBAT (A0 - SENSOR_VP)  Gallery#1 unboxing fire beetle and solar
+2 arranged board solar charger</description>
     </item>
     
     <item>

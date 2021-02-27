@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.43fa53f49e5ee9e7d7f4bb92a40573835b753e6ea2b87ebb2eb9fe5a47062c8b.js" integrity="sha256-Q/pT9J5e6efX9LuSpAVzg1t1Pm6iuH67Lrn&#43;WkcGLIs="></script>
+<script defer src="/en.search.min.b652903a688d470ebb683d81fc4445f77aa37594d33aec3bcb30578e87c1aac0.js" integrity="sha256-tlKQOmiNRw67aD2B/ERF93qjdZTTOuw7yzBXjofBqsA="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -303,6 +303,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="https://www.homesmartmesh.com/docs/microcontrollers/esp32/m5stick-plus/" class="">M5 Stick Plus</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://www.homesmartmesh.com/docs/microcontrollers/esp32/fire-beetle/" class="">FireBeetle</a>
   
 
         </li>
@@ -1001,11 +1014,33 @@ String topic;
 </details>
 
 <details >
-  <summary>What are the alternatives to ESP-Mesh ?</summary>
+  <summary>Can ESP-Now solve the &#39;Provisioning&#39; Problem or make it easier ?</summary>
   <div class="markdown-inner">
     <ul>
-<li>The ESP devices do implement wifi and Bluetooth standards, when it comes to the ESP-Mesh, it is a custom protocol and not used beyond Espressif devices, therefore when it comes to 2.4 GHz mesh solutions, Standards exist and are in quick expansion such as <a href="/docs/networks/zigbee/">Zigbee</a> and <a href="/docs/networks/thread/">Thread</a>.</li>
+<li>The provisioning dilemma is unfortunately common to all protocols and is a Home Automation Nightmare : &ldquo;Provisioning / Pairing / Joining / Configuring&rdquo;.</li>
 </ul>
+<p>Let&rsquo;s first have a look on other protocols deal with provisioning :</p>
+<ul>
+<li>
+<p>Zigbee : Is the worst I&rsquo;ve ever seen, as the state is not visible to the user shared between a device and a server, if a device goes offline it still thinks it&rsquo;s paired, to overcome temporary network shortage, and if you want it to join a new network you need to actively be playing around with it to figure out how each device has a different way to be reset and then enable pairing on the gateway&hellip;</p>
+</li>
+<li>
+<p>Wifi : has a secred that each device has to know, but how can you give that secret, the own hotspot is not easy, as you need a webserver and manual entry, there are some protocols designed to make that easier :</p>
+</li>
+<li>
+<p>DDP Device Provisioning Protocol</p>
+</li>
+<li>
+<p>SmartConfig : this is <a href="https://github.com/geeksville/AutoWifi">another example</a>, you can read more about Unified <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/provisioning/provisioning.html">Provisioning on the Espressif website</a></p>
+</li>
+</ul>
+<p>Now, we might be disgusted from wifi for two reasons, provisioning and also range which is very limited compared to mesh networks that have repeaters.</p>
+<ul>
+<li>Custom RF : e.g. the same here applies for ESP-NOW or any other custom mesh such as the <a href="/docs/networks/nrf/">SimpleMesh</a> which is as it&rsquo;s names suggest simple, but also stable. Changing the battery is not more complex than changing the battery. The way I solved the configuration issue there, is by an automated script run after attaching a devices with the debugger, it reads the serial number, which has an associated short id coming from a config file. That short id will be used in radio packets as unique ID, I could also assign a master key for encryption, but I did not need security as it is only about light and temperature values, no control.</li>
+</ul>
+<p>So when it comes to ESP-Now, you also need to configure each of them to give them the security with &ldquo;esp_now_set_pmk()&rdquo; if you do not want everyone using your devices to spy on each other.
+The problem gets bigger if you want to give your devices to a user that has to use it securely on his network with a unique pmk and that user does not want to be flashing and messing with a configuration.</p>
+<p>To summarize, there&rsquo;s no way around a &ldquo;provisioning&rdquo; process whatever protocol you use unless you need no security, nor networks isolation, or can flash the secret uniquely for each device, which is also a sort of provisioning. And not mentioning the provisioning that needs an internet connection to synchronise with a backend and user account.</p>
 
   </div>
 </details>
