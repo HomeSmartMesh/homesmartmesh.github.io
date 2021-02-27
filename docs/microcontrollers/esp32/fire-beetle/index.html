@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.a162dfbbac10ceefaa1bb861a1fb281071160b9a60ac68c9c653f61b8a502c14.js" integrity="sha256-oWLfu6wQzu&#43;qG7hhofsoEHEWC5pgrGjJxlP2G4pQLBQ="></script>
+<script defer src="/en.search.min.2de111999f869db77580077eb4179c42b731c3279127c28e497680dc6ad25d20.js" integrity="sha256-LeERmZ&#43;Gnbd1gAd&#43;tBecQrcxwyeRJ8KOSXaA3GrSXSA="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -799,6 +799,7 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#applications">Applications</a>
       <ul>
         <li><a href="#config">Config</a></li>
+        <li><a href="#main">Main</a></li>
       </ul>
     </li>
   </ul>
@@ -849,12 +850,15 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <ul>
 <li>LED : (IO2)</li>
-<li>VBAT : (A0 - 38 - SENSOR_VP) measure ratio = 0.5</li>
+<li>VBAT : (A0 - 36 - SENSOR_VP) measure ratio = 0.5</li>
 </ul>
 <blockquote class="book-hint danger">
   The 0 Ohm resistors R10 and R11 needed to sense the battery voltage by A0-Pin38 are not populated (as of the boards I have). Therefore solder bridges are required to be added manually 😢
 </blockquote>
 
+<ul>
+<li>Another caveat is the usage of pin 36 A0 which conflicts with wifi. To avoid that, in the program below, the battery is measured before the wifi is activated.</li>
+</ul>
 <h2 id="gallery">
   Gallery
   <a class="anchor" href="#gallery">#</a>
@@ -1181,7 +1185,69 @@ https://github.com/alex-shpak/hugo-book
     <span style="color:#f92672">&#34;base_topic&#34;</span>:<span style="color:#e6db74">&#34;esp/firebeetle_1&#34;</span>,
     <span style="color:#f92672">&#34;deep_sleep_sec&#34;</span>:<span style="color:#ae81ff">10</span>
 }
-</code></pre></div><details >
+</code></pre></div><h2 id="main">
+  Main
+  <a class="anchor" href="#main">#</a>
+</h2>
+<details >
+  <summary>main.cpp</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;Arduino.h&#34;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;WiFi.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ArduinoJson.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;freertos/FreeRTOS.h&#34;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;WiFi.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;MQTT.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;esp_wifi.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;json_file.h&#34;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;battery.h&#34;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;wifi_secret.h&#34;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+DynamicJsonDocument <span style="color:#a6e22e">config</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">*</span><span style="color:#ae81ff">1024</span>);<span style="color:#75715e">//5 KB
+</span><span style="color:#75715e"></span>MQTTClient <span style="color:#a6e22e">mqtt</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">*</span><span style="color:#ae81ff">1024</span>);<span style="color:#75715e">// 1KB for small messages
+</span><span style="color:#75715e"></span>WiFiClient wifi;<span style="color:#75715e">//needed to stay on global scope
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
+
+  Serial.begin(<span style="color:#ae81ff">115200</span>);
+  <span style="color:#66d9ef">uint32_t</span> vref <span style="color:#f92672">=</span> bat_init();
+  Serial.printf(<span style="color:#e6db74">&#34;eFuse Vref:%u mV</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, vref);
+  <span style="color:#66d9ef">float</span> battery_f <span style="color:#f92672">=</span> bat_get_voltage();
+  battery_f <span style="color:#f92672">/=</span><span style="color:#ae81ff">1000</span>;
+
+  pinMode(LED_BUILTIN, OUTPUT);
+  blink(<span style="color:#ae81ff">100</span>);
+  WiFi.begin(ssid, password);
+  load_config(config,true);
+  timelog(<span style="color:#e6db74">&#34;config loaded&#34;</span>);
+
+  <span style="color:#66d9ef">if</span>(connect()){
+    mqtt_publish_status(battery_f);    timelog(<span style="color:#e6db74">&#34;=&gt;status&#34;</span>);
+    mqtt.loop();
+  }
+
+  Serial.println(<span style="color:#e6db74">&#34;ESP going to deep sleep&#34;</span>);
+  Serial.flush();
+  blink(<span style="color:#ae81ff">100</span>);
+
+  esp_wifi_stop();
+  <span style="color:#66d9ef">uint32_t</span> deep_sleep_sec <span style="color:#f92672">=</span> config[<span style="color:#e6db74">&#34;deep_sleep_sec&#34;</span>];
+  esp_deep_sleep(deep_sleep_sec<span style="color:#f92672">*</span><span style="color:#ae81ff">1000000</span>);
+  esp_deep_sleep_start();
+
+}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+  <span style="color:#75715e">//no loop
+</span><span style="color:#75715e"></span>}
+
+</code></pre></div>
+  </div>
+</details>
+
+<details >
   <summary>Build info...</summary>
   <div class="markdown-inner">
     <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">PACKAGES:
@@ -1313,6 +1379,7 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#applications">Applications</a>
       <ul>
         <li><a href="#config">Config</a></li>
+        <li><a href="#main">Main</a></li>
       </ul>
     </li>
   </ul>
