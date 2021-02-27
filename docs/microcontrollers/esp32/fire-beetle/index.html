@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.b652903a688d470ebb683d81fc4445f77aa37594d33aec3bcb30578e87c1aac0.js" integrity="sha256-tlKQOmiNRw67aD2B/ERF93qjdZTTOuw7yzBXjofBqsA="></script>
+<script defer src="/en.search.min.a162dfbbac10ceefaa1bb861a1fb281071160b9a60ac68c9c653f61b8a502c14.js" integrity="sha256-oWLfu6wQzu&#43;qG7hhofsoEHEWC5pgrGjJxlP2G4pQLBQ="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -848,9 +848,13 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#pins">#</a>
 </h2>
 <ul>
-<li>LED (IO2)</li>
-<li>50 % VBAT (A0 - SENSOR_VP)</li>
+<li>LED : (IO2)</li>
+<li>VBAT : (A0 - 38 - SENSOR_VP) measure ratio = 0.5</li>
 </ul>
+<blockquote class="book-hint danger">
+  The 0 Ohm resistors R10 and R11 needed to sense the battery voltage by A0-Pin38 are not populated (as of the boards I have). Therefore solder bridges are required to be added manually 😢
+</blockquote>
+
 <h2 id="gallery">
   Gallery
   <a class="anchor" href="#gallery">#</a>
@@ -890,6 +894,17 @@ https://github.com/alex-shpak/hugo-book
 		          <p>3 charging</p>
 			      </figcaption>
 				    <a href="https://www.homesmartmesh.com//images/esp32/firebeetle//3%20Charging.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/esp32/firebeetle//4%20VBat%200Ohm%20res.jpg');" >
+				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/esp32/firebeetle//4%20VBat%200Ohm%20res.jpg" alt="4 v bat 0 ohm res" />
+				    </div>
+			      <figcaption>
+		          <p>4 v bat 0 ohm res</p>
+			      </figcaption>
+				    <a href="https://www.homesmartmesh.com//images/esp32/firebeetle//4%20VBat%200Ohm%20res.jpg" itemprop="contentUrl"></a>
 				  </figure>
 				</div>
 </div>
@@ -1238,6 +1253,17 @@ https://github.com/alex-shpak/hugo-book
 		          <p>3 charging</p>
 			      </figcaption>
 				    <a href="https://www.homesmartmesh.com//images/esp32/firebeetle//3%20Charging.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/esp32/firebeetle//4%20VBat%200Ohm%20res.jpg');" >
+				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/esp32/firebeetle//4%20VBat%200Ohm%20res.jpg" alt="4 v bat 0 ohm res" />
+				    </div>
+			      <figcaption>
+		          <p>4 v bat 0 ohm res</p>
+			      </figcaption>
+				    <a href="https://www.homesmartmesh.com//images/esp32/firebeetle//4%20VBat%200Ohm%20res.jpg" itemprop="contentUrl"></a>
 				  </figure>
 				</div>
 </div>

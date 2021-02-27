@@ -271,7 +271,7 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
       <pubDate>Sat, 26 Dec 2020 00:00:00 +0900</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/fisheye-cam-ov36/</guid>
-      <description>3 Mega Pixels OV3660 Fisheye lens DFOV 120° Ultra low power, sleep current 2μA 270mAh battery PSRAM 8MB  Product page# Fisheye Timer camera $20  Platformio porting#board definition# local file : boards\m5stack-timer-cam.json should be added to the platformio/platform-espressif32 repo still missing from v2.1.0  pins declaration# file required pins_arduino.h available on pins_arduino.h@1.0.5 not yet released  Applications#wakeup# m5stack/Arduino wakeup example sep32home/Platformio wakeup example  Build infoPACKAGES:- framework-arduinoespressif32 0.</description>
+      <description>3 Mega Pixels OV3660 Fisheye lens DFOV 120° Ultra low power, sleep current 2μA 270mAh battery PSRAM 8MB  Links#Fisheye Timer camera $20Schematics - ESP32_SUBSYSSchematics - PMS_UARTPlatformio porting#board definition# local file : boards\m5stack-timer-cam.json should be added to the platformio/platform-espressif32 repo still missing from v2.</description>
     </item>
     
     <item>
@@ -307,8 +307,7 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
       <pubDate>Sat, 27 Feb 2021 00:00:00 +0900</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/fire-beetle/</guid>
-      <description>Overview# 10 uA deep sleep current USB and external DC battery power inputs (3.3V - 5V) battery charging from USB external DC TP4056 Li-Ion battery charger RT9080 Low Drop out Linear Regulator supported by platformio (board=firebeetle32)  PINS# LED (IO2) 50 % VBAT (A0 - SENSOR_VP)  Gallery#1 unboxing fire beetle and solar
-2 arranged board solar charger</description>
+      <description>Overview# 10 uA deep sleep current USB and external DC battery power inputs (3.3V - 5V) battery charging from USB external DC TP4056 Li-Ion battery charger RT9080 Low Drop out Linear Regulator supported by platformio (board=firebeetle32)  PINS# LED : (IO2) VBAT : (A0 - 38 - SENSOR_VP) measure ratio = 0.5  The 0 Ohm resistors R10 and R11 needed to sense the battery voltage by A0-Pin38 are not populated (as of the boards I have).</description>
     </item>
     
     <item>
