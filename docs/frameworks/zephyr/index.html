@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.2de111999f869db77580077eb4179c42b731c3279127c28e497680dc6ad25d20.js" integrity="sha256-LeERmZ&#43;Gnbd1gAd&#43;tBecQrcxwyeRJ8KOSXaA3GrSXSA="></script>
+<script defer src="/en.search.min.afa12b7fabd28fbd5f11138c916bd8cec3ce60a9ab804b32baf581c5a90e08c9.js" integrity="sha256-r6Erf6vSj71fEROMkWvYzsPOYKmrgEsyuvWBxakOCMk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -788,16 +788,11 @@ https://github.com/alex-shpak/hugo-book
   <nav id="TableOfContents">
   <ul>
     <li><a href="#relates-to">Relates to</a></li>
-    <li><a href="#windows">Windows</a>
+    <li><a href="#windows-install">Windows Install</a></li>
+    <li><a href="#linux-install">Linux Install</a></li>
+    <li><a href="#build-and-flash">Build and Flash</a>
       <ul>
-        <li><a href="#install">Install</a></li>
-        <li><a href="#build-and-flash">Build and Flash</a></li>
-      </ul>
-    </li>
-    <li><a href="#linux">Linux</a>
-      <ul>
-        <li><a href="#install-1">Install</a></li>
-        <li><a href="#build-and-flash-1">Build and Flash</a></li>
+        <li><a href="#rtt-config">RTT config</a></li>
       </ul>
     </li>
   </ul>
@@ -853,14 +848,10 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 </p>
-<h1 id="windows">
-  Windows
-  <a class="anchor" href="#windows">#</a>
+<h1 id="windows-install">
+  Windows Install
+  <a class="anchor" href="#windows-install">#</a>
 </h1>
-<h2 id="install">
-  Install
-  <a class="anchor" href="#install">#</a>
-</h2>
 
 <div class="container">
     <div class="row">
@@ -921,113 +912,10 @@ https://github.com/alex-shpak/hugo-book
 </li>
 </ul>
 <p>e.g. for a path <code>&quot;D:\tools\gnu_arm_embedded\9_2020-q2-update\bin\arm-none-eabi-gcc.exe&quot;</code> <code>GNUARMEMB_TOOLCHAIN_PATH</code> shall be set to <code>D:\tools\gnu_arm_embedded\9_2020-q2-update</code></p>
-<h2 id="build-and-flash">
-  Build and Flash
-  <a class="anchor" href="#build-and-flash">#</a>
-</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">west build -p auto -b nrf52840dongle_nrf52840 samples<span style="color:#ae81ff">\b</span>asic<span style="color:#ae81ff">\b</span>linky
-west flash
-nrfjprog -f nrf52 --reset
-</code></pre></div><blockquote class="book-hint warning">
-  Flashing this USB Dongle board requires one of the following options
-</blockquote>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://docs.zephyrproject.org/2.3.0/boards/arm/nrf52840dongle_nrf52840/doc/index.html#programming-and-debugging"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            How to Flash docs.zephyrproject
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<ul>
-<li>Option1 <code>Using the built-in bootloader only</code> : uses nrfutils and requires the default bootloader to be already flashed</li>
-<li>Option2 <code>Using MCUboot in Serial Recovery Mode</code> : requires building the MCUboot and using nrfutils</li>
-<li>Option3 <code>Using an External Debug Probe</code> :
-<ul>
-<li>requires soldering SWD pins or using <a href="/docs/microcontrollers/nrf52/usb_dongle/#pogo-pin-adapter">this pogo pins adapter</a></li>
-<li>also <code>manual reset</code> or <code>nrfjprog -f nrf52 --reset</code></li>
-</ul>
-</li>
-</ul>
-<details >
-  <summary>modifying the DTS</summary>
-  <div class="markdown-inner">
-    <p>The board device tree source located in <code>boards\arm\nrf52840dongle_nrf52840\nrf52840dongle_nrf52840.dts</code>
-the end of the file should look like below after the modification</p>
-<pre><code>/* Include flash partition table.
- * Two partition tables are available:
- * fstab-stock		-compatible with Nordic nRF5 bootloader, default
- * fstab-debugger	-to use an external debugger, w/o the nRF5 bootloader
- */
-#include &quot;fstab-debugger.dts&quot;
-
-&amp;usbd {
-	compatible = &quot;nordic,nrf-usbd&quot;;
-	status = &quot;okay&quot;;
-};
-</code></pre><p>we notice that after that change the generated dts file is different <code>build\zephyr\zephyr.dts</code></p>
-<div class="text-center">
-  <a >
-    <img
-    src="/images/thread_sensortag/west_dts.png"
-    alt=""
-    width=""
-    height=""
-    decoding="async"
-  />
-  </a>
-</div>
-
-  </div>
-</details>
-
-<h1 id="linux">
-  Linux
-  <a class="anchor" href="#linux">#</a>
+<h1 id="linux-install">
+  Linux Install
+  <a class="anchor" href="#linux-install">#</a>
 </h1>
-<h2 id="install-1">
-  Install
-  <a class="anchor" href="#install-1">#</a>
-</h2>
 <ul>
 <li>
 <p>installing Zephyr with its own compiler toolchain <code>Zephyr SDK</code></p>
@@ -1041,10 +929,10 @@ the end of the file should look like below after the modification</p>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tar -xf nRFCommandLineTools10121Linuxamd64.tar.gz
 sudo dpkg -i nRF-Command-Line-Tools_10_12_1_Linux-amd64.deb
-</code></pre></div><h2 id="build-and-flash-1">
+</code></pre></div><h1 id="build-and-flash">
   Build and Flash
-  <a class="anchor" href="#build-and-flash-1">#</a>
-</h2>
+  <a class="anchor" href="#build-and-flash">#</a>
+</h1>
 <p>Testing blinky sample</p>
 <p>add <code>CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n</code> to <code>prj.conf</code></p>
 <p>tested version 2.5.99</p>
@@ -1052,7 +940,88 @@ sudo dpkg -i nRF-Command-Line-Tools_10_12_1_Linux-amd64.deb
 west build -p auto -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span>prj.conf
 west flash
 nrfjprog -f nrf52 --reset
-</code></pre></div></article>
+</code></pre></div><h2 id="rtt-config">
+  RTT config
+  <a class="anchor" href="#rtt-config">#</a>
+</h2>
+<p>required configuration to have logs running over the segger j-link RTT (log through the same SWD interface used for programming)
+<details >
+  <summary>prj.conf</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-conf" data-lang="conf">CONFIG_GPIO=y
+CONFIG_SERIAL=n
+CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n
+
+# Logging
+CONFIG_LOG=y
+CONFIG_LOG_BACKEND_RTT=y
+CONFIG_LOG_BACKEND_UART=n
+CONFIG_BOOT_BANNER=y
+CONFIG_USE_SEGGER_RTT=y
+CONFIG_CONSOLE=y
+CONFIG_UART_CONSOLE=n
+CONFIG_RTT_CONSOLE=y
+</code></pre>
+  </div>
+</details>
+</p>
+<details >
+  <summary>main.c</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;zephyr.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;logging/log.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>LOG_MODULE_REGISTER(main, LOG_LEVEL_INF);
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
+{
+	LOG_INF(<span style="color:#e6db74">&#34;Starting&#34;</span>);
+	<span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">while</span> (<span style="color:#ae81ff">1</span>) {
+		LOG_INF(<span style="color:#e6db74">&#34;loop: %d&#34;</span>,count<span style="color:#f92672">++</span>);
+	}
+}
+
+</code></pre></div>
+  </div>
+</details>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware/pio_zephyr_blink"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            pio zephyr log example
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+</article>
  
       
 
@@ -1087,16 +1056,11 @@ nrfjprog -f nrf52 --reset
   <nav id="TableOfContents">
   <ul>
     <li><a href="#relates-to">Relates to</a></li>
-    <li><a href="#windows">Windows</a>
+    <li><a href="#windows-install">Windows Install</a></li>
+    <li><a href="#linux-install">Linux Install</a></li>
+    <li><a href="#build-and-flash">Build and Flash</a>
       <ul>
-        <li><a href="#install">Install</a></li>
-        <li><a href="#build-and-flash">Build and Flash</a></li>
-      </ul>
-    </li>
-    <li><a href="#linux">Linux</a>
-      <ul>
-        <li><a href="#install-1">Install</a></li>
-        <li><a href="#build-and-flash-1">Build and Flash</a></li>
+        <li><a href="#rtt-config">RTT config</a></li>
       </ul>
     </li>
   </ul>

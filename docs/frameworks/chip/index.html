@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.2de111999f869db77580077eb4179c42b731c3279127c28e497680dc6ad25d20.js" integrity="sha256-LeERmZ&#43;Gnbd1gAd&#43;tBecQrcxwyeRJ8KOSXaA3GrSXSA="></script>
+<script defer src="/en.search.min.afa12b7fabd28fbd5f11138c916bd8cec3ce60a9ab804b32baf581c5a90e08c9.js" integrity="sha256-r6Erf6vSj71fEROMkWvYzsPOYKmrgEsyuvWBxakOCMk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -795,15 +795,14 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#tools">Tools</a></li>
       </ul>
     </li>
-    <li><a href="#building-for-nrf52">Building for nRF52</a>
+    <li><a href="#running-on-nrf52">Running on nRF52</a>
       <ul>
         <li><a href="#nrf-connect-integration">nRF Connect integration</a></li>
-        <li><a href="#prerequisites">prerequisites</a></li>
         <li><a href="#install">install</a></li>
         <li><a href="#build-the-lighting-app">build the lighting app</a></li>
       </ul>
     </li>
-    <li><a href="#building-for-esp32">Building for ESP32</a></li>
+    <li><a href="#running-on-esp32">Running on ESP32</a></li>
   </ul>
 </nav>
 
@@ -1008,9 +1007,9 @@ https://github.com/alex-shpak/hugo-book
 
   npm install
   npm run zap
-</code></pre></div><h1 id="building-for-nrf52">
-  Building for nRF52
-  <a class="anchor" href="#building-for-nrf52">#</a>
+</code></pre></div><h1 id="running-on-nrf52">
+  Running on nRF52
+  <a class="anchor" href="#running-on-nrf52">#</a>
 </h1>
 <h2 id="nrf-connect-integration">
   nRF Connect integration
@@ -1074,143 +1073,16 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 </p>
-<h2 id="prerequisites">
-  prerequisites
-  <a class="anchor" href="#prerequisites">#</a>
-</h2>
+<blockquote class="book-hint info">
+  Note that <code>zephyr</code> and <code>connectedhomeip</code> will be managed as ncs dependencies with west from <code>nrf/west.yml</code>
+</blockquote>
 
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/project-chip/connectedhomeip/blob/master/docs/BUILDING.md"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            How to
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone --recurse-submodules https://github.com/project-chip/connectedhomeip.git
-sudo apt-get install git gcc g++ python pkg-config libssl-dev libdbus-1-dev libglib2.0-dev libavahi-client-dev ninja-build python3-venv python3-dev unzip
-cd connectedhomeip
-source scripts/activate.sh
-gn gen out/custom
-gn args --list out/custom
-</code></pre></div><p>important arguments :</p>
-<ul>
-<li>chip_device_platform : esp32, freertos, linux, nrfconnect,&hellip;</li>
-<li>chip_enable_openthread</li>
-<li>chip_enable_wifi</li>
-<li>target_cpu</li>
-<li>target_os</li>
-</ul>
 <h2 id="install">
   install
   <a class="anchor" href="#install">#</a>
 </h2>
 <ul>
-<li>
-<p>Step 1, install Zephyr
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-            
-                href="https://www.homesmartmesh.com/docs/frameworks/zephyr/"
-            
-            role="button"
-        >
-            Install Zephyr
-            
-            
-        </a>
-    </div>
-    </div>
-</div>
-</p>
-</li>
-<li>
-<p>Step 2, install the toolchain
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/gs_installing.html#installing-the-toolchain"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            install the toolchain
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-</p>
-</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nano ~/.zephyrrc
-export ZEPHYR_TOOLCHAIN_VARIANT<span style="color:#f92672">=</span>gnuarmemb
-export GNUARMEMB_TOOLCHAIN_PATH<span style="color:#f92672">=</span>~/gnuarmemb/gcc-arm-none-eabi-9-2019-q4-major/
-</code></pre></div><ul>
-<li>Step 2, install nRF Connect SDK
+<li>install nRF Connect SDK
 
 <div class="container">
     <div class="row">
@@ -1275,58 +1147,116 @@ source zephyr/zephyr-env.sh
   build the lighting app
   <a class="anchor" href="#build-the-lighting-app">#</a>
 </h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd connectedhomeip/examples/lighting-app/nrfconnect
+<ul>
+<li>Update <code>prj.conf</code> params to match the thread border router parametrs (e.g. channel,&hellip;)</li>
+<li>add CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd ncs/modules/lib/connectedhomeip/examples/lighting-app/nrfconnect/
+west build -b nrf52840dongle_nrf52840 -t menuconfig
 west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prj.conf&#34;</span>
-west build -b nrf52840dk_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prj.conf&#34;</span>
 west flash
-nrfjprog --program build/zephyr/zephyr.hex -f NRF52
-</code></pre></div><p>configure</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">west build -b nrf52840dongle_nrf52840 -t menuconfig
-</code></pre></div><details >
-  <summary>Build Error</summary>
+nrfjprog -f nrf52 --program zephyr.hex --sectorerase --verify
+</code></pre></div><ul>
+<li>in the config below, the RTT logging is enabled to get the log through the SWD Segger J-Link interface, see <code># Logging</code> section</li>
+<li>please note that the show <code>CONFIG_OPENTHREAD_MASTERKEY</code> is a dummy key and has to be kept secret in a production environment
+<details >
+  <summary>prj.conf</summary>
   <div class="markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">CMake Error at /usr/share/cmake-3.16/Modules/ExternalProject.cmake:3182 <span style="color:#f92672">(</span>add_custom_target<span style="color:#f92672">)</span>:
-  add_custom_target cannot create target <span style="color:#e6db74">&#34;chip-gn&#34;</span> because another target
-  with the same name already exists.  The existing target is a custom target
-  created in source directory
-  <span style="color:#e6db74">&#34;/home/wass/connectedhomeip/config/nrfconnect/chip-module&#34;</span>.  See
-  documentation <span style="color:#66d9ef">for</span> policy CMP0002 <span style="color:#66d9ef">for</span> more details.
-Call Stack <span style="color:#f92672">(</span>most recent call first<span style="color:#f92672">)</span>:
-  /home/wass/ncs/modules/lib/connectedhomeip/config/nrfconnect/chip-module/CMakeLists.txt:244 <span style="color:#f92672">(</span>ExternalProject_Add<span style="color:#f92672">)</span>
+    <pre><code class="language-conf" data-lang="conf">#
+#    Copyright (c) 2020 Project CHIP Authors
+#
+#    Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+#    you may not use this file except in compliance with the License.
+#    You may obtain a copy of the License at
+#
+#        http://www.apache.org/licenses/LICENSE-2.0
+#
+#    Unless required by applicable law or agreed to in writing, software
+#    distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+#    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#    See the License for the specific language governing permissions and
+#    limitations under the License.
+#
 
+# This sample uses sample-defaults.conf to set options common for all
+# samples. This file should contain only options specific for this sample
+# or overrides of default values.
 
-CMake Error at /home/wass/ncs/zephyr/cmake/extensions.cmake:570 <span style="color:#f92672">(</span>add_library<span style="color:#f92672">)</span>:
-  add_library cannot create target <span style="color:#e6db74">&#34;chip&#34;</span> because another target with the
-  same name already exists.  The existing target is an interface library
-  created in source directory
-  <span style="color:#e6db74">&#34;/home/wass/connectedhomeip/config/nrfconnect/chip-module&#34;</span>.  See
-  documentation <span style="color:#66d9ef">for</span> policy CMP0002 <span style="color:#66d9ef">for</span> more details.
-Call Stack <span style="color:#f92672">(</span>most recent call first<span style="color:#f92672">)</span>:
-  /home/wass/ncs/modules/lib/connectedhomeip/config/nrfconnect/chip-module/CMakeLists.txt:268 <span style="color:#f92672">(</span>zephyr_interface_library_named<span style="color:#f92672">)</span>
+# Add support for LEDs and buttons on Nordic development kits
+CONFIG_DK_LIBRARY=y
+CONFIG_PWM=y
 
+# Default OpenThread network settings
+CONFIG_OPENTHREAD_PANID=4660
+CONFIG_OPENTHREAD_CHANNEL=13
+CONFIG_OPENTHREAD_NETWORK_NAME=&quot;OpenThreadDemo&quot;
+CONFIG_OPENTHREAD_XPANID=&quot;11:11:11:11:22:22:22:22&quot;
+CONFIG_OPENTHREAD_MASTERKEY=&quot;00112233445566778899aabbccddeeff&quot;
 
-CMake Warning at /home/wass/ncs/zephyr/CMakeLists.txt:1349 <span style="color:#f92672">(</span>message<span style="color:#f92672">)</span>:
-  __ASSERT<span style="color:#f92672">()</span> statements are globally ENABLED
+# Bluetooth overrides
+CONFIG_BT_DEVICE_NAME=&quot;ChipLight&quot;
 
+# Additional configs for debbugging experience.
+CONFIG_THREAD_NAME=y
+CONFIG_MPU_STACK_GUARD=y
 
-CMake Warning at /home/wass/ncs/zephyr/CMakeLists.txt:1377 <span style="color:#f92672">(</span>message<span style="color:#f92672">)</span>:
+# CHIP configuration
+CONFIG_CHIP_PROJECT_CONFIG=&quot;main/include/CHIPProjectConfig.h&quot;
+CONFIG_CHIP_OPENTHREAD_CONFIG=&quot;../../platform/nrfconnect/project_include/OpenThreadConfig.h&quot;
 
+CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n
 
-        The CMake build type was set to <span style="color:#e6db74">&#39;Debug&#39;</span>, but the optimization flag was set to <span style="color:#e6db74">&#39;-Os&#39;</span>.
-        This may be intentional and the warning can be turned off by setting the CMake variable <span style="color:#e6db74">&#39;NO_BUILD_TYPE_WARNING&#39;</span>
-
-
--- Configuring incomplete, errors occurred!
-See also <span style="color:#e6db74">&#34;/home/wass/connectedhomeip/examples/lighting-app/nrfconnect/build/CMakeFiles/CMakeOutput.log&#34;</span>.
-See also <span style="color:#e6db74">&#34;/home/wass/connectedhomeip/examples/lighting-app/nrfconnect/build/CMakeFiles/CMakeError.log&#34;</span>.
-FATAL ERROR: command exited with status 1: /usr/bin/cmake -DWEST_PYTHON<span style="color:#f92672">=</span>/usr/bin/python3 -B/home/wass/connectedhomeip/examples/lighting-app/nrfconnect/build -S/home/wass/connectedhomeip/examples/lighting-app/nrfconnect -GNinja -DBOARD<span style="color:#f92672">=</span>nrf52840dongle_nrf52840
-</code></pre></div>
+# Logging
+CONFIG_SERIAL=n
+CONFIG_LOG=y
+CONFIG_LOG_BACKEND_RTT=y
+CONFIG_LOG_BACKEND_UART=n
+CONFIG_BOOT_BANNER=y
+CONFIG_USE_SEGGER_RTT=y
+CONFIG_CONSOLE=y
+CONFIG_UART_CONSOLE=n
+CONFIG_RTT_CONSOLE=y
+</code></pre>
   </div>
 </details>
 
-<h1 id="building-for-esp32">
-  Building for ESP32
-  <a class="anchor" href="#building-for-esp32">#</a>
+The log output is then as follows
+<details >
+  <summary>RTT Log output</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-log" data-lang="log">I: nRF5 802154 radio initialized
+I: 4 Sectors of 4096 bytes
+I: alloc wra: 0, ec0
+I: data wra: 0, 227
+*** Booting Zephyr OS build v2.4.99-ncs1-rc1  ***
+I: Init CHIP stack
+I: SoftDevice Controller build revision: 
+I: e5 c7 9c d9 91 00 1d 66 |.......f
+I: ea fb 6e 7b 98 2f 42 0d |..n{./B.
+I: f1 60 93 c8             |.`..    
+I: Starting CHIP task
+I: Init Thread stack
+D: 593[DL] CHIP task running
+D: 594[DL] In DriveBLEState
+I: 614[DL] CHIPoBLE advertising disabled because device is fully provisioned
+D: 615[DL] OpenThread State Changed (Flags: 0x0100103d)
+D: 616[DL]    Device Role: DETACHED
+D: 617[DL]    Thread Unicast Addresses:
+D: 618[DL]         fdb0:f51f:154a:11be:0:ff:fe00:f002/64 valid preferred rloc
+D: 620[DL]         fdb0:f51f:154a:11be:2294:a147:3648:185d/64 valid preferred
+D: 621[DL]         fe80::4b5:84fc:320f:d2/64 valid preferred
+I: 830[DL] OpenThread ifconfig up and thread start
+I: 832[DL] OpenThread started: OK
+I: 832[DL] Setting OpenThread device type to MINIMAL END DEVICE
+I: 834[ZCL] Using ZAP con
+</code></pre>
+  </div>
+</details>
+</li>
+</ul>
+<h1 id="running-on-esp32">
+  Running on ESP32
+  <a class="anchor" href="#running-on-esp32">#</a>
 </h1>
 <p><a href="https://github.com/project-chip/connectedhomeip/tree/master/examples/all-clusters-app/esp32">all clusters app</a> example</p>
 </article>
@@ -1371,15 +1301,14 @@ FATAL ERROR: command exited with status 1: /usr/bin/cmake -DWEST_PYTHON<span sty
         <li><a href="#tools">Tools</a></li>
       </ul>
     </li>
-    <li><a href="#building-for-nrf52">Building for nRF52</a>
+    <li><a href="#running-on-nrf52">Running on nRF52</a>
       <ul>
         <li><a href="#nrf-connect-integration">nRF Connect integration</a></li>
-        <li><a href="#prerequisites">prerequisites</a></li>
         <li><a href="#install">install</a></li>
         <li><a href="#build-the-lighting-app">build the lighting app</a></li>
       </ul>
     </li>
-    <li><a href="#building-for-esp32">Building for ESP32</a></li>
+    <li><a href="#running-on-esp32">Running on ESP32</a></li>
   </ul>
 </nav>
 

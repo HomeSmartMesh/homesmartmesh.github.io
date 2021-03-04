@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.2de111999f869db77580077eb4179c42b731c3279127c28e497680dc6ad25d20.js" integrity="sha256-LeERmZ&#43;Gnbd1gAd&#43;tBecQrcxwyeRJ8KOSXaA3GrSXSA="></script>
+<script defer src="/en.search.min.afa12b7fabd28fbd5f11138c916bd8cec3ce60a9ab804b32baf581c5a90e08c9.js" integrity="sha256-r6Erf6vSj71fEROMkWvYzsPOYKmrgEsyuvWBxakOCMk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -813,6 +813,7 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#border-router">Border Router</a>
       <ul>
         <li><a href="#openthread---docker">OpenThread - docker</a></li>
+        <li><a href="#openthread---setup">OpenThread - setup</a></li>
         <li><a href="#nordic---sdcard-image">Nordic - sdcard image</a></li>
         <li><a href="#form-a-network">Form a network</a></li>
         <li><a href="#wireshark-sniffing">wireshark sniffing</a></li>
@@ -834,6 +835,7 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#test-and-debug">Test and Debug</a>
       <ul>
         <li><a href="#with-server-command-line">with server command line</a></li>
+        <li><a href="#cli-on-border-router">cli on border router</a></li>
         <li><a href="#cli-firmware">cli firmware</a></li>
         <li><a href="#cli-reference">cli reference</a></li>
       </ul>
@@ -1519,6 +1521,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li>This is the new version recommended by OpenThread for current and new versions aof border routers, see <a href="https://openthread.io/platforms#radio-co-processor-rcp">Vendor support RCP</a> for details.</li>
 <li><a href="https://openthread.io/guides/build#how_to_build_openthread">How to build</a></li>
+<li>built using docker container</li>
 </ul>
 <h2 id="openthread">
   OpenThread
@@ -1894,14 +1897,50 @@ west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">
   <a class="anchor" href="#openthread---docker">#</a>
 </h2>
 <ul>
-<li>successfully tested with the OpenThread dongle firmware <a href="#openthread">detailed above</a></li>
+<li>use with the OpenThread dongle firmware <a href="#openthread">detailed above</a></li>
+<li>The docker command below runs deamonized (in the background) and maps port 80.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run --sysctl <span style="color:#e6db74">&#34;net.ipv6.conf.all.disable_ipv6=0 \
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run --name otbr-metal -d --sysctl <span style="color:#e6db74">&#34;net.ipv6.conf.all.disable_ipv6=0 \
 </span><span style="color:#e6db74">        net.ipv4.conf.all.forwarding=1 net.ipv6.conf.all.forwarding=1&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>        -p 8080:80 --dns<span style="color:#f92672">=</span>127.0.0.1 -it --volume <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        -p 80:80 --dns<span style="color:#f92672">=</span>127.0.0.1 --volume <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>        /dev/ttyACM0:/dev/ttyACM0 --privileged openthread/otbr <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>        --radio-url spinel+hdlc+uart:///dev/ttyACM0
-</code></pre></div>
+</code></pre></div><p>Below commands to run in separate windows</p>
+<ul>
+<li>listen to the conainer logs</li>
+<li>open a shell in the container</li>
+<li>open a command line to the RCP</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker logs --follow otbr-metal
+docker exec -it otbr-metal /bin/bash
+ot-ctl
+</code></pre></div><p>Error examples
+<details >
+  <summary>Raspberry pi 3 errors</summary>
+  <div class="markdown-inner">
+    <p>These errors happen with a raspberry pi 3 that does have a normal (not very big) cooling sink</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Mar  <span style="color:#ae81ff">1</span> 17:01:41 fe48e43ea1cf kernel: <span style="color:#f92672">[</span> 3083.875055<span style="color:#f92672">]</span> rpi_firmware_get_throttled: <span style="color:#ae81ff">15</span> callbacks suppressed
+Mar  <span style="color:#ae81ff">1</span> 17:01:41 fe48e43ea1cf kernel: <span style="color:#f92672">[</span> 3083.875063<span style="color:#f92672">]</span> Voltage normalised <span style="color:#f92672">(</span>0x00000000<span style="color:#f92672">)</span>
+Mar  <span style="color:#ae81ff">1</span> 17:01:50 fe48e43ea1cf otbr-agent<span style="color:#f92672">[</span>203<span style="color:#f92672">]</span>: <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span>-PLAT----: Session socket is ready
+Mar  <span style="color:#ae81ff">1</span> 17:02:00 fe48e43ea1cf otbr-agent<span style="color:#f92672">[</span>203<span style="color:#f92672">]</span>: <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span>-CLI-----: execute command: state
+Mar  <span style="color:#ae81ff">1</span> 17:02:22 fe48e43ea1cf otbr-agent<span style="color:#f92672">[</span>203<span style="color:#f92672">]</span>: <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span>-CLI-----: execute command: channel
+Mar  <span style="color:#ae81ff">1</span> 17:04:07 fe48e43ea1cf otbr-web<span style="color:#f92672">[</span>230<span style="color:#f92672">]</span>: wpan service error: <span style="color:#ae81ff">11</span>
+</code></pre></div><p>The error above is temporary and happens when the web server is used, but the error below is fatal and kills the usb access to the container, therefore non recoverable</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Mar  <span style="color:#ae81ff">1</span> 17:10:36 fe48e43ea1cf otbr-agent<span style="color:#f92672">[</span>203<span style="color:#f92672">]</span>: <span style="color:#f92672">[</span>CRIT<span style="color:#f92672">]</span>-PLAT----: Unexpected RCP reset: RESET_POWER_ON
+Mar  <span style="color:#ae81ff">1</span> 17:10:36 fe48e43ea1cf otbr-agent<span style="color:#f92672">[</span>203<span style="color:#f92672">]</span>: <span style="color:#f92672">[</span>CRIT<span style="color:#f92672">]</span>-PLAT----: HandleRcpUnexpectedReset<span style="color:#f92672">()</span> at ../../third_party/openthread/repo/src/lib/spinel/radio_spinel_impl.hpp:2158: RadioSpinelReset
+Mar  <span style="color:#ae81ff">1</span> 17:10:36 fe48e43ea1cf named<span style="color:#f92672">[</span>77<span style="color:#f92672">]</span>: no longer listening on fe80::a0ec:8d06:eb3f:3802%3#53
+Mar  <span style="color:#ae81ff">1</span> 17:10:36 fe48e43ea1cf named<span style="color:#f92672">[</span>77<span style="color:#f92672">]</span>: no longer listening on fd11:1111:1122:0:db95:15a7:3c57:2817#53
+Mar  <span style="color:#ae81ff">1</span> 17:10:36 fe48e43ea1cf named<span style="color:#f92672">[</span>77<span style="color:#f92672">]</span>: no longer listening on fd11:1111:1122::ff:fe00:3800#53
+Mar  <span style="color:#ae81ff">1</span> 17:10:36 fe48e43ea1cf named<span style="color:#f92672">[</span>77<span style="color:#f92672">]</span>: no longer listening on fd11:1111:1122::ff:fe00:fc00#53
+Mar  <span style="color:#ae81ff">1</span> 17:13:45 fe48e43ea1cf otbr-web<span style="color:#f92672">[</span>230<span style="color:#f92672">]</span>: OpenThread daemon is not running.
+Mar  <span style="color:#ae81ff">1</span> 17:13:45 fe48e43ea1cf otbr-web<span style="color:#f92672">[</span>230<span style="color:#f92672">]</span>: wpan service error: <span style="color:#ae81ff">11</span>
+</code></pre></div><p>Therefore I recommend to use active cooling or a raspberry pi 4 with a sink consisting of the fully metal case.
+External Power supply to the RCP is also not a bad idea (recommended by OT)</p>
+
+  </div>
+</details>
+</p>
+
 <div class="container">
     <div class="row">
         <div class="col text-center">
@@ -1947,6 +1986,180 @@ west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">
     </div>
 </div>
 
+<h2 id="openthread---setup">
+  OpenThread - setup
+  <a class="anchor" href="#openthread---setup">#</a>
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://openthread.io/guides/border-router/build#set-up-the-border-router"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            Setup - OpenThread...
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/openthread/ot-br-posix
+cd ot-br-posix
+./script/bootstrap
+NETWORK_MANAGER<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span> ./script/setup
+nano /etc/default/otbr-agent
+sudo reboot now
+sudo systemctl status
+sudo ot-ctl state
+</code></pre></div><p><em>issues</em>: in case a <code>dnsmasq</code> service already running, might have to be disabled first</p>
+<p>The status of the running services look as follows
+<details >
+  <summary>sudo systemctl status</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pi@metal:~ $ sudo systemctl status
+● metal
+    State: running
+     Jobs: <span style="color:#ae81ff">0</span> queued
+   Failed: <span style="color:#ae81ff">0</span> units
+    Since: Thu 1970-01-01 01:00:01 CET; <span style="color:#ae81ff">51</span> years <span style="color:#ae81ff">1</span> months ago
+   CGroup: /
+           ├─user.slice
+           │ └─user-1000.slice
+           │   ├─session-3.scope
+           │   │ ├─1663 sshd: pi <span style="color:#f92672">[</span>priv<span style="color:#f92672">]</span>
+           │   │ ├─1669 sshd: pi@pts/0
+           │   │ ├─1670 -bash
+           │   │ ├─1687 sudo systemctl status
+           │   │ ├─1688 systemctl status
+           │   │ └─1689 pager
+           │   ├─user@1000.service
+           │   │ └─init.scope
+           │   │   ├─1637 /lib/systemd/systemd --user
+           │   │   └─1638 <span style="color:#f92672">(</span>sd-pam<span style="color:#f92672">)</span>
+           │   └─session-1.scope
+           │     ├─ <span style="color:#ae81ff">864</span> /bin/login -f
+           │     └─1648 -bash
+           ├─init.scope
+           │ └─1 /sbin/init splash
+           └─system.slice
+             ├─ncp_state_notifier.service
+             │ ├─427 /bin/sh /usr/sbin/ncp_state_notifier
+             │ ├─432 dbus-monitor --system type<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;signal&#39;</span>, interface<span style="color:#f92672">=</span>org.freedesktop.DBus.Properties, path
+             │ └─433 /bin/sh /usr/sbin/ncp_state_notifier
+             ├─alsa-state.service
+             │ └─395 /usr/sbin/alsactl -E HOME<span style="color:#f92672">=</span>/run/alsa -s -n <span style="color:#ae81ff">19</span> -c rdaemon
+             ├─containerd.service
+             │ └─553 /usr/bin/containerd
+             ├─systemd-timesyncd.service
+             │ └─341 /lib/systemd/systemd-timesyncd
+             ├─NetworkManager.service
+             │ ├─420 /usr/sbin/NetworkManager --no-daemon
+             │ └─633 /sbin/dhclient -d -q -sf /usr/lib/NetworkManager/nm-dhcp-helper -pf /run/dhclient-et
+             ├─dbus.service
+             │ └─409 /usr/bin/dbus-daemon --system --address<span style="color:#f92672">=</span>systemd: --nofork --nopidfile --systemd-acti
+             ├─hciuart.service
+             │ └─826 /usr/bin/hciattach /dev/serial1 bcm43xx <span style="color:#ae81ff">3000000</span> flow -
+             ├─udisks2.service
+             │ └─394 /usr/lib/udisks2/udisksd
+             ├─docker.service
+             │ └─853 /usr/bin/dockerd -H fd:// --containerd<span style="color:#f92672">=</span>/run/containerd/containerd.sock
+             ├─ssh.service
+             │ └─564 /usr/sbin/sshd -D
+             ├─ser2net.service
+             │ └─868 /usr/sbin/ser2net -c /etc/ser2net.conf -P /run/ser2net.pid
+             ├─avahi-daemon.service
+             │ ├─393 avahi-daemon: running <span style="color:#f92672">[</span>metal.local<span style="color:#f92672">]</span>
+             │ └─398 avahi-daemon: chroot helper
+             ├─otbr-web.service
+             │ └─428 /usr/sbin/otbr-web
+             ├─wpa_supplicant.service
+             │ └─419 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+             ├─triggerhappy.service
+             │ └─442 /usr/sbin/thd --triggers /etc/triggerhappy/triggers.d/ --socket /run/thd.socket --us
+             ├─systemd-logind.service
+             │ └─439 /lib/systemd/systemd-logind
+             ├─polkit.service
+             │ └─511 /usr/lib/policykit-1/polkitd --no-debug
+             ├─otbr-agent.service
+             │ └─423 /usr/sbin/otbr-agent -I wpan0 spinel+hdlc+uart:///dev/ttyACM0
+             ├─telegraf.service
+             │ └─542 /usr/bin/telegraf -config /etc/telegraf/telegraf.conf -config-directory /etc/telegra
+             ├─cron.service
+             │ └─437 /usr/sbin/cron -f
+             ├─systemd-udevd.service
+             │ └─181 /lib/systemd/systemd-udevd
+             ├─rsyslog.service
+             │ └─403 /usr/sbin/rsyslogd -n -iNONE
+             ├─bluetooth.service
+             │ └─831 /usr/lib/bluetooth/bluetoothd
+             ├─inetd.service
+             │ └─857 /usr/sbin/inetd
+             ├─bluealsa.service
+             │ └─834 /usr/bin/bluealsa
+             ├─systemd-journald.service
+             │ └─121 /lib/systemd/systemd-journald
+             ├─bind9.service
+             │ └─560 /usr/sbin/named -u bind
+             ├─rng-tools.service
+             │ └─415 /usr/sbin/rngd -r /dev/hwrng
+             └─dhcpcd.service
+               └─473 /sbin/dhcpcd -q -b
+</code></pre></div>
+  </div>
+</details>
+</p>
+<p>After forming a network, the interface would look as follows
+<details >
+  <summary>ifconfig wpan0</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wpan0: flags<span style="color:#f92672">=</span>4305&lt;UP,POINTOPOINT,RUNNING,NOARP,MULTICAST&gt;  mtu <span style="color:#ae81ff">1280</span>
+        inet6 fd85:454:6529:a0c5:9ebb:d761:b6d:df4e  prefixlen <span style="color:#ae81ff">64</span>  scopeid 0x0&lt;global&gt;
+        inet6 fd11:22::7005:5eac:6482:e2ec  prefixlen <span style="color:#ae81ff">64</span>  scopeid 0x0&lt;global&gt;
+        inet6 fe80::94bf:4de7:183c:f37d  prefixlen <span style="color:#ae81ff">64</span>  scopeid 0x20&lt;link&gt;
+        inet6 fd85:454:6529:a0c5:0:ff:fe00:fc00  prefixlen <span style="color:#ae81ff">64</span>  scopeid 0x0&lt;global&gt;
+        inet6 fd85:454:6529:a0c5:0:ff:fe00:d400  prefixlen <span style="color:#ae81ff">64</span>  scopeid 0x0&lt;global&gt;
+        unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  txqueuelen <span style="color:#ae81ff">500</span>  <span style="color:#f92672">(</span>UNSPEC<span style="color:#f92672">)</span>
+        RX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
+        RX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span>  overruns <span style="color:#ae81ff">0</span>  frame <span style="color:#ae81ff">0</span>
+        TX packets <span style="color:#ae81ff">9</span>  bytes <span style="color:#ae81ff">1524</span> <span style="color:#f92672">(</span>1.4 KiB<span style="color:#f92672">)</span>
+        TX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span> overruns <span style="color:#ae81ff">0</span>  carrier <span style="color:#ae81ff">0</span>  collisions <span style="color:#ae81ff">0</span>
+</code></pre></div>
+  </div>
+</details>
+</p>
 <h2 id="nordic---sdcard-image">
   Nordic - sdcard image
   <a class="anchor" href="#nordic---sdcard-image">#</a>
@@ -2504,7 +2717,12 @@ w join -n <span style="color:#e6db74">&#34;MeasureFall&#34;</span> -c <span styl
   </div>
 </details>
 
-<h2 id="cli-firmware">
+<h2 id="cli-on-border-router">
+  cli on border router
+  <a class="anchor" href="#cli-on-border-router">#</a>
+</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo ot-ctl
+</code></pre></div><h2 id="cli-firmware">
   cli firmware
   <a class="anchor" href="#cli-firmware">#</a>
 </h2>
@@ -2517,17 +2735,17 @@ w join -n <span style="color:#e6db74">&#34;MeasureFall&#34;</span> -c <span styl
 &gt;make flash_mbr
 &gt;make flash
 </code></pre></div><p>on the cli</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;panid 0x1234
-&gt;panid
-&gt;channel <span style="color:#ae81ff">13</span>
-&gt;channel
-&gt;networkname OpenThreadDemo
-&gt;networkname
-&gt;extpanid <span style="color:#ae81ff">1111111122222222</span>
-&gt;masterkey
-&gt;ifconfig up
-&gt;thread start
-&gt;state
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">panid 0x1234
+panid
+channel <span style="color:#ae81ff">13</span>
+channel
+networkname OpenThreadDemo
+networkname
+extpanid <span style="color:#ae81ff">1111111122222222</span>
+masterkey
+ifconfig up
+thread start
+state
 </code></pre></div><p>Note <code>masterkey</code> command is for the <code>Network Key</code></p>
 <p>at this stage the <code>state</code> command should log <code>child</code></p>
 <p>wireshark should log the join as follows</p>
@@ -2658,6 +2876,11 @@ router list
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">panid
 rloc16
 eui64
+extaddr
+extpanid
+ipaddr
+ipmaddr
+leaderdata
 </code></pre></div>
   </div>
 </details>
@@ -2757,6 +2980,7 @@ west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">
     <li><a href="#border-router">Border Router</a>
       <ul>
         <li><a href="#openthread---docker">OpenThread - docker</a></li>
+        <li><a href="#openthread---setup">OpenThread - setup</a></li>
         <li><a href="#nordic---sdcard-image">Nordic - sdcard image</a></li>
         <li><a href="#form-a-network">Form a network</a></li>
         <li><a href="#wireshark-sniffing">wireshark sniffing</a></li>
@@ -2778,6 +3002,7 @@ west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">
     <li><a href="#test-and-debug">Test and Debug</a>
       <ul>
         <li><a href="#with-server-command-line">with server command line</a></li>
+        <li><a href="#cli-on-border-router">cli on border router</a></li>
         <li><a href="#cli-firmware">cli firmware</a></li>
         <li><a href="#cli-reference">cli reference</a></li>
       </ul>
