@@ -10,13 +10,14 @@
 <meta property="og:description" content="Connected Home Over IP" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.homesmartmesh.com/docs/frameworks/chip/" />
+<meta property="og:image" content="https://www.homesmartmesh.com/design/Protocols.svg" />
 <meta property="article:published_time" content="2021-02-12T08:00:00+00:00" />
 <meta property="article:modified_time" content="2021-02-12T08:00:00+00:00" />
 <title>Project CHIP | Home Smart Mesh</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.afa12b7fabd28fbd5f11138c916bd8cec3ce60a9ab804b32baf581c5a90e08c9.js" integrity="sha256-r6Erf6vSj71fEROMkWvYzsPOYKmrgEsyuvWBxakOCMk="></script>
+<script defer src="/en.search.min.a0dcf169faac2d46de942f86870233c636062ba04ca344940c2b103d3d701d5f.js" integrity="sha256-oNzxafqsLUbelC&#43;GhwIzxjYGK6BMo0SUDCsQPT1wHV8="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -799,10 +800,15 @@ https://github.com/alex-shpak/hugo-book
       <ul>
         <li><a href="#nrf-connect-integration">nRF Connect integration</a></li>
         <li><a href="#install">install</a></li>
-        <li><a href="#build-the-lighting-app">build the lighting app</a></li>
+        <li><a href="#lighting-app">lighting app</a></li>
       </ul>
     </li>
     <li><a href="#running-on-esp32">Running on ESP32</a></li>
+    <li><a href="#comissioning">Comissioning</a>
+      <ul>
+        <li><a href="#using-an-android-app">using an Android App</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -860,6 +866,26 @@ https://github.com/alex-shpak/hugo-book
   Overview
   <a class="anchor" href="#overview">#</a>
 </h1>
+<p>
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/design/Protocols.svg"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
+The image above does only focus on the relation between <code>CHIP</code>, <code>Thread</code> and <code>Zigbee</code>. Both CHIP and Zigbee run on <code>802.15.4</code> (optional for CHIP), and both are directly or indirectly based on <code>ZCL</code> which is in case of CHIP named <code>ZAP</code> Zigbee Cluster Library Advanced Platform.</p>
 <h2 id="definition">
   Definition
   <a class="anchor" href="#definition">#</a>
@@ -1143,22 +1169,62 @@ source zephyr/zephyr-env.sh
 </code></pre></div><ul>
 <li>step 3, from the same link above install gn</li>
 </ul>
-<h2 id="build-the-lighting-app">
-  build the lighting app
-  <a class="anchor" href="#build-the-lighting-app">#</a>
+<h2 id="lighting-app">
+  lighting app
+  <a class="anchor" href="#lighting-app">#</a>
 </h2>
 <ul>
 <li>Update <code>prj.conf</code> params to match the thread border router parametrs (e.g. channel,&hellip;)</li>
 <li>add CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n</li>
 </ul>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/project-chip/connectedhomeip/tree/master/examples/lighting-app/nrfconnect"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            github readme guide
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd ncs/modules/lib/connectedhomeip/examples/lighting-app/nrfconnect/
 west build -b nrf52840dongle_nrf52840 -t menuconfig
 west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prj.conf&#34;</span>
 west flash
 nrfjprog -f nrf52 --program zephyr.hex --sectorerase --verify
-</code></pre></div><ul>
-<li>in the config below, the RTT logging is enabled to get the log through the SWD Segger J-Link interface, see <code># Logging</code> section</li>
-<li>please note that the show <code>CONFIG_OPENTHREAD_MASTERKEY</code> is a dummy key and has to be kept secret in a production environment
+</code></pre></div><p>note on config :</p>
+<ul>
+<li>the RTT logging is enabled to get the log through the SWD Segger J-Link interface, see <code># Logging</code> section</li>
+<li>as CHIP is running over zephyr, a zephyr shell is provided alo through the RTT with config on the <code># shell</code> section</li>
+<li>the shown <code>CONFIG_OPENTHREAD_MASTERKEY</code> is a dummy key and has to be kept secret in a production environment</li>
+</ul>
 <details >
   <summary>prj.conf</summary>
   <div class="markdown-inner">
@@ -1209,18 +1275,24 @@ CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n
 # Logging
 CONFIG_SERIAL=n
 CONFIG_LOG=y
-CONFIG_LOG_BACKEND_RTT=y
+#CONFIG_LOG_BACKEND_RTT=y
 CONFIG_LOG_BACKEND_UART=n
 CONFIG_BOOT_BANNER=y
 CONFIG_USE_SEGGER_RTT=y
 CONFIG_CONSOLE=y
 CONFIG_UART_CONSOLE=n
 CONFIG_RTT_CONSOLE=y
+
+# shell
+CONFIG_LOG_BACKEND_RTT=n
+CONFIG_SHELL=y
+CONFIG_SHELL_BACKEND_RTT=y
+CONFIG_SHELL_BACKEND_SERIAL=n
 </code></pre>
   </div>
 </details>
 
-The log output is then as follows
+<p>The log output is then as follows
 <details >
   <summary>RTT Log output</summary>
   <div class="markdown-inner">
@@ -1252,13 +1324,208 @@ I: 834[ZCL] Using ZAP con
 </code></pre>
   </div>
 </details>
-</li>
-</ul>
+</p>
+<p>Upon reset, more details in the log with regard to SetupQRCode
+<details >
+  <summary>RTT Log output after reset</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-log" data-lang="log">I: nRF5 802154 radio initialized
+I: 4 Sectors of 4096 bytes
+I: alloc wra: 0, 9c0
+I: data wra: 0, 885
+*** Booting Zephyr OS build v2.4.99-ncs1-rc1  ***
+I: Init CHIP stack
+I: SoftDevice Controller build revision: 
+I: e5 c7 9c d9 91 00 1d 66 |.......f
+I: ea fb 6e 7b 98 2f 42 0d |..n{./B.
+I: f1 60 93 c8             |.`..    
+I: Starting CHIP task
+I: Init Thread stack
+I: 647[DL] OpenThread ifconfig up and thread start
+I: 648[DL] OpenThread started: OK
+I: 648[DL] Setting OpenThread device type to MINIMAL END DEVICE
+I: 650[ZCL] Using ZAP configuration...
+I: 651[ZCL] deactivate report event
+I: 651[ZCL] Cluster callback: 6
+I: 652[ZCL] Cluster callback: 8
+I: 653[ZCL] Value: 255, length 1
+D: 654[IN] TransportMgr initialized
+I: 654[IN] local node id is lu
+
+D: 655[IN] New pairing for device lu, key 112233!!
+I: 657[SVR] Received a new connection.
+I: 670[SVR] Network already provisioned. Disabling BLE advertisement
+I: 672[SVR] Server Listening...
+I: 672[DL] Device Configuration:
+I: 682[DL]   Serial Number: (not set)
+I: 682[DL]   Vendor Id: 9050 (0x235A)
+I: 683[DL]   Product Id: 65279 (0xFEFF)
+I: 693[DL]   Product Revision: 1
+I: 702[DL]   Setup Pin Code: 12345678
+I: 711[DL]   Setup Discriminator: 3840 (0xF00)
+I: 721[DL]   Manufacturing Date: (not set)
+I: 739[SVR] SetupQRCode:  [CH:I34DV*-00 0C9SS0]
+I: 740[SVR] Copy/paste the below URL in a browser to see the QR Code:
+I: 741[SVR] https://dhrishi.github.io/connectedhomeip/qrcode.html?data=CH%3AI34DV%2A-00%200C9SS0
+D: 743[DL] CHIP task running
+D: 744[DL] In DriveBLEState
+I: 757[DL] CHIPoBLE advertising disabled because device is fully provisioned
+D: 759[DL] OpenThread State Changed (Flags: 0x1100107d)
+D: 760[DL]    Device Role: DETACHED
+D: 761[DL]    Thread Unicast Addresses:
+D: 762[DL]         fdde:ad00:beef:0:1e65:2162:2d83:6133/64 valid preferred
+D: 763[DL]         fe80::2c53:1780:f20f:23ad/64 valid preferred
+</code></pre>
+  </div>
+</details>
+</p>
+<p>Example shell commands execution on the RTT
+<details >
+  <summary>RTT shell commands and output</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rtt:~$ ot masterkey
+00112233445566778899aabbccddeeff
+
+Done
+
+rtt:~$ kernel threads
+Scheduler: <span style="color:#ae81ff">104</span> since last call
+Threads:
+ 0x200048e0 CHIP      
+  options: 0x0, priority: -1 timeout: <span style="color:#ae81ff">536889700</span>
+  state: pending
+  stack size 8192, unused 7104, usage <span style="color:#ae81ff">1088</span> / <span style="color:#ae81ff">8192</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">13</span> %<span style="color:#f92672">)</span>
+
+ 0x20002e40 SDC RX    
+  options: 0x0, priority: -10 timeout: <span style="color:#ae81ff">536882884</span>
+  state: pending
+  stack size 1024, unused 832, usage <span style="color:#ae81ff">192</span> / <span style="color:#ae81ff">1024</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">18</span> %<span style="color:#f92672">)</span>
+
+ 0x20002588 BT RX     
+  options: 0x0, priority: -8 timeout: <span style="color:#ae81ff">536880652</span>
+  state: pending
+  stack size 1024, unused 832, usage <span style="color:#ae81ff">192</span> / <span style="color:#ae81ff">1024</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">18</span> %<span style="color:#f92672">)</span>
+...
+rtt:~$ ot panid 0x1234
+Done
+
+D: 2488290<span style="color:#f92672">[</span>DL<span style="color:#f92672">]</span> OpenThread State Changed <span style="color:#f92672">(</span>Flags: 0x30008000<span style="color:#f92672">)</span>
+D: 2488291<span style="color:#f92672">[</span>DL<span style="color:#f92672">]</span>    Network Name: ot_zephyr
+D: 2488292<span style="color:#f92672">[</span>DL<span style="color:#f92672">]</span>    PAN Id: 0x1234
+D: 2488293<span style="color:#f92672">[</span>DL<span style="color:#f92672">]</span>    Extended PAN Id: 0xDEAD00BEEF00CAFE
+D: 2488294<span style="color:#f92672">[</span>DL<span style="color:#f92672">]</span>    Channel: <span style="color:#ae81ff">11</span>
+D: 2488295<span style="color:#f92672">[</span>DL<span style="color:#f92672">]</span>    Mesh Prefix: fdde:ad00:beef::/64
+</code></pre></div>
+  </div>
+</details>
+</p>
 <h1 id="running-on-esp32">
   Running on ESP32
   <a class="anchor" href="#running-on-esp32">#</a>
 </h1>
-<p><a href="https://github.com/project-chip/connectedhomeip/tree/master/examples/all-clusters-app/esp32">all clusters app</a> example</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+            
+                href="https://github.com/project-chip/connectedhomeip/tree/master/examples/all-clusters-app/esp32"
+            
+            role="button"
+        >
+            all clusters app
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<h1 id="comissioning">
+  Comissioning
+  <a class="anchor" href="#comissioning">#</a>
+</h1>
+<p>Each device will generate a setup QR Code, in this case <code>CH:I34DV*-00 0C9SS0</code> which is a sectret not to be shared for production devices.
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/chip/qrcode-example.png"
+    alt=""
+    width="200"
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+</p>
+<p>QR code generators services are abundant, but for production devices, better not to use an online generator and rely on an offline one to minimize risks.
+In order to facilitate the creation, an url is provided where the string to be converted is passed as argument in the <code>data=</code> param to an app that cretates the QR code on the page :</p>
+<p><a href="https://dhrishi.github.io/connectedhomeip/qrcode.html?data=CH%3AI34DV%2A-00%200C9SS0">https://dhrishi.github.io/connectedhomeip/qrcode.html?data=CH%3AI34DV%2A-00%200C9SS0</a></p>
+<h2 id="using-an-android-app">
+  using an Android App
+  <a class="anchor" href="#using-an-android-app">#</a>
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+            
+                href="https://github.com/project-chip/connectedhomeip/blob/master/docs/guides/nrfconnect_android_commissioning.md"
+            
+            role="button"
+        >
+            github readme
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
 </article>
  
       
@@ -1305,10 +1572,15 @@ I: 834[ZCL] Using ZAP con
       <ul>
         <li><a href="#nrf-connect-integration">nRF Connect integration</a></li>
         <li><a href="#install">install</a></li>
-        <li><a href="#build-the-lighting-app">build the lighting app</a></li>
+        <li><a href="#lighting-app">lighting app</a></li>
       </ul>
     </li>
     <li><a href="#running-on-esp32">Running on ESP32</a></li>
+    <li><a href="#comissioning">Comissioning</a>
+      <ul>
+        <li><a href="#using-an-android-app">using an Android App</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

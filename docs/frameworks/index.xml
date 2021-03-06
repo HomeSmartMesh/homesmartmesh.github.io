@@ -22,8 +22,8 @@
       <pubDate>Fri, 12 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/chip/</guid>
-      <description>Relates to#Zephyr RTOSThread ProtocolOverview#Definition#We can consider the project CHIP Connected Home Over IP definition as in two folds :
- a takeover of the Zigbee Cluster Library to be fit over the IP layer. The abstraction of all different transport protocols with IP  This will avoid that each transport (e.</description>
+      <description>Relates to#Zephyr RTOSThread ProtocolOverview#The image above does only focus on the relation between CHIP, Thread and Zigbee. Both CHIP and Zigbee run on 802.15.4 (optional for CHIP), and both are directly or indirectly based on ZCL which is in case of CHIP named ZAP Zigbee Cluster Library Advanced Platform.
+Definition#We can consider the project CHIP Connected Home Over IP definition as in two folds :</description>
     </item>
     
     <item>
