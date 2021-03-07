@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.e574ce2d257c32e0160c6f61104f42dd834fb69638957f59f794c2d4f028c0a5.js" integrity="sha256-5XTOLSV8MuAWDG9hEE9C3YNPtpY4lX9Z95TC1PAowKU="></script>
+<script defer src="/en.search.min.1c094072e21b48078fbab08b49ef3caee5feaf5e3fbd8566fce866ac30455abe.js" integrity="sha256-HAlAcuIbSAePurCLSe88ruX&#43;r14/vYVm/OhmrDBFWr4="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1646,12 +1646,12 @@ In order to facilitate the creation, an url is provided where the string to be c
   
   <details>
     <summary>
-Is CHIP yet another protocol to push consumers replace their existing devices ?
+Is CHIP yet another invention to push consumers into buing new products ?
 </summary>
     <div class="markdown-inner">
       <ul>
-<li>I do not think so. If existing devices need their own gateway and consumers already have them, there&rsquo;s no need to change anything.</li>
-<li>If a user now buys a new product with the new technology (CHIP, Thread), its integration should not require a vendor specific gateway which is a clear advantage to the user. This dissolves the lockin to a particular devices supplier which is a great win for the users.</li>
+<li>I do not think so. If existing devices have their own gateway and consumers already have them, there&rsquo;s no need to update.</li>
+<li>If a user now buys a new product with the new technology (CHIP, Thread), its integration should not require a vendor specific gateway, this is an advantage for the user. This dissolves the lockin to a particular device supplier which is also for the users benefit.</li>
 </ul>
 
     </div>
@@ -1683,28 +1683,34 @@ Will CHIP replace zigbee ?
     "mainEntity": [
     
     
-    
-    
-    {
-      "@type": "Question",
-      "name": "\r\nIs CHIP yet another protocol to push consumers replace their existing devices ?\r\n",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "\r\n* I do not think so. If existing devices need their own gateway and consumers already have them, there's no need to change anything. \r\n* If a user now buys a new product with the new technology (CHIP, Thread), its integration should not require a vendor specific gateway which is a clear advantage to the user. This dissolves the lockin to a particular devices supplier which is a great win for the users.\r\n"
+      
+      
+      
+      
+      
+      {
+        "@type": "Question",
+        "name": "Is CHIP yet another invention to push consumers into buing new products ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "\u003cul\u003e\n\u003cli\u003eI do not think so. If existing devices have their own gateway and consumers already have them, there\u0026rsquo;s no need to update.\u003c/li\u003e\n\u003cli\u003eIf a user now buys a new product with the new technology (CHIP, Thread), its integration should not require a vendor specific gateway, this is an advantage for the user. This dissolves the lockin to a particular device supplier which is also for the users benefit.\u003c/li\u003e\n\u003c/ul\u003e\n"
+        }
       }
-    },
     
     
-    
-    
-    {
-      "@type": "Question",
-      "name": "\r\nWill CHIP replace zigbee ?\r\n",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "\r\n* For new products, I would expect more CHIP devices in the future than zigbee, although this is a bet that depends on how hard the transition is. Given that the underlying RF physical layer is the same `802.15.4`, hardware suppliers have no excuses about hardware incompatibilities.\r\n* Software is not an easy task, for already deployed devices, this will depend on the reliability of the firmware update, and if old devices do have enough capacity for a bigger sw stack. For new devices, all of the software stack is available as opensouce and any startup or maker can use it as described in this page.\r\n* Even if new products would have CHIP exclusively, the provided solutions will have to allow cohabitation of CHIP/Thread and zigbee for a long time. This is possible through usage of different channels or even the same with different network ids.\r\n* Combining a multi protocol gateway for both Thread and Zigbee is an interesting idea that I have not see, but it could reduce the gateways that have to stay deployed. It would require multiple Radio Co Processors though to allow operation in different channels.\r\n"
+      
+      
+      
+      
+      
+      ,{
+        "@type": "Question",
+        "name": "Will CHIP replace zigbee ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "\u003cul\u003e\n\u003cli\u003eFor new products, I would expect more CHIP devices in the future than zigbee, although this is a bet that depends on how hard the transition is. Given that the underlying RF physical layer is the same \u003ccode\u003e802.15.4\u003c/code\u003e, hardware suppliers have no excuses about hardware incompatibilities.\u003c/li\u003e\n\u003cli\u003eSoftware is not an easy task, for already deployed devices, this will depend on the reliability of the firmware update, and if old devices do have enough capacity for a bigger sw stack. For new devices, all of the software stack is available as opensouce and any startup or maker can use it as described in this page.\u003c/li\u003e\n\u003cli\u003eEven if new products would have CHIP exclusively, the provided solutions will have to allow cohabitation of CHIP/Thread and zigbee for a long time. This is possible through usage of different channels or even the same with different network ids.\u003c/li\u003e\n\u003cli\u003eCombining a multi protocol gateway for both Thread and Zigbee is an interesting idea that I have not see, but it could reduce the gateways that have to stay deployed. It would require multiple Radio Co Processors though to allow operation in different channels.\u003c/li\u003e\n\u003c/ul\u003e\n"
+        }
       }
-    }
     
     ]
   }
