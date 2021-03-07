@@ -75,6 +75,24 @@ Simple Mesh SensorTagSimple Mesh RepoFeatures#     2.4 GHz 2 Mbps
     </item>
     
     <item>
+      <title>Rover Balance</title>
+      <link>https://www.homesmartmesh.com/docs/robotics/rover/</link>
+      <pubDate>Sun, 10 Feb 2019 08:00:00 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/robotics/rover/</guid>
+      <description>Overview#RobLibs Github Organization Open source hobby project, creation of a robot with an original structure that moves in a home environment. The robot structure is a double sided inverted pendulum, with the ability to stand up switching from flat mode (car) to the standing mode (balancing robot), on each of its sides. Further dynamic behaviors to be expected.  Concept# A gazebo simulation approximates the robot&amp;rsquo;s physics and allows the user to control it with a joystick to have a feeling of the robot&amp;rsquo;s power depending on the weight and motors power.</description>
+    </item>
+    
+    <item>
+      <title>Roborock Valetudo</title>
+      <link>https://www.homesmartmesh.com/docs/robotics/roborock/</link>
+      <pubDate>Sun, 07 Mar 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/robotics/roborock/</guid>
+      <description>Roborock s55#Valetudo#installHome menu#Map#Telegram app#Roborock chat# the valetudo install section will provide the valetudo server  Hypefr server repo this app is using node.js telegraf  telegraf dependency the node.</description>
+    </item>
+    
+    <item>
       <title>Simple Mesh SensorTag</title>
       <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</link>
       <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>

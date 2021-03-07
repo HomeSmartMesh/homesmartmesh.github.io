@@ -48,6 +48,16 @@
   </url>
   
   <url>
+    <loc>https://www.homesmartmesh.com/docs/robotics/rover/</loc>
+    <lastmod>2021-03-07T08:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.homesmartmesh.com/docs/robotics/roborock/</loc>
+    <lastmod>2021-03-07T08:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.homesmartmesh.com/docs/microcontrollers/</loc>
     <lastmod>2021-02-27T00:00:00+09:00</lastmod>
   </url>
@@ -131,6 +141,11 @@
   </url>
   
   <url>
+    <loc>https://www.homesmartmesh.com/docs/robotics/</loc>
+    <lastmod>2021-03-07T08:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/</loc>
     <lastmod>2021-02-21T08:00:00+00:00</lastmod>
   </url>
@@ -151,13 +166,8 @@
   </url>
   
   <url>
-    <loc>https://www.homesmartmesh.com/docs/applications/</loc>
-    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.homesmartmesh.com/docs/3dprinting/</loc>
-    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+    <loc>https://www.homesmartmesh.com/docs/vision/</loc>
+    <lastmod>2021-03-07T08:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -171,8 +181,23 @@
   </url>
   
   <url>
+    <loc>https://www.homesmartmesh.com/docs/sound/</loc>
+    <lastmod>2021-01-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.homesmartmesh.com/docs/3dprinting/</loc>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.homesmartmesh.com/docs/3dprinting/voronoi/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.homesmartmesh.com/docs/applications/</loc>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -208,11 +233,6 @@
   <url>
     <loc>https://www.homesmartmesh.com/docs/microcontrollers/esp32/esp-now_wrapper/</loc>
     <lastmod>2021-02-26T00:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.homesmartmesh.com/docs/soundhacking/</loc>
-    <lastmod>2021-01-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
