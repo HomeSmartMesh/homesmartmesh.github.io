@@ -5,18 +5,18 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Relates to#ESP-Mesh WrapperOverview#Github#Github repoESP-Now reference#docs.espressif esp-nowStatus#As we can see in the details of the logs below, running an ESP-Now gateway through wifi, results in dropping the reception success rate from 100% to 25%, therefore, a serial ESP-Now gateway would be recommended and not a Wifi one.">
+<meta name="description" content="An ESP-Now wrapper library is created and used in a Broadcast and Gateway examples. The ESP-Now Broadcast had 100% RX success with another ESP-Now only device, but the ESP-Now to wifi gateway had only 25% RX success rate">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="ESP-Now" />
-<meta property="og:description" content="Relates to#ESP-Mesh WrapperOverview#Github#Github repoESP-Now reference#docs.espressif esp-nowStatus#As we can see in the details of the logs below, running an ESP-Now gateway through wifi, results in dropping the reception success rate from 100% to 25%, therefore, a serial ESP-Now gateway would be recommended and not a Wifi one." />
+<meta property="og:description" content="An ESP-Now wrapper library is created and used in a Broadcast and Gateway examples. The ESP-Now Broadcast had 100% RX success with another ESP-Now only device, but the ESP-Now to wifi gateway had only 25% RX success rate" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.homesmartmesh.com/docs/microcontrollers/esp32/esp-now/" />
 <meta property="article:published_time" content="2021-02-26T00:00:00+09:00" />
-<meta property="article:modified_time" content="2021-02-26T00:00:00+09:00" />
+<meta property="article:modified_time" content="2021-03-08T08:00:00+00:00" />
 <title>ESP-Now | Home Smart Mesh</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.26382313ff64fb00e35ff2dc268e3c9a6fde2fc5be88b415e82a207979a3956b.js" integrity="sha256-JjgjE/9k&#43;wDjX/LcJo48mm/eL8W&#43;iLQV6CogeXmjlWs="></script>
+<script defer src="/en.search.min.e9ee8c5a1406964d49d543fa2b9cac538f761a9f6b77da50b88779d352e2db54.js" integrity="sha256-6e6MWhQGlk1J1UP6K5ysU492Gp9rd9pQuId501Li21Q="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1104,6 +1104,51 @@ WiFiClient wifi;<span style="color:#75715e">//needed to stay on global scope
 <blockquote class="book-hint info">
   In this example, we notice in the log below a broadcast from an ESP-Now only device is received by another  ESP-Now only device with 100% success. This success is due to the receiving device listening most of the time except when transmitting. A higher frequency can reveal misses on collision times.
 </blockquote>
+
+<details >
+  <summary>Broadcast startup &#39;main.cpp&#39;</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-log" data-lang="log">rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0018,len:4
+load:0x3fff001c,len:1044
+load:0x40078000,len:8896
+load:0x40080400,len:5828
+entry 0x400806ac
+36 : Boot ready
+150 : config loaded
+
+Brownout detector was triggered
+
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0018,len:4
+load:0x3fff001c,len:1044
+load:0x40078000,len:8896
+load:0x40080400,len:5828
+entry 0x400806ac
+37 : Boot ready
+150 : config loaded
+234 : wifi mode set
+236 : setup() done
+send =&gt; (ff:ff:ff:ff:ff:ff) 'Good Morning Everyone (0)'
+237 : initial broadcast() done
+
+
+237 : loop start cycle (1)
+ Version=1;  channel=1;  peers=1 encrypted=0;   send_cb&gt; Sent data to ff:ff:ff:ff:ff:ff, status: 0
+
+send =&gt; (ff:ff:ff:ff:ff:ff) 'Hello Everyone (1)'
+  send_cb&gt; Sent data to ff:ff:ff:ff:ff:ff, status: 0
+</code></pre>
+  </div>
+</details>
 
 <details >
   <summary>Log of Two boradcasters receivers</summary>
