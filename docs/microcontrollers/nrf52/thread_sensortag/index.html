@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.e9ee8c5a1406964d49d543fa2b9cac538f761a9f6b77da50b88779d352e2db54.js" integrity="sha256-6e6MWhQGlk1J1UP6K5ysU492Gp9rd9pQuId501Li21Q="></script>
+<script defer src="/en.search.min.3e143778d6dfa733e32c301cecd054b84c49d10dda644af49134a5af1299cd1b.js" integrity="sha256-PhQ3eNbfpzPjLDAc7NBUuExJ0Q3aZEr0kTSlrxKZzRs="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -855,10 +855,6 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#schematics">Schematics</a></li>
         <li><a href="#board">Board</a></li>
         <li><a href="#3d-board-model">3D Board model</a></li>
-      </ul>
-    </li>
-    <li><a href="#v00-bme280-max44009">v0.0 BME280 MAX44009</a>
-      <ul>
         <li><a href="#repo">Repo</a></li>
         <li><a href="#components">Components</a>
           <ul>
@@ -875,7 +871,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#breadboard-testing">Breadboard testing</a></li>
       </ul>
     </li>
-    <li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+    <li><a href="#faq---discussion">FAQ - Discussion</a></li>
   </ul>
 </nav>
 
@@ -1255,52 +1251,40 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-<div class="container">
-  <div class="row">
-      <div class="col text-center">
-          <a id="btn-e8a570c399a6e535" class="book-btn" role="button" >Full Screen</a>
-      </div>
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/thread_sensortag/board_top.png"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
 </div>
-<embed id="svg-e8a570c399a6e535" type="image/svg+xml" width=100% src="/images/thread_sensortag/nrf52-sensor-tag-brd.svg"  style="background-color:white"/>
-<script>
-  function setup_svg_panzoom(){
-    let params = {
-          panEnabled: true,
-          zoomEnabled: true,
-          dblClickZoomEnabled: true,
-          controlIconsEnabled: false,
-          mouseWheelZoomEnabled: true,
-          preventMouseEventsDefault: true,
-          zoomScaleSensitivity: 0.6,
-          minZoom: 0.5,
-          maxZoom: 4,
-           fit: true
-          , contain: true
-          , center: true
-          , refreshRate: 'auto'
-      };
-      let svg_pz = svgPanZoom('#svg-e8a570c399a6e535'        ,params);
-      window["svg_e8a570c399a6e535"] = svg_pz
-      let button = document.getElementById("btn-e8a570c399a6e535");
-      button.onclick = ()=>{
-          var elem = document.getElementById("svg-e8a570c399a6e535");
-          if (elem.requestFullscreen) {
-          elem.requestFullscreen();
-          } else if (elem.webkitRequestFullscreen) {  
-          elem.webkitRequestFullscreen();
-          } else if (elem.msRequestFullscreen) {  
-          elem.msRequestFullscreen();
-          }
-      };
-  }
-  function reset_position(){
-    window["svg_e8a570c399a6e535"].resize()
-    window["svg_e8a570c399a6e535"].fit()
-    window["svg_e8a570c399a6e535"].center()
-  }
-  document.getElementById('svg-e8a570c399a6e535').addEventListener('load', setup_svg_panzoom)
-  window.addEventListener('resize', reset_position)
- </script>
+
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/thread_sensortag/board_bottom.png"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
 
 <h2 id="3d-board-model">
   3D Board model
@@ -1321,256 +1305,6 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-
-<h1 id="v00-bme280-max44009">
-  v0.0 BME280 MAX44009
-  <a class="anchor" href="#v00-bme280-max44009">#</a>
-</h1>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/commit/cb1083393b6b34cd9d02931da196c2d072bd03fc"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            commit
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-
-
-
-
-
-<div class="text-center">
-  <a >
-    <img
-    src="/images/thread_sensortag/concept_0.png"
-    alt=""
-    width=""
-    height=""
-    decoding="async"
-  />
-  </a>
-  
-</div>
-
-<p>The preliminary version of the Thread sensorTag is based on an <code>nRF52840</code> which is integrated inside an <code>ISP1807</code>. On the tag, the used sensors are the <code>MAX44009</code> for light brightness and <code>BME280</code> for Temperature, Humidity and Pressure.</p>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52840"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            nRF52840
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.insightsip.com/products/bluetooth-smart-modules/isp1807"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            ISP1807
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.bosch-sensortec.com/products/environmental-sensors/humidity-sensors-bme280/"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            BME280
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.maximintegrated.com/en/products/interface/sensor-interface/MAX44009.html"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            MAX44009
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
 
 <h2 id="repo">
   Repo
@@ -1804,14 +1538,61 @@ https://github.com/alex-shpak/hugo-book
   
 </div>
 
-<h1 id="frequently-asked-questions">
-  Frequently Asked Questions
-  <a class="anchor" href="#frequently-asked-questions">#</a>
+<h1 id="faq---discussion">
+  FAQ - Discussion
+  <a class="anchor" href="#faq---discussion">#</a>
 </h1>
-<details >
-  <summary>Is it possible to save energy by collecting many samples over time and sending them together?</summary>
-  <div class="markdown-inner">
-    <p>Yes, sure, the use cases could be slpit as follows :</p>
+<ul>
+<li>If you need support, want to ask a question or suggest a different answer, you can join the discussion on the discord server
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://discord.gg/SdKHaAfKN4"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            Discord - #thread-sensortag 
+            
+            
+                
+                
+
+                
+                <span class="discord">
+                    <svg 
+                        viewBox="0 0 256 293"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentcolor"
+                        preserveAspectRatio="xMidYMid">
+                            <path d="M226.011 0H29.99C13.459 0 0 13.458 0 30.135v197.778c0 16.677 13.458 30.135 29.989 30.135h165.888l-7.754-27.063 18.725 17.408 17.7 16.384L256 292.571V30.135C256 13.458 242.542 0 226.011 0zm-56.466 191.05s-5.266-6.291-9.655-11.85c19.164-5.413 26.478-17.408 26.478-17.408-5.998 3.95-11.703 6.73-16.823 8.63-7.314 3.073-14.336 5.12-21.211 6.291-14.044 2.633-26.917 1.902-37.888-.146-8.339-1.61-15.507-3.95-21.504-6.29-3.365-1.317-7.022-2.926-10.68-4.974-.438-.293-.877-.439-1.316-.732-.292-.146-.439-.292-.585-.438-2.633-1.463-4.096-2.487-4.096-2.487s7.022 11.703 25.6 17.261c-4.388 5.56-9.801 12.142-9.801 12.142-32.33-1.024-44.617-22.235-44.617-22.235 0-47.104 21.065-85.285 21.065-85.285 21.065-15.799 41.106-15.36 41.106-15.36l1.463 1.756C80.75 77.53 68.608 89.088 68.608 89.088s3.218-1.755 8.63-4.242c15.653-6.876 28.088-8.777 33.208-9.216.877-.147 1.609-.293 2.487-.293a123.776 123.776 0 0 1 29.55-.292c13.896 1.609 28.818 5.705 44.031 14.043 0 0-11.556-10.971-36.425-18.578l2.048-2.34s20.041-.44 41.106 15.36c0 0 21.066 38.18 21.066 85.284 0 0-12.435 21.211-44.764 22.235zm-68.023-68.316c-8.338 0-14.92 7.314-14.92 16.237 0 8.924 6.728 16.238 14.92 16.238 8.339 0 14.921-7.314 14.921-16.238.147-8.923-6.582-16.237-14.92-16.237m53.394 0c-8.339 0-14.922 7.314-14.922 16.237 0 8.924 6.73 16.238 14.922 16.238 8.338 0 14.92-7.314 14.92-16.238 0-8.923-6.582-16.237-14.92-16.237"/>
+                    </svg>
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+</li>
+</ul>
+
+
+
+  
+  
+  
+  <details>
+    <summary>
+Is it possible to save energy by collecting many sensor samples over time and sending them together?
+</summary>
+    <div class="markdown-inner">
+      <p>Yes, sure, the use cases could be slpit as follows :</p>
 <ul>
 <li>For short term buffering, it&rsquo;s possible to use the RAM retention feature, you pay as you go fine granular (per 4 kB block: 30nA)</li>
 <li>For long term buffering, we&rsquo;re no longer on the sensors network use case and rather on the logger tag use case, there you can use the Flash, 1 MB is huge.
@@ -1819,8 +1600,35 @@ In my use case, I don&rsquo;t use buffering in order to allow live update of mea
 I think after all, such things should be configurable by the end users&rsquo;s app, and should not be hardcoded</li>
 </ul>
 
-  </div>
-</details>
+    </div>
+  </details>
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+    
+    
+      
+      
+      
+      
+      
+      {
+        "@type": "Question",
+        "name": "Is it possible to save energy by collecting many sensor samples over time and sending them together?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "\u003cp\u003eYes, sure, the use cases could be slpit as follows :\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eFor short term buffering, it\u0026rsquo;s possible to use the RAM retention feature, you pay as you go fine granular (per 4 kB block: 30nA)\u003c/li\u003e\n\u003cli\u003eFor long term buffering, we\u0026rsquo;re no longer on the sensors network use case and rather on the logger tag use case, there you can use the Flash, 1 MB is huge.\nIn my use case, I don\u0026rsquo;t use buffering in order to allow live update of measures on the user\u0026rsquo;s apps, but combining like a level trigger to immediately send values on big changes with buffering and sending all the values cyclically could be quite smart, you will need a QoS through to ensure your data is really sent after a while, which will also consume RF transactions, I opted for sending every single value on an RF packet which is also used as an alive signal to know when the sensor is dead or out of reach, so no problem if once a packet is lost in a while, but practically, as I use a flood mesh, most measures arrive more than once to the server.\nI think after all, such things should be configurable by the end users\u0026rsquo;s app, and should not be hardcoded\u003c/li\u003e\n\u003c/ul\u003e\n"
+        }
+      }
+    
+    
+    ]
+  }
+</script>
 
 </article>
  
@@ -1861,10 +1669,6 @@ I think after all, such things should be configurable by the end users&rsquo;s a
         <li><a href="#schematics">Schematics</a></li>
         <li><a href="#board">Board</a></li>
         <li><a href="#3d-board-model">3D Board model</a></li>
-      </ul>
-    </li>
-    <li><a href="#v00-bme280-max44009">v0.0 BME280 MAX44009</a>
-      <ul>
         <li><a href="#repo">Repo</a></li>
         <li><a href="#components">Components</a>
           <ul>
@@ -1881,7 +1685,7 @@ I think after all, such things should be configurable by the end users&rsquo;s a
         <li><a href="#breadboard-testing">Breadboard testing</a></li>
       </ul>
     </li>
-    <li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+    <li><a href="#faq---discussion">FAQ - Discussion</a></li>
   </ul>
 </nav>
 
