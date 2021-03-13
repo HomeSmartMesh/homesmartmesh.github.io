@@ -329,6 +329,15 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
     </item>
     
     <item>
+      <title>M5 Atom Lite</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/esp32/m5stack-atom/</link>
+      <pubDate>Sat, 13 Mar 2021 00:00:00 +0900</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/m5stack-atom/</guid>
+      <description>Overview# Tiny 24 x 24 x 10 mm User Button + Reset RGB Led SK6812 IR Led  Pinout#Links#Product Pageschematics#                                 Application - Serial to MQTT# The serial to MQTT App creates a request and response topics that will propagate through a second Serial interface   Although the board is available on platform-espressif32 it was not avialable on platformio release as of Today, therefore the board is stored locally.</description>
+    </item>
+    
+    <item>
       <title>ESP-Now</title>
       <link>https://www.homesmartmesh.com/docs/microcontrollers/esp32/esp-now/</link>
       <pubDate>Fri, 26 Feb 2021 00:00:00 +0900</pubDate>

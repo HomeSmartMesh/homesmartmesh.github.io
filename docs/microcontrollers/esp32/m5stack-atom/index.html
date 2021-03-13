@@ -5,15 +5,15 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="How to cover a dumb switch with a smart switch">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Switch Cover" />
-<meta property="og:description" content="How to cover a dumb switch with a smart switch" />
+<meta name="description" content="Smallest tiny ESP32 pico with button and RGB LED">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="M5 Atom Lite" />
+<meta property="og:description" content="Smallest tiny ESP32 pico with button and RGB LED" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.homesmartmesh.com/docs/3dprinting/light/" />
-<meta property="og:image" content="https://www.homesmartmesh.com/images/3dprinting/dumb_to_smart.png" />
-<meta property="article:published_time" content="2021-01-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-01-01T00:00:00+00:00" />
-<title>Switch Cover | Home Smart Mesh</title>
+<meta property="og:url" content="https://www.homesmartmesh.com/docs/microcontrollers/esp32/m5stack-atom/" />
+<meta property="og:image" content="https://www.homesmartmesh.com/images/esp32/M5-Atom-Lite.webp" />
+<meta property="article:published_time" content="2021-03-13T00:00:00+09:00" />
+<meta property="article:modified_time" content="2021-03-13T00:00:00+09:00" />
+<title>M5 Atom Lite | Home Smart Mesh</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
@@ -191,7 +191,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-12172a40edce1e57d2d7d6a535923101" class="toggle"  />
+    <input type="checkbox" id="section-12172a40edce1e57d2d7d6a535923101" class="toggle" checked />
     <label for="section-12172a40edce1e57d2d7d6a535923101" class="flex justify-between">
       <a href="https://www.homesmartmesh.com/docs/microcontrollers/" class="">Microcontrollers</a>
       <span>▾</span>
@@ -208,7 +208,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-7d13b6f646948a6d212145f583c29a47" class="toggle"  />
+    <input type="checkbox" id="section-7d13b6f646948a6d212145f583c29a47" class="toggle" checked />
     <label for="section-7d13b6f646948a6d212145f583c29a47" class="flex justify-between">
       <a href="https://www.homesmartmesh.com/docs/microcontrollers/esp32/" class="">esp32</a>
       <span>▾</span>
@@ -329,7 +329,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://www.homesmartmesh.com/docs/microcontrollers/esp32/m5stack-atom/" class="">M5 Atom Lite</a>
+    <a href="https://www.homesmartmesh.com/docs/microcontrollers/esp32/m5stack-atom/" class=" active">M5 Atom Lite</a>
   
 
         </li>
@@ -625,7 +625,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-a7fbdf06ea089966b592a9eac91d8280" class="toggle" checked />
+    <input type="checkbox" id="section-a7fbdf06ea089966b592a9eac91d8280" class="toggle"  />
     <label for="section-a7fbdf06ea089966b592a9eac91d8280" class="flex justify-between">
       <a href="https://www.homesmartmesh.com/docs/3dprinting/" class="">3D Printing</a>
       <span>▾</span>
@@ -642,7 +642,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://www.homesmartmesh.com/docs/3dprinting/light/" class=" active">Switch Cover</a>
+    <a href="https://www.homesmartmesh.com/docs/3dprinting/light/" class="">Switch Cover</a>
   
 
         </li>
@@ -848,23 +848,47 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Switch Cover</strong>
+  <strong>M5 Atom Lite</strong>
 
   <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
     
   </label>
 </div>
 
 
   
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a>
+      <ul>
+        <li><a href="#pinout">Pinout</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#schematics">schematics</a></li>
+      </ul>
+    </li>
+    <li><a href="#application---serial-to-mqtt">Application - Serial to MQTT</a>
+      <ul>
+        <li><a href="#application-details">Application Details</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
  
       </header>
 
       
       
-  <article class="markdown"><h1 id="cover-dumb-switch-with-smart-switch">
-  Cover Dumb Switch with Smart Switch
-  <a class="anchor" href="#cover-dumb-switch-with-smart-switch">#</a>
+  <article class="markdown"><h1 id="overview">
+  Overview
+  <a class="anchor" href="#overview">#</a>
 </h1>
 
 
@@ -875,9 +899,9 @@ https://github.com/alex-shpak/hugo-book
 <div class="text-center">
   <a >
     <img
-    src="/images/3dprinting/dumb_to_smart.png"
+    src="/images/esp32/M5-Atom-Lite.webp"
     alt=""
-    width=""
+    width="300"
     height=""
     decoding="async"
   />
@@ -885,59 +909,90 @@ https://github.com/alex-shpak/hugo-book
   
 </div>
 
-<p>
+<ul>
+<li>Tiny 24 x 24 x 10 mm</li>
+<li>User Button + Reset</li>
+<li>RGB Led SK6812</li>
+<li>IR Led</li>
+</ul>
+<h2 id="pinout">
+  Pinout
+  <a class="anchor" href="#pinout">#</a>
+</h2>
 
 
 
-<div >
-    <model-viewer 
-        id="a8e70093aff7730f"
-        src="/models/wall_switch.glb"
-        style="width:100%;height: 400px; "
-        exposure="0.2"
-        auto-rotate camera-controls >
-    </model-viewer>
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/esp32/M5-Atom-pinout.webp"
+    alt=""
+    width="300"
+    height=""
+    decoding="async"
+  />
+  </a>
+  
 </div>
 
-
-
+<h2 id="links">
+  Links
+  <a class="anchor" href="#links">#</a>
+</h2>
 
 <div class="container">
     <div class="row">
         <div class="col text-center">
         <a  class="book-btn"
             
-                href="https://www.homesmartmesh.com/models/switch_cover_switch.stl"
+                href="https://docs.m5stack.com/#/en/core/atom_lite"
                 target="_blank"
             
             
             role="button"
         >
-            STL Model
+            Product Page
             
             
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
                 
                 
 
                 
 
-                
-                <svg    class="download"
-                        viewBox="0 0 512 512"
-                        fill="currentColor"
-                        >
-                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
-                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
-                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
-                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
-                </svg>
                 
             
         </a>
     </div>
     </div>
 </div>
-</p>
+
+<h2 id="schematics">
+  schematics
+  <a class="anchor" href="#schematics">#</a>
+</h2>
 <p>
 
 
@@ -1001,103 +1056,23 @@ https://github.com/alex-shpak/hugo-book
 
 
 <link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
-
-<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
-				<div class="box">
-				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/3dprinting/wall%20switch/01%20Black%20and%20White%203dprints.jpg');" >
-				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/3dprinting/wall%20switch/01%20Black%20and%20White%203dprints.jpg" alt="01 black and white 3dprints" />
-				    </div>
-			      <figcaption>
-		          <p>01 black and white 3dprints</p>
-			      </figcaption>
-				    <a href="https://www.homesmartmesh.com//images/3dprinting/wall%20switch/01%20Black%20and%20White%203dprints.jpg" itemprop="contentUrl"></a>
-				  </figure>
-				</div>
-				<div class="box">
-				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/3dprinting/wall%20switch/02%20Black%20and%20White%20breakout.jpg');" >
-				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/3dprinting/wall%20switch/02%20Black%20and%20White%20breakout.jpg" alt="02 black and white breakout" />
-				    </div>
-			      <figcaption>
-		          <p>02 black and white breakout</p>
-			      </figcaption>
-				    <a href="https://www.homesmartmesh.com//images/3dprinting/wall%20switch/02%20Black%20and%20White%20breakout.jpg" itemprop="contentUrl"></a>
-				  </figure>
-				</div>
-				<div class="box">
-				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/3dprinting/wall%20switch/03%20Black%20and%20White%20back%20side.jpg');" >
-				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/3dprinting/wall%20switch/03%20Black%20and%20White%20back%20side.jpg" alt="03 black and white back side" />
-				    </div>
-			      <figcaption>
-		          <p>03 black and white back side</p>
-			      </figcaption>
-				    <a href="https://www.homesmartmesh.com//images/3dprinting/wall%20switch/03%20Black%20and%20White%20back%20side.jpg" itemprop="contentUrl"></a>
-				  </figure>
-				</div>
-				<div class="box">
-				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/3dprinting/wall%20switch/04%20Dumb%20Wall%20Switch.jpg');" >
-				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/3dprinting/wall%20switch/04%20Dumb%20Wall%20Switch.jpg" alt="04 dumb wall switch" />
-				    </div>
-			      <figcaption>
-		          <p>04 dumb wall switch</p>
-			      </figcaption>
-				    <a href="https://www.homesmartmesh.com//images/3dprinting/wall%20switch/04%20Dumb%20Wall%20Switch.jpg" itemprop="contentUrl"></a>
-				  </figure>
-				</div>
-				<div class="box">
-				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/3dprinting/wall%20switch/05%20Smart%20Wall%20Switch.jpg');" >
-				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/3dprinting/wall%20switch/05%20Smart%20Wall%20Switch.jpg" alt="05 smart wall switch" />
-				    </div>
-			      <figcaption>
-		          <p>05 smart wall switch</p>
-			      </figcaption>
-				    <a href="https://www.homesmartmesh.com//images/3dprinting/wall%20switch/05%20Smart%20Wall%20Switch.jpg" itemprop="contentUrl"></a>
-				  </figure>
-				</div>
-				<div class="box">
-				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/3dprinting/wall%20switch/06%20Dumb%20Wall%20Switch.jpg');" >
-				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/3dprinting/wall%20switch/06%20Dumb%20Wall%20Switch.jpg" alt="06 dumb wall switch" />
-				    </div>
-			      <figcaption>
-		          <p>06 dumb wall switch</p>
-			      </figcaption>
-				    <a href="https://www.homesmartmesh.com//images/3dprinting/wall%20switch/06%20Dumb%20Wall%20Switch.jpg" itemprop="contentUrl"></a>
-				  </figure>
-				</div>
-				<div class="box">
-				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/3dprinting/wall%20switch/07%20Smart%20Wall%20Switch.jpg');" >
-				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/3dprinting/wall%20switch/07%20Smart%20Wall%20Switch.jpg" alt="07 smart wall switch" />
-				    </div>
-			      <figcaption>
-		          <p>07 smart wall switch</p>
-			      </figcaption>
-				    <a href="https://www.homesmartmesh.com//images/3dprinting/wall%20switch/07%20Smart%20Wall%20Switch.jpg" itemprop="contentUrl"></a>
-				  </figure>
-				</div>
-				<div class="box">
-				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/3dprinting/wall%20switch/08%20Multicolors.jpg');" >
-				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/3dprinting/wall%20switch/08%20Multicolors.jpg" alt="08 multicolors" />
-				    </div>
-			      <figcaption>
-		          <p>08 multicolors</p>
-			      </figcaption>
-				    <a href="https://www.homesmartmesh.com//images/3dprinting/wall%20switch/08%20Multicolors.jpg" itemprop="contentUrl"></a>
-				  </figure>
-				</div>
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/esp32/ATOM_LITE_SIMPLE_CIRCUT_20200514.webp" alt="Atom Schematics"/>
+    </div>
+    <a href="/images/esp32/ATOM_LITE_SIMPLE_CIRCUT_20200514.webp" itemprop="contentUrl"></a>
+  </figure>
 </div>
 </p>
-<h1 id="application">
-  Application
-  <a class="anchor" href="#application">#</a>
+<h1 id="application---serial-to-mqtt">
+  Application - Serial to MQTT
+  <a class="anchor" href="#application---serial-to-mqtt">#</a>
 </h1>
-<p>
+<ul>
+<li>The serial to MQTT App creates a <code>request</code> and <code>response</code> topics that will propagate through a second Serial interface</li>
+</ul>
+
 
 
 
@@ -1106,7 +1081,7 @@ https://github.com/alex-shpak/hugo-book
 <div class="text-center">
   <a >
     <img
-    src="/images/aqara%20hue%20zigbee.png"
+    src="/images/esp32/atom-serial-mqtt.png"
     alt=""
     width=""
     height=""
@@ -1116,19 +1091,204 @@ https://github.com/alex-shpak/hugo-book
   
 </div>
 
+<ul>
+<li>Although the board is available on <code>platform-espressif32</code> it was not avialable on platformio release as of Today, therefore the board is stored locally.
 
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/platformio/platform-espressif32/blob/develop/boards/m5stack-atom.json"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            board on platform-espressif32
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
 
+                
 
-
-  
-
-
-<div class="col text-center">
-<a  href="/docs/frameworks/raspi_iot/#hue-light-control"   class="book-btn">
-   More details on the raspberry pi service 
-</a>
+                
+            
+        </a>
+    </div>
+    </div>
 </div>
-</p>
+</li>
+</ul>
+<p>Application repo</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/ESP32Home/mqtt_serial"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            ESP32 Program Github Repo
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<h2 id="application-details">
+  Application Details
+  <a class="anchor" href="#application-details">#</a>
+</h2>
+<details >
+  <summary>main.cpp</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Arduino.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ArduinoJson.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;MQTT.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;WiFi.h&#34;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;M5Atom.h&#34;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>...
+<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> host <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;10.0.0.42&#34;</span>;
+<span style="color:#66d9ef">int</span> port <span style="color:#f92672">=</span> <span style="color:#ae81ff">1883</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>mqtt_client_id <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;light_dimmer_mqtt&#34;</span>;
+
+<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> rx_topic <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;esp/dimmer/request&#34;</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> tx_topic <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;esp/dimmer/response&#34;</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> main_topic <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;esp/dimmer&#34;</span>;
+
+MQTTClient <span style="color:#a6e22e">mqtt</span>(<span style="color:#ae81ff">1024</span>);<span style="color:#75715e">// 1KB
+</span><span style="color:#75715e"></span>WiFiClient wifi;<span style="color:#75715e">//needed to stay on global scope
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//      G
+</span><span style="color:#75715e">//      5V
+</span><span style="color:#75715e"></span><span style="color:#75715e">#define TX_PIN 25
+</span><span style="color:#75715e">#define RX_PIN 21
+</span><span style="color:#75715e"></span>...
+<span style="color:#66d9ef">void</span> mqtt_loop(){
+  mqtt.loop();
+  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>mqtt.connected()) {
+    connect();
+  }
+}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">process_serial_2_mqtt</span>(String str_message){
+  mqtt.publish(tx_topic, str_message);
+  Serial.println(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Serial &gt; MQTT&#34;</span>);
+  Serial.println(str_message);
+}
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">messageReceived</span>(String <span style="color:#f92672">&amp;</span>topic, String <span style="color:#f92672">&amp;</span>payload) {
+  Serial1.println(payload);
+  Serial.println(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">MQTT &gt; Serial&#34;</span>);
+  Serial.println(payload);
+}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
+  
+  M5.begin(false, false, true);
+  delay(<span style="color:#ae81ff">50</span>);
+  M5.dis.drawpix(<span style="color:#ae81ff">0</span>, CRGB(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">0</span>));
+
+  Serial.begin(<span style="color:#ae81ff">115200</span>);
+  Serial1.begin(<span style="color:#ae81ff">115200</span>, SERIAL_8N1, RX_PIN, TX_PIN);
+  WiFi.begin(ssid, password);
+
+  mqtt.begin(host,port, wifi);
+  mqtt.onMessage(messageReceived);
+
+}
+...
+<span style="color:#66d9ef">void</span> loop() {
+  mqtt_loop();
+  <span style="color:#66d9ef">if</span> (M5.Btn.wasPressed()){
+    switch_led();
+  }
+
+  delay(<span style="color:#ae81ff">50</span>);
+  M5.update();
+  <span style="color:#66d9ef">if</span>(Serial1.available()<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>){
+    String msg <span style="color:#f92672">=</span> Serial1.readString();
+    process_serial_2_mqtt(msg);
+  }
+}
+</code></pre></div>
+  </div>
+</details>
+
+<details >
+  <summary>Build info...</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">PACKAGES:
+ - framework-arduinoespressif32 3.10005.210308 <span style="color:#f92672">(</span>1.0.5<span style="color:#f92672">)</span>
+ - tool-esptoolpy 1.30000.201119 <span style="color:#f92672">(</span>3.0.0<span style="color:#f92672">)</span>
+ - toolchain-xtensa32 2.50200.97 <span style="color:#f92672">(</span>5.2.0<span style="color:#f92672">)</span>
+...
+Dependency Graph
+|-- &lt;ArduinoJson&gt; 6.16.1
+|-- &lt;MQTT&gt; 2.4.7
+|-- &lt;M5Atom&gt; 0.0.1
+|   |-- &lt;FastLED&gt; 3.4.0
+|   |-- &lt;Wire&gt; 1.0.1
+|-- &lt;FastLED&gt; 3.4.0
+|-- &lt;WiFi&gt; 1.0
+</code></pre></div>
+  </div>
+</details>
+
+<details >
+  <summary>Platformio ini file ...</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[env]</span>
+<span style="color:#a6e22e">board</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">m5stack-atom</span>
+<span style="color:#a6e22e">framework</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">arduino</span>
+<span style="color:#a6e22e">lib_deps</span> <span style="color:#f92672">=</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    ArduinoJson@6.16.1
+</span><span style="color:#e6db74">    617@2.4.7   #MQTT 256dpi/arduino-mqtt
+</span><span style="color:#e6db74">    M5Atom
+</span><span style="color:#e6db74">    fastled/FastLED @ ^3.4.0</span>
+<span style="color:#a6e22e">lib_ldf_mode</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">deep+</span>
+<span style="color:#66d9ef">[env:m5stack-atom]</span>
+<span style="color:#a6e22e">platform</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">espressif32</span>
+<span style="color:#a6e22e">monitor_speed</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">115200</span>
+</code></pre></div>
+  </div>
+</details>
+
 </article>
  
       
@@ -1158,6 +1318,28 @@ https://github.com/alex-shpak/hugo-book
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a>
+      <ul>
+        <li><a href="#pinout">Pinout</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#schematics">schematics</a></li>
+      </ul>
+    </li>
+    <li><a href="#application---serial-to-mqtt">Application - Serial to MQTT</a>
+      <ul>
+        <li><a href="#application-details">Application Details</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
     
   </main>
 
