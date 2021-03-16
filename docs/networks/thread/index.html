@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.be32b26e20a4576284c90e9928fe20f75c6f622a658b095c67fcd63d0d54cb29.js" integrity="sha256-vjKybiCkV2KEyQ6ZKP4g91xvYipliwlcZ/zWPQ1Uyyk="></script>
+<script defer src="/en.search.min.5bd97e50dfe2a65c91498ba8aa54d1b5027e6996b0e5ed743fa107b2c748a2de.js" integrity="sha256-W9l&#43;UN/iplyRSYuoqlTRtQJ&#43;aZaw5e10P6EHssdIot4="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -912,7 +912,8 @@ https://github.com/alex-shpak/hugo-book
       <ul>
         <li><a href="#with-server-command-line">with server command line</a></li>
         <li><a href="#cli-on-border-router">cli on border router</a></li>
-        <li><a href="#cli-firmware">cli firmware</a></li>
+        <li><a href="#cli-openthread-firmware">cli openthread firmware</a></li>
+        <li><a href="#cli-nordic-firmware">cli Nordic firmware</a></li>
         <li><a href="#cli-reference">cli reference</a></li>
       </ul>
     </li>
@@ -1668,7 +1669,44 @@ make -f examples/Makefile-nrf52840 USB<span style="color:#f92672">=</span><span 
 cd output/nrf52840/bin/
 arm-none-eabi-objcopy -O ihex ot-rcp ot-rcp.hex
 nrfjprog -f nrf52 --program ot-rcp.hex --sectorerase --verify
-</code></pre></div><h2 id="zephyr-v2599">
+</code></pre></div>
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.homesmartmesh.com/data/ot-rcp_thread-reference-20191113_nRF52840_dongle_no_bootloader.zip"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            ot-rcp thread-reference-20191113
+            
+            
+                
+                
+
+                
+
+                
+                <svg    class="download"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                        >
+                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
+                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
+                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
+                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
+                </svg>
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<h2 id="zephyr-v2599">
   Zephyr v2.5.99
   <a class="anchor" href="#zephyr-v2599">#</a>
 </h2>
@@ -2816,9 +2854,50 @@ w join -n <span style="color:#e6db74">&#34;MeasureFall&#34;</span> -c <span styl
   <a class="anchor" href="#cli-on-border-router">#</a>
 </h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo ot-ctl
-</code></pre></div><h2 id="cli-firmware">
-  cli firmware
-  <a class="anchor" href="#cli-firmware">#</a>
+</code></pre></div><h2 id="cli-openthread-firmware">
+  cli openthread firmware
+  <a class="anchor" href="#cli-openthread-firmware">#</a>
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.homesmartmesh.com/ot-cli-ftd_thread-reference-20191113_nRF52840_dongle_no_bootloader.zip"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            ot-cli-ftd thread-reference-20191113
+            
+            
+                
+                
+
+                
+
+                
+                <svg    class="download"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                        >
+                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
+                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
+                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
+                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
+                </svg>
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<h2 id="cli-nordic-firmware">
+  cli Nordic firmware
+  <a class="anchor" href="#cli-nordic-firmware">#</a>
 </h2>
 <ul>
 <li>A dongle flashed with <code>cli</code> firmware can be attached to the serial console and offer a command line interpreter that helps with testing</li>
@@ -3262,7 +3341,8 @@ can I run openthread with platformio ?
       <ul>
         <li><a href="#with-server-command-line">with server command line</a></li>
         <li><a href="#cli-on-border-router">cli on border router</a></li>
-        <li><a href="#cli-firmware">cli firmware</a></li>
+        <li><a href="#cli-openthread-firmware">cli openthread firmware</a></li>
+        <li><a href="#cli-nordic-firmware">cli Nordic firmware</a></li>
         <li><a href="#cli-reference">cli reference</a></li>
       </ul>
     </li>
