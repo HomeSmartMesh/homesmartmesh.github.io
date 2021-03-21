@@ -80,7 +80,7 @@ Simple Mesh SensorTagSimple Mesh RepoFeatures#     2.</descriptio
       <pubDate>Sun, 10 Feb 2019 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/robotics/rover/</guid>
-      <description>Overview#RobLibs Github Organization Open source hobby project, creation of a robot with an original structure that moves in a home environment. The robot structure is a double sided inverted pendulum, with the ability to stand up switching from flat mode (car) to the standing mode (balancing robot), on each of its sides. Further dynamic behaviors to be expected.  Concept# A gazebo simulation approximates the robot&amp;rsquo;s physics and allows the user to control it with a joystick to have a feeling of the robot&amp;rsquo;s power depending on the weight and motors power.</description>
+      <description>Overview#RobLibs Github Organization Open source hobby project, creation of a robot with an original structure that moves in a home environment. The robot structure is a double sided inverted pendulum, with the ability to stand up switching from flat mode (car) to the standing mode (balancing robot), on each of its sides. Further dynamic behaviors to be expected.</description>
     </item>
     
     <item>
@@ -137,7 +137,7 @@ Definition#We can consider the project CHIP Connected Home Over IP definition
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/light_socket/</guid>
-      <description>Cover Dumb Switch and smart Socket#STL ModelApplication#More details on the raspberry pi service </description>
+      <description>Cover Dumb Switch and smart Socket#STL ModelApplication#More details on the raspberry pi service </description>
     </item>
     
     <item>
@@ -191,7 +191,7 @@ Definition#We can consider the project CHIP Connected Home Over IP definition
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/esp32_remote/</guid>
-      <description>ESP32 Case for up/down remote control#STL models zipApplication#More details on the ESP32 Arduino code 3D printing creation requires sometimes quite a number of iterations                                 </description>
+      <description>ESP32 Case for up/down remote control#STL models zipApplication#More details on the ESP32 Arduino code 3D printing creation requires sometimes quite a number of iterations                                 </description>
     </item>
     
     <item>
@@ -244,7 +244,7 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/handbag_hanger/</guid>
-      <description>Handbag hanger#STL Model</description>
+      <description>Handbag hanger#STL Model</description>
     </item>
     
     <item>
@@ -266,10 +266,11 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/house/</guid>
-      <description>House Model#                             01 c a d model vs real model
-02 front view
-03 side view
-04 side view 2</description>
+      <description>House Model#                             01 real house
+02 model house
+03 model side
+04 side zoom
+05 side path</description>
     </item>
     
     <item>
@@ -278,7 +279,7 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/voronoi/</guid>
-      <description>Webapp#Voronoi Generator Tool Cells Circle#STL ModelFantasy pen holder#STL ModelFantasy Turtle Flower#STL ModelGirafe round#STL Model</description>
+      <description>Webapp#Voronoi Generator Tool Cells Circle#STL ModelFantasy pen holder#STL ModelFantasy Turtle Flower#STL ModelGirafe round#STL Model</description>
     </item>
     
     <item>

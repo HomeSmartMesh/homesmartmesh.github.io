@@ -13,7 +13,7 @@
       <pubDate>Sun, 10 Feb 2019 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/robotics/rover/</guid>
-      <description>Overview#RobLibs Github Organization Open source hobby project, creation of a robot with an original structure that moves in a home environment. The robot structure is a double sided inverted pendulum, with the ability to stand up switching from flat mode (car) to the standing mode (balancing robot), on each of its sides. Further dynamic behaviors to be expected.  Concept# A gazebo simulation approximates the robot&amp;rsquo;s physics and allows the user to control it with a joystick to have a feeling of the robot&amp;rsquo;s power depending on the weight and motors power.</description>
+      <description>Overview#RobLibs Github Organization Open source hobby project, creation of a robot with an original structure that moves in a home environment. The robot structure is a double sided inverted pendulum, with the ability to stand up switching from flat mode (car) to the standing mode (balancing robot), on each of its sides. Further dynamic behaviors to be expected.</description>
     </item>
     
     <item>
