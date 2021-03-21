@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.5bd97e50dfe2a65c91498ba8aa54d1b5027e6996b0e5ed743fa107b2c748a2de.js" integrity="sha256-W9l&#43;UN/iplyRSYuoqlTRtQJ&#43;aZaw5e10P6EHssdIot4="></script>
+<script defer src="/en.search.min.c04087cc4eea54c6d697685e05292624a275e310577ac415f4967468e3b82352.js" integrity="sha256-wECHzE7qVMbWl2heBSkmJKJ14xBXesQV9JZ0aOO4I1I="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -868,22 +868,10 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#schematics">Schematics</a></li>
         <li><a href="#board">Board</a></li>
         <li><a href="#3d-board-model">3D Board model</a></li>
-        <li><a href="#repo">Repo</a></li>
-        <li><a href="#components">Components</a>
-          <ul>
-            <li><a href="#consumption">Consumption</a></li>
-          </ul>
-        </li>
-        <li><a href="#schematics-1">Schematics</a></li>
-        <li><a href="#board-1">Board</a></li>
-        <li><a href="#3d-board-model-1">3D Board model</a></li>
+        <li><a href="#power-consumption">Power Consumption</a></li>
       </ul>
     </li>
-    <li><a href="#firmware">Firmware</a>
-      <ul>
-        <li><a href="#breadboard-testing">Breadboard testing</a></li>
-      </ul>
-    </li>
+    <li><a href="#firmware">Firmware</a></li>
     <li><a href="#faq---discussion">FAQ - Discussion</a></li>
   </ul>
 </nav>
@@ -896,7 +884,68 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><p>
+  <article class="markdown">
+
+
+
+  
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="/js/load-photoswipe.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true" id="p_swipe">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<p>
 <div class="container">
     <div class="row">
         <div class="col text-center">
@@ -977,44 +1026,6 @@ https://github.com/alex-shpak/hugo-book
 </div>
 </p>
 <p>The Thread sensorTag is based on an <code>nRF52840</code> on a <code>MS88SF2</code> module. The used sensors are <code>VEMLS6030</code> for light and <code>MS8607</code> for Temperature, Humidity and Pressure.</p>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/commit/32a897a91b8c92f2495ef75408c987166ff7b465"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            commit
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
 
 <div class="container">
     <div class="row">
@@ -1208,6 +1219,44 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#schematics">#</a>
 </h2>
 
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/commit/32a897a91b8c92f2495ef75408c987166ff7b465"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            commit
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
 
 
 <div class="container">
@@ -1261,7 +1310,7 @@ https://github.com/alex-shpak/hugo-book
   Board
   <a class="anchor" href="#board">#</a>
 </h2>
-
+<p>
 
 
 
@@ -1272,7 +1321,7 @@ https://github.com/alex-shpak/hugo-book
     <img
     src="/images/thread_sensortag/board_top.png"
     alt=""
-    width=""
+    width="300"
     height=""
     decoding="async"
   />
@@ -1281,6 +1330,17 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/thread_sensortag/prototype_top.webp" />
+    </div>
+    <a href="/images/thread_sensortag/prototype_top.webp" itemprop="contentUrl"></a>
+  </figure>
+</div>
+</p>
+<p>
 
 
 
@@ -1291,7 +1351,7 @@ https://github.com/alex-shpak/hugo-book
     <img
     src="/images/thread_sensortag/board_bottom.png"
     alt=""
-    width=""
+    width="300"
     height=""
     decoding="async"
   />
@@ -1299,6 +1359,17 @@ https://github.com/alex-shpak/hugo-book
   
 </div>
 
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/thread_sensortag/prototype_bottom.webp" />
+    </div>
+    <a href="/images/thread_sensortag/prototype_bottom.webp" itemprop="contentUrl"></a>
+  </figure>
+</div>
+</p>
 <h2 id="3d-board-model">
   3D Board model
   <a class="anchor" href="#3d-board-model">#</a>
@@ -1319,56 +1390,10 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-<h2 id="repo">
-  Repo
-  <a class="anchor" href="#repo">#</a>
+<h2 id="power-consumption">
+  Power Consumption
+  <a class="anchor" href="#power-consumption">#</a>
 </h2>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/commit/fe999911c088dd4ad4b96288b7cdaeced648661c"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            schematics 07/02/2021 commit fe9999
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<h2 id="components">
-  Components
-  <a class="anchor" href="#components">#</a>
-</h2>
-<h3 id="consumption">
-  Consumption
-  <a class="anchor" href="#consumption">#</a>
-</h3>
 
 
 
@@ -1396,159 +1421,96 @@ https://github.com/alex-shpak/hugo-book
     };
 </script>
 
-<h2 id="schematics-1">
-  Schematics
-  <a class="anchor" href="#schematics-1">#</a>
-</h2>
-
-
-
-<div class="container">
-  <div class="row">
-      <div class="col text-center">
-          <a id="btn-b3219d6ad18487f1" class="book-btn" role="button" >Full Screen</a>
-      </div>
-</div>
-<embed id="svg-b3219d6ad18487f1" type="image/svg+xml" width=100% src="/images/thread_sensortag/nrf52-sensor-tag_v0.svg"  style="background-color:white"/>
-<script>
-  function setup_svg_panzoom(){
-    let params = {
-          panEnabled: true,
-          zoomEnabled: true,
-          dblClickZoomEnabled: true,
-          controlIconsEnabled: false,
-          mouseWheelZoomEnabled: true,
-          preventMouseEventsDefault: true,
-          zoomScaleSensitivity: 0.6,
-          minZoom: 0.5,
-          maxZoom: 4,
-           fit: true
-          , contain: true
-          , center: true
-          , refreshRate: 'auto'
-      };
-      let svg_pz = svgPanZoom('#svg-b3219d6ad18487f1'        ,params);
-      window["svg_b3219d6ad18487f1"] = svg_pz
-      let button = document.getElementById("btn-b3219d6ad18487f1");
-      button.onclick = ()=>{
-          var elem = document.getElementById("svg-b3219d6ad18487f1");
-          if (elem.requestFullscreen) {
-          elem.requestFullscreen();
-          } else if (elem.webkitRequestFullscreen) {  
-          elem.webkitRequestFullscreen();
-          } else if (elem.msRequestFullscreen) {  
-          elem.msRequestFullscreen();
-          }
-      };
-  }
-  function reset_position(){
-    window["svg_b3219d6ad18487f1"].resize()
-    window["svg_b3219d6ad18487f1"].fit()
-    window["svg_b3219d6ad18487f1"].center()
-  }
-  document.getElementById('svg-b3219d6ad18487f1').addEventListener('load', setup_svg_panzoom)
-  window.addEventListener('resize', reset_position)
- </script>
-
-<h2 id="board-1">
-  Board
-  <a class="anchor" href="#board-1">#</a>
-</h2>
-
-
-
-<div class="container">
-  <div class="row">
-      <div class="col text-center">
-          <a id="btn-6b24bc24fe383799" class="book-btn" role="button" >Full Screen</a>
-      </div>
-</div>
-<embed id="svg-6b24bc24fe383799" type="image/svg+xml" width=100% src="/images/thread_sensortag/nrf52-sensor-tag-brd_v0.svg"  style="background-color:white"/>
-<script>
-  function setup_svg_panzoom(){
-    let params = {
-          panEnabled: true,
-          zoomEnabled: true,
-          dblClickZoomEnabled: true,
-          controlIconsEnabled: false,
-          mouseWheelZoomEnabled: true,
-          preventMouseEventsDefault: true,
-          zoomScaleSensitivity: 0.6,
-          minZoom: 0.5,
-          maxZoom: 4,
-           fit: true
-          , contain: true
-          , center: true
-          , refreshRate: 'auto'
-      };
-      let svg_pz = svgPanZoom('#svg-6b24bc24fe383799'        ,params);
-      window["svg_6b24bc24fe383799"] = svg_pz
-      let button = document.getElementById("btn-6b24bc24fe383799");
-      button.onclick = ()=>{
-          var elem = document.getElementById("svg-6b24bc24fe383799");
-          if (elem.requestFullscreen) {
-          elem.requestFullscreen();
-          } else if (elem.webkitRequestFullscreen) {  
-          elem.webkitRequestFullscreen();
-          } else if (elem.msRequestFullscreen) {  
-          elem.msRequestFullscreen();
-          }
-      };
-  }
-  function reset_position(){
-    window["svg_6b24bc24fe383799"].resize()
-    window["svg_6b24bc24fe383799"].fit()
-    window["svg_6b24bc24fe383799"].center()
-  }
-  document.getElementById('svg-6b24bc24fe383799').addEventListener('load', setup_svg_panzoom)
-  window.addEventListener('resize', reset_position)
- </script>
-
-<h2 id="3d-board-model-1">
-  3D Board model
-  <a class="anchor" href="#3d-board-model-1">#</a>
-</h2>
-
-
-
-
-<div >
-    <model-viewer 
-        id="a4e765ad2ebb6322"
-        src="/models/nrf/sensortag_0.glb"
-        style="width:100%;height: 400px; "
-        exposure="0.2"
-        auto-rotate camera-controls >
-    </model-viewer>
-</div>
-
-
-
 <h1 id="firmware">
   Firmware
   <a class="anchor" href="#firmware">#</a>
 </h1>
-<h2 id="breadboard-testing">
-  Breadboard testing
-  <a class="anchor" href="#breadboard-testing">#</a>
-</h2>
+<blockquote class="book-hint warning">
+  The firmware for this SensorTag is in preparation
+</blockquote>
 
+<ul>
+<li>
+<p>example based on <code>nRFSDK for Thread and Zigbee v4.1.0</code>
 
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware/mqttsn_publish_sensor"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            MQTT-SN directory
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
 
+                
 
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+</p>
+</li>
+<li>
+<p>example based on <code>Zephyr</code> and <code>nRF Connect SDK</code></p>
+</li>
+</ul>
 
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware/pio_zephyr_sensor"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            MQTT-SN directory
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
 
-<div class="text-center">
-  <a >
-    <img
-    src="/images/thread_sensortag/breadboard_test.png"
-    alt=""
-    width=""
-    height=""
-    decoding="async"
-  />
-  </a>
-  
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
 </div>
 
 <h1 id="faq---discussion">
@@ -1602,6 +1564,18 @@ https://github.com/alex-shpak/hugo-book
   
   <details>
     <summary>
+Does this Thread SensorTag support MQTT ?
+</summary>
+    <div class="markdown-inner">
+      At the moment, a firmware is in preparation that support MQTT-SN which needs an MQTT-SN gateway to connect it to an MQTT broquer. Mode details in the <a href="/docs/networks/thread/#mqtt-sensors-node">MQTT Sensors Node</a>
+    </div>
+  </details>
+
+  
+  
+  
+  <details>
+    <summary>
 Is it possible to save energy by collecting many sensor samples over time and sending them together?
 </summary>
     <div class="markdown-inner">
@@ -1631,13 +1605,27 @@ I think after all, such things should be configurable by the end users&rsquo;s a
       
       {
         "@type": "Question",
+        "name": "Does this Thread SensorTag support MQTT ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At the moment, a firmware is in preparation that support MQTT-SN which needs an MQTT-SN gateway to connect it to an MQTT broquer. Mode details in the \u003ca href=\"/docs/networks/thread/#mqtt-sensors-node\"\u003eMQTT Sensors Node\u003c/a\u003e"
+        }
+      }
+    
+    
+      
+      
+      
+      
+      
+      ,{
+        "@type": "Question",
         "name": "Is it possible to save energy by collecting many sensor samples over time and sending them together?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "\u003cp\u003eYes, sure, the use cases could be slpit as follows :\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eFor short term buffering, it\u0026rsquo;s possible to use the RAM retention feature, you pay as you go fine granular (per 4 kB block: 30nA)\u003c/li\u003e\n\u003cli\u003eFor long term buffering, we\u0026rsquo;re no longer on the sensors network use case and rather on the logger tag use case, there you can use the Flash, 1 MB is huge.\nIn my use case, I don\u0026rsquo;t use buffering in order to allow live update of measures on the user\u0026rsquo;s apps, but combining like a level trigger to immediately send values on big changes with buffering and sending all the values cyclically could be quite smart, you will need a QoS through to ensure your data is really sent after a while, which will also consume RF transactions, I opted for sending every single value on an RF packet which is also used as an alive signal to know when the sensor is dead or out of reach, so no problem if once a packet is lost in a while, but practically, as I use a flood mesh, most measures arrive more than once to the server.\nI think after all, such things should be configurable by the end users\u0026rsquo;s app, and should not be hardcoded\u003c/li\u003e\n\u003c/ul\u003e\n"
         }
       }
-    
     
     ]
   }
@@ -1682,22 +1670,10 @@ I think after all, such things should be configurable by the end users&rsquo;s a
         <li><a href="#schematics">Schematics</a></li>
         <li><a href="#board">Board</a></li>
         <li><a href="#3d-board-model">3D Board model</a></li>
-        <li><a href="#repo">Repo</a></li>
-        <li><a href="#components">Components</a>
-          <ul>
-            <li><a href="#consumption">Consumption</a></li>
-          </ul>
-        </li>
-        <li><a href="#schematics-1">Schematics</a></li>
-        <li><a href="#board-1">Board</a></li>
-        <li><a href="#3d-board-model-1">3D Board model</a></li>
+        <li><a href="#power-consumption">Power Consumption</a></li>
       </ul>
     </li>
-    <li><a href="#firmware">Firmware</a>
-      <ul>
-        <li><a href="#breadboard-testing">Breadboard testing</a></li>
-      </ul>
-    </li>
+    <li><a href="#firmware">Firmware</a></li>
     <li><a href="#faq---discussion">FAQ - Discussion</a></li>
   </ul>
 </nav>

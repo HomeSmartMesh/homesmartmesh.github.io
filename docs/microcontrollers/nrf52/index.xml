@@ -24,8 +24,7 @@ repo directorynRF52832BME280MAX44009Schematics#Fu
       <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</guid>
-      <description>Networks / ThreadFrameworks / CHIPv1.0 MS8607 VEML6030#The Thread sensorTag is based on an nRF52840 on a MS88SF2 module. The used sensors are VEMLS6030 for light and MS8607 for Temperature, Humidity and Pressure.
-commitnRF52840MS88SF2MS86072VEML6030Schematics#Full Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.</description>
+      <description>Networks / ThreadFrameworks / CHIPv1.0 MS8607 VEML6030#The Thread sensorTag is based on an nRF52840 on a MS88SF2 module. The used sensors are VEMLS6030 for light and MS8607 for Temperature, Humidity and Pressure.</description>
     </item>
     
     <item>
@@ -34,7 +33,7 @@ commitnRF52840MS88SF2MS86072VEML6030Schematic
       <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</guid>
-      <description>Product Page     nRF52840 ARM M4 64 MHz 1024 KB ROM - 256 KB RAM Bluetooth 5, Mesh 802.15.4, Thread, Zigbee USB 2 GetStarted)  Applications# custom mesh coordinator  nRF52840 Dongle#Pinout#Serial Wire Debug#LEDS# LED1 Green : P0.06 LED2 Green : P0.08 LED2 Green : P1.</description>
+      <description>Product Page     nRF52840 ARM M4 64 MHz 1024 KB ROM - 256 KB RAM Bluetooth 5, Mesh 802.15.4, Thread, Zigbee USB 2 GetStarted)  Applications# custom mesh coordinator  nRF52840 Dongle#Pinout#Serial Wire Debug#LEDS# LED1 Green : P0.</description>
     </item>
     
     <item>
