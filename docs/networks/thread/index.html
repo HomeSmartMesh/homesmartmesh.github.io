@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.d3c3d795654177a5c21b00ab72872fe48bd440350fa7f72f562b2bc472e64bce.js" integrity="sha256-08PXlWVBd6XCGwCrcocv5IvUQDUPp/cvVisrxHLmS84="></script>
+<script defer src="/en.search.min.0bc7d3671714deff9d705187b0291af1299e2b228eba1db8f6c8ed346a206137.js" integrity="sha256-C8fTZxcU3v&#43;dcFGHsCka8SmeKyKOuh249sjtNGogYTc="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -3307,6 +3307,42 @@ What is the difference between using an RCP/NCP and running Thread as a stand al
   
   <details>
     <summary>
+Does the Thread Topolog Monitor use the same CLI firmware as the openthread CLI ?
+</summary>
+    <div class="markdown-inner">
+      No, the Thread Topology monitor TTM comes with it own firmware that needs to be flashed
+    </div>
+  </details>
+
+  
+  
+  
+  <details>
+    <summary>
+How does the Thread Topolog Monitor work ? What can it see ?
+</summary>
+    <div class="markdown-inner">
+      The Thread Topolog Monitor TTM is an active node on the network, it needs the credentials to be able to join it and only then it can retrieve info from the network it will also display itself in the network.
+    </div>
+  </details>
+
+  
+  
+  
+  <details>
+    <summary>
+What is the difference between the Thread Topology Monitor and the 802.15.4 sniffer ?
+</summary>
+    <div class="markdown-inner">
+      The 802.15.4 sniffer does not join the network and is totally passive. It can listen to all the traffic of the channel it is in, including all pan ids. If it has the master key, it can then decript data from the corresponding network.
+    </div>
+  </details>
+
+  
+  
+  
+  <details>
+    <summary>
 can I run openthread with Arduino ?
 </summary>
     <div class="markdown-inner">
@@ -3374,6 +3410,48 @@ can I run openthread with platformio ?
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "The difference only lays on the partitioning of the application, in the RCP/NCP the application runs on the Host be it a raspberry pi or another uC, in the stand alone the whole thread stack and app run on the same device. We can think of the NCP as example like the CLI=\u003ccode\u003ecommand line interface\u003c/code\u003e Thread utility, but the protocol is not text mode rather binary. If the host is an uC itself, the question would be, why using two uC and if it is possible rather to merge them in just one, a corner case might need that like for example a double uC with WiFi and thread capabiltiy."
+        }
+      }
+    
+      
+      
+      
+      
+      
+      ,{
+        "@type": "Question",
+        "name": "Does the Thread Topolog Monitor use the same CLI firmware as the openthread CLI ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, the Thread Topology monitor TTM comes with it own firmware that needs to be flashed"
+        }
+      }
+    
+      
+      
+      
+      
+      
+      ,{
+        "@type": "Question",
+        "name": "How does the Thread Topolog Monitor work ? What can it see ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Thread Topolog Monitor TTM is an active node on the network, it needs the credentials to be able to join it and only then it can retrieve info from the network it will also display itself in the network."
+        }
+      }
+    
+      
+      
+      
+      
+      
+      ,{
+        "@type": "Question",
+        "name": "What is the difference between the Thread Topology Monitor and the 802.15.4 sniffer ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The 802.15.4 sniffer does not join the network and is totally passive. It can listen to all the traffic of the channel it is in, including all pan ids. If it has the master key, it can then decript data from the corresponding network."
         }
       }
     
