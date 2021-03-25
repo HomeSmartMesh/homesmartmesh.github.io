@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.0bc7d3671714deff9d705187b0291af1299e2b228eba1db8f6c8ed346a206137.js" integrity="sha256-C8fTZxcU3v&#43;dcFGHsCka8SmeKyKOuh249sjtNGogYTc="></script>
+<script defer src="/en.search.min.65777cdfcf99d13324a31ff0e272bd9dd88d852cde78675d280087471b7ccc68.js" integrity="sha256-ZXd838&#43;Z0TMkox/w4nK9ndiNhSzeeGddKACHRxt8zGg="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1426,13 +1426,13 @@ https://github.com/alex-shpak/hugo-book
   Firmware
   <a class="anchor" href="#firmware">#</a>
 </h1>
-<blockquote class="book-hint warning">
-  The firmware for this SensorTag is in preparation
+<blockquote class="book-hint info">
+  Tested firmware with MQTT-SN gateway and Mosquitto broquer
 </blockquote>
 
 <ul>
-<li>
-<p>example based on <code>nRFSDK for Thread and Zigbee v4.1.0</code>
+<li>example based on <code>nRFSDK for Thread and Zigbee v4.1.0</code> which path should be declared in an environment variable <code>THREAD_SDK_ROOT</code></li>
+<li>Note that, as specified in the SDK file <code>components\toolchain\gcc\Makefile.windows</code> the used toolchain is <code>GNU Tools ARM Embedded/7 2018-q2-update</code>
 
 <div class="container">
     <div class="row">
@@ -1470,11 +1470,14 @@ https://github.com/alex-shpak/hugo-book
     </div>
     </div>
 </div>
-</p>
 </li>
-<li>
-<p>example based on <code>Zephyr</code> and <code>nRF Connect SDK</code></p>
-</li>
+</ul>
+<blockquote class="book-hint warning">
+  The following example is still in development
+</blockquote>
+
+<ul>
+<li>example based on <code>Zephyr</code> and <code>nRF Connect SDK</code>, still in development</li>
 </ul>
 
 <div class="container">
@@ -1488,7 +1491,7 @@ https://github.com/alex-shpak/hugo-book
             
             role="button"
         >
-            MQTT-SN directory
+            pio Zephyr sensor
             
             
                 
