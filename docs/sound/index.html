@@ -10,12 +10,13 @@
 <meta property="og:description" content="Mastering real time sound capture processing and generation on embedded processors" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.homesmartmesh.com/docs/sound/" />
+<meta property="og:image" content="https://www.homesmartmesh.com/images/sound/web_py_loop.png" />
 <meta property="og:updated_time" content="2021-01-31T00:00:00+00:00" />
 <title>Sound Processing | Home Smart Mesh</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.a04ada302c175add0ec3cd75e658225b2e2001fce172e507dfd140fd23d65a3e.js" integrity="sha256-oEraMCwXWt0Ow8115lgiWy4gAfzhcuUH39FA/SPWWj4="></script>
+<script defer src="/en.search.min.e8b60e281fb39fdd6ffdd50fa88088f9652f3615b43378ef04ecb95accb026c9.js" integrity="sha256-6LYOKB&#43;zn91v/dUPqICI&#43;WUvNhW0M3jvBOy5WsywJsk="></script>
 <link rel="alternate" type="application/rss+xml" href="https://www.homesmartmesh.com/docs/sound/index.xml" title="Home Smart Mesh" />
 <!--
 Made with Book Theme
@@ -125,6 +126,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="https://www.homesmartmesh.com/docs/frameworks/zephyr/" class="">Zephyr RTOS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://www.homesmartmesh.com/docs/frameworks/upython/" class="">micro Python</a>
   
 
         </li>
@@ -859,7 +873,24 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#overview">Overview</a>
+    <li><a href="#repositories">Repositories</a>
+      <ul>
+        <li><a href="#web-py-loop">web py loop</a></li>
+        <li><a href="#webrtc">webRTC</a></li>
+        <li><a href="#pystream">pystream</a>
+          <ul>
+            <li><a href="#dependencies">dependencies</a></li>
+          </ul>
+        </li>
+        <li><a href="#see-sound">see sound</a>
+          <ul>
+            <li><a href="#live-demo">Live demo</a></li>
+          </ul>
+        </li>
+        <li><a href="#librosa_demo">librosa_demo</a></li>
+      </ul>
+    </li>
+    <li><a href="#features-plan">Features Plan</a>
       <ul>
         <li><a href="#interactive-sound-input">Interactive sound input</a></li>
         <li><a href="#debug-workflow">Debug workflow</a></li>
@@ -874,21 +905,6 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#microcontrollers">Microcontrollers</a></li>
       </ul>
     </li>
-    <li><a href="#repositories">Repositories</a>
-      <ul>
-        <li><a href="#pystreamhttpsgithubcomsoundhackingpystream"><a href="https://github.com/SoundHacking/pystream">pystream</a></a>
-          <ul>
-            <li><a href="#dependencies">dependencies</a></li>
-          </ul>
-        </li>
-        <li><a href="#see-sound">see sound</a>
-          <ul>
-            <li><a href="#live-demo">Live demo</a></li>
-          </ul>
-        </li>
-        <li><a href="#librosa_demo">librosa_demo</a></li>
-      </ul>
-    </li>
   </ul>
 </nav>
 
@@ -900,9 +916,330 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="overview">
-  Overview
-  <a class="anchor" href="#overview">#</a>
+  <article class="markdown"><h1 id="repositories">
+  Repositories
+  <a class="anchor" href="#repositories">#</a>
+</h1>
+<h2 id="web-py-loop">
+  web py loop
+  <a class="anchor" href="#web-py-loop">#</a>
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/SoundHacking/web_py_loop"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            repo
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/sound/web_py_loop.png"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
+<ul>
+<li>using <code>createScriptProcessor</code> which is to be deprecated</li>
+<li>Note <code>MediaStreamTrackProcessor</code> is not supported yet as of 02 Apr 2021. <a href="https://github.com/webrtc/samples/blob/gh-pages/src/content/insertable-streams/audio-processing/js/main.js">Sample demo</a> available</li>
+</ul>
+<h2 id="webrtc">
+  webRTC
+  <a class="anchor" href="#webrtc">#</a>
+</h2>
+<p>Official example 
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/webrtc/samples/tree/gh-pages/src/content/peerconnection/audio"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            peerconnection audio
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+</p>
+<h2 id="pystream">
+  pystream
+  <a class="anchor" href="#pystream">#</a>
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/SoundHacking/pystream"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            repo
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/sound/python_process.png"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
+<ul>
+<li>List audio devices</li>
+<li>Test Audio input and output</li>
+<li>connect inputs to outputs</li>
+<li>process the live stream between input and output</li>
+<li>generate tone</li>
+</ul>
+<h3 id="dependencies">
+  dependencies
+  <a class="anchor" href="#dependencies">#</a>
+</h3>
+<ul>
+<li>matplotlib</li>
+<li>numpy</li>
+<li><a href="https://python-sounddevice.readthedocs.io/">sounddevice</a></li>
+</ul>
+<h2 id="see-sound">
+  see sound
+  <a class="anchor" href="#see-sound">#</a>
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/SoundHacking/see_sound/"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            repo
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/sound/analyser.png"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
+<ul>
+<li>a web app framework to see the sound in different forms</li>
+<li>real-time analysis of played audio</li>
+<li>Playing sound with html5 <a href="https://www.w3.org/TR/webaudio/">web Audio API</a></li>
+</ul>
+<h3 id="live-demo">
+  Live demo
+  <a class="anchor" href="#live-demo">#</a>
+</h3>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <a id="btn-ce4bd70ba71e09c0" class="book-btn" role="button" >Full screen</a>
+            <a class="book-btn" href="https://soundhacking.github.io/see_sound/" role="button" target="_blank">Open in a new page</a>
+        </div>
+</div>
+<iframe id="ifm-ce4bd70ba71e09c0" src="https://soundhacking.github.io/see_sound/" width=100% height=300 frameborder="0" ></iframe>
+
+<script>
+    var button = document.getElementById("btn-ce4bd70ba71e09c0");
+    button.onclick = ()=>{
+        var elem = document.getElementById("ifm-ce4bd70ba71e09c0");
+        if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) {  
+        elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {  
+        elem.msRequestFullscreen();
+        }
+    };
+</script>
+
+<h2 id="librosa_demo">
+  librosa_demo
+  <a class="anchor" href="#librosa_demo">#</a>
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a class="book-btn" href="https://github.com/SoundHacking/librosa_demo/" role="button" target="_blank">github project</a>
+        </div>
+    </div>
+</div>
+
+<ul>
+<li>Jupyter notebooks to showcase librosa functions</li>
+</ul>
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/sound/librosa.png"
+    alt=""
+    width="600"
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
+<h1 id="features-plan">
+  Features Plan
+  <a class="anchor" href="#features-plan">#</a>
 </h1>
 <p>The idea behind the <a href="https://github.com/SoundHacking">Sound Hacking github organisation</a> is to take advantage of the latest advances of Machine learning and Audio processing to create innovative applications.</p>
 <h2 id="interactive-sound-input">
@@ -1041,114 +1378,6 @@ Therefore an instant response of the system is what creates a feeling of connect
 <ul>
 <li><a href="https://github.com/STM32Libs/f411_piocube_lib_blink">f411_piocube_lib_blink</a></li>
 </ul>
-<h1 id="repositories">
-  Repositories
-  <a class="anchor" href="#repositories">#</a>
-</h1>
-<h2 id="pystreamhttpsgithubcomsoundhackingpystream">
-  <a href="https://github.com/SoundHacking/pystream">pystream</a>
-  <a class="anchor" href="#pystreamhttpsgithubcomsoundhackingpystream">#</a>
-</h2>
-<ul>
-<li>List audio devices</li>
-<li>Test Audio input and output</li>
-<li>connect inputs to outputs</li>
-<li>process the live stream between input and output</li>
-<li>generate tone</li>
-</ul>
-<h3 id="dependencies">
-  dependencies
-  <a class="anchor" href="#dependencies">#</a>
-</h3>
-<ul>
-<li>matplotlib</li>
-<li>numpy</li>
-<li><a href="https://python-sounddevice.readthedocs.io/">sounddevice</a></li>
-</ul>
-<h2 id="see-sound">
-  see sound
-  <a class="anchor" href="#see-sound">#</a>
-</h2>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a class="book-btn" href="https://github.com/SoundHacking/see_sound/" role="button" target="_blank">github project</a>
-        </div>
-    </div>
-</div>
-
-<ul>
-<li>a web app framework to see the sound in different forms</li>
-<li>real-time analysis of played audio</li>
-<li>Playing sound with html5 <a href="https://www.w3.org/TR/webaudio/">web Audio API</a></li>
-</ul>
-<h3 id="live-demo">
-  Live demo
-  <a class="anchor" href="#live-demo">#</a>
-</h3>
-
-
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-            <a id="btn-ce4bd70ba71e09c0" class="book-btn" role="button" >Full screen</a>
-            <a class="book-btn" href="https://soundhacking.github.io/see_sound/" role="button" target="_blank">Open in a new page</a>
-        </div>
-</div>
-<iframe id="ifm-ce4bd70ba71e09c0" src="https://soundhacking.github.io/see_sound/" width=100% height=300 frameborder="0" ></iframe>
-
-<script>
-    var button = document.getElementById("btn-ce4bd70ba71e09c0");
-    button.onclick = ()=>{
-        var elem = document.getElementById("ifm-ce4bd70ba71e09c0");
-        if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-        } else if (elem.webkitRequestFullscreen) {  
-        elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) {  
-        elem.msRequestFullscreen();
-        }
-    };
-</script>
-
-<h2 id="librosa_demo">
-  librosa_demo
-  <a class="anchor" href="#librosa_demo">#</a>
-</h2>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a class="book-btn" href="https://github.com/SoundHacking/librosa_demo/" role="button" target="_blank">github project</a>
-        </div>
-    </div>
-</div>
-
-<ul>
-<li>Jupyter notebooks to showcase librosa functions</li>
-</ul>
-
-
-
-
-
-
-<div class="text-center">
-  <a >
-    <img
-    src="/images/sound/librosa.png"
-    alt=""
-    width="600"
-    height=""
-    decoding="async"
-  />
-  </a>
-  
-</div>
-
 </article>
  
       
@@ -1183,7 +1412,24 @@ Therefore an instant response of the system is what creates a feeling of connect
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#overview">Overview</a>
+    <li><a href="#repositories">Repositories</a>
+      <ul>
+        <li><a href="#web-py-loop">web py loop</a></li>
+        <li><a href="#webrtc">webRTC</a></li>
+        <li><a href="#pystream">pystream</a>
+          <ul>
+            <li><a href="#dependencies">dependencies</a></li>
+          </ul>
+        </li>
+        <li><a href="#see-sound">see sound</a>
+          <ul>
+            <li><a href="#live-demo">Live demo</a></li>
+          </ul>
+        </li>
+        <li><a href="#librosa_demo">librosa_demo</a></li>
+      </ul>
+    </li>
+    <li><a href="#features-plan">Features Plan</a>
       <ul>
         <li><a href="#interactive-sound-input">Interactive sound input</a></li>
         <li><a href="#debug-workflow">Debug workflow</a></li>
@@ -1196,21 +1442,6 @@ Therefore an instant response of the system is what creates a feeling of connect
         <li><a href="#capture">Capture</a></li>
         <li><a href="#display">Display</a></li>
         <li><a href="#microcontrollers">Microcontrollers</a></li>
-      </ul>
-    </li>
-    <li><a href="#repositories">Repositories</a>
-      <ul>
-        <li><a href="#pystreamhttpsgithubcomsoundhackingpystream"><a href="https://github.com/SoundHacking/pystream">pystream</a></a>
-          <ul>
-            <li><a href="#dependencies">dependencies</a></li>
-          </ul>
-        </li>
-        <li><a href="#see-sound">see sound</a>
-          <ul>
-            <li><a href="#live-demo">Live demo</a></li>
-          </ul>
-        </li>
-        <li><a href="#librosa_demo">librosa_demo</a></li>
       </ul>
     </li>
   </ul>
