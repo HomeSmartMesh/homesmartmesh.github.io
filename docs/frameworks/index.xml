@@ -51,7 +51,7 @@ Definition#We can consider the project CHIP Connected Home Over IP definition
       <pubDate>Sat, 03 Apr 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/upython/</guid>
-      <description>cross compiler# note CROSS_COMPILE is referencing the system toolchain with loose recommendations 7.3.1/2Q18 or 8.2.1/4Q18. check the toolchain version  arm-none-eabi-gcc --version which arm-none-eabi-gcc --version  testing with version 9-2020-q2-update - 9.3.1 20200408  build instructions#git clone --recurse-submodules https://github.com/micropython/micropython.git cd micropython/mpy-cross make cd ../ports/nrf make submodules make BOARD=pca10059 config# each board has the pins configured in a hreader file  ports/nrf/boards/pca10059/mpconfigboard.h  USB CDC activation UART pin assignement  #define MICROPY_HW_USB_CDC (1) .</description>
+      <description>nRF52840 usb donglecross compiler# note CROSS_COMPILE is referencing the system toolchain with loose recommendations 7.3.1/2Q18 or 8.2.1/4Q18. check the toolchain version  arm-none-eabi-gcc --version which arm-none-eabi-gcc --version  testing with version 9-2020-q2-update - 9.3.1 20200408  build instructions#git clone --recurse-submodules https://github.com/micropython/micropython.git cd micropython/mpy-cross make cd ../ports/nrf make submodules make BOARD=pca10059 config#usb# each board has the pins configured in a hreader file  ports/nrf/boards/pca10059/mpconfigboard.</description>
     </item>
     
   </channel>

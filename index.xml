@@ -173,7 +173,7 @@ Definition#We can consider the project CHIP Connected Home Over IP definition
       <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</guid>
-      <description>Product Page     nRF52840 ARM M4 64 MHz 1024 KB ROM - 256 KB RAM Bluetooth 5, Mesh 802.15.4, Thread, Zigbee USB 2 GetStarted)  Applications# custom mesh coordinator  nRF52840 Dongle#Pinout#Serial Wire Debug#LEDS# LED1 Green : P0.</description>
+      <description>Product Page     nRF52840 ARM M4 64 MHz 1024 KB ROM - 256 KB RAM Bluetooth 5, Mesh 802.15.4, Thread, Zigbee USB 2 GetStarted)  Applications# custom mesh coordinator  nRF52840 Dongle#Pinout#Serial Wire Debug# the usb dongle is referred to as PCA10059 which in projects usually shifts the app to offset 0x1000 as openbootloader usage is expected With serial wire debug, it&amp;rsquo;s possible to flash applications at same address as the PCA10056 which is at address 0x0000 recovering the openbootloader mode would then require to reflash the MBR with any nRF SDK project make flash_mbr  LEDS# LED1 Green : P0.</description>
     </item>
     
     <item>
@@ -266,7 +266,7 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
       <pubDate>Sat, 03 Apr 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/upython/</guid>
-      <description>cross compiler# note CROSS_COMPILE is referencing the system toolchain with loose recommendations 7.3.1/2Q18 or 8.2.1/4Q18. check the toolchain version  arm-none-eabi-gcc --version which arm-none-eabi-gcc --version  testing with version 9-2020-q2-update - 9.3.1 20200408  build instructions#git clone --recurse-submodules https://github.com/micropython/micropython.git cd micropython/mpy-cross make cd ../ports/nrf make submodules make BOARD=pca10059 config# each board has the pins configured in a hreader file  ports/nrf/boards/pca10059/mpconfigboard.h  USB CDC activation UART pin assignement  #define MICROPY_HW_USB_CDC (1) .</description>
+      <description>nRF52840 usb donglecross compiler# note CROSS_COMPILE is referencing the system toolchain with loose recommendations 7.3.1/2Q18 or 8.2.1/4Q18. check the toolchain version  arm-none-eabi-gcc --version which arm-none-eabi-gcc --version  testing with version 9-2020-q2-update - 9.3.1 20200408  build instructions#git clone --recurse-submodules https://github.com/micropython/micropython.git cd micropython/mpy-cross make cd ../ports/nrf make submodules make BOARD=pca10059 config#usb# each board has the pins configured in a hreader file  ports/nrf/boards/pca10059/mpconfigboard.</description>
     </item>
     
     <item>
