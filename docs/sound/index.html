@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.1eb31b3c2e5a9c31363357929fea63ecf610305c064ebb5a972c4859de046ab9.js" integrity="sha256-HrMbPC5anDE2M1eSn&#43;pj7PYQMFwGTrtalyxIWd4Eark="></script>
+<script defer src="/en.search.min.75bc88875ed721236471f1e253af9b89586c79bd5eacfa916e82511ab07a2807.js" integrity="sha256-dbyIh17XISNkcfHiU6&#43;biVhseb1erPqRboJRGrB6KAc="></script>
 <link rel="alternate" type="application/rss+xml" href="https://www.homesmartmesh.com/docs/sound/index.xml" title="Home Smart Mesh" />
 <!--
 Made with Book Theme
@@ -873,28 +873,24 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#repositories">Repositories</a>
+    <li><a href="#web-py-loopback">web py loopback</a>
       <ul>
-        <li><a href="#web-py-loop">web py loop</a>
-          <ul>
-            <li><a href="#script-processor-loopback">script processor loopback</a></li>
-            <li><a href="#media-recorder-source-loopback">media recorder source loopback</a></li>
-          </ul>
-        </li>
+        <li><a href="#web-audio-script-processor">web audio script processor</a></li>
+        <li><a href="#media-source-extension-api">media source extension API</a></li>
         <li><a href="#webrtc">webRTC</a></li>
         <li><a href="#pystream">pystream</a>
           <ul>
             <li><a href="#dependencies">dependencies</a></li>
           </ul>
         </li>
-        <li><a href="#see-sound">see sound</a>
-          <ul>
-            <li><a href="#live-demo">Live demo</a></li>
-          </ul>
-        </li>
-        <li><a href="#librosa_demo">librosa_demo</a></li>
       </ul>
     </li>
+    <li><a href="#see-sound">see sound</a>
+      <ul>
+        <li><a href="#live-demo">Live demo</a></li>
+      </ul>
+    </li>
+    <li><a href="#librosa-test">librosa test</a></li>
     <li><a href="#features-plan">Features Plan</a>
       <ul>
         <li><a href="#interactive-sound-input">Interactive sound input</a></li>
@@ -910,6 +906,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#microcontrollers">Microcontrollers</a></li>
       </ul>
     </li>
+    <li><a href="#faq---discussion">FAQ - Discussion</a></li>
   </ul>
 </nav>
 
@@ -982,14 +979,10 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 
-<h1 id="repositories">
-  Repositories
-  <a class="anchor" href="#repositories">#</a>
+<h1 id="web-py-loopback">
+  web py loopback
+  <a class="anchor" href="#web-py-loopback">#</a>
 </h1>
-<h2 id="web-py-loop">
-  web py loop
-  <a class="anchor" href="#web-py-loop">#</a>
-</h2>
 
 <div class="container">
     <div class="row">
@@ -1051,10 +1044,10 @@ https://github.com/alex-shpak/hugo-book
 <li>using <code>createScriptProcessor</code> which is to be deprecated</li>
 <li>Note <code>MediaStreamTrackProcessor</code> is not supported yet as of 02 Apr 2021. <a href="https://github.com/webrtc/samples/blob/gh-pages/src/content/insertable-streams/audio-processing/js/main.js">Sample demo</a> available</li>
 </ul>
-<h3 id="script-processor-loopback">
-  script processor loopback
-  <a class="anchor" href="#script-processor-loopback">#</a>
-</h3>
+<h2 id="web-audio-script-processor">
+  web audio script processor
+  <a class="anchor" href="#web-audio-script-processor">#</a>
+</h2>
 <ul>
 <li>using the deprecated <code>ScriptProcessorNode</code> to divert the input and send it through websocket as <code>Float32Array</code> to the server</li>
 <li>on the same processing loop, the audio is replacing with the incoming <code>Float32Array</code> stream from the server</li>
@@ -1062,7 +1055,7 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 
 <link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
-<div class="box" style="max-width:70%">
+<div class="box" style="max-width:500px">
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
       <img itemprop="thumbnail" src="/design/02_script_processor_loopback.svg" />
@@ -1071,15 +1064,15 @@ https://github.com/alex-shpak/hugo-book
   </figure>
 </div>
 
-<h3 id="media-recorder-source-loopback">
-  media recorder source loopback
-  <a class="anchor" href="#media-recorder-source-loopback">#</a>
-</h3>
+<h2 id="media-source-extension-api">
+  media source extension API
+  <a class="anchor" href="#media-source-extension-api">#</a>
+</h2>
 <ul>
 <li>using <code>MediaRecorder</code> and <code>MediaSource</code> for encoded stream loopback through websocket
 
 
-<div class="box" style="max-width:50%">
+<div class="box" style="max-width:400px">
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
       <img itemprop="thumbnail" src="/design/06_media_recorder_source_loopback.svg" />
@@ -1132,6 +1125,17 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 </p>
+
+
+<div class="box" style="max-width:300px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/design/web_rtc.svg" />
+    </div>
+    <a href="/design/web_rtc.svg" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
 <h2 id="pystream">
   pystream
   <a class="anchor" href="#pystream">#</a>
@@ -1209,10 +1213,10 @@ https://github.com/alex-shpak/hugo-book
 <li>numpy</li>
 <li><a href="https://python-sounddevice.readthedocs.io/">sounddevice</a></li>
 </ul>
-<h2 id="see-sound">
+<h1 id="see-sound">
   see sound
   <a class="anchor" href="#see-sound">#</a>
-</h2>
+</h1>
 
 <div class="container">
     <div class="row">
@@ -1275,10 +1279,10 @@ https://github.com/alex-shpak/hugo-book
 <li>real-time analysis of played audio</li>
 <li>Playing sound with html5 <a href="https://www.w3.org/TR/webaudio/">web Audio API</a></li>
 </ul>
-<h3 id="live-demo">
+<h2 id="live-demo">
   Live demo
   <a class="anchor" href="#live-demo">#</a>
-</h3>
+</h2>
 
 
 
@@ -1306,10 +1310,10 @@ https://github.com/alex-shpak/hugo-book
     };
 </script>
 
-<h2 id="librosa_demo">
-  librosa_demo
-  <a class="anchor" href="#librosa_demo">#</a>
-</h2>
+<h1 id="librosa-test">
+  librosa test
+  <a class="anchor" href="#librosa-test">#</a>
+</h1>
 
 <div class="container">
     <div class="row">
@@ -1482,6 +1486,93 @@ Therefore an instant response of the system is what creates a feeling of connect
 <ul>
 <li><a href="https://github.com/STM32Libs/f411_piocube_lib_blink">f411_piocube_lib_blink</a></li>
 </ul>
+<h1 id="faq---discussion">
+  FAQ - Discussion
+  <a class="anchor" href="#faq---discussion">#</a>
+</h1>
+<ul>
+<li>If you need support, want to ask a question or suggest a different answer, you can join the discussion on the discord server
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://discord.gg/83pGqB67Qa"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            Home Smart Mesh - Audio Processing
+            
+            
+                
+                
+
+                
+                <span class="discord">
+                    <svg 
+                        viewBox="0 0 256 293"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentcolor"
+                        preserveAspectRatio="xMidYMid">
+                            <path d="M226.011 0H29.99C13.459 0 0 13.458 0 30.135v197.778c0 16.677 13.458 30.135 29.989 30.135h165.888l-7.754-27.063 18.725 17.408 17.7 16.384L256 292.571V30.135C256 13.458 242.542 0 226.011 0zm-56.466 191.05s-5.266-6.291-9.655-11.85c19.164-5.413 26.478-17.408 26.478-17.408-5.998 3.95-11.703 6.73-16.823 8.63-7.314 3.073-14.336 5.12-21.211 6.291-14.044 2.633-26.917 1.902-37.888-.146-8.339-1.61-15.507-3.95-21.504-6.29-3.365-1.317-7.022-2.926-10.68-4.974-.438-.293-.877-.439-1.316-.732-.292-.146-.439-.292-.585-.438-2.633-1.463-4.096-2.487-4.096-2.487s7.022 11.703 25.6 17.261c-4.388 5.56-9.801 12.142-9.801 12.142-32.33-1.024-44.617-22.235-44.617-22.235 0-47.104 21.065-85.285 21.065-85.285 21.065-15.799 41.106-15.36 41.106-15.36l1.463 1.756C80.75 77.53 68.608 89.088 68.608 89.088s3.218-1.755 8.63-4.242c15.653-6.876 28.088-8.777 33.208-9.216.877-.147 1.609-.293 2.487-.293a123.776 123.776 0 0 1 29.55-.292c13.896 1.609 28.818 5.705 44.031 14.043 0 0-11.556-10.971-36.425-18.578l2.048-2.34s20.041-.44 41.106 15.36c0 0 21.066 38.18 21.066 85.284 0 0-12.435 21.211-44.764 22.235zm-68.023-68.316c-8.338 0-14.92 7.314-14.92 16.237 0 8.924 6.728 16.238 14.92 16.238 8.339 0 14.921-7.314 14.921-16.238.147-8.923-6.582-16.237-14.92-16.237m53.394 0c-8.339 0-14.922 7.314-14.922 16.237 0 8.924 6.73 16.238 14.922 16.238 8.338 0 14.92-7.314 14.92-16.238 0-8.923-6.582-16.237-14.92-16.237"/>
+                    </svg>
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
+
+
+  
+  
+  
+  <details>
+    <summary>
+What is the difference between a MediaStream and a MediaSource when used in a real time network ?
+</summary>
+    <div class="markdown-inner">
+      <p>It is possible to append Buffers to a MediaSource which opens its input to a custom websocket while MediaStream, can only be bound to a webRTC RTCPeerConnection.</p>
+<p>Note that <code>audio.src</code> is to be used with a <code>MediaSrouce</code> URL while <code>audio.srcObject</code> is for <code>MediaStream</code>.</p>
+
+    </div>
+  </details>
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+    
+    
+      
+      
+      
+      
+      
+      {
+        "@type": "Question",
+        "name": "What is the difference between a MediaStream and a MediaSource when used in a real time network ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "\u003cp\u003eIt is possible to append Buffers to a MediaSource which opens its input to a custom websocket while MediaStream, can only be bound to a webRTC RTCPeerConnection.\u003c/p\u003e\n\u003cp\u003eNote that \u003ccode\u003eaudio.src\u003c/code\u003e is to be used with a \u003ccode\u003eMediaSrouce\u003c/code\u003e URL while \u003ccode\u003eaudio.srcObject\u003c/code\u003e is for \u003ccode\u003eMediaStream\u003c/code\u003e.\u003c/p\u003e\n"
+        }
+      }
+    
+    
+    ]
+  }
+</script>
+</li>
+</ul>
 </article>
  
       
@@ -1516,28 +1607,24 @@ Therefore an instant response of the system is what creates a feeling of connect
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#repositories">Repositories</a>
+    <li><a href="#web-py-loopback">web py loopback</a>
       <ul>
-        <li><a href="#web-py-loop">web py loop</a>
-          <ul>
-            <li><a href="#script-processor-loopback">script processor loopback</a></li>
-            <li><a href="#media-recorder-source-loopback">media recorder source loopback</a></li>
-          </ul>
-        </li>
+        <li><a href="#web-audio-script-processor">web audio script processor</a></li>
+        <li><a href="#media-source-extension-api">media source extension API</a></li>
         <li><a href="#webrtc">webRTC</a></li>
         <li><a href="#pystream">pystream</a>
           <ul>
             <li><a href="#dependencies">dependencies</a></li>
           </ul>
         </li>
-        <li><a href="#see-sound">see sound</a>
-          <ul>
-            <li><a href="#live-demo">Live demo</a></li>
-          </ul>
-        </li>
-        <li><a href="#librosa_demo">librosa_demo</a></li>
       </ul>
     </li>
+    <li><a href="#see-sound">see sound</a>
+      <ul>
+        <li><a href="#live-demo">Live demo</a></li>
+      </ul>
+    </li>
+    <li><a href="#librosa-test">librosa test</a></li>
     <li><a href="#features-plan">Features Plan</a>
       <ul>
         <li><a href="#interactive-sound-input">Interactive sound input</a></li>
@@ -1553,6 +1640,7 @@ Therefore an instant response of the system is what creates a feeling of connect
         <li><a href="#microcontrollers">Microcontrollers</a></li>
       </ul>
     </li>
+    <li><a href="#faq---discussion">FAQ - Discussion</a></li>
   </ul>
 </nav>
 
