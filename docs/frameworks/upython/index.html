@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.cafef2847ab29e8b2a543adc28cac4b588cdfc9b1a6482455af9c7dfe92506b8.js" integrity="sha256-yv7yhHqynosqVDrcKMrEtYjN/JsaZIJFWvnH3&#43;klBrg="></script>
+<script defer src="/en.search.min.1eb31b3c2e5a9c31363357929fea63ecf610305c064ebb5a972c4859de046ab9.js" integrity="sha256-HrMbPC5anDE2M1eSn&#43;pj7PYQMFwGTrtalyxIWd4Eark="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -975,6 +975,10 @@ make BOARD<span style="color:#f92672">=</span>pca10059
 <li>use board <code>PCA10056</code> note that this board has <code>MICROPY_HW_USB_CDC</code> not defined, disabled, set to <code>(0)</code></li>
 <li>edit the config file <code>ports/nrf/boards/pca10056/mpconfigboard.h</code></li>
 </ul>
+<blockquote class="book-hint warning">
+  In case the Hardware flow control is not used, which means the UART CTS and RTS pins are not attached, it is important to disable the <code>MICROPY_HW_UART1_HWFC</code> by setting it to <code>(0)</code>
+</blockquote>
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// UART config
 </span><span style="color:#75715e"></span><span style="color:#75715e">#define MICROPY_HW_UART1_RX         (9)
 </span><span style="color:#75715e">#define MICROPY_HW_UART1_TX         (10)
