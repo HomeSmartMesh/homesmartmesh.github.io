@@ -24,7 +24,7 @@ repo directorynRF52832BME280MAX44009Schematics#Fu
       <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</guid>
-      <description>Networks / ThreadFrameworks / CHIPv1.0 MS8607 VEML6030#The Thread sensorTag is based on an nRF52840 on a MS88SF2 module. The used sensors are VEMLS6030 for light and MS8607 for Temperature, Humidity and Pressure.</description>
+      <description>Networks / ThreadFrameworks / CHIPCurrent Version# version 1.1 update from v1.0 added RGB LED  commit nRF52840 on a MS88SF2 module.</description>
     </item>
     
     <item>

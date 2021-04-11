@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.75bc88875ed721236471f1e253af9b89586c79bd5eacfa916e82511ab07a2807.js" integrity="sha256-dbyIh17XISNkcfHiU6&#43;biVhseb1erPqRboJRGrB6KAc="></script>
+<script defer src="/en.search.min.e65edaba0b72128b3af5634644f5a28288d0e78d78962dbf04c676a6b8aa7588.js" integrity="sha256-5l7augtyEos69WNGRPWigojQ5414li2/BMZ2priqdYg="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -873,16 +873,20 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#v10-ms8607-veml6030">v1.0 MS8607 VEML6030</a>
+    <li><a href="#current-version">Current Version</a>
       <ul>
         <li><a href="#schematics">Schematics</a></li>
         <li><a href="#board">Board</a></li>
-        <li><a href="#3d-board-model">3D Board model</a></li>
         <li><a href="#power-consumption">Power Consumption</a></li>
       </ul>
     </li>
-    <li><a href="#firmware">Firmware</a></li>
-    <li><a href="#bootloader-options">bootloader options</a></li>
+    <li><a href="#development">development</a>
+      <ul>
+        <li><a href="#firmware">Firmware</a></li>
+        <li><a href="#flashing">flashing</a></li>
+      </ul>
+    </li>
+    <li><a href="#produced-versions">Produced versions</a></li>
     <li><a href="#faq---discussion">FAQ - Discussion</a></li>
   </ul>
 </nav>
@@ -998,10 +1002,6 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 </p>
-<h1 id="v10-ms8607-veml6030">
-  v1.0 MS8607 VEML6030
-  <a class="anchor" href="#v10-ms8607-veml6030">#</a>
-</h1>
 <p>
 
 
@@ -1030,7 +1030,7 @@ https://github.com/alex-shpak/hugo-book
 <div class="text-center">
   <a >
     <img
-    src="/images/thread_sensortag/kicad_render.png"
+    src="/images/thread_sensortag/kicad_render.webp"
     alt=""
     width="300vw"
     height=""
@@ -1040,7 +1040,59 @@ https://github.com/alex-shpak/hugo-book
   
 </div>
 </p>
-<p>The Thread sensorTag is based on an <code>nRF52840</code> on a <code>MS88SF2</code> module. The used sensors are <code>VEMLS6030</code> for light and <code>MS8607</code> for Temperature, Humidity and Pressure.</p>
+<h1 id="current-version">
+  Current Version
+  <a class="anchor" href="#current-version">#</a>
+</h1>
+<ul>
+<li>version 1.1</li>
+<li>update from v1.0 added RGB LED</li>
+</ul>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/commit/8bbcb726f8227c933b18bea9f7477ed7f553a38d"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            commit
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<ul>
+<li><code>nRF52840</code> on a <code>MS88SF2</code> module.</li>
+<li>Light sensor <code>VEMLS6030</code></li>
+<li>Temperature, Humidity and pressure<code>MS8607</code></li>
+<li>Reset button <code>P0.18</code> and user button SW0 <code>P1.09</code></li>
+<li>RGB LED <code>P0. 04 06 08</code></li>
+</ul>
 
 <div class="container">
     <div class="row">
@@ -1234,44 +1286,6 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#schematics">#</a>
 </h2>
 
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/commit/32a897a91b8c92f2495ef75408c987166ff7b465"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            commit
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
 
 
 <div class="container">
@@ -1325,7 +1339,7 @@ https://github.com/alex-shpak/hugo-book
   Board
   <a class="anchor" href="#board">#</a>
 </h2>
-<p>
+
 
 
 
@@ -1334,9 +1348,9 @@ https://github.com/alex-shpak/hugo-book
 <div class="text-center">
   <a >
     <img
-    src="/images/thread_sensortag/board_top.png"
+    src="/images/thread_sensortag/board_top.webp"
     alt=""
-    width="300"
+    width="500px"
     height=""
     decoding="async"
   />
@@ -1345,17 +1359,6 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img">
-      <img itemprop="thumbnail" src="/images/thread_sensortag/prototype_top.webp" />
-    </div>
-    <a href="/images/thread_sensortag/prototype_top.webp" itemprop="contentUrl"></a>
-  </figure>
-</div>
-</p>
-<p>
 
 
 
@@ -1366,44 +1369,13 @@ https://github.com/alex-shpak/hugo-book
     <img
     src="/images/thread_sensortag/board_bottom.png"
     alt=""
-    width="300"
+    width="500px"
     height=""
     decoding="async"
   />
   </a>
   
 </div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img">
-      <img itemprop="thumbnail" src="/images/thread_sensortag/prototype_bottom.webp" />
-    </div>
-    <a href="/images/thread_sensortag/prototype_bottom.webp" itemprop="contentUrl"></a>
-  </figure>
-</div>
-</p>
-<h2 id="3d-board-model">
-  3D Board model
-  <a class="anchor" href="#3d-board-model">#</a>
-</h2>
-
-
-
-
-<div >
-    <model-viewer 
-        id="641e4af37acf5a8c"
-        src="/models/nrf/sensortag_1.glb"
-        style="width:100%;height: 400px; "
-        exposure="0.2"
-        auto-rotate camera-controls >
-    </model-viewer>
-</div>
-
-
 
 <h2 id="power-consumption">
   Power Consumption
@@ -1436,10 +1408,14 @@ https://github.com/alex-shpak/hugo-book
     };
 </script>
 
-<h1 id="firmware">
+<h1 id="development">
+  development
+  <a class="anchor" href="#development">#</a>
+</h1>
+<h2 id="firmware">
   Firmware
   <a class="anchor" href="#firmware">#</a>
-</h1>
+</h2>
 <blockquote class="book-hint info">
   Tested firmware with MQTT-SN gateway and Mosquitto broquer
 </blockquote>
@@ -1531,15 +1507,184 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 
-<h1 id="bootloader-options">
-  bootloader options
-  <a class="anchor" href="#bootloader-options">#</a>
+<h2 id="flashing">
+  flashing
+  <a class="anchor" href="#flashing">#</a>
+</h2>
+<ul>
+<li>SWD pogo pins adapter</li>
+<li>Pogo Pin P75-E2 Dia 1.3mm Length 16.5mm</li>
+</ul>
+<p>
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.homesmartmesh.com/models/thread4_lower.stl"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            STL Model
+            
+            
+                
+                
+
+                
+
+                
+                <svg    class="download"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                        >
+                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
+                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
+                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
+                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
+                </svg>
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+<div >
+    <model-viewer 
+        id="b501dd84c1ba51fc"
+        src="/models/thread4_lower.glb"
+        style="width:100%;height: 400px; "
+        exposure="0.2"
+        auto-rotate camera-controls >
+    </model-viewer>
+</div>
+
+
+
+
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
+<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/01%20on%20print%20bed%20with%20supports.jpg');" >
+				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/01%20on%20print%20bed%20with%20supports.jpg" alt="01 on print bed with supports" />
+				    </div>
+			      <figcaption>
+		          <p>01 on print bed with supports</p>
+			      </figcaption>
+				    <a href="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/01%20on%20print%20bed%20with%20supports.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/02%20attached.jpg');" >
+				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/02%20attached.jpg" alt="02 attached" />
+				    </div>
+			      <figcaption>
+		          <p>02 attached</p>
+			      </figcaption>
+				    <a href="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/02%20attached.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/03%20top%20view.jpg');" >
+				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/03%20top%20view.jpg" alt="03 top view" />
+				    </div>
+			      <figcaption>
+		          <p>03 top view</p>
+			      </figcaption>
+				    <a href="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/03%20top%20view.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/04%20detached%20bottom.jpg');" >
+				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/04%20detached%20bottom.jpg" alt="04 detached bottom" />
+				    </div>
+			      <figcaption>
+		          <p>04 detached bottom</p>
+			      </figcaption>
+				    <a href="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/04%20detached%20bottom.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+</div>
+</p>
+<h1 id="produced-versions">
+  Produced versions
+  <a class="anchor" href="#produced-versions">#</a>
 </h1>
 <ul>
-<li>nRF SDK v16.0.0 <a href="https://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.sdk5.v15.0.0%2Flib_bootloader.html">bootloader</a></li>
-<li>MCU boot - zephyr bootloader</li>
-<li>UF2 bootloader</li>
+<li>v 1.0 10.02.2021</li>
 </ul>
+<p>
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/commit/32a897a91b8c92f2495ef75408c987166ff7b465"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            commit
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
+
+<div class="box" style="max-width:200px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/thread_sensortag/prototype_top.webp" />
+    </div>
+    <a href="/images/thread_sensortag/prototype_top.webp" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+
+<div class="box" style="max-width:200px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/thread_sensortag/prototype_bottom.webp" />
+    </div>
+    <a href="/images/thread_sensortag/prototype_bottom.webp" itemprop="contentUrl"></a>
+  </figure>
+</div>
+</p>
 <h1 id="faq---discussion">
   FAQ - Discussion
   <a class="anchor" href="#faq---discussion">#</a>
@@ -1692,16 +1837,20 @@ I think after all, such things should be configurable by the end users&rsquo;s a
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#v10-ms8607-veml6030">v1.0 MS8607 VEML6030</a>
+    <li><a href="#current-version">Current Version</a>
       <ul>
         <li><a href="#schematics">Schematics</a></li>
         <li><a href="#board">Board</a></li>
-        <li><a href="#3d-board-model">3D Board model</a></li>
         <li><a href="#power-consumption">Power Consumption</a></li>
       </ul>
     </li>
-    <li><a href="#firmware">Firmware</a></li>
-    <li><a href="#bootloader-options">bootloader options</a></li>
+    <li><a href="#development">development</a>
+      <ul>
+        <li><a href="#firmware">Firmware</a></li>
+        <li><a href="#flashing">flashing</a></li>
+      </ul>
+    </li>
+    <li><a href="#produced-versions">Produced versions</a></li>
     <li><a href="#faq---discussion">FAQ - Discussion</a></li>
   </ul>
 </nav>
