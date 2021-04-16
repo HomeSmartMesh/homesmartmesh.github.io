@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.7cdf115a2dac2c6b299f5fd407b15bcc99046590f1c763af96fd6eb354cb1784.js" integrity="sha256-fN8RWi2sLGspn1/UB7FbzJkEZZDxx2Ovlv1us1TLF4Q="></script>
+<script defer src="/en.search.min.561eeace54f9167095419a3ad6516232ecc461f76707f754f8c4a9e25a7fa288.js" integrity="sha256-Vh7qzlT5FnCVQZo61lFiMuzEYfdnB/dU&#43;MSp4lp/oog="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -883,7 +883,15 @@ https://github.com/alex-shpak/hugo-book
     </li>
     <li><a href="#development">development</a>
       <ul>
-        <li><a href="#firmware">Firmware</a></li>
+        <li><a href="#firmware">Firmware</a>
+          <ul>
+            <li><a href="#01-dongle-nrfsdk-mqttsn-client">01 dongle nrfsdk mqttsn client</a></li>
+            <li><a href="#04-dongle-pio-zephyr-blink">04 dongle pio zephyr blink</a></li>
+            <li><a href="#06-tag-zephyr-hello">06 tag zephyr hello</a></li>
+            <li><a href="#07-tag-zephyr-button">07 tag zephyr button</a></li>
+            <li><a href="#08-tag-zephyr-thread">08 tag zephyr thread</a></li>
+          </ul>
+        </li>
         <li><a href="#flashing">flashing</a></li>
       </ul>
     </li>
@@ -1046,27 +1054,16 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#current-version">#</a>
 </h1>
 <ul>
-<li>
-<p>version 1.1</p>
-</li>
-<li>
-<p>update from v1.0 added RGB LED</p>
-</li>
-<li>
-<p><code>nRF52840</code> on a <code>MS88SF2</code> module.</p>
-</li>
-<li>
-<p>Light sensor <code>VEMLS6030</code></p>
-</li>
-<li>
-<p>Temperature, Humidity and pressure<code>MS8607</code></p>
-</li>
-<li>
-<p>Reset button <code>P0.18</code> and user button SW0 <code>P1.09</code></p>
-</li>
-<li>
-<p>RGB LED <code>P0. 04 06 08</code></p>
-</li>
+<li>version 1.1</li>
+<li>update from v1.0 added RGB LED</li>
+</ul>
+<p>Features</p>
+<ul>
+<li><code>nRF52840</code> on a <code>MS88SF2</code> module.</li>
+<li>Light sensor <code>VEMLS6030</code></li>
+<li>Temperature, Humidity and pressure<code>MS8607</code></li>
+<li>Reset button <code>P0.18</code> and user button SW0 <code>P1.09</code></li>
+<li>RGB LED <code>P0. 04 06 08</code></li>
 </ul>
 
 <div class="container">
@@ -1261,20 +1258,24 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#manufacturing">#</a>
 </h2>
 <ul>
-<li>design files
+<li>
+<p>v 1.1 15.04.2021</p>
+</li>
+<li>
+<p>design files
 
 <div class="container">
     <div class="row">
         <div class="col text-center">
         <a  class="book-btn"
             
-                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/commit/8bbcb726f8227c933b18bea9f7477ed7f553a38d"
+                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/v1.1"
                 target="_blank"
             
             
             role="button"
         >
-            v1.1 commit 8bbcb7
+            tag v1.1
             
             
                 
@@ -1299,8 +1300,10 @@ https://github.com/alex-shpak/hugo-book
     </div>
     </div>
 </div>
+</p>
 </li>
-<li>gerber files
+<li>
+<p>gerber files
 
 <div class="container">
     <div class="row">
@@ -1337,6 +1340,7 @@ https://github.com/alex-shpak/hugo-book
     </div>
     </div>
 </div>
+</p>
 </li>
 </ul>
 <h2 id="schematics">
@@ -1416,25 +1420,6 @@ https://github.com/alex-shpak/hugo-book
   
 </div>
 
-
-
-
-
-
-
-<div class="text-center">
-  <a >
-    <img
-    src="/images/thread_sensortag/board_bottom.png"
-    alt=""
-    width="500px"
-    height=""
-    decoding="async"
-  />
-  </a>
-  
-</div>
-
 <h2 id="power-consumption">
   Power Consumption
   <a class="anchor" href="#power-consumption">#</a>
@@ -1474,97 +1459,89 @@ https://github.com/alex-shpak/hugo-book
   Firmware
   <a class="anchor" href="#firmware">#</a>
 </h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            repo directory
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<h3 id="01-dongle-nrfsdk-mqttsn-client">
+  01 dongle nrfsdk mqttsn client
+  <a class="anchor" href="#01-dongle-nrfsdk-mqttsn-client">#</a>
+</h3>
 <blockquote class="book-hint info">
   Tested firmware with MQTT-SN gateway and Mosquitto broquer
 </blockquote>
 
 <ul>
 <li>example based on <code>nRFSDK for Thread and Zigbee v4.1.0</code> which path should be declared in an environment variable <code>THREAD_SDK_ROOT</code></li>
-<li>Note that, as specified in the SDK file <code>components\toolchain\gcc\Makefile.windows</code> the used toolchain is <code>GNU Tools ARM Embedded/7 2018-q2-update</code>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware/mqttsn_publish_sensor"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            MQTT-SN directory
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-</li>
+<li>Note that, as specified in the SDK file <code>components\toolchain\gcc\Makefile.windows</code> the used toolchain is <code>GNU Tools ARM Embedded/7 2018-q2-update</code></li>
 </ul>
-<blockquote class="book-hint warning">
-  The following example is still in development
-</blockquote>
-
+<h3 id="04-dongle-pio-zephyr-blink">
+  04 dongle pio zephyr blink
+  <a class="anchor" href="#04-dongle-pio-zephyr-blink">#</a>
+</h3>
 <ul>
-<li>example based on <code>Zephyr</code> and <code>nRF Connect SDK</code>, still in development</li>
+<li>zephyr with platformio environment for easy install</li>
+<li>dongle led blink</li>
 </ul>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware/pio_zephyr_sensor"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            pio Zephyr sensor
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
+<h3 id="06-tag-zephyr-hello">
+  06 tag zephyr hello
+  <a class="anchor" href="#06-tag-zephyr-hello">#</a>
+</h3>
+<ul>
+<li>hello world example using the <code>nrf52840_sensortag</code> custom board</li>
+</ul>
+<p>zephyr examples usage</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">west build -b nrf52840_sensortag
+west flash
+</code></pre></div><h3 id="07-tag-zephyr-button">
+  07 tag zephyr button
+  <a class="anchor" href="#07-tag-zephyr-button">#</a>
+</h3>
+<ul>
+<li>introducing user button interrupt</li>
+</ul>
+<h3 id="08-tag-zephyr-thread">
+  08 tag zephyr thread
+  <a class="anchor" href="#08-tag-zephyr-thread">#</a>
+</h3>
+<ul>
+<li>simplest example with thread stack running</li>
+<li>thread stack added through config only</li>
+</ul>
 <h2 id="flashing">
   flashing
   <a class="anchor" href="#flashing">#</a>
@@ -1681,6 +1658,47 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#produced-versions">#</a>
 </h1>
 <ul>
+<li>v 1.1 15.04.2021</li>
+</ul>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/v1.1"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            tag v1.1
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<ul>
 <li>v 1.0 10.02.2021</li>
 </ul>
 <p>
@@ -1689,13 +1707,13 @@ https://github.com/alex-shpak/hugo-book
         <div class="col text-center">
         <a  class="book-btn"
             
-                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/commit/32a897a91b8c92f2495ef75408c987166ff7b465"
+                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/v1.0"
                 target="_blank"
             
             
             role="button"
         >
-            commit
+            tag v1.0
             
             
                 
@@ -1905,7 +1923,15 @@ I think after all, such things should be configurable by the end users&rsquo;s a
     </li>
     <li><a href="#development">development</a>
       <ul>
-        <li><a href="#firmware">Firmware</a></li>
+        <li><a href="#firmware">Firmware</a>
+          <ul>
+            <li><a href="#01-dongle-nrfsdk-mqttsn-client">01 dongle nrfsdk mqttsn client</a></li>
+            <li><a href="#04-dongle-pio-zephyr-blink">04 dongle pio zephyr blink</a></li>
+            <li><a href="#06-tag-zephyr-hello">06 tag zephyr hello</a></li>
+            <li><a href="#07-tag-zephyr-button">07 tag zephyr button</a></li>
+            <li><a href="#08-tag-zephyr-thread">08 tag zephyr thread</a></li>
+          </ul>
+        </li>
         <li><a href="#flashing">flashing</a></li>
       </ul>
     </li>
