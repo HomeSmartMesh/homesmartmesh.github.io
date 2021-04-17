@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.561eeace54f9167095419a3ad6516232ecc461f76707f754f8c4a9e25a7fa288.js" integrity="sha256-Vh7qzlT5FnCVQZo61lFiMuzEYfdnB/dU&#43;MSp4lp/oog="></script>
+<script defer src="/en.search.min.c1ed8f76d3ea9bc5c757d11aefa682bcf5247c3bdd7c9c4a9d1cdd2f439d1b8d.js" integrity="sha256-we2PdtPqm8XHV9Ea76aCvPUkfDvdfJxKnRzdL0OdG40="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -890,6 +890,7 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#06-tag-zephyr-hello">06 tag zephyr hello</a></li>
             <li><a href="#07-tag-zephyr-button">07 tag zephyr button</a></li>
             <li><a href="#08-tag-zephyr-thread">08 tag zephyr thread</a></li>
+            <li><a href="#09-tag-zephyr-i2c">09 tag zephyr i2c</a></li>
           </ul>
         </li>
         <li><a href="#flashing">flashing</a></li>
@@ -1508,6 +1509,8 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li>example based on <code>nRFSDK for Thread and Zigbee v4.1.0</code> which path should be declared in an environment variable <code>THREAD_SDK_ROOT</code></li>
 <li>Note that, as specified in the SDK file <code>components\toolchain\gcc\Makefile.windows</code> the used toolchain is <code>GNU Tools ARM Embedded/7 2018-q2-update</code></li>
+<li>Adapted Makefile</li>
+<li>As the usb dongle has only one user key KEY_0, the sequence of <code>search_gateway</code>, <code>connect</code>, <code>publish</code> is not cyclically executed when pressing KEY_0 multiple times.</li>
 </ul>
 <h3 id="04-dongle-pio-zephyr-blink">
   04 dongle pio zephyr blink
@@ -1516,6 +1519,8 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li>zephyr with platformio environment for easy install</li>
 <li>dongle led blink</li>
+<li>added <code>boards\nrf52840dongle_nrf52840.json</code></li>
+<li>jlink is the default upload method for the nrf52840 boards</li>
 </ul>
 <h3 id="06-tag-zephyr-hello">
   06 tag zephyr hello
@@ -1527,21 +1532,362 @@ https://github.com/alex-shpak/hugo-book
 <p>zephyr examples usage</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">west build -b nrf52840_sensortag
 west flash
-</code></pre></div><h3 id="07-tag-zephyr-button">
+</code></pre></div><details >
+  <summary>build log</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-- west build: generating a build system
+Including boilerplate <span style="color:#f92672">(</span>Zephyr base <span style="color:#f92672">(</span>cached<span style="color:#f92672">))</span>: D:/Projects/zephyrproject/zephyr/cmake/app/boilerplate.cmake
+-- Application: D:/Dev/nrf52/nrf52_thread_sensortag/firmware/tag_zephyr_hello
+-- Zephyr version: 2.5.99 <span style="color:#f92672">(</span>D:/Projects/zephyrproject/zephyr<span style="color:#f92672">)</span>
+-- Found west <span style="color:#f92672">(</span>found suitable version <span style="color:#e6db74">&#34;0.9.0&#34;</span>, minimum required is <span style="color:#e6db74">&#34;0.7.1&#34;</span><span style="color:#f92672">)</span>
+-- Board: nrf52840_sensortag
+-- Cache files will be written to: D:/Projects/zephyrproject/zephyr/.cache
+-- Found toolchain: gnuarmemb <span style="color:#f92672">(</span>D:/tools/gnu_arm_embedded/9_2020-q2-update<span style="color:#f92672">)</span>
+</code></pre></div>
+  </div>
+</details>
+
+<details >
+  <summary>run log</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-log" data-lang="log">*** Booting Zephyr OS build zephyr-v2.5.0-159-g2bfaadffb807  ***
+
+[00:00:00.337,707] &lt;inf&gt; main: Hello from Sensor Tag
+[00:00:01.337,768] &lt;inf&gt; main: loop: 0
+[00:00:02.337,860] &lt;inf&gt; main: loop: 1
+[00:00:03.338,012] &lt;inf&gt; main: loop: 2
+[00:00:04.338,104] &lt;inf&gt; main: loop: 3
+[00:00:05.338,256] &lt;inf&gt; main: loop: 4
+[00:00:06.338,348] &lt;inf&gt; main: loop: 5
+[00:00:07.338,500] &lt;inf&gt; main: loop: 6
+[00:00:08.338,562] &lt;inf&gt; main: loop: 7
+[00:00:09.338,653] &lt;inf&gt; main: loop: 8
+[00:00:10.338,745] &lt;inf&gt; main: loop: 9
+[00:00:11.338,836] &lt;inf&gt; main: loop: 10
+[00:00:12.338,928] &lt;inf&gt; main: loop: 11
+[00:00:13.339,019] &lt;inf&gt; main: loop: 12
+[00:00:14.339,111] &lt;inf&gt; main: loop: 13
+[00:00:15.339,202] &lt;inf&gt; main: loop: 14
+[00:00:16.339,294] &lt;inf&gt; main: loop: 15
+[00:00:17.339,385] &lt;inf&gt; main: loop: 16
+[00:00:18.339,477] &lt;inf&gt; main: loop: 17
+
+</code></pre>
+  </div>
+</details>
+
+<h3 id="07-tag-zephyr-button">
   07 tag zephyr button
   <a class="anchor" href="#07-tag-zephyr-button">#</a>
 </h3>
 <ul>
 <li>introducing user button interrupt</li>
 </ul>
+<details >
+  <summary>build log</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-- west build: generating a build system
+Including boilerplate <span style="color:#f92672">(</span>Zephyr base<span style="color:#f92672">)</span>: D:/Projects/zephyrproject/zephyr/cmake/app/boilerplate.cmake
+-- Application: D:/Dev/nrf52/nrf52_thread_sensortag/firmware/07_tag_zephyr_button
+-- Zephyr version: 2.5.99 <span style="color:#f92672">(</span>D:/Projects/zephyrproject/zephyr<span style="color:#f92672">)</span>
+-- Found Python3: C:/Users/User/AppData/Local/Programs/Python/Python39/python.exe <span style="color:#f92672">(</span>found suitable exact version <span style="color:#e6db74">&#34;3.9.0&#34;</span><span style="color:#f92672">)</span> found components: Interpreter
+-- Found west <span style="color:#f92672">(</span>found suitable version <span style="color:#e6db74">&#34;0.9.0&#34;</span>, minimum required is <span style="color:#e6db74">&#34;0.7.1&#34;</span><span style="color:#f92672">)</span>
+-- Board: nrf52840_sensortag
+-- Cache files will be written to: D:/Projects/zephyrproject/zephyr/.cache
+-- Found toolchain: gnuarmemb <span style="color:#f92672">(</span>D:/tools/gnu_arm_embedded/9_2020-q2-update<span style="color:#f92672">)</span>
+-- Found BOARD.dts: D:/Dev/nrf52/nrf52_thread_sensortag/firmware/boards/arm/nrf52840_sensortag/nrf52840_sensortag.dts
+</code></pre></div>
+  </div>
+</details>
+
+<details >
+  <summary>run log</summary>
+  <div class="markdown-inner">
+    <p>rtt log</p>
+<pre><code class="language-log" data-lang="log">00&gt; *** Booting Zephyr OS build zephyr-v2.5.0-159-g2bfaadffb807  ***
+00&gt; 
+00&gt; [00:00:00.334,259] &lt;inf&gt; main: Hello from Sensor Tag Button example
+00&gt; [00:00:00.334,289] &lt;inf&gt; main: Set up button at GPIO_1 pin 9
+00&gt; 
+00&gt; [00:00:01.334,350] &lt;inf&gt; main: loop: 0
+00&gt; [00:00:02.334,442] &lt;inf&gt; main: loop: 1
+00&gt; [00:00:03.334,533] &lt;inf&gt; main: loop: 2
+00&gt; [00:00:04.334,625] &lt;inf&gt; main: loop: 3
+00&gt; [00:00:05.334,716] &lt;inf&gt; main: loop: 4
+00&gt; [00:00:06.334,808] &lt;inf&gt; main: loop: 5
+00&gt; [00:00:07.334,899] &lt;inf&gt; main: loop: 6
+00&gt; [00:00:08.334,991] &lt;inf&gt; main: loop: 7
+00&gt; [00:00:09.335,083] &lt;inf&gt; main: loop: 8
+00&gt; [00:00:10.335,174] &lt;inf&gt; main: loop: 9
+00&gt; [00:00:11.335,266] &lt;inf&gt; main: loop: 10
+00&gt; [00:00:12.335,357] &lt;inf&gt; main: loop: 11
+00&gt; [00:00:13.335,449] &lt;inf&gt; main: loop: 12
+00&gt; [00:00:14.335,540] &lt;inf&gt; main: loop: 13
+00&gt; [00:00:15.335,632] &lt;inf&gt; main: loop: 14
+00&gt; [00:00:16.335,723] &lt;inf&gt; main: loop: 15
+00&gt; [00:00:17.335,815] &lt;inf&gt; main: loop: 16
+00&gt; [00:00:18.335,906] &lt;inf&gt; main: loop: 17
+00&gt; [00:00:19.335,998] &lt;inf&gt; main: loop: 18
+00&gt; [00:00:20.336,090] &lt;inf&gt; main: loop: 19
+00&gt; [00:00:21.336,181] &lt;inf&gt; main: loop: 20
+00&gt; [00:00:22.336,273] &lt;inf&gt; main: loop: 21
+00&gt; [00:00:23.336,364] &lt;inf&gt; main: loop: 22
+00&gt; [00:00:24.336,456] &lt;inf&gt; main: loop: 23
+00&gt; [00:00:25.336,547] &lt;inf&gt; main: loop: 24
+00&gt; [00:00:26.336,639] &lt;inf&gt; main: loop: 25
+00&gt; [00:00:27.336,730] &lt;inf&gt; main: loop: 26
+00&gt; [00:00:28.336,822] &lt;inf&gt; main: loop: 27
+00&gt; [00:00:29.336,914] &lt;inf&gt; main: loop: 28
+00&gt; [00:00:30.337,005] &lt;inf&gt; main: loop: 29
+00&gt; [00:00:31.337,097] &lt;inf&gt; main: loop: 30
+00&gt; [00:00:32.337,188] &lt;inf&gt; main: loop: 31
+00&gt; [00:00:32.920,257] &lt;inf&gt; main: Button pressed at 1078731
+00&gt; 
+00&gt; [00:00:33.282,348] &lt;inf&gt; main: Button pressed at 1090596
+00&gt; 
+00&gt; [00:00:33.337,249] &lt;inf&gt; main: loop: 32
+00&gt; [00:00:34.337,310] &lt;inf&gt; main: loop: 33
+00&gt; [00:00:35.337,402] &lt;inf&gt; main: loop: 34
+00&gt; [00:00:36.337,493] &lt;inf&gt; main: loop: 35
+00&gt; [00:00:37.337,585] &lt;inf&gt; main: loop: 36
+00&gt; [00:00:38.337,677] &lt;inf&gt; main: loop: 37
+00&gt; [00:00:39.337,768] &lt;inf&gt; main: loop: 38
+00&gt; [00:00:40.337,860] &lt;inf&gt; main: loop: 39
+00&gt; [00:00:41.337,951] &lt;inf&gt; main: loop: 40
+00&gt; [00:00:42.338,043] &lt;inf&gt; main: loop: 41
+00&gt; [00:00:43.338,134] &lt;inf&gt; main: loop: 42
+00&gt; [00:00:44.338,226] &lt;inf&gt; main: loop: 43
+00&gt; [00:00:45.338,317] &lt;inf&gt; main: loop: 44
+00&gt; *** Booting Zephyr OS build zephyr-v2.5.0-159-g2bfaadffb807  ***
+00&gt; 
+00&gt; [00:00:00.250,396] &lt;inf&gt; main: Hello from Sensor Tag Button example
+00&gt; [00:00:00.250,396] &lt;inf&gt; main: Set up button at GPIO_1 pin 9
+00&gt; 
+00&gt; [00:00:01.250,457] &lt;inf&gt; main: loop: 0
+00&gt; [00:00:02.250,549] &lt;inf&gt; main: loop: 1
+00&gt; [00:00:03.250,640] &lt;inf&gt; main: loop: 2
+00&gt; [00:00:04.250,732] &lt;inf&gt; main: loop: 3
+00&gt; [00:00:05.250,823] &lt;inf&gt; main: loop: 4
+00&gt; [00:00:05.709,991] &lt;inf&gt; main: Button pressed at 187105
+00&gt; 
+00&gt; [00:00:06.250,915] &lt;inf&gt; main: loop: 5
+00&gt; [00:00:07.250,976] &lt;inf&gt; main: loop: 6
+00&gt; [00:00:08.251,068] &lt;inf&gt; main: loop: 7
+00&gt; [00:00:09.251,159] &lt;inf&gt; main: loop: 8
+00&gt; [00:00:10.251,251] &lt;inf&gt; main: loop: 9
+00&gt; [00:00:11.251,342] &lt;inf&gt; main: loop: 10
+00&gt; [00:00:12.251,434] &lt;inf&gt; main: loop: 11
+00&gt; [00:00:13.251,525] &lt;inf&gt; main: loop: 12
+00&gt; [00:00:14.251,617] &lt;inf&gt; main: loop: 13
+00&gt; [00:00:15.251,708] &lt;inf&gt; main: loop: 14
+00&gt; [00:00:16.251,800] &lt;inf&gt; main: loop: 15
+00&gt; [00:00:17.251,892] &lt;inf&gt; main: loop: 16
+00&gt; [00:00:18.251,983] &lt;inf&gt; main: loop: 17
+00&gt; [00:00:19.252,075] &lt;inf&gt; main: loop: 18
+00&gt; [00:00:20.252,166] &lt;inf&gt; main: loop: 19
+00&gt; [00:00:21.252,258] &lt;inf&gt; main: loop: 20
+00&gt; [00:00:22.252,349] &lt;inf&gt; main: loop: 21
+</code></pre>
+  </div>
+</details>
+
 <h3 id="08-tag-zephyr-thread">
   08 tag zephyr thread
   <a class="anchor" href="#08-tag-zephyr-thread">#</a>
 </h3>
+<p>Simplest example with thread stack running</p>
 <ul>
-<li>simplest example with thread stack running</li>
 <li>thread stack added through config only</li>
+<li>menuconfig only runs on linux or wsl with the command <code>west build -t menuconfig</code></li>
+<li>the generated config is under <code>build/zephyr/.config</code></li>
+<li>Note that once the openthread config is persisted in non-volatile memory, changing the config would have no effect as the stored config has precedence over code</li>
+<li>the persisted config can be deleted with <code>ot factoryreset</code></li>
+<li>Note that up to Zephyr version <code>zephyr-v2.5.0-159-g2bfaadffb807</code> the compilation throws an error</li>
 </ul>
+<p>Environment variables</p>
+<ul>
+<li><code>GNUARMEMB_TOOLCHAIN_PATH</code> = D:\tools\gnu_arm_embedded\9_2020-q2-update</li>
+<li><code>ZEPHYR_BASE</code> = D:\Projects\zp\zephyrproject\zephyr</li>
+<li><code>ZEPHYR_TOOLCHAIN_VARIANT</code> = gnuarmemb</li>
+</ul>
+<p>usage</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">west build -b nrf52840_sensortag -- -DCONF_FILE<span style="color:#f92672">=</span>prj-shell.conf
+west build -b nrf52840_sensortag -- -DCONF_FILE<span style="color:#f92672">=</span>prj-log.conf
+west flash
+</code></pre></div><details >
+  <summary>default config</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-conf" data-lang="conf">#
+# Thread Network configuration
+#
+CONFIG_OPENTHREAD_PANID=43981
+CONFIG_OPENTHREAD_CHANNEL=13
+CONFIG_OPENTHREAD_NETWORK_NAME=&quot;ot_zephyr&quot;
+CONFIG_OPENTHREAD_XPANID=&quot;de:ad:00:be:ef:00:ca:fe&quot;
+CONFIG_OPENTHREAD_MASTERKEY=&quot;&quot;
+CONFIG_OPENTHREAD_FTD=y
+# CONFIG_OPENTHREAD_MTD is not set
+CONFIG_OPENTHREAD_MAX_CHILDREN=32
+CONFIG_OPENTHREAD_MAX_IP_ADDR_PER_CHILD=6
+CONFIG_OPENTHREAD_CONFIG_PLATFORM_INFO=&quot;Zephyr&quot;
+CONFIG_OPENTHREAD_RADIO_LINK_IEEE_802_15_4_ENABLE=y
+# CONFIG_OPENTHREAD_RADIO_LINK_TREL_ENABLE is not set
+CONFIG_OPENTHREAD_CSL_SAMPLE_WINDOW=30
+CONFIG_OPENTHREAD_CSL_RECEIVE_TIME_AHEAD=3
+# CONFIG_OPENTHREAD_SRP_CLIENT is not set
+# CONFIG_OPENTHREAD_SRP_SERVER is not set
+# end of Thread Network configuration
+</code></pre>
+  </div>
+</details>
+
+<details >
+  <summary>project shell config</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-conf" data-lang="conf">CONFIG_NETWORKING=y
+CONFIG_NET_L2_OPENTHREAD=y
+
+CONFIG_OPENTHREAD_CHANNEL=13
+CONFIG_OPENTHREAD_PANID=47825
+
+# Disable certain parts of Zephyr IPv6 stack
+CONFIG_NET_IPV6_NBR_CACHE=n
+CONFIG_NET_IPV6_MLD=n
+
+# Kernel options
+CONFIG_MAIN_STACK_SIZE=2048
+CONFIG_INIT_STACKS=y
+
+#pios
+CONFIG_GPIO=y
+CONFIG_SERIAL=n
+
+# Logging
+CONFIG_LOG=n
+CONFIG_LOG_BACKEND_RTT=n
+CONFIG_LOG_BACKEND_UART=n
+CONFIG_BOOT_BANNER=y
+CONFIG_USE_SEGGER_RTT=y
+
+CONFIG_CONSOLE=y
+CONFIG_UART_CONSOLE=n
+CONFIG_RTT_CONSOLE=y
+
+# shell
+CONFIG_SHELL=y
+CONFIG_SHELL_BACKEND_RTT=y
+CONFIG_SHELL_BACKEND_SERIAL=n
+</code></pre>
+  </div>
+</details>
+
+<details >
+  <summary>build log</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-- west build: generating a build system
+Including boilerplate <span style="color:#f92672">(</span>Zephyr base<span style="color:#f92672">)</span>: D:/Projects/zp/zephyrproject/zephyr/cmake/app/boilerplate.cmake
+-- Application: D:/Dev/nrf52/nrf52_thread_sensortag/firmware/08_tag_zephyr_thread
+-- Zephyr version: 2.5.99 <span style="color:#f92672">(</span>D:/Projects/zp/zephyrproject/zephyr<span style="color:#f92672">)</span>
+-- Found Python3: C:/Users/User/AppData/Local/Programs/Python/Python39/python.exe <span style="color:#f92672">(</span>found suitable exact version <span style="color:#e6db74">&#34;3.9.0&#34;</span><span style="color:#f92672">)</span> found components: Interpreter
+-- Found west <span style="color:#f92672">(</span>found suitable version <span style="color:#e6db74">&#34;0.10.1&#34;</span>, minimum required is <span style="color:#e6db74">&#34;0.7.1&#34;</span><span style="color:#f92672">)</span>
+-- Board: nrf52840_sensortag
+-- Cache files will be written to: D:/Projects/zp/zephyrproject/zephyr/.cache
+-- Found toolchain: gnuarmemb <span style="color:#f92672">(</span>D:/tools/gnu_arm_embedded/10 2020-q4-major<span style="color:#f92672">)</span>
+-- Found BOARD.dts: D:/Dev/nrf52/nrf52_thread_sensortag/firmware/boards/arm/nrf52840_sensortag/nrf52840_sensortag.dts
+</code></pre></div>
+  </div>
+</details>
+
+<details >
+  <summary>run log</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-log" data-lang="log">rtt:~$ *** Booting Zephyr OS build zephyr-v2.5.0-2187-g757cd12e6602  ***
+ot state
+leader
+
+Done
+
+rtt:~$ ot ipaddr
+fdde:ad00:beef:0:0:ff:fe00:fc00
+
+fdde:ad00:beef:0:0:ff:fe00:1800
+
+fdde:ad00:beef:0:e004:6a1d:8704:d57f
+
+fe80:0:0:0:38a9:1cd0:752:f538
+
+Done
+</code></pre>
+  </div>
+</details>
+
+<h3 id="09-tag-zephyr-i2c">
+  09 tag zephyr i2c
+  <a class="anchor" href="#09-tag-zephyr-i2c">#</a>
+</h3>
+<ul>
+<li>using i2c_0 device from dts</li>
+<li>direct transactions with sensors using <code>i2c_reg_read_byte()</code></li>
+</ul>
+<details >
+  <summary>config</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-conf" data-lang="conf">CONFIG_GPIO=y
+CONFIG_SERIAL=n
+
+CONFIG_I2C=y
+
+# Logging
+CONFIG_LOG=y
+CONFIG_LOG_BACKEND_RTT=y
+CONFIG_LOG_BACKEND_UART=n
+CONFIG_BOOT_BANNER=y
+CONFIG_USE_SEGGER_RTT=y
+CONFIG_CONSOLE=y
+CONFIG_UART_CONSOLE=n
+CONFIG_RTT_CONSOLE=y
+</code></pre>
+  </div>
+</details>
+
+<details >
+  <summary>build log</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-- west build: generating a build system
+Including boilerplate <span style="color:#f92672">(</span>Zephyr base<span style="color:#f92672">)</span>: D:/Projects/zp/zephyrproject/zephyr/cmake/app/boilerplate.cmake
+-- Application: D:/Dev/nrf52/nrf52_thread_sensortag/firmware/09_tag_zephyr_i2c
+-- Zephyr version: 2.5.99 <span style="color:#f92672">(</span>D:/Projects/zp/zephyrproject/zephyr<span style="color:#f92672">)</span>
+-- Found Python3: C:/Users/User/AppData/Local/Programs/Python/Python39/python.exe <span style="color:#f92672">(</span>found suitable exact version <span style="color:#e6db74">&#34;3.9.0&#34;</span><span style="color:#f92672">)</span> found components: Interpreter
+-- Found west <span style="color:#f92672">(</span>found suitable version <span style="color:#e6db74">&#34;0.10.1&#34;</span>, minimum required is <span style="color:#e6db74">&#34;0.7.1&#34;</span><span style="color:#f92672">)</span>
+-- Board: nrf52840_sensortag
+-- Cache files will be written to: D:/Projects/zp/zephyrproject/zephyr/.cache
+-- Found toolchain: gnuarmemb <span style="color:#f92672">(</span>D:/tools/gnu_arm_embedded/10 2020-q4-major<span style="color:#f92672">)</span>
+-- Found BOARD.dts: D:/Dev/nrf52/nrf52_thread_sensortag/firmware/boards/arm/nrf52840_sensortag/nrf52840_sensortag.dts
+
+...
+
+<span style="color:#f92672">[</span>146/146<span style="color:#f92672">]</span> Linking C executable zephyr<span style="color:#ae81ff">\z</span>ephyr.elf
+Memory region         Used Size  Region Size  %age Used
+           FLASH:       <span style="color:#ae81ff">27168</span> B         <span style="color:#ae81ff">1</span> MB      2.59%
+            SRAM:        <span style="color:#ae81ff">7936</span> B       <span style="color:#ae81ff">256</span> KB      3.03%
+        IDT_LIST:          <span style="color:#ae81ff">0</span> GB         <span style="color:#ae81ff">2</span> KB      0.00%
+</code></pre></div>
+  </div>
+</details>
+
+<details >
+  <summary>run log</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-log" data-lang="log">*** Booting Zephyr OS build zephyr-v2.5.0-2187-g757cd12e6602  ***
+
+[00:00:00.327,209] &lt;inf&gt; main: Hello from Sensor Tag I2C example
+[00:00:00.327,728] &lt;inf&gt; main: VEML6030 @48 reg[0] 'ALS_CONF' = 1
+[00:00:00.328,247] &lt;inf&gt; main: MS8607 @40 'Relative Humidity RH' reg[0xE7] 'user register' = 2
+[00:00:00.328,765] &lt;inf&gt; main: MS8607 @76 'Pressure and Temperature' reg[0] 'ADC Read' =&gt; 0
+</code></pre>
+  </div>
+</details>
+
 <h2 id="flashing">
   flashing
   <a class="anchor" href="#flashing">#</a>
@@ -1930,6 +2276,7 @@ I think after all, such things should be configurable by the end users&rsquo;s a
             <li><a href="#06-tag-zephyr-hello">06 tag zephyr hello</a></li>
             <li><a href="#07-tag-zephyr-button">07 tag zephyr button</a></li>
             <li><a href="#08-tag-zephyr-thread">08 tag zephyr thread</a></li>
+            <li><a href="#09-tag-zephyr-i2c">09 tag zephyr i2c</a></li>
           </ul>
         </li>
         <li><a href="#flashing">flashing</a></li>
