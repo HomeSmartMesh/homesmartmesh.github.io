@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.c1ed8f76d3ea9bc5c757d11aefa682bcf5247c3bdd7c9c4a9d1cdd2f439d1b8d.js" integrity="sha256-we2PdtPqm8XHV9Ea76aCvPUkfDvdfJxKnRzdL0OdG40="></script>
+<script defer src="/en.search.min.ecf6b60051226f20ad4b87a9bf96adcfa8ece003ed18a98669a146e01bacc592.js" integrity="sha256-7Pa2AFEibyCtS4epv5atz6js4APtGKmGaaFG4BusxZI="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -883,7 +883,8 @@ https://github.com/alex-shpak/hugo-book
     </li>
     <li><a href="#development">development</a>
       <ul>
-        <li><a href="#firmware">Firmware</a>
+        <li><a href="#install">install</a></li>
+        <li><a href="#descripton">descripton</a>
           <ul>
             <li><a href="#01-dongle-nrfsdk-mqttsn-client">01 dongle nrfsdk mqttsn client</a></li>
             <li><a href="#04-dongle-pio-zephyr-blink">04 dongle pio zephyr blink</a></li>
@@ -1213,7 +1214,7 @@ https://github.com/alex-shpak/hugo-book
         <div class="col text-center">
         <a  class="book-btn"
             
-                href="https://www.mouser.com/datasheet/2/427/veml6030-1767367.pdf"
+                href="https://www.vishay.com/docs/84366/veml6030.pdf"
                 target="_blank"
             
             
@@ -1456,9 +1457,30 @@ https://github.com/alex-shpak/hugo-book
   development
   <a class="anchor" href="#development">#</a>
 </h1>
-<h2 id="firmware">
-  Firmware
-  <a class="anchor" href="#firmware">#</a>
+<h2 id="install">
+  install
+  <a class="anchor" href="#install">#</a>
+</h2>
+<ul>
+<li>install <a href="http://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/zephyr/getting_started/index.html#getting-started">zephyr and west</a></li>
+</ul>
+<blockquote class="book-hint warning">
+  make sure there is no environment variable <code>ZEPHYR_BASE</code> in order to use the local zephyr version
+</blockquote>
+
+<ul>
+<li>create directory structure and fetch the sdk :</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir hsm_workspace
+cd hsm_workspace
+west init -m https://github.com/HomeSmartMesh/sdk-hsm-sensortag -mr main
+</code></pre></div><ul>
+<li>fetch all dependencies from referenced repos in <code>hsm.west.yml</code></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">west update
+</code></pre></div><h2 id="descripton">
+  descripton
+  <a class="anchor" href="#descripton">#</a>
 </h2>
 
 <div class="container">
@@ -2269,7 +2291,8 @@ I think after all, such things should be configurable by the end users&rsquo;s a
     </li>
     <li><a href="#development">development</a>
       <ul>
-        <li><a href="#firmware">Firmware</a>
+        <li><a href="#install">install</a></li>
+        <li><a href="#descripton">descripton</a>
           <ul>
             <li><a href="#01-dongle-nrfsdk-mqttsn-client">01 dongle nrfsdk mqttsn client</a></li>
             <li><a href="#04-dongle-pio-zephyr-blink">04 dongle pio zephyr blink</a></li>
