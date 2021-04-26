@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.203faf1f69b89a2850c64b2ed9739954cf87252f1760db78000020afceef5222.js" integrity="sha256-ID&#43;vH2m4mihQxksu2XOZVM&#43;HJS8XYNt4AAAgr87vUiI="></script>
+<script defer src="/en.search.min.44cf264aff772e6ebf4b3184a8b69e94710a7a853c0fc6428f3c8eb0cbd962c4.js" integrity="sha256-RM8mSv93Lm6/SzGEqLaelHEKeoU8D8ZCjzyOsMvZYsQ="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1590,6 +1590,9 @@ CONFIG_SERIAL=n
 CONFIG_I2C=y
 CONFIG_SENSOR=y
 CONFIG_VEML6030=y
+
+CONFIG_NEWLIB_LIBC=y
+CONFIG_NEWLIB_LIBC_FLOAT_PRINTF=y
 </code></pre>
   </div>
 </details>
@@ -1610,9 +1613,9 @@ Including boilerplate <span style="color:#f92672">(</span>Zephyr base <span styl
   </div>
 </details>
 
-<p>running the sample on ambiant light, hand cover then flash light</p>
+<p>running the initial versions on ambiant light, hand cover then flash light</p>
 <details >
-  <summary>run log</summary>
+  <summary>run log preliminary</summary>
   <div class="markdown-inner">
     <pre><code class="language-log" data-lang="log">[00:00:00.325,683] &lt;inf&gt; VEML6030: veml6030_init() power on
 [00:00:00.326,202] &lt;inf&gt; VEML6030: i2c_burst_write(0x0000) success
@@ -1651,6 +1654,43 @@ Found device &quot;VEML6030&quot;, getting sensor data
 [00:01:06.736,236] &lt;inf&gt; main: sensor: lum reading: 1349
 
 [00:01:11.836,944] &lt;inf&gt; main: sensor: lum reading: 1274
+</code></pre>
+  </div>
+</details>
+
+<p>running with auto mode</p>
+<details >
+  <summary>run log auto</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-log" data-lang="log">[00:00:00.324,188] &lt;inf&gt; VEML6030: veml6030_init()
+*** Booting Zephyr OS build zephyr-v2.5.0-2187-g757cd12e6602  ***
+
+[00:00:00.324,310] &lt;inf&gt; main: VEML6030 light sensor application
+=====&gt; light 3.614 lux
+=====&gt; light 3.582 lux
+=====&gt; light 7.142 lux
+auto_measure&gt;sample 65535 not optimal ; gain = 2.000 ; it = 800 ms
+auto_measure&gt;new params =&gt; gain = 1.000000 ; it = 800
+=====&gt; light 449.741 lux
+=====&gt; light 453.672 lux
+auto_measure&gt;sample 65535 not optimal ; gain = 1.000 ; it = 800 ms
+auto_measure&gt;new params =&gt; gain = 0.250000 ; it = 800
+=====&gt; light 1502.496 lux
+=====&gt; light 1645.315 lux
+auto_measure&gt;sample 65535 not optimal ; gain = 0.250 ; it = 800 ms
+auto_measure&gt;new params =&gt; gain = 0.125000 ; it = 800
+=====&gt; light 3081.197 lux
+auto_measure&gt;sample 65535 not optimal ; gain = 0.125 ; it = 800 ms
+auto_measure&gt;new params =&gt; gain = 0.125000 ; it = 400
+=====&gt; light 5908.954 lux
+auto_measure&gt;sample 24 not optimal ; gain = 0.125 ; it = 400 ms
+auto_measure&gt;new params =&gt; gain = 2.000000 ; it = 800
+=====&gt; light 3.031 lux
+=====&gt; light 3.010 lux
+=====&gt; light 3.136 lux
+=====&gt; light 3.794 lux
+=====&gt; light 4.478 lux
+=====&gt; light 3.139 lux
 </code></pre>
   </div>
 </details>
