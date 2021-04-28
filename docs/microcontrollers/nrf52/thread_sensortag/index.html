@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.44cf264aff772e6ebf4b3184a8b69e94710a7a853c0fc6428f3c8eb0cbd962c4.js" integrity="sha256-RM8mSv93Lm6/SzGEqLaelHEKeoU8D8ZCjzyOsMvZYsQ="></script>
+<script defer src="/en.search.min.1cc90fd9febe1264b0624a0386861c4cb3051e6d218f2a678049509de9b26b7c.js" integrity="sha256-HMkP2f6&#43;EmSwYkoDhoYcTLMFHm0hjypngElQnemya3w="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1691,6 +1691,32 @@ auto_measure&gt;new params =&gt; gain = 2.000000 ; it = 800
 =====&gt; light 3.794 lux
 =====&gt; light 4.478 lux
 =====&gt; light 3.139 lux
+</code></pre>
+  </div>
+</details>
+
+<ul>
+<li>The previous auto mode has a disadvantage, when saturating, the best guess is still biased as it used a wrong saturated measure.</li>
+<li>The following example makes a special case of a saturated measure and directly jumps to the highest mode which has the lowes integration time anyway so only 25 ms are spent, after which the sample is sure not to be saturated and either has a chance to already be in optimal mode (if it is the highest) or guqrantees that the next selected mode will be the optimal.</li>
+</ul>
+<details >
+  <summary>run log auto sat</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-log" data-lang="log">[00:00:00.325,836] &lt;inf&gt; main: VEML6030 light sensor application
+=====&gt; light 70.247 lux
+=====&gt; light 67.090 lux
+auto_measure&gt;sample 65535 not optimal ; gain = 2.000 ; it = 800 ms
+auto_measure&gt;new params =&gt; gain = 0.125000 ; it = 25
+auto_measure&gt;sample 487 not optimal ; gain = 0.125 ; it = 25 ms
+auto_measure&gt;new params =&gt; gain = 0.250000 ; it = 800
+=====&gt; light 897.811 lux
+=====&gt; light 793.872 lux
+auto_measure&gt;sample 2668 not optimal ; gain = 0.250 ; it = 800 ms
+auto_measure&gt;new params =&gt; gain = 2.000000 ; it = 800
+=====&gt; light 69.358 lux
+=====&gt; light 69.289 lux
+=====&gt; light 68.566 lux
+=====&gt; light 68.465 lux
 </code></pre>
   </div>
 </details>
