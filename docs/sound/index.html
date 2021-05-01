@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.62641859edbe4ffd4722a2e1fcf62f771a5cbe8dc393f5fbd29ee55ae8559673.js" integrity="sha256-YmQYWe2&#43;T/1HIqLh/PYvdxpcvo3Dk/X70p7lWuhVlnM="></script>
+<script defer src="/en.search.min.cfb7b0c740b0716d6eac8fadfedadcf40b15fdd6b6bbaad8290f07c9494fc1dd.js" integrity="sha256-z7ewx0CwcW1urI&#43;t/trc9AsV/da2u6rYKQ8HyUlPwd0="></script>
 <link rel="alternate" type="application/rss+xml" href="https://www.homesmartmesh.com/docs/sound/index.xml" title="Home Smart Mesh" />
 <!--
 Made with Book Theme
@@ -891,7 +891,8 @@ https://github.com/alex-shpak/hugo-book
       </ul>
     </li>
     <li><a href="#librosa-test">librosa test</a></li>
-    <li><a href="#features-plan">Features Plan</a>
+    <li><a href="#microcontroller-loopback">Microcontroller loopback</a></li>
+    <li><a href="#future-plan">Future Plan</a>
       <ul>
         <li><a href="#interactive-sound-input">Interactive sound input</a></li>
         <li><a href="#debug-workflow">Debug workflow</a></li>
@@ -1345,11 +1346,68 @@ https://github.com/alex-shpak/hugo-book
   
 </div>
 
-<h1 id="features-plan">
-  Features Plan
-  <a class="anchor" href="#features-plan">#</a>
+<h1 id="microcontroller-loopback">
+  Microcontroller loopback
+  <a class="anchor" href="#microcontroller-loopback">#</a>
 </h1>
-<p>The idea behind the <a href="https://github.com/SoundHacking">Sound Hacking github organisation</a> is to take advantage of the latest advances of Machine learning and Audio processing to create innovative applications.</p>
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/sound/nRF52_usb_loopback.png"
+    alt=""
+    width="600"
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
+<ul>
+<li>usb audio loopback zephyr example on <code>nrf52840dk_nrf52840</code></li>
+<li>tested on the nRF52 dongle with debugger attached</li>
+</ul>
+<p>build</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd zephyr/samples/subsys/usb/audio/headphones_microphone
+west build -b nrf52840dk_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span>prj.conf
+west flash
+</code></pre></div><details >
+  <summary>build log</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-- west build: generating a build system
+-- Application: D:/Projects/zp/zephyrproject/zephyr/samples/subsys/usb/audio/headphones_microphone
+-- Zephyr version: 2.5.99 <span style="color:#f92672">(</span>D:/Projects/zp/zephyrproject/zephyr<span style="color:#f92672">)</span>
+-- Found Python3: C:/Users/User/AppData/Local/Programs/Python/Python39/python.exe <span style="color:#f92672">(</span>found suitable exact version <span style="color:#e6db74">&#34;3.9.0&#34;</span><span style="color:#f92672">)</span> found components: Interpreter 
+-- Found west <span style="color:#f92672">(</span>found suitable version <span style="color:#e6db74">&#34;0.10.1&#34;</span>, minimum required is <span style="color:#e6db74">&#34;0.7.1&#34;</span><span style="color:#f92672">)</span>
+-- Board: nrf52840dk_nrf52840
+-- Cache files will be written to: D:/Projects/zp/zephyrproject/zephyr/.cache
+-- Found toolchain: gnuarmemb <span style="color:#f92672">(</span>D:/tools/gnu_arm_embedded/10 2020-q4-major<span style="color:#f92672">)</span>
+-- Found BOARD.dts: D:/Projects/zp/zephyrproject/zephyr/boards/arm/nrf52840dk_nrf52840/nrf52840dk_nrf52840.dts
+-- Found devicetree overlay: D:/Projects/zp/zephyrproject/zephyr/samples/subsys/usb/audio/headphones_microphone/boards/nrf52840dk_nrf52840.overlay
+-- Generated zephyr.dts: D:/Projects/zp/zephyrproject/zephyr/samples/subsys/usb/audio/headphones_microphone/build/zephyr/zephyr.dts
+...
+-- west build: building application
+<span style="color:#f92672">[</span>152/159<span style="color:#f92672">]</span> Linking C executable zephyr<span style="color:#ae81ff">\z</span>ephyr_prebuilt.elf
+
+<span style="color:#f92672">[</span>159/159<span style="color:#f92672">]</span> Linking C executable zephyr<span style="color:#ae81ff">\z</span>ephyr.elf
+Memory region         Used Size  Region Size  %age Used
+           FLASH:       <span style="color:#ae81ff">45912</span> B         <span style="color:#ae81ff">1</span> MB      4.38%
+            SRAM:       <span style="color:#ae81ff">16004</span> B       <span style="color:#ae81ff">256</span> KB      6.11%
+        IDT_LIST:          <span style="color:#ae81ff">0</span> GB         <span style="color:#ae81ff">2</span> KB      0.00%
+</code></pre></div>
+  </div>
+</details>
+
+<h1 id="future-plan">
+  Future Plan
+  <a class="anchor" href="#future-plan">#</a>
+</h1>
 <h2 id="interactive-sound-input">
   Interactive sound input
   <a class="anchor" href="#interactive-sound-input">#</a>
@@ -1625,7 +1683,8 @@ What is the difference between a MediaStream and a MediaSource when used in a re
       </ul>
     </li>
     <li><a href="#librosa-test">librosa test</a></li>
-    <li><a href="#features-plan">Features Plan</a>
+    <li><a href="#microcontroller-loopback">Microcontroller loopback</a></li>
+    <li><a href="#future-plan">Future Plan</a>
       <ul>
         <li><a href="#interactive-sound-input">Interactive sound input</a></li>
         <li><a href="#debug-workflow">Debug workflow</a></li>
