@@ -20,7 +20,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.1cc90fd9febe1264b0624a0386861c4cb3051e6d218f2a678049509de9b26b7c.js" integrity="sha256-HMkP2f6&#43;EmSwYkoDhoYcTLMFHm0hjypngElQnemya3w="></script>
+<script defer src="/en.search.min.62641859edbe4ffd4722a2e1fcf62f771a5cbe8dc393f5fbd29ee55ae8559673.js" integrity="sha256-YmQYWe2&#43;T/1HIqLh/PYvdxpcvo3Dk/X70p7lWuhVlnM="></script>
 <link rel="alternate" type="application/rss+xml" href="https://www.homesmartmesh.com/index.xml" title="Home Smart Mesh" />
 <!--
 Made with Book Theme
@@ -1364,6 +1364,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <embed id="svg-4d35411556b95c5f" type="image/svg+xml" width=100% src="/images/home%20automation.svg" />
 <script>
+  
   function setup_svg_panzoom(){
     let params = {
           panEnabled: true,
@@ -1375,13 +1376,38 @@ https://github.com/alex-shpak/hugo-book
           zoomScaleSensitivity: 0.6,
           minZoom: 0.5,
           maxZoom: 4,
-           fit: true
-          , contain: true
-          , center: true
-          , refreshRate: 'auto'
+          
+           fit: true,
+          contain: true,
+          center: true,
+          refreshRate: 'auto'
       };
       let svg_pz = svgPanZoom('#svg-4d35411556b95c5f'        ,params);
       window["svg_4d35411556b95c5f"] = svg_pz
+      
+      
+      if(window.location.search.startsWith('?')){
+        let search = window.location.search.substring(1);
+        let params = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
+        if(params.hasOwnProperty('svg')){
+          let embed = document.getElementById('svg-4d35411556b95c5f')
+          let viewport = embed.getSVGDocument().getElementsByClassName("svg-pan-zoom_viewport")[0]
+          viewport.style.transition = "transform 1s ease"
+          const name = embed.getAttribute("src").split('/').slice(-1)[0].split('.')[0]
+          if(params.svg == name){
+            console.log(`Deep SVG Name Match. link params ${JSON.stringify(params)}`)
+            setTimeout(()=>{
+              if(params.hasOwnProperty('x') && params.hasOwnProperty('y') && params.hasOwnProperty('z')){
+                svg_pz.zoomAtPoint(params.z,{x:params.x, y:params.y},true)
+              }
+            },1000)
+            setTimeout(()=>{
+              viewport.style.transition = ""
+            },2000)
+          }
+        }
+      }
+
       let button = document.getElementById("btn-4d35411556b95c5f");
       button.onclick = ()=>{
           var elem = document.getElementById("svg-4d35411556b95c5f");
@@ -1399,7 +1425,7 @@ https://github.com/alex-shpak/hugo-book
     window["svg_4d35411556b95c5f"].fit()
     window["svg_4d35411556b95c5f"].center()
   }
-  document.getElementById('svg-4d35411556b95c5f').addEventListener('load', setup_svg_panzoom)
+  document.getElementById("svg-4d35411556b95c5f").addEventListener('load', setup_svg_panzoom)
   window.addEventListener('resize', reset_position)
  </script>
 
@@ -1418,6 +1444,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <embed id="svg-22b6dfefdac5d157" type="image/svg+xml" width=100% src="/images/devices.svg" />
 <script>
+  
   function setup_svg_panzoom(){
     let params = {
           panEnabled: true,
@@ -1429,13 +1456,38 @@ https://github.com/alex-shpak/hugo-book
           zoomScaleSensitivity: 0.6,
           minZoom: 0.5,
           maxZoom: 4,
-           fit: true
-          , contain: true
-          , center: true
-          , refreshRate: 'auto'
+          
+           fit: true,
+          contain: true,
+          center: true,
+          refreshRate: 'auto'
       };
       let svg_pz = svgPanZoom('#svg-22b6dfefdac5d157'        ,params);
       window["svg_22b6dfefdac5d157"] = svg_pz
+      
+      
+      if(window.location.search.startsWith('?')){
+        let search = window.location.search.substring(1);
+        let params = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
+        if(params.hasOwnProperty('svg')){
+          let embed = document.getElementById('svg-22b6dfefdac5d157')
+          let viewport = embed.getSVGDocument().getElementsByClassName("svg-pan-zoom_viewport")[0]
+          viewport.style.transition = "transform 1s ease"
+          const name = embed.getAttribute("src").split('/').slice(-1)[0].split('.')[0]
+          if(params.svg == name){
+            console.log(`Deep SVG Name Match. link params ${JSON.stringify(params)}`)
+            setTimeout(()=>{
+              if(params.hasOwnProperty('x') && params.hasOwnProperty('y') && params.hasOwnProperty('z')){
+                svg_pz.zoomAtPoint(params.z,{x:params.x, y:params.y},true)
+              }
+            },1000)
+            setTimeout(()=>{
+              viewport.style.transition = ""
+            },2000)
+          }
+        }
+      }
+
       let button = document.getElementById("btn-22b6dfefdac5d157");
       button.onclick = ()=>{
           var elem = document.getElementById("svg-22b6dfefdac5d157");
@@ -1453,7 +1505,7 @@ https://github.com/alex-shpak/hugo-book
     window["svg_22b6dfefdac5d157"].fit()
     window["svg_22b6dfefdac5d157"].center()
   }
-  document.getElementById('svg-22b6dfefdac5d157').addEventListener('load', setup_svg_panzoom)
+  document.getElementById("svg-22b6dfefdac5d157").addEventListener('load', setup_svg_panzoom)
   window.addEventListener('resize', reset_position)
  </script>
 

@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.1cc90fd9febe1264b0624a0386861c4cb3051e6d218f2a678049509de9b26b7c.js" integrity="sha256-HMkP2f6&#43;EmSwYkoDhoYcTLMFHm0hjypngElQnemya3w="></script>
+<script defer src="/en.search.min.62641859edbe4ffd4722a2e1fcf62f771a5cbe8dc393f5fbd29ee55ae8559673.js" integrity="sha256-YmQYWe2&#43;T/1HIqLh/PYvdxpcvo3Dk/X70p7lWuhVlnM="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1236,6 +1236,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <embed id="svg-6a12406b91bfd841" type="image/svg+xml" width=100% src="/images/simplemesh_sensortag/schematics.svg"  style="background-color:white"/>
 <script>
+  
   function setup_svg_panzoom(){
     let params = {
           panEnabled: true,
@@ -1247,13 +1248,38 @@ https://github.com/alex-shpak/hugo-book
           zoomScaleSensitivity: 0.6,
           minZoom: 0.5,
           maxZoom: 4,
-           fit: true
-          , contain: true
-          , center: true
-          , refreshRate: 'auto'
+          
+           fit: true,
+          contain: true,
+          center: true,
+          refreshRate: 'auto'
       };
       let svg_pz = svgPanZoom('#svg-6a12406b91bfd841'        ,params);
       window["svg_6a12406b91bfd841"] = svg_pz
+      
+      
+      if(window.location.search.startsWith('?')){
+        let search = window.location.search.substring(1);
+        let params = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
+        if(params.hasOwnProperty('svg')){
+          let embed = document.getElementById('svg-6a12406b91bfd841')
+          let viewport = embed.getSVGDocument().getElementsByClassName("svg-pan-zoom_viewport")[0]
+          viewport.style.transition = "transform 1s ease"
+          const name = embed.getAttribute("src").split('/').slice(-1)[0].split('.')[0]
+          if(params.svg == name){
+            console.log(`Deep SVG Name Match. link params ${JSON.stringify(params)}`)
+            setTimeout(()=>{
+              if(params.hasOwnProperty('x') && params.hasOwnProperty('y') && params.hasOwnProperty('z')){
+                svg_pz.zoomAtPoint(params.z,{x:params.x, y:params.y},true)
+              }
+            },1000)
+            setTimeout(()=>{
+              viewport.style.transition = ""
+            },2000)
+          }
+        }
+      }
+
       let button = document.getElementById("btn-6a12406b91bfd841");
       button.onclick = ()=>{
           var elem = document.getElementById("svg-6a12406b91bfd841");
@@ -1271,7 +1297,7 @@ https://github.com/alex-shpak/hugo-book
     window["svg_6a12406b91bfd841"].fit()
     window["svg_6a12406b91bfd841"].center()
   }
-  document.getElementById('svg-6a12406b91bfd841').addEventListener('load', setup_svg_panzoom)
+  document.getElementById("svg-6a12406b91bfd841").addEventListener('load', setup_svg_panzoom)
   window.addEventListener('resize', reset_position)
  </script>
 
@@ -1294,6 +1320,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <embed id="svg-20b964f8115478bc" type="image/svg+xml" width=100% src="/images/simplemesh_sensortag/top.svg"  style="background-color:white"/>
 <script>
+  
   function setup_svg_panzoom(){
     let params = {
           panEnabled: true,
@@ -1305,13 +1332,38 @@ https://github.com/alex-shpak/hugo-book
           zoomScaleSensitivity: 0.6,
           minZoom: 0.5,
           maxZoom: 4,
-           fit: true
-          , contain: true
-          , center: true
-          , refreshRate: 'auto'
+          
+           fit: true,
+          contain: true,
+          center: true,
+          refreshRate: 'auto'
       };
       let svg_pz = svgPanZoom('#svg-20b964f8115478bc'        ,params);
       window["svg_20b964f8115478bc"] = svg_pz
+      
+      
+      if(window.location.search.startsWith('?')){
+        let search = window.location.search.substring(1);
+        let params = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
+        if(params.hasOwnProperty('svg')){
+          let embed = document.getElementById('svg-20b964f8115478bc')
+          let viewport = embed.getSVGDocument().getElementsByClassName("svg-pan-zoom_viewport")[0]
+          viewport.style.transition = "transform 1s ease"
+          const name = embed.getAttribute("src").split('/').slice(-1)[0].split('.')[0]
+          if(params.svg == name){
+            console.log(`Deep SVG Name Match. link params ${JSON.stringify(params)}`)
+            setTimeout(()=>{
+              if(params.hasOwnProperty('x') && params.hasOwnProperty('y') && params.hasOwnProperty('z')){
+                svg_pz.zoomAtPoint(params.z,{x:params.x, y:params.y},true)
+              }
+            },1000)
+            setTimeout(()=>{
+              viewport.style.transition = ""
+            },2000)
+          }
+        }
+      }
+
       let button = document.getElementById("btn-20b964f8115478bc");
       button.onclick = ()=>{
           var elem = document.getElementById("svg-20b964f8115478bc");
@@ -1329,7 +1381,7 @@ https://github.com/alex-shpak/hugo-book
     window["svg_20b964f8115478bc"].fit()
     window["svg_20b964f8115478bc"].center()
   }
-  document.getElementById('svg-20b964f8115478bc').addEventListener('load', setup_svg_panzoom)
+  document.getElementById("svg-20b964f8115478bc").addEventListener('load', setup_svg_panzoom)
   window.addEventListener('resize', reset_position)
  </script>
 
@@ -1348,6 +1400,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <embed id="svg-d7409ce4b8910249" type="image/svg+xml" width=100% src="/images/simplemesh_sensortag/bottom.svg"  style="background-color:white"/>
 <script>
+  
   function setup_svg_panzoom(){
     let params = {
           panEnabled: true,
@@ -1359,13 +1412,38 @@ https://github.com/alex-shpak/hugo-book
           zoomScaleSensitivity: 0.6,
           minZoom: 0.5,
           maxZoom: 4,
-           fit: true
-          , contain: true
-          , center: true
-          , refreshRate: 'auto'
+          
+           fit: true,
+          contain: true,
+          center: true,
+          refreshRate: 'auto'
       };
       let svg_pz = svgPanZoom('#svg-d7409ce4b8910249'        ,params);
       window["svg_d7409ce4b8910249"] = svg_pz
+      
+      
+      if(window.location.search.startsWith('?')){
+        let search = window.location.search.substring(1);
+        let params = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
+        if(params.hasOwnProperty('svg')){
+          let embed = document.getElementById('svg-d7409ce4b8910249')
+          let viewport = embed.getSVGDocument().getElementsByClassName("svg-pan-zoom_viewport")[0]
+          viewport.style.transition = "transform 1s ease"
+          const name = embed.getAttribute("src").split('/').slice(-1)[0].split('.')[0]
+          if(params.svg == name){
+            console.log(`Deep SVG Name Match. link params ${JSON.stringify(params)}`)
+            setTimeout(()=>{
+              if(params.hasOwnProperty('x') && params.hasOwnProperty('y') && params.hasOwnProperty('z')){
+                svg_pz.zoomAtPoint(params.z,{x:params.x, y:params.y},true)
+              }
+            },1000)
+            setTimeout(()=>{
+              viewport.style.transition = ""
+            },2000)
+          }
+        }
+      }
+
       let button = document.getElementById("btn-d7409ce4b8910249");
       button.onclick = ()=>{
           var elem = document.getElementById("svg-d7409ce4b8910249");
@@ -1383,7 +1461,7 @@ https://github.com/alex-shpak/hugo-book
     window["svg_d7409ce4b8910249"].fit()
     window["svg_d7409ce4b8910249"].center()
   }
-  document.getElementById('svg-d7409ce4b8910249').addEventListener('load', setup_svg_panzoom)
+  document.getElementById("svg-d7409ce4b8910249").addEventListener('load', setup_svg_panzoom)
   window.addEventListener('resize', reset_position)
  </script>
 
