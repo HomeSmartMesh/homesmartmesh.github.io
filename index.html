@@ -20,7 +20,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.cfb7b0c740b0716d6eac8fadfedadcf40b15fdd6b6bbaad8290f07c9494fc1dd.js" integrity="sha256-z7ewx0CwcW1urI&#43;t/trc9AsV/da2u6rYKQ8HyUlPwd0="></script>
+<script defer src="/en.search.min.30e736524c78c57ab34c46bd371c248b527e839276d5bcd95c5995acc7d1109d.js" integrity="sha256-MOc2Ukx4xXqzTEa9Nxwki1J&#43;g5J21bzZXFmVrMfREJ0="></script>
 <link rel="alternate" type="application/rss+xml" href="https://www.homesmartmesh.com/index.xml" title="Home Smart Mesh" />
 <!--
 Made with Book Theme
@@ -1356,77 +1356,22 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+
+
 <div class="container">
   <div class="row">
       <div class="col text-center">
-          <a id="btn-4d35411556b95c5f" class="book-btn" role="button" >Full Screen</a>
+          <a id="btn-home automation" class="book-btn" role="button" >Full Screen</a>
       </div>
 </div>
-<embed id="svg-4d35411556b95c5f" type="image/svg+xml" width=100% src="/images/home%20automation.svg" />
-<script>
-  
-  function setup_svg_panzoom(){
-    let params = {
-          panEnabled: true,
-          zoomEnabled: true,
-          dblClickZoomEnabled: true,
-          controlIconsEnabled: false,
-          mouseWheelZoomEnabled: true,
-          preventMouseEventsDefault: true,
-          zoomScaleSensitivity: 0.6,
-          minZoom: 0.5,
-          maxZoom: 4,
-          
-           fit: true,
-          contain: true,
-          center: true,
-          refreshRate: 'auto'
-      };
-      let svg_pz = svgPanZoom('#svg-4d35411556b95c5f'        ,params);
-      window["svg_4d35411556b95c5f"] = svg_pz
-      
-      
-      if(window.location.search.startsWith('?')){
-        let search = window.location.search.substring(1);
-        let params = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
-        if(params.hasOwnProperty('svg')){
-          let embed = document.getElementById('svg-4d35411556b95c5f')
-          let viewport = embed.getSVGDocument().getElementsByClassName("svg-pan-zoom_viewport")[0]
-          viewport.style.transition = "transform 1s ease"
-          const name = embed.getAttribute("src").split('/').slice(-1)[0].split('.')[0]
-          if(params.svg == name){
-            console.log(`Deep SVG Name Match. link params ${JSON.stringify(params)}`)
-            setTimeout(()=>{
-              if(params.hasOwnProperty('x') && params.hasOwnProperty('y') && params.hasOwnProperty('z')){
-                svg_pz.zoomAtPoint(params.z,{x:params.x, y:params.y},true)
-              }
-            },1000)
-            setTimeout(()=>{
-              viewport.style.transition = ""
-            },2000)
-          }
-        }
-      }
-
-      let button = document.getElementById("btn-4d35411556b95c5f");
-      button.onclick = ()=>{
-          var elem = document.getElementById("svg-4d35411556b95c5f");
-          if (elem.requestFullscreen) {
-          elem.requestFullscreen();
-          } else if (elem.webkitRequestFullscreen) {  
-          elem.webkitRequestFullscreen();
-          } else if (elem.msRequestFullscreen) {  
-          elem.msRequestFullscreen();
-          }
-      };
+<embed id="svg-home automation" type="image/svg+xml" width=100% src="/images/home%20automation.svg" />
+<script type="module">
+  import {setup_svg_panzoom,reset_svg_panzoom} from "/js/setup-svg-pan-zoom.js"
+  function window_reset_position(){
+    reset_svg_panzoom("home automation")
   }
-  function reset_position(){
-    window["svg_4d35411556b95c5f"].resize()
-    window["svg_4d35411556b95c5f"].fit()
-    window["svg_4d35411556b95c5f"].center()
-  }
-  document.getElementById("svg-4d35411556b95c5f").addEventListener('load', setup_svg_panzoom)
-  window.addEventListener('resize', reset_position)
+  document.getElementById("svg-home automation").addEventListener('load', setup_svg_panzoom)
+  window.addEventListener('resize', window_reset_position)
  </script>
 
 <h2 id="home-automation-devices">
@@ -1436,77 +1381,22 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+
+
 <div class="container">
   <div class="row">
       <div class="col text-center">
-          <a id="btn-22b6dfefdac5d157" class="book-btn" role="button" >Full Screen</a>
+          <a id="btn-devices" class="book-btn" role="button" >Full Screen</a>
       </div>
 </div>
-<embed id="svg-22b6dfefdac5d157" type="image/svg+xml" width=100% src="/images/devices.svg" />
-<script>
-  
-  function setup_svg_panzoom(){
-    let params = {
-          panEnabled: true,
-          zoomEnabled: true,
-          dblClickZoomEnabled: true,
-          controlIconsEnabled: false,
-          mouseWheelZoomEnabled: true,
-          preventMouseEventsDefault: true,
-          zoomScaleSensitivity: 0.6,
-          minZoom: 0.5,
-          maxZoom: 4,
-          
-           fit: true,
-          contain: true,
-          center: true,
-          refreshRate: 'auto'
-      };
-      let svg_pz = svgPanZoom('#svg-22b6dfefdac5d157'        ,params);
-      window["svg_22b6dfefdac5d157"] = svg_pz
-      
-      
-      if(window.location.search.startsWith('?')){
-        let search = window.location.search.substring(1);
-        let params = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
-        if(params.hasOwnProperty('svg')){
-          let embed = document.getElementById('svg-22b6dfefdac5d157')
-          let viewport = embed.getSVGDocument().getElementsByClassName("svg-pan-zoom_viewport")[0]
-          viewport.style.transition = "transform 1s ease"
-          const name = embed.getAttribute("src").split('/').slice(-1)[0].split('.')[0]
-          if(params.svg == name){
-            console.log(`Deep SVG Name Match. link params ${JSON.stringify(params)}`)
-            setTimeout(()=>{
-              if(params.hasOwnProperty('x') && params.hasOwnProperty('y') && params.hasOwnProperty('z')){
-                svg_pz.zoomAtPoint(params.z,{x:params.x, y:params.y},true)
-              }
-            },1000)
-            setTimeout(()=>{
-              viewport.style.transition = ""
-            },2000)
-          }
-        }
-      }
-
-      let button = document.getElementById("btn-22b6dfefdac5d157");
-      button.onclick = ()=>{
-          var elem = document.getElementById("svg-22b6dfefdac5d157");
-          if (elem.requestFullscreen) {
-          elem.requestFullscreen();
-          } else if (elem.webkitRequestFullscreen) {  
-          elem.webkitRequestFullscreen();
-          } else if (elem.msRequestFullscreen) {  
-          elem.msRequestFullscreen();
-          }
-      };
+<embed id="svg-devices" type="image/svg+xml" width=100% src="/images/devices.svg" />
+<script type="module">
+  import {setup_svg_panzoom,reset_svg_panzoom} from "/js/setup-svg-pan-zoom.js"
+  function window_reset_position(){
+    reset_svg_panzoom("devices")
   }
-  function reset_position(){
-    window["svg_22b6dfefdac5d157"].resize()
-    window["svg_22b6dfefdac5d157"].fit()
-    window["svg_22b6dfefdac5d157"].center()
-  }
-  document.getElementById("svg-22b6dfefdac5d157").addEventListener('load', setup_svg_panzoom)
-  window.addEventListener('resize', reset_position)
+  document.getElementById("svg-devices").addEventListener('load', setup_svg_panzoom)
+  window.addEventListener('resize', window_reset_position)
  </script>
 
 <p>In the diagram above, we can see a partitioning into Vendor specific Gateways and Open Gateways for which the Raspberry pi is an ideal open Hardware standard.</p>

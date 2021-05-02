@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.cfb7b0c740b0716d6eac8fadfedadcf40b15fdd6b6bbaad8290f07c9494fc1dd.js" integrity="sha256-z7ewx0CwcW1urI&#43;t/trc9AsV/da2u6rYKQ8HyUlPwd0="></script>
+<script defer src="/en.search.min.30e736524c78c57ab34c46bd371c248b527e839276d5bcd95c5995acc7d1109d.js" integrity="sha256-MOc2Ukx4xXqzTEa9Nxwki1J&#43;g5J21bzZXFmVrMfREJ0="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1063,15 +1063,6 @@ https://github.com/alex-shpak/hugo-book
 <li>version 1.1</li>
 <li>update from v1.0 added RGB LED</li>
 </ul>
-<p>Features</p>
-<ul>
-<li><code>nRF52840</code> on a <code>MS88SF2</code> module.</li>
-<li>i²C bus scl <code>P1.13</code> and sda <code>P1.15</code></li>
-<li>Light sensor <code>VEMLS6030</code> @<code>0x48</code></li>
-<li><code>MS8607</code> with relative humidity @<code>0x40</code>, pressure and temperature @<code>0x76</code></li>
-<li>Reset button <code>P0.18</code> and <a href="?svg=nrf52-sensor-tag&amp;x=280&amp;y=115&amp;z=3.4#schematics">user button</a> SW0 <code>P1.09</code></li>
-<li>RGB LED <code>P0. 04 06 08</code></li>
-</ul>
 
 <div class="container">
     <div class="row">
@@ -1397,6 +1388,15 @@ https://github.com/alex-shpak/hugo-book
 </p>
 </li>
 </ul>
+<p>Features</p>
+<ul>
+<li><code>nRF52840</code> on a <a href="?svg=nrf52-sensor-tag&amp;text=MS88SF2">MS88SF2</a> module.</li>
+<li>i²C bus scl <code>P1.13</code> and sda <code>P1.15</code></li>
+<li>Light sensor <code>VEMLS6030</code> @<code>0x48</code></li>
+<li><code>MS8607</code> with relative humidity @<code>0x40</code>, pressure and temperature @<code>0x76</code></li>
+<li>Reset button <code>P0.18</code> and <a href="?svg=nrf52-sensor-tag&amp;text=EVQ-PUA02K">user button</a> SW0 <code>P1.09</code></li>
+<li><a href="?svg=nrf52-sensor-tag&amp;text=LED1">RGB LED</a> <code>P0. 04 06 08</code></li>
+</ul>
 <h2 id="schematics">
   Schematics
   <a class="anchor" href="#schematics">#</a>
@@ -1404,77 +1404,22 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+
+
 <div class="container">
   <div class="row">
       <div class="col text-center">
-          <a id="btn-5e84458ca2692f9c" class="book-btn" role="button" >Full Screen</a>
+          <a id="btn-nrf52-sensor-tag" class="book-btn" role="button" >Full Screen</a>
       </div>
 </div>
-<embed id="svg-5e84458ca2692f9c" type="image/svg+xml" width=100% src="/images/thread_sensortag/nrf52-sensor-tag.svg"  style="background-color:white"/>
-<script>
-  
-  function setup_svg_panzoom(){
-    let params = {
-          panEnabled: true,
-          zoomEnabled: true,
-          dblClickZoomEnabled: true,
-          controlIconsEnabled: false,
-          mouseWheelZoomEnabled: true,
-          preventMouseEventsDefault: true,
-          zoomScaleSensitivity: 0.6,
-          minZoom: 0.5,
-          maxZoom: 4,
-          
-           fit: true,
-          contain: true,
-          center: true,
-          refreshRate: 'auto'
-      };
-      let svg_pz = svgPanZoom('#svg-5e84458ca2692f9c'        ,params);
-      window["svg_5e84458ca2692f9c"] = svg_pz
-      
-      
-      if(window.location.search.startsWith('?')){
-        let search = window.location.search.substring(1);
-        let params = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
-        if(params.hasOwnProperty('svg')){
-          let embed = document.getElementById('svg-5e84458ca2692f9c')
-          let viewport = embed.getSVGDocument().getElementsByClassName("svg-pan-zoom_viewport")[0]
-          viewport.style.transition = "transform 1s ease"
-          const name = embed.getAttribute("src").split('/').slice(-1)[0].split('.')[0]
-          if(params.svg == name){
-            console.log(`Deep SVG Name Match. link params ${JSON.stringify(params)}`)
-            setTimeout(()=>{
-              if(params.hasOwnProperty('x') && params.hasOwnProperty('y') && params.hasOwnProperty('z')){
-                svg_pz.zoomAtPoint(params.z,{x:params.x, y:params.y},true)
-              }
-            },1000)
-            setTimeout(()=>{
-              viewport.style.transition = ""
-            },2000)
-          }
-        }
-      }
-
-      let button = document.getElementById("btn-5e84458ca2692f9c");
-      button.onclick = ()=>{
-          var elem = document.getElementById("svg-5e84458ca2692f9c");
-          if (elem.requestFullscreen) {
-          elem.requestFullscreen();
-          } else if (elem.webkitRequestFullscreen) {  
-          elem.webkitRequestFullscreen();
-          } else if (elem.msRequestFullscreen) {  
-          elem.msRequestFullscreen();
-          }
-      };
+<embed id="svg-nrf52-sensor-tag" type="image/svg+xml" width=100% src="/images/thread_sensortag/nrf52-sensor-tag.svg"  style="background-color:white"/>
+<script type="module">
+  import {setup_svg_panzoom,reset_svg_panzoom} from "/js/setup-svg-pan-zoom.js"
+  function window_reset_position(){
+    reset_svg_panzoom("nrf52-sensor-tag")
   }
-  function reset_position(){
-    window["svg_5e84458ca2692f9c"].resize()
-    window["svg_5e84458ca2692f9c"].fit()
-    window["svg_5e84458ca2692f9c"].center()
-  }
-  document.getElementById("svg-5e84458ca2692f9c").addEventListener('load', setup_svg_panzoom)
-  window.addEventListener('resize', reset_position)
+  document.getElementById("svg-nrf52-sensor-tag").addEventListener('load', setup_svg_panzoom)
+  window.addEventListener('resize', window_reset_position)
  </script>
 
 <h2 id="board">

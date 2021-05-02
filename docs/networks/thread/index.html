@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.cfb7b0c740b0716d6eac8fadfedadcf40b15fdd6b6bbaad8290f07c9494fc1dd.js" integrity="sha256-z7ewx0CwcW1urI&#43;t/trc9AsV/da2u6rYKQ8HyUlPwd0="></script>
+<script defer src="/en.search.min.30e736524c78c57ab34c46bd371c248b527e839276d5bcd95c5995acc7d1109d.js" integrity="sha256-MOc2Ukx4xXqzTEa9Nxwki1J&#43;g5J21bzZXFmVrMfREJ0="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1000,77 +1000,22 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+
+
 <div class="container">
   <div class="row">
       <div class="col text-center">
-          <a id="btn-99adc38e71d7d1e9" class="book-btn" role="button" >Full Screen</a>
+          <a id="btn-openthread-environment-1" class="book-btn" role="button" >Full Screen</a>
       </div>
 </div>
-<embed id="svg-99adc38e71d7d1e9" type="image/svg+xml" width=100% src="/images/openthread-environment-1.1.svg" />
-<script>
-  
-  function setup_svg_panzoom(){
-    let params = {
-          panEnabled: true,
-          zoomEnabled: true,
-          dblClickZoomEnabled: true,
-          controlIconsEnabled: false,
-          mouseWheelZoomEnabled: true,
-          preventMouseEventsDefault: true,
-          zoomScaleSensitivity: 0.6,
-          minZoom: 0.5,
-          maxZoom: 4,
-          
-           fit: true,
-          contain: true,
-          center: true,
-          refreshRate: 'auto'
-      };
-      let svg_pz = svgPanZoom('#svg-99adc38e71d7d1e9'        ,params);
-      window["svg_99adc38e71d7d1e9"] = svg_pz
-      
-      
-      if(window.location.search.startsWith('?')){
-        let search = window.location.search.substring(1);
-        let params = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
-        if(params.hasOwnProperty('svg')){
-          let embed = document.getElementById('svg-99adc38e71d7d1e9')
-          let viewport = embed.getSVGDocument().getElementsByClassName("svg-pan-zoom_viewport")[0]
-          viewport.style.transition = "transform 1s ease"
-          const name = embed.getAttribute("src").split('/').slice(-1)[0].split('.')[0]
-          if(params.svg == name){
-            console.log(`Deep SVG Name Match. link params ${JSON.stringify(params)}`)
-            setTimeout(()=>{
-              if(params.hasOwnProperty('x') && params.hasOwnProperty('y') && params.hasOwnProperty('z')){
-                svg_pz.zoomAtPoint(params.z,{x:params.x, y:params.y},true)
-              }
-            },1000)
-            setTimeout(()=>{
-              viewport.style.transition = ""
-            },2000)
-          }
-        }
-      }
-
-      let button = document.getElementById("btn-99adc38e71d7d1e9");
-      button.onclick = ()=>{
-          var elem = document.getElementById("svg-99adc38e71d7d1e9");
-          if (elem.requestFullscreen) {
-          elem.requestFullscreen();
-          } else if (elem.webkitRequestFullscreen) {  
-          elem.webkitRequestFullscreen();
-          } else if (elem.msRequestFullscreen) {  
-          elem.msRequestFullscreen();
-          }
-      };
+<embed id="svg-openthread-environment-1" type="image/svg+xml" width=100% src="/images/openthread-environment-1.1.svg" />
+<script type="module">
+  import {setup_svg_panzoom,reset_svg_panzoom} from "/js/setup-svg-pan-zoom.js"
+  function window_reset_position(){
+    reset_svg_panzoom("openthread-environment-1")
   }
-  function reset_position(){
-    window["svg_99adc38e71d7d1e9"].resize()
-    window["svg_99adc38e71d7d1e9"].fit()
-    window["svg_99adc38e71d7d1e9"].center()
-  }
-  document.getElementById("svg-99adc38e71d7d1e9").addEventListener('load', setup_svg_panzoom)
-  window.addEventListener('resize', reset_position)
+  document.getElementById("svg-openthread-environment-1").addEventListener('load', setup_svg_panzoom)
+  window.addEventListener('resize', window_reset_position)
  </script>
 
 <ul>
@@ -2839,77 +2784,22 @@ ClientList can not open the Predefined Topic List.     /etc/predefinedTopic.conf
 
 
 
+
+
 <div class="container">
   <div class="row">
       <div class="col text-center">
-          <a id="btn-974b3f85c50f308c" class="book-btn" role="button" >Full Screen</a>
+          <a id="btn-mqtt-sn gateway" class="book-btn" role="button" >Full Screen</a>
       </div>
 </div>
-<embed id="svg-974b3f85c50f308c" type="image/svg+xml" width=100% src="/images/thread_sensortag/mqtt-sn%20gateway.svg" />
-<script>
-  
-  function setup_svg_panzoom(){
-    let params = {
-          panEnabled: true,
-          zoomEnabled: true,
-          dblClickZoomEnabled: true,
-          controlIconsEnabled: false,
-          mouseWheelZoomEnabled: true,
-          preventMouseEventsDefault: true,
-          zoomScaleSensitivity: 0.6,
-          minZoom: 0.5,
-          maxZoom: 4,
-          
-           fit: true,
-          contain: true,
-          center: true,
-          refreshRate: 'auto'
-      };
-      let svg_pz = svgPanZoom('#svg-974b3f85c50f308c'        ,params);
-      window["svg_974b3f85c50f308c"] = svg_pz
-      
-      
-      if(window.location.search.startsWith('?')){
-        let search = window.location.search.substring(1);
-        let params = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
-        if(params.hasOwnProperty('svg')){
-          let embed = document.getElementById('svg-974b3f85c50f308c')
-          let viewport = embed.getSVGDocument().getElementsByClassName("svg-pan-zoom_viewport")[0]
-          viewport.style.transition = "transform 1s ease"
-          const name = embed.getAttribute("src").split('/').slice(-1)[0].split('.')[0]
-          if(params.svg == name){
-            console.log(`Deep SVG Name Match. link params ${JSON.stringify(params)}`)
-            setTimeout(()=>{
-              if(params.hasOwnProperty('x') && params.hasOwnProperty('y') && params.hasOwnProperty('z')){
-                svg_pz.zoomAtPoint(params.z,{x:params.x, y:params.y},true)
-              }
-            },1000)
-            setTimeout(()=>{
-              viewport.style.transition = ""
-            },2000)
-          }
-        }
-      }
-
-      let button = document.getElementById("btn-974b3f85c50f308c");
-      button.onclick = ()=>{
-          var elem = document.getElementById("svg-974b3f85c50f308c");
-          if (elem.requestFullscreen) {
-          elem.requestFullscreen();
-          } else if (elem.webkitRequestFullscreen) {  
-          elem.webkitRequestFullscreen();
-          } else if (elem.msRequestFullscreen) {  
-          elem.msRequestFullscreen();
-          }
-      };
+<embed id="svg-mqtt-sn gateway" type="image/svg+xml" width=100% src="/images/thread_sensortag/mqtt-sn%20gateway.svg" />
+<script type="module">
+  import {setup_svg_panzoom,reset_svg_panzoom} from "/js/setup-svg-pan-zoom.js"
+  function window_reset_position(){
+    reset_svg_panzoom("mqtt-sn gateway")
   }
-  function reset_position(){
-    window["svg_974b3f85c50f308c"].resize()
-    window["svg_974b3f85c50f308c"].fit()
-    window["svg_974b3f85c50f308c"].center()
-  }
-  document.getElementById("svg-974b3f85c50f308c").addEventListener('load', setup_svg_panzoom)
-  window.addEventListener('resize', reset_position)
+  document.getElementById("svg-mqtt-sn gateway").addEventListener('load', setup_svg_panzoom)
+  window.addEventListener('resize', window_reset_position)
  </script>
 
 <h1 id="building-on-other-frameworks">

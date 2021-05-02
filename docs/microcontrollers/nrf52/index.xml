@@ -15,7 +15,7 @@
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</guid>
       <description>Networks / Simple MeshFrameworks / Raspi IoTTindie Product PageConcept#It is possible to mount either CR2032 or CR2477
 Hardware#board render
-repo directorynRF52832BME280MAX44009Schematics#Full Screenfunction setup_svg_panzoom(){let params = {panEnabled: true,zoomEnabled: true,dblClickZoomEnabled: true,controlIconsEnabled: false,mouseWheelZoomEnabled: true,preventMouseEventsDefault: true,zoomScaleSensitivity: 0.</description>
+repo directorynRF52832BME280MAX44009Schematics#Full Screenimport {setup_svg_panzoom,reset_svg_panzoom} from &#34;</description>
     </item>
     
     <item>
@@ -24,8 +24,7 @@ repo directorynRF52832BME280MAX44009Schematics#Fu
       <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</guid>
-      <description>Networks / ThreadFrameworks / CHIPCurrent Version# version 1.1 update from v1.0 added RGB LED  Features
- nRF52840 on a MS88SF2 module.</description>
+      <description>Networks / ThreadFrameworks / CHIPCurrent Version# version 1.1 update from v1.0 added RGB LED  nRF52840MS88SF2MS86072VEML6030 DSVEML6030 ANManufacturing#  v 1.</description>
     </item>
     
     <item>
