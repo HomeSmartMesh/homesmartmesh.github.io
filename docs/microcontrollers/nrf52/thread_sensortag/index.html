@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.30e736524c78c57ab34c46bd371c248b527e839276d5bcd95c5995acc7d1109d.js" integrity="sha256-MOc2Ukx4xXqzTEa9Nxwki1J&#43;g5J21bzZXFmVrMfREJ0="></script>
+<script defer src="/en.search.min.d9a26feb5aaeb29fbaa54b9a4cf59d2d63a13489de05d6796b08c997ec086a50.js" integrity="sha256-2aJv61qusp&#43;6pUuaTPWdLWOhNIneBdZ5awjJl&#43;wIalA="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -873,10 +873,10 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#current-version">Current Version</a>
+    <li>
       <ul>
-        <li><a href="#manufacturing">Manufacturing</a></li>
         <li><a href="#schematics">Schematics</a></li>
+        <li><a href="#manufacturing">Manufacturing</a></li>
         <li><a href="#board">Board</a></li>
       </ul>
     </li>
@@ -1017,25 +1017,6 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 </p>
-<p>
-
-
-
-
-
-<div class="text-center">
-  <a >
-    <img
-    src="/images/thread_sensortag/concept.png"
-    alt=""
-    width=""
-    height=""
-    decoding="async"
-  />
-  </a>
-  
-</div>
-
 
 
 
@@ -1045,20 +1026,56 @@ https://github.com/alex-shpak/hugo-book
 <div class="text-center">
   <a >
     <img
-    src="/images/thread_sensortag/kicad_render.webp"
+    src="/images/thread_sensortag/sensortag_v1.1.webp"
     alt=""
-    width="300vw"
+    width="600px"
     height=""
     decoding="async"
   />
   </a>
   
 </div>
-</p>
-<h1 id="current-version">
-  Current Version
-  <a class="anchor" href="#current-version">#</a>
-</h1>
+
+<ul>
+<li><code>nRF52840</code> on a <a href="?svg=nrf52-sensor-tag&amp;text=MS88SF2">MS88SF2</a> module.</li>
+<li>i²C bus scl <code>P1.13</code> and sda <code>P1.15</code></li>
+<li>Light sensor <a href="?svg=nrf52-sensor-tag&amp;text=VEML6030">VEMLS6030</a> @<code>0x48</code></li>
+<li><a href="?svg=nrf52-sensor-tag&amp;text=MS860702BA01-50">MS8607</a> with relative humidity @<code>0x40</code>, pressure and temperature @<code>0x76</code></li>
+<li>Reset button <code>P0.18</code> and <a href="?svg=nrf52-sensor-tag&amp;text=S2">user button</a> SW0 <code>P1.09</code></li>
+<li><a href="?svg=nrf52-sensor-tag&amp;text=LED1">RGB LED</a> <code>P0. 04 06 08</code></li>
+</ul>
+<h2 id="schematics">
+  Schematics
+  <a class="anchor" href="#schematics">#</a>
+</h2>
+
+
+
+
+
+
+<div class="container">
+  <div class="row">
+      <div class="col text-center">
+          <a id="btn-nrf52-sensor-tag" class="book-btn" role="button" >Full Screen</a>
+      </div>
+</div>
+<embed id="svg-nrf52-sensor-tag" type="image/svg+xml" width=100% src="/images/thread_sensortag/nrf52-sensor-tag.svg"  style="background-color:white"/>
+<script type="module">
+  import {setup_svg_panzoom,reset_svg_panzoom} from "/js/setup-svg-pan-zoom.js"
+  function window_reset_position(){
+    reset_svg_panzoom("nrf52-sensor-tag")
+  }
+  console.log(`into script for "nrf52-sensor-tag"`)
+  
+  
+  window.addEventListener('load', ()=>{
+    let embed = document.getElementById("svg-nrf52-sensor-tag")
+    setup_svg_panzoom(embed)
+  })
+  window.addEventListener('resize', window_reset_position)
+ </script>
+
 <ul>
 <li>version 1.1</li>
 <li>update from v1.0 added RGB LED</li>
@@ -1388,40 +1405,6 @@ https://github.com/alex-shpak/hugo-book
 </p>
 </li>
 </ul>
-<p>Features</p>
-<ul>
-<li><code>nRF52840</code> on a <a href="?svg=nrf52-sensor-tag&amp;text=MS88SF2">MS88SF2</a> module.</li>
-<li>i²C bus scl <code>P1.13</code> and sda <code>P1.15</code></li>
-<li>Light sensor <code>VEMLS6030</code> @<code>0x48</code></li>
-<li><code>MS8607</code> with relative humidity @<code>0x40</code>, pressure and temperature @<code>0x76</code></li>
-<li>Reset button <code>P0.18</code> and <a href="?svg=nrf52-sensor-tag&amp;text=EVQ-PUA02K">user button</a> SW0 <code>P1.09</code></li>
-<li><a href="?svg=nrf52-sensor-tag&amp;text=LED1">RGB LED</a> <code>P0. 04 06 08</code></li>
-</ul>
-<h2 id="schematics">
-  Schematics
-  <a class="anchor" href="#schematics">#</a>
-</h2>
-
-
-
-
-
-<div class="container">
-  <div class="row">
-      <div class="col text-center">
-          <a id="btn-nrf52-sensor-tag" class="book-btn" role="button" >Full Screen</a>
-      </div>
-</div>
-<embed id="svg-nrf52-sensor-tag" type="image/svg+xml" width=100% src="/images/thread_sensortag/nrf52-sensor-tag.svg"  style="background-color:white"/>
-<script type="module">
-  import {setup_svg_panzoom,reset_svg_panzoom} from "/js/setup-svg-pan-zoom.js"
-  function window_reset_position(){
-    reset_svg_panzoom("nrf52-sensor-tag")
-  }
-  document.getElementById("svg-nrf52-sensor-tag").addEventListener('load', setup_svg_panzoom)
-  window.addEventListener('resize', window_reset_position)
- </script>
-
 <h2 id="board">
   Board
   <a class="anchor" href="#board">#</a>
@@ -2463,10 +2446,10 @@ I think after all, such things should be configurable by the end users&rsquo;s a
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#current-version">Current Version</a>
+    <li>
       <ul>
-        <li><a href="#manufacturing">Manufacturing</a></li>
         <li><a href="#schematics">Schematics</a></li>
+        <li><a href="#manufacturing">Manufacturing</a></li>
         <li><a href="#board">Board</a></li>
       </ul>
     </li>

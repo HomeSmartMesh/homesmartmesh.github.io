@@ -25,7 +25,7 @@ function deep_svg_xyz(embed,x,y,z,abs_xy=false){
     setTimeout(deinit,2000)
 }
 
-function text_highlight_zoom(embed,svg,element,filter="glow"){
+function text_highlight_zoom(embed,svg,element,filter="glow_anim"){
     let raw_e_box = element.getBBox();
     let e_box = element.getBoundingClientRect();
     let svg_box = svg.getBBox();
@@ -35,11 +35,11 @@ function text_highlight_zoom(embed,svg,element,filter="glow"){
     const x = (e_box.x + e_box.width/2)  / svg_box.width
     const y = (e_box.y + e_box.height/2) / svg_box.height
     const filter_radius = Math.min(raw_e_box.width,raw_e_box.height)/2;
-    console.log(`zooming (${x},${y}) ; filter radius (${filter_radius})`)
+    console.log(`zooming (${x},${y}) ; filter (${filter}) radius (${filter_radius})`)
     deep_svg_xyz(embed,x,y,3)
     let g = element.closest("g")
     if(filter == "glow"){
-        let glow = filters.create(svg,{type:"glow",color:"#c2feff",radius:400});
+        let glow = filters.create(svg,{type:"glow",color:"#c2feff",radius:filter_radius});
         let attach = ()=>{
             console.log("attaching")
             filters.attach(g,glow)
@@ -51,9 +51,10 @@ function text_highlight_zoom(embed,svg,element,filter="glow"){
         setTimeout(attach ,2000)
         setTimeout(detach ,3000)
     }else{
-        let glow_anim = filters.create(svg,{type:"glow_anim",color:"#c2feff",radius:400});
+        let glow_anim = filters.create(svg,{type:"glow_anim",color:"#c2feff",radius:filter_radius});
         console.log("starting")
-        filters.start(g,glow_anim)
+        let start = ()=>{filters.start(svg,g,glow_anim)}
+        setTimeout(start ,2000)
     }
 }
 
@@ -72,9 +73,8 @@ function deep_svg_text(embed,text){
     })
 }
 
-function setup_svg_panzoom(e){
+function setup_svg_panzoom(embed){
     console.log("setup_svg_panzoom")
-    let embed = e.target
     const name = embed.id.substring(4)
     console.log(name)
     let params = {
@@ -93,7 +93,7 @@ function setup_svg_panzoom(e){
         center: true,
         refreshRate: 'auto'
     };
-    let svg_pz = svgPanZoom(`#${e.target.id}`        ,params);
+    let svg_pz = svgPanZoom(`#${embed.id}`        ,params);
     window[`svgpz-${name}`] = svg_pz
     //handle deep linking
     if(window.location.search.startsWith('?')){
@@ -102,7 +102,7 @@ function setup_svg_panzoom(e){
         if(params.hasOwnProperty('svg')){
             if(params.svg == name){
                 console.log(`Deep SVG Name Match`)
-                embed.scrollIntoView();
+                setTimeout(()=>{embed.scrollIntoView()},200)
                 if(params.hasOwnProperty('x') && params.hasOwnProperty('y') && params.hasOwnProperty('z')){
                     console.log(`params : xyz = (${params.x},${params.y},${params.z})`)
                     deep_svg_xyz(embed,params.x,params.y,params.z)
