@@ -160,10 +160,10 @@ Definition#We can consider the project CHIP Connected Home Over IP definition
     
     <item>
       <title>Thread</title>
-      <link>https://www.homesmartmesh.com/docs/networks/thread/</link>
+      <link>https://www.homesmartmesh.com/docs/networks/ultrawideband/</link>
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
-      <guid>https://www.homesmartmesh.com/docs/networks/thread/</guid>
+      <guid>https://www.homesmartmesh.com/docs/networks/ultrawideband/</guid>
       <description>Relates to#Zephyr RTOSProject CHIPOverview#Full Screenimport {setup_svg_panzoom,reset_svg_panzoom} from &#34;/js/setup-svg-pan-zoom.js&#34;function window_reset_position(){reset_svg_panzoom(&#34;openthread-environment-1&#34;)}console.log(`into script for &#34;openthread-environment-1&#34;`)window.addEventListener(&#39;load&#39;, ()={let embed = document.getElementById(&#34;svg-openthread-environment-1&#34;)setup_svg_panzoom(embed)})window.addEventListener(&#39;resize&#39;, window_reset_position) some elements have link to the corresponding websites  Open ThreadIPV6 adressingNetwork discoverytest connectivityCheat sheet# IPv6 bit length : 128 bit = 8x 16 ibts =&amp;gt; 00b1:00b2:00b3:00b4:00b5:00b6:00b7:00b8 Link-Local prefix : fe80::/16 Mesh-Local prefix : fd00::/8 Multicast Link-Local : ff02::1 Multicast Mesh-Local : ff03::1 RLOC16 : Routing locator in 16 bits 0x0401 RLOC16 Router mask : 0x0400 IID : Interface Identifier (includes RLOC16) RLOC = Mesh-Local Prefix + IID  Specification#request the specification.</description>
     </item>
     
@@ -214,6 +214,16 @@ Definition#We can consider the project CHIP Connected Home Over IP definition
   As in the above figure, I kept all the light with the hue gateway for a reliable function, and opted for zigbee2mqtt for all other non lighting devices.
 For a detailed list of used devices and their documentation see the devices list section
 Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in a local network, therefore allowing third party apps integration.</description>
+    </item>
+    
+    <item>
+      <title>Ultra Wide Band</title>
+      <link>https://www.homesmartmesh.com/docs/networks/thread/</link>
+      <pubDate>Thu, 06 May 2021 08:48:57 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/networks/thread/</guid>
+      <description>Standard#802.15.4zModule#Product page : DWM1001C ModuleDatasheets :
+DWM1001 Development Kit pdfDWM1004C Tag pdfSource code DecawareWhat is Ultra Wide Band ?It&amp;rsquo;s a radio technology that is not based on classical frequency or amplitude modulation rather uses a rich signal that occupies a large spectrum band.</description>
     </item>
     
     <item>

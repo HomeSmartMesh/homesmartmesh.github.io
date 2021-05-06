@@ -103,7 +103,7 @@
   </url>
   
   <url>
-    <loc>https://www.homesmartmesh.com/docs/networks/thread/</loc>
+    <loc>https://www.homesmartmesh.com/docs/networks/ultrawideband/</loc>
     <lastmod>2021-03-07T08:00:00+00:00</lastmod>
   </url>
   
@@ -138,6 +138,11 @@
   
   <url>
     <loc>https://www.homesmartmesh.com/docs/microcontrollers/stm32/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.homesmartmesh.com/docs/networks/thread/</loc>
+    <lastmod>2021-05-07T08:00:00+00:00</lastmod>
   </url>
   
   <url>

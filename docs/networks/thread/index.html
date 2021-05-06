@@ -5,19 +5,18 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Build and setup instruction for a Thread network. Compilation from different platforms comapatible with the nRF dongle">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Thread" />
-<meta property="og:description" content="Build and setup instruction for a Thread network. Compilation from different platforms comapatible with the nRF dongle" />
+<meta name="description" content="Transcievers, modules and Applications for Ultra Wide Band 802.15.4z">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Ultra Wide Band" />
+<meta property="og:description" content="Transcievers, modules and Applications for Ultra Wide Band 802.15.4z" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.homesmartmesh.com/docs/networks/thread/" />
-<meta property="og:image" content="https://www.homesmartmesh.com/images/openthread-environment-1.1.svg" />
-<meta property="article:published_time" content="2020-10-06T08:48:57+00:00" />
-<meta property="article:modified_time" content="2021-03-07T08:00:00+00:00" />
-<title>Thread | Home Smart Mesh</title>
+<meta property="article:published_time" content="2021-05-06T08:48:57+00:00" />
+<meta property="article:modified_time" content="2021-05-07T08:00:00+00:00" />
+<title>Ultra Wide Band | Home Smart Mesh</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.d9a26feb5aaeb29fbaa54b9a4cf59d2d63a13489de05d6796b08c997ec086a50.js" integrity="sha256-2aJv61qusp&#43;6pUuaTPWdLWOhNIneBdZ5awjJl&#43;wIalA="></script>
+<script defer src="/en.search.min.f5fb2e210e49e34df113e1b67c0a1737cba7e41f4f56b807fa5086bad5f73d79.js" integrity="sha256-9fsuIQ5J403xE&#43;G2fAoXN8un5B9PVrgH&#43;lCGutX3PXk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -527,7 +526,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://www.homesmartmesh.com/docs/networks/thread/" class=" active">Thread</a>
+    <a href="https://www.homesmartmesh.com/docs/networks/ultrawideband/" class="">Thread</a>
   
 
         </li>
@@ -541,6 +540,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="https://www.homesmartmesh.com/docs/networks/zigbee/" class="">Zigbee</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://www.homesmartmesh.com/docs/networks/thread/" class=" active">Ultra Wide Band</a>
   
 
         </li>
@@ -858,7 +870,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Thread</strong>
+  <strong>Ultra Wide Band</strong>
 
   <label for="toc-control">
     
@@ -873,71 +885,8 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#relates-to">Relates to</a></li>
-    <li><a href="#overview">Overview</a>
-      <ul>
-        <li><a href="#cheat-sheet">Cheat sheet</a></li>
-        <li><a href="#specification">Specification</a></li>
-        <li><a href="#tools">Tools</a></li>
-        <li><a href="#thread-nodes">Thread Nodes</a></li>
-      </ul>
-    </li>
-    <li><a href="#radio-co-processor-rcp">Radio Co-Processor (RCP)</a>
-      <ul>
-        <li><a href="#openthread">OpenThread</a></li>
-        <li><a href="#zephyr-v2599">Zephyr v2.5.99</a></li>
-      </ul>
-    </li>
-    <li><a href="#network-co-processor-ncp">Network Co-Processor (NCP)</a>
-      <ul>
-        <li><a href="#nordic---nrf-410">Nordic - nRF 4.1.0</a></li>
-        <li><a href="#zephyr-v2499">Zephyr v2.4.99</a></li>
-        <li><a href="#nordic---nrf-connect">Nordic - nRF Connect</a></li>
-        <li><a href="#open-thread">Open Thread</a></li>
-      </ul>
-    </li>
-    <li><a href="#border-router">Border Router</a>
-      <ul>
-        <li><a href="#openthread---docker">OpenThread - docker</a>
-          <ul>
-            <li><a href="#latest">latest</a></li>
-            <li><a href="#version">version</a></li>
-          </ul>
-        </li>
-        <li><a href="#openthread---setup">OpenThread - setup</a></li>
-        <li><a href="#nordic---sdcard-image">Nordic - sdcard image</a></li>
-        <li><a href="#form-a-network">Form a network</a></li>
-        <li><a href="#wireshark-sniffing">wireshark sniffing</a></li>
-      </ul>
-    </li>
-    <li><a href="#mqtt-sensors-node">MQTT Sensors Node</a>
-      <ul>
-        <li><a href="#firmware-flow-diagram">Firmware flow diagram</a></li>
-        <li><a href="#firmware-search-gateway">Firmware search gateway</a></li>
-      </ul>
-    </li>
-    <li><a href="#building-on-other-frameworks">Building on other frameworks</a>
-      <ul>
-        <li><a href="#platformio">Platformio</a></li>
-        <li><a href="#arduino">Arduino</a></li>
-      </ul>
-    </li>
-    <li><a href="#chip-node">CHIP Node</a></li>
-    <li><a href="#test-and-debug">Test and Debug</a>
-      <ul>
-        <li><a href="#with-server-command-line">with server command line</a></li>
-        <li><a href="#cli-on-border-router">cli on border router</a></li>
-        <li><a href="#cli-openthread-firmware">cli openthread firmware</a></li>
-        <li><a href="#cli-nordic-firmware">cli Nordic firmware</a></li>
-        <li><a href="#cli-reference">cli reference</a></li>
-      </ul>
-    </li>
-    <li><a href="#thread-over-zephyr">Thread over Zephyr</a>
-      <ul>
-        <li><a href="#building-cli">building cli</a></li>
-      </ul>
-    </li>
-    <li><a href="#faq---discussion">FAQ - Discussion</a></li>
+    <li><a href="#standard">Standard</a></li>
+    <li><a href="#module">Module</a></li>
   </ul>
 </nav>
 
@@ -949,130 +898,127 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><script src="/js/svg-pan-zoom.min.js"></script>
-
-<h1 id="relates-to">
-  Relates to
-  <a class="anchor" href="#relates-to">#</a>
+  <article class="markdown"><h1 id="standard">
+  Standard
+  <a class="anchor" href="#standard">#</a>
 </h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.ieee802.org/15/pub/TG4z.html"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            802.15.4z
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<h1 id="module">
+  Module
+  <a class="anchor" href="#module">#</a>
+</h1>
+<p>Product page :
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.decawave.com/product/dwm1001-module/"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            DWM1001C Module
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+</p>
+<p>Datasheets :</p>
 <p>
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-            
-                href="https://www.homesmartmesh.com/docs/frameworks/zephyr/"
-            
-            role="button"
-        >
-            Zephyr RTOS
-            
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-            
-                href="https://www.homesmartmesh.com/docs/frameworks/chip/"
-            
-            role="button"
-        >
-            Project CHIP
-            
-            
-        </a>
-    </div>
-    </div>
-</div>
-</p>
-<h1 id="overview">
-  Overview
-  <a class="anchor" href="#overview">#</a>
-</h1>
 
 
 
 
 
-
-<div class="container">
-  <div class="row">
-      <div class="col text-center">
-          <a id="btn-openthread-environment-1" class="book-btn" role="button" >Full Screen</a>
-      </div>
-</div>
-<embed id="svg-openthread-environment-1" type="image/svg+xml" width=100% src="/images/openthread-environment-1.1.svg" />
-<script type="module">
-  import {setup_svg_panzoom,reset_svg_panzoom} from "/js/setup-svg-pan-zoom.js"
-  function window_reset_position(){
-    reset_svg_panzoom("openthread-environment-1")
-  }
-  console.log(`into script for "openthread-environment-1"`)
+<div class="text-center">
+  <a >
+    <img
+    src="/images/uwb/DWM1001%20DevKit.png"
+    alt=""
+    width="250px"
+    height=""
+    decoding="async"
+  />
+  </a>
   
-  
-  window.addEventListener('load', ()=>{
-    let embed = document.getElementById("svg-openthread-environment-1")
-    setup_svg_panzoom(embed)
-  })
-  window.addEventListener('resize', window_reset_position)
- </script>
-
-<ul>
-<li>some elements have link to the corresponding websites</li>
-</ul>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://openthread.io/"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            Open Thread
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
 </div>
 
 
@@ -1081,845 +1027,13 @@ https://github.com/alex-shpak/hugo-book
         <div class="col text-center">
         <a  class="book-btn"
             
-                href="https://openthread.io/guides/thread-primer/ipv6-addressing"
+                href="https://www.mouser.de/datasheet/2/412/DWM1001_DEV_Data_Sheet-1950462.pdf"
                 target="_blank"
             
             
             role="button"
         >
-            IPV6 adressing
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://openthread.io/guides/thread-primer/network-discovery"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            Network discovery
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://openthread.io/guides/border-router/docker/test-connectivity"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            test connectivity
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<h2 id="cheat-sheet">
-  Cheat sheet
-  <a class="anchor" href="#cheat-sheet">#</a>
-</h2>
-<ul>
-<li>IPv6 bit length : 128 bit = 8x 16 ibts =&gt; <code>00b1:00b2:00b3:00b4:00b5:00b6:00b7:00b8</code></li>
-<li>Link-Local prefix : <code>fe80::/16</code></li>
-<li>Mesh-Local prefix : <code>fd00::/8</code></li>
-<li>Multicast Link-Local : <code>ff02::1</code></li>
-<li>Multicast Mesh-Local : <code>ff03::1</code></li>
-<li>RLOC16 : Routing locator in 16 bits <code>0x0401</code></li>
-<li>RLOC16 Router mask : <code>0x0400</code></li>
-<li>IID : Interface Identifier (includes RLOC16)</li>
-<li>RLOC = Mesh-Local Prefix + IID</li>
-</ul>
-<h2 id="specification">
-  Specification
-  <a class="anchor" href="#specification">#</a>
-</h2>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.threadgroup.org/ThreadSpec"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            request the specification...
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<h2 id="tools">
-  Tools
-  <a class="anchor" href="#tools">#</a>
-</h2>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Connect-for-desktop/Download#infotabs"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            nRF Connect for desktop...
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Command-Line-Tools/Download#infotabs"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            nRF Command Line Tools...
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads/7-2018-q2-update"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            GNU Arm Embedded Toolchain v7-2018-q2
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://infocenter.nordicsemi.com/topic/struct_sdk/struct/sdk_thread_zigbee_latest.html"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            nRF SDK for Thread and Zigbee v4.1.0...
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK-for-Thread-and-Zigbee/Download#infotabs"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            download the SDK
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="http://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/gs_assistant.html"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            nRF Connect SDK installing...
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<ul>
-<li>install <code>nRF Connect for deskop</code></li>
-<li>From within nRF connect, install <code>Toolchain Manager</code></li>
-<li>From the Toolchain manager, install the last <code>nRF Connect SDK</code></li>
-</ul>
-<h2 id="thread-nodes">
-  Thread Nodes
-  <a class="anchor" href="#thread-nodes">#</a>
-</h2>
-<p>A Thread network setup contains the following Nodes</p>
-<ul>
-<li>
-<p>radio or network coprocessor : dongle connected to the raspberry pi</p>
-</li>
-<li>
-<p>border router host : services running on a raspberry pi</p>
-</li>
-<li>
-<p>cli tester : command line dongle through serial monitor for testing</p>
-</li>
-<li>
-<p>mqtt-sn : end device with mqtt-sn such as sensors</p>
-</li>
-<li>
-<p><a href="https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Thread-topology-monitor">Topology Monitor</a> : GUI interface. Note the hex file to flash on the nRF52840 USB dongle are provided as part of the download pack in <code>nRF_TTM-win32-x64_0.13.0.zip\nRF_TTM-win32-x64\hex</code>. A different CLI or NCP fimware would not work.</p>
-</li>
-<li>
-<p><a href="https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Sniffer-for-Bluetooth-LE">Wireshark sniffer</a> : dongle that captures all frames and shows them on wireshark</p>
-</li>
-</ul>
-<h1 id="radio-co-processor-rcp">
-  Radio Co-Processor (RCP)
-  <a class="anchor" href="#radio-co-processor-rcp">#</a>
-</h1>
-<ul>
-<li>This is the new version recommended by OpenThread for current and new versions aof border routers, see <a href="https://openthread.io/platforms#radio-co-processor-rcp">Vendor support RCP</a> for details.</li>
-<li><a href="https://openthread.io/guides/build#how_to_build_openthread">How to build</a></li>
-<li>built using docker container</li>
-</ul>
-<h2 id="openthread">
-  OpenThread
-  <a class="anchor" href="#openthread">#</a>
-</h2>
-<ul>
-<li>successfully tested with the <a href="#openthread---docker">OpenThread docker</a> raspberry pi image blow.</li>
-</ul>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/openthread/openthread/tree/master/examples/platforms/nrf528xx/nrf52840"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            nRF52840 Build instructions
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<p>When using docker simply pull the environment</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker pull openthread/environment:latest
-docker run -it --rm openthread/environment bash
-</code></pre></div><p>then continue the same way on linux or docker from windows</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd ~/opentrhead
-./script/bootstrap
-./bootstrap
-sudo rm -rf output/
-make -f examples/Makefile-nrf52840 USB<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
-cd output/nrf52840/bin/
-arm-none-eabi-objcopy -O ihex ot-rcp ot-rcp.hex
-nrfjprog -f nrf52 --program ot-rcp.hex --sectorerase --verify
-</code></pre></div>
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.homesmartmesh.com/data/ot-rcp_thread-reference-20191113_nRF52840_dongle_no_bootloader.zip"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            ot-rcp thread-reference-20191113
-            
-            
-                
-                
-
-                
-
-                
-                <svg    class="download"
-                        viewBox="0 0 512 512"
-                        fill="currentColor"
-                        >
-                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
-                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
-                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
-                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
-                </svg>
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.homesmartmesh.com/data/ot-rcp_de3ddb7169_20.03.2021_USB_BL-USB.zip"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            ot-rcp 20.03.2021 BOOTLOADER=USB
-            
-            
-                
-                
-
-                
-
-                
-                <svg    class="download"
-                        viewBox="0 0 512 512"
-                        fill="currentColor"
-                        >
-                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
-                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
-                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
-                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
-                </svg>
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.homesmartmesh.com/data/ot-rcp_de3ddb7169_20.03.2021_USB_BL-No.zip"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            ot-rcp 20.03.2021 No Bootloader
-            
-            
-                
-                
-
-                
-
-                
-                <svg    class="download"
-                        viewBox="0 0 512 512"
-                        fill="currentColor"
-                        >
-                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
-                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
-                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
-                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
-                </svg>
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<h2 id="zephyr-v2599">
-  Zephyr v2.5.99
-  <a class="anchor" href="#zephyr-v2599">#</a>
-</h2>
-<ul>
-<li>
-<p>Zephyr version <code>2.5.99</code> has a <code>coprocessor</code> directory replacing the old <code>ncp</code></p>
-</li>
-<li>
-<p>For details on Zephyr install see
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-            
-                href="https://www.homesmartmesh.com/docs/frameworks/zephyr/"
-            
-            role="button"
-        >
-            Zephyr RTOS
-            
-            
-        </a>
-    </div>
-    </div>
-</div>
-</p>
-</li>
-<li>
-<p>add <code>CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n</code> to <code>prj.conf</code></p>
-</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd zephyrproject
-source zephyr/zephyr-env.sh
-cd zephyr/samples/net/openthread/coprocessor
-west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prj.conf overlay-rcp.conf overlay-usb-nrf-br.conf&#34;</span>
-cd build/zephyr
-nrfjprog -f nrf52 --program zephyr.hex --sectorerase --verify
-</code></pre></div><details >
-  <summary>border router error details...</summary>
-  <div class="markdown-inner">
-    <p>tested version in zephyr 2.5.99 and border router openthread docker</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Mar  <span style="color:#ae81ff">6</span> 13:00:06 3d926b9c2cee avahi-daemon<span style="color:#f92672">[</span>129<span style="color:#f92672">]</span>: Server startup complete. Host name is 3d926b9c2cee.local. Local service cookie is 2646371747.
-Mar  <span style="color:#ae81ff">6</span> 13:00:07 3d926b9c2cee otbr-agent<span style="color:#f92672">[</span>145<span style="color:#f92672">]</span>: <span style="color:#f92672">[</span>CRIT<span style="color:#f92672">]</span>-PLAT----: HandleRcpTimeout<span style="color:#f92672">()</span> at ../../third_party/openthread/repo/src/lib/spinel/radio_spinel_impl.hpp:2168: RadioSpinelNoResponse
-</code></pre></div>
-  </div>
-</details>
-
-<h1 id="network-co-processor-ncp">
-  Network Co-Processor (NCP)
-  <a class="anchor" href="#network-co-processor-ncp">#</a>
-</h1>
-<p>Note, see the RCP version above for recent border routers. Given the open source nature of OpenThread, it is quite challenging to find the right build instructions and version match to the right border router. See <a href="https://openthread.io/platforms#network-co-processor-ncp">Vendor support NCP</a> for mode details. Different NCP versions are listed here.</p>
-<h2 id="nordic---nrf-410">
-  Nordic - nRF 4.1.0
-  <a class="anchor" href="#nordic---nrf-410">#</a>
-</h2>
-<ul>
-<li>successfull match between the SDK and Rpi image, both available from the link below
-<ul>
-<li>nRFSDK for Thread and Zigbee v4.1.0</li>
-<li>RaspPi OT Border Router Demo v4.1.0-1.alpha
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK-for-Thread-and-Zigbee/Download"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            nRF SDK Download
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-</li>
-</ul>
-</li>
-</ul>
-<p>build and flash the ncp example</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;cd <span style="color:#e6db74">&#34;examples\thread\ncp\ftd\usb\pca10059\mbr\armgcc\Makefile&#34;</span>
-&gt;make
-&gt;make flash_mbr
-&gt;make flash
-</code></pre></div><h2 id="zephyr-v2499">
-  Zephyr v2.4.99
-  <a class="anchor" href="#zephyr-v2499">#</a>
-</h2>
-<ul>
-<li>
-<p>This section is about the <code>nRF Connect SDK</code> using the <code>zephyr</code> directory</p>
-</li>
-<li>
-<p>successfully built and tested with <code>v1.4.99-dev1</code> which contains Zephyr version <code>2.4.99</code></p>
-</li>
-<li>
-<p>recognised as USB device
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="http://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/gs_assistant.html"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            nRF Connect SDK installing...
+            DWM1001 Development Kit pdf
             
             
                 
@@ -1954,473 +1068,6 @@ Mar  <span style="color:#ae81ff">6</span> 13:00:07 3d926b9c2cee otbr-agent<span 
     </div>
 </div>
 </p>
-</li>
-<li>
-<p>add <code>CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n</code> to <code>prj.conf</code></p>
-</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd nrf/v1.4.99-dev1/zephyr/samples/net/openthread/ncp
-west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prj.conf overlay-usb-nrf-br.conf&#34;</span>
-</code></pre></div><h2 id="nordic---nrf-connect">
-  Nordic - nRF Connect
-  <a class="anchor" href="#nordic---nrf-connect">#</a>
-</h2>
-<ul>
-<li>
-<p>This section is about the <code>nRF Connect SDK</code> using the <code>nrf</code> directory</p>
-</li>
-<li>
-<p>Not yet successfull with the nRF52 dongle, likely due to the missing usb overlay
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="http://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/gs_assistant.html"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            nRF Connect SDK installing...
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-</p>
-</li>
-<li>
-<p>add <code>CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n</code> to <code>prj.conf</code></p>
-</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd nrf/v1.4.99-dev1/nrf/samples/openthread/ncp
-west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prj.conf overlay-logging.conf&#34;</span>
-</code></pre></div><h2 id="open-thread">
-  Open Thread
-  <a class="anchor" href="#open-thread">#</a>
-</h2>
-<ul>
-<li>Available pre-build ncp firmware</li>
-</ul>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://openthread.io/platforms/co-processor/firmware#download_nrf52840_firmware_image"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            nRF52840 ncp firmare...
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">nrfjprog -f nrf52 --program ot-ncp-ftd-gd81d769e-nrf52840.hex --sectorerase --verify
-</code></pre></div><ul>
-<li>for build instructions see the rcp building steps in the <a href="#openthread">rcp OpenThread</a> section, the build commands generates both npc and rcp elf files.</li>
-</ul>
-<h1 id="border-router">
-  Border Router
-  <a class="anchor" href="#border-router">#</a>
-</h1>
-<h2 id="openthread---docker">
-  OpenThread - docker
-  <a class="anchor" href="#openthread---docker">#</a>
-</h2>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://openthread.io/guides/border-router/docker/run"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            Reference on &#39;Run OTBR Docker&#39;...
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<h3 id="latest">
-  latest
-  <a class="anchor" href="#latest">#</a>
-</h3>
-<blockquote class="book-hint warning">
-  This method only deploys the lates available docker container, see <a href="#version">version</a> for a specific version.
-</blockquote>
-
-<ul>
-<li>use with the OpenThread dongle firmware <a href="#openthread">detailed above</a></li>
-<li>The docker command below runs deamonized (in the background) and maps port 80.</li>
-<li>Note that restarting the same container does not work there fore <code>-rm</code> would help restart a new container each time</li>
-<li>Two issues happen when mapping port 80 only, the <code>Topology</code> menu does not show anything and the Android comissioning App can&rsquo;t reach the border router so a falback on <code>host</code> networking with the second docker command solves these issues.</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run --rm --name otbr-metal -d --sysctl <span style="color:#e6db74">&#34;net.ipv6.conf.all.disable_ipv6=0 \
-</span><span style="color:#e6db74">        net.ipv4.conf.all.forwarding=1 net.ipv6.conf.all.forwarding=1&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>        -p 80:80 --dns<span style="color:#f92672">=</span>127.0.0.1 --volume <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>        /dev/ttyACM0:/dev/ttyACM0 --privileged openthread/otbr <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>        --radio-url spinel+hdlc+uart:///dev/ttyACM0
-
-docker run --rm --name otbr-metal -d <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --sysctl <span style="color:#e6db74">&#34;net.ipv6.conf.all.disable_ipv6=0 net.ipv4.conf.all.forwarding=1 net.ipv6.conf.all.forwarding=1&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --network host --dns<span style="color:#f92672">=</span>127.0.0.1 <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --volume /dev/ttyACM0:/dev/ttyACM0 <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --privileged openthread/otbr <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --radio-url spinel+hdlc+uart:///dev/ttyACM0
-</code></pre></div><p>Below commands to run in separate windows</p>
-<ul>
-<li>listen to the conainer logs</li>
-<li>open a shell in the container</li>
-<li>open a command line to the RCP</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker logs --follow otbr-metal
-docker exec -it otbr-metal /bin/bash
-ot-ctl
-</code></pre></div><h3 id="version">
-  version
-  <a class="anchor" href="#version">#</a>
-</h3>
-<p>These commands allow creating a docker image based on a specific commit, e.g. for testing with Thread version 1.1 instead of 1.2. The image is built with this <a href="https://github.com/openthread/ot-br-posix/blob/main/etc/docker/Dockerfile">Dockerfile</a>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/openthread/ot-br-posix
-cd ot-br-posix
-git checkout 4b6d3b863f
-<span style="color:#75715e">#git checkout 615de5  #2021-03-22</span>
-<span style="color:#75715e">#git checkout thread-br-certified-20180819</span>
-git submodule update --init --recursive
-docker build --no-cache -t openthread/otbr -f etc/docker/Dockerfile .
-</code></pre></div><p>Now running the same command above from the section <a href="#latest">latest</a> with the same image <code>openthread/otbr</code> will run the newly built image.</p>
-<h2 id="openthread---setup">
-  OpenThread - setup
-  <a class="anchor" href="#openthread---setup">#</a>
-</h2>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://openthread.io/guides/border-router/build#set-up-the-border-router"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            Setup - OpenThread...
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/openthread/ot-br-posix
-cd ot-br-posix
-./script/bootstrap
-NETWORK_MANAGER<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span> ./script/setup
-nano /etc/default/otbr-agent
-sudo reboot now
-sudo systemctl status
-sudo ot-ctl state
-</code></pre></div><p><em>issues</em>: in case a <code>dnsmasq</code> service already running, might have to be disabled first</p>
-<p>The status of the running services look as follows
-<details >
-  <summary>sudo systemctl status</summary>
-  <div class="markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pi@metal:~ $ sudo systemctl status
-● metal
-    State: running
-     Jobs: <span style="color:#ae81ff">0</span> queued
-   Failed: <span style="color:#ae81ff">0</span> units
-    Since: Thu 1970-01-01 01:00:01 CET; <span style="color:#ae81ff">51</span> years <span style="color:#ae81ff">1</span> months ago
-   CGroup: /
-           ├─user.slice
-           │ └─user-1000.slice
-           │   ├─session-3.scope
-           │   │ ├─1663 sshd: pi <span style="color:#f92672">[</span>priv<span style="color:#f92672">]</span>
-           │   │ ├─1669 sshd: pi@pts/0
-           │   │ ├─1670 -bash
-           │   │ ├─1687 sudo systemctl status
-           │   │ ├─1688 systemctl status
-           │   │ └─1689 pager
-           │   ├─user@1000.service
-           │   │ └─init.scope
-           │   │   ├─1637 /lib/systemd/systemd --user
-           │   │   └─1638 <span style="color:#f92672">(</span>sd-pam<span style="color:#f92672">)</span>
-           │   └─session-1.scope
-           │     ├─ <span style="color:#ae81ff">864</span> /bin/login -f
-           │     └─1648 -bash
-           ├─init.scope
-           │ └─1 /sbin/init splash
-           └─system.slice
-             ├─ncp_state_notifier.service
-             │ ├─427 /bin/sh /usr/sbin/ncp_state_notifier
-             │ ├─432 dbus-monitor --system type<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;signal&#39;</span>, interface<span style="color:#f92672">=</span>org.freedesktop.DBus.Properties, path
-             │ └─433 /bin/sh /usr/sbin/ncp_state_notifier
-             ├─alsa-state.service
-             │ └─395 /usr/sbin/alsactl -E HOME<span style="color:#f92672">=</span>/run/alsa -s -n <span style="color:#ae81ff">19</span> -c rdaemon
-             ├─containerd.service
-             │ └─553 /usr/bin/containerd
-             ├─systemd-timesyncd.service
-             │ └─341 /lib/systemd/systemd-timesyncd
-             ├─NetworkManager.service
-             │ ├─420 /usr/sbin/NetworkManager --no-daemon
-             │ └─633 /sbin/dhclient -d -q -sf /usr/lib/NetworkManager/nm-dhcp-helper -pf /run/dhclient-et
-             ├─dbus.service
-             │ └─409 /usr/bin/dbus-daemon --system --address<span style="color:#f92672">=</span>systemd: --nofork --nopidfile --systemd-acti
-             ├─hciuart.service
-             │ └─826 /usr/bin/hciattach /dev/serial1 bcm43xx <span style="color:#ae81ff">3000000</span> flow -
-             ├─udisks2.service
-             │ └─394 /usr/lib/udisks2/udisksd
-             ├─docker.service
-             │ └─853 /usr/bin/dockerd -H fd:// --containerd<span style="color:#f92672">=</span>/run/containerd/containerd.sock
-             ├─ssh.service
-             │ └─564 /usr/sbin/sshd -D
-             ├─ser2net.service
-             │ └─868 /usr/sbin/ser2net -c /etc/ser2net.conf -P /run/ser2net.pid
-             ├─avahi-daemon.service
-             │ ├─393 avahi-daemon: running <span style="color:#f92672">[</span>metal.local<span style="color:#f92672">]</span>
-             │ └─398 avahi-daemon: chroot helper
-             ├─otbr-web.service
-             │ └─428 /usr/sbin/otbr-web
-             ├─wpa_supplicant.service
-             │ └─419 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
-             ├─triggerhappy.service
-             │ └─442 /usr/sbin/thd --triggers /etc/triggerhappy/triggers.d/ --socket /run/thd.socket --us
-             ├─systemd-logind.service
-             │ └─439 /lib/systemd/systemd-logind
-             ├─polkit.service
-             │ └─511 /usr/lib/policykit-1/polkitd --no-debug
-             ├─otbr-agent.service
-             │ └─423 /usr/sbin/otbr-agent -I wpan0 spinel+hdlc+uart:///dev/ttyACM0
-             ├─telegraf.service
-             │ └─542 /usr/bin/telegraf -config /etc/telegraf/telegraf.conf -config-directory /etc/telegra
-             ├─cron.service
-             │ └─437 /usr/sbin/cron -f
-             ├─systemd-udevd.service
-             │ └─181 /lib/systemd/systemd-udevd
-             ├─rsyslog.service
-             │ └─403 /usr/sbin/rsyslogd -n -iNONE
-             ├─bluetooth.service
-             │ └─831 /usr/lib/bluetooth/bluetoothd
-             ├─inetd.service
-             │ └─857 /usr/sbin/inetd
-             ├─bluealsa.service
-             │ └─834 /usr/bin/bluealsa
-             ├─systemd-journald.service
-             │ └─121 /lib/systemd/systemd-journald
-             ├─bind9.service
-             │ └─560 /usr/sbin/named -u bind
-             ├─rng-tools.service
-             │ └─415 /usr/sbin/rngd -r /dev/hwrng
-             └─dhcpcd.service
-               └─473 /sbin/dhcpcd -q -b
-</code></pre></div>
-  </div>
-</details>
-</p>
-<p>After forming a network, the interface would look as follows
-<details >
-  <summary>ifconfig wpan0</summary>
-  <div class="markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wpan0: flags<span style="color:#f92672">=</span>4305&lt;UP,POINTOPOINT,RUNNING,NOARP,MULTICAST&gt;  mtu <span style="color:#ae81ff">1280</span>
-        inet6 fd85:454:6529:a0c5:9ebb:d761:b6d:df4e  prefixlen <span style="color:#ae81ff">64</span>  scopeid 0x0&lt;global&gt;
-        inet6 fd11:22::7005:5eac:6482:e2ec  prefixlen <span style="color:#ae81ff">64</span>  scopeid 0x0&lt;global&gt;
-        inet6 fe80::94bf:4de7:183c:f37d  prefixlen <span style="color:#ae81ff">64</span>  scopeid 0x20&lt;link&gt;
-        inet6 fd85:454:6529:a0c5:0:ff:fe00:fc00  prefixlen <span style="color:#ae81ff">64</span>  scopeid 0x0&lt;global&gt;
-        inet6 fd85:454:6529:a0c5:0:ff:fe00:d400  prefixlen <span style="color:#ae81ff">64</span>  scopeid 0x0&lt;global&gt;
-        unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  txqueuelen <span style="color:#ae81ff">500</span>  <span style="color:#f92672">(</span>UNSPEC<span style="color:#f92672">)</span>
-        RX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
-        RX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span>  overruns <span style="color:#ae81ff">0</span>  frame <span style="color:#ae81ff">0</span>
-        TX packets <span style="color:#ae81ff">9</span>  bytes <span style="color:#ae81ff">1524</span> <span style="color:#f92672">(</span>1.4 KiB<span style="color:#f92672">)</span>
-        TX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span> overruns <span style="color:#ae81ff">0</span>  carrier <span style="color:#ae81ff">0</span>  collisions <span style="color:#ae81ff">0</span>
-</code></pre></div>
-  </div>
-</details>
-</p>
-<h2 id="nordic---sdcard-image">
-  Nordic - sdcard image
-  <a class="anchor" href="#nordic---sdcard-image">#</a>
-</h2>
-<ul>
-<li>download a ready raspberry pi image</li>
-<li>successfully tested with the Nordif Firmware from the SDK v4.1.0</li>
-</ul>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK-for-Thread-and-Zigbee/Download#infotabs"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            Download the nRF5 SDK for Thread and Zigbee...
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<h2 id="form-a-network">
-  Form a network
-  <a class="anchor" href="#form-a-network">#</a>
-</h2>
-<p>Upon success you should be able to connect on the raspberry pi url <code>http://10.0.0.41/</code></p>
 
 
 
@@ -2430,9 +1077,9 @@ sudo ot-ctl state
 <div class="text-center">
   <a >
     <img
-    src="/images/thread_sensortag/OTBR_server.png"
+    src="/images/uwb/DWM1004C%20Module.png"
     alt=""
-    width=""
+    width="150px"
     height=""
     decoding="async"
   />
@@ -2440,138 +1087,19 @@ sudo ot-ctl state
   
 </div>
 
-<ul>
-<li>on the left menu click on <code>Join</code> then select the required paramters (e.g. Channel,&hellip;) then click on <code>FORM</code></li>
-</ul>
-<h2 id="wireshark-sniffing">
-  wireshark sniffing
-  <a class="anchor" href="#wireshark-sniffing">#</a>
-</h2>
-<p>git clone <a href="https://github.com/NordicSemiconductor/nRF-Sniffer-for-802.15.4">https://github.com/NordicSemiconductor/nRF-Sniffer-for-802.15.4</a></p>
-<ul>
-<li>Flash the <code>nrf802154_sniffer_dongle.hex</code></li>
-</ul>
-<p>When Forming a network, some Pakets can be sniffed including advertisment</p>
-
-
-
-
-
-
-<div class="text-center">
-  <a >
-    <img
-    src="/images/thread_sensortag/wireshark_startup.png"
-    alt=""
-    width=""
-    height=""
-    decoding="async"
-  />
-  </a>
-  
-</div>
-
-<h1 id="mqtt-sensors-node">
-  MQTT Sensors Node
-  <a class="anchor" href="#mqtt-sensors-node">#</a>
-</h1>
-<ul>
-<li>
-<p>MQTT-SN is a protocol not requiring <code>Thread</code> necessarily, it is rather a protcol for a bridge that allows clients to interact with an MQTT Broquer with minimal payload and packets transfers, therefore, it is well adapted to ip over low power mesh networks such as <code>Thread</code>.</p>
-</li>
-<li>
-<p>Example firmware <code>mqttsn_sleepy_publisher</code> and <code>mqttsn_client_publisher</code> are a port of the nRFSDK example from PCA10056 which was the only supported board to the PCA10059, the nRF52840 USB dongle, therefore the search gateway, connect, publish sequence have been merged in on button and run cyclically on each new press.</p>
-</li>
-</ul>
 
 <div class="container">
     <div class="row">
         <div class="col text-center">
         <a  class="book-btn"
             
-                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware/mqttsn_sleepy_publisher"
+                href="https://eu.mouser.com/datasheet/2/412/DWM1004C_Data_Sheet-1950562.pdf"
                 target="_blank"
             
             
             role="button"
         >
-            mqttsn_sleepy_publisher
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware/mqttsn_client_publisher"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            mqttsn_client_publisher
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.oasis-open.org/committees/download.php/66091/MQTT-SN_spec_v1.2.pdf"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            MQTT-SN_spec_v1.2.pdf
+            DWM1004C Tag pdf
             
             
                 
@@ -2606,463 +1134,20 @@ sudo ot-ctl state
     </div>
 </div>
 
-<p>useful commands</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl status paho-mqttsn-gateway.service
-sudo /usr/sbin/MQTT-SNGateway -f /etc/paho-mqtt-sn-gateway.conf
-sudo nano /etc/paho-mqtt-sn-gateway.conf
-</code></pre></div><details >
-  <summary>paho-mqtt-sn-gateway.conf</summary>
-  <div class="markdown-inner">
-    <pre><code class="language-conf" data-lang="conf">#**************************************************************************
-# Copyright (c) 2016-2019, Tomoaki Yamaguchi
-#
-# All rights reserved. This program and the accompanying materials
-# are made available under the terms of the Eclipse Public License v1.0
-# and Eclipse Distribution License v1.0 which accompany this distribution.
-#
-# The Eclipse Public License is available at
-#    http://www.eclipse.org/legal/epl-v10.html
-# and the Eclipse Distribution License is available at
-#   http://www.eclipse.org/org/documents/edl-v10.php.
-#***************************************************************************
-#
-# config file of MQTT-SN Gateway
-#
-
-# IPv4 Address of iot.eclipse.org
-BrokerName=10.0.0.42
-BrokerPortNo=1883
-BrokerSecurePortNo=8883
-
-#
-# When AggregatingGateway=YES or ClientAuthentication=YES,
-# All clients must be specified by the ClientList File
-#
-
-ClientAuthentication=NO
-AggregatingGateway=NO
-QoS-1=NO
-Forwarder=NO
-
-#ClientsList=/path/to/your_clients.conf
-
-PredefinedTopic=NO
-#PredefinedTopicList=/path/to/your_predefinedTopic.conf
-
-#RootCAfile=/etc/ssl/certs/ca-certificates.crt
-#RootCApath=/etc/ssl/certs/
-#CertsFile=/path/to/certKey.pem
-#PrivateKey=/path/to/privateKey.pem
-
-GatewayID=1
-GatewayName=PahoGateway-01
-KeepAlive=900
-#LoginID=your_ID
-#Password=your_Password
-
-
-# UDP
-GatewayPortNo=10000
-MulticastIP=225.1.1.1
-MulticastPortNo=1883
-
-# GatewayUDP6Broadcast address is set to all Thread devices address
-# in order to enable Thread Sleepy Devices to receive multicast messages
-# sent from the gateway.
-# UDP6
-GatewayUDP6Port = 47193
-GatewayUDP6Broadcast = ff03::1
-GatewayUDP6If = wpan0
-
-# XBee
-Baudrate=38400
-SerialDevice=/dev/ttyUSB0
-ApiMode=2
-
-# LOG
-ShearedMemory=NO;
-</code></pre>
-  </div>
-</details>
-
-<p>Test vector for sending a <code>SEARCHGW</code> message to the MQTT-SQ gateway service</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#send (Length 3)(MsgType SEARCHGW=1)(Radius 1)</span>
-echo -n -e <span style="color:#e6db74">&#34;030101&#34;</span> | xxd -r -p | nc -u fd11:1111:1122:0:98bf:60c7:9431:ee90 <span style="color:#ae81ff">47193</span>
-</code></pre></div><h2 id="firmware-flow-diagram">
-  Firmware flow diagram
-  <a class="anchor" href="#firmware-flow-diagram">#</a>
-</h2>
-<p>running the firmware example <code>mqtt_client_publisher</code> results in the following logs</p>
-<details >
-  <summary>MQTT-SN gateway log</summary>
-  <div class="markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pi@raspberrypi:~ $ sudo /usr/sbin/MQTT-SNGateway -f /etc/paho-mqtt-sn-gateway.conf
-ClientList can not open the Predefined Topic List.     /etc/predefinedTopic.conf
-
- ***************************************************************************
- * MQTT-SN Transparent Gateway
- * Part of Project Paho in Eclipse
- * <span style="color:#f92672">(</span>http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt-sn.embedded-c.git/<span style="color:#f92672">)</span>
- *
- * Author : Tomoaki YAMAGUCHI
- * Version: 1.3.1
- ***************************************************************************
-
-<span style="color:#ae81ff">20210213</span> 194529.539 PahoGateway-01 has been started.
-
- ConfigFile: /etc/paho-mqtt-sn-gateway.conf
- SensorN/W:   Gateway Port: <span style="color:#ae81ff">47193</span> Broadcast Address: ff03::1 Interface: wpan0
- Broker:     10.0.0.42 : 1883, <span style="color:#ae81ff">8883</span>
- RootCApath: <span style="color:#f92672">(</span>null<span style="color:#f92672">)</span>
- RootCAfile: <span style="color:#f92672">(</span>null<span style="color:#f92672">)</span>
- CertKey:    <span style="color:#f92672">(</span>null<span style="color:#f92672">)</span>
- PrivateKey: <span style="color:#f92672">(</span>null<span style="color:#f92672">)</span>
-
-
-
-<span style="color:#ae81ff">20210213</span> 194535.931   SEARCHGW          &lt;---  Client                              <span style="color:#ae81ff">03</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">01</span>
-<span style="color:#ae81ff">20210213</span> 194535.932   GWINFO            ---&gt;  Clients                             <span style="color:#ae81ff">03</span> <span style="color:#ae81ff">02</span> <span style="color:#ae81ff">01</span>
-
-<span style="color:#ae81ff">20210213</span> 194541.989   CONNECT           &lt;---  nRF52840_publisher                  <span style="color:#ae81ff">18</span> <span style="color:#ae81ff">04</span> <span style="color:#ae81ff">04</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">00</span> 3C 6E <span style="color:#ae81ff">52</span> <span style="color:#ae81ff">46</span> <span style="color:#ae81ff">35</span> <span style="color:#ae81ff">32</span> <span style="color:#ae81ff">38</span> <span style="color:#ae81ff">34</span> <span style="color:#ae81ff">30</span> 5F <span style="color:#ae81ff">70</span> <span style="color:#ae81ff">75</span> <span style="color:#ae81ff">62</span> 6C <span style="color:#ae81ff">69</span> <span style="color:#ae81ff">73</span> <span style="color:#ae81ff">68</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">72</span>
-<span style="color:#ae81ff">20210213</span> 194541.997   CONNECT           <span style="color:#f92672">===</span>&gt;  nRF52840_publisher                  <span style="color:#ae81ff">10</span> 1E <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">04</span> 4D <span style="color:#ae81ff">51</span> <span style="color:#ae81ff">54</span> <span style="color:#ae81ff">54</span> <span style="color:#ae81ff">04</span> <span style="color:#ae81ff">02</span> <span style="color:#ae81ff">00</span> 3C <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">12</span> 6E <span style="color:#ae81ff">52</span> <span style="color:#ae81ff">46</span> <span style="color:#ae81ff">35</span> <span style="color:#ae81ff">32</span> <span style="color:#ae81ff">38</span> <span style="color:#ae81ff">34</span> <span style="color:#ae81ff">30</span> 5F <span style="color:#ae81ff">70</span> <span style="color:#ae81ff">75</span> <span style="color:#ae81ff">62</span> 6C <span style="color:#ae81ff">69</span> <span style="color:#ae81ff">73</span> <span style="color:#ae81ff">68</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">72</span>
-<span style="color:#ae81ff">20210213</span> 194542.042   CONNACK           &lt;<span style="color:#f92672">===</span>  nRF52840_publisher                  <span style="color:#ae81ff">20</span> <span style="color:#ae81ff">02</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">00</span>
-<span style="color:#ae81ff">20210213</span> 194542.042   CONNACK           ---&gt;  nRF52840_publisher                  <span style="color:#ae81ff">03</span> <span style="color:#ae81ff">05</span> <span style="color:#ae81ff">00</span>
-
-<span style="color:#ae81ff">20210213</span> 194542.055   REGISTER    <span style="color:#ae81ff">0001</span>  &lt;---  nRF52840_publisher                  1D 0A <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">01</span> 6E <span style="color:#ae81ff">52</span> <span style="color:#ae81ff">46</span> <span style="color:#ae81ff">35</span> <span style="color:#ae81ff">32</span> <span style="color:#ae81ff">38</span> <span style="color:#ae81ff">34</span> <span style="color:#ae81ff">30</span> 5F <span style="color:#ae81ff">72</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">73</span> 6F <span style="color:#ae81ff">75</span> <span style="color:#ae81ff">72</span> <span style="color:#ae81ff">63</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">73</span> 2F 6C <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">64</span> <span style="color:#ae81ff">33</span>
-<span style="color:#ae81ff">20210213</span> 194542.056   REGACK      <span style="color:#ae81ff">0001</span>  ---&gt;  nRF52840_publisher                  <span style="color:#ae81ff">07</span> 0B <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">00</span>
-
-<span style="color:#ae81ff">20210213</span> 194550.331   PUBLISH     <span style="color:#ae81ff">0002</span>  &lt;---  nRF52840_publisher                  <span style="color:#ae81ff">08</span> 0C <span style="color:#ae81ff">20</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">02</span> <span style="color:#ae81ff">01</span>
-<span style="color:#ae81ff">20210213</span> 194550.331   PUBLISH     0002  <span style="color:#f92672">===</span>&gt;  nRF52840_publisher                  <span style="color:#ae81ff">32</span> 1C <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">17</span> 6E <span style="color:#ae81ff">52</span> <span style="color:#ae81ff">46</span> <span style="color:#ae81ff">35</span> <span style="color:#ae81ff">32</span> <span style="color:#ae81ff">38</span> <span style="color:#ae81ff">34</span> <span style="color:#ae81ff">30</span> 5F <span style="color:#ae81ff">72</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">73</span> 6F <span style="color:#ae81ff">75</span> <span style="color:#ae81ff">72</span> <span style="color:#ae81ff">63</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">73</span> 2F 6C <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">64</span> <span style="color:#ae81ff">33</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">02</span> <span style="color:#ae81ff">01</span>
-<span style="color:#ae81ff">20210213</span> 194550.338   PUBACK      <span style="color:#ae81ff">0002</span>  &lt;<span style="color:#f92672">===</span>  nRF52840_publisher                  <span style="color:#ae81ff">40</span> <span style="color:#ae81ff">02</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">02</span>
-<span style="color:#ae81ff">20210213</span> 194550.338   PUBACK      <span style="color:#ae81ff">0002</span>  ---&gt;  nRF52840_publisher                  <span style="color:#ae81ff">07</span> 0D <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">02</span> <span style="color:#ae81ff">00</span>
-
-<span style="color:#ae81ff">20210213</span> 194557.499   PUBLISH     <span style="color:#ae81ff">0003</span>  &lt;---  nRF52840_publisher                  <span style="color:#ae81ff">08</span> 0C <span style="color:#ae81ff">20</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">03</span> <span style="color:#ae81ff">00</span>
-<span style="color:#ae81ff">20210213</span> 194557.500   PUBLISH     0003  <span style="color:#f92672">===</span>&gt;  nRF52840_publisher                  <span style="color:#ae81ff">32</span> 1C <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">17</span> 6E <span style="color:#ae81ff">52</span> <span style="color:#ae81ff">46</span> <span style="color:#ae81ff">35</span> <span style="color:#ae81ff">32</span> <span style="color:#ae81ff">38</span> <span style="color:#ae81ff">34</span> <span style="color:#ae81ff">30</span> 5F <span style="color:#ae81ff">72</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">73</span> 6F <span style="color:#ae81ff">75</span> <span style="color:#ae81ff">72</span> <span style="color:#ae81ff">63</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">73</span> 2F 6C <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">64</span> <span style="color:#ae81ff">33</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">03</span> <span style="color:#ae81ff">00</span>
-<span style="color:#ae81ff">20210213</span> 194557.515   PUBACK      <span style="color:#ae81ff">0003</span>  &lt;<span style="color:#f92672">===</span>  nRF52840_publisher                  <span style="color:#ae81ff">40</span> <span style="color:#ae81ff">02</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">03</span>
-<span style="color:#ae81ff">20210213</span> 194557.516   PUBACK      <span style="color:#ae81ff">0003</span>  ---&gt;  nRF52840_publisher                  <span style="color:#ae81ff">07</span> 0D <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">03</span> <span style="color:#ae81ff">00</span>
-
-<span style="color:#ae81ff">20210213</span> 194602.541   PUBLISH     <span style="color:#ae81ff">0004</span>  &lt;---  nRF52840_publisher                  <span style="color:#ae81ff">08</span> 0C <span style="color:#ae81ff">20</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">04</span> <span style="color:#ae81ff">01</span>
-<span style="color:#ae81ff">20210213</span> 194602.542   PUBLISH     0004  <span style="color:#f92672">===</span>&gt;  nRF52840_publisher                  <span style="color:#ae81ff">32</span> 1C <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">17</span> 6E <span style="color:#ae81ff">52</span> <span style="color:#ae81ff">46</span> <span style="color:#ae81ff">35</span> <span style="color:#ae81ff">32</span> <span style="color:#ae81ff">38</span> <span style="color:#ae81ff">34</span> <span style="color:#ae81ff">30</span> 5F <span style="color:#ae81ff">72</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">73</span> 6F <span style="color:#ae81ff">75</span> <span style="color:#ae81ff">72</span> <span style="color:#ae81ff">63</span> <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">73</span> 2F 6C <span style="color:#ae81ff">65</span> <span style="color:#ae81ff">64</span> <span style="color:#ae81ff">33</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">04</span> <span style="color:#ae81ff">01</span>
-<span style="color:#ae81ff">20210213</span> 194602.547   PUBACK      <span style="color:#ae81ff">0004</span>  &lt;<span style="color:#f92672">===</span>  nRF52840_publisher                  <span style="color:#ae81ff">40</span> <span style="color:#ae81ff">02</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">04</span>
-<span style="color:#ae81ff">20210213</span> 194602.547   PUBACK      <span style="color:#ae81ff">0004</span>  ---&gt;  nRF52840_publisher                  <span style="color:#ae81ff">07</span> 0D <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">01</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">04</span> <span style="color:#ae81ff">00</span>
-</code></pre></div>
-  </div>
-</details>
-
-<details >
-  <summary>Firmware J-Link RTT log</summary>
-  <div class="markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&lt;info&gt; app_timer: RTC: initialized.
-&lt;info&gt; app: Thread version   : OPENTHREAD/20191113-00534-gc6a258e3; NRF52840; Apr  <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">2020</span> 21:53:43
-&lt;info&gt; app: Network name     : OpenThreadDemo
-&lt;info&gt; app: Thread interface has been enabled.
-&lt;info&gt; app: 802.15.4 Channel : <span style="color:#ae81ff">13</span>
-&lt;info&gt; app: 802.15.4 PAN ID  : 0x1234
-&lt;info&gt; app: Radio mode       : rx-on-when-idle
-&lt;warning&gt; app_timer: RTC instance already initialized.
-&lt;info&gt; app: State changed! Flags: 0x0117D33D Current role: <span style="color:#ae81ff">1</span>
-&lt;info&gt; app: State changed! &lt;info&gt; app: <span style="color:#f92672">(</span>0<span style="color:#f92672">)</span>
-&lt;info&gt; app: MQTT-SN event: Client has found an active gateway.
-&lt;info&gt; app: MQTT-SN event: Client has found an active gateway.
-&lt;info&gt; app: MQTT-SN event: Gateway discovery procedure has finished.
-&lt;info&gt; app: MQTT-SN event: Gateway discovery result: 0x0.
-&lt;info&gt; app: <span style="color:#f92672">(</span>1<span style="color:#f92672">)</span>
-&lt;info&gt; app: Wake up first time
-&lt;info&gt; app: MQTT-SN event: Client connected.
-&lt;info&gt; app: MQTT-SN event: Client registered topic.
-&lt;info&gt; app: MQTT-SN event: Topic has been registered with ID: 1.
-&lt;info&gt; app: <span style="color:#f92672">(</span>2<span style="color:#f92672">)</span>
-&lt;info&gt; app: Wake up next times
-&lt;info&gt; app: MQTT-SN event: Client has successfully published content.
-&lt;info&gt; app: <span style="color:#f92672">(</span>2<span style="color:#f92672">)</span>
-&lt;info&gt; app: Wake up next times
-&lt;info&gt; app: MQTT-SN event: Client has successfully published content.
-&lt;info&gt; app: <span style="color:#f92672">(</span>2<span style="color:#f92672">)</span>
-&lt;info&gt; app: Wake up next times
-&lt;info&gt; app: MQTT-SN event: Client has successfully published content.
-</code></pre></div>
-  </div>
-</details>
-
-<h2 id="firmware-search-gateway">
-  Firmware search gateway
-  <a class="anchor" href="#firmware-search-gateway">#</a>
-</h2>
-
-
-
-
-
-
-<div class="container">
-  <div class="row">
-      <div class="col text-center">
-          <a id="btn-mqtt-sn_gateway" class="book-btn" role="button" >Full Screen</a>
-      </div>
-</div>
-<embed id="svg-mqtt-sn_gateway" type="image/svg+xml" width=100% src="/images/thread_sensortag/mqtt-sn%20gateway.svg" />
-<script type="module">
-  import {setup_svg_panzoom,reset_svg_panzoom} from "/js/setup-svg-pan-zoom.js"
-  function window_reset_position(){
-    reset_svg_panzoom("mqtt-sn_gateway")
-  }
-  console.log(`into script for "mqtt-sn_gateway"`)
-  
-  
-  window.addEventListener('load', ()=>{
-    let embed = document.getElementById("svg-mqtt-sn_gateway")
-    setup_svg_panzoom(embed)
-  })
-  window.addEventListener('resize', window_reset_position)
- </script>
-
-<h1 id="building-on-other-frameworks">
-  Building on other frameworks
-  <a class="anchor" href="#building-on-other-frameworks">#</a>
-</h1>
-<h2 id="platformio">
-  Platformio
-  <a class="anchor" href="#platformio">#</a>
-</h2>
-<ul>
-<li>although Zephyr is integrated in platformio, openthread is unfortunately not yet supported as of <code>framework-zephyr 2.20400.201210 (2.4.0)</code></li>
-<li>docs.platformio <a href="https://docs.platformio.org/en/latest/frameworks/zephyr.html#limitations">limitations</a></li>
-</ul>
-<h2 id="arduino">
-  Arduino
-  <a class="anchor" href="#arduino">#</a>
-</h2>
-<ul>
-<li>in discussion in this <a href="https://github.com/openthread/openthread/issues/1803">openthread issue#1803</a>, the issue is that Arduino lacks the netwroking layers required to provide a descent interface to the app.</li>
-</ul>
-<h1 id="chip-node">
-  CHIP Node
-  <a class="anchor" href="#chip-node">#</a>
-</h1>
-<p>As the <code>CHIP Protocol</code> can run over <code>Thread</code>, it is possible to connect CHIP applications.</p>
+<p>Source code
 
 <div class="container">
     <div class="row">
         <div class="col text-center">
         <a  class="book-btn"
             
-            
-                href="https://www.homesmartmesh.com/docs/frameworks/chip/"
-            
-            role="button"
-        >
-            More about Project CHIP
-            
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<h1 id="test-and-debug">
-  Test and Debug
-  <a class="anchor" href="#test-and-debug">#</a>
-</h1>
-<h2 id="with-server-command-line">
-  with server command line
-  <a class="anchor" href="#with-server-command-line">#</a>
-</h2>
-<ul>
-<li>using <code>wpanctl</code></li>
-</ul>
-<details >
-  <summary>host wpantund wpanctl. Click to expand...</summary>
-  <div class="markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo nano /etc/wpantund.conf
-
-sudo wpanctl status
-
-sudo wpanctl scan
-
-sudo wpanctl leave
-
-sudo wpanctl setprop w
-
-sudo wpanctl setprop Channel: <span style="color:#ae81ff">15</span>
-
-sudo wpanctl setprop Network:PANID 0x1234
-
-sudo wpanctl setprop Network:Key 00112233445566778899aabbccddeeff
-
-sudo wpanctl config-gateway -d <span style="color:#e6db74">&#34;fd11:22::&#34;</span>
-
-sudo wpanctl form <span style="color:#e6db74">&#34;nRF52840thread&#34;</span>
-
-sudo wpanctl permit-join <span style="color:#ae81ff">300</span>
-
-w join -n <span style="color:#e6db74">&#34;MeasureFall&#34;</span> -c <span style="color:#ae81ff">15</span> -k 00112233445566778899aabbccddeeff -p 0x1234
-</code></pre></div>
-  </div>
-</details>
-
-<h2 id="cli-on-border-router">
-  cli on border router
-  <a class="anchor" href="#cli-on-border-router">#</a>
-</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo ot-ctl
-</code></pre></div><h2 id="cli-openthread-firmware">
-  cli openthread firmware
-  <a class="anchor" href="#cli-openthread-firmware">#</a>
-</h2>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.homesmartmesh.com/ot-cli-ftd_thread-reference-20191113_nRF52840_dongle_no_bootloader.zip"
+                href="https://github.com/Decawave"
                 target="_blank"
             
             
             role="button"
         >
-            ot-cli-ftd thread-reference-20191113
-            
-            
-                
-                
-
-                
-
-                
-                <svg    class="download"
-                        viewBox="0 0 512 512"
-                        fill="currentColor"
-                        >
-                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
-                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
-                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
-                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
-                </svg>
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<h2 id="cli-nordic-firmware">
-  cli Nordic firmware
-  <a class="anchor" href="#cli-nordic-firmware">#</a>
-</h2>
-<ul>
-<li>A dongle flashed with <code>cli</code> firmware can be attached to the serial console and offer a command line interpreter that helps with testing</li>
-</ul>
-<p>build and flash the cli example</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;cd <span style="color:#e6db74">&#34;examples\thread\cli\ftd\usb\pca10059\mbr\armgcc\Makefile&#34;</span>
-&gt;make
-&gt;make flash_mbr
-&gt;make flash
-</code></pre></div><p>on the cli</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">panid 0x1234
-panid
-channel <span style="color:#ae81ff">13</span>
-channel
-networkname OpenThreadDemo
-networkname
-extpanid <span style="color:#ae81ff">1111111122222222</span>
-masterkey
-ifconfig up
-thread start
-state
-</code></pre></div><p>Note <code>masterkey</code> command is for the <code>Network Key</code></p>
-<p>at this stage the <code>state</code> command should log <code>child</code></p>
-<p>wireshark should log the join as follows</p>
-
-
-
-
-
-
-<div class="text-center">
-  <a >
-    <img
-    src="/images/thread_sensortag/child_join.png"
-    alt=""
-    width=""
-    height=""
-    decoding="async"
-  />
-  </a>
-  
-</div>
-
-<ul>
-<li>it&rsquo;s possible to ping with the router ip</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;ping fe80::c85c:d0c4:1103:31d5
-Done
-&gt; <span style="color:#ae81ff">16</span> bytes from fe80:0:0:0:c85c:d0c4:1103:31d5: icmp_seq<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span> hlim<span style="color:#f92672">=</span><span style="color:#ae81ff">64</span> time<span style="color:#f92672">=</span>12ms
-</code></pre></div><p>a good exercice is to commission a device through CLI</p>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://openthread.io/guides/border-router/external-commissioning"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            External commitioning...
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<h2 id="cli-reference">
-  cli reference
-  <a class="anchor" href="#cli-reference">#</a>
-</h2>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/openthread/openthread/blob/master/src/cli/README.md"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            thread cli reference
+            Decaware
             
             
                 
@@ -3087,160 +1172,7 @@ Done
     </div>
     </div>
 </div>
-
-<details >
-  <summary>ncp cli. Click to expand...</summary>
-  <div class="markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cu -l /dev/ttyACM0 -s <span style="color:#ae81ff">115200</span>
-panid 0xabcd
-ifconfig up
-thread start
-state
-ping fd00:0064:0123:4567::0808:0808
-router list
-</code></pre></div><p>adresses</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">panid
-rloc16
-eui64
-extaddr
-extpanid
-ipaddr
-ipmaddr
-leaderdata
-</code></pre></div>
-  </div>
-</details>
-
-<h1 id="thread-over-zephyr">
-  Thread over Zephyr
-  <a class="anchor" href="#thread-over-zephyr">#</a>
-</h1>
-<p>for installing Zephyr see 
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-            
-                href="https://www.homesmartmesh.com/docs/frameworks/zephyr/"
-            
-            role="button"
-        >
-            Installing Zephyr
-            
-            
-        </a>
-    </div>
-    </div>
-</div>
 </p>
-<h2 id="building-cli">
-  building cli
-  <a class="anchor" href="#building-cli">#</a>
-</h2>
-<ul>
-<li>add <code>CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n</code> to <code>overlay-minimal_singleprotocol.conf</code></li>
-<li>Not yet successfull with the nRF52 dongle due to the missing usb overlay</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">source ~/ncs/zephyr/zephyr-env.sh
-cd ~/ncs/nrf/samples/openthread/cli
-west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prj.conf overlay-minimal_singleprotocol.conf&#34;</span>
-</code></pre></div><h1 id="faq---discussion">
-  FAQ - Discussion
-  <a class="anchor" href="#faq---discussion">#</a>
-</h1>
-<ul>
-<li>
-<p>If you need support, want to ask a question or suggest a different answer, you can join the discussion on the discord server
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://discord.gg/A5X64fkM8m"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            Home Smart Mesh - Thread channel
-            
-            
-                
-                
-
-                
-                <span class="discord">
-                    <svg 
-                        viewBox="0 0 256 293"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentcolor"
-                        preserveAspectRatio="xMidYMid">
-                            <path d="M226.011 0H29.99C13.459 0 0 13.458 0 30.135v197.778c0 16.677 13.458 30.135 29.989 30.135h165.888l-7.754-27.063 18.725 17.408 17.7 16.384L256 292.571V30.135C256 13.458 242.542 0 226.011 0zm-56.466 191.05s-5.266-6.291-9.655-11.85c19.164-5.413 26.478-17.408 26.478-17.408-5.998 3.95-11.703 6.73-16.823 8.63-7.314 3.073-14.336 5.12-21.211 6.291-14.044 2.633-26.917 1.902-37.888-.146-8.339-1.61-15.507-3.95-21.504-6.29-3.365-1.317-7.022-2.926-10.68-4.974-.438-.293-.877-.439-1.316-.732-.292-.146-.439-.292-.585-.438-2.633-1.463-4.096-2.487-4.096-2.487s7.022 11.703 25.6 17.261c-4.388 5.56-9.801 12.142-9.801 12.142-32.33-1.024-44.617-22.235-44.617-22.235 0-47.104 21.065-85.285 21.065-85.285 21.065-15.799 41.106-15.36 41.106-15.36l1.463 1.756C80.75 77.53 68.608 89.088 68.608 89.088s3.218-1.755 8.63-4.242c15.653-6.876 28.088-8.777 33.208-9.216.877-.147 1.609-.293 2.487-.293a123.776 123.776 0 0 1 29.55-.292c13.896 1.609 28.818 5.705 44.031 14.043 0 0-11.556-10.971-36.425-18.578l2.048-2.34s20.041-.44 41.106 15.36c0 0 21.066 38.18 21.066 85.284 0 0-12.435 21.211-44.764 22.235zm-68.023-68.316c-8.338 0-14.92 7.314-14.92 16.237 0 8.924 6.728 16.238 14.92 16.238 8.339 0 14.921-7.314 14.921-16.238.147-8.923-6.582-16.237-14.92-16.237m53.394 0c-8.339 0-14.922 7.314-14.922 16.237 0 8.924 6.73 16.238 14.922 16.238 8.338 0 14.92-7.314 14.92-16.238 0-8.923-6.582-16.237-14.92-16.237"/>
-                    </svg>
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-</p>
-</li>
-<li>
-<p>see also
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.threadgroup.org/support#faq"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            threadgroup FAQ
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-</p>
-</li>
-</ul>
 
 
 
@@ -3249,10 +1181,10 @@ west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">
   
   <details>
     <summary>
-What is the difference between RCP/NCP Thread Stack ?
+What is Ultra Wide Band ?
 </summary>
     <div class="markdown-inner">
-      RCP stands for Radio Co-Processor and only includes the MAC Layer not the full Thread Core stack. More details : <a href="https://openthread.io/platforms#network-co-processor-ncp">https://openthread.io/platforms#network-co-processor-ncp</a>
+      It&rsquo;s a radio technology that is not based on classical frequency or amplitude modulation rather uses a rich signal that occupies a large spectrum band.
     </div>
   </details>
 
@@ -3261,82 +1193,10 @@ What is the difference between RCP/NCP Thread Stack ?
   
   <details>
     <summary>
-What is the link between FTD/ETD Thread Devices ?
+What does Ultra Wide Band mean for home automation ?
 </summary>
     <div class="markdown-inner">
-      FTD = <code>Full Thread device</code> can be a Thread router or more, an ETD <code>End Thread Device</code> can be M:minial or S:Sleepy and in both cases does not route packets. More details <a href="https://openthread.io/guides/thread-primer/node-roles-and-types">https://openthread.io/guides/thread-primer/node-roles-and-types</a>
-    </div>
-  </details>
-
-  
-  
-  
-  <details>
-    <summary>
-What is the difference between using an RCP/NCP and running Thread as a stand alone device ?
-</summary>
-    <div class="markdown-inner">
-      The difference only lays on the partitioning of the application, in the RCP/NCP the application runs on the Host be it a raspberry pi or another uC, in the stand alone the whole thread stack and app run on the same device. We can think of the NCP as example like the CLI=<code>command line interface</code> Thread utility, but the protocol is not text mode rather binary. If the host is an uC itself, the question would be, why using two uC and if it is possible rather to merge them in just one, a corner case might need that like for example a double uC with WiFi and thread capabiltiy.
-    </div>
-  </details>
-
-  
-  
-  
-  <details>
-    <summary>
-Does the Thread Topolog Monitor use the same CLI firmware as the openthread CLI ?
-</summary>
-    <div class="markdown-inner">
-      No, the Thread Topology monitor TTM comes with it own firmware that needs to be flashed
-    </div>
-  </details>
-
-  
-  
-  
-  <details>
-    <summary>
-How does the Thread Topolog Monitor work ? What can it see ?
-</summary>
-    <div class="markdown-inner">
-      The Thread Topolog Monitor TTM is an active node on the network, it needs the credentials to be able to join it and only then it can retrieve info from the network it will also display itself in the network.
-    </div>
-  </details>
-
-  
-  
-  
-  <details>
-    <summary>
-What is the difference between the Thread Topology Monitor and the 802.15.4 sniffer ?
-</summary>
-    <div class="markdown-inner">
-      The 802.15.4 sniffer does not join the network and is totally passive. It can listen to all the traffic of the channel it is in, including all pan ids. If it has the master key, it can then decript data from the corresponding network.
-    </div>
-  </details>
-
-  
-  
-  
-  <details>
-    <summary>
-can I run openthread with Arduino ?
-</summary>
-    <div class="markdown-inner">
-      No, at least not at the moment and not within a native integration similar to the wifi and network in arduino. Despite being known to be an IDE, under the hoods, Arduino is also a framework. The current preferred and supported framework for openthread is Zephyr-OS.
-    </div>
-  </details>
-
-  
-  
-  
-  <details>
-    <summary>
-can I run openthread with platformio ?
-</summary>
-    <div class="markdown-inner">
-      This is under investigation and should be available soon. The current platformio integration of Zephyr-OS does not include openthread, but this is likely to change any time soon.
+      Very low energy level allows small battery operated tags to achieve functions like precise indoors positioning, which so far could only be achieved with heavier equipment like cameras that need high processing power localisation algorithms.
     </div>
   </details>
 
@@ -3355,10 +1215,10 @@ can I run openthread with platformio ?
       
       {
         "@type": "Question",
-        "name": "What is the difference between RCP/NCP Thread Stack ?",
+        "name": "What is Ultra Wide Band ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "RCP stands for Radio Co-Processor and only includes the MAC Layer not the full Thread Core stack. More details : \u003ca href=\"https://openthread.io/platforms#network-co-processor-ncp\"\u003ehttps://openthread.io/platforms#network-co-processor-ncp\u003c/a\u003e"
+          "text": "It\u0026rsquo;s a radio technology that is not based on classical frequency or amplitude modulation rather uses a rich signal that occupies a large spectrum band."
         }
       }
     
@@ -3370,94 +1230,10 @@ can I run openthread with platformio ?
       
       ,{
         "@type": "Question",
-        "name": "What is the link between FTD/ETD Thread Devices ?",
+        "name": "What does Ultra Wide Band mean for home automation ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "FTD = \u003ccode\u003eFull Thread device\u003c/code\u003e can be a Thread router or more, an ETD \u003ccode\u003eEnd Thread Device\u003c/code\u003e can be M:minial or S:Sleepy and in both cases does not route packets. More details \u003ca href=\"https://openthread.io/guides/thread-primer/node-roles-and-types\"\u003ehttps://openthread.io/guides/thread-primer/node-roles-and-types\u003c/a\u003e"
-        }
-      }
-    
-      
-      
-      
-      
-      
-      ,{
-        "@type": "Question",
-        "name": "What is the difference between using an RCP/NCP and running Thread as a stand alone device ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The difference only lays on the partitioning of the application, in the RCP/NCP the application runs on the Host be it a raspberry pi or another uC, in the stand alone the whole thread stack and app run on the same device. We can think of the NCP as example like the CLI=\u003ccode\u003ecommand line interface\u003c/code\u003e Thread utility, but the protocol is not text mode rather binary. If the host is an uC itself, the question would be, why using two uC and if it is possible rather to merge them in just one, a corner case might need that like for example a double uC with WiFi and thread capabiltiy."
-        }
-      }
-    
-      
-      
-      
-      
-      
-      ,{
-        "@type": "Question",
-        "name": "Does the Thread Topolog Monitor use the same CLI firmware as the openthread CLI ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No, the Thread Topology monitor TTM comes with it own firmware that needs to be flashed"
-        }
-      }
-    
-      
-      
-      
-      
-      
-      ,{
-        "@type": "Question",
-        "name": "How does the Thread Topolog Monitor work ? What can it see ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The Thread Topolog Monitor TTM is an active node on the network, it needs the credentials to be able to join it and only then it can retrieve info from the network it will also display itself in the network."
-        }
-      }
-    
-      
-      
-      
-      
-      
-      ,{
-        "@type": "Question",
-        "name": "What is the difference between the Thread Topology Monitor and the 802.15.4 sniffer ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The 802.15.4 sniffer does not join the network and is totally passive. It can listen to all the traffic of the channel it is in, including all pan ids. If it has the master key, it can then decript data from the corresponding network."
-        }
-      }
-    
-      
-      
-      
-      
-      
-      ,{
-        "@type": "Question",
-        "name": "can I run openthread with Arduino ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No, at least not at the moment and not within a native integration similar to the wifi and network in arduino. Despite being known to be an IDE, under the hoods, Arduino is also a framework. The current preferred and supported framework for openthread is Zephyr-OS."
-        }
-      }
-    
-      
-      
-      
-      
-      
-      ,{
-        "@type": "Question",
-        "name": "can I run openthread with platformio ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "This is under investigation and should be available soon. The current platformio integration of Zephyr-OS does not include openthread, but this is likely to change any time soon."
+          "text": "Very low energy level allows small battery operated tags to achieve functions like precise indoors positioning, which so far could only be achieved with heavier equipment like cameras that need high processing power localisation algorithms."
         }
       }
     
@@ -3499,71 +1275,8 @@ can I run openthread with platformio ?
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#relates-to">Relates to</a></li>
-    <li><a href="#overview">Overview</a>
-      <ul>
-        <li><a href="#cheat-sheet">Cheat sheet</a></li>
-        <li><a href="#specification">Specification</a></li>
-        <li><a href="#tools">Tools</a></li>
-        <li><a href="#thread-nodes">Thread Nodes</a></li>
-      </ul>
-    </li>
-    <li><a href="#radio-co-processor-rcp">Radio Co-Processor (RCP)</a>
-      <ul>
-        <li><a href="#openthread">OpenThread</a></li>
-        <li><a href="#zephyr-v2599">Zephyr v2.5.99</a></li>
-      </ul>
-    </li>
-    <li><a href="#network-co-processor-ncp">Network Co-Processor (NCP)</a>
-      <ul>
-        <li><a href="#nordic---nrf-410">Nordic - nRF 4.1.0</a></li>
-        <li><a href="#zephyr-v2499">Zephyr v2.4.99</a></li>
-        <li><a href="#nordic---nrf-connect">Nordic - nRF Connect</a></li>
-        <li><a href="#open-thread">Open Thread</a></li>
-      </ul>
-    </li>
-    <li><a href="#border-router">Border Router</a>
-      <ul>
-        <li><a href="#openthread---docker">OpenThread - docker</a>
-          <ul>
-            <li><a href="#latest">latest</a></li>
-            <li><a href="#version">version</a></li>
-          </ul>
-        </li>
-        <li><a href="#openthread---setup">OpenThread - setup</a></li>
-        <li><a href="#nordic---sdcard-image">Nordic - sdcard image</a></li>
-        <li><a href="#form-a-network">Form a network</a></li>
-        <li><a href="#wireshark-sniffing">wireshark sniffing</a></li>
-      </ul>
-    </li>
-    <li><a href="#mqtt-sensors-node">MQTT Sensors Node</a>
-      <ul>
-        <li><a href="#firmware-flow-diagram">Firmware flow diagram</a></li>
-        <li><a href="#firmware-search-gateway">Firmware search gateway</a></li>
-      </ul>
-    </li>
-    <li><a href="#building-on-other-frameworks">Building on other frameworks</a>
-      <ul>
-        <li><a href="#platformio">Platformio</a></li>
-        <li><a href="#arduino">Arduino</a></li>
-      </ul>
-    </li>
-    <li><a href="#chip-node">CHIP Node</a></li>
-    <li><a href="#test-and-debug">Test and Debug</a>
-      <ul>
-        <li><a href="#with-server-command-line">with server command line</a></li>
-        <li><a href="#cli-on-border-router">cli on border router</a></li>
-        <li><a href="#cli-openthread-firmware">cli openthread firmware</a></li>
-        <li><a href="#cli-nordic-firmware">cli Nordic firmware</a></li>
-        <li><a href="#cli-reference">cli reference</a></li>
-      </ul>
-    </li>
-    <li><a href="#thread-over-zephyr">Thread over Zephyr</a>
-      <ul>
-        <li><a href="#building-cli">building cli</a></li>
-      </ul>
-    </li>
-    <li><a href="#faq---discussion">FAQ - Discussion</a></li>
+    <li><a href="#standard">Standard</a></li>
+    <li><a href="#module">Module</a></li>
   </ul>
 </nav>
 
