@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.12bb363db1fc078add436e76b950054dddd70fa462097c4dd2239c5510ea1aa4.js" integrity="sha256-Ers2PbH8B4rdQ252uVAFTd3XD6RiCXxN0iOcVRDqGqQ="></script>
+<script defer src="/en.search.min.8ce6af4131333480f8603d819da3a035f1a9f49e98d44c4a02d712d3de704656.js" integrity="sha256-jOavQTEzNID4YD2BnaOgNfGp9J6Y1ExKAtcS095wRlY="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -914,6 +914,7 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#device-treee-drivers">device treee drivers</a></li>
             <li><a href="#tag_sensor_veml6030">tag_sensor_veml6030</a></li>
             <li><a href="#tag_sensor_ms8607">tag_sensor_ms8607</a></li>
+            <li><a href="#tag_battery">tag_battery</a></li>
           </ul>
         </li>
         <li><a href="#preliminary-test-samples">preliminary test samples</a>
@@ -1824,6 +1825,107 @@ ms8607&gt; t=22.65 °  p=963.55 mbar  h=53.33 %RH
   </div>
 </details>
 
+<h3 id="tag_battery">
+  tag_battery
+  <a class="anchor" href="#tag_battery">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">west build -t guiconfig
+west build -b nrf52840_sensortag -- -DCONF_FILE<span style="color:#f92672">=</span>prj.conf
+west flash
+</code></pre></div>
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/tree/main/samples/tag_battery"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            tag battery
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<details >
+  <summary>default config</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-conf" data-lang="conf">CONFIG_GPIO=y
+CONFIG_SERIAL=n
+
+CONFIG_ADC=y
+...
+CONFIG_NEWLIB_LIBC=y
+CONFIG_NEWLIB_LIBC_FLOAT_PRINTF=y
+
+</code></pre>
+  </div>
+</details>
+
+<details >
+  <summary>build log</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Including boilerplate <span style="color:#f92672">(</span>Zephyr base <span style="color:#f92672">(</span>cached<span style="color:#f92672">))</span>: D:/Dev/nrf52/hsm/zephyr/cmake/app/boilerplate.cmake
+-- Application: D:/Dev/nrf52/hsm/hsm/samples/tag_battery
+-- Zephyr version: 2.5.99 <span style="color:#f92672">(</span>D:/Dev/nrf52/hsm/zephyr<span style="color:#f92672">)</span>     
+-- Found west <span style="color:#f92672">(</span>found suitable version <span style="color:#e6db74">&#34;0.10.1&#34;</span>, minimum required is <span style="color:#e6db74">&#34;0.7.1&#34;</span><span style="color:#f92672">)</span>
+-- Board: nrf52840_sensortag
+-- Cache files will be written to: D:/Dev/nrf52/hsm/zephyr/.cache
+-- Found toolchain: gnuarmemb <span style="color:#f92672">(</span>D:/tools/gnu_arm_embedded/10 2020-q4-major<span style="color:#f92672">)</span>
+-- Found BOARD.dts: D:/Dev/nrf52/hsm/hsm/boards/arm/nrf52840_sensortag/nrf52840_sensortag.dts
+-- Generated zephyr.dts: D:/Dev/nrf52/hsm/hsm/samples/tag_battery/build/zephyr/zephyr.dts
+...
+<span style="color:#f92672">[</span>107/107<span style="color:#f92672">]</span> Linking C executable zephyr<span style="color:#ae81ff">\z</span>ephyr.elf
+Memory region         Used Size  Region Size  %age Used
+           FLASH:       <span style="color:#ae81ff">41528</span> B         <span style="color:#ae81ff">1</span> MB      3.96%
+            SRAM:        <span style="color:#ae81ff">8544</span> B       <span style="color:#ae81ff">256</span> KB      3.26%
+        IDT_LIST:          <span style="color:#ae81ff">0</span> GB         <span style="color:#ae81ff">2</span> KB      0.00%
+</code></pre></div>
+  </div>
+</details>
+
+<details >
+  <summary>run log</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-log" data-lang="log">*** Booting Zephyr OS build zephyr-v2.5.0-2187-g757cd12e6602  ***
+
+[00:00:00.325,714] &lt;inf&gt; main: Test App for Battery Voltage Measure through ADC
+[00:00:00.325,744] &lt;inf&gt; battery: battery_init() vref = 600
+[00:00:00.325,805] &lt;inf&gt; battery: battery_start&gt; adc_read()
+[00:00:00.425,872] &lt;inf&gt; battery: battery_get_mv() raw = 3764
+[00:00:00.425,872] &lt;inf&gt; main: battery&gt; Voltage = 3308 mV
+[00:00:05.326,049] &lt;inf&gt; battery: battery_start&gt; adc_read()
+[00:00:05.426,086] &lt;inf&gt; battery: battery_get_mv() raw = 3768
+[00:00:05.426,116] &lt;inf&gt; main: battery&gt; Voltage = 3311 mV
+</code></pre>
+  </div>
+</details>
+
 <h2 id="preliminary-test-samples">
   preliminary test samples
   <a class="anchor" href="#preliminary-test-samples">#</a>
@@ -2652,6 +2754,7 @@ I think after all, such things should be configurable by the end users&rsquo;s a
             <li><a href="#device-treee-drivers">device treee drivers</a></li>
             <li><a href="#tag_sensor_veml6030">tag_sensor_veml6030</a></li>
             <li><a href="#tag_sensor_ms8607">tag_sensor_ms8607</a></li>
+            <li><a href="#tag_battery">tag_battery</a></li>
           </ul>
         </li>
         <li><a href="#preliminary-test-samples">preliminary test samples</a>
