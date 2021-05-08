@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 06 Oct 2020 08:48:23 +0000</lastBuildDate><atom:link href="https://www.homesmartmesh.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Thread SensorTag</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</link>
+      <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</guid>
+      <description>Networks / ThreadFrameworks / CHIP nRF52840 on a MS88SF2 module. i²C bus scl P1.13 and sda P1.15 Light sensor VEMLS6030 @0x48 MS8607 with relative humidity @0x40, pressure and temperature @0x76 Reset button P0.</description>
+    </item>
+    
+    <item>
       <title>Switch Cover</title>
       <link>https://www.homesmartmesh.com/docs/3dprinting/light/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
@@ -84,23 +93,21 @@ Simple Mesh SensorTagSimple Mesh RepoFeatures#     2.</descriptio
     </item>
     
     <item>
+      <title>UWB DWM1001 dev</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm1001_dev/</link>
+      <pubDate>Sat, 08 May 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm1001_dev/</guid>
+      <description>Networks / Ultra Wide BandDevelopment Board# DWM1001C Module STM32F072 as J-Link OB debugger USB and battery conenctors Raspberry PI Header connector User Leds buttons  product pagedatasheetuser manualDWM1001C Module# DW1000 Transciever TWR-RTLS : Two Way Ranging - Real Time Location System nRF52832 for a Bluetooth API LIS2DH12TR STM 3-Axis Motion Detector  The product page includes datasheets, schematics, firmware,&amp;hellip; product pageDW1000 Transciever# IEEE 802.</description>
+    </item>
+    
+    <item>
       <title>Roborock Valetudo</title>
       <link>https://www.homesmartmesh.com/docs/robotics/roborock/</link>
       <pubDate>Sun, 07 Mar 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/robotics/roborock/</guid>
       <description>Roborock s55#Valetudo#installHome menu#Map#Telegram app#Roborock chat# the valetudo install section will provide the valetudo server  Hypefr server repo this app is using node.js telegraf  telegraf dependency the node.</description>
-    </item>
-    
-    <item>
-      <title>Simple Mesh SensorTag</title>
-      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</link>
-      <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>
-      
-      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</guid>
-      <description>Networks / Simple MeshFrameworks / Raspi IoTTindie Product PageConcept#It is possible to mount either CR2032 or CR2477
-Hardware#board render
-repo directorynRF52832BME280MAX44009Schematics#Full Screenimport {setup_svg_panzoom,reset_svg_panzoom} from &#34;</description>
     </item>
     
     <item>
@@ -111,15 +118,6 @@ repo directorynRF52832BME280MAX44009Schematics#Fu
       <guid>https://www.homesmartmesh.com/docs/frameworks/chip/</guid>
       <description>Relates to#Zephyr RTOSThread ProtocolOverview#The image above does only focus on the relation between CHIP, Thread and Zigbee. Both CHIP and Zigbee run on 802.15.4 (optional for CHIP), and both are directly or indirectly based on ZCL which is in case of CHIP named ZAP Zigbee Cluster Library Advanced Platform.
 Definition#We can consider the project CHIP Connected Home Over IP definition as in two folds :</description>
-    </item>
-    
-    <item>
-      <title>Thread SensorTag</title>
-      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</link>
-      <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
-      
-      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</guid>
-      <description>Networks / ThreadFrameworks / CHIP nRF52840 on a MS88SF2 module. i²C bus scl P1.13 and sda P1.15 Light sensor VEMLS6030 @0x48 MS8607 with relative humidity @0x40, pressure and temperature @0x76 Reset button P0.</description>
     </item>
     
     <item>
@@ -168,12 +166,14 @@ Definition#We can consider the project CHIP Connected Home Over IP definition
     </item>
     
     <item>
-      <title>nRF52840 USB dongle</title>
-      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</link>
+      <title>Simple Mesh SensorTag</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</link>
       <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>
       
-      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</guid>
-      <description>Product Page     nRF52840 ARM M4 64 MHz 1024 KB ROM - 256 KB RAM Bluetooth 5, Mesh 802.15.4, Thread, Zigbee USB 2 GetStarted)  Applications# custom mesh coordinator  nRF52840 Dongle#Pinout#Serial Wire Debug# the usb dongle is referred to as PCA10059 which in projects usually shifts the app to offset 0x1000 as openbootloader usage is expected With serial wire debug, it&amp;rsquo;s possible to flash applications at same address as the PCA10056 which is at address 0x0000 recovering the openbootloader mode would then require to reflash the MBR with any nRF SDK project make flash_mbr  LEDS# LED1 Green : P0.</description>
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</guid>
+      <description>Networks / Simple MeshFrameworks / Raspi IoTTindie Product PageConcept#It is possible to mount either CR2032 or CR2477
+Hardware#board render
+repo directorynRF52832BME280MAX44009Schematics#Full Screenimport {setup_svg_panzoom,reset_svg_panzoom} from &#34;</description>
     </item>
     
     <item>
@@ -222,20 +222,8 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in 
       <pubDate>Thu, 06 May 2021 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/networks/ultrawideband/</guid>
-      <description>Standard#802.15.4zModule#Product page : DWM1001C ModuleDatasheets :
-DWM1001 Development Kit pdfDWM1004C Tag pdfDWM1001C Module set pdfSource code DecawareWhat is Ultra Wide Band ?</description>
-    </item>
-    
-    <item>
-      <title>nRF52832 UART dongle</title>
-      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/uart_dongle/</link>
-      <pubDate>Sun, 21 Feb 2021 08:00:00 +0000</pubDate>
-      
-      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/uart_dongle/</guid>
-      <description>Board#A usb dongle from the market that includes a 2104 serial to usb converter. Keyword search on shopping websites : nRF52832 USB dongle. Aka &amp;ldquo;nRF52832-YJ-17017-USB-UART&amp;rdquo;
-Software#RF to Serial Gateway#The node connected through serial port will report messages in text format
- Local Events  Upon startup such message is sent
-nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_listening the node starts acting as a gatewy that will report messages through serial in text mode</description>
+      <description>Microcontrollers / nRF52 / UWB DWM1001 devStandard#802.15.4zHardware#Qorvo#UWM Chips available from Decawave, now Qorvo. Qorvo is also the supplier of Apple UWB chips.
+Mode details about the UWB DWM1001 development kit : Microcontrollers / nRF52 / UWB DWM1001 devWhat is Ultra Wide Band ?</description>
     </item>
     
     <item>
@@ -249,12 +237,33 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
     </item>
     
     <item>
+      <title>nRF52840 USB dongle</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</link>
+      <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</guid>
+      <description>Product Page     nRF52840 ARM M4 64 MHz 1024 KB ROM - 256 KB RAM Bluetooth 5, Mesh 802.15.4, Thread, Zigbee USB 2 GetStarted)  Applications# custom mesh coordinator  nRF52840 Dongle#Pinout#Serial Wire Debug# the usb dongle is referred to as PCA10059 which in projects usually shifts the app to offset 0x1000 as openbootloader usage is expected With serial wire debug, it&amp;rsquo;s possible to flash applications at same address as the PCA10056 which is at address 0x0000 recovering the openbootloader mode would then require to reflash the MBR with any nRF SDK project make flash_mbr  LEDS# LED1 Green : P0.</description>
+    </item>
+    
+    <item>
       <title>Handbag hanger</title>
       <link>https://www.homesmartmesh.com/docs/3dprinting/handbag_hanger/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/handbag_hanger/</guid>
       <description>Handbag hanger#STL Model</description>
+    </item>
+    
+    <item>
+      <title>nRF52832 UART dongle</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/uart_dongle/</link>
+      <pubDate>Sun, 21 Feb 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/uart_dongle/</guid>
+      <description>Board#A usb dongle from the market that includes a 2104 serial to usb converter. Keyword search on shopping websites : nRF52832 USB dongle. Aka &amp;ldquo;nRF52832-YJ-17017-USB-UART&amp;rdquo;
+Software#RF to Serial Gateway#The node connected through serial port will report messages in text format
+ Local Events  Upon startup such message is sent
+nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_listening the node starts acting as a gatewy that will report messages through serial in text mode</description>
     </item>
     
     <item>

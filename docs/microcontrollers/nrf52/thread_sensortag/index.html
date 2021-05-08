@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.155dc25db97285eae884d8ffa3f4848a4d77c1c1a440bcf872e97fd13d4b0749.js" integrity="sha256-FV3CXblyherohNj/o/SEik13wcGkQLz4cul/0T1LB0k="></script>
+<script defer src="/en.search.min.12bb363db1fc078add436e76b950054dddd70fa462097c4dd2239c5510ea1aa4.js" integrity="sha256-Ers2PbH8B4rdQ252uVAFTd3XD6RiCXxN0iOcVRDqGqQ="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -435,7 +435,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/" class="">Simple Mesh SensorTag</a>
+    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/" class=" active">Thread SensorTag</a>
   
 
         </li>
@@ -448,7 +448,20 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/" class=" active">Thread SensorTag</a>
+    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm1001_dev/" class="">UWB DWM1001 dev</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/" class="">Simple Mesh SensorTag</a>
   
 
         </li>
@@ -898,7 +911,9 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#install">install</a></li>
         <li><a href="#sdk-samples">sdk samples</a>
           <ul>
+            <li><a href="#device-treee-drivers">device treee drivers</a></li>
             <li><a href="#tag_sensor_veml6030">tag_sensor_veml6030</a></li>
+            <li><a href="#tag_sensor_ms8607">tag_sensor_ms8607</a></li>
           </ul>
         </li>
         <li><a href="#preliminary-test-samples">preliminary test samples</a>
@@ -1134,6 +1149,8 @@ https://github.com/alex-shpak/hugo-book
                 
 
                 
+
+                
             
         </a>
     </div>
@@ -1176,6 +1193,8 @@ https://github.com/alex-shpak/hugo-book
                     </svg>
                 </span>
                 
+                
+
                 
 
                 
@@ -1228,6 +1247,8 @@ https://github.com/alex-shpak/hugo-book
                 
 
                 
+
+                
             
         </a>
     </div>
@@ -1275,6 +1296,8 @@ https://github.com/alex-shpak/hugo-book
                 
 
                 
+
+                
             
         </a>
     </div>
@@ -1317,6 +1340,8 @@ https://github.com/alex-shpak/hugo-book
                     </svg>
                 </span>
                 
+                
+
                 
 
                 
@@ -1370,6 +1395,8 @@ https://github.com/alex-shpak/hugo-book
                 
 
                 
+
+                
             
         </a>
     </div>
@@ -1395,6 +1422,8 @@ https://github.com/alex-shpak/hugo-book
             
             
                 
+                
+
                 
 
                 
@@ -1470,6 +1499,33 @@ west init -m https://github.com/HomeSmartMesh/sdk-hsm-sensortag -mr main
   sdk samples
   <a class="anchor" href="#sdk-samples">#</a>
 </h2>
+<h3 id="device-treee-drivers">
+  device treee drivers
+  <a class="anchor" href="#device-treee-drivers">#</a>
+</h3>
+<p>the driver sensors are declared in the custom board device treee source <code>nrf52840_sensortag.dts</code>.</p>
+<pre><code class="language-conf" data-lang="conf">&amp;i2c0 {
+	compatible = &quot;nordic,nrf-twi&quot;;
+	status = &quot;okay&quot;;
+	sda-gpios = &lt;&amp;gpio1 15 0&gt;;
+	scl-gpios = &lt;&amp;gpio1 13 0&gt;;
+
+	ms8607@40 /*hum@40,press@76*/{
+		compatible = &quot;teconnectivity,ms8607&quot;;
+		reg = &lt;0x40&gt;;
+		label = &quot;MS8607&quot;;
+	};
+	veml6030@48 {
+		compatible = &quot;vishay,veml6030&quot;;
+		reg = &lt;0x48&gt;;
+		int-gpios = &lt;&amp;gpio0 31 0&gt;;
+		label = &quot;VEML6030&quot;;
+	};
+};
+</code></pre><blockquote class="book-hint warning">
+  The MS8607 uses x2 i2c adresses <code>0x40</code> and <code>0x76</code>, which makes it require two separate drivers to fit in the Zephyr dts declaration. For simplicity purpose, the vendor driver has been reused with minimal adaptations for Zephyr. Only the adress <code>0x40</code> is declared in the dts. That loses the multi instance feature as the adress <code>0x76</code> is hardcoded in the driver, the sensor anyway does not have any i2c multi instance configuration option.
+</blockquote>
+
 <h3 id="tag_sensor_veml6030">
   tag_sensor_veml6030
   <a class="anchor" href="#tag_sensor_veml6030">#</a>
@@ -1505,6 +1561,8 @@ west flash
                     >
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                 </span>
+                
+
                 
 
                 
@@ -1656,6 +1714,116 @@ auto_measure&gt;new params =&gt; gain = 2.000000 ; it = 800
   </div>
 </details>
 
+<h3 id="tag_sensor_ms8607">
+  tag_sensor_ms8607
+  <a class="anchor" href="#tag_sensor_ms8607">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">west build -t guiconfig
+west build -b nrf52840_sensortag -- -DCONF_FILE<span style="color:#f92672">=</span>prj.conf
+west flash
+</code></pre></div>
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/tree/main/samples/tag_sensor_ms8607"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            tag sensor ms8607
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<details >
+  <summary>default config</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-conf" data-lang="conf">CONFIG_GPIO=y
+CONFIG_SERIAL=n
+
+CONFIG_I2C=y
+CONFIG_SENSOR=y
+CONFIG_MS8607=y
+
+...
+
+CONFIG_NEWLIB_LIBC=y
+CONFIG_NEWLIB_LIBC_FLOAT_PRINTF=y
+
+</code></pre>
+  </div>
+</details>
+
+<details >
+  <summary>build log</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Including boilerplate <span style="color:#f92672">(</span>Zephyr base<span style="color:#f92672">)</span>: D:/Dev/nrf52/hsm/zephyr/cmake/app/boilerplate.cmake
+-- Application: D:/Dev/nrf52/hsm/hsm/samples/tag_sensor_ms8607
+-- Zephyr version: 2.5.99 <span style="color:#f92672">(</span>D:/Dev/nrf52/hsm/zephyr<span style="color:#f92672">)</span>
+-- Found Python3: C:/Users/User/AppData/Local/Programs/Python/Python39/python.exe <span style="color:#f92672">(</span>found suitable exact version <span style="color:#e6db74">&#34;3.9.0&#34;</span><span style="color:#f92672">)</span> found components: Interpreter
+-- Found west <span style="color:#f92672">(</span>found suitable version <span style="color:#e6db74">&#34;0.10.1&#34;</span>, minimum required is <span style="color:#e6db74">&#34;0.7.1&#34;</span><span style="color:#f92672">)</span>
+-- Board: nrf52840_sensortag
+-- Cache files will be written to: D:/Dev/nrf52/hsm/zephyr/.cache
+-- Found toolchain: gnuarmemb <span style="color:#f92672">(</span>D:/tools/gnu_arm_embedded/10 2020-q4-major<span style="color:#f92672">)</span>
+-- Found BOARD.dts: D:/Dev/nrf52/hsm/hsm/boards/arm/nrf52840_sensortag/nrf52840_sensortag.dts
+-- Generated zephyr.dts: D:/Dev/nrf52/hsm/hsm/samples/tag_sensor_ms8607/build/zephyr/zephyr.dts
+...
+<span style="color:#f92672">[</span>135/135<span style="color:#f92672">]</span> Linking C executable zephyr<span style="color:#ae81ff">\z</span>ephyr.elf
+Memory region         Used Size  Region Size  %age Used
+           FLASH:       <span style="color:#ae81ff">44688</span> B         <span style="color:#ae81ff">1</span> MB      4.26%
+            SRAM:        <span style="color:#ae81ff">8544</span> B       <span style="color:#ae81ff">256</span> KB      3.26%
+        IDT_LIST:          <span style="color:#ae81ff">0</span> GB         <span style="color:#ae81ff">2</span> KB      0.00%
+</code></pre></div>
+  </div>
+</details>
+
+<details >
+  <summary>run log</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-log" data-lang="log">*** Booting Zephyr OS build zephyr-v2.5.0-2187-g757cd12e6602  ***
+
+[00:00:00.325,714] &lt;inf&gt; main: MS8607 Temperature Humidity pressure sensor application
+[00:00:00.326,049] &lt;inf&gt; main: ms8607&gt; connected
+ms8607&gt; t=22.59 °  p=963.62 mbar  h=38.59 %RH
+ms8607&gt; t=22.59 °  p=963.63 mbar  h=38.90 %RH
+ms8607&gt; t=22.59 °  p=963.63 mbar  h=38.88 %RH
+ms8607&gt; t=22.60 °  p=963.64 mbar  h=39.74 %RH
+ms8607&gt; t=22.17 °  p=963.62 mbar  h=51.82 %RH
+ms8607&gt; t=22.10 °  p=963.62 mbar  h=58.70 %RH
+ms8607&gt; t=22.09 °  p=963.62 mbar  h=60.83 %RH
+ms8607&gt; t=23.16 °  p=963.69 mbar  h=72.36 %RH
+ms8607&gt; t=22.67 °  p=963.63 mbar  h=77.52 %RH
+ms8607&gt; t=22.65 °  p=963.55 mbar  h=53.33 %RH
+</code></pre>
+  </div>
+</details>
+
 <h2 id="preliminary-test-samples">
   preliminary test samples
   <a class="anchor" href="#preliminary-test-samples">#</a>
@@ -1687,6 +1855,8 @@ auto_measure&gt;new params =&gt; gain = 2.000000 ; it = 800
                     >
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                 </span>
+                
+
                 
 
                 
@@ -2117,6 +2287,8 @@ Memory region         Used Size  Region Size  %age Used
                 
 
                 
+
+                
                 <svg    class="download"
                         viewBox="0 0 512 512"
                         fill="currentColor"
@@ -2238,6 +2410,8 @@ Memory region         Used Size  Region Size  %age Used
                 
 
                 
+
+                
             
         </a>
     </div>
@@ -2274,6 +2448,8 @@ Memory region         Used Size  Region Size  %age Used
                     >
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                 </span>
+                
+
                 
 
                 
@@ -2329,6 +2505,8 @@ Memory region         Used Size  Region Size  %age Used
             
             
                 
+                
+
                 
 
                 
@@ -2471,7 +2649,9 @@ I think after all, such things should be configurable by the end users&rsquo;s a
         <li><a href="#install">install</a></li>
         <li><a href="#sdk-samples">sdk samples</a>
           <ul>
+            <li><a href="#device-treee-drivers">device treee drivers</a></li>
             <li><a href="#tag_sensor_veml6030">tag_sensor_veml6030</a></li>
+            <li><a href="#tag_sensor_ms8607">tag_sensor_ms8607</a></li>
           </ul>
         </li>
         <li><a href="#preliminary-test-samples">preliminary test samples</a>

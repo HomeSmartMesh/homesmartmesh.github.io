@@ -6,7 +6,25 @@
     <description>Recent content in nRF52 on Home Smart Mesh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Feb 2021 08:00:00 +0000</lastBuildDate><atom:link href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 May 2021 08:00:00 +0000</lastBuildDate><atom:link href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Thread SensorTag</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</link>
+      <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</guid>
+      <description>Networks / ThreadFrameworks / CHIP nRF52840 on a MS88SF2 module. i²C bus scl P1.13 and sda P1.15 Light sensor VEMLS6030 @0x48 MS8607 with relative humidity @0x40, pressure and temperature @0x76 Reset button P0.</description>
+    </item>
+    
+    <item>
+      <title>UWB DWM1001 dev</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm1001_dev/</link>
+      <pubDate>Sat, 08 May 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm1001_dev/</guid>
+      <description>Networks / Ultra Wide BandDevelopment Board# DWM1001C Module STM32F072 as J-Link OB debugger USB and battery conenctors Raspberry PI Header connector User Leds buttons  product pagedatasheetuser manualDWM1001C Module# DW1000 Transciever TWR-RTLS : Two Way Ranging - Real Time Location System nRF52832 for a Bluetooth API LIS2DH12TR STM 3-Axis Motion Detector  The product page includes datasheets, schematics, firmware,&amp;hellip; product pageDW1000 Transciever# IEEE 802.</description>
+    </item>
+    
     <item>
       <title>Simple Mesh SensorTag</title>
       <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</link>
@@ -16,15 +34,6 @@
       <description>Networks / Simple MeshFrameworks / Raspi IoTTindie Product PageConcept#It is possible to mount either CR2032 or CR2477
 Hardware#board render
 repo directorynRF52832BME280MAX44009Schematics#Full Screenimport {setup_svg_panzoom,reset_svg_panzoom} from &#34;</description>
-    </item>
-    
-    <item>
-      <title>Thread SensorTag</title>
-      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</link>
-      <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
-      
-      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</guid>
-      <description>Networks / ThreadFrameworks / CHIP nRF52840 on a MS88SF2 module. i²C bus scl P1.13 and sda P1.15 Light sensor VEMLS6030 @0x48 MS8607 with relative humidity @0x40, pressure and temperature @0x76 Reset button P0.</description>
     </item>
     
     <item>

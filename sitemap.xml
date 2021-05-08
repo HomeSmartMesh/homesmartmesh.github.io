@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</loc>
+    <lastmod>2021-02-14T08:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.homesmartmesh.com/docs/3dprinting/light/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url>
@@ -54,7 +59,12 @@
   
   <url>
     <loc>https://www.homesmartmesh.com/docs/microcontrollers/</loc>
-    <lastmod>2021-03-13T00:00:00+09:00</lastmod>
+    <lastmod>2021-05-08T08:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm1001_dev/</loc>
+    <lastmod>2021-05-08T08:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -63,18 +73,8 @@
   </url>
   
   <url>
-    <loc>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</loc>
-    <lastmod>2021-02-14T08:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.homesmartmesh.com/docs/frameworks/chip/</loc>
     <lastmod>2021-02-12T08:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</loc>
-    <lastmod>2021-02-14T08:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -112,7 +112,7 @@
   </url>
   
   <url>
-    <loc>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</loc>
+    <loc>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</loc>
     <lastmod>2021-02-14T08:00:00+00:00</lastmod>
   </url>
   
@@ -141,6 +141,11 @@
   </url>
   
   <url>
+    <loc>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/</loc>
+    <lastmod>2021-05-08T08:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.homesmartmesh.com/docs/networks/ultrawideband/</loc>
     <lastmod>2021-05-07T08:00:00+00:00</lastmod>
   </url>
@@ -151,18 +156,13 @@
   </url>
   
   <url>
-    <loc>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/</loc>
-    <lastmod>2021-02-21T08:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/uart_dongle/</loc>
-    <lastmod>2021-02-21T08:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.homesmartmesh.com/docs/frameworks/zephyr/</loc>
     <lastmod>2021-02-20T08:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</loc>
+    <lastmod>2021-02-14T08:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -173,6 +173,11 @@
   <url>
     <loc>https://www.homesmartmesh.com/docs/vision/</loc>
     <lastmod>2021-03-07T08:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/uart_dongle/</loc>
+    <lastmod>2021-02-21T08:00:00+00:00</lastmod>
   </url>
   
   <url>
