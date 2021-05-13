@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.2ca2792345e5792d8c5f058350778a164230e4a95b7398695c58848936228ac2.js" integrity="sha256-LKJ5I0XleS2MXwWDUHeKFkIw5Klbc5hpXFiEiTYiisI="></script>
+<script defer src="/en.search.min.dba4981632311e282fe99cd6d64bf0237501cb2d3b3ac651536b4d12f88e32ea.js" integrity="sha256-26SYFjIxHigv6ZzW1kvwI3UByy07OsZRU2tNEviOMuo="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -924,6 +924,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#install">install</a></li>
         <li><a href="#sdk-samples">sdk samples</a>
           <ul>
+            <li><a href="#tag_sensors_broadcast">tag_sensors_broadcast</a></li>
             <li><a href="#device-treee-drivers">device treee drivers</a></li>
             <li><a href="#tag_sensor_veml6030">tag_sensor_veml6030</a></li>
             <li><a href="#tag_sensor_ms8607">tag_sensor_ms8607</a></li>
@@ -1513,6 +1514,303 @@ west init -m https://github.com/HomeSmartMesh/sdk-hsm-sensortag -mr main
   sdk samples
   <a class="anchor" href="#sdk-samples">#</a>
 </h2>
+<p>The SDK samples are presented in two folds, first the overall application including all the measures, then a list of basic applications with minimal code for each driver and measure separately</p>
+<h3 id="tag_sensors_broadcast">
+  tag_sensors_broadcast
+  <a class="anchor" href="#tag_sensors_broadcast">#</a>
+</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/tree/main/samples/tag_sensors_broadcast"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            tag sensors broadcast
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/thread_sensortag/application.png" />
+    </div>
+    <a href="/images/thread_sensortag/application.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">west build -t guiconfig
+west build -b nrf52840_sensortag -- -DCONF_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prj.conf overlay-shell.conf&#34;</span>
+west flash
+</code></pre></div><details >
+  <summary>default config</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-conf" data-lang="conf">CONFIG_ADC=y
+CONFIG_BATTERY=y
+
+CONFIG_I2C=y
+CONFIG_SENSOR=y
+CONFIG_VEML6030=y
+CONFIG_MS8607=y
+
+CONFIG_GPIO=y
+CONFIG_SERIAL=n
+
+CONFIG_NEWLIB_LIBC=y
+CONFIG_NEWLIB_LIBC_FLOAT_PRINTF=y
+
+# Network
+CONFIG_NETWORKING=y
+CONFIG_NET_L2_OPENTHREAD=y
+
+CONFIG_OPENTHREAD_CHANNEL=13
+CONFIG_OPENTHREAD_PANID=4660
+CONFIG_OPENTHREAD_NETWORK_NAME=&quot;OpenThreadDemo&quot;
+CONFIG_OPENTHREAD_XPANID=&quot;11:11:11:11:22:22:22:22&quot;
+CONFIG_OPENTHREAD_MASTERKEY=&quot;00:11:22:33:44:55:66:77:88:99:aa:bb:cc:dd:ee:ff&quot;
+CONFIG_OPENTHREAD_FTD=y
+
+#CONFIG_NET_CONFIG_MY_IPV6_ADDR=&quot;fdde:ad00:beef::1&quot;
+#CONFIG_NET_CONFIG_PEER_IPV6_ADDR=&quot;ff02::1&quot;
+#CONFIG_PEER_PORT=4242
+
+# Disable certain parts of Zephyr IPv6 stack
+CONFIG_NET_IPV6_NBR_CACHE=n
+CONFIG_NET_IPV6_MLD=n
+
+# Kernel options
+CONFIG_MAIN_STACK_SIZE=2048
+CONFIG_INIT_STACKS=y
+
+# Generic networking options
+CONFIG_NET_UDP=y
+CONFIG_NET_TCP=n
+CONFIG_NET_SOCKETS=y
+CONFIG_NET_SOCKETS_POSIX_NAMES=y
+CONFIG_NET_SOCKETS_POLL_MAX=4
+CONFIG_NET_CONNECTION_MANAGER=y
+
+# Logging
+CONFIG_NET_LOG=y
+CONFIG_LOG=y
+CONFIG_NET_STATISTICS=y
+CONFIG_PRINTK=y
+
+# Network buffers
+CONFIG_NET_PKT_RX_COUNT=16
+CONFIG_NET_PKT_TX_COUNT=16
+CONFIG_NET_BUF_RX_COUNT=80
+CONFIG_NET_BUF_TX_COUNT=80
+CONFIG_NET_CONTEXT_NET_PKT_POOL=y
+
+# IP address options
+CONFIG_NET_IF_UNICAST_IPV6_ADDR_COUNT=3
+CONFIG_NET_IF_MCAST_IPV6_ADDR_COUNT=4
+CONFIG_NET_MAX_CONTEXTS=10
+
+# Network shell
+CONFIG_NET_SHELL=y
+
+</code></pre>
+  </div>
+</details>
+
+<details >
+  <summary>build log</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-- west build: generating a build system
+Including boilerplate <span style="color:#f92672">(</span>Zephyr base<span style="color:#f92672">)</span>: D:/Dev/nrf52/hsm/zephyr/cmake/app/boilerplate.cmake
+-- Application: D:/Dev/nrf52/hsm/hsm/samples/tag_sensors_broadcast
+-- Zephyr version: 2.5.99 <span style="color:#f92672">(</span>D:/Dev/nrf52/hsm/zephyr<span style="color:#f92672">)</span>
+-- Found Python3: C:/Users/User/AppData/Local/Programs/Python/Python39/python.exe <span style="color:#f92672">(</span>found suitable exact version <span style="color:#e6db74">&#34;3.9.0&#34;</span><span style="color:#f92672">)</span> found components: Interpreter
+-- Found west <span style="color:#f92672">(</span>found suitable version <span style="color:#e6db74">&#34;0.10.1&#34;</span>, minimum required is <span style="color:#e6db74">&#34;0.7.1&#34;</span><span style="color:#f92672">)</span>
+-- Board: nrf52840_sensortag
+-- Cache files will be written to: D:/Dev/nrf52/hsm/zephyr/.cache
+-- Found toolchain: gnuarmemb <span style="color:#f92672">(</span>D:/tools/gnu_arm_embedded/10 2020-q4-major<span style="color:#f92672">)</span>
+-- Found BOARD.dts: D:/Dev/nrf52/hsm/hsm/boards/arm/nrf52840_sensortag/nrf52840_sensortag.dts
+-- Generated zephyr.dts: D:/Dev/nrf52/hsm/hsm/samples/tag_sensors_broadcast/build/zephyr/zephyr.dts
+...
+<span style="color:#f92672">[</span>558/558<span style="color:#f92672">]</span> Linking CXX executable zephyr<span style="color:#ae81ff">\z</span>ephyr.elf
+Memory region         Used Size  Region Size  %age Used
+           FLASH:      <span style="color:#ae81ff">319096</span> B         <span style="color:#ae81ff">1</span> MB     30.43%
+            SRAM:       <span style="color:#ae81ff">94016</span> B       <span style="color:#ae81ff">256</span> KB     35.86%
+        IDT_LIST:          <span style="color:#ae81ff">0</span> GB         <span style="color:#ae81ff">2</span> KB      0.00%
+</code></pre></div>
+  </div>
+</details>
+
+<details >
+  <summary>run log</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-log" data-lang="log">*** Booting Zephyr OS build zephyr-v2.5.0-2187-g757cd12e6602  ***
+rtt:~$ rtt:~$ [00:00:00.264,617] &lt;inf&gt; fs_nvs: 8 Sectors of 4096 bytes
+rtt:~$ [00:00:00.264,617] &lt;inf&gt; fs_nvs: alloc wra: 2, d60
+rtt:~$ [00:00:00.264,617] &lt;inf&gt; fs_nvs: data wra: 2, 448
+rtt:~$ [00:00:00.275,970] &lt;inf&gt; net_l2_openthread: State changed! Flags: 0x101fc300 Current role: 0
+rtt:~$ [00:00:00.276,275] &lt;inf&gt; net_l2_openthread: OpenThread version: OPENTHREAD/gfd27fc3a7; Zephyr; May 13 2021 18:19:06
+rtt:~$ [00:00:00.280,517] &lt;inf&gt; net_l2_openthread: Network name: ot_zephyr
+rtt:~$ [00:00:00.289,459] &lt;inf&gt; net_l2_openthread: State changed! Flags: 0x0100103d Current role: 1
+rtt:~$ [00:00:00.290,344] &lt;inf&gt; VEML6030: veml6030_init()
+rtt:~$ [00:00:00.290,344] &lt;inf&gt; MS8607: ms8607_init&gt; i2c_master_init()
+rtt:~$ [00:00:00.292,602] &lt;inf&gt; main: Hello Sensors Broadcast
+rtt:~$ [00:00:00.292,633] &lt;inf&gt; battery: battery_init() vref = 600
+rtt:~$ rtt:~$ [00:00:00.292,968] &lt;inf&gt; main: ms8607&gt; connected
+rtt:~$ [00:00:00.292,999] &lt;inf&gt; main: starting loop (0)
+rtt:~$ [00:00:00.293,060] &lt;inf&gt; battery: battery_start&gt; adc_read()
+rtt:~$ [00:00:00.293,487] &lt;inf&gt; battery: battery_get_mv() raw = 3447
+rtt:~$ rtt:~$ [00:00:00.314,117] &lt;inf&gt; net_l2_openthread: State changed! Flags: 0x000010e4 Current role: 2
+rtt:~$ [00:00:00.374,145] &lt;inf&gt; net_l2_openthread: State changed! Flags: 0x00000200 Current role: 2
+rtt:~$ rtt:~$ thread_tags/7009D837C7BB557A{&quot;alive&quot;:0,&quot;voltage&quot;:3.029,&quot;light&quot;:9.909,&quot;temperature&quot;:25.15,&quot;humidity&quot;:42.79,&quot;pressure&quot;:951.03}
+[00:00:01.961,029] &lt;inf&gt; udp_client: CONFIG_NET_IPV6
+rtt:~$ [00:00:01.964,843] &lt;inf&gt; main: sleeping 10 sec
+rtt:~$ rtt:~$ [00:00:11.964,904] &lt;inf&gt; main: starting loop (1)
+rtt:~$ [00:00:11.964,996] &lt;inf&gt; battery: battery_start&gt; adc_read()
+rtt:~$ [00:00:11.965,148] &lt;inf&gt; battery: battery_get_mv() raw = 3460
+rtt:~$ rtt:~$ thread_tags/7009D837C7BB557A{&quot;alive&quot;:1,&quot;voltage&quot;:3.041,&quot;light&quot;:11.095,&quot;temperature&quot;:25.16,&quot;humidity&quot;:42.01,&quot;pressure&quot;:950.98}
+[00:00:13.631,591] &lt;inf&gt; main: sleeping 10 sec
+rtt:~$ rtt:~$ [00:00:23.631,652] &lt;inf&gt; main: starting loop (2)
+rtt:~$ [00:00:23.631,744] &lt;inf&gt; battery: battery_start&gt; adc_read()
+rtt:~$ [00:00:23.631,896] &lt;inf&gt; battery: battery_get_mv() raw = 3460
+rtt:~$ rtt:~$ thread_tags/7009D837C7BB557A{&quot;alive&quot;:2,&quot;voltage&quot;:3.041,&quot;light&quot;:10.097,&quot;temperature&quot;:25.16,&quot;humidity&quot;:41.95,&quot;pressure&quot;:951.01}
+[00:00:25.298,156] &lt;inf&gt; main: sleeping 10 sec
+</code></pre>
+  </div>
+</details>
+
+<ul>
+<li>On the raspberry pi, it&rsquo;s possible to listen to the thread udp packets using <code>socat</code></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">socat UDP6-LISTEN:4242,fork STDOUT
+</code></pre></div>
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/thread_sensortag/socat.png" />
+    </div>
+    <a href="/images/thread_sensortag/socat.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<ul>
+<li>This python script captures Ipv6 UDP packets and forwards their json payload to a configured MQTT broker</li>
+</ul>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/HomeSmartMesh/raspi/blob/master/py/thread_tags/thread_tags.py"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            python json string to MQTT
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<ul>
+<li>the config file of the script allows to provide the MQTT broquer and to replace the device id with a friendly name, which is important not to hardcode the id in any source and to avoid firmware updates when moving the sensors from one room to another.</li>
+</ul>
+<details >
+  <summary>python script config</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{  
+    <span style="color:#f92672">&#34;mqtt&#34;</span>:{
+        <span style="color:#f92672">&#34;host&#34;</span>:<span style="color:#e6db74">&#34;10.0.0.42&#34;</span>,
+        <span style="color:#f92672">&#34;port&#34;</span>:<span style="color:#ae81ff">1883</span>,
+        <span style="color:#f92672">&#34;keepalive&#34;</span>:<span style="color:#ae81ff">60</span>,
+        <span style="color:#f92672">&#34;client_id&#34;</span>:<span style="color:#e6db74">&#34;thread_tags&#34;</span>,
+        <span style="color:#f92672">&#34;subscriptions&#34;</span>:[ ],
+        <span style="color:#f92672">&#34;actions&#34;</span>   :[],
+        <span style="color:#f92672">&#34;publish&#34;</span> :<span style="color:#66d9ef">true</span>,
+        <span style="color:#f92672">&#34;subscribe&#34;</span> :<span style="color:#66d9ef">false</span>
+    },
+    <span style="color:#f92672">&#34;friendlyNames&#34;</span>:{
+        <span style="color:#f92672">&#34;7005D83727DD525A&#34;</span>:<span style="color:#e6db74">&#34;01&#34;</span>
+    },
+    <span style="color:#f92672">&#34;log&#34;</span>:{
+        <span style="color:#f92672">&#34;logfile&#34;</span>:<span style="color:#e6db74">&#34;/home/pi/share/thread_tags_(date).log&#34;</span>,
+        <span style="color:#f92672">&#34;level&#34;</span>:<span style="color:#e6db74">&#34;Info&#34;</span>
+    }
+}
+</code></pre></div>
+  </div>
+</details>
+
+<p>and <a href="https://github.com/HomeSmartMesh/raspi/tree/master/py/influx">another raspi python scripts</a> forwards them to influxDB to end up in Grafana, which can also <a href="https://github.com/HomeSmartMesh/raspi/blob/92f549866482c3a65e2b738ad909ef740f6919e5/run_services.sh#L72">run as a service</a>.</p>
+
+
+<div class="box" style="max-width:200px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/thread_sensortag/grafana.png" />
+    </div>
+    <a href="/images/thread_sensortag/grafana.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<blockquote class="book-hint warning">
+  This firmware is not yet optimised for low power
+</blockquote>
+
 <h3 id="device-treee-drivers">
   device treee drivers
   <a class="anchor" href="#device-treee-drivers">#</a>
@@ -2437,7 +2735,7 @@ Memory region         Used Size  Region Size  %age Used
 
 
 
-<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
 
 <div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
 				<div class="box">
@@ -2764,6 +3062,7 @@ I think after all, such things should be configurable by the end users&rsquo;s a
         <li><a href="#install">install</a></li>
         <li><a href="#sdk-samples">sdk samples</a>
           <ul>
+            <li><a href="#tag_sensors_broadcast">tag_sensors_broadcast</a></li>
             <li><a href="#device-treee-drivers">device treee drivers</a></li>
             <li><a href="#tag_sensor_veml6030">tag_sensor_veml6030</a></li>
             <li><a href="#tag_sensor_ms8607">tag_sensor_ms8607</a></li>
