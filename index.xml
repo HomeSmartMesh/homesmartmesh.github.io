@@ -93,6 +93,15 @@ Simple Mesh SensorTagSimple Mesh RepoFeatures#     2.</descriptio
     </item>
     
     <item>
+      <title>Matter</title>
+      <link>https://www.homesmartmesh.com/docs/frameworks/matter/</link>
+      <pubDate>Thu, 13 May 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/frameworks/matter/</guid>
+      <description>Relates to#Zephyr RTOSThread Protocolpreviously known as CHIP Overview#The image above does only focus on the relation between Matter, Thread and Zigbee. Both Matter and Zigbee run on 802.15.4 (optional for Matter), and both are directly or indirectly based on ZCL which is in case of Matter named ZAP Zigbee Cluster Library Advanced Platform.</description>
+    </item>
+    
+    <item>
       <title>UWB DWM1001 dev</title>
       <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm1001_dev/</link>
       <pubDate>Sat, 08 May 2021 08:00:00 +0000</pubDate>
@@ -108,16 +117,6 @@ Simple Mesh SensorTagSimple Mesh RepoFeatures#     2.</descriptio
       
       <guid>https://www.homesmartmesh.com/docs/robotics/roborock/</guid>
       <description>Roborock s55#Valetudo#installHome menu#Map#Telegram app#Roborock chat# the valetudo install section will provide the valetudo server  Hypefr server repo this app is using node.js telegraf  telegraf dependency the node.</description>
-    </item>
-    
-    <item>
-      <title>Project CHIP</title>
-      <link>https://www.homesmartmesh.com/docs/frameworks/chip/</link>
-      <pubDate>Fri, 12 Feb 2021 08:00:00 +0000</pubDate>
-      
-      <guid>https://www.homesmartmesh.com/docs/frameworks/chip/</guid>
-      <description>Relates to#Zephyr RTOSThread ProtocolOverview#The image above does only focus on the relation between CHIP, Thread and Zigbee. Both CHIP and Zigbee run on 802.15.4 (optional for CHIP), and both are directly or indirectly based on ZCL which is in case of CHIP named ZAP Zigbee Cluster Library Advanced Platform.
-Definition#We can consider the project CHIP Connected Home Over IP definition as in two folds :</description>
     </item>
     
     <item>
@@ -177,12 +176,13 @@ repo directorynRF52832BME280MAX44009Schematics#Fu
     </item>
     
     <item>
-      <title>Home Assistant</title>
-      <link>https://www.homesmartmesh.com/docs/frameworks/home_assistant/</link>
-      <pubDate>Sat, 13 Feb 2021 08:48:57 +0000</pubDate>
+      <title>Project CHIP</title>
+      <link>https://www.homesmartmesh.com/docs/frameworks/chip/</link>
+      <pubDate>Fri, 12 Feb 2021 08:00:00 +0000</pubDate>
       
-      <guid>https://www.homesmartmesh.com/docs/frameworks/home_assistant/</guid>
-      <description>Official WebsiteBluetooth#BLE Bluetooth Low Energy# This is a simple integration that tracks BLE devices and beacons without even requiring pairing (privacy notice might be required)  BLE TrackerBluetooth Mesh# One investigation path for integrating Bluetooth mesh in Home Assistant is bridging it through an ip layer using the Bearer Layer of the BLE Architecture  BLE Mesh =&amp;gt; IP =&amp;gt; MQTT-SN =&amp;gt; MQTT =&amp;gt; Home Assistant</description>
+      <guid>https://www.homesmartmesh.com/docs/frameworks/chip/</guid>
+      <description>Moved to#MatterThis page will be kept as a transitional link
+Relates to#Zephyr RTOSThread ProtocolOverview#The image above does only focus on the relation between CHIP, Thread and Zigbee. Both CHIP and Zigbee run on 802.15.4 (optional for CHIP), and both are directly or indirectly based on ZCL which is in case of CHIP named ZAP Zigbee Cluster Library Advanced Platform.</description>
     </item>
     
     <item>
@@ -227,22 +227,21 @@ Mode details about the UWB DWM1001 development kit : Microcontrollers / nRF52 
     </item>
     
     <item>
-      <title>Zephyr RTOS</title>
-      <link>https://www.homesmartmesh.com/docs/frameworks/zephyr/</link>
-      <pubDate>Sat, 20 Feb 2021 08:00:00 +0000</pubDate>
-      
-      <guid>https://www.homesmartmesh.com/docs/frameworks/zephyr/</guid>
-      <description>Relates to#Thread ProtocolProject CHIPWindows Install#Getting Started details...The details are in the link above, the summary of the step for installing on windows are
- Installing choco Installing west dependencies with choco installing west with pip the retrieving the repo and building are performed through west The compiler toolchain as multiple options  Zephyr own SDK, not available on windows GNU ARM Embedded : to be installed on a path without spaces    e.</description>
-    </item>
-    
-    <item>
       <title>nRF52840 USB dongle</title>
       <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</link>
       <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</guid>
       <description>Product Page     nRF52840 ARM M4 64 MHz 1024 KB ROM - 256 KB RAM Bluetooth 5, Mesh 802.15.4, Thread, Zigbee USB 2 GetStarted)  Applications# custom mesh coordinator  nRF52840 Dongle#Pinout#Serial Wire Debug# the usb dongle is referred to as PCA10059 which in projects usually shifts the app to offset 0x1000 as openbootloader usage is expected With serial wire debug, it&amp;rsquo;s possible to flash applications at same address as the PCA10056 which is at address 0x0000 recovering the openbootloader mode would then require to reflash the MBR with any nRF SDK project make flash_mbr  LEDS# LED1 Green : P0.</description>
+    </item>
+    
+    <item>
+      <title>Home Assistant</title>
+      <link>https://www.homesmartmesh.com/docs/frameworks/home_assistant/</link>
+      <pubDate>Sat, 13 Feb 2021 08:48:57 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/frameworks/home_assistant/</guid>
+      <description>Official WebsiteBluetooth#BLE Bluetooth Low Energy# This is a simple integration that tracks BLE devices and beacons without even requiring pairing (privacy notice might be required)  BLE TrackerBluetooth Mesh# One investigation path for integrating Bluetooth mesh in Home Assistant is bridging it through an ip layer using the Bearer Layer of the BLE Architecture  BLE Mesh =&amp;gt; IP =&amp;gt; MQTT-SN =&amp;gt; MQTT =&amp;gt; Home Assistant</description>
     </item>
     
     <item>
@@ -264,6 +263,16 @@ Mode details about the UWB DWM1001 development kit : Microcontrollers / nRF52 
 Software#RF to Serial Gateway#The node connected through serial port will report messages in text format
  Local Events  Upon startup such message is sent
 nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_listening the node starts acting as a gatewy that will report messages through serial in text mode</description>
+    </item>
+    
+    <item>
+      <title>Zephyr RTOS</title>
+      <link>https://www.homesmartmesh.com/docs/frameworks/zephyr/</link>
+      <pubDate>Sat, 20 Feb 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/frameworks/zephyr/</guid>
+      <description>Relates to#Thread ProtocolProject CHIPWindows Install#Getting Started details...The details are in the link above, the summary of the step for installing on windows are
+ Installing choco Installing west dependencies with choco installing west with pip the retrieving the repo and building are performed through west The compiler toolchain as multiple options  Zephyr own SDK, not available on windows GNU ARM Embedded : to be installed on a path without spaces    e.</description>
     </item>
     
     <item>

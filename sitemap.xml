@@ -58,6 +58,11 @@
   </url>
   
   <url>
+    <loc>https://www.homesmartmesh.com/docs/frameworks/matter/</loc>
+    <lastmod>2021-05-13T08:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.homesmartmesh.com/docs/microcontrollers/</loc>
     <lastmod>2021-05-08T08:00:00+00:00</lastmod>
   </url>
@@ -70,11 +75,6 @@
   <url>
     <loc>https://www.homesmartmesh.com/docs/robotics/roborock/</loc>
     <lastmod>2021-03-07T08:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.homesmartmesh.com/docs/frameworks/chip/</loc>
-    <lastmod>2021-02-12T08:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -117,8 +117,8 @@
   </url>
   
   <url>
-    <loc>https://www.homesmartmesh.com/docs/frameworks/home_assistant/</loc>
-    <lastmod>2021-02-13T08:48:57+00:00</lastmod>
+    <loc>https://www.homesmartmesh.com/docs/frameworks/chip/</loc>
+    <lastmod>2021-02-12T08:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -156,13 +156,13 @@
   </url>
   
   <url>
-    <loc>https://www.homesmartmesh.com/docs/frameworks/zephyr/</loc>
-    <lastmod>2021-02-20T08:00:00+00:00</lastmod>
+    <loc>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</loc>
+    <lastmod>2021-02-14T08:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</loc>
-    <lastmod>2021-02-14T08:00:00+00:00</lastmod>
+    <loc>https://www.homesmartmesh.com/docs/frameworks/home_assistant/</loc>
+    <lastmod>2021-02-13T08:48:57+00:00</lastmod>
   </url>
   
   <url>
@@ -178,6 +178,11 @@
   <url>
     <loc>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/uart_dongle/</loc>
     <lastmod>2021-02-21T08:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.homesmartmesh.com/docs/frameworks/zephyr/</loc>
+    <lastmod>2021-02-20T08:00:00+00:00</lastmod>
   </url>
   
   <url>

@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.69b2a3da379c7b64f28ddac42ec472d4d3da1f07c430eca7b41a48c88544d1e0.js" integrity="sha256-abKj2jece2TyjdrELsRy1NPaHwfEMOyntBpIyIVE0eA="></script>
+<script defer src="/en.search.min.2ca2792345e5792d8c5f058350778a164230e4a95b7398695c58848936228ac2.js" integrity="sha256-LKJ5I0XleS2MXwWDUHeKFkIw5Klbc5hpXFiEiTYiisI="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -87,6 +87,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="https://www.homesmartmesh.com/docs/frameworks/raspi_iot/" class="">Raspi IoT</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://www.homesmartmesh.com/docs/frameworks/matter/" class="">Matter</a>
   
 
         </li>
@@ -914,23 +927,16 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#zephyr-v2599">Zephyr v2.5.99</a></li>
       </ul>
     </li>
-    <li><a href="#network-co-processor-ncp">Network Co-Processor (NCP)</a>
-      <ul>
-        <li><a href="#nordic---nrf-410">Nordic - nRF 4.1.0</a></li>
-        <li><a href="#zephyr-v2499">Zephyr v2.4.99</a></li>
-        <li><a href="#nordic---nrf-connect">Nordic - nRF Connect</a></li>
-        <li><a href="#open-thread">Open Thread</a></li>
-      </ul>
-    </li>
     <li><a href="#border-router">Border Router</a>
       <ul>
+        <li><a href="#openthread---setup">OpenThread - setup</a></li>
+        <li><a href="#udp-test">udp test</a></li>
         <li><a href="#openthread---docker">OpenThread - docker</a>
           <ul>
             <li><a href="#latest">latest</a></li>
             <li><a href="#version">version</a></li>
           </ul>
         </li>
-        <li><a href="#openthread---setup">OpenThread - setup</a></li>
         <li><a href="#nordic---sdcard-image">Nordic - sdcard image</a></li>
         <li><a href="#form-a-network">Form a network</a></li>
         <li><a href="#wireshark-sniffing">wireshark sniffing</a></li>
@@ -958,9 +964,12 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#cli-reference">cli reference</a></li>
       </ul>
     </li>
-    <li><a href="#thread-over-zephyr">Thread over Zephyr</a>
+    <li><a href="#network-co-processor-ncp">Network Co-Processor (NCP)</a>
       <ul>
-        <li><a href="#building-cli">building cli</a></li>
+        <li><a href="#nordic---nrf-410">Nordic - nRF 4.1.0</a></li>
+        <li><a href="#zephyr-v2499">Zephyr v2.4.99</a></li>
+        <li><a href="#nordic---nrf-connect">Nordic - nRF Connect</a></li>
+        <li><a href="#open-thread">Open Thread</a></li>
       </ul>
     </li>
     <li><a href="#faq---discussion">FAQ - Discussion</a></li>
@@ -1881,277 +1890,214 @@ Mar  <span style="color:#ae81ff">6</span> 13:00:07 3d926b9c2cee otbr-agent<span 
   </div>
 </details>
 
-<h1 id="network-co-processor-ncp">
-  Network Co-Processor (NCP)
-  <a class="anchor" href="#network-co-processor-ncp">#</a>
-</h1>
-<p>Note, see the RCP version above for recent border routers. Given the open source nature of OpenThread, it is quite challenging to find the right build instructions and version match to the right border router. See <a href="https://openthread.io/platforms#network-co-processor-ncp">Vendor support NCP</a> for mode details. Different NCP versions are listed here.</p>
-<h2 id="nordic---nrf-410">
-  Nordic - nRF 4.1.0
-  <a class="anchor" href="#nordic---nrf-410">#</a>
-</h2>
-<ul>
-<li>successfull match between the SDK and Rpi image, both available from the link below
-<ul>
-<li>nRFSDK for Thread and Zigbee v4.1.0</li>
-<li>RaspPi OT Border Router Demo v4.1.0-1.alpha
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK-for-Thread-and-Zigbee/Download"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            nRF SDK Download
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-</li>
-</ul>
-</li>
-</ul>
-<p>build and flash the ncp example</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;cd <span style="color:#e6db74">&#34;examples\thread\ncp\ftd\usb\pca10059\mbr\armgcc\Makefile&#34;</span>
-&gt;make
-&gt;make flash_mbr
-&gt;make flash
-</code></pre></div><h2 id="zephyr-v2499">
-  Zephyr v2.4.99
-  <a class="anchor" href="#zephyr-v2499">#</a>
-</h2>
-<ul>
-<li>
-<p>This section is about the <code>nRF Connect SDK</code> using the <code>zephyr</code> directory</p>
-</li>
-<li>
-<p>successfully built and tested with <code>v1.4.99-dev1</code> which contains Zephyr version <code>2.4.99</code></p>
-</li>
-<li>
-<p>recognised as USB device
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="http://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/gs_assistant.html"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            nRF Connect SDK installing...
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-</p>
-</li>
-<li>
-<p>add <code>CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n</code> to <code>prj.conf</code></p>
-</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd nrf/v1.4.99-dev1/zephyr/samples/net/openthread/ncp
-west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prj.conf overlay-usb-nrf-br.conf&#34;</span>
-</code></pre></div><h2 id="nordic---nrf-connect">
-  Nordic - nRF Connect
-  <a class="anchor" href="#nordic---nrf-connect">#</a>
-</h2>
-<ul>
-<li>
-<p>This section is about the <code>nRF Connect SDK</code> using the <code>nrf</code> directory</p>
-</li>
-<li>
-<p>Not yet successfull with the nRF52 dongle, likely due to the missing usb overlay
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="http://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/gs_assistant.html"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            nRF Connect SDK installing...
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-</p>
-</li>
-<li>
-<p>add <code>CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n</code> to <code>prj.conf</code></p>
-</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd nrf/v1.4.99-dev1/nrf/samples/openthread/ncp
-west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prj.conf overlay-logging.conf&#34;</span>
-</code></pre></div><h2 id="open-thread">
-  Open Thread
-  <a class="anchor" href="#open-thread">#</a>
-</h2>
-<ul>
-<li>Available pre-build ncp firmware</li>
-</ul>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://openthread.io/platforms/co-processor/firmware#download_nrf52840_firmware_image"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            nRF52840 ncp firmare...
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">nrfjprog -f nrf52 --program ot-ncp-ftd-gd81d769e-nrf52840.hex --sectorerase --verify
-</code></pre></div><ul>
-<li>for build instructions see the rcp building steps in the <a href="#openthread">rcp OpenThread</a> section, the build commands generates both npc and rcp elf files.</li>
-</ul>
 <h1 id="border-router">
   Border Router
   <a class="anchor" href="#border-router">#</a>
 </h1>
-<h2 id="openthread---docker">
+<h2 id="openthread---setup">
+  OpenThread - setup
+  <a class="anchor" href="#openthread---setup">#</a>
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://openthread.io/guides/border-router/build#set-up-the-border-router"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            Setup - OpenThread...
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/openthread/ot-br-posix
+cd ot-br-posix
+./script/bootstrap
+NETWORK_MANAGER<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span> ./script/setup
+nano /etc/default/otbr-agent
+sudo reboot now
+sudo systemctl status
+sudo ot-ctl state
+</code></pre></div><p><em>issues</em>: in case a <code>dnsmasq</code> service already running, might have to be disabled first</p>
+<p>The status of the running services look as follows.
+These services should now be available :</p>
+<ul>
+<li><code>avahi-daemon</code></li>
+<li><code>otbr-agent</code></li>
+<li><code>otbr-web</code></li>
+<li><code>ncp_state_notifier</code></li>
+<li><code>wpa_supplicant</code>
+<details >
+  <summary>sudo systemctl status</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pi@metal:~ $ sudo systemctl status
+● metal
+    State: running
+     Jobs: <span style="color:#ae81ff">0</span> queued
+   Failed: <span style="color:#ae81ff">0</span> units
+    Since: Thu 1970-01-01 01:00:01 CET; <span style="color:#ae81ff">51</span> years <span style="color:#ae81ff">1</span> months ago
+   CGroup: /
+           ├─user.slice
+           │ └─user-1000.slice
+           │   ├─session-3.scope
+           │   │ ├─1663 sshd: pi <span style="color:#f92672">[</span>priv<span style="color:#f92672">]</span>
+           │   │ ├─1669 sshd: pi@pts/0
+           │   │ ├─1670 -bash
+           │   │ ├─1687 sudo systemctl status
+           │   │ ├─1688 systemctl status
+           │   │ └─1689 pager
+           │   ├─user@1000.service
+           │   │ └─init.scope
+           │   │   ├─1637 /lib/systemd/systemd --user
+           │   │   └─1638 <span style="color:#f92672">(</span>sd-pam<span style="color:#f92672">)</span>
+           │   └─session-1.scope
+           │     ├─ <span style="color:#ae81ff">864</span> /bin/login -f
+           │     └─1648 -bash
+           ├─init.scope
+           │ └─1 /sbin/init splash
+           └─system.slice
+             ├─ncp_state_notifier.service
+             │ ├─427 /bin/sh /usr/sbin/ncp_state_notifier
+             │ ├─432 dbus-monitor --system type<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;signal&#39;</span>, interface<span style="color:#f92672">=</span>org.freedesktop.DBus.Properties, path
+             │ └─433 /bin/sh /usr/sbin/ncp_state_notifier
+             ├─alsa-state.service
+             │ └─395 /usr/sbin/alsactl -E HOME<span style="color:#f92672">=</span>/run/alsa -s -n <span style="color:#ae81ff">19</span> -c rdaemon
+             ├─containerd.service
+             │ └─553 /usr/bin/containerd
+             ├─systemd-timesyncd.service
+             │ └─341 /lib/systemd/systemd-timesyncd
+             ├─NetworkManager.service
+             │ ├─420 /usr/sbin/NetworkManager --no-daemon
+             │ └─633 /sbin/dhclient -d -q -sf /usr/lib/NetworkManager/nm-dhcp-helper -pf /run/dhclient-et
+             ├─dbus.service
+             │ └─409 /usr/bin/dbus-daemon --system --address<span style="color:#f92672">=</span>systemd: --nofork --nopidfile --systemd-acti
+             ├─hciuart.service
+             │ └─826 /usr/bin/hciattach /dev/serial1 bcm43xx <span style="color:#ae81ff">3000000</span> flow -
+             ├─udisks2.service
+             │ └─394 /usr/lib/udisks2/udisksd
+             ├─docker.service
+             │ └─853 /usr/bin/dockerd -H fd:// --containerd<span style="color:#f92672">=</span>/run/containerd/containerd.sock
+             ├─ssh.service
+             │ └─564 /usr/sbin/sshd -D
+             ├─ser2net.service
+             │ └─868 /usr/sbin/ser2net -c /etc/ser2net.conf -P /run/ser2net.pid
+             ├─avahi-daemon.service
+             │ ├─393 avahi-daemon: running <span style="color:#f92672">[</span>metal.local<span style="color:#f92672">]</span>
+             │ └─398 avahi-daemon: chroot helper
+             ├─otbr-web.service
+             │ └─428 /usr/sbin/otbr-web
+             ├─wpa_supplicant.service
+             │ └─419 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+             ├─triggerhappy.service
+             │ └─442 /usr/sbin/thd --triggers /etc/triggerhappy/triggers.d/ --socket /run/thd.socket --us
+             ├─systemd-logind.service
+             │ └─439 /lib/systemd/systemd-logind
+             ├─polkit.service
+             │ └─511 /usr/lib/policykit-1/polkitd --no-debug
+             ├─otbr-agent.service
+             │ └─423 /usr/sbin/otbr-agent -I wpan0 spinel+hdlc+uart:///dev/ttyACM0
+             ├─telegraf.service
+             │ └─542 /usr/bin/telegraf -config /etc/telegraf/telegraf.conf -config-directory /etc/telegra
+             ├─cron.service
+             │ └─437 /usr/sbin/cron -f
+             ├─systemd-udevd.service
+             │ └─181 /lib/systemd/systemd-udevd
+             ├─rsyslog.service
+             │ └─403 /usr/sbin/rsyslogd -n -iNONE
+             ├─bluetooth.service
+             │ └─831 /usr/lib/bluetooth/bluetoothd
+             ├─inetd.service
+             │ └─857 /usr/sbin/inetd
+             ├─bluealsa.service
+             │ └─834 /usr/bin/bluealsa
+             ├─systemd-journald.service
+             │ └─121 /lib/systemd/systemd-journald
+             ├─bind9.service
+             │ └─560 /usr/sbin/named -u bind
+             ├─rng-tools.service
+             │ └─415 /usr/sbin/rngd -r /dev/hwrng
+             └─dhcpcd.service
+               └─473 /sbin/dhcpcd -q -b
+</code></pre></div>
+  </div>
+</details>
+</li>
+</ul>
+<p>After forming a network, the interface would look as follows 
+<details >
+  <summary>ifconfig wpan0</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wpan0: flags<span style="color:#f92672">=</span>4305&lt;UP,POINTOPOINT,RUNNING,NOARP,MULTICAST&gt;  mtu <span style="color:#ae81ff">1280</span>
+        inet6 fd85:454:6529:a0c5:9ebb:d761:b6d:df4e  prefixlen <span style="color:#ae81ff">64</span>  scopeid 0x0&lt;global&gt;
+        inet6 fd11:22::7005:5eac:6482:e2ec  prefixlen <span style="color:#ae81ff">64</span>  scopeid 0x0&lt;global&gt;
+        inet6 fe80::94bf:4de7:183c:f37d  prefixlen <span style="color:#ae81ff">64</span>  scopeid 0x20&lt;link&gt;
+        inet6 fd85:454:6529:a0c5:0:ff:fe00:fc00  prefixlen <span style="color:#ae81ff">64</span>  scopeid 0x0&lt;global&gt;
+        inet6 fd85:454:6529:a0c5:0:ff:fe00:d400  prefixlen <span style="color:#ae81ff">64</span>  scopeid 0x0&lt;global&gt;
+        unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  txqueuelen <span style="color:#ae81ff">500</span>  <span style="color:#f92672">(</span>UNSPEC<span style="color:#f92672">)</span>
+        RX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
+        RX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span>  overruns <span style="color:#ae81ff">0</span>  frame <span style="color:#ae81ff">0</span>
+        TX packets <span style="color:#ae81ff">9</span>  bytes <span style="color:#ae81ff">1524</span> <span style="color:#f92672">(</span>1.4 KiB<span style="color:#f92672">)</span>
+        TX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span> overruns <span style="color:#ae81ff">0</span>  carrier <span style="color:#ae81ff">0</span>  collisions <span style="color:#ae81ff">0</span>
+</code></pre></div>
+  </div>
+</details>
+</p>
+<h2 id="udp-test">
+  udp test
+  <a class="anchor" href="#udp-test">#</a>
+</h2>
+<p>The <a href="#openthread---setup">openthread-setup</a> should be performed to be able to install and use <code>socat</code>.
+Listening from <code>ot-ctl</code> :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$sudo ot-ctl
+&gt;udp open
+&gt;udp bind :: <span style="color:#ae81ff">4242</span>
+</code></pre></div><p><blockquote class="book-hint warning">
+  A current issue is that the <code>wpan0</code> adapter is lost after closing the ot-ctl command line
+</blockquote>
+
+Listening using <code>socat</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$socat UDP6-LISTEN:4242,fork STDOUT
+</code></pre></div><p>on the nRF52 node Zephyr shell :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt;ot udp open
+&gt;ot udp send ff02::1 <span style="color:#ae81ff">4242</span> hi_there_now
+</code></pre></div><h2 id="openthread---docker">
   OpenThread - docker
   <a class="anchor" href="#openthread---docker">#</a>
 </h2>
@@ -2252,183 +2198,6 @@ git checkout 4b6d3b863f
 git submodule update --init --recursive
 docker build --no-cache -t openthread/otbr -f etc/docker/Dockerfile .
 </code></pre></div><p>Now running the same command above from the section <a href="#latest">latest</a> with the same image <code>openthread/otbr</code> will run the newly built image.</p>
-<h2 id="openthread---setup">
-  OpenThread - setup
-  <a class="anchor" href="#openthread---setup">#</a>
-</h2>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://openthread.io/guides/border-router/build#set-up-the-border-router"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            Setup - OpenThread...
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/openthread/ot-br-posix
-cd ot-br-posix
-./script/bootstrap
-NETWORK_MANAGER<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span> ./script/setup
-nano /etc/default/otbr-agent
-sudo reboot now
-sudo systemctl status
-sudo ot-ctl state
-</code></pre></div><p><em>issues</em>: in case a <code>dnsmasq</code> service already running, might have to be disabled first</p>
-<p>The status of the running services look as follows
-<details >
-  <summary>sudo systemctl status</summary>
-  <div class="markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pi@metal:~ $ sudo systemctl status
-● metal
-    State: running
-     Jobs: <span style="color:#ae81ff">0</span> queued
-   Failed: <span style="color:#ae81ff">0</span> units
-    Since: Thu 1970-01-01 01:00:01 CET; <span style="color:#ae81ff">51</span> years <span style="color:#ae81ff">1</span> months ago
-   CGroup: /
-           ├─user.slice
-           │ └─user-1000.slice
-           │   ├─session-3.scope
-           │   │ ├─1663 sshd: pi <span style="color:#f92672">[</span>priv<span style="color:#f92672">]</span>
-           │   │ ├─1669 sshd: pi@pts/0
-           │   │ ├─1670 -bash
-           │   │ ├─1687 sudo systemctl status
-           │   │ ├─1688 systemctl status
-           │   │ └─1689 pager
-           │   ├─user@1000.service
-           │   │ └─init.scope
-           │   │   ├─1637 /lib/systemd/systemd --user
-           │   │   └─1638 <span style="color:#f92672">(</span>sd-pam<span style="color:#f92672">)</span>
-           │   └─session-1.scope
-           │     ├─ <span style="color:#ae81ff">864</span> /bin/login -f
-           │     └─1648 -bash
-           ├─init.scope
-           │ └─1 /sbin/init splash
-           └─system.slice
-             ├─ncp_state_notifier.service
-             │ ├─427 /bin/sh /usr/sbin/ncp_state_notifier
-             │ ├─432 dbus-monitor --system type<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;signal&#39;</span>, interface<span style="color:#f92672">=</span>org.freedesktop.DBus.Properties, path
-             │ └─433 /bin/sh /usr/sbin/ncp_state_notifier
-             ├─alsa-state.service
-             │ └─395 /usr/sbin/alsactl -E HOME<span style="color:#f92672">=</span>/run/alsa -s -n <span style="color:#ae81ff">19</span> -c rdaemon
-             ├─containerd.service
-             │ └─553 /usr/bin/containerd
-             ├─systemd-timesyncd.service
-             │ └─341 /lib/systemd/systemd-timesyncd
-             ├─NetworkManager.service
-             │ ├─420 /usr/sbin/NetworkManager --no-daemon
-             │ └─633 /sbin/dhclient -d -q -sf /usr/lib/NetworkManager/nm-dhcp-helper -pf /run/dhclient-et
-             ├─dbus.service
-             │ └─409 /usr/bin/dbus-daemon --system --address<span style="color:#f92672">=</span>systemd: --nofork --nopidfile --systemd-acti
-             ├─hciuart.service
-             │ └─826 /usr/bin/hciattach /dev/serial1 bcm43xx <span style="color:#ae81ff">3000000</span> flow -
-             ├─udisks2.service
-             │ └─394 /usr/lib/udisks2/udisksd
-             ├─docker.service
-             │ └─853 /usr/bin/dockerd -H fd:// --containerd<span style="color:#f92672">=</span>/run/containerd/containerd.sock
-             ├─ssh.service
-             │ └─564 /usr/sbin/sshd -D
-             ├─ser2net.service
-             │ └─868 /usr/sbin/ser2net -c /etc/ser2net.conf -P /run/ser2net.pid
-             ├─avahi-daemon.service
-             │ ├─393 avahi-daemon: running <span style="color:#f92672">[</span>metal.local<span style="color:#f92672">]</span>
-             │ └─398 avahi-daemon: chroot helper
-             ├─otbr-web.service
-             │ └─428 /usr/sbin/otbr-web
-             ├─wpa_supplicant.service
-             │ └─419 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
-             ├─triggerhappy.service
-             │ └─442 /usr/sbin/thd --triggers /etc/triggerhappy/triggers.d/ --socket /run/thd.socket --us
-             ├─systemd-logind.service
-             │ └─439 /lib/systemd/systemd-logind
-             ├─polkit.service
-             │ └─511 /usr/lib/policykit-1/polkitd --no-debug
-             ├─otbr-agent.service
-             │ └─423 /usr/sbin/otbr-agent -I wpan0 spinel+hdlc+uart:///dev/ttyACM0
-             ├─telegraf.service
-             │ └─542 /usr/bin/telegraf -config /etc/telegraf/telegraf.conf -config-directory /etc/telegra
-             ├─cron.service
-             │ └─437 /usr/sbin/cron -f
-             ├─systemd-udevd.service
-             │ └─181 /lib/systemd/systemd-udevd
-             ├─rsyslog.service
-             │ └─403 /usr/sbin/rsyslogd -n -iNONE
-             ├─bluetooth.service
-             │ └─831 /usr/lib/bluetooth/bluetoothd
-             ├─inetd.service
-             │ └─857 /usr/sbin/inetd
-             ├─bluealsa.service
-             │ └─834 /usr/bin/bluealsa
-             ├─systemd-journald.service
-             │ └─121 /lib/systemd/systemd-journald
-             ├─bind9.service
-             │ └─560 /usr/sbin/named -u bind
-             ├─rng-tools.service
-             │ └─415 /usr/sbin/rngd -r /dev/hwrng
-             └─dhcpcd.service
-               └─473 /sbin/dhcpcd -q -b
-</code></pre></div>
-  </div>
-</details>
-</p>
-<p>After forming a network, the interface would look as follows
-<details >
-  <summary>ifconfig wpan0</summary>
-  <div class="markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wpan0: flags<span style="color:#f92672">=</span>4305&lt;UP,POINTOPOINT,RUNNING,NOARP,MULTICAST&gt;  mtu <span style="color:#ae81ff">1280</span>
-        inet6 fd85:454:6529:a0c5:9ebb:d761:b6d:df4e  prefixlen <span style="color:#ae81ff">64</span>  scopeid 0x0&lt;global&gt;
-        inet6 fd11:22::7005:5eac:6482:e2ec  prefixlen <span style="color:#ae81ff">64</span>  scopeid 0x0&lt;global&gt;
-        inet6 fe80::94bf:4de7:183c:f37d  prefixlen <span style="color:#ae81ff">64</span>  scopeid 0x20&lt;link&gt;
-        inet6 fd85:454:6529:a0c5:0:ff:fe00:fc00  prefixlen <span style="color:#ae81ff">64</span>  scopeid 0x0&lt;global&gt;
-        inet6 fd85:454:6529:a0c5:0:ff:fe00:d400  prefixlen <span style="color:#ae81ff">64</span>  scopeid 0x0&lt;global&gt;
-        unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  txqueuelen <span style="color:#ae81ff">500</span>  <span style="color:#f92672">(</span>UNSPEC<span style="color:#f92672">)</span>
-        RX packets <span style="color:#ae81ff">0</span>  bytes <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0.0 B<span style="color:#f92672">)</span>
-        RX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span>  overruns <span style="color:#ae81ff">0</span>  frame <span style="color:#ae81ff">0</span>
-        TX packets <span style="color:#ae81ff">9</span>  bytes <span style="color:#ae81ff">1524</span> <span style="color:#f92672">(</span>1.4 KiB<span style="color:#f92672">)</span>
-        TX errors <span style="color:#ae81ff">0</span>  dropped <span style="color:#ae81ff">0</span> overruns <span style="color:#ae81ff">0</span>  carrier <span style="color:#ae81ff">0</span>  collisions <span style="color:#ae81ff">0</span>
-</code></pre></div>
-  </div>
-</details>
-</p>
 <h2 id="nordic---sdcard-image">
   Nordic - sdcard image
   <a class="anchor" href="#nordic---sdcard-image">#</a>
@@ -3193,42 +2962,273 @@ leaderdata
   </div>
 </details>
 
-<h1 id="thread-over-zephyr">
-  Thread over Zephyr
-  <a class="anchor" href="#thread-over-zephyr">#</a>
+<h1 id="network-co-processor-ncp">
+  Network Co-Processor (NCP)
+  <a class="anchor" href="#network-co-processor-ncp">#</a>
 </h1>
-<p>for installing Zephyr see 
+<p>Note, see the RCP version above for recent border routers. Given the open source nature of OpenThread, it is quite challenging to find the right build instructions and version match to the right border router. See <a href="https://openthread.io/platforms#network-co-processor-ncp">Vendor support NCP</a> for mode details. Different NCP versions are listed here.</p>
+<h2 id="nordic---nrf-410">
+  Nordic - nRF 4.1.0
+  <a class="anchor" href="#nordic---nrf-410">#</a>
+</h2>
+<ul>
+<li>successfull match between the SDK and Rpi image, both available from the link below
+<ul>
+<li>nRFSDK for Thread and Zigbee v4.1.0</li>
+<li>RaspPi OT Border Router Demo v4.1.0-1.alpha
 
 <div class="container">
     <div class="row">
         <div class="col text-center">
         <a  class="book-btn"
             
+                href="https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK-for-Thread-and-Zigbee/Download"
+                target="_blank"
             
-                href="https://www.homesmartmesh.com/docs/frameworks/zephyr/"
             
             role="button"
         >
-            Installing Zephyr
+            nRF SDK Download
             
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<p>build and flash the ncp example</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;cd <span style="color:#e6db74">&#34;examples\thread\ncp\ftd\usb\pca10059\mbr\armgcc\Makefile&#34;</span>
+&gt;make
+&gt;make flash_mbr
+&gt;make flash
+</code></pre></div><h2 id="zephyr-v2499">
+  Zephyr v2.4.99
+  <a class="anchor" href="#zephyr-v2499">#</a>
+</h2>
+<ul>
+<li>
+<p>This section is about the <code>nRF Connect SDK</code> using the <code>zephyr</code> directory</p>
+</li>
+<li>
+<p>successfully built and tested with <code>v1.4.99-dev1</code> which contains Zephyr version <code>2.4.99</code></p>
+</li>
+<li>
+<p>recognised as USB device
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="http://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/gs_assistant.html"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            nRF Connect SDK installing...
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+                
+
+                
+
+                
             
         </a>
     </div>
     </div>
 </div>
 </p>
-<h2 id="building-cli">
-  building cli
-  <a class="anchor" href="#building-cli">#</a>
+</li>
+<li>
+<p>add <code>CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n</code> to <code>prj.conf</code></p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd nrf/v1.4.99-dev1/zephyr/samples/net/openthread/ncp
+west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prj.conf overlay-usb-nrf-br.conf&#34;</span>
+</code></pre></div><h2 id="nordic---nrf-connect">
+  Nordic - nRF Connect
+  <a class="anchor" href="#nordic---nrf-connect">#</a>
 </h2>
 <ul>
-<li>add <code>CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n</code> to <code>overlay-minimal_singleprotocol.conf</code></li>
-<li>Not yet successfull with the nRF52 dongle due to the missing usb overlay</li>
+<li>
+<p>This section is about the <code>nRF Connect SDK</code> using the <code>nrf</code> directory</p>
+</li>
+<li>
+<p>Not yet successfull with the nRF52 dongle, likely due to the missing usb overlay
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="http://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/gs_assistant.html"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            nRF Connect SDK installing...
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+</p>
+</li>
+<li>
+<p>add <code>CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n</code> to <code>prj.conf</code></p>
+</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">source ~/ncs/zephyr/zephyr-env.sh
-cd ~/ncs/nrf/samples/openthread/cli
-west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prj.conf overlay-minimal_singleprotocol.conf&#34;</span>
-</code></pre></div><h1 id="faq---discussion">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd nrf/v1.4.99-dev1/nrf/samples/openthread/ncp
+west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prj.conf overlay-logging.conf&#34;</span>
+</code></pre></div><h2 id="open-thread">
+  Open Thread
+  <a class="anchor" href="#open-thread">#</a>
+</h2>
+<ul>
+<li>Available pre-build ncp firmware</li>
+</ul>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://openthread.io/platforms/co-processor/firmware#download_nrf52840_firmware_image"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            nRF52840 ncp firmare...
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">nrfjprog -f nrf52 --program ot-ncp-ftd-gd81d769e-nrf52840.hex --sectorerase --verify
+</code></pre></div><ul>
+<li>for build instructions see the rcp building steps in the <a href="#openthread">rcp OpenThread</a> section, the build commands generates both npc and rcp elf files.</li>
+</ul>
+<h1 id="faq---discussion">
   FAQ - Discussion
   <a class="anchor" href="#faq---discussion">#</a>
 </h1>
@@ -3600,23 +3600,16 @@ can I run openthread with platformio ?
         <li><a href="#zephyr-v2599">Zephyr v2.5.99</a></li>
       </ul>
     </li>
-    <li><a href="#network-co-processor-ncp">Network Co-Processor (NCP)</a>
-      <ul>
-        <li><a href="#nordic---nrf-410">Nordic - nRF 4.1.0</a></li>
-        <li><a href="#zephyr-v2499">Zephyr v2.4.99</a></li>
-        <li><a href="#nordic---nrf-connect">Nordic - nRF Connect</a></li>
-        <li><a href="#open-thread">Open Thread</a></li>
-      </ul>
-    </li>
     <li><a href="#border-router">Border Router</a>
       <ul>
+        <li><a href="#openthread---setup">OpenThread - setup</a></li>
+        <li><a href="#udp-test">udp test</a></li>
         <li><a href="#openthread---docker">OpenThread - docker</a>
           <ul>
             <li><a href="#latest">latest</a></li>
             <li><a href="#version">version</a></li>
           </ul>
         </li>
-        <li><a href="#openthread---setup">OpenThread - setup</a></li>
         <li><a href="#nordic---sdcard-image">Nordic - sdcard image</a></li>
         <li><a href="#form-a-network">Form a network</a></li>
         <li><a href="#wireshark-sniffing">wireshark sniffing</a></li>
@@ -3644,9 +3637,12 @@ can I run openthread with platformio ?
         <li><a href="#cli-reference">cli reference</a></li>
       </ul>
     </li>
-    <li><a href="#thread-over-zephyr">Thread over Zephyr</a>
+    <li><a href="#network-co-processor-ncp">Network Co-Processor (NCP)</a>
       <ul>
-        <li><a href="#building-cli">building cli</a></li>
+        <li><a href="#nordic---nrf-410">Nordic - nRF 4.1.0</a></li>
+        <li><a href="#zephyr-v2499">Zephyr v2.4.99</a></li>
+        <li><a href="#nordic---nrf-connect">Nordic - nRF Connect</a></li>
+        <li><a href="#open-thread">Open Thread</a></li>
       </ul>
     </li>
     <li><a href="#faq---discussion">FAQ - Discussion</a></li>
