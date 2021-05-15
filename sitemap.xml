@@ -38,13 +38,13 @@
   </url>
   
   <url>
-    <loc>https://www.homesmartmesh.com/docs/networks/nrf/</loc>
-    <lastmod>2021-02-14T08:00:00+00:00</lastmod>
+    <loc>https://www.homesmartmesh.com/docs/frameworks/grafana/sensors/</loc>
+    <lastmod>2020-10-06T08:48:57+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.homesmartmesh.com/docs/frameworks/grafana/sensors/</loc>
-    <lastmod>2020-10-06T08:48:57+00:00</lastmod>
+    <loc>https://www.homesmartmesh.com/docs/networks/thread/</loc>
+    <lastmod>2021-03-07T08:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -70,6 +70,11 @@
   <url>
     <loc>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm1001_dev/</loc>
     <lastmod>2021-05-08T08:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.homesmartmesh.com/docs/networks/ultrawideband/</loc>
+    <lastmod>2021-05-15T08:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -103,11 +108,6 @@
   </url>
   
   <url>
-    <loc>https://www.homesmartmesh.com/docs/networks/thread/</loc>
-    <lastmod>2021-03-07T08:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.homesmartmesh.com/docs/microcontrollers/riscv/</loc>
   </url>
   
@@ -132,8 +132,8 @@
   </url>
   
   <url>
-    <loc>https://www.homesmartmesh.com/docs/networks/zigbee/</loc>
-    <lastmod>2020-10-06T08:48:57+00:00</lastmod>
+    <loc>https://www.homesmartmesh.com/docs/networks/nrf/</loc>
+    <lastmod>2021-02-14T08:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -143,11 +143,6 @@
   <url>
     <loc>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/</loc>
     <lastmod>2021-05-14T08:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.homesmartmesh.com/docs/networks/ultrawideband/</loc>
-    <lastmod>2021-05-07T08:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -168,6 +163,11 @@
   <url>
     <loc>https://www.homesmartmesh.com/docs/3dprinting/handbag_hanger/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.homesmartmesh.com/docs/networks/zigbee/</loc>
+    <lastmod>2020-10-06T08:48:57+00:00</lastmod>
   </url>
   
   <url>

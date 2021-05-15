@@ -8,6 +8,25 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.homesmartmesh.com/docs/networks/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Thread</title>
+      <link>https://www.homesmartmesh.com/docs/networks/thread/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/networks/thread/</guid>
+      <description>Relates to#Zephyr RTOSProject CHIPOverview#Full Screenimport {setup_svg_panzoom,reset_svg_panzoom} from &#34;/js/setup-svg-pan-zoom.js&#34;function window_reset_position(){reset_svg_panzoom(&#34;openthread-environment-1&#34;)}console.log(`into script for &#34;openthread-environment-1&#34;`)window.addEventListener(&#39;load&#39;, ()={let embed = document.getElementById(&#34;svg-openthread-environment-1&#34;)setup_svg_panzoom(embed)})window.addEventListener(&#39;resize&#39;, window_reset_position) some elements have link to the corresponding websites  Open ThreadIPV6 adressingNetwork discoverytest connectivityCheat sheet# IPv6 bit length : 128 bit = 8x 16 ibts =&amp;gt; 00b1:00b2:00b3:00b4:00b5:00b6:00b7:00b8 Link-Local prefix : fe80::/16 Mesh-Local prefix : fd00::/8 Multicast Link-Local : ff02::1 Multicast Mesh-Local : ff03::1 RLOC16 : Routing locator in 16 bits 0x0401 RLOC16 Router mask : 0x0400 IID : Interface Identifier (includes RLOC16) RLOC = Mesh-Local Prefix + IID  Specification#request the specification.</description>
+    </item>
+    
+    <item>
+      <title>Ultra Wide Band</title>
+      <link>https://www.homesmartmesh.com/docs/networks/ultrawideband/</link>
+      <pubDate>Thu, 06 May 2021 08:48:57 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/networks/ultrawideband/</guid>
+      <description>Microcontrollers / nRF52 / UWB DWM1001 devAn Ultra-Wide-Band networks can form a mesh network, in addition, the main feature is the Real-Time-Locating-System capability.
+Real Time Locating System# DRTLS : DWM1001 Two-Way-Ranging RTLS RTLS : Real Time Locating System PANS : Positioning and Netowrking Stack eCos : Free Open source Real-Time Operating-System  Hardware#UWM Chips available from Decawave, now Qorvo.</description>
+    </item>
+    
+    <item>
       <title>Simple Mesh</title>
       <link>https://www.homesmartmesh.com/docs/networks/nrf/</link>
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
@@ -15,15 +34,6 @@
       <guid>https://www.homesmartmesh.com/docs/networks/nrf/</guid>
       <description>Simple Mesh Overview#A simpler, more efficient alternative to Z-x, BL-x, Thread, standard RF protocols. Open source SW is provided for custom and off the shelf nRF SoC tags and dongles.
 Simple Mesh SensorTagSimple Mesh RepoFeatures#     2.</description>
-    </item>
-    
-    <item>
-      <title>Thread</title>
-      <link>https://www.homesmartmesh.com/docs/networks/thread/</link>
-      <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
-      
-      <guid>https://www.homesmartmesh.com/docs/networks/thread/</guid>
-      <description>Relates to#Zephyr RTOSProject CHIPOverview#Full Screenimport {setup_svg_panzoom,reset_svg_panzoom} from &#34;/js/setup-svg-pan-zoom.js&#34;function window_reset_position(){reset_svg_panzoom(&#34;openthread-environment-1&#34;)}console.log(`into script for &#34;openthread-environment-1&#34;`)window.addEventListener(&#39;load&#39;, ()={let embed = document.getElementById(&#34;svg-openthread-environment-1&#34;)setup_svg_panzoom(embed)})window.addEventListener(&#39;resize&#39;, window_reset_position) some elements have link to the corresponding websites  Open ThreadIPV6 adressingNetwork discoverytest connectivityCheat sheet# IPv6 bit length : 128 bit = 8x 16 ibts =&amp;gt; 00b1:00b2:00b3:00b4:00b5:00b6:00b7:00b8 Link-Local prefix : fe80::/16 Mesh-Local prefix : fd00::/8 Multicast Link-Local : ff02::1 Multicast Mesh-Local : ff03::1 RLOC16 : Routing locator in 16 bits 0x0401 RLOC16 Router mask : 0x0400 IID : Interface Identifier (includes RLOC16) RLOC = Mesh-Local Prefix + IID  Specification#request the specification.</description>
     </item>
     
     <item>
@@ -36,16 +46,6 @@ Simple Mesh SensorTagSimple Mesh RepoFeatures#     2.</descriptio
   As in the above figure, I kept all the light with the hue gateway for a reliable function, and opted for zigbee2mqtt for all other non lighting devices.
 For a detailed list of used devices and their documentation see the devices list section
 Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in a local network, therefore allowing third party apps integration.</description>
-    </item>
-    
-    <item>
-      <title>Ultra Wide Band</title>
-      <link>https://www.homesmartmesh.com/docs/networks/ultrawideband/</link>
-      <pubDate>Thu, 06 May 2021 08:48:57 +0000</pubDate>
-      
-      <guid>https://www.homesmartmesh.com/docs/networks/ultrawideband/</guid>
-      <description>Microcontrollers / nRF52 / UWB DWM1001 devStandard#802.15.4zHardware#Qorvo#UWM Chips available from Decawave, now Qorvo. Qorvo is also the supplier of Apple UWB chips.
-Mode details about the UWB DWM1001 development kit : Microcontrollers / nRF52 / UWB DWM1001 devWhat is Ultra Wide Band ?</description>
     </item>
     
   </channel>
