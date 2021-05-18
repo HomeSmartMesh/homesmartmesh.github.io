@@ -272,7 +272,7 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/zephyr/</guid>
       <description>Thread ProtocolProject MatterDebug with OZone# Ozone : performance analyzer RTOS Awareness : debug an RTOS  Steps :
- in the new project wizard, make sure a peripheral svd file is selected e.</description>
+ make sure to use Ozone version 3.22d or higher in the new project wizard, make sure a peripheral svd file is selected e.</description>
     </item>
     
     <item>
