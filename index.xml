@@ -116,7 +116,7 @@ Final application#This repository has boilerplates samples. A real use case e
       
       <guid>https://www.homesmartmesh.com/docs/networks/ultrawideband/</guid>
       <description>Microcontrollers / nRF52 / UWB DWM1001 devAn Ultra-Wide-Band networks can form a mesh network, in addition, the main feature is the Real-Time-Locating-System capability.
-Real Time Locating System# DRTLS : DWM1001 Two-Way-Ranging RTLS RTLS : Real Time Locating System PANS : Positioning and Netowrking Stack eCos : Free Open source Real-Time Operating-System  Hardware#UWM Chips available from Decawave, now Qorvo.</description>
+Real Time Locating System# DRTLS : DWM1001 Two-Way-Ranging RTLS RTLS : Real Time Locating System PANS : Positioning and Netowrking Stack eCos : Free Open source Real-Time Operating-System  Decawave provides a ready to use localisation system based on a preflashed DWM1001_PANS_R2.</description>
     </item>
     
     <item>

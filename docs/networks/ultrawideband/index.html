@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.41bc5ae947b3cf861e0af4d4d13eaa1b1f863f4c187ae47430d2e9c9d65623ed.js" integrity="sha256-Qbxa6Uezz4YeCvTU0T6qGx&#43;GP0wYeuR0MNLpydZWI&#43;0="></script>
+<script defer src="/en.search.min.935c2fde42f565bbe36417f99eb3b8883b80a757fbbbcda3b98ded226c00668c.js" integrity="sha256-k1wv3kL1ZbvjZBf5nrO4iDuAp1f7u82juY3tImwAZow="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -992,6 +992,7 @@ https://github.com/alex-shpak/hugo-book
 <li>PANS : Positioning and Netowrking Stack</li>
 <li><a href="https://ecos.sourceware.org/">eCos</a> : Free Open source Real-Time Operating-System</li>
 </ul>
+<p>Decawave provides a ready to use localisation system based on a preflashed <code>DWM1001_PANS_R2.0.hex</code> firmware. The functional concept is described in <code>DWM1001 System Overview and Performance.pdf</code> including the time division protocol and the format of all the 802.15.4 Frames.</p>
 <h2 id="hardware">
   Hardware
   <a class="anchor" href="#hardware">#</a>
@@ -1042,6 +1043,7 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <ul>
 <li>Production Firmware : available as precompiled binary <code>DWM1001_PANS_R2.0.hex</code> in order to recover the Module for production grade certified applications</li>
+<li>PANS library : All the main functions performed by the module (TWR, RTLS, Bluetooth, 802.15.4) are provided as a library on top of which a user nRF52832 application can be built.</li>
 <li>Open Source Firmware : multiple examples are provided to kick start development</li>
 </ul>
 <h3 id="from-the-product-page">
@@ -1098,6 +1100,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 <ul>
+<li>simple example on how to use the <code>PANS</code> library. Overview in <code>DWM1001-Firmware-User-Guide.pdf</code> and details in <code>DWM1001-API-Guide.pdf</code></li>
 <li>available <code>.emProject</code> project files for <a href="https://www.segger.com/products/development-tools/embedded-studio/">Segger Studio</a></li>
 <li>based on <code>Nordik SDK</code> version <code>12.1.0</code></li>
 <li>Used <code>GNU Tools ARM Embedded</code> version <code>5.4 2016q3</code></li>
@@ -1258,6 +1261,10 @@ https://github.com/alex-shpak/hugo-book
 <li>no uwb specific positioning code</li>
 </ul>
 <p>Community contribution of Zephyr based examples with decadriver</p>
+<p><blockquote class="book-hint warning">
+  GNU GLP v3
+</blockquote>
+
 
 <div class="container">
     <div class="row">
@@ -1297,7 +1304,7 @@ https://github.com/alex-shpak/hugo-book
     </div>
     </div>
 </div>
-
+</p>
 <h2 id="raspberry-pi-software">
   Raspberry pi software
   <a class="anchor" href="#raspberry-pi-software">#</a>
