@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.935c2fde42f565bbe36417f99eb3b8883b80a757fbbbcda3b98ded226c00668c.js" integrity="sha256-k1wv3kL1ZbvjZBf5nrO4iDuAp1f7u82juY3tImwAZow="></script>
+<script defer src="/en.search.min.a8f9b512024620c79fe00483113e6726a827c3741abf08a4bfff0278550132e8.js" integrity="sha256-qPm1EgJGIMef4ASDET5nJqgnw3Qavwikv/8CeFUBMug="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -922,9 +922,13 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#zephyr">Zephyr</a></li>
           </ul>
         </li>
+        <li><a href="#dw-tranceiver-api">DW Tranceiver API</a></li>
         <li><a href="#raspberry-pi-software">Raspberry pi software</a>
           <ul>
+            <li><a href="#dwm-daemon">DWM Daemon</a></li>
+            <li><a href="#dwm-proxy">DWM Proxy</a></li>
             <li><a href="#decawave-webapp">Decawave Webapp</a></li>
+            <li><a href="#mqtt-config">MQTT Config</a></li>
           </ul>
         </li>
       </ul>
@@ -1044,6 +1048,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li>Production Firmware : available as precompiled binary <code>DWM1001_PANS_R2.0.hex</code> in order to recover the Module for production grade certified applications</li>
 <li>PANS library : All the main functions performed by the module (TWR, RTLS, Bluetooth, 802.15.4) are provided as a library on top of which a user nRF52832 application can be built.</li>
+<li>PANS library API : described in <code>DWM1001-Firmware-User-Guide.pdf</code> and <code>DWM1001-API-Guide.pdf</code></li>
 <li>Open Source Firmware : multiple examples are provided to kick start development</li>
 </ul>
 <h3 id="from-the-product-page">
@@ -1100,7 +1105,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 <ul>
-<li>simple example on how to use the <code>PANS</code> library. Overview in <code>DWM1001-Firmware-User-Guide.pdf</code> and details in <code>DWM1001-API-Guide.pdf</code></li>
+<li>simple example on how to use the <code>PANS</code> library.</li>
 <li>available <code>.emProject</code> project files for <a href="https://www.segger.com/products/development-tools/embedded-studio/">Segger Studio</a></li>
 <li>based on <code>Nordik SDK</code> version <code>12.1.0</code></li>
 <li>Used <code>GNU Tools ARM Embedded</code> version <code>5.4 2016q3</code></li>
@@ -1202,6 +1207,10 @@ https://github.com/alex-shpak/hugo-book
 <li>based on <code>Nordik SDK</code> version <code>14.2.0</code></li>
 <li>source code of the dw1000 spi driver</li>
 </ul>
+<blockquote class="book-hint warning">
+  with Embedded studio V5.40, it is required to enable the updated #ifdef for <code>__putchar</code> in <code>retarget.c</code> line 100
+</blockquote>
+
 <h3 id="zephyr">
   Zephyr
   <a class="anchor" href="#zephyr">#</a>
@@ -1305,6 +1314,50 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 </p>
+<h2 id="dw-tranceiver-api">
+  DW Tranceiver API
+  <a class="anchor" href="#dw-tranceiver-api">#</a>
+</h2>
+<p>available from Decawave uploads zip in path <code>dw1000_api_rev2p14\dw1000_api_rev2p14_stsw\DW1000_Software_API_Guide_rev2p7.pdf</code></p>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.decawave.com/wp-content/uploads/2019/01/dw1000_api_rev2p14.zip"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            dw1000_api_rev2p14.zip
+            
+            
+                
+                
+
+                
+
+                
+
+                
+                <svg    class="download"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                        >
+                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
+                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
+                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
+                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
+                </svg>
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
 <h2 id="raspberry-pi-software">
   Raspberry pi software
   <a class="anchor" href="#raspberry-pi-software">#</a>
@@ -1312,13 +1365,33 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li>DWM Daemon</li>
 <li>DWM Proxy</li>
-<li>webapp provided on the raspberry pi on the path <code>/var/www/html/</code>.</li>
+<li>webapp http server</li>
+<li>dwm device on <code>/dev/dwm0</code></li>
+</ul>
+<p>check that your raspberry pi is a model 3b not b+ with 100 Mbit only with <code>sudo ethtool eth0 | grep Speed</code>, which is important for the real time operation of the services.</p>
+<h3 id="dwm-daemon">
+  DWM Daemon
+  <a class="anchor" href="#dwm-daemon">#</a>
+</h3>
+<ul>
+<li>service : <code>dwm1001.service</code></li>
+<li>log : <code>/var/log/dwm-daemon.log</code></li>
+<li>config : <code>/etc/dwm1001/dwm1001.config</code></li>
+</ul>
+<h3 id="dwm-proxy">
+  DWM Proxy
+  <a class="anchor" href="#dwm-proxy">#</a>
+</h3>
+<ul>
+<li>service : <code>dwm1001-proxy.service</code></li>
+<li>config : <code>/etc/dwm1001/dwm1001-proxy.config</code></li>
 </ul>
 <h3 id="decawave-webapp">
   Decawave Webapp
   <a class="anchor" href="#decawave-webapp">#</a>
 </h3>
 <ul>
+<li>the webapp is provided on the raspberry pi on the path <code>/var/www/html/</code>.</li>
 <li>The webapp is based on <a href="https://threejs.org/">three.js</a> which is a viable choice for 3d gemoetry calculations of anchors and tag coordinates.</li>
 <li>The view is limited to an orthogonal projection which makes the app 2d only. Although the created tags and anchros are actual 3d meshes, only 2d shapes appear on the screen.</li>
 <li>The down side of 3d is the need for ray casting to create click events on objects. But on the upside it&rsquo;s a frameowrk that can easily extend to 3D models. Maybe for the future, Decawave will get inspired by the <a href="/docs/applications/home3d/">smart home 3d webapp</a> project.</li>
@@ -1344,6 +1417,76 @@ https://github.com/alex-shpak/hugo-book
   </a>
   
 </div>
+
+<h3 id="mqtt-config">
+  MQTT Config
+  <a class="anchor" href="#mqtt-config">#</a>
+</h3>
+<p>The decawave webapp communicates with all devices through the 802.15.4-uwb mesh network to send and receive configuration. For that purpose, the IOT Data message is used as config request and response packets.</p>
+<ul>
+<li>Details of the IoT Data message are provided in <code>DWM1001_System_Overview.pdf</code> section <code>9.1.12 IOT Data message</code></li>
+<li>config can be update by sending a request
+<ul>
+<li>topic <code>dwm/node/&lt;nodeid&gt;/downlink/config</code></li>
+<li>802.15.4-uwb downlink message id <code>UWBMAC_FRM_TYPE_DL_IOT_DATA</code></li>
+</ul>
+</li>
+<li>config is received by a response
+<ul>
+<li>topic <code>dwm/node/&lt;nodeid&gt;/uplink/config</code></li>
+<li>802.15.4-uwb uplink message id <code>UWBMAC_FRM_TYPE_UL_IOT_DATA</code></li>
+</ul>
+</li>
+</ul>
+<p>given that the response is a confirmation it will have a payload similar as the request</p>
+<details >
+  <summary>example Anchor config downlink</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;configuration&#34;</span>: {
+    <span style="color:#f92672">&#34;label&#34;</span>: <span style="color:#e6db74">&#34;RearRight&#34;</span>,
+    <span style="color:#f92672">&#34;nodeType&#34;</span>: <span style="color:#e6db74">&#34;ANCHOR&#34;</span>,
+    <span style="color:#f92672">&#34;uwbFirmwareUpdate&#34;</span>: <span style="color:#66d9ef">false</span>,
+    <span style="color:#f92672">&#34;leds&#34;</span>: <span style="color:#66d9ef">false</span>,
+    <span style="color:#f92672">&#34;ble&#34;</span>: <span style="color:#66d9ef">false</span>,
+    <span style="color:#f92672">&#34;anchor&#34;</span>: {
+      <span style="color:#f92672">&#34;routingConfig&#34;</span>: <span style="color:#e6db74">&#34;ROUTING_CFG_OFF&#34;</span>,
+      <span style="color:#f92672">&#34;initiator&#34;</span>: <span style="color:#66d9ef">false</span>,
+      <span style="color:#f92672">&#34;position&#34;</span>: {
+        <span style="color:#f92672">&#34;x&#34;</span>: <span style="color:#ae81ff">3.5500002</span>,
+        <span style="color:#f92672">&#34;y&#34;</span>: <span style="color:#ae81ff">1.1</span>,
+        <span style="color:#f92672">&#34;z&#34;</span>: <span style="color:#ae81ff">0</span>,
+        <span style="color:#f92672">&#34;quality&#34;</span>: <span style="color:#ae81ff">100</span>
+      }
+    }
+  }
+}
+</code></pre></div>
+  </div>
+</details>
+
+<details >
+  <summary>example Tag config downling</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;configuration&#34;</span>: {
+    <span style="color:#f92672">&#34;label&#34;</span>: <span style="color:#e6db74">&#34;BatteryTag&#34;</span>,
+    <span style="color:#f92672">&#34;nodeType&#34;</span>: <span style="color:#e6db74">&#34;TAG&#34;</span>,
+    <span style="color:#f92672">&#34;uwbFirmwareUpdate&#34;</span>: <span style="color:#66d9ef">false</span>,
+    <span style="color:#f92672">&#34;leds&#34;</span>: <span style="color:#66d9ef">false</span>,
+    <span style="color:#f92672">&#34;ble&#34;</span>: <span style="color:#66d9ef">false</span>,
+    <span style="color:#f92672">&#34;tag&#34;</span>: {
+      <span style="color:#f92672">&#34;locationEngine&#34;</span>: <span style="color:#66d9ef">true</span>,
+      <span style="color:#f92672">&#34;responsive&#34;</span>: <span style="color:#66d9ef">true</span>,
+      <span style="color:#f92672">&#34;stationaryDetection&#34;</span>: <span style="color:#66d9ef">true</span>,
+      <span style="color:#f92672">&#34;nomUpdateRate&#34;</span>: <span style="color:#ae81ff">100</span>,
+      <span style="color:#f92672">&#34;statUpdateRate&#34;</span>: <span style="color:#ae81ff">2000</span>
+    }
+  }
+}
+</code></pre></div>
+  </div>
+</details>
 
 <h1 id="standard">
   Standard
@@ -1627,9 +1770,13 @@ What does Ultra Wide Band mean for home automation ?
             <li><a href="#zephyr">Zephyr</a></li>
           </ul>
         </li>
+        <li><a href="#dw-tranceiver-api">DW Tranceiver API</a></li>
         <li><a href="#raspberry-pi-software">Raspberry pi software</a>
           <ul>
+            <li><a href="#dwm-daemon">DWM Daemon</a></li>
+            <li><a href="#dwm-proxy">DWM Proxy</a></li>
             <li><a href="#decawave-webapp">Decawave Webapp</a></li>
+            <li><a href="#mqtt-config">MQTT Config</a></li>
           </ul>
         </li>
       </ul>
