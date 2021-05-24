@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.a8f9b512024620c79fe00483113e6726a827c3741abf08a4bfff0278550132e8.js" integrity="sha256-qPm1EgJGIMef4ASDET5nJqgnw3Qavwikv/8CeFUBMug="></script>
+<script defer src="/en.search.min.fe55f99b6da87e74b10f354690d315c0c212b8779be56b3e7e9ccfd998423694.js" integrity="sha256-/lX5m22ofnSxDzVGkNMVwMISuHeb5Ws&#43;fpzP2ZhCNpQ="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -915,14 +915,16 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#real-time-locating-system">Real Time Locating System</a>
       <ul>
         <li><a href="#hardware">Hardware</a></li>
-        <li><a href="#nrf52832-firmware">nRF52832 Firmware</a>
+        <li><a href="#module-firmware">Module Firmware</a>
           <ul>
-            <li><a href="#from-the-product-page">From the Product Page</a></li>
-            <li><a href="#on-decawave-github">On Decawave Github</a></li>
-            <li><a href="#zephyr">Zephyr</a></li>
+            <li><a href="#product-page">Product Page</a></li>
+            <li><a href="#decawave-github">Decawave Github</a></li>
+            <li><a href="#github-mynewt">Github mynewt</a></li>
+            <li><a href="#zephyr-official">Zephyr Official</a></li>
+            <li><a href="#zephyr-community">Zephyr Community</a></li>
           </ul>
         </li>
-        <li><a href="#dw-tranceiver-api">DW Tranceiver API</a></li>
+        <li><a href="#dw-tranceiver">DW Tranceiver</a></li>
         <li><a href="#raspberry-pi-software">Raspberry pi software</a>
           <ul>
             <li><a href="#dwm-daemon">DWM Daemon</a></li>
@@ -1041,9 +1043,9 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 </p>
-<h2 id="nrf52832-firmware">
-  nRF52832 Firmware
-  <a class="anchor" href="#nrf52832-firmware">#</a>
+<h2 id="module-firmware">
+  Module Firmware
+  <a class="anchor" href="#module-firmware">#</a>
 </h2>
 <ul>
 <li>Production Firmware : available as precompiled binary <code>DWM1001_PANS_R2.0.hex</code> in order to recover the Module for production grade certified applications</li>
@@ -1051,10 +1053,41 @@ https://github.com/alex-shpak/hugo-book
 <li>PANS library API : described in <code>DWM1001-Firmware-User-Guide.pdf</code> and <code>DWM1001-API-Guide.pdf</code></li>
 <li>Open Source Firmware : multiple examples are provided to kick start development</li>
 </ul>
-<h3 id="from-the-product-page">
-  From the Product Page
-  <a class="anchor" href="#from-the-product-page">#</a>
+<p>out of the box config
+<details >
+  <summary>system information log</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-conf" data-lang="conf"> DWM1001 TWR Real Time Location System
+
+ Copyright :  2016-2019 LEAPS and Decawave
+ License   :  Please visit https://decawave.com/dwm1001_license
+ Compiled  :  Jun  7 2019 18:00:03
+
+ Help      :  ? or help
+
+dwm&gt; si
+[000042.580 INF] sys: fw2 fw_ver=x01030001 cfg_ver=x00010700
+[000042.580 INF] uwb0: panid=x0000 addr=xDECA50BFBF5001D2
+[000042.590 INF] mode: tn (pasv,twr,np,le)
+[000042.590 INF] uwbmac: disconnected
+[000042.590 INF] uwbmac: bh disconnected
+[000042.600 INF] cfg: sync=0 fwup=0 ble=1 leds=1 le=1 lp=0 stat_det=1 (sens=1) m                                   ode=0 upd_rate_norm=1 upd_rate_stat=100 label=DW01D2
+[000042.610 INF] enc: off
+[000042.610 INF] ble: addr=E0:69:AF:07:D2:94
+</code></pre>
+  </div>
+</details>
+</p>
+<ul>
+<li><code>DWM1001_PANS_R2.0.hex</code> has the same firmware version but compiled on a different date <code>Compiled  :  Mar 27 2019 03:35:59</code></li>
+</ul>
+<p>Firmware recovery</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nrfjprog -f nrf52 --program DWM1001_PANS_R2.0.hex --sectorerase --verify
+</code></pre></div><h3 id="product-page">
+  Product Page
+  <a class="anchor" href="#product-page">#</a>
 </h3>
+<p>PANS binary library for nRF52832 module DWM1001</p>
 
 <div class="container">
     <div class="row">
@@ -1067,7 +1100,7 @@ https://github.com/alex-shpak/hugo-book
             
             role="button"
         >
-            Product Page software development kit
+            v9_dwm_on_board_package
             
             
                 
@@ -1105,62 +1138,22 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 <ul>
-<li>simple example on how to use the <code>PANS</code> library.</li>
+<li>Path <code>v9_dwm_on_board_package/examples</code> : dwm-api-test, dwm-range-iot, dwm-simple, dwm-sniffer, dwm-timer, dwm-uart</li>
+<li>API 2.2, Firmware 1.3.0 : <code>DWM1001 PANS Library Version 1.3.0</code></li>
+<li>Transciever API not exposed, used by the library as dwm_ functions provided as binary files <code>dwm.o</code>, <code>libdwm.a</code>,&hellip;</li>
 <li>available <code>.emProject</code> project files for <a href="https://www.segger.com/products/development-tools/embedded-studio/">Segger Studio</a></li>
 <li>based on <code>Nordik SDK</code> version <code>12.1.0</code></li>
 <li>Used <code>GNU Tools ARM Embedded</code> version <code>5.4 2016q3</code></li>
-<li>dwm code provided as binary files <code>dwm.o</code>, <code>libdwm.a</code>,&hellip;</li>
-<li>OS functions are wrapped by the dwm library through functions <code>dwm_thread_xxx</code></li>
 </ul>
-<h3 id="on-decawave-github">
-  On Decawave Github
-  <a class="anchor" href="#on-decawave-github">#</a>
+<blockquote class="book-hint warning">
+  Although reporting the same firmware version, two UWB commands are missing from the PANS lib <code>utpg, utps</code> (transmit power get and set)
+</blockquote>
+
+<h3 id="decawave-github">
+  Decawave Github
+  <a class="anchor" href="#decawave-github">#</a>
 </h3>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/Decawave/uwb-apps"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            mynewt examples
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<ul>
-<li>many examples including sniffer, OTA, TWR, TDOA,&hellip;</li>
-<li>running over Apache&rsquo;s <a href="https://mynewt.apache.org/">myNewt</a> Operating System which comes with code for BT, network,&hellip;</li>
-<li>referencing the Decawave <a href="https://github.com/Decawave/uwb-core">uwb-core</a> repo</li>
-</ul>
+<p>Transciever driver DW1000 for nRF52</p>
 
 <div class="container">
     <div class="row">
@@ -1173,7 +1166,7 @@ https://github.com/alex-shpak/hugo-book
             
             role="button"
         >
-            nRF SDK examples
+            dwm1001-examples
             
             
                 
@@ -1202,18 +1195,108 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 <ul>
+<li>Path <code>dwm1001-examples/examples/</code> : ss_twr_init, ss_twr_init_int, ss_twr_resp, twi_accel</li>
 <li>DWM1001 board definition (leds, buttons,&hellip;)</li>
-<li>Two way ranging and accelerometer examples</li>
 <li>based on <code>Nordik SDK</code> version <code>14.2.0</code></li>
-<li>source code of the dw1000 spi driver</li>
+<li>decadriver : <code>DW1000 Device Driver Version 04.00.06</code></li>
 </ul>
 <blockquote class="book-hint warning">
   with Embedded studio V5.40, it is required to enable the updated #ifdef for <code>__putchar</code> in <code>retarget.c</code> line 100
 </blockquote>
 
-<h3 id="zephyr">
-  Zephyr
-  <a class="anchor" href="#zephyr">#</a>
+<h3 id="github-mynewt">
+  Github mynewt
+  <a class="anchor" href="#github-mynewt">#</a>
+</h3>
+<p>Core source code for MAC layers and ranging
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/Decawave/uwb-core"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            mynewt uwb-core
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+</p>
+<p>using the core functions and adding TDMA, Clock calib,&hellip;
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/Decawave/uwb-apps"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            mynewt uwb-apps
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+</p>
+<ul>
+<li>examples : sniffer, OTA, TWR, TDOA,&hellip;</li>
+<li>running over Apache&rsquo;s <a href="https://mynewt.apache.org/">myNewt</a> Operating System which comes with code for BT, network,&hellip;</li>
+</ul>
+<h3 id="zephyr-official">
+  Zephyr Official
+  <a class="anchor" href="#zephyr-official">#</a>
 </h3>
 
 <div class="container">
@@ -1269,11 +1352,11 @@ https://github.com/alex-shpak/hugo-book
 <li>transciever driver <code>decawave,dw1000</code> integrated in the spi dts entry</li>
 <li>no uwb specific positioning code</li>
 </ul>
-<p>Community contribution of Zephyr based examples with decadriver</p>
-<p><blockquote class="book-hint warning">
-  GNU GLP v3
-</blockquote>
-
+<h3 id="zephyr-community">
+  Zephyr Community
+  <a class="anchor" href="#zephyr-community">#</a>
+</h3>
+<p>Community contribution of Zephyr based examples with decadriver
 
 <div class="container">
     <div class="row">
@@ -1286,7 +1369,7 @@ https://github.com/alex-shpak/hugo-book
             
             role="button"
         >
-            Zephyr with decadriver
+            dwm1001
             
             
                 
@@ -1314,11 +1397,171 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 </p>
-<h2 id="dw-tranceiver-api">
-  DW Tranceiver API
-  <a class="anchor" href="#dw-tranceiver-api">#</a>
+<ul>
+<li>Path <code>dwm1001/examples</code></li>
+<li>ex_01 &hellip; ex_14 (simple, sleep, sniff, twr, low power, accell,&hellip;)</li>
+<li>decadriver <code>DW1000 Device Driver Version 05.01.00</code></li>
+<li>logs through RTT and serila
+<blockquote class="book-hint warning">
+  GNU GLP v3
+</blockquote>
+
+<blockquote class="book-hint warning">
+  using Zephyr 2.5 config Patches for double floats print <code>%lf</code> and <code>CONFIG_NEWLIB_LIBC=y</code>
+<code>CONFIG_NEWLIB_LIBC_FLOAT_PRINTF=y</code>, also sprintf string overflow needs size increase
+</blockquote>
+</li>
+</ul>
+<h2 id="dw-tranceiver">
+  DW Tranceiver
+  <a class="anchor" href="#dw-tranceiver">#</a>
 </h2>
-<p>available from Decawave uploads zip in path <code>dw1000_api_rev2p14\dw1000_api_rev2p14_stsw\DW1000_Software_API_Guide_rev2p7.pdf</code></p>
+<p>available in a Decawave webpage</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.decawave.com/dw1000/usermanual/"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            dw1000 user manual
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<ul>
+<li>User Manual : latest version 2.18 as of May 2021</li>
+<li>Transmission, Reception, MAC features, Calibration,&hellip;</li>
+</ul>
+<p>application note and datasheet from forum post (note the datasheet on the product page is version 1.8)
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://decaforum.decawave.com/uploads/short-url/bDBtllhpvFtLXlS6U1OW19f7Li6.pdf"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            APS017 max range in DW1000 systems v1.1
+            
+            
+                
+                
+
+                
+                <span class="pdf">
+                    <svg    viewBox="0 0 482.14 482.14" 
+                            fill="currentcolor">
+                            <g>
+                                <path d="M142.024,310.194c0-8.007-5.556-12.782-15.359-12.782c-4.003,0-6.714,0.395-8.132,0.773v25.69 c1.679,0.378,3.743,0.504,6.588,0.504C135.57,324.379,142.024,319.1,142.024,310.194z"/>
+                                <path d="M202.709,297.681c-4.39,0-7.227,0.379-8.905,0.772v56.896c1.679,0.394,4.39,0.394,6.841,0.394 c17.809,0.126,29.424-9.677,29.424-30.449C230.195,307.231,219.611,297.681,202.709,297.681z"/>
+                                <path d="M315.458,0H121.811c-28.29,0-51.315,23.041-51.315,51.315v189.754h-5.012c-11.418,0-20.678,9.251-20.678,20.679v125.404 c0,11.427,9.259,20.677,20.678,20.677h5.012v22.995c0,28.305,23.025,51.315,51.315,51.315h264.223
+                                    c28.272,0,51.3-23.011,51.3-51.315V121.449L315.458,0z M99.053,284.379c6.06-1.024,14.578-1.796,26.579-1.796 c12.128,0,20.772,2.315,26.58,6.965c5.548,4.382,9.292,11.615,9.292,20.127c0,8.51-2.837,15.745-7.999,20.646
+                                    c-6.714,6.32-16.643,9.157-28.258,9.157c-2.585,0-4.902-0.128-6.714-0.379v31.096H99.053V284.379z M386.034,450.713H121.811 c-10.954,0-19.874-8.92-19.874-19.889v-22.995h246.31c11.42,0,20.679-9.25,20.679-20.677V261.748
+                                    c0-11.428-9.259-20.679-20.679-20.679h-246.31V51.315c0-10.938,8.921-19.858,19.874-19.858l181.89-0.19v67.233 c0,19.638,15.934,35.587,35.587,35.587l65.862-0.189l0.741,296.925C405.891,441.793,396.987,450.713,386.034,450.713z
+                                     M174.065,369.801v-85.422c7.225-1.15,16.642-1.796,26.58-1.796c16.516,0,27.226,2.963,35.618,9.282 c9.031,6.714,14.704,17.416,14.704,32.781c0,16.643-6.06,28.133-14.453,35.224c-9.157,7.612-23.096,11.222-40.125,11.222
+                                    C186.191,371.092,178.966,370.446,174.065,369.801z M314.892,319.226v15.996h-31.23v34.973h-19.74v-86.966h53.16v16.122h-33.42 v19.875H314.892z"/>
+                            </g>
+                    </svg>
+                </span>
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.decawave.com/sites/default/files/resources/dw1000-datasheet-v2.09.pdf"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            dw1000 datasheet v2.09
+            
+            
+                
+                
+
+                
+                <span class="pdf">
+                    <svg    viewBox="0 0 482.14 482.14" 
+                            fill="currentcolor">
+                            <g>
+                                <path d="M142.024,310.194c0-8.007-5.556-12.782-15.359-12.782c-4.003,0-6.714,0.395-8.132,0.773v25.69 c1.679,0.378,3.743,0.504,6.588,0.504C135.57,324.379,142.024,319.1,142.024,310.194z"/>
+                                <path d="M202.709,297.681c-4.39,0-7.227,0.379-8.905,0.772v56.896c1.679,0.394,4.39,0.394,6.841,0.394 c17.809,0.126,29.424-9.677,29.424-30.449C230.195,307.231,219.611,297.681,202.709,297.681z"/>
+                                <path d="M315.458,0H121.811c-28.29,0-51.315,23.041-51.315,51.315v189.754h-5.012c-11.418,0-20.678,9.251-20.678,20.679v125.404 c0,11.427,9.259,20.677,20.678,20.677h5.012v22.995c0,28.305,23.025,51.315,51.315,51.315h264.223
+                                    c28.272,0,51.3-23.011,51.3-51.315V121.449L315.458,0z M99.053,284.379c6.06-1.024,14.578-1.796,26.579-1.796 c12.128,0,20.772,2.315,26.58,6.965c5.548,4.382,9.292,11.615,9.292,20.127c0,8.51-2.837,15.745-7.999,20.646
+                                    c-6.714,6.32-16.643,9.157-28.258,9.157c-2.585,0-4.902-0.128-6.714-0.379v31.096H99.053V284.379z M386.034,450.713H121.811 c-10.954,0-19.874-8.92-19.874-19.889v-22.995h246.31c11.42,0,20.679-9.25,20.679-20.677V261.748
+                                    c0-11.428-9.259-20.679-20.679-20.679h-246.31V51.315c0-10.938,8.921-19.858,19.874-19.858l181.89-0.19v67.233 c0,19.638,15.934,35.587,35.587,35.587l65.862-0.189l0.741,296.925C405.891,441.793,396.987,450.713,386.034,450.713z
+                                     M174.065,369.801v-85.422c7.225-1.15,16.642-1.796,26.58-1.796c16.516,0,27.226,2.963,35.618,9.282 c9.031,6.714,14.704,17.416,14.704,32.781c0,16.643-6.06,28.133-14.453,35.224c-9.157,7.612-23.096,11.222-40.125,11.222
+                                    C186.191,371.092,178.966,370.446,174.065,369.801z M314.892,319.226v15.996h-31.23v34.973h-19.74v-86.966h53.16v16.122h-33.42 v19.875H314.892z"/>
+                            </g>
+                    </svg>
+                </span>
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+</p>
+<p>SDK available from Decawave uploads as zip</p>
 
 <div class="container">
     <div class="row">
@@ -1358,6 +1601,11 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 
+<ul>
+<li>document User Guide :  <code>dw1000_api_rev2p14\dw1000_api_rev2p14_stsw\DW1000_Software_API_Guide_rev2p7.pdf</code></li>
+<li>source code decadriver : <code>DW1000 Device Driver Version 05.01.00</code></li>
+<li>ported to STM32 platforms <code>coocox</code> and <code>stsw</code></li>
+</ul>
 <h2 id="raspberry-pi-software">
   Raspberry pi software
   <a class="anchor" href="#raspberry-pi-software">#</a>
@@ -1425,7 +1673,7 @@ https://github.com/alex-shpak/hugo-book
 <p>The decawave webapp communicates with all devices through the 802.15.4-uwb mesh network to send and receive configuration. For that purpose, the IOT Data message is used as config request and response packets.</p>
 <ul>
 <li>Details of the IoT Data message are provided in <code>DWM1001_System_Overview.pdf</code> section <code>9.1.12 IOT Data message</code></li>
-<li>config can be update by sending a request
+<li>config can be updated by sending a request
 <ul>
 <li>topic <code>dwm/node/&lt;nodeid&gt;/downlink/config</code></li>
 <li>802.15.4-uwb downlink message id <code>UWBMAC_FRM_TYPE_DL_IOT_DATA</code></li>
@@ -1763,14 +2011,16 @@ What does Ultra Wide Band mean for home automation ?
     <li><a href="#real-time-locating-system">Real Time Locating System</a>
       <ul>
         <li><a href="#hardware">Hardware</a></li>
-        <li><a href="#nrf52832-firmware">nRF52832 Firmware</a>
+        <li><a href="#module-firmware">Module Firmware</a>
           <ul>
-            <li><a href="#from-the-product-page">From the Product Page</a></li>
-            <li><a href="#on-decawave-github">On Decawave Github</a></li>
-            <li><a href="#zephyr">Zephyr</a></li>
+            <li><a href="#product-page">Product Page</a></li>
+            <li><a href="#decawave-github">Decawave Github</a></li>
+            <li><a href="#github-mynewt">Github mynewt</a></li>
+            <li><a href="#zephyr-official">Zephyr Official</a></li>
+            <li><a href="#zephyr-community">Zephyr Community</a></li>
           </ul>
         </li>
-        <li><a href="#dw-tranceiver-api">DW Tranceiver API</a></li>
+        <li><a href="#dw-tranceiver">DW Tranceiver</a></li>
         <li><a href="#raspberry-pi-software">Raspberry pi software</a>
           <ul>
             <li><a href="#dwm-daemon">DWM Daemon</a></li>
