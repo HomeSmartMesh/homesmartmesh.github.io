@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.578663b1977ed1454eff3c64a38d1d27f25617103282c5679be165ae507453ab.js" integrity="sha256-V4ZjsZd&#43;0UVO/zxko40dJ/JWFxAygsVnm&#43;FlrlB0U6s="></script>
+<script defer src="/en.search.min.dfca5f90dc0ddcc21bcae64c99bc7314b14cf49f4d12c837594f73e27fa9be13.js" integrity="sha256-38pfkNwN3MIbyuZMmbxzFLFM9J9NEsg3WU9z4n&#43;pvhM="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -911,6 +911,11 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
+    <li><a href="#trace-with-with-systemview">Trace with with SystemView</a>
+      <ul>
+        <li><a href="#hints">Hints</a></li>
+      </ul>
+    </li>
     <li><a href="#debug-with-ozone">Debug with OZone</a></li>
     <li><a href="#windows-install">Windows Install</a></li>
     <li><a href="#linux-install">Linux Install</a></li>
@@ -1029,6 +1034,75 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 </p>
+<h1 id="trace-with-with-systemview">
+  Trace with with SystemView
+  <a class="anchor" href="#trace-with-with-systemview">#</a>
+</h1>
+<ul>
+<li><a href="https://www.segger.com/products/development-tools/systemview/">Segger SystemView</a> : Real time OS Tracing</li>
+<li><a href="https://www.segger.com/downloads/free-utilities/UM08027">SystemView user manual</a> : Getting started, API reference,&hellip;</li>
+</ul>
+<blockquote class="book-hint warning">
+  It&rsquo;s highly recommended to read the SystemView user manual to understand how the RT OS concepts are displayed
+</blockquote>
+
+<p>Steps :</p>
+<ul>
+<li>Install SystemView</li>
+<li>compile the target with the overlay <code>overlay-tracing.conf</code> and flash, reset</li>
+<li>SystemView Recorder configuration <code>J-Link</code>, <code>NRF52840_XXAA</code>, <code>SWD</code>, <code>4000 KHz</code></li>
+<li>SystemView <code>Start Recording</code> the <code>Stop Recording</code></li>
+<li>if SystemViewer keeps crashing try closing the window <code>CPU load</code></li>
+</ul>
+
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="box" style="max-width:500px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/zephyr/systemview.webp" />
+    </div>
+    <a href="/images/zephyr/systemview.webp" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<p>content of <code>overlay-tracing.conf</code></p>
+<pre><code class="language-conf" data-lang="conf">#Tracing
+CONFIG_TRACING=y
+CONFIG_SEGGER_SYSTEMVIEW=y
+CONFIG_THREAD_NAME=y
+CONFIG_SEGGER_SYSTEMVIEW_BOOT_ENABLE=y
+# careful adjustment as long as there is enough SRAM use it for tracing 128 KB
+CONFIG_SEGGER_SYSVIEW_RTT_BUFFER_SIZE=131072
+</code></pre><h2 id="hints">
+  Hints
+  <a class="anchor" href="#hints">#</a>
+</h2>
+<ul>
+<li>power on tracing : In case a power-on startup has to be traced, it is necessary to increase the target local RTT buffer size, because it keeps bauffering the tracing until the user has the time to start SystemView recording. For that, it is important to check how much free memory the system has, and then adjust the RTT buffer</li>
+<li>ISR ID Identification : the function <code>sysview_get_interrupt()</code> is using <code>SCB-&gt;ICSR VECTACTIVE</code></li>
+</ul>
+
+
+
+
+
+
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>VECTACTIVE</th>
+<th>IRQ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>19</td>
+<td>nrfx_twi_0_irq_handler</td>
+</tr>
+</tbody>
+</table>
+
+
 <h1 id="debug-with-ozone">
   Debug with OZone
   <a class="anchor" href="#debug-with-ozone">#</a>
@@ -1040,7 +1114,7 @@ https://github.com/alex-shpak/hugo-book
 <p>Steps :</p>
 <ul>
 <li>make sure to use Ozone version 3.22d or higher</li>
-<li>in the new project wizard, make sure a peripheral svd file is selected e.g. <code>nRF5_SDK_for_Thread_and_Zigbee_v4.1.0_32ce5f8/modules/nrfx/mdk/nrf52840.svd</code></li>
+<li>in the new project wizard, make sure an svd file is selected e.g. <code>modules\hal\nordic\nrfx\mdk\nrf52840.svd</code></li>
 <li>For a Segger j-link edu, select the Target interface SWD</li>
 <li>compile with <code>CONFIG_DEBUG_THREAD_INFO=y</code></li>
 <li>select the elf file of the Zephyr build <code>hsm/hsm/samples/tag_power/build/zephyr/zephyr.elf</code></li>
@@ -1048,7 +1122,7 @@ https://github.com/alex-shpak/hugo-book
 <li>you should now be able to access the Zephyr debug window from the menu <code>View</code> then in the <code>Advanced</code> section <code>Zephyr</code></li>
 </ul>
 
-<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
 <div class="box" style="max-width:500px">
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
@@ -1271,6 +1345,11 @@ CONFIG_RTT_CONSOLE=y
       
   <nav id="TableOfContents">
   <ul>
+    <li><a href="#trace-with-with-systemview">Trace with with SystemView</a>
+      <ul>
+        <li><a href="#hints">Hints</a></li>
+      </ul>
+    </li>
     <li><a href="#debug-with-ozone">Debug with OZone</a></li>
     <li><a href="#windows-install">Windows Install</a></li>
     <li><a href="#linux-install">Linux Install</a></li>

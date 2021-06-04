@@ -271,8 +271,7 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
       <pubDate>Sat, 20 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/zephyr/</guid>
-      <description>Thread ProtocolProject MatterDebug with OZone# Ozone : performance analyzer RTOS Awareness : debug an RTOS  Steps :
- make sure to use Ozone version 3.22d or higher in the new project wizard, make sure a peripheral svd file is selected e.</description>
+      <description>Thread ProtocolProject MatterTrace with with SystemView# Segger SystemView : Real time OS Tracing SystemView user manual : Getting started, API reference,&amp;hellip;  It&amp;rsquo;s highly recommended to read the SystemView user manual to understand how the RT OS concepts are displayedSteps :</description>
     </item>
     
     <item>
