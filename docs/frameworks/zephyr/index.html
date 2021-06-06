@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.dfca5f90dc0ddcc21bcae64c99bc7314b14cf49f4d12c837594f73e27fa9be13.js" integrity="sha256-38pfkNwN3MIbyuZMmbxzFLFM9J9NEsg3WU9z4n&#43;pvhM="></script>
+<script defer src="/en.search.min.3b40d939b776db0ab1e94da875354a20a3f71ae75e06a2c4cc9894447b33e33e.js" integrity="sha256-O0DZObd22wqx6U2odTVKIKP3GudeBqLEzJiURHsz4z4="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1080,6 +1080,7 @@ CONFIG_SEGGER_SYSVIEW_RTT_BUFFER_SIZE=131072
 <ul>
 <li>power on tracing : In case a power-on startup has to be traced, it is necessary to increase the target local RTT buffer size, because it keeps bauffering the tracing until the user has the time to start SystemView recording. For that, it is important to check how much free memory the system has, and then adjust the RTT buffer</li>
 <li>ISR ID Identification : the function <code>sysview_get_interrupt()</code> is using <code>SCB-&gt;ICSR VECTACTIVE</code></li>
+<li>not the same as <code>IRQn_Type</code> defined in <code>modules\hal\nordic\nrfx\mdk\nrf52840.h</code></li>
 </ul>
 
 
@@ -1095,6 +1096,14 @@ CONFIG_SEGGER_SYSVIEW_RTT_BUFFER_SIZE=131072
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>16</td>
+<td>nrf_clock_event_check</td>
+</tr>
+<tr>
+<td>17</td>
+<td>nrf5_radio_irq</td>
+</tr>
 <tr>
 <td>19</td>
 <td>nrfx_twi_0_irq_handler</td>
@@ -1114,7 +1123,7 @@ CONFIG_SEGGER_SYSVIEW_RTT_BUFFER_SIZE=131072
 <p>Steps :</p>
 <ul>
 <li>make sure to use Ozone version 3.22d or higher</li>
-<li>in the new project wizard, make sure an svd file is selected e.g. <code>modules\hal\nordic\nrfx\mdk\nrf52840.svd</code></li>
+<li>in the new project wizard, make sure an svd file is selected e.g. from the Zephyr projecz <code>modules\hal\nordic\nrfx\mdk\nrf52840.svd</code></li>
 <li>For a Segger j-link edu, select the Target interface SWD</li>
 <li>compile with <code>CONFIG_DEBUG_THREAD_INFO=y</code></li>
 <li>select the elf file of the Zephyr build <code>hsm/hsm/samples/tag_power/build/zephyr/zephyr.elf</code></li>
