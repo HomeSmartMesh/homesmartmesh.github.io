@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.3b40d939b776db0ab1e94da875354a20a3f71ae75e06a2c4cc9894447b33e33e.js" integrity="sha256-O0DZObd22wqx6U2odTVKIKP3GudeBqLEzJiURHsz4z4="></script>
+<script defer src="/en.search.min.c07f5b0ad1b040b70d975cabbc27b825bbe19dfc312019ecd4742b5fa9a26afb.js" integrity="sha256-wH9bCtGwQLcNl1yrvCe4JbvhnfwxIBns1HQrX6miavs="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -971,6 +971,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#open-thread">Open Thread</a></li>
       </ul>
     </li>
+    <li><a href="#thread-udp-packets">Thread UDP packets</a></li>
     <li><a href="#faq---discussion">FAQ - Discussion</a></li>
   </ul>
 </nav>
@@ -983,8 +984,69 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><script src="/js/svg-pan-zoom.min.js"></script>
+  <article class="markdown"><p><script src="/js/svg-pan-zoom.min.js"></script>
 
+
+
+
+
+  
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="/js/load-photoswipe.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true" id="p_swipe">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+</p>
 <p>
 <div class="container">
     <div class="row">
@@ -3295,6 +3357,26 @@ west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">
 </code></pre></div><ul>
 <li>for build instructions see the rcp building steps in the <a href="#openthread">rcp OpenThread</a> section, the build commands generates both npc and rcp elf files.</li>
 </ul>
+<h1 id="thread-udp-packets">
+  Thread UDP packets
+  <a class="anchor" href="#thread-udp-packets">#</a>
+</h1>
+<ul>
+<li>Thread UDP packets are encapsulated using 6LoWPAN which has a payload of 88 Bytes, that&rsquo;s why such a json UDP text message</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">thread_tags/7009D837C7BB557A{&#34;alive&#34;:18673,&#34;voltage&#34;:3.106,&#34;light&#34;:184.948,&#34;temperature&#34;:24.56,&#34;humidity&#34;:46.49,&#34;pressure&#34;:961.90}
+</code></pre></div><p>is split in two packets where each has an ACK. From one side that&rsquo;s a lot x4 times of what the RF power consumption could be for a simple broadcast, but at the same time it avoids taking care of manually adapting the program behaviour to accomodate the protocol. Also keeping a json text format instead of binary avoids a middle layer converting binary to text readable by apps, that would cost a bottleneck dependency between each device and the gateway.</p>
+
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/thread/udp%20over%206LoWPAN.png" />
+    </div>
+    <a href="/images/thread/udp%20over%206LoWPAN.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
 <h1 id="faq---discussion">
   FAQ - Discussion
   <a class="anchor" href="#faq---discussion">#</a>
@@ -3760,6 +3842,7 @@ can I run openthread with platformio ?
         <li><a href="#open-thread">Open Thread</a></li>
       </ul>
     </li>
+    <li><a href="#thread-udp-packets">Thread UDP packets</a></li>
     <li><a href="#faq---discussion">FAQ - Discussion</a></li>
   </ul>
 </nav>

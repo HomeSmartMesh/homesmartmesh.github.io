@@ -79,7 +79,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/networks/thread/</guid>
-      <description>Thread SensorTagZephyr RTOSProject MatterOverview#Full Screenimport {setup_svg_panzoom,reset_svg_panzoom} from &#34;/js/setup-svg-pan-zoom.js&#34;function window_reset_position(){reset_svg_panzoom(&#34;openthread-environment-1&#34;)}console.log(`into script for &#34;openthread-environment-1&#34;`)window.addEventListener(&#39;load&#39;, ()={let embed = document.getElementById(&#34;svg-openthread-environment-1&#34;)setup_svg_panzoom(embed)})window.addEventListener(&#39;resize&#39;, window_reset_position) some elements have link to the corresponding websites  Open ThreadIPV6 adressingNetwork discoverytest connectivityopenthread API referenceCheat sheet# IPv6 bit length : 128 bit = 8x 16 ibts =&amp;gt; 00b1:00b2:00b3:00b4:00b5:00b6:00b7:00b8 Link-Local prefix : fe80::/16 Mesh-Local prefix : fd00::/8 Multicast Link-Local : ff02::1 Multicast Mesh-Local : ff03::1 RLOC16 : Routing locator in 16 bits 0x0401 RLOC16 Router mask : 0x0400 IID : Interface Identifier (includes RLOC16) RLOC = Mesh-Local Prefix + IID  Specification#request the specification.</description>
+      <description>Thread SensorTagZephyr RTOSProject MatterOverview#Full Screenimport {setup_svg_panzoom,reset_svg_panzoom} from &#34;/js/setup-svg-pan-zoom.js&#34;function window_reset_position(){reset_svg_panzoom(&#34;openthread-environment-1&#34;)}console.log(`into script for &#34;openthread-environment-1&#34;`)window.addEventListener(&#39;load&#39;, ()={let embed = document.</description>
     </item>
     
     <item>
@@ -171,8 +171,7 @@ Real Time Locating System# DRTLS : DWM1001 Two-Way-Ranging RTLS RTLS : Real
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</guid>
       <description>Networks / Simple MeshFrameworks / Raspi IoTTindie Product PageConcept#It is possible to mount either CR2032 or CR2477
-Hardware#board render
-repo directorynRF52832BME280MAX44009Schematics#Full Screenimport {setup_svg_panzoom,reset_svg_panzoom} from &#34;</description>
+Hardware#board render</description>
     </item>
     
     <item>

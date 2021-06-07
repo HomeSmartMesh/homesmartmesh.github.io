@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.3b40d939b776db0ab1e94da875354a20a3f71ae75e06a2c4cc9894447b33e33e.js" integrity="sha256-O0DZObd22wqx6U2odTVKIKP3GudeBqLEzJiURHsz4z4="></script>
+<script defer src="/en.search.min.c07f5b0ad1b040b70d975cabbc27b825bbe19dfc312019ecd4742b5fa9a26afb.js" integrity="sha256-wH9bCtGwQLcNl1yrvCe4JbvhnfwxIBns1HQrX6miavs="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -933,6 +933,14 @@ https://github.com/alex-shpak/hugo-book
           </ul>
         </li>
         <li><a href="#low-power-measures">Low Power Measures</a></li>
+        <li><a href="#ppk-ii-measures">PPK-II Measures</a>
+          <ul>
+            <li><a href="#first-wakeup">First wakeup</a></li>
+            <li><a href="#wakeup-cycle-type-1">wakeup cycle type 1</a></li>
+            <li><a href="#wakeup-cycle-type-2">wakeup cycle type 2</a></li>
+            <li><a href="#sleep-period">sleep period</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -946,8 +954,69 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><script src="/js/svg-pan-zoom.min.js"></script>
+  <article class="markdown"><p><script src="/js/svg-pan-zoom.min.js"></script>
 
+
+
+
+
+  
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="/js/load-photoswipe.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true" id="p_swipe">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+</p>
 <p>
 <div class="container">
     <div class="row">
@@ -1507,22 +1576,78 @@ https://github.com/alex-shpak/hugo-book
 <li>50 uA @ infinite</li>
 </ul>
 
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/simplemesh_sensortag/Power%20measures.png" />
+    </div>
+    <a href="/images/simplemesh_sensortag/Power%20measures.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<h2 id="ppk-ii-measures">
+  PPK-II Measures
+  <a class="anchor" href="#ppk-ii-measures">#</a>
+</h2>
+<h3 id="first-wakeup">
+  First wakeup
+  <a class="anchor" href="#first-wakeup">#</a>
+</h3>
 
 
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/simplemesh_sensortag/first%20wakeup.png" />
+    </div>
+    <a href="/images/simplemesh_sensortag/first%20wakeup.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<h3 id="wakeup-cycle-type-1">
+  wakeup cycle type 1
+  <a class="anchor" href="#wakeup-cycle-type-1">#</a>
+</h3>
 
 
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/simplemesh_sensortag/wakeup%20cycle.png" />
+    </div>
+    <a href="/images/simplemesh_sensortag/wakeup%20cycle.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
 
-<div class="text-center">
-  <a >
-    <img
-    src="/images/simplemesh_sensortag/Power%20measures.png"
-    alt=""
-    width=""
-    height=""
-    decoding="async"
-  />
-  </a>
-  
+<h3 id="wakeup-cycle-type-2">
+  wakeup cycle type 2
+  <a class="anchor" href="#wakeup-cycle-type-2">#</a>
+</h3>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/simplemesh_sensortag/wakeup_cycle_t2.png" />
+    </div>
+    <a href="/images/simplemesh_sensortag/wakeup_cycle_t2.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<h3 id="sleep-period">
+  sleep period
+  <a class="anchor" href="#sleep-period">#</a>
+</h3>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/simplemesh_sensortag/sleep_period.png" />
+    </div>
+    <a href="/images/simplemesh_sensortag/sleep_period.png" itemprop="contentUrl"></a>
+  </figure>
 </div>
 
 </article>
@@ -1580,6 +1705,14 @@ https://github.com/alex-shpak/hugo-book
           </ul>
         </li>
         <li><a href="#low-power-measures">Low Power Measures</a></li>
+        <li><a href="#ppk-ii-measures">PPK-II Measures</a>
+          <ul>
+            <li><a href="#first-wakeup">First wakeup</a></li>
+            <li><a href="#wakeup-cycle-type-1">wakeup cycle type 1</a></li>
+            <li><a href="#wakeup-cycle-type-2">wakeup cycle type 2</a></li>
+            <li><a href="#sleep-period">sleep period</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
