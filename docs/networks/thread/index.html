@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.c07f5b0ad1b040b70d975cabbc27b825bbe19dfc312019ecd4742b5fa9a26afb.js" integrity="sha256-wH9bCtGwQLcNl1yrvCe4JbvhnfwxIBns1HQrX6miavs="></script>
+<script defer src="/en.search.min.4ad4f7037ac4eb98faaa21fa080574d4aacf30c18f2b4c530baae294e837fb25.js" integrity="sha256-StT3A3rE65j6qiH6CAV01KrPMMGPK0xTC6rilOg3&#43;yU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -956,10 +956,8 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#build-with-matter-node">Build with Matter Node</a></li>
     <li><a href="#test-and-debug">Test and Debug</a>
       <ul>
-        <li><a href="#with-server-command-line">with server command line</a></li>
         <li><a href="#cli-on-border-router">cli on border router</a></li>
         <li><a href="#cli-openthread-firmware">cli openthread firmware</a></li>
-        <li><a href="#cli-nordic-firmware">cli Nordic firmware</a></li>
         <li><a href="#cli-reference">cli reference</a></li>
       </ul>
     </li>
@@ -1836,10 +1834,6 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 
-<p>When using docker simply pull the environment</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker pull openthread/environment:latest
-docker run -it --rm openthread/environment bash
-</code></pre></div><p>then continue the same way on linux or docker from windows</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd ~/opentrhead
 ./script/bootstrap
 ./bootstrap
@@ -1847,7 +1841,57 @@ sudo rm -rf output/
 make -f examples/Makefile-nrf52840 USB<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
 cd output/nrf52840/bin/
 arm-none-eabi-objcopy -O ihex ot-rcp ot-rcp.hex
+nrfjprog -f nrf52 --eraseall
 nrfjprog -f nrf52 --program ot-rcp.hex --sectorerase --verify
+</code></pre></div>
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/openthread/ot-nrf528xx/blob/main/src/nrf52840/README.md"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            new nRF52840 Build instructions
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd ~/ot-nrf528xx
+./script/bootstrap
+./bootstrap
+sudo rm -rf build/
+./script/build nrf52840 USB_trans -DOT_THREAD_VERSION<span style="color:#f92672">=</span>1.2
+cd build/bin/
+arm-none-eabi-objcopy -O ihex ot-rcp ot-rcp.hex
+nrfjprog -f nrf52 --eraseall
+nrfjprog -f nrf52 --chiperase --program ot-rcp.hex --reset
 </code></pre></div>
 <div class="container">
     <div class="row">
@@ -2075,19 +2119,25 @@ Mar  <span style="color:#ae81ff">6</span> 13:00:07 3d926b9c2cee otbr-agent<span 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/openthread/ot-br-posix
 cd ot-br-posix
 ./script/bootstrap
-NETWORK_MANAGER<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span> ./script/setup
-nano /etc/default/otbr-agent
+INFRA_IF_NAME<span style="color:#f92672">=</span>eth0 ./script/setup
+sudo nano /etc/default/otbr-agent
 sudo reboot now
 sudo systemctl status
 sudo ot-ctl state
-</code></pre></div><p><em>issues</em>: in case a <code>dnsmasq</code> service already running, might have to be disabled first</p>
-<p>The status of the running services look as follows.
+</code></pre></div><ul>
+<li><em>issue</em>: in case a <code>dnsmasq</code> service already running, might have to be disabled first</li>
+<li><em>issue</em>: in case of not being able to create a network (not advertising on wireshark) a new raspi install might be required as network adapters conflicts might prevent the otber-agent from running properly</li>
+</ul>
+<p>the <code>/etc/default/otbr-agent</code> service config file should be configured with the right adapter</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Default settings for otbr-agent. This file is sourced by systemd</span>
+<span style="color:#75715e"># Options to pass to otbr-agent</span>
+OTBR_AGENT_OPTS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-I wpan0 -B eth0 spinel+hdlc+uart:///dev/ttyACM0&#34;</span>
+</code></pre></div><p>The status of the running services look as follows.
 These services should now be available :</p>
 <ul>
 <li><code>avahi-daemon</code></li>
-<li><code>otbr-agent</code></li>
-<li><code>otbr-web</code></li>
-<li><code>ncp_state_notifier</code></li>
+<li><code>otbr-agent</code> : access the usb device and creates wpan0</li>
+<li><code>otbr-web</code>   : creates the OTBorderRouter web server</li>
 <li><code>wpa_supplicant</code>
 <details >
   <summary>sudo systemctl status</summary>
@@ -2837,48 +2887,14 @@ ClientList can not open the Predefined Topic List.     /etc/predefinedTopic.conf
   Test and Debug
   <a class="anchor" href="#test-and-debug">#</a>
 </h1>
-<h2 id="with-server-command-line">
-  with server command line
-  <a class="anchor" href="#with-server-command-line">#</a>
-</h2>
-<ul>
-<li>using <code>wpanctl</code></li>
-</ul>
-<details >
-  <summary>host wpantund wpanctl. Click to expand...</summary>
-  <div class="markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo nano /etc/wpantund.conf
-
-sudo wpanctl status
-
-sudo wpanctl scan
-
-sudo wpanctl leave
-
-sudo wpanctl setprop w
-
-sudo wpanctl setprop Channel: <span style="color:#ae81ff">15</span>
-
-sudo wpanctl setprop Network:PANID 0x1234
-
-sudo wpanctl setprop Network:Key 00112233445566778899aabbccddeeff
-
-sudo wpanctl config-gateway -d <span style="color:#e6db74">&#34;fd11:22::&#34;</span>
-
-sudo wpanctl form <span style="color:#e6db74">&#34;nRF52840thread&#34;</span>
-
-sudo wpanctl permit-join <span style="color:#ae81ff">300</span>
-
-w join -n <span style="color:#e6db74">&#34;MeasureFall&#34;</span> -c <span style="color:#ae81ff">15</span> -k 00112233445566778899aabbccddeeff -p 0x1234
-</code></pre></div>
-  </div>
-</details>
-
 <h2 id="cli-on-border-router">
   cli on border router
   <a class="anchor" href="#cli-on-border-router">#</a>
 </h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo ot-ctl
+<p>in this case the dongle is flashed with ot-rcp.hex not with ot-cli.hex</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo ot-ctl state
+sudo ot-ctl
+&gt;
 </code></pre></div><h2 id="cli-openthread-firmware">
   cli openthread firmware
   <a class="anchor" href="#cli-openthread-firmware">#</a>
@@ -2922,22 +2938,12 @@ w join -n <span style="color:#e6db74">&#34;MeasureFall&#34;</span> -c <span styl
     </div>
 </div>
 
-<h2 id="cli-nordic-firmware">
-  cli Nordic firmware
-  <a class="anchor" href="#cli-nordic-firmware">#</a>
-</h2>
-<ul>
-<li>A dongle flashed with <code>cli</code> firmware can be attached to the serial console and offer a command line interpreter that helps with testing</li>
-</ul>
-<p>build and flash the cli example</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;cd <span style="color:#e6db74">&#34;examples\thread\cli\ftd\usb\pca10059\mbr\armgcc\Makefile&#34;</span>
-&gt;make
-&gt;make flash_mbr
-&gt;make flash
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nrfjprog -f nrf52 --eraseall
+nrfjprog -f nrf52 --program ot-cli-ftd.hex --sectorerase --verify
 </code></pre></div><p>on the cli</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">panid 0x1212
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">panid 0x1234
 panid
-channel <span style="color:#ae81ff">18</span>
+channel <span style="color:#ae81ff">13</span>
 channel
 networkname OpenThreadDemo
 networkname
@@ -3827,10 +3833,8 @@ can I run openthread with platformio ?
     <li><a href="#build-with-matter-node">Build with Matter Node</a></li>
     <li><a href="#test-and-debug">Test and Debug</a>
       <ul>
-        <li><a href="#with-server-command-line">with server command line</a></li>
         <li><a href="#cli-on-border-router">cli on border router</a></li>
         <li><a href="#cli-openthread-firmware">cli openthread firmware</a></li>
-        <li><a href="#cli-nordic-firmware">cli Nordic firmware</a></li>
         <li><a href="#cli-reference">cli reference</a></li>
       </ul>
     </li>
