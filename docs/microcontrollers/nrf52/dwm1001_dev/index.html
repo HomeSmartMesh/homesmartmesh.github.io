@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.6711aec9d01095a4413909ee4592b1801e6d61c76573504245cab0737416608e.js" integrity="sha256-ZxGuydAQlaRBOQnuRZKxgB5tYcdlc1BCRcqwc3QWYI4="></script>
+<script defer src="/en.search.min.2a5061525bd72dc92aaa6515b196919bb936bcc78b85e028ebcc29237f8cdf61.js" integrity="sha256-KlBhUlvXLckqqmUVsZaRm7k2vMeLheAo68wpI3&#43;M32E="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1567,6 +1567,18 @@ What to do if the localization in the app is terribly wrong ?
     </div>
   </details>
 
+  
+  
+  
+  <details>
+    <summary>
+Is it possible to communicate between DWM1001C and DMW1004C ?
+</summary>
+    <div class="markdown-inner">
+      Yes, given that they both use the same DW1000 tranceiver. But they have two different Host microcontrollers so algorith,s have to be ported on both targets nRF52 and STM32 and calibration has to be done accordingly.
+    </div>
+  </details>
+
 
 <script type="application/ld+json">
   {
@@ -1601,6 +1613,20 @@ What to do if the localization in the app is terribly wrong ?
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "By default the refresh rate of stationary tags is set to 10 sec, and the algorithm has an additional filter that prevents the tag position from moving to a new absolute measure and rather only improving by a given percentage. By incrinsing the \u0026ldquo;Stationary update rate\u0026rdquo; within the range of ~ 2 sec, it\u0026rsquo;s possible to get an expected user experience with a tag visibly converging to the correct location."
+        }
+      }
+    
+      
+      
+      
+      
+      
+      ,{
+        "@type": "Question",
+        "name": "Is it possible to communicate between DWM1001C and DMW1004C ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, given that they both use the same DW1000 tranceiver. But they have two different Host microcontrollers so algorith,s have to be ported on both targets nRF52 and STM32 and calibration has to be done accordingly."
         }
       }
     
