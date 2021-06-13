@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.4ad4f7037ac4eb98faaa21fa080574d4aacf30c18f2b4c530baae294e837fb25.js" integrity="sha256-StT3A3rE65j6qiH6CAV01KrPMMGPK0xTC6rilOg3&#43;yU="></script>
+<script defer src="/en.search.min.1a6457ca085023051f0ae2bc17ae854bfa3d94723a7ed70fc4bcfb6d1b12664b.js" integrity="sha256-GmRXyghQIwUfCuK8F66FS/o9lHI6ftcPxLz7bRsSZks="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -462,6 +462,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm1001_dev/" class="">UWB DWM1001 dev</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm3001_cdk/" class="">UWB DWM3001 cdk</a>
   
 
         </li>
@@ -920,23 +933,11 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#thread-nodes">Thread Nodes</a></li>
       </ul>
     </li>
-    <li><a href="#radio-co-processor-rcp">Radio Co-Processor (RCP)</a>
-      <ul>
-        <li><a href="#openthread">OpenThread</a></li>
-        <li><a href="#zephyr-v2599">Zephyr v2.5.99</a></li>
-      </ul>
-    </li>
     <li><a href="#border-router">Border Router</a>
       <ul>
-        <li><a href="#openthread---setup">OpenThread - setup</a></li>
+        <li><a href="#raspberry-pi-setup">raspberry pi setup</a></li>
+        <li><a href="#radio-co-processor-rcp">Radio Co-Processor (RCP)</a></li>
         <li><a href="#udp-test">udp test</a></li>
-        <li><a href="#openthread---docker">OpenThread - docker</a>
-          <ul>
-            <li><a href="#latest">latest</a></li>
-            <li><a href="#version">version</a></li>
-          </ul>
-        </li>
-        <li><a href="#nordic---sdcard-image">Nordic - sdcard image</a></li>
         <li><a href="#form-a-network">Form a network</a></li>
         <li><a href="#wireshark-sniffing">wireshark sniffing</a></li>
       </ul>
@@ -954,10 +955,10 @@ https://github.com/alex-shpak/hugo-book
       </ul>
     </li>
     <li><a href="#build-with-matter-node">Build with Matter Node</a></li>
-    <li><a href="#test-and-debug">Test and Debug</a>
+    <li><a href="#command-line-interface">Command Line Interface</a>
       <ul>
         <li><a href="#cli-on-border-router">cli on border router</a></li>
-        <li><a href="#cli-openthread-firmware">cli openthread firmware</a></li>
+        <li><a href="#cli-dongle">cli dongle</a></li>
         <li><a href="#cli-reference">cli reference</a></li>
       </ul>
     </li>
@@ -971,6 +972,19 @@ https://github.com/alex-shpak/hugo-book
     </li>
     <li><a href="#thread-udp-packets">Thread UDP packets</a></li>
     <li><a href="#faq---discussion">FAQ - Discussion</a></li>
+    <li><a href="#history">History</a>
+      <ul>
+        <li><a href="#nordic---sdcard-image">Nordic - sdcard image</a></li>
+        <li><a href="#openthread---docker">OpenThread - docker</a>
+          <ul>
+            <li><a href="#latest">latest</a></li>
+            <li><a href="#version">version</a></li>
+          </ul>
+        </li>
+        <li><a href="#rcp---zephyr-v2599">RCP - Zephyr v2.5.99</a></li>
+        <li><a href="#radio-co-processor-rcp-from-main-repo">Radio Co-Processor (RCP) from main repo</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -1778,294 +1792,13 @@ https://github.com/alex-shpak/hugo-book
 <p><a href="https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Sniffer-for-Bluetooth-LE">Wireshark sniffer</a> : dongle that captures all frames and shows them on wireshark</p>
 </li>
 </ul>
-<h1 id="radio-co-processor-rcp">
-  Radio Co-Processor (RCP)
-  <a class="anchor" href="#radio-co-processor-rcp">#</a>
-</h1>
-<ul>
-<li>This is the new version recommended by OpenThread for current and new versions aof border routers, see <a href="https://openthread.io/platforms#radio-co-processor-rcp">Vendor support RCP</a> for details.</li>
-<li><a href="https://openthread.io/guides/build#how_to_build_openthread">How to build</a></li>
-<li>built using docker container</li>
-</ul>
-<h2 id="openthread">
-  OpenThread
-  <a class="anchor" href="#openthread">#</a>
-</h2>
-<ul>
-<li>successfully tested with the <a href="#openthread---docker">OpenThread docker</a> raspberry pi image blow.</li>
-</ul>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/openthread/openthread/tree/master/examples/platforms/nrf528xx/nrf52840"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            nRF52840 Build instructions
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd ~/opentrhead
-./script/bootstrap
-./bootstrap
-sudo rm -rf output/
-make -f examples/Makefile-nrf52840 USB<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
-cd output/nrf52840/bin/
-arm-none-eabi-objcopy -O ihex ot-rcp ot-rcp.hex
-nrfjprog -f nrf52 --eraseall
-nrfjprog -f nrf52 --program ot-rcp.hex --sectorerase --verify
-</code></pre></div>
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/openthread/ot-nrf528xx/blob/main/src/nrf52840/README.md"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            new nRF52840 Build instructions
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd ~/ot-nrf528xx
-./script/bootstrap
-./bootstrap
-sudo rm -rf build/
-./script/build nrf52840 USB_trans -DOT_THREAD_VERSION<span style="color:#f92672">=</span>1.2
-cd build/bin/
-arm-none-eabi-objcopy -O ihex ot-rcp ot-rcp.hex
-nrfjprog -f nrf52 --eraseall
-nrfjprog -f nrf52 --chiperase --program ot-rcp.hex --reset
-</code></pre></div>
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.homesmartmesh.com/data/ot-rcp_thread-reference-20191113_nRF52840_dongle_no_bootloader.zip"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            ot-rcp thread-reference-20191113
-            
-            
-                
-                
-
-                
-
-                
-
-                
-                <svg    class="download"
-                        viewBox="0 0 512 512"
-                        fill="currentColor"
-                        >
-                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
-                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
-                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
-                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
-                </svg>
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.homesmartmesh.com/data/ot-rcp_de3ddb7169_20.03.2021_USB_BL-USB.zip"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            ot-rcp 20.03.2021 BOOTLOADER=USB
-            
-            
-                
-                
-
-                
-
-                
-
-                
-                <svg    class="download"
-                        viewBox="0 0 512 512"
-                        fill="currentColor"
-                        >
-                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
-                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
-                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
-                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
-                </svg>
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.homesmartmesh.com/data/ot-rcp_de3ddb7169_20.03.2021_USB_BL-No.zip"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            ot-rcp 20.03.2021 No Bootloader
-            
-            
-                
-                
-
-                
-
-                
-
-                
-                <svg    class="download"
-                        viewBox="0 0 512 512"
-                        fill="currentColor"
-                        >
-                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
-                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
-                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
-                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
-                </svg>
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<h2 id="zephyr-v2599">
-  Zephyr v2.5.99
-  <a class="anchor" href="#zephyr-v2599">#</a>
-</h2>
-<ul>
-<li>
-<p>Zephyr version <code>2.5.99</code> has a <code>coprocessor</code> directory replacing the old <code>ncp</code></p>
-</li>
-<li>
-<p>For details on Zephyr install see
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-            
-                href="https://www.homesmartmesh.com/docs/frameworks/zephyr/"
-            
-            role="button"
-        >
-            Zephyr RTOS
-            
-            
-        </a>
-    </div>
-    </div>
-</div>
-</p>
-</li>
-<li>
-<p>add <code>CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n</code> to <code>prj.conf</code></p>
-</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd zephyrproject
-source zephyr/zephyr-env.sh
-cd zephyr/samples/net/openthread/coprocessor
-west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prj.conf overlay-rcp.conf overlay-usb-nrf-br.conf&#34;</span>
-cd build/zephyr
-nrfjprog -f nrf52 --program zephyr.hex --sectorerase --verify
-</code></pre></div><details >
-  <summary>border router error details...</summary>
-  <div class="markdown-inner">
-    <p>tested version in zephyr 2.5.99 and border router openthread docker</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Mar  <span style="color:#ae81ff">6</span> 13:00:06 3d926b9c2cee avahi-daemon<span style="color:#f92672">[</span>129<span style="color:#f92672">]</span>: Server startup complete. Host name is 3d926b9c2cee.local. Local service cookie is 2646371747.
-Mar  <span style="color:#ae81ff">6</span> 13:00:07 3d926b9c2cee otbr-agent<span style="color:#f92672">[</span>145<span style="color:#f92672">]</span>: <span style="color:#f92672">[</span>CRIT<span style="color:#f92672">]</span>-PLAT----: HandleRcpTimeout<span style="color:#f92672">()</span> at ../../third_party/openthread/repo/src/lib/spinel/radio_spinel_impl.hpp:2168: RadioSpinelNoResponse
-</code></pre></div>
-  </div>
-</details>
-
 <h1 id="border-router">
   Border Router
   <a class="anchor" href="#border-router">#</a>
 </h1>
-<h2 id="openthread---setup">
-  OpenThread - setup
-  <a class="anchor" href="#openthread---setup">#</a>
+<h2 id="raspberry-pi-setup">
+  raspberry pi setup
+  <a class="anchor" href="#raspberry-pi-setup">#</a>
 </h2>
 
 <div class="container">
@@ -2254,6 +1987,176 @@ These services should now be available :</p>
   </div>
 </details>
 </p>
+<h2 id="radio-co-processor-rcp">
+  Radio Co-Processor (RCP)
+  <a class="anchor" href="#radio-co-processor-rcp">#</a>
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/openthread/ot-nrf528xx/blob/main/src/nrf52840/README.md"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            new nRF52840 Build instructions
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd ~/ot-nrf528xx
+./script/bootstrap
+./bootstrap
+sudo rm -rf build/
+./script/build nrf52840 USB_trans  -DOT_THREAD_VERSION<span style="color:#f92672">=</span>1.2
+cd build/bin/
+arm-none-eabi-objcopy -O ihex ot-rcp ot-rcp.hex
+nrfjprog -f nrf52 --eraseall
+nrfjprog -f nrf52 --chiperase --program ot-rcp.hex --reset
+</code></pre></div>
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.homesmartmesh.com/data/ot-rcp_thread-reference-20191113_nRF52840_dongle_no_bootloader.zip"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            ot-rcp thread-reference-20191113
+            
+            
+                
+                
+
+                
+
+                
+
+                
+                <svg    class="download"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                        >
+                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
+                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
+                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
+                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
+                </svg>
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.homesmartmesh.com/data/ot-rcp_de3ddb7169_20.03.2021_USB_BL-USB.zip"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            ot-rcp 20.03.2021 BOOTLOADER=USB
+            
+            
+                
+                
+
+                
+
+                
+
+                
+                <svg    class="download"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                        >
+                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
+                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
+                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
+                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
+                </svg>
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.homesmartmesh.com/data/ot-rcp_de3ddb7169_20.03.2021_USB_BL-No.zip"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            ot-rcp 20.03.2021 No Bootloader
+            
+            
+                
+                
+
+                
+
+                
+
+                
+                <svg    class="download"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                        >
+                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
+                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
+                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
+                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
+                </svg>
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
 <h2 id="udp-test">
   udp test
   <a class="anchor" href="#udp-test">#</a>
@@ -2276,165 +2179,7 @@ Listening using <code>socat</code>:</p>
 </code></pre></div><p>on the nRF52 node Zephyr shell :</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt;ot udp open
 &gt;ot udp send ff02::1 <span style="color:#ae81ff">4242</span> hi_there_now
-</code></pre></div><h2 id="openthread---docker">
-  OpenThread - docker
-  <a class="anchor" href="#openthread---docker">#</a>
-</h2>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://openthread.io/guides/border-router/docker/run"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            Reference on &#39;Run OTBR Docker&#39;...
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<h3 id="latest">
-  latest
-  <a class="anchor" href="#latest">#</a>
-</h3>
-<blockquote class="book-hint warning">
-  This method only deploys the lates available docker container, see <a href="#version">version</a> for a specific version.
-</blockquote>
-
-<ul>
-<li>use with the OpenThread dongle firmware <a href="#openthread">detailed above</a></li>
-<li>The docker command below runs deamonized (in the background) and maps port 80.</li>
-<li>Note that restarting the same container does not work there fore <code>-rm</code> would help restart a new container each time</li>
-<li>Two issues happen when mapping port 80 only, the <code>Topology</code> menu does not show anything and the Android comissioning App can&rsquo;t reach the border router so a falback on <code>host</code> networking with the second docker command solves these issues.</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run --rm --name otbr-metal -d --sysctl <span style="color:#e6db74">&#34;net.ipv6.conf.all.disable_ipv6=0 \
-</span><span style="color:#e6db74">        net.ipv4.conf.all.forwarding=1 net.ipv6.conf.all.forwarding=1&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>        -p 80:80 --dns<span style="color:#f92672">=</span>127.0.0.1 --volume <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>        /dev/ttyACM0:/dev/ttyACM0 --privileged openthread/otbr <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>        --radio-url spinel+hdlc+uart:///dev/ttyACM0
-
-docker run --rm --name otbr-metal -d <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --sysctl <span style="color:#e6db74">&#34;net.ipv6.conf.all.disable_ipv6=0 net.ipv4.conf.all.forwarding=1 net.ipv6.conf.all.forwarding=1&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --network host --dns<span style="color:#f92672">=</span>127.0.0.1 <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --volume /dev/ttyACM0:/dev/ttyACM0 <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --privileged openthread/otbr <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --radio-url spinel+hdlc+uart:///dev/ttyACM0
-</code></pre></div><p>Below commands to run in separate windows</p>
-<ul>
-<li>listen to the conainer logs</li>
-<li>open a shell in the container</li>
-<li>open a command line to the RCP</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker logs --follow otbr-metal
-docker exec -it otbr-metal /bin/bash
-ot-ctl
-</code></pre></div><h3 id="version">
-  version
-  <a class="anchor" href="#version">#</a>
-</h3>
-<p>These commands allow creating a docker image based on a specific commit, e.g. for testing with Thread version 1.1 instead of 1.2. The image is built with this <a href="https://github.com/openthread/ot-br-posix/blob/main/etc/docker/Dockerfile">Dockerfile</a>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/openthread/ot-br-posix
-cd ot-br-posix
-git checkout 4b6d3b863f
-<span style="color:#75715e">#git checkout 615de5  #2021-03-22</span>
-<span style="color:#75715e">#git checkout thread-br-certified-20180819</span>
-git submodule update --init --recursive
-docker build --no-cache -t openthread/otbr -f etc/docker/Dockerfile .
-</code></pre></div><p>Now running the same command above from the section <a href="#latest">latest</a> with the same image <code>openthread/otbr</code> will run the newly built image.</p>
-<h2 id="nordic---sdcard-image">
-  Nordic - sdcard image
-  <a class="anchor" href="#nordic---sdcard-image">#</a>
-</h2>
-<ul>
-<li>download a ready raspberry pi image</li>
-<li>successfully tested with the Nordif Firmware from the SDK v4.1.0</li>
-</ul>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK-for-Thread-and-Zigbee/Download#infotabs"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            Download the nRF5 SDK for Thread and Zigbee...
-            
-            
-                
-                <span class="external-link">
-                    <svg    viewBox="0 0 511.626 511.627"
-                            fill="currentColor"
-                    >
-                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
-                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
-                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
-                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
-                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
-                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
-                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
-                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
-                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
-                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
-                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
-                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
-                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
-                    </svg>
-                </span>
-                
-                
-
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<h2 id="form-a-network">
+</code></pre></div><h2 id="form-a-network">
   Form a network
   <a class="anchor" href="#form-a-network">#</a>
 </h2>
@@ -2883,9 +2628,9 @@ ClientList can not open the Predefined Topic List.     /etc/predefinedTopic.conf
     </div>
 </div>
 
-<h1 id="test-and-debug">
-  Test and Debug
-  <a class="anchor" href="#test-and-debug">#</a>
+<h1 id="command-line-interface">
+  Command Line Interface
+  <a class="anchor" href="#command-line-interface">#</a>
 </h1>
 <h2 id="cli-on-border-router">
   cli on border router
@@ -2895,11 +2640,58 @@ ClientList can not open the Predefined Topic List.     /etc/predefinedTopic.conf
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo ot-ctl state
 sudo ot-ctl
 &gt;
-</code></pre></div><h2 id="cli-openthread-firmware">
-  cli openthread firmware
-  <a class="anchor" href="#cli-openthread-firmware">#</a>
+</code></pre></div><h2 id="cli-dongle">
+  cli dongle
+  <a class="anchor" href="#cli-dongle">#</a>
 </h2>
 
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/openthread/ot-nrf528xx/blob/main/src/nrf52840/README.md"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            new nRF52840 Build instructions
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd ~/ot-nrf528xx
+./script/bootstrap
+./bootstrap
+sudo rm -rf build/
+./script/build nrf52840 USB_trans -DOT_COMMISSIONER<span style="color:#f92672">=</span>ON -DOT_JOINER<span style="color:#f92672">=</span>ON -DOT_THREAD_VERSION<span style="color:#f92672">=</span>1.2
+cd build/bin/
+arm-none-eabi-objcopy -O ihex ot-cli-ftd ot-cli-ftd-com-join.hex
+</code></pre></div><p>
 <div class="container">
     <div class="row">
         <div class="col text-center">
@@ -2938,12 +2730,53 @@ sudo ot-ctl
     </div>
 </div>
 
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.homesmartmesh.com/data/ot-cli-ftd-com-join-11.06.2021.hex"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            ot-cli-ftd thread-reference-20191113
+            
+            
+                
+                
+
+                
+
+                
+
+                
+                <svg    class="download"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                        >
+                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
+                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
+                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
+                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
+                </svg>
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nrfjprog -f nrf52 --eraseall
 nrfjprog -f nrf52 --program ot-cli-ftd.hex --sectorerase --verify
-</code></pre></div><p>on the cli</p>
+</code></pre></div><ul>
+<li>node with credentials</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">panid 0x1234
 panid
-channel <span style="color:#ae81ff">13</span>
+channel <span style="color:#ae81ff">24</span>
 channel
 networkname OpenThreadDemo
 networkname
@@ -2952,6 +2785,18 @@ masterkey
 ifconfig up
 thread start
 state
+</code></pre></div><ul>
+<li>commissioner, see <a href="https://openthread.io/guides/build/commissioning">openthread - commissioning</a></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">commissioner start
+commissioner joiner add f4ce36ea62a65434 ABCDE2
+</code></pre></div><ul>
+<li>joiner</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">eui64
+&gt;f4ce36ea62a65434
+ifconfig up
+joiner start ABCDE2
 </code></pre></div><p>Note <code>masterkey</code> command is for the <code>Network Key</code></p>
 <p>at this stage the <code>state</code> command should log <code>child</code></p>
 <p>wireshark should log the join as follows</p>
@@ -3755,7 +3600,273 @@ can I run openthread with platformio ?
   }
 </script>
 
-</article>
+<h1 id="history">
+  History
+  <a class="anchor" href="#history">#</a>
+</h1>
+<p>In the history are moved sections that are deprecated or no longer relevant kept for historical info only</p>
+<h2 id="nordic---sdcard-image">
+  Nordic - sdcard image
+  <a class="anchor" href="#nordic---sdcard-image">#</a>
+</h2>
+<ul>
+<li>download a ready raspberry pi image</li>
+<li>successfully tested with the Nordif Firmware from the SDK v4.1.0</li>
+</ul>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK-for-Thread-and-Zigbee/Download#infotabs"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            Download the nRF5 SDK for Thread and Zigbee...
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<h2 id="openthread---docker">
+  OpenThread - docker
+  <a class="anchor" href="#openthread---docker">#</a>
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://openthread.io/guides/border-router/docker/run"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            Reference on &#39;Run OTBR Docker&#39;...
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<h3 id="latest">
+  latest
+  <a class="anchor" href="#latest">#</a>
+</h3>
+<blockquote class="book-hint warning">
+  This method only deploys the lates available docker container, see <a href="#version">version</a> for a specific version.
+</blockquote>
+
+<ul>
+<li>use with the OpenThread dongle firmware <a href="#openthread">detailed above</a></li>
+<li>The docker command below runs deamonized (in the background) and maps port 80.</li>
+<li>Note that restarting the same container does not work there fore <code>-rm</code> would help restart a new container each time</li>
+<li>Two issues happen when mapping port 80 only, the <code>Topology</code> menu does not show anything and the Android comissioning App can&rsquo;t reach the border router so a falback on <code>host</code> networking with the second docker command solves these issues.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run --rm --name otbr-metal -d --sysctl <span style="color:#e6db74">&#34;net.ipv6.conf.all.disable_ipv6=0 \
+</span><span style="color:#e6db74">        net.ipv4.conf.all.forwarding=1 net.ipv6.conf.all.forwarding=1&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        -p 80:80 --dns<span style="color:#f92672">=</span>127.0.0.1 --volume <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        /dev/ttyACM0:/dev/ttyACM0 --privileged openthread/otbr <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>        --radio-url spinel+hdlc+uart:///dev/ttyACM0
+
+docker run --rm --name otbr-metal -d <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  --sysctl <span style="color:#e6db74">&#34;net.ipv6.conf.all.disable_ipv6=0 net.ipv4.conf.all.forwarding=1 net.ipv6.conf.all.forwarding=1&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  --network host --dns<span style="color:#f92672">=</span>127.0.0.1 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  --volume /dev/ttyACM0:/dev/ttyACM0 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  --privileged openthread/otbr <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  --radio-url spinel+hdlc+uart:///dev/ttyACM0
+</code></pre></div><p>Below commands to run in separate windows</p>
+<ul>
+<li>listen to the conainer logs</li>
+<li>open a shell in the container</li>
+<li>open a command line to the RCP</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker logs --follow otbr-metal
+docker exec -it otbr-metal /bin/bash
+ot-ctl
+</code></pre></div><h3 id="version">
+  version
+  <a class="anchor" href="#version">#</a>
+</h3>
+<p>These commands allow creating a docker image based on a specific commit, e.g. for testing with Thread version 1.1 instead of 1.2. The image is built with this <a href="https://github.com/openthread/ot-br-posix/blob/main/etc/docker/Dockerfile">Dockerfile</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/openthread/ot-br-posix
+cd ot-br-posix
+git checkout 4b6d3b863f
+<span style="color:#75715e">#git checkout 615de5  #2021-03-22</span>
+<span style="color:#75715e">#git checkout thread-br-certified-20180819</span>
+git submodule update --init --recursive
+docker build --no-cache -t openthread/otbr -f etc/docker/Dockerfile .
+</code></pre></div><p>Now running the same command above from the section <a href="#latest">latest</a> with the same image <code>openthread/otbr</code> will run the newly built image.</p>
+<h2 id="rcp---zephyr-v2599">
+  RCP - Zephyr v2.5.99
+  <a class="anchor" href="#rcp---zephyr-v2599">#</a>
+</h2>
+<ul>
+<li>
+<p>Zephyr version <code>2.5.99</code> has a <code>coprocessor</code> directory replacing the old <code>ncp</code></p>
+</li>
+<li>
+<p>For details on Zephyr install see
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+            
+                href="https://www.homesmartmesh.com/docs/frameworks/zephyr/"
+            
+            role="button"
+        >
+            Zephyr RTOS
+            
+            
+        </a>
+    </div>
+    </div>
+</div>
+</p>
+</li>
+<li>
+<p>add <code>CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n</code> to <code>prj.conf</code></p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd zephyrproject
+source zephyr/zephyr-env.sh
+cd zephyr/samples/net/openthread/coprocessor
+west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prj.conf overlay-rcp.conf overlay-usb-nrf-br.conf&#34;</span>
+cd build/zephyr
+nrfjprog -f nrf52 --program zephyr.hex --sectorerase --verify
+</code></pre></div><details >
+  <summary>border router error details...</summary>
+  <div class="markdown-inner">
+    <p>tested version in zephyr 2.5.99 and border router openthread docker</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Mar  <span style="color:#ae81ff">6</span> 13:00:06 3d926b9c2cee avahi-daemon<span style="color:#f92672">[</span>129<span style="color:#f92672">]</span>: Server startup complete. Host name is 3d926b9c2cee.local. Local service cookie is 2646371747.
+Mar  <span style="color:#ae81ff">6</span> 13:00:07 3d926b9c2cee otbr-agent<span style="color:#f92672">[</span>145<span style="color:#f92672">]</span>: <span style="color:#f92672">[</span>CRIT<span style="color:#f92672">]</span>-PLAT----: HandleRcpTimeout<span style="color:#f92672">()</span> at ../../third_party/openthread/repo/src/lib/spinel/radio_spinel_impl.hpp:2168: RadioSpinelNoResponse
+</code></pre></div>
+  </div>
+</details>
+
+<h2 id="radio-co-processor-rcp-from-main-repo">
+  Radio Co-Processor (RCP) from main repo
+  <a class="anchor" href="#radio-co-processor-rcp-from-main-repo">#</a>
+</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/openthread/openthread/tree/master/examples/platforms/nrf528xx/nrf52840"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            nRF52840 Build instructions
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd ~/opentrhead
+./script/bootstrap
+./bootstrap
+sudo rm -rf output/
+make -f examples/Makefile-nrf52840 USB<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+cd output/nrf52840/bin/
+arm-none-eabi-objcopy -O ihex ot-rcp ot-rcp.hex
+nrfjprog -f nrf52 --eraseall
+nrfjprog -f nrf52 --program ot-rcp.hex --sectorerase --verify
+</code></pre></div></article>
  
       
 
@@ -3797,23 +3908,11 @@ can I run openthread with platformio ?
         <li><a href="#thread-nodes">Thread Nodes</a></li>
       </ul>
     </li>
-    <li><a href="#radio-co-processor-rcp">Radio Co-Processor (RCP)</a>
-      <ul>
-        <li><a href="#openthread">OpenThread</a></li>
-        <li><a href="#zephyr-v2599">Zephyr v2.5.99</a></li>
-      </ul>
-    </li>
     <li><a href="#border-router">Border Router</a>
       <ul>
-        <li><a href="#openthread---setup">OpenThread - setup</a></li>
+        <li><a href="#raspberry-pi-setup">raspberry pi setup</a></li>
+        <li><a href="#radio-co-processor-rcp">Radio Co-Processor (RCP)</a></li>
         <li><a href="#udp-test">udp test</a></li>
-        <li><a href="#openthread---docker">OpenThread - docker</a>
-          <ul>
-            <li><a href="#latest">latest</a></li>
-            <li><a href="#version">version</a></li>
-          </ul>
-        </li>
-        <li><a href="#nordic---sdcard-image">Nordic - sdcard image</a></li>
         <li><a href="#form-a-network">Form a network</a></li>
         <li><a href="#wireshark-sniffing">wireshark sniffing</a></li>
       </ul>
@@ -3831,10 +3930,10 @@ can I run openthread with platformio ?
       </ul>
     </li>
     <li><a href="#build-with-matter-node">Build with Matter Node</a></li>
-    <li><a href="#test-and-debug">Test and Debug</a>
+    <li><a href="#command-line-interface">Command Line Interface</a>
       <ul>
         <li><a href="#cli-on-border-router">cli on border router</a></li>
-        <li><a href="#cli-openthread-firmware">cli openthread firmware</a></li>
+        <li><a href="#cli-dongle">cli dongle</a></li>
         <li><a href="#cli-reference">cli reference</a></li>
       </ul>
     </li>
@@ -3848,6 +3947,19 @@ can I run openthread with platformio ?
     </li>
     <li><a href="#thread-udp-packets">Thread UDP packets</a></li>
     <li><a href="#faq---discussion">FAQ - Discussion</a></li>
+    <li><a href="#history">History</a>
+      <ul>
+        <li><a href="#nordic---sdcard-image">Nordic - sdcard image</a></li>
+        <li><a href="#openthread---docker">OpenThread - docker</a>
+          <ul>
+            <li><a href="#latest">latest</a></li>
+            <li><a href="#version">version</a></li>
+          </ul>
+        </li>
+        <li><a href="#rcp---zephyr-v2599">RCP - Zephyr v2.5.99</a></li>
+        <li><a href="#radio-co-processor-rcp-from-main-repo">Radio Co-Processor (RCP) from main repo</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 

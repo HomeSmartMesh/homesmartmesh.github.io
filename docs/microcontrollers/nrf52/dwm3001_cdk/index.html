@@ -5,15 +5,15 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Low power design with ESP-WROOM-32 module with 10 uA deep sleep">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="FireBeetle" />
-<meta property="og:description" content="Low power design with ESP-WROOM-32 module with 10 uA deep sleep" />
+<meta name="description" content="2nd Generation Ultra Wide Band development kit including">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="UWB DWM3001 cdk" />
+<meta property="og:description" content="2nd Generation Ultra Wide Band development kit including" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.homesmartmesh.com/docs/microcontrollers/esp32/fire-beetle/" />
-<meta property="og:image" content="https://www.homesmartmesh.com/images/esp32/firebeetle/3%20Charging.jpg" />
-<meta property="article:published_time" content="2021-02-27T00:00:00+09:00" />
-<meta property="article:modified_time" content="2021-02-27T00:00:00+09:00" />
-<title>FireBeetle | Home Smart Mesh</title>
+<meta property="og:url" content="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm3001_cdk/" />
+<meta property="og:image" content="https://www.homesmartmesh.com/images/uwb/DWM1001%20DevKit.png" />
+<meta property="article:published_time" content="2021-05-08T08:00:00+00:00" />
+<meta property="article:modified_time" content="2021-05-08T08:00:00+00:00" />
+<title>UWB DWM3001 cdk | Home Smart Mesh</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
@@ -234,7 +234,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-7d13b6f646948a6d212145f583c29a47" class="toggle" checked />
+    <input type="checkbox" id="section-7d13b6f646948a6d212145f583c29a47" class="toggle"  />
     <label for="section-7d13b6f646948a6d212145f583c29a47" class="flex justify-between">
       <a href="https://www.homesmartmesh.com/docs/microcontrollers/esp32/" class="">esp32</a>
       <span>▾</span>
@@ -342,7 +342,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://www.homesmartmesh.com/docs/microcontrollers/esp32/fire-beetle/" class=" active">FireBeetle</a>
+    <a href="https://www.homesmartmesh.com/docs/microcontrollers/esp32/fire-beetle/" class="">FireBeetle</a>
   
 
         </li>
@@ -474,7 +474,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm3001_cdk/" class="">UWB DWM3001 cdk</a>
+    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm3001_cdk/" class=" active">UWB DWM3001 cdk</a>
   
 
         </li>
@@ -910,7 +910,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>FireBeetle</strong>
+  <strong>UWB DWM3001 cdk</strong>
 
   <label for="toc-control">
     
@@ -925,20 +925,13 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#overview">Overview</a>
+    <li><a href="#development-board">Development Board</a>
       <ul>
-        <li><a href="#pins">PINS</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#links">Links</a></li>
-        <li><a href="#related-products">Related products</a></li>
+        <li><a href="#dwm3001c-module">DWM3001C Module</a></li>
+        <li><a href="#dw3110-transciever">DW3110 Transciever</a></li>
       </ul>
     </li>
-    <li><a href="#applications">Applications</a>
-      <ul>
-        <li><a href="#config">Config</a></li>
-        <li><a href="#main">Main</a></li>
-      </ul>
-    </li>
+    <li><a href="#faq---discussion">FAQ - Discussion</a></li>
   </ul>
 </nav>
 
@@ -950,57 +943,7 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="overview">
-  Overview
-  <a class="anchor" href="#overview">#</a>
-</h1>
-
-
-
-
-
-
-<div class="text-center">
-  <a >
-    <img
-    src="/images/esp32/firebeetle_board.png"
-    alt=""
-    width="300"
-    height=""
-    decoding="async"
-  />
-  </a>
-  
-</div>
-
-<ul>
-<li>10 uA deep sleep current</li>
-<li>USB and external DC battery power inputs (3.3V - 5V)</li>
-<li>battery charging from USB external DC</li>
-<li>TP4056 Li-Ion battery charger</li>
-<li>RT9080 Low Drop out Linear Regulator</li>
-<li>supported by platformio (<code>board=firebeetle32</code>)</li>
-</ul>
-<h2 id="pins">
-  PINS
-  <a class="anchor" href="#pins">#</a>
-</h2>
-<ul>
-<li>LED : (IO2)</li>
-<li>VBAT : (A0 - 36 - SENSOR_VP) measure ratio = 0.5</li>
-</ul>
-<blockquote class="book-hint danger">
-  The 0 Ohm resistors R10 and R11 needed to sense the battery voltage by A0-Pin38 are not populated (as of the boards I have). Therefore solder bridges are required to be added manually 😢
-</blockquote>
-
-<ul>
-<li>Another caveat is the usage of pin 36 A0 which conflicts with wifi. To avoid that, in the program below, the battery is measured before the wifi is activated.</li>
-</ul>
-<h2 id="gallery">
-  Gallery
-  <a class="anchor" href="#gallery">#</a>
-</h2>
-<p>
+  <article class="markdown">
 
 
 
@@ -1062,58 +1005,107 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+            
+                href="https://www.homesmartmesh.com/docs/networks/ultrawideband/"
+            
+            role="button"
+        >
+            Networks / Ultra Wide Band RTLS
+            
+            
+        </a>
+    </div>
+    </div>
+</div>
 
-<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
-				<div class="box">
-				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/esp32/firebeetle//1%20unboxing%20FireBeetle%20and%20solar.jpg');" >
-				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/esp32/firebeetle//1%20unboxing%20FireBeetle%20and%20solar.jpg" alt="1 unboxing fire beetle and solar" />
-				    </div>
-			      <figcaption>
-		          <p>1 unboxing fire beetle and solar</p>
-			      </figcaption>
-				    <a href="https://www.homesmartmesh.com//images/esp32/firebeetle//1%20unboxing%20FireBeetle%20and%20solar.jpg" itemprop="contentUrl"></a>
-				  </figure>
-				</div>
-				<div class="box">
-				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/esp32/firebeetle//2%20arranged%20Board%20solar%20charger.jpg');" >
-				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/esp32/firebeetle//2%20arranged%20Board%20solar%20charger.jpg" alt="2 arranged board solar charger" />
-				    </div>
-			      <figcaption>
-		          <p>2 arranged board solar charger</p>
-			      </figcaption>
-				    <a href="https://www.homesmartmesh.com//images/esp32/firebeetle//2%20arranged%20Board%20solar%20charger.jpg" itemprop="contentUrl"></a>
-				  </figure>
-				</div>
-				<div class="box">
-				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/esp32/firebeetle//3%20Charging.jpg');" >
-				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/esp32/firebeetle//3%20Charging.jpg" alt="3 charging" />
-				    </div>
-			      <figcaption>
-		          <p>3 charging</p>
-			      </figcaption>
-				    <a href="https://www.homesmartmesh.com//images/esp32/firebeetle//3%20Charging.jpg" itemprop="contentUrl"></a>
-				  </figure>
-				</div>
-				<div class="box">
-				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/esp32/firebeetle//4%20VBat%200Ohm%20res.jpg');" >
-				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/esp32/firebeetle//4%20VBat%200Ohm%20res.jpg" alt="4 v bat 0 ohm res" />
-				    </div>
-			      <figcaption>
-		          <p>4 v bat 0 ohm res</p>
-			      </figcaption>
-				    <a href="https://www.homesmartmesh.com//images/esp32/firebeetle//4%20VBat%200Ohm%20res.jpg" itemprop="contentUrl"></a>
-				  </figure>
-				</div>
+<h1 id="development-board">
+  Development Board
+  <a class="anchor" href="#development-board">#</a>
+</h1>
+<p>
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.qorvo.com/products/p/DWM3001CDK"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            product page
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/uwb/dwm3001-cdk.webp"
+    alt=""
+    width="150px"
+    height=""
+    decoding="async"
+  />
+  </a>
+  
 </div>
 </p>
-<h2 id="links">
-  Links
-  <a class="anchor" href="#links">#</a>
+<ul>
+<li>DWM3001C Module</li>
+<li>STM32 as J-Link OB debugger</li>
+<li>x2 micro USB for nRF Data and J-Link Program/serial</li>
+<li>battery conenctor</li>
+<li>Raspberry PI Header connector</li>
+<li>User Leds and buttons</li>
+</ul>
+<h2 id="dwm3001c-module">
+  DWM3001C Module
+  <a class="anchor" href="#dwm3001c-module">#</a>
 </h2>
 
 <div class="container">
@@ -1121,13 +1113,13 @@ https://github.com/alex-shpak/hugo-book
         <div class="col text-center">
         <a  class="book-btn"
             
-                href="https://www.dfrobot.com/product-1590.html"
+                href="https://www.qorvo.com/products/p/DWM3001C"
                 target="_blank"
             
             
             role="button"
         >
-            FireBeetle - DFRobot
+            product page
             
             
                 
@@ -1164,19 +1156,25 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 
+<ul>
+<li>DW3110 Transciever</li>
+<li>nRF52833 Thread, Zigbee and Bluetooth (Mesh, Direction finding)</li>
+<li>IMU : Inertial Motion Unit</li>
+<li>TWR and TDoA : Two Way Ranging and Time Difference of Arrival</li>
+</ul>
 
 <div class="container">
     <div class="row">
         <div class="col text-center">
         <a  class="book-btn"
             
-                href="https://wiki.dfrobot.com/FireBeetle_ESP32_IOT_Microcontroller%28V3.0%29__Supports_Wi-Fi_&amp;_Bluetooth__SKU__DFR0478"
+                href="https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52833"
                 target="_blank"
             
             
             role="button"
         >
-            Wiki
+            nRF52833
             
             
                 
@@ -1213,87 +1211,9 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://raw.githubusercontent.com/DFRobot/Wiki/master/DFR0478/%5BDFR0478%5DFireBeetle%20Board-ESP32%28V4.0%29%E7%94%9F%E4%BA%A7%E6%A3%80%E6%9F%A5%E5%9B%BE.PDF"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            Schematics
-            
-            
-                
-                
-
-                
-
-                
-
-                
-                <svg    class="download"
-                        viewBox="0 0 512 512"
-                        fill="currentColor"
-                        >
-                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
-                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
-                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
-                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
-                </svg>
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/Robert-MARKII/Document/raw/master/FireBeetle%20Board-ESP32%20User%20Manual%20update.pdf"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            User Manual
-            
-            
-                
-                
-
-                
-
-                
-
-                
-                <svg    class="download"
-                        viewBox="0 0 512 512"
-                        fill="currentColor"
-                        >
-                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
-                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
-                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
-                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
-                </svg>
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<h2 id="related-products">
-  Related products
-  <a class="anchor" href="#related-products">#</a>
+<h2 id="dw3110-transciever">
+  DW3110 Transciever
+  <a class="anchor" href="#dw3110-transciever">#</a>
 </h2>
 
 <div class="container">
@@ -1301,13 +1221,13 @@ https://github.com/alex-shpak/hugo-book
         <div class="col text-center">
         <a  class="book-btn"
             
-                href="https://www.dfrobot.com/product-1781.html"
+                href="https://www.qorvo.com/products/p/DW3110"
                 target="_blank"
             
             
             role="button"
         >
-            Solar Power Manager Micro
+            product page
             
             
                 
@@ -1344,41 +1264,112 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 
-<h1 id="applications">
-  Applications
-  <a class="anchor" href="#applications">#</a>
+<ul>
+<li>2 RF bands : channel 5 (6.5 GHz) and channel 9 (8 GHz)
+<ul>
+<li><code>IEEE 802.15.4z (BPRF mode)</code>, <code>IEEE802.15.4-2015 UWB</code>, <code>IEEE 802.15.4-2011 UWB</code>, <code>IEEE 802.15.8</code></li>
+<li>FiRa interoperability for PHY and MAC</li>
+<li>Apple U1 chip interoperability in beta evaluation</li>
+</ul>
+</li>
+<li>TWR, TDOA : Two Way Ranging, Time Difference Of Arrival
+<ul>
+<li>PDoA : Phase Difference of Arrival for DW3120 and DW3220 only</li>
+</ul>
+</li>
+<li>Datarates : 850 kbps, 6.8 Mbps</li>
+<li>1 Antenna : see DW3120/DW3220 for 2 antenna ports</li>
+<li>Backwards compatible with DW1000 for channel 5 6.8 Mbps and 850 kbps</li>
+<li>Location precision : 10 cm
+<ul>
+<li>Angle precision (for dual antenna) : +/- 10° accuracy, 5° std dev</li>
+</ul>
+</li>
+</ul>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.firaconsortium.org/news/press-releases/2020/05/fira-consortium-publishes-uwb-mac-technical-requirements-to-build-ultrawideband-interoperable-ecosystem"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            FiRa
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<h1 id="faq---discussion">
+  FAQ - Discussion
+  <a class="anchor" href="#faq---discussion">#</a>
 </h1>
+<ul>
+<li>Reviews, experience exchange and ideas related to this page content can be discussed in the dedicated discord channel
 
 <div class="container">
     <div class="row">
         <div class="col text-center">
         <a  class="book-btn"
             
-                href="https://github.com/ESP32Home/firebeetle_solar_small.git"
+                href="https://discord.gg/tyZZfTETYS"
                 target="_blank"
             
             
             role="button"
         >
-            ESP32 Program Github Repo
+            Discord - #ultra-wide-band 
             
             
                 
                 
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
 
                 
 
+                
+                <span class="discord">
+                    <svg 
+                        viewBox="0 0 256 293"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentcolor"
+                        preserveAspectRatio="xMidYMid">
+                            <path d="M226.011 0H29.99C13.459 0 0 13.458 0 30.135v197.778c0 16.677 13.458 30.135 29.989 30.135h165.888l-7.754-27.063 18.725 17.408 17.7 16.384L256 292.571V30.135C256 13.458 242.542 0 226.011 0zm-56.466 191.05s-5.266-6.291-9.655-11.85c19.164-5.413 26.478-17.408 26.478-17.408-5.998 3.95-11.703 6.73-16.823 8.63-7.314 3.073-14.336 5.12-21.211 6.291-14.044 2.633-26.917 1.902-37.888-.146-8.339-1.61-15.507-3.95-21.504-6.29-3.365-1.317-7.022-2.926-10.68-4.974-.438-.293-.877-.439-1.316-.732-.292-.146-.439-.292-.585-.438-2.633-1.463-4.096-2.487-4.096-2.487s7.022 11.703 25.6 17.261c-4.388 5.56-9.801 12.142-9.801 12.142-32.33-1.024-44.617-22.235-44.617-22.235 0-47.104 21.065-85.285 21.065-85.285 21.065-15.799 41.106-15.36 41.106-15.36l1.463 1.756C80.75 77.53 68.608 89.088 68.608 89.088s3.218-1.755 8.63-4.242c15.653-6.876 28.088-8.777 33.208-9.216.877-.147 1.609-.293 2.487-.293a123.776 123.776 0 0 1 29.55-.292c13.896 1.609 28.818 5.705 44.031 14.043 0 0-11.556-10.971-36.425-18.578l2.048-2.34s20.041-.44 41.106 15.36c0 0 21.066 38.18 21.066 85.284 0 0-12.435 21.211-44.764 22.235zm-68.023-68.316c-8.338 0-14.92 7.314-14.92 16.237 0 8.924 6.728 16.238 14.92 16.238 8.339 0 14.921-7.314 14.921-16.238.147-8.923-6.582-16.237-14.92-16.237m53.394 0c-8.339 0-14.922 7.314-14.922 16.237 0 8.924 6.73 16.238 14.922 16.238 8.338 0 14.92-7.314 14.92-16.238 0-8.923-6.582-16.237-14.92-16.237"/>
+                    </svg>
                 
 
                 
@@ -1387,118 +1378,127 @@ https://github.com/alex-shpak/hugo-book
     </div>
     </div>
 </div>
+</li>
+</ul>
 
-<h2 id="config">
-  Config
-  <a class="anchor" href="#config">#</a>
-</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-    <span style="color:#f92672">&#34;mqtt&#34;</span> : {
-        <span style="color:#f92672">&#34;host&#34;</span>:<span style="color:#e6db74">&#34;10.0.0.42&#34;</span>,
-        <span style="color:#f92672">&#34;port&#34;</span>:<span style="color:#ae81ff">1883</span>,
-        <span style="color:#f92672">&#34;client_id&#34;</span>:<span style="color:#e6db74">&#34;esp_firebeetle_1&#34;</span>
-    },
-    <span style="color:#f92672">&#34;base_topic&#34;</span>:<span style="color:#e6db74">&#34;esp/firebeetle_1&#34;</span>,
-    <span style="color:#f92672">&#34;deep_sleep_sec&#34;</span>:<span style="color:#ae81ff">10</span>
-}
-</code></pre></div><h2 id="main">
-  Main
-  <a class="anchor" href="#main">#</a>
-</h2>
-<details >
-  <summary>main.cpp</summary>
-  <div class="markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;Arduino.h&#34;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;WiFi.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ArduinoJson.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;freertos/FreeRTOS.h&#34;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;WiFi.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;MQTT.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;esp_wifi.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;json_file.h&#34;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;battery.h&#34;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;wifi_secret.h&#34;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-DynamicJsonDocument <span style="color:#a6e22e">config</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">*</span><span style="color:#ae81ff">1024</span>);<span style="color:#75715e">//5 KB
-</span><span style="color:#75715e"></span>MQTTClient <span style="color:#a6e22e">mqtt</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">*</span><span style="color:#ae81ff">1024</span>);<span style="color:#75715e">// 1KB for small messages
-</span><span style="color:#75715e"></span>WiFiClient wifi;<span style="color:#75715e">//needed to stay on global scope
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
 
-  Serial.begin(<span style="color:#ae81ff">115200</span>);
-  <span style="color:#66d9ef">uint32_t</span> vref <span style="color:#f92672">=</span> bat_init();
-  Serial.printf(<span style="color:#e6db74">&#34;eFuse Vref:%u mV</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, vref);
-  <span style="color:#66d9ef">float</span> battery_f <span style="color:#f92672">=</span> bat_get_voltage();
-  battery_f <span style="color:#f92672">/=</span><span style="color:#ae81ff">1000</span>;
 
-  pinMode(LED_BUILTIN, OUTPUT);
-  blink(<span style="color:#ae81ff">100</span>);
-  WiFi.begin(ssid, password);
-  load_config(config,true);
-  timelog(<span style="color:#e6db74">&#34;config loaded&#34;</span>);
+  
+  
+  
+  <details>
+    <summary>
+Is the DWM3001 compatible with the previous generation DWM1001 ?
+</summary>
+    <div class="markdown-inner">
+      Yes, but only when using channel 5, which might requires specific calibration. Programs designed for channel 9 cannot be directly reused on channel 5.
+    </div>
+  </details>
 
-  <span style="color:#66d9ef">if</span>(connect()){
-    mqtt_publish_status(battery_f);    timelog(<span style="color:#e6db74">&#34;=&gt;status&#34;</span>);
-    mqtt.loop();
+  
+  
+  
+  <details>
+    <summary>
+What is PDoA:Phase Difference of Arrival how does it compare to TDoA:Time Difference of Arrival ?
+</summary>
+    <div class="markdown-inner">
+      PDoA is more precise than TDoA when differentiating anchors close to each other, but as soon as they&rsquo;re far enough it becomes ambiguous so TDoA and PDoA can be used as complementary to each other.
+    </div>
+  </details>
+
+  
+  
+  
+  <details>
+    <summary>
+Can the DWM3001 act as a TDoA anchor ? (not answered)
+</summary>
+    <div class="markdown-inner">
+      TBC
+    </div>
+  </details>
+
+  
+  
+  
+  <details>
+    <summary>
+What is the difference between `IEEE 802.15.4z` and `IEEE 802.15.4-2011 UWB` ? (not answered)
+</summary>
+    <div class="markdown-inner">
+      TBC
+    </div>
+  </details>
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+    
+    
+      
+      
+      
+      
+      
+      {
+        "@type": "Question",
+        "name": "Is the DWM3001 compatible with the previous generation DWM1001 ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, but only when using channel 5, which might requires specific calibration. Programs designed for channel 9 cannot be directly reused on channel 5."
+        }
+      }
+    
+    
+      
+      
+      
+      
+      
+      ,{
+        "@type": "Question",
+        "name": "What is PDoA:Phase Difference of Arrival how does it compare to TDoA:Time Difference of Arrival ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PDoA is more precise than TDoA when differentiating anchors close to each other, but as soon as they\u0026rsquo;re far enough it becomes ambiguous so TDoA and PDoA can be used as complementary to each other."
+        }
+      }
+    
+      
+      
+      
+      
+      
+      ,{
+        "@type": "Question",
+        "name": "Can the DWM3001 act as a TDoA anchor ? (not answered)",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TBC"
+        }
+      }
+    
+      
+      
+      
+      
+      
+      ,{
+        "@type": "Question",
+        "name": "What is the difference between `IEEE 802.15.4z` and `IEEE 802.15.4-2011 UWB` ? (not answered)",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TBC"
+        }
+      }
+    
+    ]
   }
-
-  Serial.println(<span style="color:#e6db74">&#34;ESP going to deep sleep&#34;</span>);
-  Serial.flush();
-  blink(<span style="color:#ae81ff">100</span>);
-
-  esp_wifi_stop();
-  <span style="color:#66d9ef">uint32_t</span> deep_sleep_sec <span style="color:#f92672">=</span> config[<span style="color:#e6db74">&#34;deep_sleep_sec&#34;</span>];
-  esp_deep_sleep(deep_sleep_sec<span style="color:#f92672">*</span><span style="color:#ae81ff">1000000</span>);
-  esp_deep_sleep_start();
-
-}
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
-  <span style="color:#75715e">//no loop
-</span><span style="color:#75715e"></span>}
-
-</code></pre></div>
-  </div>
-</details>
-
-<details >
-  <summary>Build info...</summary>
-  <div class="markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">PACKAGES:
- - framework-arduinoespressif32 3.10004.201016 <span style="color:#f92672">(</span>1.0.4<span style="color:#f92672">)</span>
- - tool-esptoolpy 1.30000.201119 <span style="color:#f92672">(</span>3.0.0<span style="color:#f92672">)</span>
- - toolchain-xtensa32 2.50200.80 <span style="color:#f92672">(</span>5.2.0<span style="color:#f92672">)</span>
- ...
- Dependency Graph
-|-- &lt;WiFi&gt; 1.0
-|-- &lt;ArduinoJson&gt; 6.16.1
-|-- &lt;MQTT&gt; 2.4.7        
-|-- &lt;FS&gt; 1.0
-|-- &lt;SPIFFS&gt; 1.0        
-|   |-- &lt;FS&gt; 1.0   
-</code></pre></div>
-  </div>
-</details>
-
-<details >
-  <summary>Platformio ini file ...</summary>
-  <div class="markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[env]</span>
-<span style="color:#a6e22e">board</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">firebeetle32</span>
-<span style="color:#a6e22e">framework</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">arduino</span>
-<span style="color:#a6e22e">lib_deps</span> <span style="color:#f92672">=</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">    WiFi
-</span><span style="color:#e6db74">    ArduinoJson@6.16.1
-</span><span style="color:#e6db74">    617@2.4.7   #MQTT 256dpi/arduino-mqtt</span>
-<span style="color:#a6e22e">lib_ldf_mode</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">deep+</span>
-<span style="color:#66d9ef">[env:firebeetle32]</span>
-<span style="color:#a6e22e">platform</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">espressif32</span>
-<span style="color:#a6e22e">monitor_speed</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">115200</span>
-</code></pre></div>
-  </div>
-</details>
+</script>
 
 </article>
  
@@ -1534,20 +1534,13 @@ DynamicJsonDocument <span style="color:#a6e22e">config</span>(<span style="color
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#overview">Overview</a>
+    <li><a href="#development-board">Development Board</a>
       <ul>
-        <li><a href="#pins">PINS</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#links">Links</a></li>
-        <li><a href="#related-products">Related products</a></li>
+        <li><a href="#dwm3001c-module">DWM3001C Module</a></li>
+        <li><a href="#dw3110-transciever">DW3110 Transciever</a></li>
       </ul>
     </li>
-    <li><a href="#applications">Applications</a>
-      <ul>
-        <li><a href="#config">Config</a></li>
-        <li><a href="#main">Main</a></li>
-      </ul>
-    </li>
+    <li><a href="#faq---discussion">FAQ - Discussion</a></li>
   </ul>
 </nav>
 

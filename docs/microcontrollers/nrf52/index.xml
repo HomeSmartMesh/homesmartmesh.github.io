@@ -26,6 +26,15 @@
     </item>
     
     <item>
+      <title>UWB DWM3001 cdk</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm3001_cdk/</link>
+      <pubDate>Sat, 08 May 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm3001_cdk/</guid>
+      <description>Networks / Ultra Wide Band RTLSDevelopment Board#product page DWM3001C Module STM32 as J-Link OB debugger x2 micro USB for nRF Data and J-Link Program/serial battery conenctor Raspberry PI Header connector User Leds and buttons  DWM3001C Module#product page DW3110 Transciever nRF52833 Thread, Zigbee and Bluetooth (Mesh, Direction finding) IMU : Inertial Motion Unit TWR and TDoA : Two Way Ranging and Time Difference of Arrival  nRF52833DW3110 Transciever#product page 2 RF bands : channel 5 (6.</description>
+    </item>
+    
+    <item>
       <title>Simple Mesh SensorTag</title>
       <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</link>
       <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>

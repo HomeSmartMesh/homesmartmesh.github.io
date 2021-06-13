@@ -110,13 +110,22 @@ Final application#This repository has boilerplates samples. A real use case e
     </item>
     
     <item>
+      <title>UWB DWM3001 cdk</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm3001_cdk/</link>
+      <pubDate>Sat, 08 May 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm3001_cdk/</guid>
+      <description>Networks / Ultra Wide Band RTLSDevelopment Board#product page DWM3001C Module STM32 as J-Link OB debugger x2 micro USB for nRF Data and J-Link Program/serial battery conenctor Raspberry PI Header connector User Leds and buttons  DWM3001C Module#product page DW3110 Transciever nRF52833 Thread, Zigbee and Bluetooth (Mesh, Direction finding) IMU : Inertial Motion Unit TWR and TDoA : Two Way Ranging and Time Difference of Arrival  nRF52833DW3110 Transciever#product page 2 RF bands : channel 5 (6.</description>
+    </item>
+    
+    <item>
       <title>Ultra Wide Band</title>
       <link>https://www.homesmartmesh.com/docs/networks/ultrawideband/</link>
       <pubDate>Thu, 06 May 2021 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/networks/ultrawideband/</guid>
-      <description>Microcontrollers / nRF52 / UWB DWM1001 devAn Ultra-Wide-Band networks can form a mesh network, in addition, the main feature is the Real-Time-Locating-System capability.
-Real Time Locating System# DRTLS : DWM1001 Two-Way-Ranging RTLS RTLS : Real Time Locating System PANS : Positioning and Netowrking Stack eCos : Free Open source Real-Time Operating-System  Decawave provides a ready to use localisation system based on a preflashed DWM1001_PANS_R2.</description>
+      <description>Microcontrollers / nRF52 / UWB DWM3001 cdkMicrocontrollers / nRF52 / UWB DWM1001 devAn Ultra-Wide-Band networks can form a mesh network, in addition, the main feature is the RTLS: Real-Time-Locating-System capability.
+RTLS Gen 2#Microcontrollers / nRF52 / UWB DWM3001 cdk DW3000 IC family IEEE 802.15.4z, IEEE802.15.4-2015 UWB,&amp;hellip; using nRF52833 as host capable of Thread and Bluetooth Mesh and Direction finding  RTLS Gen 1# DRTLS : DWM1001 Two-Way-Ranging RTLS RTLS : Real Time Locating System PANS : Positioning and Netowrking Stack eCos : Free Open source Real-Time Operating-System  Decawave provides a ready to use localisation system based on a preflashed DWM1001_PANS_R2.</description>
     </item>
     
     <item>

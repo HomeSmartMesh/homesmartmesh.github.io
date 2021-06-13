@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.4ad4f7037ac4eb98faaa21fa080574d4aacf30c18f2b4c530baae294e837fb25.js" integrity="sha256-StT3A3rE65j6qiH6CAV01KrPMMGPK0xTC6rilOg3&#43;yU="></script>
+<script defer src="/en.search.min.1a6457ca085023051f0ae2bc17ae854bfa3d94723a7ed70fc4bcfb6d1b12664b.js" integrity="sha256-GmRXyghQIwUfCuK8F66FS/o9lHI6ftcPxLz7bRsSZks="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -462,6 +462,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm1001_dev/" class="">UWB DWM1001 dev</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm3001_cdk/" class="">UWB DWM3001 cdk</a>
   
 
         </li>
@@ -943,10 +956,14 @@ https://github.com/alex-shpak/hugo-book
         </li>
         <li><a href="#bme280-vs-ms8607">BME280 vs MS8607</a>
           <ul>
-            <li><a href="#light">light</a></li>
             <li><a href="#temperature">temperature</a></li>
             <li><a href="#humidity">humidity</a></li>
             <li><a href="#pressure">pressure</a></li>
+          </ul>
+        </li>
+        <li><a href="#max44009-vs-veml6030">MAX44009 vs VEML6030</a>
+          <ul>
+            <li><a href="#light">light</a></li>
           </ul>
         </li>
       </ul>
@@ -1667,43 +1684,6 @@ https://github.com/alex-shpak/hugo-book
 <li><code>Thread sensortag</code> is sampling every 3 sec while <code>nRF52832 sensortag</code> every 40 sec</li>
 <li><code>Thread sensortag</code> has no case while <code>nRF52832 sensortag</code> is inside a PLA case</li>
 </ul>
-<h3 id="light">
-  light
-  <a class="anchor" href="#light">#</a>
-</h3>
-<p>
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img">
-      <img itemprop="thumbnail" src="/images/nrf52832_sensortag/light.png" />
-    </div>
-    <a href="/images/nrf52832_sensortag/light.png" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img">
-      <img itemprop="thumbnail" src="/images/nrf52832_sensortag/light_day.png" />
-    </div>
-    <a href="/images/nrf52832_sensortag/light_day.png" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img">
-      <img itemprop="thumbnail" src="/images/nrf52832_sensortag/light_hour.png" />
-    </div>
-    <a href="/images/nrf52832_sensortag/light_hour.png" itemprop="contentUrl"></a>
-  </figure>
-</div>
-</p>
 <h3 id="temperature">
   temperature
   <a class="anchor" href="#temperature">#</a>
@@ -1771,6 +1751,50 @@ https://github.com/alex-shpak/hugo-book
   </figure>
 </div>
 
+<h2 id="max44009-vs-veml6030">
+  MAX44009 vs VEML6030
+  <a class="anchor" href="#max44009-vs-veml6030">#</a>
+</h2>
+<ul>
+<li><code>Thread sensortag</code> is using VEML6030 and <code>nRF52832 sensortag</code> is using MAX44009</li>
+</ul>
+<h3 id="light">
+  light
+  <a class="anchor" href="#light">#</a>
+</h3>
+<p>
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/nrf52832_sensortag/light.png" />
+    </div>
+    <a href="/images/nrf52832_sensortag/light.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/nrf52832_sensortag/light_day.png" />
+    </div>
+    <a href="/images/nrf52832_sensortag/light_day.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/nrf52832_sensortag/light_hour.png" />
+    </div>
+    <a href="/images/nrf52832_sensortag/light_hour.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+</p>
 </article>
  
       
@@ -1836,10 +1860,14 @@ https://github.com/alex-shpak/hugo-book
         </li>
         <li><a href="#bme280-vs-ms8607">BME280 vs MS8607</a>
           <ul>
-            <li><a href="#light">light</a></li>
             <li><a href="#temperature">temperature</a></li>
             <li><a href="#humidity">humidity</a></li>
             <li><a href="#pressure">pressure</a></li>
+          </ul>
+        </li>
+        <li><a href="#max44009-vs-veml6030">MAX44009 vs VEML6030</a>
+          <ul>
+            <li><a href="#light">light</a></li>
           </ul>
         </li>
       </ul>
