@@ -13,7 +13,7 @@
   </url>
   
   <url>
-    <loc>https://www.homesmartmesh.com/docs/3dprinting/light/</loc>
+    <loc>https://www.homesmartmesh.com/docs/3dprinting/kayak_trailer/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -93,7 +93,7 @@
   </url>
   
   <url>
-    <loc>https://www.homesmartmesh.com/docs/3dprinting/light_socket/</loc>
+    <loc>https://www.homesmartmesh.com/docs/3dprinting/light/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -127,7 +127,7 @@
   </url>
   
   <url>
-    <loc>https://www.homesmartmesh.com/docs/3dprinting/esp32_remote/</loc>
+    <loc>https://www.homesmartmesh.com/docs/3dprinting/light_socket/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -166,7 +166,7 @@
   </url>
   
   <url>
-    <loc>https://www.homesmartmesh.com/docs/3dprinting/handbag_hanger/</loc>
+    <loc>https://www.homesmartmesh.com/docs/3dprinting/esp32_remote/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -191,18 +191,8 @@
   </url>
   
   <url>
-    <loc>https://www.homesmartmesh.com/docs/3dprinting/under_desk_shelf/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.homesmartmesh.com/docs/frameworks/upython/</loc>
     <lastmod>2021-04-03T08:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.homesmartmesh.com/docs/3dprinting/house/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -216,7 +206,7 @@
   </url>
   
   <url>
-    <loc>https://www.homesmartmesh.com/docs/3dprinting/voronoi/</loc>
+    <loc>https://www.homesmartmesh.com/docs/3dprinting/handbag_hanger/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -231,8 +221,18 @@
   </url>
   
   <url>
+    <loc>https://www.homesmartmesh.com/docs/3dprinting/under_desk_shelf/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.homesmartmesh.com/docs/microcontrollers/esp32/fisheye-cam-ov36/</loc>
     <lastmod>2020-12-26T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.homesmartmesh.com/docs/3dprinting/house/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -263,6 +263,11 @@
   <url>
     <loc>https://www.homesmartmesh.com/docs/microcontrollers/esp32/esp-now/</loc>
     <lastmod>2021-03-08T08:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.homesmartmesh.com/docs/3dprinting/voronoi/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>

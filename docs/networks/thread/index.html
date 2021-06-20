@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.7d76d859908123f67237b248c123c56c46f0c138d2fcf99588eea35728533c1d.js" integrity="sha256-fXbYWZCBI/ZyN7JIwSPFbEbwwTjS/PmViO6jVyhTPB0="></script>
+<script defer src="/en.search.min.9c36733ed5e90d8ccdde08575c22d0e6a0e6883f23b3977774280fa93a9b9aa9.js" integrity="sha256-nDZzPtXpDYzN3ghXXCLQ5qDmiD8js5d3dCgPqTqbmqk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -699,6 +699,19 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://www.homesmartmesh.com/docs/3dprinting/kayak_trailer/" class="">Kayak Trailer</a>
+  
+
+        </li>
+      
     
       
         <li>
@@ -2036,11 +2049,11 @@ These services should now be available :</p>
 ./script/bootstrap
 ./bootstrap
 sudo rm -rf build/
-./script/build nrf52840 USB_trans  -DOT_THREAD_VERSION<span style="color:#f92672">=</span>1.2
+./script/build nrf52840 USB_trans -DOT_COMMISSIONER<span style="color:#f92672">=</span>ON -DOT_THREAD_VERSION<span style="color:#f92672">=</span>1.2
 cd build/bin/
-arm-none-eabi-objcopy -O ihex ot-rcp ot-rcp.hex
+arm-none-eabi-objcopy -O ihex ot-rcp ot-rcp-com-1.2.hex
 nrfjprog -f nrf52 --eraseall
-nrfjprog -f nrf52 --chiperase --program ot-rcp.hex --reset
+nrfjprog -f nrf52 --chiperase --program ot-rcp-com-1.2.hex --reset
 </code></pre></div>
 <div class="container">
     <div class="row">
