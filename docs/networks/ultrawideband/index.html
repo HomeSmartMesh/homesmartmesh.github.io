@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.9c36733ed5e90d8ccdde08575c22d0e6a0e6883f23b3977774280fa93a9b9aa9.js" integrity="sha256-nDZzPtXpDYzN3ghXXCLQ5qDmiD8js5d3dCgPqTqbmqk="></script>
+<script defer src="/en.search.min.f886eb132289eaf061ba6cd95c6373fcfb74c8aaaebae7c9e78067eaf77e2216.js" integrity="sha256-&#43;IbrEyKJ6vBhumzZXGNz/Pt0yKquuufJ54Bn6vd&#43;IhY="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -949,6 +949,7 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#github-mynewt">Github mynewt</a></li>
             <li><a href="#zephyr-official">Zephyr Official</a></li>
             <li><a href="#zephyr-community">Zephyr Community</a></li>
+            <li><a href="#zephyr-mesh-positioning">Zephyr Mesh Positioning</a></li>
             <li><a href="#arduino">Arduino</a></li>
           </ul>
         </li>
@@ -977,7 +978,68 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><p>
+  <article class="markdown">
+
+
+
+  
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="/js/load-photoswipe.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true" id="p_swipe">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<p>
 <div class="container">
     <div class="row">
         <div class="col text-center">
@@ -1506,10 +1568,124 @@ dwm&gt; si
 </blockquote>
 </li>
 </ul>
+<h3 id="zephyr-mesh-positioning">
+  Zephyr Mesh Positioning
+  <a class="anchor" href="#zephyr-mesh-positioning">#</a>
+</h3>
+<p>This framework developed as part of the <code>Home Smart Mesh</code> project is a takeover of the above mentioned <a href="#zephyr-community">Zephyr Community</a> with refactoring introducing c++ and a higher level functional layer called <code>mp</code> for <code>mesh positioning</code> that wraps <code>dwt_</code> functions and adds an nRF52 custom RF mesh networking capability.
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/nRFMesh/sdk-uwb-zephyr"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            sdk-uwb-zephyr
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+usage</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">west init -m https://github.com/nRFMesh/sdk-uwb-zephyr --mr main
+</code></pre></div><ul>
+<li>profiling <code>uwb\samples\twr_initiator</code> and <code>uwb\samples\twr_responder</code></li>
+<li>Debug PIO used <code>[nRF52] P0.13</code> =&gt; <code>M_PIN17</code> =&gt; <code>J7 pin 8</code></li>
+<li>Debug function calls <code>APP_SET;</code> and <code>APP_CLEAR;</code></li>
+</ul>
+
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="box" style="max-width:600px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/uwb/twr_profiling.png" />
+    </div>
+    <a href="/images/uwb/twr_profiling.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<ul>
+<li>in the screenshot below we can profile a Two Way Ranging cycle</li>
+<li>The initiator has two pulses
+<ul>
+<li>
+<ol>
+<li>from first immediate TX until resp RX</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>from intiating the delayed final TX until it is actually transmitted</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>The responder has three pulses
+<ul>
+<li>
+<ol>
+<li>blocked on RX listening until the first poll message is received</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>from initiating the delayed response transmittion including its actual transmission and then waiting till the reception of the final RX</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>does not include RF transaction and is simply to monitor the time it takes to compute the double precision distance computation</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<div class="box" style="max-width:800px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/uwb/twr_init_resp_timing.webp" />
+    </div>
+    <a href="/images/uwb/twr_init_resp_timing.webp" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
 <h3 id="arduino">
   Arduino
   <a class="anchor" href="#arduino">#</a>
 </h3>
+<blockquote class="book-hint danger">
+  Although mentioned for completeness Arduino Framework and libraries are not recommended for production development due to Arduino debug and real time limitations and the unofficial (non-tested / incomplete) character of the available libraries as discussed in the <a href="https://decaforum.decawave.com/t/how-to-read-dws1000-on-arduino-uno/9428/2">Decawave forum</a>
+</blockquote>
+
 
 <div class="container">
     <div class="row">
@@ -2208,6 +2384,7 @@ What does Ultra Wide Band mean for home automation ?
             <li><a href="#github-mynewt">Github mynewt</a></li>
             <li><a href="#zephyr-official">Zephyr Official</a></li>
             <li><a href="#zephyr-community">Zephyr Community</a></li>
+            <li><a href="#zephyr-mesh-positioning">Zephyr Mesh Positioning</a></li>
             <li><a href="#arduino">Arduino</a></li>
           </ul>
         </li>

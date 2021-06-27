@@ -22,8 +22,7 @@
       <pubDate>Thu, 06 May 2021 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/networks/ultrawideband/</guid>
-      <description>Microcontrollers / nRF52 / UWB DWM3001 cdkMicrocontrollers / nRF52 / UWB DWM1001 devAn Ultra-Wide-Band networks can form a mesh network, in addition, the main feature is the RTLS: Real-Time-Locating-System capability.
-RTLS Gen 2#Microcontrollers / nRF52 / UWB DWM3001 cdk DW3000 IC family IEEE 802.15.4z, IEEE802.15.4-2015 UWB,&amp;hellip; using nRF52833 as host capable of Thread and Bluetooth Mesh and Direction finding  RTLS Gen 1# DRTLS : DWM1001 Two-Way-Ranging RTLS RTLS : Real Time Locating System PANS : Positioning and Netowrking Stack eCos : Free Open source Real-Time Operating-System  Decawave provides a ready to use localisation system based on a preflashed DWM1001_PANS_R2.</description>
+      <description>Microcontrollers / nRF52 / UWB DWM3001 cdkMicrocontrollers / nRF52 / UWB DWM1001 devAn Ultra-Wide-Band networks can form a mesh network, in addition, the main feature is the RTLS: Real-Time-Locating-System capability.</description>
     </item>
     
     <item>
