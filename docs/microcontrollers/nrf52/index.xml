@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Trick Tracker</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/trick_tracker/</link>
+      <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/trick_tracker/</guid>
+      <description>Overview#The Trick-Tracker targets any user who is interested in tracking skill and improvement of certain fun sport devices. The Main focus of the first version are bikes but in general it can be used for any sort of sport devices which can be used to do stunts and tricks.</description>
+    </item>
+    
+    <item>
       <title>UWB DWM1001 dev</title>
       <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm1001_dev/</link>
       <pubDate>Sat, 08 May 2021 08:00:00 +0000</pubDate>
