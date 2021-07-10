@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.dfa1ceae5dac1320a2c655bc351a55f2fcd74ec77bede30719b6c7c6e0c19458.js" integrity="sha256-36HOrl2sEyCixlW8NRpV8vzXTsd77eMHGbbHxuDBlFg="></script>
+<script defer src="/en.search.min.d8690694a730f1eee5733f3a7eb16ebc27157bc831d96d4cb015253310bee050.js" integrity="sha256-2GkGlKcw8e7lcz86frFuvCcVe8gx2W1MsBUlMxC&#43;4FA="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -951,6 +951,25 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
+    <li><a href="#mesh-positioning-framework">Mesh Positioning Framework</a>
+      <ul>
+        <li><a href="#nodes-preparation">Nodes Preparation</a>
+          <ul>
+            <li><a href="#twr-nodes">TWR Nodes</a></li>
+            <li><a href="#simpl-mesh-cli-node">Simpl Mesh CLI Node</a></li>
+          </ul>
+        </li>
+        <li><a href="#usage">Usage</a>
+          <ul>
+            <li><a href="#dwt-config">DWT Config</a></li>
+            <li><a href="#twr-command">TWR command</a></li>
+            <li><a href="#diagnosis">Diagnosis</a></li>
+          </ul>
+        </li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#twr-gpio-profiling">TWR GPIO Profiling</a></li>
+      </ul>
+    </li>
     <li><a href="#rtls-gen-2">RTLS Gen 2</a></li>
     <li><a href="#rtls-gen-1">RTLS Gen 1</a>
       <ul>
@@ -963,7 +982,6 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#zephyr-official">Zephyr Official</a></li>
             <li><a href="#zephyr-community">Zephyr Community</a></li>
             <li><a href="#zephyr-with-bluetooth">Zephyr with Bluetooth</a></li>
-            <li><a href="#zephyr-mesh-positioning">Zephyr Mesh Positioning</a></li>
             <li><a href="#arduino">Arduino</a></li>
           </ul>
         </li>
@@ -1092,6 +1110,321 @@ https://github.com/alex-shpak/hugo-book
 </div>
 </p>
 <p>An Ultra-Wide-Band networks can form a mesh network, in addition, the main feature is the RTLS: Real-Time-Locating-System capability.</p>
+<h1 id="mesh-positioning-framework">
+  Mesh Positioning Framework
+  <a class="anchor" href="#mesh-positioning-framework">#</a>
+</h1>
+<p>This framework developed as part of the <code>Home Smart Mesh</code> project is a takeover of the above mentioned <a href="#zephyr-community">Zephyr Community</a> with refactoring introducing c++ and a higher level functional layer called <code>mp</code> for <code>mesh positioning</code> that wraps <code>dwt_</code> functions and adds an nRF52 custom RF mesh networking capability.
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/nRFMesh/sdk-uwb-zephyr"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            sdk-uwb-zephyr
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<blockquote class="book-hint info">
+  Note that Zephyr imported dependencies have been restricted to the needed ones. It is possible to add by editing this <a href="https://github.com/nRFMesh/sdk-uwb-zephyr/blob/cd5dd2f1cc9851bccf66e5bdc4e4d3f7e06920e0/west.yml#L20">west.yml</a> file e.g. all imports with <code>import: true</code>
+</blockquote>
+</p>
+<h2 id="nodes-preparation">
+  Nodes Preparation
+  <a class="anchor" href="#nodes-preparation">#</a>
+</h2>
+<h3 id="twr-nodes">
+  TWR Nodes
+  <a class="anchor" href="#twr-nodes">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">west init -m https://github.com/nRFMesh/sdk-uwb-zephyr --mr main
+cd uwb/samples/06_uwb_node_sm
+west build -b decawave_dwm1001_dev -- -DCONF_FILE<span style="color:#f92672">=</span>prj.conf
+west flash
+west flash --snr <span style="color:#ae81ff">760130093</span>
+west flash --snr <span style="color:#ae81ff">760130128</span>
+</code></pre></div><h3 id="simpl-mesh-cli-node">
+  Simpl Mesh CLI Node
+  <a class="anchor" href="#simpl-mesh-cli-node">#</a>
+</h3>
+<p>The back-channel commands and configuration of uwb modes is based on <code>simplemesh</code>. Both boards are supported by the cli sample <code>nrf52840dongle_nrf52840</code> and <code>decawave_dwm1001_dev</code> but the <code>dwm1001</code> has a better responsible uart console.
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/HomeSmartMesh/sdk-hsm-sensortag"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            sdk-uwb-zephyr
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">west init -m https://github.com/HomeSmartMesh/sdk-hsm-sensortag -mr main
+cd hsm/samples/simplemesh_cli
+west build -b decawave_dwm1001_dev -- -DCONF_FILE<span style="color:#f92672">=</span>prj-dwm.conf
+west flash
+west flash --snr <span style="color:#ae81ff">260103215</span>
+</code></pre></div><h2 id="usage">
+  Usage
+  <a class="anchor" href="#usage">#</a>
+</h2>
+<p>The cli node can take user console input commands, send them through <code>simplemesh</code> network and outputs results coming from the network.</p>
+<h3 id="dwt-config">
+  DWT Config
+  <a class="anchor" href="#dwt-config">#</a>
+</h3>
+<p>request to node with uid, the node responds with the full dwt config</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt;sm/98501ED22B42EB41<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;dwt_config&#34;</span>:<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;chan&#34;</span>:5<span style="color:#f92672">}}</span>
+&gt;sm/98501ED22B42EB41<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;chan&#34;</span>:5,<span style="color:#e6db74">&#34;dataRate&#34;</span>:<span style="color:#e6db74">&#34;DWT_BR_6M8&#34;</span>,<span style="color:#e6db74">&#34;nsSFD&#34;</span>:<span style="color:#e6db74">&#34;NonStandard&#34;</span>,<span style="color:#e6db74">&#34;phrMode&#34;</span>:<span style="color:#e6db74">&#34;DWT_PHRMODE_EXT&#34;</span>,<span style="color:#e6db74">&#34;prf&#34;</span>:<span style="color:#e6db74">&#34;DWT_PRF_64M&#34;</span>,<span style="color:#e6db74">&#34;rxCode&#34;</span>:9,<span style="color:#e6db74">&#34;rxPAC&#34;</span>:<span style="color:#e6db74">&#34;DWT_PAC8&#34;</span>,<span style="color:#e6db74">&#34;sfdTO&#34;</span>:129,<span style="color:#e6db74">&#34;txCode&#34;</span>:9,<span style="color:#e6db74">&#34;txPreambLength&#34;</span>:<span style="color:#e6db74">&#34;DWT_PLEN_128&#34;</span><span style="color:#f92672">}</span>
+</code></pre></div><p>It is also possible to broadcast the config to all nodes with <code>sm{payload}</code> only at heading topic not <code>sm/uid{payload}</code>, in this case both nodes respond with the new full config</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt;sm<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;dwt_config&#34;</span>:<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;chan&#34;</span>:5<span style="color:#f92672">}}</span>
+&gt;sm/E8D81FEE52C283EB<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;chan&#34;</span>:5,<span style="color:#e6db74">&#34;dataRate&#34;</span>:<span style="color:#e6db74">&#34;DWT_BR_6M8&#34;</span>,<span style="color:#e6db74">&#34;nsSFD&#34;</span>:<span style="color:#e6db74">&#34;NonStandard&#34;</span>,<span style="color:#e6db74">&#34;phrMode&#34;</span>:<span style="color:#e6db74">&#34;DWT_PHRMODE_EXT&#34;</span>,<span style="color:#e6db74">&#34;prf&#34;</span>:<span style="color:#e6db74">&#34;DWT_PRF_64M&#34;</span>,<span style="color:#e6db74">&#34;rxCode&#34;</span>:9,<span style="color:#e6db74">&#34;rxPAC&#34;</span>:<span style="color:#e6db74">&#34;DWT_PAC8&#34;</span>,<span style="color:#e6db74">&#34;sfdTO&#34;</span>:129,<span style="color:#e6db74">&#34;txCode&#34;</span>:9,<span style="color:#e6db74">&#34;txPreambLength&#34;</span>:<span style="color:#e6db74">&#34;DWT_PLEN_128&#34;</span><span style="color:#f92672">}</span>
+sm/98501ED22B42EB41<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;chan&#34;</span>:5,<span style="color:#e6db74">&#34;dataRate&#34;</span>:<span style="color:#e6db74">&#34;DWT_BR_6M8&#34;</span>,<span style="color:#e6db74">&#34;nsSFD&#34;</span>:<span style="color:#e6db74">&#34;NonStandard&#34;</span>,<span style="color:#e6db74">&#34;phrMode&#34;</span>:<span style="color:#e6db74">&#34;DWT_PHRMODE_EXT&#34;</span>,<span style="color:#e6db74">&#34;prf&#34;</span>:<span style="color:#e6db74">&#34;DWT_PRF_64M&#34;</span>,<span style="color:#e6db74">&#34;rxCode&#34;</span>:9,<span style="color:#e6db74">&#34;rxPAC&#34;</span>:<span style="color:#e6db74">&#34;DWT_PAC8&#34;</span>,<span style="color:#e6db74">&#34;sfdTO&#34;</span>:129,<span style="color:#e6db74">&#34;txCode&#34;</span>:9,<span style="color:#e6db74">&#34;txPreambLength&#34;</span>:<span style="color:#e6db74">&#34;DWT_PLEN_128&#34;</span><span style="color:#f92672">}</span>
+</code></pre></div><h3 id="twr-command">
+  TWR command
+  <a class="anchor" href="#twr-command">#</a>
+</h3>
+<p>Typing the below command on the shell broadcasts the request to all nodes, and each node identified by its short id, will execute the corresponding twr transaction as <code>initiator</code> or as <code>responder</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt;sm<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;twr_command&#34;</span>:<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;initiator&#34;</span>:0,<span style="color:#e6db74">&#34;responder&#34;</span>:1,<span style="color:#e6db74">&#34;at_ms&#34;</span>:100<span style="color:#f92672">}}</span>
+&gt;sm/E8D81FEE52C283EB<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;at_ms&#34;</span>:100,<span style="color:#e6db74">&#34;initiator&#34;</span>:0,<span style="color:#e6db74">&#34;responder&#34;</span>:1,<span style="color:#e6db74">&#34;result&#34;</span>:<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;range&#34;</span>:<span style="color:#e6db74">&#34;0.211&#34;</span><span style="color:#f92672">}}</span>
+</code></pre></div><details >
+  <summary>full example of cli input and output</summary>
+  <div class="markdown-inner">
+    <p>In this example, every simplemesh node starting reserves a short address. The first node starting checks the existance of a corrdinator by calling <code>node_id_get</code> if no responce is obtained, the node turns into a coordinator and assigns to itself the node id 0. The second node starting requests a node id and obtains the node id 1 from the coordinator. Each starting node broadcasts its dw1000 tranceiver config and its simplemesh node id.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt;node_id_get:98501ED22B42EB41
+node_id_get:98501ED22B42EB41
+node_id_get:98501ED22B42EB41
+sm/98501ED22B42EB41<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;shortid&#34;</span>:0<span style="color:#f92672">}</span>
+sm/98501ED22B42EB41<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;simplemesh&#34;</span>:<span style="color:#e6db74">&#34;started&#34;</span><span style="color:#f92672">}</span>
+sm/98501ED22B42EB41<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;chan&#34;</span>:5,<span style="color:#e6db74">&#34;dataRate&#34;</span>:<span style="color:#e6db74">&#34;DWT_BR_6M8&#34;</span>,<span style="color:#e6db74">&#34;nsSFD&#34;</span>:<span style="color:#e6db74">&#34;NonStandard&#34;</span>,<span style="color:#e6db74">&#34;phrMode&#34;</span>:<span style="color:#e6db74">&#34;DWT_PHRMODE_EXT&#34;</span>,<span style="color:#e6db74">&#34;prf&#34;</span>:<span style="color:#e6db74">&#34;DWT_PRF_64M&#34;</span>,<span style="color:#e6db74">&#34;rxCode&#34;</span>:9,<span style="color:#e6db74">&#34;rxPAC&#34;</span>:<span style="color:#e6db74">&#34;DWT_PAC8&#34;</span>,<span style="color:#e6db74">&#34;sfdTO&#34;</span>:129,<span style="color:#e6db74">&#34;txCode&#34;</span>:9,<span style="color:#e6db74">&#34;txPreambLength&#34;</span>:<span style="color:#e6db74">&#34;DWT_PLEN_128&#34;</span><span style="color:#f92672">}</span>
+node_id_get:E8D81FEE52C283EB
+node_id_set:E8D81FEE52C283EB:01
+sm/E8D81FEE52C283EB<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;simplemesh&#34;</span>:<span style="color:#e6db74">&#34;started&#34;</span><span style="color:#f92672">}</span>
+sm/E8D81FEE52C283EB<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;shortid&#34;</span>:1<span style="color:#f92672">}</span>
+sm/E8D81FEE52C283EB<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;chan&#34;</span>:5,<span style="color:#e6db74">&#34;dataRate&#34;</span>:<span style="color:#e6db74">&#34;DWT_BR_6M8&#34;</span>,<span style="color:#e6db74">&#34;nsSFD&#34;</span>:<span style="color:#e6db74">&#34;NonStandard&#34;</span>,<span style="color:#e6db74">&#34;phrMode&#34;</span>:<span style="color:#e6db74">&#34;DWT_PHRMODE_EXT&#34;</span>,<span style="color:#e6db74">&#34;prf&#34;</span>:<span style="color:#e6db74">&#34;DWT_PRF_64M&#34;</span>,<span style="color:#e6db74">&#34;rxCode&#34;</span>:9,<span style="color:#e6db74">&#34;rxPAC&#34;</span>:<span style="color:#e6db74">&#34;DWT_PAC8&#34;</span>,<span style="color:#e6db74">&#34;sfdTO&#34;</span>:129,<span style="color:#e6db74">&#34;txCode&#34;</span>:9,<span style="color:#e6db74">&#34;txPreambLength&#34;</span>:<span style="color:#e6db74">&#34;DWT_PLEN_128&#34;</span><span style="color:#f92672">}</span>
+
+&gt;sm<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;twr_command&#34;</span>:<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;initiator&#34;</span>:0,<span style="color:#e6db74">&#34;responder&#34;</span>:1,<span style="color:#e6db74">&#34;at_ms&#34;</span>:100<span style="color:#f92672">}}</span>
+&gt;sm/E8D81FEE52C283EB<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;at_ms&#34;</span>:100,<span style="color:#e6db74">&#34;initiator&#34;</span>:0,<span style="color:#e6db74">&#34;responder&#34;</span>:1,<span style="color:#e6db74">&#34;result&#34;</span>:<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;range&#34;</span>:<span style="color:#e6db74">&#34;0.211&#34;</span><span style="color:#f92672">}}</span>
+sm<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;twr_command&#34;</span>:<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;initiator&#34;</span>:0,<span style="color:#e6db74">&#34;responder&#34;</span>:1,<span style="color:#e6db74">&#34;at_ms&#34;</span>:100<span style="color:#f92672">}}</span>
+&gt;sm/E8D81FEE52C283EB<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;at_ms&#34;</span>:100,<span style="color:#e6db74">&#34;initiator&#34;</span>:0,<span style="color:#e6db74">&#34;responder&#34;</span>:1,<span style="color:#e6db74">&#34;result&#34;</span>:<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;range&#34;</span>:<span style="color:#e6db74">&#34;0.220&#34;</span><span style="color:#f92672">}}</span>
+</code></pre></div>
+  </div>
+</details>
+
+<h3 id="diagnosis">
+  Diagnosis
+  <a class="anchor" href="#diagnosis">#</a>
+</h3>
+<ul>
+<li><code>ping</code> command and response. The goal is to evaluate the link between the cli and one uid node :
+<ul>
+<li><code>rssi</code> 51 =&gt; -51 bBm</li>
+<li>time in os ticks where 1 ms = 32 ticks</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt;sm/1CF6567337562176<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;rf_diag&#34;</span>:<span style="color:#e6db74">&#34;ping&#34;</span><span style="color:#f92672">}</span>
+&gt;sm/1CF6567337562176<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;rf_diag&#34;</span>:<span style="color:#e6db74">&#34;pong&#34;</span>,<span style="color:#e6db74">&#34;rssi&#34;</span>:51,<span style="color:#e6db74">&#34;time&#34;</span>:197086<span style="color:#f92672">}</span>
+</code></pre></div><ul>
+<li><code>ping_target</code> command and responses. The goal is to evaluate the link between two uid nodes :
+<ol>
+<li>the user pastes and broadcasts the command from the cli on the pinger uid <code>1CF6567337562176</code> topic</li>
+<li>the pinger node <code>1CF6567337562176</code> recognises itself and broadcasts a <code>ping</code> command on the target uid <code>CBC216DC164B1DE8</code> topic</li>
+<li>the pinger provides a response where <code>rssi</code> and <code>time</code> relate to the cli -&gt; pinger rx message</li>
+<li>The target of the <code>ping</code> request (2.) (<code>CBC216DC164B1DE8</code>) broadcasts a <code>pong</code> response where <code>rssi</code> and <code>time</code> relate to the ping rx message (<code>1CF6567337562176</code> -&gt; <code>CBC216DC164B1DE8</code>)</li>
+</ol>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">1. &gt;sm/1CF6567337562176<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;rf_diag&#34;</span>:<span style="color:#e6db74">&#34;target_ping&#34;</span>,<span style="color:#e6db74">&#34;target&#34;</span>:<span style="color:#e6db74">&#34;CBC216DC164B1DE8&#34;</span><span style="color:#f92672">}</span>
+2. &gt;sm/CBC216DC164B1DE8<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;rf_diag&#34;</span>:<span style="color:#e6db74">&#34;ping&#34;</span><span style="color:#f92672">}</span>
+3. sm/1CF6567337562176<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;rf_diag&#34;</span>:<span style="color:#e6db74">&#34;pinger&#34;</span>,<span style="color:#e6db74">&#34;rssi&#34;</span>:52,<span style="color:#e6db74">&#34;time&#34;</span>:4200857<span style="color:#f92672">}</span>
+4. sm/CBC216DC164B1DE8<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;rf_diag&#34;</span>:<span style="color:#e6db74">&#34;pong&#34;</span>,<span style="color:#e6db74">&#34;rssi&#34;</span>:41,<span style="color:#e6db74">&#34;time&#34;</span>:3898403<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="features">
+  Features
+  <a class="anchor" href="#features">#</a>
+</h2>
+<ul>
+<li>Using west with a connected zephyr version dependency and a deca driver integration that can be enabled with the flag <code>CONFIG_DW1000=y</code></li>
+<li>using the already available board in Zephyr <code>decawave_dwm1001_dev</code> instead of the locally declared board <code>nrf52_dwm1001</code></li>
+<li>adding custom mesh network functionality. The issue is that testing UWB should have another independent communication and configuration channel. Normal Bluetooth cannot cover a big network so a mesh is needed. nRF52832 do not support openthread and Bluetooth Mesh is a big overhead compared to the <a href="https://github.com/HomeSmartMesh/sdk-hsm-sensortag">simplemesh</a></li>
+<li>adding a higher level API to greatly simplify TWR applications and others by eliminating redundant blocks in the code and fitting the whole ranging sequence on a single screen function, the new API MP as <code>meshpositioning</code> includes <code>mp_receive()</code> that is overloaded with the structure type intended to be received, <code>mp_request()</code> when sending a struct and expecting a response . Also for when initiating a delayed transmission either expecting a response <code>mp_request_at()</code> or not <code>mp_send_at()</code></li>
+<li>support for C++17 and standard library e.g. string, list, map. Now before the C / C++ skepticism takes over, please consider that C++ shall not be used in a real time system without knowing how C++ works. e.g. bad C++ is adding constructor without knowing when where are resources allocated. good C++ is using typed enums, any compile time typing verifications and dead simple iteration loops.</li>
+<li>using <a href="https://github.com/nlohmann/json">nlohmann/json</a> JSON for Modern C++ for remote procedure call e.g. an uwb listener has an MQTT interface where an app throws a json config sent over simplemesh to use with dwt_configure()
+verbose target log for status register thanks to a simple map flag to string</li>
+</ul>
+<h2 id="twr-gpio-profiling">
+  TWR GPIO Profiling
+  <a class="anchor" href="#twr-gpio-profiling">#</a>
+</h2>
+<ul>
+<li>samples used <code>uwb\samples\twr_initiator</code> and <code>uwb\samples\twr_responder</code></li>
+<li>Debug PIO used <code>[nRF52] P0.13</code> =&gt; <code>M_PIN17</code> =&gt; <code>J7 pin 8</code></li>
+<li>Debug function calls <code>APP_SET;</code> and <code>APP_CLEAR;</code></li>
+</ul>
+
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="box" style="max-width:600px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/uwb/twr_profiling.png" />
+    </div>
+    <a href="/images/uwb/twr_profiling.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<ul>
+<li>in the screenshot below we can profile a Two Way Ranging cycle</li>
+<li>The initiator has two pulses
+<ul>
+<li>
+<ol>
+<li>from first immediate TX until resp RX</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>from intiating the delayed final TX until it is actually transmitted</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>The responder has three pulses
+<ul>
+<li>
+<ol>
+<li>blocked on RX listening until the first poll message is received</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>from initiating the delayed response transmittion including its actual transmission and then waiting till the reception of the final RX</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>does not include RF transaction and is simply to monitor the time it takes to compute the double precision distance computation</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<p>
+
+<div class="box" style="max-width:800px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/uwb/twr_init_resp_timing.webp" />
+    </div>
+    <a href="/images/uwb/twr_init_resp_timing.webp" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+the screenshot was made from the below commit which is a separate branch not including functional refactoring although the main line refactoring showed similar timings
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/nRFMesh/sdk-uwb-zephyr/commit/28bb91069e5c51336cb47bf0d38d4b5f21947ed9"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            branch twr_functional 28bb910
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+</p>
 <h1 id="rtls-gen-2">
   RTLS Gen 2
   <a class="anchor" href="#rtls-gen-2">#</a>
@@ -1640,176 +1973,6 @@ dwm&gt; si
     </div>
 </div>
 
-<h3 id="zephyr-mesh-positioning">
-  Zephyr Mesh Positioning
-  <a class="anchor" href="#zephyr-mesh-positioning">#</a>
-</h3>
-<p>This framework developed as part of the <code>Home Smart Mesh</code> project is a takeover of the above mentioned <a href="#zephyr-community">Zephyr Community</a> with refactoring introducing c++ and a higher level functional layer called <code>mp</code> for <code>mesh positioning</code> that wraps <code>dwt_</code> functions and adds an nRF52 custom RF mesh networking capability.
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/nRFMesh/sdk-uwb-zephyr"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            sdk-uwb-zephyr
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-                
-
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-</p>
-<p>usage</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">west init -m https://github.com/nRFMesh/sdk-uwb-zephyr --mr main
-</code></pre></div><p><blockquote class="book-hint info">
-  Note that Zephyr imported dependencies have been restricted to the needed ones. It is possible to add by editing this <a href="https://github.com/nRFMesh/sdk-uwb-zephyr/blob/cd5dd2f1cc9851bccf66e5bdc4e4d3f7e06920e0/west.yml#L20">west.yml</a> file e.g. all imports with <code>import: true</code>
-</blockquote>
-
-Features</p>
-<ul>
-<li>Using west with a connected zephyr version dependency and a deca driver integration that can be enabled with the flag <code>CONFIG_DW1000=y</code></li>
-<li>using the already available board in Zephyr <code>decawave_dwm1001_dev</code> instead of the locally declared board <code>nrf52_dwm1001</code></li>
-<li>adding custom mesh network functionality. The issue is that testing UWB should have another independent communication and configuration channel. Normal Bluetooth cannot cover a big network so a mesh is needed. nRF52832 do not support openthread and Bluetooth Mesh is a big overhead compared to the <a href="https://github.com/HomeSmartMesh/sdk-hsm-sensortag">simplemesh</a></li>
-<li>adding a higher level API to greatly simplify TWR applications and others by eliminating redundant blocks in the code and fitting the whole ranging sequence on a single screen function, the new API MP as <code>meshpositioning</code> includes <code>mp_receive()</code> that is overloaded with the structure type intended to be received, <code>mp_request()</code> when sending a struct and expecting a response . Also for when initiating a delayed transmission either expecting a response <code>mp_request_at()</code> or not <code>mp_send_at()</code></li>
-<li>support for C++17 and standard library e.g. string, list, map. Now before the C / C++ skepticism takes over, please consider that C++ shall not be used in a real time system without knowing how C++ works. e.g. bad C++ is adding constructor without knowing when where are resources allocated. good C++ is using typed enums, any compile time typing verifications and dead simple iteration loops.</li>
-<li>using <a href="https://github.com/nlohmann/json">nlohmann/json</a> JSON for Modern C++ for remote procedure call e.g. an uwb listener has an MQTT interface where an app throws a json config sent over simplemesh to use with dwt_configure()
-verbose target log for status register thanks to a simple map flag to string</li>
-</ul>
-<p>TWR GPIO Profiling</p>
-<ul>
-<li>samples used <code>uwb\samples\twr_initiator</code> and <code>uwb\samples\twr_responder</code></li>
-<li>Debug PIO used <code>[nRF52] P0.13</code> =&gt; <code>M_PIN17</code> =&gt; <code>J7 pin 8</code></li>
-<li>Debug function calls <code>APP_SET;</code> and <code>APP_CLEAR;</code></li>
-</ul>
-
-<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
-<div class="box" style="max-width:600px">
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img">
-      <img itemprop="thumbnail" src="/images/uwb/twr_profiling.png" />
-    </div>
-    <a href="/images/uwb/twr_profiling.png" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-<ul>
-<li>in the screenshot below we can profile a Two Way Ranging cycle</li>
-<li>The initiator has two pulses
-<ul>
-<li>
-<ol>
-<li>from first immediate TX until resp RX</li>
-</ol>
-</li>
-<li>
-<ol start="2">
-<li>from intiating the delayed final TX until it is actually transmitted</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>The responder has three pulses
-<ul>
-<li>
-<ol>
-<li>blocked on RX listening until the first poll message is received</li>
-</ol>
-</li>
-<li>
-<ol start="2">
-<li>from initiating the delayed response transmittion including its actual transmission and then waiting till the reception of the final RX</li>
-</ol>
-</li>
-<li>
-<ol start="3">
-<li>does not include RF transaction and is simply to monitor the time it takes to compute the double precision distance computation</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-<p>
-
-<div class="box" style="max-width:800px">
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img">
-      <img itemprop="thumbnail" src="/images/uwb/twr_init_resp_timing.webp" />
-    </div>
-    <a href="/images/uwb/twr_init_resp_timing.webp" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-the screenshot was made from the below commit which is a separate branch not including functional refactoring although the main line refactoring showed similar timings
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/nRFMesh/sdk-uwb-zephyr/commit/28bb91069e5c51336cb47bf0d38d4b5f21947ed9"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            branch twr_functional 28bb910
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-                
-
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-</p>
 <h3 id="arduino">
   Arduino
   <a class="anchor" href="#arduino">#</a>
@@ -2575,6 +2738,25 @@ What does Ultra Wide Band mean for home automation ?
       
   <nav id="TableOfContents">
   <ul>
+    <li><a href="#mesh-positioning-framework">Mesh Positioning Framework</a>
+      <ul>
+        <li><a href="#nodes-preparation">Nodes Preparation</a>
+          <ul>
+            <li><a href="#twr-nodes">TWR Nodes</a></li>
+            <li><a href="#simpl-mesh-cli-node">Simpl Mesh CLI Node</a></li>
+          </ul>
+        </li>
+        <li><a href="#usage">Usage</a>
+          <ul>
+            <li><a href="#dwt-config">DWT Config</a></li>
+            <li><a href="#twr-command">TWR command</a></li>
+            <li><a href="#diagnosis">Diagnosis</a></li>
+          </ul>
+        </li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#twr-gpio-profiling">TWR GPIO Profiling</a></li>
+      </ul>
+    </li>
     <li><a href="#rtls-gen-2">RTLS Gen 2</a></li>
     <li><a href="#rtls-gen-1">RTLS Gen 1</a>
       <ul>
@@ -2587,7 +2769,6 @@ What does Ultra Wide Band mean for home automation ?
             <li><a href="#zephyr-official">Zephyr Official</a></li>
             <li><a href="#zephyr-community">Zephyr Community</a></li>
             <li><a href="#zephyr-with-bluetooth">Zephyr with Bluetooth</a></li>
-            <li><a href="#zephyr-mesh-positioning">Zephyr Mesh Positioning</a></li>
             <li><a href="#arduino">Arduino</a></li>
           </ul>
         </li>
