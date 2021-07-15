@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.9d7f12a86e606bf6b7c0da548eec45d7cb82d4a1504fa996bd2e66a1873f1ede.js" integrity="sha256-nX8SqG5ga/a3wNpUjuxF18uC1KFQT6mWvS5moYc/Ht4="></script>
+<script defer src="/en.search.min.53eb1f9286ecd18b38f2a2be8011ad7bc41223c18993eac6f6699475f3da0254.js" integrity="sha256-U&#43;sfkobs0Ys48qK&#43;gBGte8QSI8GJk&#43;rG9mmUdfPaAlQ="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1282,7 +1282,8 @@ sm<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;twr_comma
 </ul>
 <p>Request:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sm<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;twr&#34;</span>,<span style="color:#e6db74">&#34;initiator&#34;</span>:4,<span style="color:#e6db74">&#34;responders&#34;</span>:<span style="color:#f92672">[</span>0,1,2,3<span style="color:#f92672">]</span>,<span style="color:#e6db74">&#34;at_ms&#34;</span>:100,<span style="color:#e6db74">&#34;step_ms&#34;</span>:10,<span style="color:#e6db74">&#34;count&#34;</span>:3,<span style="color:#e6db74">&#34;count_ms&#34;</span>:50<span style="color:#f92672">}</span>
-</code></pre></div><details >
+</code></pre></div><p>Responses:
+<details >
   <summary>sequence of the (4x3 = 12) TWR responses</summary>
   <div class="markdown-inner">
     <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sm/90A971A3D1A1B648<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;initiator&#34;</span>:4,<span style="color:#e6db74">&#34;range&#34;</span>:<span style="color:#e6db74">&#34;0.305&#34;</span>,<span style="color:#e6db74">&#34;responder&#34;</span>:0,<span style="color:#e6db74">&#34;seq&#34;</span>:0,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;twr&#34;</span><span style="color:#f92672">}</span>
@@ -1300,7 +1301,21 @@ sm/E8D81FEE52C283EB<span style="color:#f92672">{</span><span style="color:#e6db7
 </code></pre></div>
   </div>
 </details>
+</p>
+<p>Another request</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sm<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;twr&#34;</span>,<span style="color:#e6db74">&#34;initiator&#34;</span>:0,<span style="color:#e6db74">&#34;responders&#34;</span>:<span style="color:#f92672">[</span>1,1<span style="color:#f92672">]</span>,<span style="color:#e6db74">&#34;at_ms&#34;</span>:100,<span style="color:#e6db74">&#34;step_ms&#34;</span>:10,<span style="color:#e6db74">&#34;count&#34;</span>:10,<span style="color:#e6db74">&#34;count_ms&#34;</span>:50<span style="color:#f92672">}</span>
+</code></pre></div><p>In the figure below we can see a gpio debug output from the two uwb modules. The initiator is asking the same responder twice, and then repeats the same for x10 times with a period of 50 ms.
 
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/uwb/twr%20seq%20x2x10.png" />
+    </div>
+    <a href="/images/uwb/twr%20seq%20x2x10.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+</p>
 <h3 id="rf-mesh-diagnosis">
   RF Mesh Diagnosis
   <a class="anchor" href="#rf-mesh-diagnosis">#</a>
@@ -1377,7 +1392,7 @@ verbose target log for status register thanks to a simple map flag to string</li
 <li>Debug function calls <code>APP_SET;</code> and <code>APP_CLEAR;</code></li>
 </ul>
 
-<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
 <div class="box" style="max-width:600px">
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
