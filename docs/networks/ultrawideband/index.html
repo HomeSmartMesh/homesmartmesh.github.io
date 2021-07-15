@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.e26158d82902c10ac41ad2e3bcefae0effbbcef9d7605018138a7b4fda0c6b63.js" integrity="sha256-4mFY2CkCwQrEGtLjvO&#43;uDv&#43;7zvnXYFAYE4p7T9oMa2M="></script>
+<script defer src="/en.search.min.9d7f12a86e606bf6b7c0da548eec45d7cb82d4a1504fa996bd2e66a1873f1ede.js" integrity="sha256-nX8SqG5ga/a3wNpUjuxF18uC1KFQT6mWvS5moYc/Ht4="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -963,7 +963,8 @@ https://github.com/alex-shpak/hugo-book
           <ul>
             <li><a href="#dwt-config">DWT Config</a></li>
             <li><a href="#twr-command">TWR command</a></li>
-            <li><a href="#diagnosis">Diagnosis</a></li>
+            <li><a href="#rf-mesh-diagnosis">RF Mesh Diagnosis</a></li>
+            <li><a href="#uwb-diagnosis">UWB Diagnosis</a></li>
           </ul>
         </li>
         <li><a href="#features">Features</a></li>
@@ -1247,9 +1248,11 @@ sm/98501ED22B42EB41<span style="color:#f92672">{</span><span style="color:#e6db7
   TWR command
   <a class="anchor" href="#twr-command">#</a>
 </h3>
-<p>Typing the below command on the shell broadcasts the request to all nodes, and each node identified by its short id, will execute the corresponding twr transaction as <code>initiator</code> or as <code>responder</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt;sm<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;twr_command&#34;</span>:<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;initiator&#34;</span>:0,<span style="color:#e6db74">&#34;responder&#34;</span>:1,<span style="color:#e6db74">&#34;at_ms&#34;</span>:100<span style="color:#f92672">}}</span>
-&gt;sm/E8D81FEE52C283EB<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;at_ms&#34;</span>:100,<span style="color:#e6db74">&#34;initiator&#34;</span>:0,<span style="color:#e6db74">&#34;responder&#34;</span>:1,<span style="color:#e6db74">&#34;result&#34;</span>:<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;range&#34;</span>:<span style="color:#e6db74">&#34;0.211&#34;</span><span style="color:#f92672">}}</span>
+<ul>
+<li>simple <code>Two Way Ranging</code> the below command broadcasts a request to all nodes, and each node identified by its short id, will execute the corresponding twr transaction as <code>initiator</code> or as <code>responder</code>.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sm<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;twr&#34;</span>,<span style="color:#e6db74">&#34;initiator&#34;</span>:0,<span style="color:#e6db74">&#34;responder&#34;</span>:1,<span style="color:#e6db74">&#34;at_ms&#34;</span>:100<span style="color:#f92672">}</span>
+sm/C24FD51212E905F0<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;initiator&#34;</span>:0,<span style="color:#e6db74">&#34;range&#34;</span>:<span style="color:#e6db74">&#34;0.375&#34;</span>,<span style="color:#e6db74">&#34;responder&#34;</span>:1,<span style="color:#e6db74">&#34;seq&#34;</span>:0,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;twr&#34;</span><span style="color:#f92672">}</span>
 </code></pre></div><details >
   <summary>full example of cli input and output</summary>
   <div class="markdown-inner">
@@ -1274,9 +1277,33 @@ sm<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;twr_comma
   </div>
 </details>
 
-<h3 id="diagnosis">
-  Diagnosis
-  <a class="anchor" href="#diagnosis">#</a>
+<ul>
+<li>sequence <code>Two Way Raning</code> allows to provide a list for each of the <code>initiators</code> or <code>responders</code></li>
+</ul>
+<p>Request:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sm<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;twr&#34;</span>,<span style="color:#e6db74">&#34;initiator&#34;</span>:4,<span style="color:#e6db74">&#34;responders&#34;</span>:<span style="color:#f92672">[</span>0,1,2,3<span style="color:#f92672">]</span>,<span style="color:#e6db74">&#34;at_ms&#34;</span>:100,<span style="color:#e6db74">&#34;step_ms&#34;</span>:10,<span style="color:#e6db74">&#34;count&#34;</span>:3,<span style="color:#e6db74">&#34;count_ms&#34;</span>:50<span style="color:#f92672">}</span>
+</code></pre></div><details >
+  <summary>sequence of the (4x3 = 12) TWR responses</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sm/90A971A3D1A1B648<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;initiator&#34;</span>:4,<span style="color:#e6db74">&#34;range&#34;</span>:<span style="color:#e6db74">&#34;0.305&#34;</span>,<span style="color:#e6db74">&#34;responder&#34;</span>:0,<span style="color:#e6db74">&#34;seq&#34;</span>:0,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;twr&#34;</span><span style="color:#f92672">}</span>
+sm/C24FD51212E905F0<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;initiator&#34;</span>:4,<span style="color:#e6db74">&#34;range&#34;</span>:<span style="color:#e6db74">&#34;0.614&#34;</span>,<span style="color:#e6db74">&#34;responder&#34;</span>:1,<span style="color:#e6db74">&#34;seq&#34;</span>:1,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;twr&#34;</span><span style="color:#f92672">}</span>
+sm/98501ED22B42EB41<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;initiator&#34;</span>:4,<span style="color:#e6db74">&#34;range&#34;</span>:<span style="color:#e6db74">&#34;0.005&#34;</span>,<span style="color:#e6db74">&#34;responder&#34;</span>:2,<span style="color:#e6db74">&#34;seq&#34;</span>:2,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;twr&#34;</span><span style="color:#f92672">}</span>
+sm/E8D81FEE52C283EB<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;initiator&#34;</span>:4,<span style="color:#e6db74">&#34;range&#34;</span>:<span style="color:#e6db74">&#34;0.178&#34;</span>,<span style="color:#e6db74">&#34;responder&#34;</span>:3,<span style="color:#e6db74">&#34;seq&#34;</span>:3,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;twr&#34;</span><span style="color:#f92672">}</span>
+sm/90A971A3D1A1B648<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;initiator&#34;</span>:4,<span style="color:#e6db74">&#34;range&#34;</span>:<span style="color:#e6db74">&#34;0.310&#34;</span>,<span style="color:#e6db74">&#34;responder&#34;</span>:0,<span style="color:#e6db74">&#34;seq&#34;</span>:4,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;twr&#34;</span><span style="color:#f92672">}</span>
+sm/C24FD51212E905F0<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;initiator&#34;</span>:4,<span style="color:#e6db74">&#34;range&#34;</span>:<span style="color:#e6db74">&#34;0.591&#34;</span>,<span style="color:#e6db74">&#34;responder&#34;</span>:1,<span style="color:#e6db74">&#34;seq&#34;</span>:5,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;twr&#34;</span><span style="color:#f92672">}</span>
+sm/98501ED22B42EB41<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;initiator&#34;</span>:4,<span style="color:#e6db74">&#34;range&#34;</span>:<span style="color:#e6db74">&#34;0.038&#34;</span>,<span style="color:#e6db74">&#34;responder&#34;</span>:2,<span style="color:#e6db74">&#34;seq&#34;</span>:6,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;twr&#34;</span><span style="color:#f92672">}</span>
+sm/E8D81FEE52C283EB<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;initiator&#34;</span>:4,<span style="color:#e6db74">&#34;range&#34;</span>:<span style="color:#e6db74">&#34;0.183&#34;</span>,<span style="color:#e6db74">&#34;responder&#34;</span>:3,<span style="color:#e6db74">&#34;seq&#34;</span>:7,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;twr&#34;</span><span style="color:#f92672">}</span>
+sm/90A971A3D1A1B648<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;initiator&#34;</span>:4,<span style="color:#e6db74">&#34;range&#34;</span>:<span style="color:#e6db74">&#34;0.319&#34;</span>,<span style="color:#e6db74">&#34;responder&#34;</span>:0,<span style="color:#e6db74">&#34;seq&#34;</span>:8,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;twr&#34;</span><span style="color:#f92672">}</span>
+sm/C24FD51212E905F0<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;initiator&#34;</span>:4,<span style="color:#e6db74">&#34;range&#34;</span>:<span style="color:#e6db74">&#34;0.577&#34;</span>,<span style="color:#e6db74">&#34;responder&#34;</span>:1,<span style="color:#e6db74">&#34;seq&#34;</span>:9,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;twr&#34;</span><span style="color:#f92672">}</span>
+sm/98501ED22B42EB41<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;initiator&#34;</span>:4,<span style="color:#e6db74">&#34;range&#34;</span>:<span style="color:#e6db74">&#34;0.019&#34;</span>,<span style="color:#e6db74">&#34;responder&#34;</span>:2,<span style="color:#e6db74">&#34;seq&#34;</span>:10,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;twr&#34;</span><span style="color:#f92672">}</span>
+sm/E8D81FEE52C283EB<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;initiator&#34;</span>:4,<span style="color:#e6db74">&#34;range&#34;</span>:<span style="color:#e6db74">&#34;0.169&#34;</span>,<span style="color:#e6db74">&#34;responder&#34;</span>:3,<span style="color:#e6db74">&#34;seq&#34;</span>:11,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;twr&#34;</span><span style="color:#f92672">}</span>
+</code></pre></div>
+  </div>
+</details>
+
+<h3 id="rf-mesh-diagnosis">
+  RF Mesh Diagnosis
+  <a class="anchor" href="#rf-mesh-diagnosis">#</a>
 </h3>
 <ul>
 <li><code>ping</code> command and response. The goal is to evaluate the link between the cli and one uid node :
@@ -1302,6 +1329,31 @@ sm<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;twr_comma
 2. &gt;sm/CBC216DC164B1DE8<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;rf_diag&#34;</span>:<span style="color:#e6db74">&#34;ping&#34;</span><span style="color:#f92672">}</span>
 3. sm/1CF6567337562176<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;rf_diag&#34;</span>:<span style="color:#e6db74">&#34;pinger&#34;</span>,<span style="color:#e6db74">&#34;rssi&#34;</span>:52,<span style="color:#e6db74">&#34;time&#34;</span>:4200857<span style="color:#f92672">}</span>
 4. sm/CBC216DC164B1DE8<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;rf_diag&#34;</span>:<span style="color:#e6db74">&#34;pong&#34;</span>,<span style="color:#e6db74">&#34;rssi&#34;</span>:41,<span style="color:#e6db74">&#34;time&#34;</span>:3898403<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="uwb-diagnosis">
+  UWB Diagnosis
+  <a class="anchor" href="#uwb-diagnosis">#</a>
+</h3>
+<ul>
+<li><code>ping</code> command and response. In this case, the ping request is a packet sent through <code>simplemesh</code> (2.4 GHz RF) to the <code>pinger</code> node, which then sends an UWB packet to the <code>target</code> node</li>
+<li>the response contains collected data from the DW1000 registers and sent as a <code>simplemesh</code> response packet. For details see <code>DW1000_Software_API_Guide_rev2p7.pdf dwt_readdiagnostics</code>
+<ul>
+<li><code>fpAmp1</code> the leading edge signal from the LDE accumulator</li>
+<li><code>fpAmp2</code> same for index floor firstpath+2</li>
+<li><code>fpAmp3</code> same for index floor firstpath+3</li>
+<li><code>maxGrowthCIR</code> Channel Impulse Response Max Growth related to the receive signal power.</li>
+<li><code>maxNoise</code> peak maximum Noise</li>
+<li><code>rxPreamCount</code> number of symbols accumulated for the preamble</li>
+<li><code>stdNoise</code> standard deviation of the noise level</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sm<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;ping&#34;</span>, <span style="color:#e6db74">&#34;pinger&#34;</span>:0,<span style="color:#e6db74">&#34;target&#34;</span>:1,<span style="color:#e6db74">&#34;at_ms&#34;</span>:100<span style="color:#f92672">}</span>
+sm/C24FD51212E905F0<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;diag&#34;</span>:<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;fpAmp1&#34;</span>:7196,<span style="color:#e6db74">&#34;fpAmp2&#34;</span>:7220,<span style="color:#e6db74">&#34;fpAmp3&#34;</span>:6969,<span style="color:#e6db74">&#34;maxGrowthCIR&#34;</span>:1995,<span style="color:#e6db74">&#34;maxNoise&#34;</span>:1495,<span style="color:#e6db74">&#34;rxPreamCount&#34;</span>:118,<span style="color:#e6db74">&#34;stdNoise&#34;</span>:64<span style="color:#f92672">}</span>,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;ping&#34;</span><span style="color:#f92672">}</span>
+</code></pre></div><p>This command can also be requested to be run a <code>count</code> number of times each <code>count_ms</code> taken as period</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sm<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;ping&#34;</span>, <span style="color:#e6db74">&#34;pinger&#34;</span>:0,<span style="color:#e6db74">&#34;target&#34;</span>:1,<span style="color:#e6db74">&#34;at_ms&#34;</span>:100,<span style="color:#e6db74">&#34;count&#34;</span>:3,<span style="color:#e6db74">&#34;count_ms&#34;</span>:6<span style="color:#f92672">}</span>
+sm/C24FD51212E905F0<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;diag&#34;</span>:<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;fpAmp1&#34;</span>:4771,<span style="color:#e6db74">&#34;fpAmp2&#34;</span>:7206,<span style="color:#e6db74">&#34;fpAmp3&#34;</span>:7313,<span style="color:#e6db74">&#34;maxGrowthCIR&#34;</span>:2091,<span style="color:#e6db74">&#34;maxNoise&#34;</span>:1516,<span style="color:#e6db74">&#34;rxPreamCount&#34;</span>:124,<span style="color:#e6db74">&#34;stdNoise&#34;</span>:68<span style="color:#f92672">}</span>,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;ping&#34;</span><span style="color:#f92672">}</span>
+sm/C24FD51212E905F0<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;diag&#34;</span>:<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;fpAmp1&#34;</span>:7344,<span style="color:#e6db74">&#34;fpAmp2&#34;</span>:7710,<span style="color:#e6db74">&#34;fpAmp3&#34;</span>:7008,<span style="color:#e6db74">&#34;maxGrowthCIR&#34;</span>:2146,<span style="color:#e6db74">&#34;maxNoise&#34;</span>:1712,<span style="color:#e6db74">&#34;rxPreamCount&#34;</span>:118,<span style="color:#e6db74">&#34;stdNoise&#34;</span>:68<span style="color:#f92672">}</span>,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;ping&#34;</span><span style="color:#f92672">}</span>
+sm/C24FD51212E905F0<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;diag&#34;</span>:<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;fpAmp1&#34;</span>:6346,<span style="color:#e6db74">&#34;fpAmp2&#34;</span>:6986,<span style="color:#e6db74">&#34;fpAmp3&#34;</span>:6808,<span style="color:#e6db74">&#34;maxGrowthCIR&#34;</span>:1976,<span style="color:#e6db74">&#34;maxNoise&#34;</span>:1339,<span style="color:#e6db74">&#34;rxPreamCount&#34;</span>:124,<span style="color:#e6db74">&#34;stdNoise&#34;</span>:60<span style="color:#f92672">}</span>,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;ping&#34;</span><span style="color:#f92672">}</span>
 </code></pre></div><h2 id="features">
   Features
   <a class="anchor" href="#features">#</a>
@@ -2750,7 +2802,8 @@ What does Ultra Wide Band mean for home automation ?
           <ul>
             <li><a href="#dwt-config">DWT Config</a></li>
             <li><a href="#twr-command">TWR command</a></li>
-            <li><a href="#diagnosis">Diagnosis</a></li>
+            <li><a href="#rf-mesh-diagnosis">RF Mesh Diagnosis</a></li>
+            <li><a href="#uwb-diagnosis">UWB Diagnosis</a></li>
           </ul>
         </li>
         <li><a href="#features">Features</a></li>
