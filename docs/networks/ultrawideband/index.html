@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.53eb1f9286ecd18b38f2a2be8011ad7bc41223c18993eac6f6699475f3da0254.js" integrity="sha256-U&#43;sfkobs0Ys48qK&#43;gBGte8QSI8GJk&#43;rG9mmUdfPaAlQ="></script>
+<script defer src="/en.search.min.6ded63316e9f9c885a8c2d55b580387302e95860ef7d3f85d939ce86d73511e5.js" integrity="sha256-be1jMW6fnIhajC1VtYA4cwLpWGDvfT&#43;F2TnOhtc1EeU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -955,11 +955,12 @@ https://github.com/alex-shpak/hugo-book
       <ul>
         <li><a href="#nodes-preparation">Nodes Preparation</a>
           <ul>
-            <li><a href="#twr-nodes">TWR Nodes</a></li>
+            <li><a href="#mp-nodes">MP Nodes</a></li>
             <li><a href="#simpl-mesh-cli-node">Simpl Mesh CLI Node</a></li>
           </ul>
         </li>
-        <li><a href="#usage">Usage</a>
+        <li><a href="#python-usage">Python Usage</a></li>
+        <li><a href="#text-console-usage">Text Console Usage</a>
           <ul>
             <li><a href="#dwt-config">DWT Config</a></li>
             <li><a href="#twr-command">TWR command</a></li>
@@ -967,6 +968,7 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#uwb-diagnosis">UWB Diagnosis</a></li>
           </ul>
         </li>
+        <li><a href="#database">Database</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#twr-gpio-profiling">TWR GPIO Profiling</a></li>
       </ul>
@@ -975,7 +977,7 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#rtls-gen-1">RTLS Gen 1</a>
       <ul>
         <li><a href="#hardware">Hardware</a></li>
-        <li><a href="#module-firmware">Module Firmware</a>
+        <li><a href="#firmware-and-source-code">Firmware and Source Code</a>
           <ul>
             <li><a href="#product-page">Product Page</a></li>
             <li><a href="#decawave-github">Decawave Github</a></li>
@@ -987,7 +989,7 @@ https://github.com/alex-shpak/hugo-book
           </ul>
         </li>
         <li><a href="#dw-tranceiver">DW Tranceiver</a></li>
-        <li><a href="#raspberry-pi-software">Raspberry pi software</a>
+        <li><a href="#decawave-raspberry-pi-software">Decawave Raspberry pi software</a>
           <ul>
             <li><a href="#dwm-daemon">DWM Daemon</a></li>
             <li><a href="#dwm-proxy">DWM Proxy</a></li>
@@ -1115,7 +1117,70 @@ https://github.com/alex-shpak/hugo-book
   Mesh Positioning Framework
   <a class="anchor" href="#mesh-positioning-framework">#</a>
 </h1>
-<p>This framework developed as part of the <code>Home Smart Mesh</code> project is a takeover of the above mentioned <a href="#zephyr-community">Zephyr Community</a> with refactoring introducing c++ and a higher level functional layer called <code>mp</code> for <code>mesh positioning</code> that wraps <code>dwt_</code> functions and adds an nRF52 custom RF mesh networking capability.
+
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/uwb/mesh%20positioning.png" />
+    </div>
+    <a href="/images/uwb/mesh%20positioning.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<p>Free support for any question related to this project is available on the project&rsquo;s forum category :
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://homesmartmesh.discourse.group/c/networks/ultrawideband"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            Discourse - #ultra-wide-band 
+            
+            
+                
+                
+
+                
+
+                
+
+                
+                <span class="discourse">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -1 104 106">
+                        <defs>
+                            <style>.cls-1{fill:#231f20;}.cls-2{fill:#fff9ae;}.cls-3{fill:#00aeef;}.cls-4{fill:#00a94f;}.cls-5{fill:#f15d22;}.cls-6{fill:#e31b23;}</style>
+                        </defs>
+                        <title>Discourse_logo</title>
+                        <g id="Layer_2">
+                            <g id="Layer_3">
+                                <path class="cls-1" d="M51.87,0C23.71,0,0,22.83,0,51c0,.91,0,52.81,0,52.81l51.86-.05c28.16,0,51-23.71,51-51.87S80,0,51.87,0Z" />
+                                <path class="cls-2" d="M52.37,19.74A31.62,31.62,0,0,0,24.58,66.41l-5.72,18.4L39.4,80.17a31.61,31.61,0,1,0,13-60.43Z" />
+                                <path class="cls-3" d="M77.45,32.12a31.6,31.6,0,0,1-38.05,48L18.86,84.82l20.91-2.47A31.6,31.6,0,0,0,77.45,32.12Z" />
+                                <path class="cls-4" d="M71.63,26.29A31.6,31.6,0,0,1,38.8,78L18.86,84.82,39.4,80.17A31.6,31.6,0,0,0,71.63,26.29Z" />
+                                <path class="cls-5" d="M26.47,67.11a31.61,31.61,0,0,1,51-35A31.61,31.61,0,0,0,24.58,66.41l-5.72,18.4Z" />
+                                <path class="cls-6" d="M24.58,66.41A31.61,31.61,0,0,1,71.63,26.29a31.61,31.61,0,0,0-49,39.63l-3.76,18.9Z" />
+                            </g>
+                        </g>
+                    </svg>
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+</p>
+<p>This framework is developed as part of the <code>Home Smart Mesh</code> project. It is referred to as <code>mp</code> for <code>mesh positioning</code>. It provides a python API on top of a <code>simplemesh</code> custom RF REST API. This REST API can generate a dynamic, request specific TDMA layer for performing a long sequence of basic uwb commands that wraps <code>dwt_</code> functions.</p>
+<p>The <code>simplemesh</code> communication layer is a permanent channel between all nodes and the server that can for example in one command set different nodes in different uwb channels config and roles independently of their current uwb channel.</p>
+<p>Zephyr MP Node UWB repo :
 
 <div class="container">
     <div class="row">
@@ -1157,26 +1222,151 @@ https://github.com/alex-shpak/hugo-book
     </div>
     </div>
 </div>
+</p>
+<p>Zephyr CLI Node SimpleMesh repo :
 
-<blockquote class="book-hint info">
-  Note that Zephyr imported dependencies have been restricted to the needed ones. It is possible to add by editing this <a href="https://github.com/nRFMesh/sdk-uwb-zephyr/blob/cd5dd2f1cc9851bccf66e5bdc4e4d3f7e06920e0/west.yml#L20">west.yml</a> file e.g. all imports with <code>import: true</code>
-</blockquote>
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/HomeSmartMesh/sdk-hsm-sensortag"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            sdk-hsm-sensortag
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+</p>
+<p>server Python API repo :
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/HomeSmartMesh/mesh_position"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            mesh_position
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
 </p>
 <h2 id="nodes-preparation">
   Nodes Preparation
   <a class="anchor" href="#nodes-preparation">#</a>
 </h2>
-<h3 id="twr-nodes">
-  TWR Nodes
-  <a class="anchor" href="#twr-nodes">#</a>
+<h3 id="mp-nodes">
+  MP Nodes
+  <a class="anchor" href="#mp-nodes">#</a>
 </h3>
+<p>MP as Mesh Position nodes perform uwb commands in any role specified by the request, they also apply config and provide responses</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">west init -m https://github.com/nRFMesh/sdk-uwb-zephyr --mr main
 cd uwb/samples/06_uwb_node_sm
 west build -b decawave_dwm1001_dev -- -DCONF_FILE<span style="color:#f92672">=</span>prj.conf
 west flash
 west flash --snr <span style="color:#ae81ff">760130093</span>
 west flash --snr <span style="color:#ae81ff">760130128</span>
-</code></pre></div><h3 id="simpl-mesh-cli-node">
+</code></pre></div><p>The hex file is available for download
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.homesmartmesh.com/data/simplemesh_cli-451cc6bf4da.zip"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            simplemesh_cli dwm1001 commit 451cc6bf4da
+            
+            
+                
+                
+
+                
+
+                
+
+                
+
+                
+                <svg    class="download"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                        >
+                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
+                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
+                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
+                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
+                </svg>
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+</p>
+<h3 id="simpl-mesh-cli-node">
   Simpl Mesh CLI Node
   <a class="anchor" href="#simpl-mesh-cli-node">#</a>
 </h3>
@@ -1228,9 +1418,78 @@ cd hsm/samples/simplemesh_cli
 west build -b decawave_dwm1001_dev -- -DCONF_FILE<span style="color:#f92672">=</span>prj-dwm.conf
 west flash
 west flash --snr <span style="color:#ae81ff">260103215</span>
-</code></pre></div><h2 id="usage">
-  Usage
-  <a class="anchor" href="#usage">#</a>
+</code></pre></div><p>The hex file is available for download
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.homesmartmesh.com/data/mp_node-f64b6e199dee.zip"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            meshposition node dwm1001 commit f64b6e199dee
+            
+            
+                
+                
+
+                
+
+                
+
+                
+
+                
+                <svg    class="download"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                        >
+                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
+                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
+                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
+                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
+                </svg>
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+</p>
+<h2 id="python-usage">
+  Python Usage
+  <a class="anchor" href="#python-usage">#</a>
+</h2>
+<ul>
+<li>Two Way Ranging single operation</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">initiator <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+responder <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+range_measure <span style="color:#f92672">=</span> uwb_twr(initiator, responder)
+<span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;mp&gt; test ({initiator})-&gt;({responder}) range = {range_measure}&#34;</span>)
+</code></pre></div><ul>
+<li>Two Way Ranging sequence of operations</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">initiator <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+responders <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>]
+result_list <span style="color:#f92672">=</span> uwb_twr(initiator<span style="color:#f92672">=</span>initiator, responders<span style="color:#f92672">=</span>responders, step_ms<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+<span style="color:#66d9ef">for</span> res <span style="color:#f92672">in</span> result_list:
+    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;mp&gt; ({res[&#39;initiator&#39;]})-&gt;({res[&#39;responder&#39;]}) range= {res[&#39;range&#39;]}&#34;</span>)
+</code></pre></div><ul>
+<li>Ping diagnostic</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pinger <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+target <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+diag <span style="color:#f92672">=</span> uwb_ping_diag(pinger, target)
+<span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;test_uwb_ping&gt; ({pinger})-&gt;({target}) stdNoise = {diag[&#39;stdNoise&#39;]}&#34;</span>)
+</code></pre></div><p>for more details and example measures see the <a href="#database">database</a> section</p>
+<h2 id="text-console-usage">
+  Text Console Usage
+  <a class="anchor" href="#text-console-usage">#</a>
 </h2>
 <p>The cli node can take user console input commands, send them through <code>simplemesh</code> network and outputs results coming from the network.</p>
 <h3 id="dwt-config">
@@ -1306,7 +1565,7 @@ sm/E8D81FEE52C283EB<span style="color:#f92672">{</span><span style="color:#e6db7
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sm<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;twr&#34;</span>,<span style="color:#e6db74">&#34;initiator&#34;</span>:0,<span style="color:#e6db74">&#34;responders&#34;</span>:<span style="color:#f92672">[</span>1,1<span style="color:#f92672">]</span>,<span style="color:#e6db74">&#34;at_ms&#34;</span>:100,<span style="color:#e6db74">&#34;step_ms&#34;</span>:10,<span style="color:#e6db74">&#34;count&#34;</span>:10,<span style="color:#e6db74">&#34;count_ms&#34;</span>:50<span style="color:#f92672">}</span>
 </code></pre></div><p>In the figure below we can see a gpio debug output from the two uwb modules. The initiator is asking the same responder twice, and then repeats the same for x10 times with a period of 50 ms.
 
-<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
@@ -1369,7 +1628,238 @@ sm/C24FD51212E905F0<span style="color:#f92672">{</span><span style="color:#e6db7
 sm/C24FD51212E905F0<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;diag&#34;</span>:<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;fpAmp1&#34;</span>:4771,<span style="color:#e6db74">&#34;fpAmp2&#34;</span>:7206,<span style="color:#e6db74">&#34;fpAmp3&#34;</span>:7313,<span style="color:#e6db74">&#34;maxGrowthCIR&#34;</span>:2091,<span style="color:#e6db74">&#34;maxNoise&#34;</span>:1516,<span style="color:#e6db74">&#34;rxPreamCount&#34;</span>:124,<span style="color:#e6db74">&#34;stdNoise&#34;</span>:68<span style="color:#f92672">}</span>,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;ping&#34;</span><span style="color:#f92672">}</span>
 sm/C24FD51212E905F0<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;diag&#34;</span>:<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;fpAmp1&#34;</span>:7344,<span style="color:#e6db74">&#34;fpAmp2&#34;</span>:7710,<span style="color:#e6db74">&#34;fpAmp3&#34;</span>:7008,<span style="color:#e6db74">&#34;maxGrowthCIR&#34;</span>:2146,<span style="color:#e6db74">&#34;maxNoise&#34;</span>:1712,<span style="color:#e6db74">&#34;rxPreamCount&#34;</span>:118,<span style="color:#e6db74">&#34;stdNoise&#34;</span>:68<span style="color:#f92672">}</span>,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;ping&#34;</span><span style="color:#f92672">}</span>
 sm/C24FD51212E905F0<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;diag&#34;</span>:<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;fpAmp1&#34;</span>:6346,<span style="color:#e6db74">&#34;fpAmp2&#34;</span>:6986,<span style="color:#e6db74">&#34;fpAmp3&#34;</span>:6808,<span style="color:#e6db74">&#34;maxGrowthCIR&#34;</span>:1976,<span style="color:#e6db74">&#34;maxNoise&#34;</span>:1339,<span style="color:#e6db74">&#34;rxPreamCount&#34;</span>:124,<span style="color:#e6db74">&#34;stdNoise&#34;</span>:60<span style="color:#f92672">}</span>,<span style="color:#e6db74">&#34;uwb_cmd&#34;</span>:<span style="color:#e6db74">&#34;ping&#34;</span><span style="color:#f92672">}</span>
-</code></pre></div><h2 id="features">
+</code></pre></div><h2 id="database">
+  Database
+  <a class="anchor" href="#database">#</a>
+</h2>
+<ul>
+<li>Ground Truth.</li>
+</ul>
+<p>All nodes are in line of sight and facing the vector x direction. Below is the nodes coordinates table (all units in meter).</p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>id</th>
+<th>x</th>
+<th>y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tag</td>
+<td>0</td>
+<td>0.75</td>
+<td>0.75</td>
+</tr>
+<tr>
+<td>FR</td>
+<td>1</td>
+<td>1.5</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>FL</td>
+<td>2</td>
+<td>0</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>RL</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>RR</td>
+<td>4</td>
+<td>1.5</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Tag to Anchors distance = sqrt(sqr(0.75)+sqr(0.75)) = 1.06 m
+Given the non perfect placement of the tag and anchors, a more precise measure of the distances is are as follow</p>
+<ul>
+<li>
+<p>0-1 : 1.01 m</p>
+</li>
+<li>
+<p>0-2 : 1.01 m</p>
+</li>
+<li>
+<p>0-3 : 1.05 m</p>
+</li>
+<li>
+<p>0-4 : 1.04 m</p>
+</li>
+<li>
+<p>Two Way Ranging
+<details >
+  <summary>tag ranging four anchors TWR double sided x3 times each</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">[
+    {
+        <span style="color:#f92672">&#34;initiator&#34;</span>: <span style="color:#ae81ff">0</span>,
+        <span style="color:#f92672">&#34;range&#34;</span>: <span style="color:#e6db74">&#34;1.065&#34;</span>,
+        <span style="color:#f92672">&#34;responder&#34;</span>: <span style="color:#ae81ff">1</span>,
+        <span style="color:#f92672">&#34;seq&#34;</span>: <span style="color:#ae81ff">0</span>
+    },
+    {
+        <span style="color:#f92672">&#34;initiator&#34;</span>: <span style="color:#ae81ff">0</span>,
+        <span style="color:#f92672">&#34;range&#34;</span>: <span style="color:#e6db74">&#34;1.004&#34;</span>,
+        <span style="color:#f92672">&#34;responder&#34;</span>: <span style="color:#ae81ff">2</span>,
+        <span style="color:#f92672">&#34;seq&#34;</span>: <span style="color:#ae81ff">1</span>
+    },
+    {
+        <span style="color:#f92672">&#34;initiator&#34;</span>: <span style="color:#ae81ff">0</span>,
+        <span style="color:#f92672">&#34;range&#34;</span>: <span style="color:#e6db74">&#34;1.210&#34;</span>,
+        <span style="color:#f92672">&#34;responder&#34;</span>: <span style="color:#ae81ff">3</span>,
+        <span style="color:#f92672">&#34;seq&#34;</span>: <span style="color:#ae81ff">2</span>
+    },
+    {
+        <span style="color:#f92672">&#34;initiator&#34;</span>: <span style="color:#ae81ff">0</span>,
+        <span style="color:#f92672">&#34;range&#34;</span>: <span style="color:#e6db74">&#34;1.187&#34;</span>,
+        <span style="color:#f92672">&#34;responder&#34;</span>: <span style="color:#ae81ff">4</span>,
+        <span style="color:#f92672">&#34;seq&#34;</span>: <span style="color:#ae81ff">3</span>
+    },
+    {
+        <span style="color:#f92672">&#34;initiator&#34;</span>: <span style="color:#ae81ff">0</span>,
+        <span style="color:#f92672">&#34;range&#34;</span>: <span style="color:#e6db74">&#34;1.093&#34;</span>,
+        <span style="color:#f92672">&#34;responder&#34;</span>: <span style="color:#ae81ff">1</span>,
+        <span style="color:#f92672">&#34;seq&#34;</span>: <span style="color:#ae81ff">4</span>
+    },
+    {
+        <span style="color:#f92672">&#34;initiator&#34;</span>: <span style="color:#ae81ff">0</span>,
+        <span style="color:#f92672">&#34;range&#34;</span>: <span style="color:#e6db74">&#34;0.947&#34;</span>,
+        <span style="color:#f92672">&#34;responder&#34;</span>: <span style="color:#ae81ff">2</span>,
+        <span style="color:#f92672">&#34;seq&#34;</span>: <span style="color:#ae81ff">5</span>
+    },
+    {
+        <span style="color:#f92672">&#34;initiator&#34;</span>: <span style="color:#ae81ff">0</span>,
+        <span style="color:#f92672">&#34;range&#34;</span>: <span style="color:#e6db74">&#34;1.219&#34;</span>,
+        <span style="color:#f92672">&#34;responder&#34;</span>: <span style="color:#ae81ff">3</span>,
+        <span style="color:#f92672">&#34;seq&#34;</span>: <span style="color:#ae81ff">6</span>
+    },
+    {
+        <span style="color:#f92672">&#34;initiator&#34;</span>: <span style="color:#ae81ff">0</span>,
+        <span style="color:#f92672">&#34;range&#34;</span>: <span style="color:#e6db74">&#34;1.177&#34;</span>,
+        <span style="color:#f92672">&#34;responder&#34;</span>: <span style="color:#ae81ff">4</span>,
+        <span style="color:#f92672">&#34;seq&#34;</span>: <span style="color:#ae81ff">7</span>
+    },
+    {
+        <span style="color:#f92672">&#34;initiator&#34;</span>: <span style="color:#ae81ff">0</span>,
+        <span style="color:#f92672">&#34;range&#34;</span>: <span style="color:#e6db74">&#34;1.069&#34;</span>,
+        <span style="color:#f92672">&#34;responder&#34;</span>: <span style="color:#ae81ff">1</span>,
+        <span style="color:#f92672">&#34;seq&#34;</span>: <span style="color:#ae81ff">8</span>
+    },
+    {
+        <span style="color:#f92672">&#34;initiator&#34;</span>: <span style="color:#ae81ff">0</span>,
+        <span style="color:#f92672">&#34;range&#34;</span>: <span style="color:#e6db74">&#34;1.008&#34;</span>,
+        <span style="color:#f92672">&#34;responder&#34;</span>: <span style="color:#ae81ff">2</span>,
+        <span style="color:#f92672">&#34;seq&#34;</span>: <span style="color:#ae81ff">9</span>
+    },
+    {
+        <span style="color:#f92672">&#34;initiator&#34;</span>: <span style="color:#ae81ff">0</span>,
+        <span style="color:#f92672">&#34;range&#34;</span>: <span style="color:#e6db74">&#34;1.196&#34;</span>,
+        <span style="color:#f92672">&#34;responder&#34;</span>: <span style="color:#ae81ff">3</span>,
+        <span style="color:#f92672">&#34;seq&#34;</span>: <span style="color:#ae81ff">10</span>
+    },
+    {
+        <span style="color:#f92672">&#34;initiator&#34;</span>: <span style="color:#ae81ff">0</span>,
+        <span style="color:#f92672">&#34;range&#34;</span>: <span style="color:#e6db74">&#34;1.154&#34;</span>,
+        <span style="color:#f92672">&#34;responder&#34;</span>: <span style="color:#ae81ff">4</span>,
+        <span style="color:#f92672">&#34;seq&#34;</span>: <span style="color:#ae81ff">11</span>
+    }
+]
+</code></pre></div>
+  </div>
+</details>
+</p>
+</li>
+<li>
+<p>Ping Diagnostic, below an example of the result json format with two entries only. The database below available for download contains 586 ping diagnostic measures
+<details >
+  <summary>tag ping diagnostic four anchors</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">[
+    {
+        <span style="color:#f92672">&#34;pinger&#34;</span>: <span style="color:#ae81ff">0</span>,
+        <span style="color:#f92672">&#34;target&#34;</span>: <span style="color:#ae81ff">1</span>,
+        <span style="color:#f92672">&#34;diag&#34;</span>: {
+            <span style="color:#f92672">&#34;fpAmp1&#34;</span>: <span style="color:#ae81ff">6699</span>,
+            <span style="color:#f92672">&#34;fpAmp2&#34;</span>: <span style="color:#ae81ff">6986</span>,
+            <span style="color:#f92672">&#34;fpAmp3&#34;</span>: <span style="color:#ae81ff">5772</span>,
+            <span style="color:#f92672">&#34;maxGrowthCIR&#34;</span>: <span style="color:#ae81ff">1953</span>,
+            <span style="color:#f92672">&#34;maxNoise&#34;</span>: <span style="color:#ae81ff">908</span>,
+            <span style="color:#f92672">&#34;rxPreamCount&#34;</span>: <span style="color:#ae81ff">120</span>,
+            <span style="color:#f92672">&#34;stdNoise&#34;</span>: <span style="color:#ae81ff">40</span>
+        },
+        <span style="color:#f92672">&#34;seq&#34;</span>: <span style="color:#ae81ff">0</span>
+    },
+    {
+        <span style="color:#f92672">&#34;pinger&#34;</span>: <span style="color:#ae81ff">0</span>,
+        <span style="color:#f92672">&#34;target&#34;</span>: <span style="color:#ae81ff">1</span>,
+        <span style="color:#f92672">&#34;diag&#34;</span>: {
+            <span style="color:#f92672">&#34;fpAmp1&#34;</span>: <span style="color:#ae81ff">7886</span>,
+            <span style="color:#f92672">&#34;fpAmp2&#34;</span>: <span style="color:#ae81ff">7867</span>,
+            <span style="color:#f92672">&#34;fpAmp3&#34;</span>: <span style="color:#ae81ff">6459</span>,
+            <span style="color:#f92672">&#34;maxGrowthCIR&#34;</span>: <span style="color:#ae81ff">3164</span>,
+            <span style="color:#f92672">&#34;maxNoise&#34;</span>: <span style="color:#ae81ff">1725</span>,
+            <span style="color:#f92672">&#34;rxPreamCount&#34;</span>: <span style="color:#ae81ff">122</span>,
+            <span style="color:#f92672">&#34;stdNoise&#34;</span>: <span style="color:#ae81ff">68</span>
+        },
+        <span style="color:#f92672">&#34;seq&#34;</span>: <span style="color:#ae81ff">1</span>
+    }
+]
+</code></pre></div>
+  </div>
+</details>
+</p>
+</li>
+</ul>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.homesmartmesh.com/data/tag_four_ping%202021.07.17%2017-26-01.json.zip"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            ping diagnositc database 2021.07.17 17-26-01
+            
+            
+                
+                
+
+                
+
+                
+
+                
+
+                
+                <svg    class="download"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                        >
+                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
+                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
+                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
+                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
+                </svg>
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<h2 id="features">
   Features
   <a class="anchor" href="#features">#</a>
 </h2>
@@ -1612,10 +2102,11 @@ the screenshot was made from the below commit which is a separate branch not inc
     </div>
 </div>
 </p>
-<h2 id="module-firmware">
-  Module Firmware
-  <a class="anchor" href="#module-firmware">#</a>
+<h2 id="firmware-and-source-code">
+  Firmware and Source Code
+  <a class="anchor" href="#firmware-and-source-code">#</a>
 </h2>
+<p>Below a list of existing closed firmware delivered as binary only and open source official and community projects :</p>
 <ul>
 <li>Production Firmware : available as precompiled binary <code>DWM1001_PANS_R2.0.hex</code> in order to recover the Module for production grade certified applications</li>
 <li>PANS library : All the main functions performed by the module (TWR, RTLS, Bluetooth, 802.15.4) are provided as a library on top of which a user nRF52832 application can be built.</li>
@@ -2345,9 +2836,9 @@ dwm&gt; si
 <li>source code decadriver : <code>DW1000 Device Driver Version 05.01.00</code></li>
 <li>ported to STM32 platforms <code>coocox</code> and <code>stsw</code></li>
 </ul>
-<h2 id="raspberry-pi-software">
-  Raspberry pi software
-  <a class="anchor" href="#raspberry-pi-software">#</a>
+<h2 id="decawave-raspberry-pi-software">
+  Decawave Raspberry pi software
+  <a class="anchor" href="#decawave-raspberry-pi-software">#</a>
 </h2>
 <ul>
 <li>DWM Daemon</li>
@@ -2809,11 +3300,12 @@ What does Ultra Wide Band mean for home automation ?
       <ul>
         <li><a href="#nodes-preparation">Nodes Preparation</a>
           <ul>
-            <li><a href="#twr-nodes">TWR Nodes</a></li>
+            <li><a href="#mp-nodes">MP Nodes</a></li>
             <li><a href="#simpl-mesh-cli-node">Simpl Mesh CLI Node</a></li>
           </ul>
         </li>
-        <li><a href="#usage">Usage</a>
+        <li><a href="#python-usage">Python Usage</a></li>
+        <li><a href="#text-console-usage">Text Console Usage</a>
           <ul>
             <li><a href="#dwt-config">DWT Config</a></li>
             <li><a href="#twr-command">TWR command</a></li>
@@ -2821,6 +3313,7 @@ What does Ultra Wide Band mean for home automation ?
             <li><a href="#uwb-diagnosis">UWB Diagnosis</a></li>
           </ul>
         </li>
+        <li><a href="#database">Database</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#twr-gpio-profiling">TWR GPIO Profiling</a></li>
       </ul>
@@ -2829,7 +3322,7 @@ What does Ultra Wide Band mean for home automation ?
     <li><a href="#rtls-gen-1">RTLS Gen 1</a>
       <ul>
         <li><a href="#hardware">Hardware</a></li>
-        <li><a href="#module-firmware">Module Firmware</a>
+        <li><a href="#firmware-and-source-code">Firmware and Source Code</a>
           <ul>
             <li><a href="#product-page">Product Page</a></li>
             <li><a href="#decawave-github">Decawave Github</a></li>
@@ -2841,7 +3334,7 @@ What does Ultra Wide Band mean for home automation ?
           </ul>
         </li>
         <li><a href="#dw-tranceiver">DW Tranceiver</a></li>
-        <li><a href="#raspberry-pi-software">Raspberry pi software</a>
+        <li><a href="#decawave-raspberry-pi-software">Decawave Raspberry pi software</a>
           <ul>
             <li><a href="#dwm-daemon">DWM Daemon</a></li>
             <li><a href="#dwm-proxy">DWM Proxy</a></li>
