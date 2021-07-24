@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.6ded63316e9f9c885a8c2d55b580387302e95860ef7d3f85d939ce86d73511e5.js" integrity="sha256-be1jMW6fnIhajC1VtYA4cwLpWGDvfT&#43;F2TnOhtc1EeU="></script>
+<script defer src="/en.search.min.c9b35751625d31026ecfcf1122af8f5b04d0c0d6139c8eca71e322d3f64198f0.js" integrity="sha256-ybNXUWJdMQJuz88RIq&#43;PWwTQwNYTnI7KceMi0/ZBmPA="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1178,7 +1178,9 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 </p>
-<p>This framework is developed as part of the <code>Home Smart Mesh</code> project. It is referred to as <code>mp</code> for <code>mesh positioning</code>. It provides a python API on top of a <code>simplemesh</code> custom RF REST API. This REST API can generate a dynamic, request specific TDMA layer for performing a long sequence of basic uwb commands that wraps <code>dwt_</code> functions.</p>
+<p>There is no such thing as UWB position, UWB only provide ToF and range, therefore experimenting with different positioning algorithms can now be offloaded to a server environment with high performance. Also in case the uwb ranging is not working, and your solution is based on a balck-box closed source, there&rsquo;s no way to figure out what the problem is, therefore being able to perform diagnostic between any two nodes with the same firmware running the ranging function is important to keep a live status of your uwb network.
+From these two ideas is born this <code>mesh positioning</code> framework.</p>
+<p>This framework is developed as part of the <code>Home Smart Mesh</code> project. It provides a python API on top of a <code>simplemesh</code> custom RF REST API. This REST API can generate a dynamic, request specific TDMA layer for performing a long sequence of basic uwb commands that wraps <code>dwt_</code> functions.</p>
 <p>The <code>simplemesh</code> communication layer is a permanent channel between all nodes and the server that can for example in one command set different nodes in different uwb channels config and roles independently of their current uwb channel.</p>
 <p>Zephyr MP Node UWB repo :
 
@@ -1365,6 +1367,47 @@ west flash --snr <span style="color:#ae81ff">760130128</span>
     </div>
     </div>
 </div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.homesmartmesh.com/data/simplemesh_cli-dc772e267.zip"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            simplemesh_cli dwm1001 commit dc772e267
+            
+            
+                
+                
+
+                
+
+                
+
+                
+
+                
+                <svg    class="download"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                        >
+                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
+                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
+                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
+                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
+                </svg>
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
 </p>
 <h3 id="simpl-mesh-cli-node">
   Simpl Mesh CLI Node
@@ -1432,6 +1475,47 @@ west flash --snr <span style="color:#ae81ff">260103215</span>
             role="button"
         >
             meshposition node dwm1001 commit f64b6e199dee
+            
+            
+                
+                
+
+                
+
+                
+
+                
+
+                
+                <svg    class="download"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                        >
+                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
+                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
+                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
+                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
+                </svg>
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.homesmartmesh.com/data/mp_node-b794f1667.zip"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            meshposition node dwm1001 commit b794f1667
             
             
                 
