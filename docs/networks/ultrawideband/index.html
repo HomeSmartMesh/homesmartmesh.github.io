@@ -18,7 +18,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.e2e0bbc72c1109ba39ed7bff26f42011e66fbcbdecb38b518600f5bfc47d444a.js" integrity="sha256-4uC7xywRCbo57Xv/JvQgEeZvvL3ss4tRhgD1v8R9REo="></script>
+<script defer src="/en.search.min.999f8b21ad9b5a83efc7bfc5b217acacb0fc13804ab02ad1328f64ccab8c5980.js" integrity="sha256-mZ&#43;LIa2bWoPvx7/FshesrLD8E4BKsCrRMo9kzKuMWYA="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -994,7 +994,11 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#dwm3000">DWM3000</a></li>
           </ul>
         </li>
-        <li><a href="#decawave-github">Decawave Github</a></li>
+        <li><a href="#decawave-github">Decawave Github</a>
+          <ul>
+            <li><a href="#variant-on-top-of-dwm1001-examples">Variant on top of dwm1001-examples</a></li>
+          </ul>
+        </li>
         <li><a href="#github-mynewt">Github mynewt</a></li>
         <li><a href="#zephyr-mainline">Zephyr Mainline</a></li>
         <li><a href="#zephyr-community">Zephyr Community</a></li>
@@ -2130,7 +2134,7 @@ the screenshot was made from the below commit which is a separate branch not inc
 </div>
 </p>
 <ul>
-<li>form factor 65 mm x 45 mm</li>
+<li>form factor 65 mm x 45 mm (single board)</li>
 <li>on board debugger and battery power management</li>
 <li>DW3110 from the DW3000 IC family <code>IEEE 802.15.4z</code>, <code>IEEE802.15.4-2015 UWB</code>,&hellip;</li>
 <li>on board host nRF52833 capable of Thread and Bluetooth Mesh and Direction finding</li>
@@ -2160,7 +2164,7 @@ the screenshot was made from the below commit which is a separate branch not inc
 </div>
 </p>
 <ul>
-<li>Arduino shield form factor (+ module antenna) 80 mm x 54 mm</li>
+<li>Arduino shield form factor (+ module antenna) 80 mm x 54 mm (to be stacked over host board)</li>
 <li>DW3110 from the DW3000 IC family <code>IEEE 802.15.4z</code>, <code>IEEE802.15.4-2015 UWB</code>,&hellip;</li>
 <li>supported hardware reference platforms <code>nRF52840-DK</code> and <code>nucleo-F429ZI</code>.</li>
 </ul>
@@ -2661,6 +2665,53 @@ The Decawave <a href="https://www.decawave.com/product/dwm3000evb/">product page
 <blockquote class="book-hint warning">
   with Embedded studio V5.40, it is required to enable the updated #ifdef for <code>__putchar</code> in <code>retarget.c</code> line 100
 </blockquote>
+
+<h3 id="variant-on-top-of-dwm1001-examples">
+  Variant on top of dwm1001-examples
+  <a class="anchor" href="#variant-on-top-of-dwm1001-examples">#</a>
+</h3>
+<p>Academit project from the TIERS University of Turku Finland. The integration is arcaic and requires manual replacement of files, based on old SES and ARM toolchain versions. The content has value nevertheless and includes code for <code>Autocalibration</code>, <code>Localization</code> and <code>Measurements</code>. In each example, the Initiator and responders are in different firmwares. the measurement includes a python script that has among others <code>rospy</code> as dependency, therefore has a robotics application scope.</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/TIERS/dwm1001-uwb-firmware"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            dwm1001-uwb-firmware
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
 
 <h2 id="github-mynewt">
   Github mynewt
@@ -3502,10 +3553,10 @@ The Decawave <a href="https://www.decawave.com/product/dwm3000evb/">product page
   
   <details>
     <summary>
-What is Ultra Wide Band ?
+Can the DWM1001C firmware be modified ?
 </summary>
     <div class="markdown-inner">
-      It&rsquo;s a radio technology that is not based on classical frequency or amplitude modulation rather uses a rich signal pulses that occupies a large spectrum band.
+      It is possible to flash any firmware on the nRF52832 uC host of the DWM1001C and in case of need Decawave provides the orginal PANS firmware as a .hex to recover the original functionality. The PANS though is only provided as binary program and binary library. It is possible to add a custom app code on top but the content of the PANS lib cannot be modified, or at least is not intended to be modified.
     </div>
   </details>
 
@@ -3514,10 +3565,10 @@ What is Ultra Wide Band ?
   
   <details>
     <summary>
-What does Ultra Wide Band mean for home automation ?
+Where does the PANS library run ?
 </summary>
     <div class="markdown-inner">
-      Very low energy level allows small battery operated tags to achieve functions like precise indoors positioning, which so far could only be achieved with heavier equipment like cameras that need high processing power localisation algorithms.
+      The PANS library runs on the host microcontroller in the case of the DWM1001 the nRF52832. It is built on top of ecos RTOS.
     </div>
   </details>
 
@@ -3536,10 +3587,10 @@ What does Ultra Wide Band mean for home automation ?
       
       {
         "@type": "Question",
-        "name": "What is Ultra Wide Band ?",
+        "name": "Can the DWM1001C firmware be modified ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "It\u0026rsquo;s a radio technology that is not based on classical frequency or amplitude modulation rather uses a rich signal pulses that occupies a large spectrum band."
+          "text": "It is possible to flash any firmware on the nRF52832 uC host of the DWM1001C and in case of need Decawave provides the orginal PANS firmware as a .hex to recover the original functionality. The PANS though is only provided as binary program and binary library. It is possible to add a custom app code on top but the content of the PANS lib cannot be modified, or at least is not intended to be modified."
         }
       }
     
@@ -3551,10 +3602,10 @@ What does Ultra Wide Band mean for home automation ?
       
       ,{
         "@type": "Question",
-        "name": "What does Ultra Wide Band mean for home automation ?",
+        "name": "Where does the PANS library run ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Very low energy level allows small battery operated tags to achieve functions like precise indoors positioning, which so far could only be achieved with heavier equipment like cameras that need high processing power localisation algorithms."
+          "text": "The PANS library runs on the host microcontroller in the case of the DWM1001 the nRF52832. It is built on top of ecos RTOS."
         }
       }
     
@@ -3638,7 +3689,11 @@ What does Ultra Wide Band mean for home automation ?
             <li><a href="#dwm3000">DWM3000</a></li>
           </ul>
         </li>
-        <li><a href="#decawave-github">Decawave Github</a></li>
+        <li><a href="#decawave-github">Decawave Github</a>
+          <ul>
+            <li><a href="#variant-on-top-of-dwm1001-examples">Variant on top of dwm1001-examples</a></li>
+          </ul>
+        </li>
         <li><a href="#github-mynewt">Github mynewt</a></li>
         <li><a href="#zephyr-mainline">Zephyr Mainline</a></li>
         <li><a href="#zephyr-community">Zephyr Community</a></li>
