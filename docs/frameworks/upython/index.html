@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.999f8b21ad9b5a83efc7bfc5b217acacb0fc13804ab02ad1328f64ccab8c5980.js" integrity="sha256-mZ&#43;LIa2bWoPvx7/FshesrLD8E4BKsCrRMo9kzKuMWYA="></script>
+<script defer src="/en.search.min.ea045912455c3f7d702b06b085b546975ad37139e29c8e02d01c9071378f1aab.js" integrity="sha256-6gRZEkVcP31wKwawhbVGl1rTcTninI4C0ByQcTePGqs="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -958,6 +958,14 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#uart">uart</a></li>
       </ul>
     </li>
+    <li><a href="#thread-sensortag">Thread Sensortag</a>
+      <ul>
+        <li><a href="#config-1">config</a></li>
+        <li><a href="#python-code">python code</a></li>
+        <li><a href="#output">output</a></li>
+        <li><a href="#references">references</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -1067,7 +1075,51 @@ make BOARD<span style="color:#f92672">=</span>pca10059
 <li>build</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make BOARD<span style="color:#f92672">=</span>pca10056
-</code></pre></div></article>
+</code></pre></div><h1 id="thread-sensortag">
+  Thread Sensortag
+  <a class="anchor" href="#thread-sensortag">#</a>
+</h1>
+<h2 id="config-1">
+  config
+  <a class="anchor" href="#config-1">#</a>
+</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#define MICROPY_HW_LED1             (4) </span><span style="color:#75715e">// LED1
+</span><span style="color:#75715e"></span><span style="color:#75715e">#define MICROPY_HW_LED2             (6) </span><span style="color:#75715e">// LED2
+</span><span style="color:#75715e"></span><span style="color:#75715e">#define MICROPY_HW_LED3             (8) </span><span style="color:#75715e">// LED3
+</span><span style="color:#75715e"></span><span style="color:#75715e">#define MICROPY_HW_LED4             (1) </span><span style="color:#75715e">// LED4
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// UART config
+</span><span style="color:#75715e"></span><span style="color:#75715e">#define MICROPY_HW_UART1_RX         (2)
+</span><span style="color:#75715e">#define MICROPY_HW_UART1_TX         (29)
+</span><span style="color:#75715e">#define MICROPY_HW_UART1_CTS        (1)
+</span><span style="color:#75715e">#define MICROPY_HW_UART1_RTS        (1)
+</span><span style="color:#75715e">#define MICROPY_HW_UART1_HWFC       (0)
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// I2C busses
+</span><span style="color:#75715e"></span><span style="color:#75715e">#define MICROPY_HW_I2C1_NAME        &#34;I2C1&#34;
+</span><span style="color:#75715e">#define MICROPY_HW_I2C1_SCL         (45)  </span><span style="color:#75715e">// SCL
+</span><span style="color:#75715e"></span><span style="color:#75715e">#define MICROPY_HW_I2C1_SDA         (47)  </span><span style="color:#75715e">// SDA
+</span><span style="color:#75715e"></span>
+</code></pre></div><h2 id="python-code">
+  python code
+  <a class="anchor" href="#python-code">#</a>
+</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> machine <span style="color:#f92672">import</span> Pin, I2C
+
+i2c <span style="color:#f92672">=</span> I2C(<span style="color:#ae81ff">0</span>, scl<span style="color:#f92672">=</span>Pin(<span style="color:#ae81ff">45</span>), sda<span style="color:#f92672">=</span>Pin(<span style="color:#ae81ff">47</span>))
+i2c<span style="color:#f92672">.</span>scan()
+</code></pre></div><h2 id="output">
+  output
+  <a class="anchor" href="#output">#</a>
+</h2>
+<pre><code>[64, 72, 118]
+</code></pre><h2 id="references">
+  references
+  <a class="anchor" href="#references">#</a>
+</h2>
+<p><a href="https://github.com/adafruit/Adafruit_CircuitPython_MS8607">https://github.com/adafruit/Adafruit_CircuitPython_MS8607</a>
+<a href="https://github.com/eewiki/Xbee3-MicroPython/blob/master/samples/Zigbee_MS8607_i2c_rev1.py">https://github.com/eewiki/Xbee3-MicroPython/blob/master/samples/Zigbee_MS8607_i2c_rev1.py</a></p>
+</article>
  
       
 
@@ -1107,6 +1159,14 @@ make BOARD<span style="color:#f92672">=</span>pca10059
       <ul>
         <li><a href="#usb">usb</a></li>
         <li><a href="#uart">uart</a></li>
+      </ul>
+    </li>
+    <li><a href="#thread-sensortag">Thread Sensortag</a>
+      <ul>
+        <li><a href="#config-1">config</a></li>
+        <li><a href="#python-code">python code</a></li>
+        <li><a href="#output">output</a></li>
+        <li><a href="#references">references</a></li>
       </ul>
     </li>
   </ul>
