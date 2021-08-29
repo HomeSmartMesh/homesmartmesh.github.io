@@ -43,11 +43,6 @@
   </url>
   
   <url>
-    <loc>https://www.homesmartmesh.com/docs/frameworks/grafana/sensors/</loc>
-    <lastmod>2020-10-06T08:48:57+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.homesmartmesh.com/docs/networks/thread/</loc>
     <lastmod>2021-03-07T08:00:00+00:00</lastmod>
   </url>
@@ -118,6 +113,11 @@
   </url>
   
   <url>
+    <loc>https://www.homesmartmesh.com/docs/frameworks/grafana/sensors/</loc>
+    <lastmod>2020-10-06T08:48:57+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.homesmartmesh.com/docs/microcontrollers/riscv/</loc>
   </url>
   
@@ -142,12 +142,22 @@
   </url>
   
   <url>
+    <loc>https://www.homesmartmesh.com/docs/frameworks/grafana/thread_sensortag/</loc>
+    <lastmod>2020-10-06T08:48:57+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.homesmartmesh.com/docs/networks/nrf/</loc>
     <lastmod>2021-02-14T08:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.homesmartmesh.com/docs/microcontrollers/stm32/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.homesmartmesh.com/docs/frameworks/grafana/thread_sensortag_compare/</loc>
+    <lastmod>2021-08-29T08:48:57+00:00</lastmod>
   </url>
   
   <url>

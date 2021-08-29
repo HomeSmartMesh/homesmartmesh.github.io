@@ -68,16 +68,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/raspi_iot/</guid>
-      <description>Raspi Github RepoSoftware# Raspbian OS Main services  Mosquitto : https://mosquitto.org/ influxDB : https://www.influxdata.com/products/influxdb-overview/ mqtt2influx : py/influx Grafana : https://grafana.com/ graphql sensors : js/graphql   x to mqtt  Zigbee2mqtt : https://www.zigbee2mqtt.io/ nrf2mqtt : github nRF52_Mesh nrf_mesh miflora2mqtt : https://github.com/RaymondMouthaan/miflora-mqtt-daemon telegram bots2mqtt : js/telegraf based on https://github.com/telegraf/telegraf   automation services  Light control : py/hue Phantom Load cut : js/pc_control Heat cut : py/heating Home status : py/home_status Roborock button : py/hover   user interface  3D webapp : https://github.</description>
-    </item>
-    
-    <item>
-      <title>Temperature</title>
-      <link>https://www.homesmartmesh.com/docs/frameworks/grafana/sensors/</link>
-      <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
-      
-      <guid>https://www.homesmartmesh.com/docs/frameworks/grafana/sensors/</guid>
-      <description>Hot summer#Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-388b84c89c2369b2&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-388b84c89c2369b2&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};Xiaomi Aqara vs DIY BME280#Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-f8d70b01c18b3285&#34;);button.onclick = ()={var elem = document.</description>
+      <description>Raspi Github RepoHardware# Thread  See Thread SensorTag   Zigbee  Hue Light with Hue gateway Eurotronics thermostats with zigbee2mqtt Aquara sensors with Zigbee2mqtt   WiFi  ESP32 bed heater ESP32 neopixels led panel Shelly power control and monitor Roborock with valetudeo server : https://github.com/Hypfer/Valetudo   Custom RF  nRF52 sensors with nRF52 Mesh   ESP32  led panel : github esp32_iot rgb_led bed heating github esp32_iot bed_heater    Software# Raspbian OS Main services  Mosquitto : https://mosquitto.</description>
     </item>
     
     <item>
@@ -182,6 +173,15 @@ Final application#This repository has boilerplates samples. A real use case e
     </item>
     
     <item>
+      <title>Temperature</title>
+      <link>https://www.homesmartmesh.com/docs/frameworks/grafana/sensors/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/frameworks/grafana/sensors/</guid>
+      <description>Hot summer#Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-388b84c89c2369b2&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-388b84c89c2369b2&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};Xiaomi Aqara vs DIY BME280#Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-f8d70b01c18b3285&#34;);button.onclick = ()={var elem = document.</description>
+    </item>
+    
+    <item>
       <title>Simple Mesh SensorTag</title>
       <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</link>
       <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>
@@ -221,6 +221,15 @@ Relates to#Zephyr RTOSThread ProtocolOverview#The image abov
     </item>
     
     <item>
+      <title>SensorTags 90 Days</title>
+      <link>https://www.homesmartmesh.com/docs/frameworks/grafana/thread_sensortag/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/frameworks/grafana/thread_sensortag/</guid>
+      <description>Voltage and Temperature#SensorTag stress test with report every 3 seconds with average over 1 hourFull screenOpen in a new pagevar button = document.getElementById(&#34;btn-7df75999c5c036f9&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-7df75999c5c036f9&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};</description>
+    </item>
+    
+    <item>
       <title>Simple Mesh</title>
       <link>https://www.homesmartmesh.com/docs/networks/nrf/</link>
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
@@ -228,6 +237,15 @@ Relates to#Zephyr RTOSThread ProtocolOverview#The image abov
       <guid>https://www.homesmartmesh.com/docs/networks/nrf/</guid>
       <description>Simple Mesh Overview#A simpler, more efficient alternative to Z-x, BL-x, Thread, standard RF protocols. Open source SW is provided for custom and off the shelf nRF SoC tags and dongles.
 Simple Mesh SensorTagSimple Mesh RepoFeatures#     2.</description>
+    </item>
+    
+    <item>
+      <title>SensorTags 2 Days</title>
+      <link>https://www.homesmartmesh.com/docs/frameworks/grafana/thread_sensortag_compare/</link>
+      <pubDate>Sun, 29 Aug 2021 08:48:57 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/frameworks/grafana/thread_sensortag_compare/</guid>
+      <description>Voltage and Temperature#SensorTag stress test with report every 3 secondsFull screenOpen in a new pagevar button = document.getElementById(&#34;btn-98f35d7bf7cdff04&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-98f35d7bf7cdff04&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};</description>
     </item>
     
     <item>
