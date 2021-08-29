@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.ea045912455c3f7d702b06b085b546975ad37139e29c8e02d01c9071378f1aab.js" integrity="sha256-6gRZEkVcP31wKwawhbVGl1rTcTninI4C0ByQcTePGqs="></script>
+<script defer src="/en.search.min.ad6d8933d636c72c5a9b6c0d9aacb987638904049420a62ae3b5b98fd3fef0ba.js" integrity="sha256-rW2JM9Y2xyxam2wNmqy5h2OJBASUIKYq47W5j9P&#43;8Lo="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -951,17 +951,20 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#overview">Overview</a>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#hardware">Hardware</a>
       <ul>
         <li><a href="#schematics">Schematics</a></li>
         <li><a href="#manufacturing">Manufacturing</a></li>
         <li><a href="#board">Board</a></li>
+        <li><a href="#produced-versions">Produced versions</a></li>
+        <li><a href="#pogo-pins-adapter">Pogo pins adapter</a></li>
       </ul>
     </li>
-    <li><a href="#development">Development</a>
+    <li><a href="#software">Software</a>
       <ul>
-        <li><a href="#install">install</a></li>
-        <li><a href="#sdk-samples">sdk samples</a>
+        <li><a href="#border-router-setup">Border Router Setup</a></li>
+        <li><a href="#zephyr-tag-firmware">Zephyr Tag Firmware</a>
           <ul>
             <li><a href="#tag_sensors_broadcast">tag_sensors_broadcast</a></li>
             <li><a href="#device-treee-drivers">device treee drivers</a></li>
@@ -970,7 +973,7 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#tag_battery">tag_battery</a></li>
           </ul>
         </li>
-        <li><a href="#preliminary-test-samples">preliminary test samples</a>
+        <li><a href="#old-nrf-sdk-firmware">old NRF-SDK Firmware</a>
           <ul>
             <li><a href="#01-dongle-nrfsdk-mqttsn-client">01 dongle nrfsdk mqttsn client</a></li>
             <li><a href="#04-dongle-pio-zephyr-blink">04 dongle pio zephyr blink</a></li>
@@ -980,10 +983,8 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#09-tag-zephyr-i2c">09 tag zephyr i2c</a></li>
           </ul>
         </li>
-        <li><a href="#flashing">flashing</a></li>
       </ul>
     </li>
-    <li><a href="#produced-versions">Produced versions</a></li>
     <li><a href="#faq---discussion">FAQ - Discussion</a></li>
   </ul>
 </nav>
@@ -1130,6 +1131,10 @@ https://github.com/alex-shpak/hugo-book
 <li>Reset button <code>P0.18</code> and <a href="?svg=nrf52-sensor-tag&amp;text=S2">user button</a> SW0 <code>P1.09</code></li>
 <li><a href="?svg=nrf52-sensor-tag&amp;text=LED1">RGB LED</a> <code>P0. 04 06 08</code></li>
 </ul>
+<h1 id="hardware">
+  Hardware
+  <a class="anchor" href="#hardware">#</a>
+</h1>
 <h2 id="schematics">
   Schematics
   <a class="anchor" href="#schematics">#</a>
@@ -1542,16 +1547,287 @@ https://github.com/alex-shpak/hugo-book
   
 </div>
 
-<h1 id="development">
-  Development
-  <a class="anchor" href="#development">#</a>
-</h1>
-<h2 id="install">
-  install
-  <a class="anchor" href="#install">#</a>
+<h2 id="produced-versions">
+  Produced versions
+  <a class="anchor" href="#produced-versions">#</a>
 </h2>
 <ul>
-<li>install <a href="http://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/zephyr/getting_started/index.html#getting-started">zephyr and west</a></li>
+<li>v 1.1 15.04.2021</li>
+</ul>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/v1.1"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            tag v1.1
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="box" style="max-width:200px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/thread_sensortag/prototype_top_v1.1.webp" />
+    </div>
+    <a href="/images/thread_sensortag/prototype_top_v1.1.webp" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+
+<div class="box" style="max-width:200px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/thread_sensortag/prototype_bottom_v1.1.webp" />
+    </div>
+    <a href="/images/thread_sensortag/prototype_bottom_v1.1.webp" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<ul>
+<li>v 1.0 10.02.2021</li>
+</ul>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/v1.0"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            tag v1.0
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
+
+<div class="box" style="max-width:200px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/thread_sensortag/prototype_top.webp" />
+    </div>
+    <a href="/images/thread_sensortag/prototype_top.webp" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+
+<div class="box" style="max-width:200px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/thread_sensortag/prototype_bottom.webp" />
+    </div>
+    <a href="/images/thread_sensortag/prototype_bottom.webp" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<h2 id="pogo-pins-adapter">
+  Pogo pins adapter
+  <a class="anchor" href="#pogo-pins-adapter">#</a>
+</h2>
+<ul>
+<li>SWD pogo pins adapter</li>
+<li>Pogo Pin P75-E2 Dia 1.3mm Length 16.5mm</li>
+</ul>
+<p>
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://www.homesmartmesh.com/models/thread4_lower.stl"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            STL Model
+            
+            
+                
+                
+
+                
+
+                
+
+                
+
+                
+                <svg    class="download"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                        >
+                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
+                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
+                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
+                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
+                </svg>
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+<div >
+    <model-viewer 
+        id="b501dd84c1ba51fc"
+        src="/models/thread4_lower.glb"
+        style="width:100%;height: 400px; "
+        exposure="0.2"
+        auto-rotate camera-controls >
+    </model-viewer>
+</div>
+
+
+
+
+
+
+<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/01%20on%20print%20bed%20with%20supports.jpg');" >
+				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/01%20on%20print%20bed%20with%20supports.jpg" alt="01 on print bed with supports" />
+				    </div>
+			      <figcaption>
+		          <p>01 on print bed with supports</p>
+			      </figcaption>
+				    <a href="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/01%20on%20print%20bed%20with%20supports.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/02%20attached.jpg');" >
+				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/02%20attached.jpg" alt="02 attached" />
+				    </div>
+			      <figcaption>
+		          <p>02 attached</p>
+			      </figcaption>
+				    <a href="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/02%20attached.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/03%20top%20view.jpg');" >
+				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/03%20top%20view.jpg" alt="03 top view" />
+				    </div>
+			      <figcaption>
+		          <p>03 top view</p>
+			      </figcaption>
+				    <a href="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/03%20top%20view.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/04%20detached%20bottom.jpg');" >
+				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/04%20detached%20bottom.jpg" alt="04 detached bottom" />
+				    </div>
+			      <figcaption>
+		          <p>04 detached bottom</p>
+			      </figcaption>
+				    <a href="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/04%20detached%20bottom.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+</div>
+</p>
+<h1 id="software">
+  Software
+  <a class="anchor" href="#software">#</a>
+</h1>
+<h2 id="border-router-setup">
+  Border Router Setup
+  <a class="anchor" href="#border-router-setup">#</a>
+</h2>
+<p>For the main Thread sensor broadcast firmware a raspberry pi is needed to act as a thread boarder router to which a usb dongle is connected as a thread radio co-processor.</p>
+
+
+
+
+  
+
+
+<div class="col text-center">
+<a  href="/docs/networks/thread/#border-router"   class="book-btn">
+  border router setup
+</a>
+</div>
+
+<h2 id="zephyr-tag-firmware">
+  Zephyr Tag Firmware
+  <a class="anchor" href="#zephyr-tag-firmware">#</a>
+</h2>
+<ul>
+<li>The development environment is based on <a href="http://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/zephyr/getting_started/index.html#getting-started">zephyr and west</a></li>
 </ul>
 <blockquote class="book-hint warning">
   make sure there is no environment variable <code>ZEPHYR_BASE</code> in order to use the local zephyr version
@@ -1567,11 +1843,7 @@ west init -m https://github.com/HomeSmartMesh/sdk-hsm-sensortag --mr main
 <li>fetch all dependencies from referenced repos in <code>hsm.west.yml</code></li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">west update
-</code></pre></div><h2 id="sdk-samples">
-  sdk samples
-  <a class="anchor" href="#sdk-samples">#</a>
-</h2>
-<p>The SDK samples are presented in two folds, first the overall application including all the measures, then a list of basic applications with minimal code for each driver and measure separately</p>
+</code></pre></div><p>The first presented SDK sample is the overall application that broadcasts all sensors measures, followed by a list of basic applications with minimal code for each driver and sensor separately</p>
 <h3 id="tag_sensors_broadcast">
   tag_sensors_broadcast
   <a class="anchor" href="#tag_sensors_broadcast">#</a>
@@ -1619,7 +1891,7 @@ west init -m https://github.com/HomeSmartMesh/sdk-hsm-sensortag --mr main
 </div>
 
 
-<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
@@ -1821,25 +2093,7 @@ rtt:~$ rtt:~$ thread_tags/7009D837C7BB557A{&quot;alive&quot;:2,&quot;voltage&quo
 
 
 <ul>
-<li>
-<p>for info on the raspberry pi border router setup and networking see :
-
-
-
-
-  
-
-
-<div class="col text-center">
-<a  href="/docs/networks/thread/#openthread---setup"   class="book-btn">
-  border router setup
-</a>
-</div>
-</p>
-</li>
-<li>
-<p>it&rsquo;s possible to listen to the ipv6 thread udp packets using <code>socat</code></p>
-</li>
+<li>it&rsquo;s possible to listen to the ipv6 thread udp packets using <code>socat</code></li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">socat UDP6-LISTEN:4242,fork STDOUT
 </code></pre></div>
@@ -2374,10 +2628,11 @@ Memory region         Used Size  Region Size  %age Used
   </div>
 </details>
 
-<h2 id="preliminary-test-samples">
-  preliminary test samples
-  <a class="anchor" href="#preliminary-test-samples">#</a>
+<h2 id="old-nrf-sdk-firmware">
+  old NRF-SDK Firmware
+  <a class="anchor" href="#old-nrf-sdk-firmware">#</a>
 </h2>
+<p>this section is kept as documentation only as the old NRF-SDK is deprecated and this project continues with the previous section using the nRF-Connect SDK based on Zephyr.
 
 <div class="container">
     <div class="row">
@@ -2419,7 +2674,7 @@ Memory region         Used Size  Region Size  %age Used
     </div>
     </div>
 </div>
-
+</p>
 <h3 id="01-dongle-nrfsdk-mqttsn-client">
   01 dongle nrfsdk mqttsn client
   <a class="anchor" href="#01-dongle-nrfsdk-mqttsn-client">#</a>
@@ -2810,237 +3065,6 @@ Memory region         Used Size  Region Size  %age Used
   </div>
 </details>
 
-<h2 id="flashing">
-  flashing
-  <a class="anchor" href="#flashing">#</a>
-</h2>
-<ul>
-<li>SWD pogo pins adapter</li>
-<li>Pogo Pin P75-E2 Dia 1.3mm Length 16.5mm</li>
-</ul>
-<p>
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://www.homesmartmesh.com/models/thread4_lower.stl"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            STL Model
-            
-            
-                
-                
-
-                
-
-                
-
-                
-
-                
-                <svg    class="download"
-                        viewBox="0 0 512 512"
-                        fill="currentColor"
-                        >
-                    <path d="M382.56,233.376C379.968,227.648,374.272,224,368,224h-64V16c0-8.832-7.168-16-16-16h-64c-8.832,0-16,7.168-16,16v208h-64
-                    c-6.272,0-11.968,3.68-14.56,9.376c-2.624,5.728-1.6,12.416,2.528,17.152l112,128c3.04,3.488,7.424,5.472,12.032,5.472
-                    c4.608,0,8.992-2.016,12.032-5.472l112-128C384.192,245.824,385.152,239.104,382.56,233.376z"/>
-                    <path d="M432,352v96H80v-96H16v128c0,17.696,14.336,32,32,32h416c17.696,0,32-14.304,32-32V352H432z"/>
-                </svg>
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-
-
-
-<div >
-    <model-viewer 
-        id="b501dd84c1ba51fc"
-        src="/models/thread4_lower.glb"
-        style="width:100%;height: 400px; "
-        exposure="0.2"
-        auto-rotate camera-controls >
-    </model-viewer>
-</div>
-
-
-
-
-
-
-<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
-				<div class="box">
-				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/01%20on%20print%20bed%20with%20supports.jpg');" >
-				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/01%20on%20print%20bed%20with%20supports.jpg" alt="01 on print bed with supports" />
-				    </div>
-			      <figcaption>
-		          <p>01 on print bed with supports</p>
-			      </figcaption>
-				    <a href="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/01%20on%20print%20bed%20with%20supports.jpg" itemprop="contentUrl"></a>
-				  </figure>
-				</div>
-				<div class="box">
-				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/02%20attached.jpg');" >
-				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/02%20attached.jpg" alt="02 attached" />
-				    </div>
-			      <figcaption>
-		          <p>02 attached</p>
-			      </figcaption>
-				    <a href="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/02%20attached.jpg" itemprop="contentUrl"></a>
-				  </figure>
-				</div>
-				<div class="box">
-				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/03%20top%20view.jpg');" >
-				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/03%20top%20view.jpg" alt="03 top view" />
-				    </div>
-			      <figcaption>
-		          <p>03 top view</p>
-			      </figcaption>
-				    <a href="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/03%20top%20view.jpg" itemprop="contentUrl"></a>
-				  </figure>
-				</div>
-				<div class="box">
-				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img" style="background-image: url('https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/04%20detached%20bottom.jpg');" >
-				      <img itemprop="thumbnail" src="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/04%20detached%20bottom.jpg" alt="04 detached bottom" />
-				    </div>
-			      <figcaption>
-		          <p>04 detached bottom</p>
-			      </figcaption>
-				    <a href="https://www.homesmartmesh.com//images/thread_sensortag/swd-pogo/04%20detached%20bottom.jpg" itemprop="contentUrl"></a>
-				  </figure>
-				</div>
-</div>
-</p>
-<h1 id="produced-versions">
-  Produced versions
-  <a class="anchor" href="#produced-versions">#</a>
-</h1>
-<ul>
-<li>v 1.1 15.04.2021</li>
-</ul>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/v1.1"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            tag v1.1
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-                
-
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-<ul>
-<li>v 1.0 10.02.2021</li>
-</ul>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/v1.0"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            tag v1.0
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-                
-
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-
-<div class="box" style="max-width:200px">
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img">
-      <img itemprop="thumbnail" src="/images/thread_sensortag/prototype_top.webp" />
-    </div>
-    <a href="/images/thread_sensortag/prototype_top.webp" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-
-
-<div class="box" style="max-width:200px">
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img">
-      <img itemprop="thumbnail" src="/images/thread_sensortag/prototype_bottom.webp" />
-    </div>
-    <a href="/images/thread_sensortag/prototype_bottom.webp" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
 <h1 id="faq---discussion">
   FAQ - Discussion
   <a class="anchor" href="#faq---discussion">#</a>
@@ -3233,17 +3257,20 @@ Note that this application is developed for the nRF family but openthread is sup
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#overview">Overview</a>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#hardware">Hardware</a>
       <ul>
         <li><a href="#schematics">Schematics</a></li>
         <li><a href="#manufacturing">Manufacturing</a></li>
         <li><a href="#board">Board</a></li>
+        <li><a href="#produced-versions">Produced versions</a></li>
+        <li><a href="#pogo-pins-adapter">Pogo pins adapter</a></li>
       </ul>
     </li>
-    <li><a href="#development">Development</a>
+    <li><a href="#software">Software</a>
       <ul>
-        <li><a href="#install">install</a></li>
-        <li><a href="#sdk-samples">sdk samples</a>
+        <li><a href="#border-router-setup">Border Router Setup</a></li>
+        <li><a href="#zephyr-tag-firmware">Zephyr Tag Firmware</a>
           <ul>
             <li><a href="#tag_sensors_broadcast">tag_sensors_broadcast</a></li>
             <li><a href="#device-treee-drivers">device treee drivers</a></li>
@@ -3252,7 +3279,7 @@ Note that this application is developed for the nRF family but openthread is sup
             <li><a href="#tag_battery">tag_battery</a></li>
           </ul>
         </li>
-        <li><a href="#preliminary-test-samples">preliminary test samples</a>
+        <li><a href="#old-nrf-sdk-firmware">old NRF-SDK Firmware</a>
           <ul>
             <li><a href="#01-dongle-nrfsdk-mqttsn-client">01 dongle nrfsdk mqttsn client</a></li>
             <li><a href="#04-dongle-pio-zephyr-blink">04 dongle pio zephyr blink</a></li>
@@ -3262,10 +3289,8 @@ Note that this application is developed for the nRF family but openthread is sup
             <li><a href="#09-tag-zephyr-i2c">09 tag zephyr i2c</a></li>
           </ul>
         </li>
-        <li><a href="#flashing">flashing</a></li>
       </ul>
     </li>
-    <li><a href="#produced-versions">Produced versions</a></li>
     <li><a href="#faq---discussion">FAQ - Discussion</a></li>
   </ul>
 </nav>
