@@ -13,7 +13,7 @@
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/raspi_iot/</guid>
-      <description>Discourse ForumSupport and discussions on the ForumGithub RepoSource code on the Github Repoimport {defined} from &#34;/js/web-js-utils.js&#34;import {Grid} from &#34;/js/grid.js&#34;let grid_div = document.getElementById(&#34;grid-2a00875ce400bf70&#34;);let grid = new Grid(grid_div);grid_div.querySelectorAll(&#34;.card&#34;).forEach((item)={grid.scale_card(item);})grid.apply()let buttons_bar = document.getElementById(&#34;buttons-2a00875ce400bf70&#34;);buttons_bar.querySelectorAll(&#34;.grid-button&#34;).forEach((button)={button.addEventListener(&#34;click&#34;,(e)={let filter = e.target.getAttribute(&#34;data-filter&#34;);let grid_div = document.getElementById(&#34;grid-2a00875ce400bf70&#34;);if(!e.shiftKey){buttons_bar.querySelectorAll(&#34;.grid-button&#34;).forEach((button)={button.classList.remove(&#34;selected&#34;)});}if(e.target.classList.contains(&#34;selected&#34;)){if((e.</description>
+      <description>Discourse ForumSupport and discussions on the ForumGithub RepoSource code on the Github Repoimport {defined} from &#34;/js/web-js-utils.js&#34;import {Grid} from &#34;/js/grid.js&#34;let grid_div = document.getElementById(&#34;grid-2a00875ce400bf70&#34;);let grid = new Grid(grid_div);grid_div.</description>
     </item>
     
     <item>

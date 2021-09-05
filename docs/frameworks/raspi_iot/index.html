@@ -18,7 +18,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.6ded4a48dd4be22285c71849d52df7dc9c3e9b29e2374ae775caf98118a4084b.js" integrity="sha256-be1KSN1L4iKFxxhJ1S333Jw&#43;myniN0rndcr5gRikCEs="></script>
+<script defer src="/en.search.min.6a34c47fd94fed314c46d8847eeef4a55cfb8d59b02272effb4978c53fe133fd.js" integrity="sha256-ajTEf9lP7TFMRtiEfu70pVz7jVmwInLv&#43;0l4xT/hM/0="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -990,6 +990,7 @@ https://github.com/alex-shpak/hugo-book
           </ul>
         </li>
         <li><a href="#smart-home-3d-webapp">Smart home 3D webapp</a></li>
+        <li><a href="#thread-tags">thread tags</a></li>
         <li><a href="#led-panel-webapp">Led Panel webapp</a></li>
         <li><a href="#mqtt2influx">mqtt2influx</a></li>
         <li><a href="#home-heating-app">Home heating app</a>
@@ -1036,6 +1037,67 @@ https://github.com/alex-shpak/hugo-book
       
       
   <article class="markdown">
+
+
+
+  
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="/js/load-photoswipe.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true" id="p_swipe">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
 
 
 <link rel="stylesheet" href="/css/grid.css" />
@@ -1267,18 +1329,17 @@ https://github.com/alex-shpak/hugo-book
 
 <ul>
 <li>Raspbian OS</li>
-<li>Main services
+<li>Base services
 <ul>
-<li>Mosquitto : <a href="https://mosquitto.org/">https://mosquitto.org/</a></li>
-<li>influxDB : <a href="https://www.influxdata.com/products/influxdb-overview/">https://www.influxdata.com/products/influxdb-overview/</a></li>
-<li>mqtt2influx : <a href="./py/influx">py/influx</a></li>
-<li>Grafana : <a href="https://grafana.com/">https://grafana.com/</a></li>
-<li>graphql sensors : <a href="./js/graphql">js/graphql</a></li>
+<li>Mosquitto : from <a href="https://mosquitto.org/">mosquitto.org</a> installed with a docker container</li>
+<li>influxDB : from <a href="https://www.influxdata.com/products/influxdb-overview/">influxdata.com</a> installed with a docker container</li>
+<li>mqtt2influx : <a href="#mqtt2influx">py/influx</a> is a python script service that sends configured mqtt topics to influxdb</li>
+<li>Grafana : from <a href="https://grafana.com/">grafana.com</a> installed with a docker container and provisioned with a default datasource and dashboard</li>
 </ul>
 </li>
 <li>x to mqtt
 <ul>
-<li>Thread UDP to mqtt : <a href="https://github.com/HomeSmartMesh/raspi/tree/master/py/thread_tags">py/thread_tags</a></li>
+<li>Thread UDP to mqtt : <a href="#thread_tags">thread_tags</a></li>
 <li>Zigbee2mqtt : <a href="https://www.zigbee2mqtt.io/">https://www.zigbee2mqtt.io/</a></li>
 <li>nrf2mqtt : <a href="https://github.com/nRFMesh/nRF52_Mesh/tree/master/raspi/nrf_mesh">github nRF52_Mesh nrf_mesh</a></li>
 <li>miflora2mqtt : <a href="https://github.com/RaymondMouthaan/miflora-mqtt-daemon">https://github.com/RaymondMouthaan/miflora-mqtt-daemon</a></li>
@@ -1302,59 +1363,76 @@ https://github.com/alex-shpak/hugo-book
 <li>Roborock Chat : <a href="./js/telegraf/hover_poll.js">js/telegraf/hover_poll.js</a></li>
 </ul>
 </li>
+<li>others
+<ul>
+<li>graphql sensors : experimental service, details in <a href="https://github.com/HomeSmartMesh/raspi/blob/master/js/graphql/readme.md">js/graphql</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="raspberry-pi-setup">
   raspberry pi setup
   <a class="anchor" href="#raspberry-pi-setup">#</a>
 </h2>
 <ul>
-<li>download an os from <a href="https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit">https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit</a></li>
+<li>download an os from <a href="https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit">https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit</a> tested with <code>2021-05-07-raspios-buster-armhf-lite.img</code></li>
 <li>use the Raspberry pi Imager tool to write the image. The tool is available from <a href="https://www.raspberrypi.org/software/">https://www.raspberrypi.org/software/</a></li>
 <li>eject, then reinsert the sdcard, write a file on root named <code>ssh</code> without extensions</li>
-<li>connect through ethernet, identify the ip from the router connect through ssh with <code>pi</code> and pw <code>raspberry</code></li>
-<li>setup the border router</li>
+<li>connect through ethernet, identify the ip from the router connect through ssh with <code>pi</code> and pw <code>raspberry</code>
+<ul>
+<li>in case the same raspberry pi was already known under a different host, make sure to delete it from <code>~/.ssh/known_hosts</code></li>
 </ul>
+</li>
+<li>download and run the <code>get_raspi.sh</code> with the following commands</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl https://raw.githubusercontent.com/HomeSmartMesh/raspi/master/get_raspi.sh -o get_raspi.sh
+sudo sh get_raspi.sh
+</code></pre></div><ul>
+<li>the <code>get_raspi.sh</code> script will run the following
+<ul>
+<li><code>apt-get update</code> and <code>apt-get upgrade</code> with auto-confirmation <code>-y</code> option</li>
+<li>install git if not available</li>
+<li>close the raspi_iot repo</li>
+<li>run the <code>raspi/setup.sh</code> script</li>
+</ul>
+</li>
+<li>the setup script will need to be relaunched after reboot</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd raspi
+sudo sh setup.sh
+</code></pre></div><ul>
+<li>the <code>raspi/setup.sh</code> script will run the following
+<ul>
+<li>check if <code>docker</code> is available otherwise install it then reboot, in which case the script has to be run again manually</li>
+<li>check if <code>docker-compose</code> is available otherwise install it then reboot, in which case the script has to be run again manually</li>
+<li>check if <code>openthread</code> is available otherwise install it then reboot, in which case the script has to be run again manually</li>
+<li>at the end in will launch the <code>setup_thread_services.sh</code></li>
+</ul>
+</li>
+<li>the <code>setup_thread_services.sh</code> script will perform the following
+<ul>
+<li>start the docker compose file that includes docker images for <code>mosquitto</code>, <code>influx</code> and <code>grafana</code>
+<ul>
+<li>the grafana container have the config and provisioning mapped from the raspi <code>grafana</code> directory</li>
+<li>the grafana has porivioned the databse <code>mqtt</code> from <code>http://localhost:8086</code></li>
+</ul>
+</li>
+<li>install the <code>influx_mqtt</code> which is an mqtt to influx python service, then creates an influx databse named <code>mqtt</code></li>
+<li>install the <code>thread_tags</code> udp-v6 to mqtt python service</li>
+</ul>
+</li>
+<li>on the <code>http://raspi_ip</code> OT Border Router web GUI, Form a network e.g. on channel 18
 
-
-
-
-  
-
-
-<div class="col text-center">
-<a  href="/docs/networks/thread/#border-router"   class="book-btn">
-  border router setup
-</a>
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="box" style="max-width:300px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/thread_sensortag/form_network.png" />
+    </div>
+    <a href="/images/thread_sensortag/form_network.png" itemprop="contentUrl"></a>
+  </figure>
 </div>
-
-<ul>
-<li>restart then create a network on the border router web GUI in the url of the rasp ip address</li>
-<li>install docker and docker compose</li>
-</ul>
-<pre><code>  sudo apt-get update &amp;&amp; sudo apt-get upgrade
-  curl -fsSL https://get.docker.com -o get-docker.sh
-  sudo sh get-docker.sh
-  sudo usermod -aG docker pi
-  sudo reboot now
-  sudo apt-get install libffi-dev libssl-dev
-  sudo apt install python3-dev
-  sudo apt-get install -y python3 python3-pip
-  sudo pip3 install docker-compose
-</code></pre><ul>
-<li>clone this repo and start services that will run docker compose <code>docker-compose-thread.yml</code> and python services</li>
-</ul>
-<pre><code>git clone https://github.com/HomeSmartMesh/raspi.git
-cd raspi
-./start_services.sh
-</code></pre><p>these steps still manual can be scripted</p>
-<ul>
-<li>in the influx container, create a database named <code>mqtt</code></li>
-</ul>
-<pre><code>$influx
-&gt;CREATE DATABASE mqtt
-</code></pre><ul>
-<li>in grafana <code>http://raspi_ip:3000</code> create an influx datasource on url <code>http://localhost:8086</code></li>
-<li>upload the dashboard <code>grafana\Dashboards\SensorTag Compare.json</code></li>
+</li>
+<li>open the grafana dashboard <code>SensorTag Compare</code> from <code>http://raspi_ip:3000</code></li>
 </ul>
 <h2 id="meta-website">
   Meta website
@@ -1531,6 +1609,36 @@ cd raspi
 <li>Hackaday project : <a href="https://hackaday.io/project/169046-smart-home-3d-webapp">https://hackaday.io/project/169046-smart-home-3d-webapp</a></li>
 <li>Even a Hackaday Blog entry : <a href="https://hackaday.com/2019/12/29/the-smart-home-gains-an-extra-dimension/">https://hackaday.com/2019/12/29/the-smart-home-gains-an-extra-dimension/</a></li>
 </ul>
+<h2 id="thread-tags">
+  thread tags
+  <a class="anchor" href="#thread-tags">#</a>
+</h2>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/thread_sensortag/application.png" />
+    </div>
+    <a href="/images/thread_sensortag/application.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<p>this python script listens to an ipv6 udp port and takes a text in the form of <code>mqtt_topic{json_payload}</code> then broadcasts the <code>json_payload</code> on the <code>mqtt_topic</code> of the configured mqtt broquer in the <a href="">config.json</a> file</p>
+<p>usage with a thread sensor gag
+
+
+
+
+  
+
+
+<div class="col text-center">
+<a  href="/docs/microcontrollers/nrf52/thread_sensortag/#tag_sensors_broadcast"   class="book-btn">
+  tag sensors broadcast
+</a>
+</div>
+</p>
 <h2 id="led-panel-webapp">
   Led Panel webapp
   <a class="anchor" href="#led-panel-webapp">#</a>
@@ -2455,6 +2563,7 @@ how does the Raspi-IoT framework compare to existing frameworks like home assist
           </ul>
         </li>
         <li><a href="#smart-home-3d-webapp">Smart home 3D webapp</a></li>
+        <li><a href="#thread-tags">thread tags</a></li>
         <li><a href="#led-panel-webapp">Led Panel webapp</a></li>
         <li><a href="#mqtt2influx">mqtt2influx</a></li>
         <li><a href="#home-heating-app">Home heating app</a>
