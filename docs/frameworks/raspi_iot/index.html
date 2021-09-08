@@ -18,7 +18,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.6a34c47fd94fed314c46d8847eeef4a55cfb8d59b02272effb4978c53fe133fd.js" integrity="sha256-ajTEf9lP7TFMRtiEfu70pVz7jVmwInLv&#43;0l4xT/hM/0="></script>
+<script defer src="/en.search.min.131acbba3c113228036d5f4f9d5b5e63d17213e417dfe128a839e690fd3ce9e3.js" integrity="sha256-ExrLujwRMigDbV9PnVteY9FyE&#43;QX3&#43;EoqDnmkP086eM="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -981,7 +981,12 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#hardware">Hardware</a></li>
     <li><a href="#software">Software</a>
       <ul>
-        <li><a href="#raspberry-pi-setup">raspberry pi setup</a></li>
+        <li><a href="#raspberry-pi-setup">raspberry pi setup</a>
+          <ul>
+            <li><a href="#the-raspisetupsh-script-will-run-the-following">The <code>raspi/setup.sh</code> script will run the following</a></li>
+            <li><a href="#the-setup_thread_servicessh-script-will-perform-the-following">The <code>setup_thread_services.sh</code> script will perform the following</a></li>
+          </ul>
+        </li>
         <li><a href="#meta-website">Meta website</a>
           <ul>
             <li><a href="#what-is-it-">What is it ?</a></li>
@@ -1373,42 +1378,66 @@ https://github.com/alex-shpak/hugo-book
   raspberry pi setup
   <a class="anchor" href="#raspberry-pi-setup">#</a>
 </h2>
-<ul>
-<li>download an os from <a href="https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit">https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit</a> tested with <code>2021-05-07-raspios-buster-armhf-lite.img</code></li>
-<li>use the Raspberry pi Imager tool to write the image. The tool is available from <a href="https://www.raspberrypi.org/software/">https://www.raspberrypi.org/software/</a></li>
-<li>eject, then reinsert the sdcard, write a file on root named <code>ssh</code> without extensions</li>
-<li>connect through ethernet, identify the ip from the router connect through ssh with <code>pi</code> and pw <code>raspberry</code>
-<ul>
-<li>in case the same raspberry pi was already known under a different host, make sure to delete it from <code>~/.ssh/known_hosts</code></li>
-</ul>
+<ol>
+<li>
+<p>download an os from <a href="https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit">https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit</a> tested with <code>2021-05-07-raspios-buster-armhf-lite.img</code></p>
 </li>
-<li>download and run the <code>get_raspi.sh</code> with the following commands</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl https://raw.githubusercontent.com/HomeSmartMesh/raspi/master/get_raspi.sh -o get_raspi.sh
-sudo sh get_raspi.sh
-</code></pre></div><ul>
-<li>the <code>get_raspi.sh</code> script will run the following
+<li>
+<p>use the Raspberry pi Imager tool to write the image. The tool is available from <a href="https://www.raspberrypi.org/software/">https://www.raspberrypi.org/software/</a></p>
+</li>
+<li>
+<p>eject, then reinsert the sdcard, write a file on root named <code>ssh</code> without extensions</p>
+ <details>
+   <summary>Optional: Enable WiFi</summary>
+<p>Create a file called <em>wpa_supplicant.conf</em> on root</p>
+<pre><code>  country=US # Your 2-digit country code
+  ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+  network={
+      ssid=&quot;YOUR_NETWORK_NAME&quot;
+      psk=&quot;YOUR_PASSWORD&quot;
+      key_mgmt=WPA-PSK
+  }
+   
+</code></pre> </details>
+</li>
+<li>
+<p>connect through ethernet, identify the ip from the router connect through ssh with <code>pi</code> and pw <code>raspberry</code>. 
+In case the same raspberry pi was already known under a different host, make sure to delete it from <code>~/.ssh/known_hosts</code>.</p>
+</li>
+<li>
+<p>download and run the <code>get_raspi.sh</code> with the following command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl https://raw.githubusercontent.com/HomeSmartMesh/raspi/master/get_raspi.sh -o get_raspi.sh <span style="color:#f92672">&amp;&amp;</span> sudo sh get_raspi.sh
+</code></pre></div> <details>
+   <summary>Script Details</summary>
+<p>The <code>get_raspi.sh</code> script will run the following</p>
 <ul>
 <li><code>apt-get update</code> and <code>apt-get upgrade</code> with auto-confirmation <code>-y</code> option</li>
 <li>install git if not available</li>
 <li>close the raspi_iot repo</li>
 <li>run the <code>raspi/setup.sh</code> script</li>
 </ul>
+ </details>
 </li>
-<li>the setup script will need to be relaunched after reboot</li>
-</ul>
+<li>
+<p>the setup script will need to be relaunched after reboot</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd raspi
 sudo sh setup.sh
-</code></pre></div><ul>
-<li>the <code>raspi/setup.sh</code> script will run the following
+</code></pre></div> <details>
+   <summary>Script Details</summary>
+<h3 id="the-raspisetupsh-script-will-run-the-following">
+  The <code>raspi/setup.sh</code> script will run the following
+  <a class="anchor" href="#the-raspisetupsh-script-will-run-the-following">#</a>
+</h3>
 <ul>
 <li>check if <code>docker</code> is available otherwise install it then reboot, in which case the script has to be run again manually</li>
 <li>check if <code>docker-compose</code> is available otherwise install it then reboot, in which case the script has to be run again manually</li>
 <li>check if <code>openthread</code> is available otherwise install it then reboot, in which case the script has to be run again manually</li>
 <li>at the end in will launch the <code>setup_thread_services.sh</code></li>
 </ul>
-</li>
-<li>the <code>setup_thread_services.sh</code> script will perform the following
+<h3 id="the-setup_thread_servicessh-script-will-perform-the-following">
+  The <code>setup_thread_services.sh</code> script will perform the following
+  <a class="anchor" href="#the-setup_thread_servicessh-script-will-perform-the-following">#</a>
+</h3>
 <ul>
 <li>start the docker compose file that includes docker images for <code>mosquitto</code>, <code>influx</code> and <code>grafana</code>
 <ul>
@@ -1419,8 +1448,13 @@ sudo sh setup.sh
 <li>install the <code>influx_mqtt</code> which is an mqtt to influx python service, then creates an influx databse named <code>mqtt</code></li>
 <li>install the <code>thread_tags</code> udp-v6 to mqtt python service</li>
 </ul>
+ </details>
 </li>
-<li>on the <code>http://raspi_ip</code> OT Border Router web GUI, Form a network e.g. on channel 18
+<li>
+<p>Reboot the device again after the installation is done</p>
+</li>
+<li>
+<p>discover the raspi ip address from the router (will be used to replace <code>&lt;raspi_ip&gt;</code>) then navigate on a browser on <code>http://&lt;raspi_ip&gt;</code>, the OT Border Router web GUI should appear. Use it to form a network e.g. (channel 18, panid 0x4412,&hellip;). Make sure that the same parameters are used in the thread sensor tag firmware.
 
 <link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
 <div class="box" style="max-width:300px">
@@ -1431,9 +1465,12 @@ sudo sh setup.sh
     <a href="/images/thread_sensortag/form_network.png" itemprop="contentUrl"></a>
   </figure>
 </div>
+</p>
 </li>
-<li>open the grafana dashboard <code>SensorTag Compare</code> from <code>http://raspi_ip:3000</code></li>
-</ul>
+<li>
+<p>open the grafana dashboard <code>SensorTag Compare</code> from <code>http://&lt;raspi_ip&gt;:3000</code></p>
+</li>
+</ol>
 <h2 id="meta-website">
   Meta website
   <a class="anchor" href="#meta-website">#</a>
@@ -2554,7 +2591,12 @@ how does the Raspi-IoT framework compare to existing frameworks like home assist
     <li><a href="#hardware">Hardware</a></li>
     <li><a href="#software">Software</a>
       <ul>
-        <li><a href="#raspberry-pi-setup">raspberry pi setup</a></li>
+        <li><a href="#raspberry-pi-setup">raspberry pi setup</a>
+          <ul>
+            <li><a href="#the-raspisetupsh-script-will-run-the-following">The <code>raspi/setup.sh</code> script will run the following</a></li>
+            <li><a href="#the-setup_thread_servicessh-script-will-perform-the-following">The <code>setup_thread_services.sh</code> script will perform the following</a></li>
+          </ul>
+        </li>
         <li><a href="#meta-website">Meta website</a>
           <ul>
             <li><a href="#what-is-it-">What is it ?</a></li>
