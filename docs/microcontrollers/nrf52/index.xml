@@ -17,15 +17,6 @@
     </item>
     
     <item>
-      <title>Trick Tracker</title>
-      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/trick_tracker/</link>
-      <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
-      
-      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/trick_tracker/</guid>
-      <description>Overview#The Trick-Tracker targets any user who is interested in tracking skill and improvement of certain fun sport devices. The Main focus of the first version are bikes but in general it can be used for any sort of sport devices which can be used to do stunts and tricks.</description>
-    </item>
-    
-    <item>
       <title>UWB DWM1001 dev</title>
       <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm1001_dev/</link>
       <pubDate>Sat, 08 May 2021 08:00:00 +0000</pubDate>
@@ -51,6 +42,24 @@
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</guid>
       <description>Networks / Simple MeshFrameworks / Raspi IoTTindie Product PageConcept#It is possible to mount either CR2032 or CR2477
 Hardware#board render</description>
+    </item>
+    
+    <item>
+      <title>Trick Tracker</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/trick_tracker/</link>
+      <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/trick_tracker/</guid>
+      <description>Overview#The Trick-Tracker targets any user who is interested in tracking skill and improvement of certain fun sport devices. The Main focus of the first version are bikes but in general it can be used for any sort of sport devices which can be used to do stunts and tricks.</description>
+    </item>
+    
+    <item>
+      <title>nRF-SDK Thread</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag_nrfsdk/</link>
+      <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag_nrfsdk/</guid>
+      <description>this page is kept as documentation only as the old NRF-SDK is deprecated and this project is continued in the following link using the nRF-Connect SDK based on Zephyr.Thread SensorTagNetworks / ThreadFrameworks / CHIPNRF-SDK Firmware#repo directory01 dongle nrfsdk mqttsn client#Tested firmware with MQTT-SN gateway and Mosquitto broquer example based on nRFSDK for Thread and Zigbee v4.</description>
     </item>
     
     <item>

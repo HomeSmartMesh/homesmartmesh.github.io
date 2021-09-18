@@ -17,15 +17,6 @@
     </item>
     
     <item>
-      <title>Trick Tracker</title>
-      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/trick_tracker/</link>
-      <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
-      
-      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/trick_tracker/</guid>
-      <description>Overview#The Trick-Tracker targets any user who is interested in tracking skill and improvement of certain fun sport devices. The Main focus of the first version are bikes but in general it can be used for any sort of sport devices which can be used to do stunts and tricks.</description>
-    </item>
-    
-    <item>
       <title>Kayak Trailer</title>
       <link>https://www.homesmartmesh.com/docs/3dprinting/kayak_trailer/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
@@ -202,6 +193,15 @@ Relates to#Zephyr RTOSThread ProtocolOverview#The image abov
     </item>
     
     <item>
+      <title>Trick Tracker</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/trick_tracker/</link>
+      <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/trick_tracker/</guid>
+      <description>Overview#The Trick-Tracker targets any user who is interested in tracking skill and improvement of certain fun sport devices. The Main focus of the first version are bikes but in general it can be used for any sort of sport devices which can be used to do stunts and tricks.</description>
+    </item>
+    
+    <item>
       <title>Switch Socket Cover</title>
       <link>https://www.homesmartmesh.com/docs/3dprinting/light_socket/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
@@ -249,21 +249,21 @@ Simple Mesh SensorTagSimple Mesh RepoFeatures#     2.</descriptio
     </item>
     
     <item>
-      <title>nRF52840 USB dongle</title>
-      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</link>
-      <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>
-      
-      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</guid>
-      <description>Product Page     nRF52840 ARM M4 64 MHz 1024 KB ROM - 256 KB RAM Bluetooth 5, Mesh 802.15.4, Thread, Zigbee USB 2 GetStarted)  Applications# custom mesh coordinator  nRF52840 Dongle#Pinout#Serial Wire Debug# the usb dongle is referred to as PCA10059 which in projects usually shifts the app to offset 0x1000 as openbootloader usage is expected With serial wire debug, it&amp;rsquo;s possible to flash applications at same address as the PCA10056 which is at address 0x0000 recovering the openbootloader mode would then require to reflash the MBR with any nRF SDK project make flash_mbr  LEDS# LED1 Green : P0.</description>
-    </item>
-    
-    <item>
       <title>Home Assistant</title>
       <link>https://www.homesmartmesh.com/docs/frameworks/home_assistant/</link>
       <pubDate>Sat, 13 Feb 2021 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/home_assistant/</guid>
       <description>Official WebsiteBluetooth#BLE Bluetooth Low Energy# This is a simple integration that tracks BLE devices and beacons without even requiring pairing (privacy notice might be required)  BLE TrackerBluetooth Mesh# One investigation path for integrating Bluetooth mesh in Home Assistant is bridging it through an ip layer using the Bearer Layer of the BLE Architecture  BLE Mesh =&amp;gt; IP =&amp;gt; MQTT-SN =&amp;gt; MQTT =&amp;gt; Home Assistant</description>
+    </item>
+    
+    <item>
+      <title>nRF-SDK Thread</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag_nrfsdk/</link>
+      <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag_nrfsdk/</guid>
+      <description>this page is kept as documentation only as the old NRF-SDK is deprecated and this project is continued in the following link using the nRF-Connect SDK based on Zephyr.Thread SensorTagNetworks / ThreadFrameworks / CHIPNRF-SDK Firmware#repo directory01 dongle nrfsdk mqttsn client#Tested firmware with MQTT-SN gateway and Mosquitto broquer example based on nRFSDK for Thread and Zigbee v4.</description>
     </item>
     
     <item>
@@ -288,18 +288,6 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in 
     </item>
     
     <item>
-      <title>nRF52832 UART dongle</title>
-      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/uart_dongle/</link>
-      <pubDate>Sun, 21 Feb 2021 08:00:00 +0000</pubDate>
-      
-      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/uart_dongle/</guid>
-      <description>Board#A usb dongle from the market that includes a 2104 serial to usb converter. Keyword search on shopping websites : nRF52832 USB dongle. Aka &amp;ldquo;nRF52832-YJ-17017-USB-UART&amp;rdquo;
-Software#RF to Serial Gateway#The node connected through serial port will report messages in text format
- Local Events  Upon startup such message is sent
-nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_listening the node starts acting as a gatewy that will report messages through serial in text mode</description>
-    </item>
-    
-    <item>
       <title>Zephyr RTOS</title>
       <link>https://www.homesmartmesh.com/docs/frameworks/zephyr/</link>
       <pubDate>Sat, 20 Feb 2021 08:00:00 +0000</pubDate>
@@ -309,12 +297,33 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
     </item>
     
     <item>
+      <title>nRF52840 USB dongle</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</link>
+      <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</guid>
+      <description>Product Page     nRF52840 ARM M4 64 MHz 1024 KB ROM - 256 KB RAM Bluetooth 5, Mesh 802.15.4, Thread, Zigbee USB 2 GetStarted)  Applications# custom mesh coordinator  nRF52840 Dongle#Pinout#Serial Wire Debug# the usb dongle is referred to as PCA10059 which in projects usually shifts the app to offset 0x1000 as openbootloader usage is expected With serial wire debug, it&amp;rsquo;s possible to flash applications at same address as the PCA10056 which is at address 0x0000 recovering the openbootloader mode would then require to reflash the MBR with any nRF SDK project make flash_mbr  LEDS# LED1 Green : P0.</description>
+    </item>
+    
+    <item>
       <title>micro Python</title>
       <link>https://www.homesmartmesh.com/docs/frameworks/upython/</link>
       <pubDate>Sat, 03 Apr 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/upython/</guid>
       <description>nRF52840 usb donglecross compiler# note CROSS_COMPILE is referencing the system toolchain with loose recommendations 7.3.1/2Q18 or 8.2.1/4Q18. check the toolchain version  arm-none-eabi-gcc --version which arm-none-eabi-gcc --version  testing with version 9-2020-q2-update - 9.3.1 20200408  build instructions#git clone --recurse-submodules https://github.com/micropython/micropython.git cd micropython/mpy-cross make cd ../ports/nrf make submodules make BOARD=pca10059 config#usb# each board has the pins configured in a hreader file  ports/nrf/boards/pca10059/mpconfigboard.</description>
+    </item>
+    
+    <item>
+      <title>nRF52832 UART dongle</title>
+      <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/uart_dongle/</link>
+      <pubDate>Sun, 21 Feb 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/uart_dongle/</guid>
+      <description>Board#A usb dongle from the market that includes a 2104 serial to usb converter. Keyword search on shopping websites : nRF52832 USB dongle. Aka &amp;ldquo;nRF52832-YJ-17017-USB-UART&amp;rdquo;
+Software#RF to Serial Gateway#The node connected through serial port will report messages in text format
+ Local Events  Upon startup such message is sent
+nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_listening the node starts acting as a gatewy that will report messages through serial in text mode</description>
     </item>
     
     <item>

@@ -5,19 +5,19 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Mastering real time sound capture processing and generation on embedded processors">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Sound Processing" />
-<meta property="og:description" content="Mastering real time sound capture processing and generation on embedded processors" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.homesmartmesh.com/docs/sound/" />
-<meta property="og:image" content="https://www.homesmartmesh.com/images/sound/web_py_loop.png" />
-<meta property="og:updated_time" content="2021-01-31T00:00:00+00:00" />
-<title>Sound Processing | Home Smart Mesh</title>
+<meta name="description" content="deprecated nrf SDK samples for a Low power SensorTag with High quality measures of light, Temperature, Humidity and Pressure. Based on nRF52840 which supports Thread and other protocols">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="nRF-SDK Thread" />
+<meta property="og:description" content="deprecated nrf SDK samples for a Low power SensorTag with High quality measures of light, Temperature, Humidity and Pressure. Based on nRF52840 which supports Thread and other protocols" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag_nrfsdk/" />
+<meta property="og:image" content="https://www.homesmartmesh.com/images/thread_sensortag/sensortag_v1.1.webp" />
+<meta property="article:published_time" content="2021-02-07T08:48:57+00:00" />
+<meta property="article:modified_time" content="2021-05-14T08:00:00+00:00" />
+<title>nRF-SDK Thread | Home Smart Mesh</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
 <script defer src="/en.search.min.1108af654e2e2d7437c8d7a1f385d37748532a3b2c43d5b7d8236a9495eda7dc.js" integrity="sha256-EQivZU4uLXQ3yNeh84XTd0hTKjssQ9W32CNqlJXtp9w="></script>
-<link rel="alternate" type="application/rss+xml" href="https://www.homesmartmesh.com/docs/sound/index.xml" title="Home Smart Mesh" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -243,7 +243,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-12172a40edce1e57d2d7d6a535923101" class="toggle"  />
+    <input type="checkbox" id="section-12172a40edce1e57d2d7d6a535923101" class="toggle" checked />
     <label for="section-12172a40edce1e57d2d7d6a535923101" class="flex justify-between">
       <a href="https://www.homesmartmesh.com/docs/microcontrollers/" class="">Microcontrollers</a>
       <span>▾</span>
@@ -539,7 +539,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag_nrfsdk/" class="">nRF-SDK Thread</a>
+    <a href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag_nrfsdk/" class=" active">nRF-SDK Thread</a>
   
 
         </li>
@@ -724,7 +724,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://www.homesmartmesh.com/docs/sound/" class=" active">Sound Processing</a>
+    <a href="https://www.homesmartmesh.com/docs/sound/" class="">Sound Processing</a>
   
 
           
@@ -975,7 +975,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Sound Processing</strong>
+  <strong>nRF-SDK Thread</strong>
 
   <label for="toc-control">
     
@@ -990,38 +990,14 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#web-py-loopback">web py loopback</a>
+    <li><a href="#nrf-sdk-firmware">NRF-SDK Firmware</a>
       <ul>
-        <li><a href="#web-audio-script-processor">web audio script processor</a></li>
-        <li><a href="#media-source-extension-api">media source extension API</a></li>
-        <li><a href="#webrtc">webRTC</a></li>
-        <li><a href="#pystream">pystream</a>
-          <ul>
-            <li><a href="#dependencies">dependencies</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#see-sound">see sound</a>
-      <ul>
-        <li><a href="#live-demo">Live demo</a></li>
-      </ul>
-    </li>
-    <li><a href="#librosa-test">librosa test</a></li>
-    <li><a href="#microcontroller-loopback">Microcontroller loopback</a></li>
-    <li><a href="#future-plan">Future Plan</a>
-      <ul>
-        <li><a href="#interactive-sound-input">Interactive sound input</a></li>
-        <li><a href="#debug-workflow">Debug workflow</a></li>
-      </ul>
-    </li>
-    <li><a href="#topics">Topics</a>
-      <ul>
-        <li><a href="#offline-preparation">Offline Preparation</a></li>
-        <li><a href="#real-time-processing">Real Time Processing</a></li>
-        <li><a href="#capture">Capture</a></li>
-        <li><a href="#display">Display</a></li>
-        <li><a href="#microcontrollers">Microcontrollers</a></li>
+        <li><a href="#01-dongle-nrfsdk-mqttsn-client">01 dongle nrfsdk mqttsn client</a></li>
+        <li><a href="#04-dongle-pio-zephyr-blink">04 dongle pio zephyr blink</a></li>
+        <li><a href="#06-tag-zephyr-hello">06 tag zephyr hello</a></li>
+        <li><a href="#07-tag-zephyr-button">07 tag zephyr button</a></li>
+        <li><a href="#08-tag-zephyr-thread">08 tag zephyr thread</a></li>
+        <li><a href="#09-tag-zephyr-i2c">09 tag zephyr i2c</a></li>
       </ul>
     </li>
     <li><a href="#faq---discussion">FAQ - Discussion</a></li>
@@ -1036,7 +1012,11 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown">
+  <article class="markdown"><p><script src="/js/svg-pan-zoom.min.js"></script>
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+
 
 
 
@@ -1096,47 +1076,24 @@ https://github.com/alex-shpak/hugo-book
     </div>
     </div>
 </div>
+</p>
+<blockquote class="book-hint warning">
+  this page is kept as documentation only as the old NRF-SDK is deprecated and this project is continued in the following link using the nRF-Connect SDK based on Zephyr.
+</blockquote>
 
-<h1 id="web-py-loopback">
-  web py loopback
-  <a class="anchor" href="#web-py-loopback">#</a>
-</h1>
-
+<p>
 <div class="container">
     <div class="row">
         <div class="col text-center">
         <a  class="book-btn"
             
-                href="https://github.com/SoundHacking/web_py_loop"
-                target="_blank"
             
+                href="https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/"
             
             role="button"
         >
-            repo
+            Thread SensorTag
             
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-                
-
-                
-
-                
-
-                
             
         </a>
     </div>
@@ -1144,141 +1101,60 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-
-
-
-
-
-<div class="text-center">
-  <a >
-    <img
-    src="/images/sound/web_py_loop.png"
-    alt=""
-    width=""
-    height=""
-    decoding="async"
-  />
-  </a>
-  
-</div>
-
-<ul>
-<li>using <code>createScriptProcessor</code> which is to be deprecated</li>
-<li>Note <code>MediaStreamTrackProcessor</code> is not supported yet as of 02 Apr 2021. <a href="https://github.com/webrtc/samples/blob/gh-pages/src/content/insertable-streams/audio-processing/js/main.js">Sample demo</a> available</li>
-</ul>
-<h2 id="web-audio-script-processor">
-  web audio script processor
-  <a class="anchor" href="#web-audio-script-processor">#</a>
-</h2>
-<ul>
-<li>using the deprecated <code>ScriptProcessorNode</code> to divert the input and send it through websocket as <code>Float32Array</code> to the server</li>
-<li>on the same processing loop, the audio is replacing with the incoming <code>Float32Array</code> stream from the server</li>
-<li>During the first iteration of the processing loop, as the queue is empty, the output is filled with zeros</li>
-</ul>
-
-<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
-<div class="box" style="max-width:500px">
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img">
-      <img itemprop="thumbnail" src="/design/02_script_processor_loopback.svg" />
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+            
+                href="https://www.homesmartmesh.com/docs/networks/thread/"
+            
+            role="button"
+        >
+            Networks / Thread
+            
+            
+        </a>
     </div>
-    <a href="/design/02_script_processor_loopback.svg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-<h2 id="media-source-extension-api">
-  media source extension API
-  <a class="anchor" href="#media-source-extension-api">#</a>
-</h2>
-<ul>
-<li>using <code>MediaRecorder</code> and <code>MediaSource</code> for encoded stream loopback through websocket
-
-
-<div class="box" style="max-width:400px">
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img">
-      <img itemprop="thumbnail" src="/design/06_media_recorder_source_loopback.svg" />
     </div>
-    <a href="/design/06_media_recorder_source_loopback.svg" itemprop="contentUrl"></a>
-  </figure>
 </div>
-</li>
-</ul>
-<h2 id="webrtc">
-  webRTC
-  <a class="anchor" href="#webrtc">#</a>
-</h2>
-<p>Official example 
+
 
 <div class="container">
     <div class="row">
         <div class="col text-center">
         <a  class="book-btn"
             
-                href="https://github.com/webrtc/samples/tree/gh-pages/src/content/peerconnection/audio"
-                target="_blank"
             
+                href="https://www.homesmartmesh.com/docs/frameworks/chip/"
             
             role="button"
         >
-            peerconnection audio
+            Frameworks / CHIP
             
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-                
-
-                
-
-                
-
-                
             
         </a>
     </div>
     </div>
 </div>
 </p>
-
-
-<div class="box" style="max-width:300px">
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img">
-      <img itemprop="thumbnail" src="/design/web_rtc.svg" />
-    </div>
-    <a href="/design/web_rtc.svg" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-<h2 id="pystream">
-  pystream
-  <a class="anchor" href="#pystream">#</a>
-</h2>
+<h1 id="nrf-sdk-firmware">
+  NRF-SDK Firmware
+  <a class="anchor" href="#nrf-sdk-firmware">#</a>
+</h1>
 
 <div class="container">
     <div class="row">
         <div class="col text-center">
         <a  class="book-btn"
             
-                href="https://github.com/SoundHacking/pystream"
+                href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware"
                 target="_blank"
             
             
             role="button"
         >
-            repo
+            repo directory
             
             
                 
@@ -1308,393 +1184,415 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 
-
-
-
-
-
-
-<div class="text-center">
-  <a >
-    <img
-    src="/images/sound/python_process.png"
-    alt=""
-    width=""
-    height=""
-    decoding="async"
-  />
-  </a>
-  
-</div>
-
-<ul>
-<li>List audio devices</li>
-<li>Test Audio input and output</li>
-<li>connect inputs to outputs</li>
-<li>process the live stream between input and output</li>
-<li>generate tone</li>
-</ul>
-<h3 id="dependencies">
-  dependencies
-  <a class="anchor" href="#dependencies">#</a>
-</h3>
-<ul>
-<li>matplotlib</li>
-<li>numpy</li>
-<li><a href="https://python-sounddevice.readthedocs.io/">sounddevice</a></li>
-</ul>
-<h1 id="see-sound">
-  see sound
-  <a class="anchor" href="#see-sound">#</a>
-</h1>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a  class="book-btn"
-            
-                href="https://github.com/SoundHacking/see_sound/"
-                target="_blank"
-            
-            
-            role="button"
-        >
-            repo
-            
-            
-                
-                
-                <span class="github">
-                    <svg    viewBox="0 0 24 24" 
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                    >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </span>
-                
-
-                
-
-                
-
-                
-
-                
-            
-        </a>
-    </div>
-    </div>
-</div>
-
-
-
-
-
-
-
-<div class="text-center">
-  <a >
-    <img
-    src="/images/sound/analyser.png"
-    alt=""
-    width=""
-    height=""
-    decoding="async"
-  />
-  </a>
-  
-</div>
-
-<ul>
-<li>a web app framework to see the sound in different forms</li>
-<li>real-time analysis of played audio</li>
-<li>Playing sound with html5 <a href="https://www.w3.org/TR/webaudio/">web Audio API</a></li>
-</ul>
-<h2 id="live-demo">
-  Live demo
-  <a class="anchor" href="#live-demo">#</a>
+<h2 id="01-dongle-nrfsdk-mqttsn-client">
+  01 dongle nrfsdk mqttsn client
+  <a class="anchor" href="#01-dongle-nrfsdk-mqttsn-client">#</a>
 </h2>
-
-
-
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-            <a id="btn-ce4bd70ba71e09c0" class="book-btn" role="button" >Full screen</a>
-            <a class="book-btn" href="https://soundhacking.github.io/see_sound/" role="button" target="_blank">Open in a new page</a>
-        </div>
-</div>
-<iframe id="ifm-ce4bd70ba71e09c0" src="https://soundhacking.github.io/see_sound/" width=100% height=300 frameborder="0" ></iframe>
-
-<script>
-    var button = document.getElementById("btn-ce4bd70ba71e09c0");
-    button.onclick = ()=>{
-        var elem = document.getElementById("ifm-ce4bd70ba71e09c0");
-        if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-        } else if (elem.webkitRequestFullscreen) {  
-        elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) {  
-        elem.msRequestFullscreen();
-        }
-    };
-</script>
-
-<h1 id="librosa-test">
-  librosa test
-  <a class="anchor" href="#librosa-test">#</a>
-</h1>
-
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-        <a class="book-btn" href="https://github.com/SoundHacking/librosa_demo/" role="button" target="_blank">github project</a>
-        </div>
-    </div>
-</div>
+<blockquote class="book-hint info">
+  Tested firmware with MQTT-SN gateway and Mosquitto broquer
+</blockquote>
 
 <ul>
-<li>Jupyter notebooks to showcase librosa functions</li>
+<li>example based on <code>nRFSDK for Thread and Zigbee v4.1.0</code> which path should be declared in an environment variable <code>THREAD_SDK_ROOT</code></li>
+<li>Note that, as specified in the SDK file <code>components\toolchain\gcc\Makefile.windows</code> the used toolchain is <code>GNU Tools ARM Embedded/7 2018-q2-update</code></li>
+<li>Adapted Makefile</li>
+<li>As the usb dongle has only one user key KEY_0, the sequence of <code>search_gateway</code>, <code>connect</code>, <code>publish</code> is not cyclically executed when pressing KEY_0 multiple times.</li>
 </ul>
-
-
-
-
-
-
-<div class="text-center">
-  <a >
-    <img
-    src="/images/sound/librosa.png"
-    alt=""
-    width="600"
-    height=""
-    decoding="async"
-  />
-  </a>
-  
-</div>
-
-<h1 id="microcontroller-loopback">
-  Microcontroller loopback
-  <a class="anchor" href="#microcontroller-loopback">#</a>
-</h1>
-
-
-
-
-
-
-<div class="text-center">
-  <a >
-    <img
-    src="/images/sound/nRF52_usb_loopback.png"
-    alt=""
-    width="600"
-    height=""
-    decoding="async"
-  />
-  </a>
-  
-</div>
-
+<h2 id="04-dongle-pio-zephyr-blink">
+  04 dongle pio zephyr blink
+  <a class="anchor" href="#04-dongle-pio-zephyr-blink">#</a>
+</h2>
 <ul>
-<li>usb audio loopback zephyr example on <code>nrf52840dk_nrf52840</code></li>
-<li>tested on the nRF52 dongle with debugger attached</li>
+<li>zephyr with platformio environment for easy install</li>
+<li>dongle led blink</li>
+<li>added <code>boards\nrf52840dongle_nrf52840.json</code></li>
+<li>jlink is the default upload method for the nrf52840 boards</li>
 </ul>
-<p>build</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd zephyr/samples/subsys/usb/audio/headphones_microphone
-west build -b nrf52840dk_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span>prj.conf
+<h2 id="06-tag-zephyr-hello">
+  06 tag zephyr hello
+  <a class="anchor" href="#06-tag-zephyr-hello">#</a>
+</h2>
+<ul>
+<li>hello world example using the <code>nrf52840_sensortag</code> custom board</li>
+</ul>
+<p>zephyr examples usage</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">west build -b nrf52840_sensortag
 west flash
 </code></pre></div><details >
   <summary>build log</summary>
   <div class="markdown-inner">
     <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-- west build: generating a build system
--- Application: D:/Projects/zp/zephyrproject/zephyr/samples/subsys/usb/audio/headphones_microphone
+Including boilerplate <span style="color:#f92672">(</span>Zephyr base <span style="color:#f92672">(</span>cached<span style="color:#f92672">))</span>: D:/Projects/zephyrproject/zephyr/cmake/app/boilerplate.cmake
+-- Application: D:/Dev/nrf52/nrf52_thread_sensortag/firmware/tag_zephyr_hello
+-- Zephyr version: 2.5.99 <span style="color:#f92672">(</span>D:/Projects/zephyrproject/zephyr<span style="color:#f92672">)</span>
+-- Found west <span style="color:#f92672">(</span>found suitable version <span style="color:#e6db74">&#34;0.9.0&#34;</span>, minimum required is <span style="color:#e6db74">&#34;0.7.1&#34;</span><span style="color:#f92672">)</span>
+-- Board: nrf52840_sensortag
+-- Cache files will be written to: D:/Projects/zephyrproject/zephyr/.cache
+-- Found toolchain: gnuarmemb <span style="color:#f92672">(</span>D:/tools/gnu_arm_embedded/9_2020-q2-update<span style="color:#f92672">)</span>
+</code></pre></div>
+  </div>
+</details>
+
+<details >
+  <summary>run log</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-log" data-lang="log">*** Booting Zephyr OS build zephyr-v2.5.0-159-g2bfaadffb807  ***
+
+[00:00:00.337,707] &lt;inf&gt; main: Hello from Sensor Tag
+[00:00:01.337,768] &lt;inf&gt; main: loop: 0
+[00:00:02.337,860] &lt;inf&gt; main: loop: 1
+[00:00:03.338,012] &lt;inf&gt; main: loop: 2
+[00:00:04.338,104] &lt;inf&gt; main: loop: 3
+[00:00:05.338,256] &lt;inf&gt; main: loop: 4
+[00:00:06.338,348] &lt;inf&gt; main: loop: 5
+[00:00:07.338,500] &lt;inf&gt; main: loop: 6
+[00:00:08.338,562] &lt;inf&gt; main: loop: 7
+[00:00:09.338,653] &lt;inf&gt; main: loop: 8
+[00:00:10.338,745] &lt;inf&gt; main: loop: 9
+[00:00:11.338,836] &lt;inf&gt; main: loop: 10
+[00:00:12.338,928] &lt;inf&gt; main: loop: 11
+[00:00:13.339,019] &lt;inf&gt; main: loop: 12
+[00:00:14.339,111] &lt;inf&gt; main: loop: 13
+[00:00:15.339,202] &lt;inf&gt; main: loop: 14
+[00:00:16.339,294] &lt;inf&gt; main: loop: 15
+[00:00:17.339,385] &lt;inf&gt; main: loop: 16
+[00:00:18.339,477] &lt;inf&gt; main: loop: 17
+
+</code></pre>
+  </div>
+</details>
+
+<h2 id="07-tag-zephyr-button">
+  07 tag zephyr button
+  <a class="anchor" href="#07-tag-zephyr-button">#</a>
+</h2>
+<ul>
+<li>introducing user button interrupt</li>
+</ul>
+<details >
+  <summary>build log</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-- west build: generating a build system
+Including boilerplate <span style="color:#f92672">(</span>Zephyr base<span style="color:#f92672">)</span>: D:/Projects/zephyrproject/zephyr/cmake/app/boilerplate.cmake
+-- Application: D:/Dev/nrf52/nrf52_thread_sensortag/firmware/07_tag_zephyr_button
+-- Zephyr version: 2.5.99 <span style="color:#f92672">(</span>D:/Projects/zephyrproject/zephyr<span style="color:#f92672">)</span>
+-- Found Python3: C:/Users/User/AppData/Local/Programs/Python/Python39/python.exe <span style="color:#f92672">(</span>found suitable exact version <span style="color:#e6db74">&#34;3.9.0&#34;</span><span style="color:#f92672">)</span> found components: Interpreter
+-- Found west <span style="color:#f92672">(</span>found suitable version <span style="color:#e6db74">&#34;0.9.0&#34;</span>, minimum required is <span style="color:#e6db74">&#34;0.7.1&#34;</span><span style="color:#f92672">)</span>
+-- Board: nrf52840_sensortag
+-- Cache files will be written to: D:/Projects/zephyrproject/zephyr/.cache
+-- Found toolchain: gnuarmemb <span style="color:#f92672">(</span>D:/tools/gnu_arm_embedded/9_2020-q2-update<span style="color:#f92672">)</span>
+-- Found BOARD.dts: D:/Dev/nrf52/nrf52_thread_sensortag/firmware/boards/arm/nrf52840_sensortag/nrf52840_sensortag.dts
+</code></pre></div>
+  </div>
+</details>
+
+<details >
+  <summary>run log</summary>
+  <div class="markdown-inner">
+    <p>rtt log</p>
+<pre><code class="language-log" data-lang="log">00&gt; *** Booting Zephyr OS build zephyr-v2.5.0-159-g2bfaadffb807  ***
+00&gt; 
+00&gt; [00:00:00.334,259] &lt;inf&gt; main: Hello from Sensor Tag Button example
+00&gt; [00:00:00.334,289] &lt;inf&gt; main: Set up button at GPIO_1 pin 9
+00&gt; 
+00&gt; [00:00:01.334,350] &lt;inf&gt; main: loop: 0
+00&gt; [00:00:02.334,442] &lt;inf&gt; main: loop: 1
+00&gt; [00:00:03.334,533] &lt;inf&gt; main: loop: 2
+00&gt; [00:00:04.334,625] &lt;inf&gt; main: loop: 3
+00&gt; [00:00:05.334,716] &lt;inf&gt; main: loop: 4
+00&gt; [00:00:06.334,808] &lt;inf&gt; main: loop: 5
+00&gt; [00:00:07.334,899] &lt;inf&gt; main: loop: 6
+00&gt; [00:00:08.334,991] &lt;inf&gt; main: loop: 7
+00&gt; [00:00:09.335,083] &lt;inf&gt; main: loop: 8
+00&gt; [00:00:10.335,174] &lt;inf&gt; main: loop: 9
+00&gt; [00:00:11.335,266] &lt;inf&gt; main: loop: 10
+00&gt; [00:00:12.335,357] &lt;inf&gt; main: loop: 11
+00&gt; [00:00:13.335,449] &lt;inf&gt; main: loop: 12
+00&gt; [00:00:14.335,540] &lt;inf&gt; main: loop: 13
+00&gt; [00:00:15.335,632] &lt;inf&gt; main: loop: 14
+00&gt; [00:00:16.335,723] &lt;inf&gt; main: loop: 15
+00&gt; [00:00:17.335,815] &lt;inf&gt; main: loop: 16
+00&gt; [00:00:18.335,906] &lt;inf&gt; main: loop: 17
+00&gt; [00:00:19.335,998] &lt;inf&gt; main: loop: 18
+00&gt; [00:00:20.336,090] &lt;inf&gt; main: loop: 19
+00&gt; [00:00:21.336,181] &lt;inf&gt; main: loop: 20
+00&gt; [00:00:22.336,273] &lt;inf&gt; main: loop: 21
+00&gt; [00:00:23.336,364] &lt;inf&gt; main: loop: 22
+00&gt; [00:00:24.336,456] &lt;inf&gt; main: loop: 23
+00&gt; [00:00:25.336,547] &lt;inf&gt; main: loop: 24
+00&gt; [00:00:26.336,639] &lt;inf&gt; main: loop: 25
+00&gt; [00:00:27.336,730] &lt;inf&gt; main: loop: 26
+00&gt; [00:00:28.336,822] &lt;inf&gt; main: loop: 27
+00&gt; [00:00:29.336,914] &lt;inf&gt; main: loop: 28
+00&gt; [00:00:30.337,005] &lt;inf&gt; main: loop: 29
+00&gt; [00:00:31.337,097] &lt;inf&gt; main: loop: 30
+00&gt; [00:00:32.337,188] &lt;inf&gt; main: loop: 31
+00&gt; [00:00:32.920,257] &lt;inf&gt; main: Button pressed at 1078731
+00&gt; 
+00&gt; [00:00:33.282,348] &lt;inf&gt; main: Button pressed at 1090596
+00&gt; 
+00&gt; [00:00:33.337,249] &lt;inf&gt; main: loop: 32
+00&gt; [00:00:34.337,310] &lt;inf&gt; main: loop: 33
+00&gt; [00:00:35.337,402] &lt;inf&gt; main: loop: 34
+00&gt; [00:00:36.337,493] &lt;inf&gt; main: loop: 35
+00&gt; [00:00:37.337,585] &lt;inf&gt; main: loop: 36
+00&gt; [00:00:38.337,677] &lt;inf&gt; main: loop: 37
+00&gt; [00:00:39.337,768] &lt;inf&gt; main: loop: 38
+00&gt; [00:00:40.337,860] &lt;inf&gt; main: loop: 39
+00&gt; [00:00:41.337,951] &lt;inf&gt; main: loop: 40
+00&gt; [00:00:42.338,043] &lt;inf&gt; main: loop: 41
+00&gt; [00:00:43.338,134] &lt;inf&gt; main: loop: 42
+00&gt; [00:00:44.338,226] &lt;inf&gt; main: loop: 43
+00&gt; [00:00:45.338,317] &lt;inf&gt; main: loop: 44
+00&gt; *** Booting Zephyr OS build zephyr-v2.5.0-159-g2bfaadffb807  ***
+00&gt; 
+00&gt; [00:00:00.250,396] &lt;inf&gt; main: Hello from Sensor Tag Button example
+00&gt; [00:00:00.250,396] &lt;inf&gt; main: Set up button at GPIO_1 pin 9
+00&gt; 
+00&gt; [00:00:01.250,457] &lt;inf&gt; main: loop: 0
+00&gt; [00:00:02.250,549] &lt;inf&gt; main: loop: 1
+00&gt; [00:00:03.250,640] &lt;inf&gt; main: loop: 2
+00&gt; [00:00:04.250,732] &lt;inf&gt; main: loop: 3
+00&gt; [00:00:05.250,823] &lt;inf&gt; main: loop: 4
+00&gt; [00:00:05.709,991] &lt;inf&gt; main: Button pressed at 187105
+00&gt; 
+00&gt; [00:00:06.250,915] &lt;inf&gt; main: loop: 5
+00&gt; [00:00:07.250,976] &lt;inf&gt; main: loop: 6
+00&gt; [00:00:08.251,068] &lt;inf&gt; main: loop: 7
+00&gt; [00:00:09.251,159] &lt;inf&gt; main: loop: 8
+00&gt; [00:00:10.251,251] &lt;inf&gt; main: loop: 9
+00&gt; [00:00:11.251,342] &lt;inf&gt; main: loop: 10
+00&gt; [00:00:12.251,434] &lt;inf&gt; main: loop: 11
+00&gt; [00:00:13.251,525] &lt;inf&gt; main: loop: 12
+00&gt; [00:00:14.251,617] &lt;inf&gt; main: loop: 13
+00&gt; [00:00:15.251,708] &lt;inf&gt; main: loop: 14
+00&gt; [00:00:16.251,800] &lt;inf&gt; main: loop: 15
+00&gt; [00:00:17.251,892] &lt;inf&gt; main: loop: 16
+00&gt; [00:00:18.251,983] &lt;inf&gt; main: loop: 17
+00&gt; [00:00:19.252,075] &lt;inf&gt; main: loop: 18
+00&gt; [00:00:20.252,166] &lt;inf&gt; main: loop: 19
+00&gt; [00:00:21.252,258] &lt;inf&gt; main: loop: 20
+00&gt; [00:00:22.252,349] &lt;inf&gt; main: loop: 21
+</code></pre>
+  </div>
+</details>
+
+<h2 id="08-tag-zephyr-thread">
+  08 tag zephyr thread
+  <a class="anchor" href="#08-tag-zephyr-thread">#</a>
+</h2>
+<p>Simplest example with thread stack running</p>
+<ul>
+<li>thread stack added through config only</li>
+<li>menuconfig only runs on linux or wsl with the command <code>west build -t menuconfig</code></li>
+<li>the generated config is under <code>build/zephyr/.config</code></li>
+<li>Note that once the openthread config is persisted in non-volatile memory, changing the config would have no effect as the stored config has precedence over code</li>
+<li>the persisted config can be deleted with <code>ot factoryreset</code></li>
+<li>Note that up to Zephyr version <code>zephyr-v2.5.0-159-g2bfaadffb807</code> the compilation throws an error</li>
+</ul>
+<p>Environment variables</p>
+<ul>
+<li><code>GNUARMEMB_TOOLCHAIN_PATH</code> = D:\tools\gnu_arm_embedded\9_2020-q2-update</li>
+<li><code>ZEPHYR_BASE</code> = D:\Projects\zp\zephyrproject\zephyr</li>
+<li><code>ZEPHYR_TOOLCHAIN_VARIANT</code> = gnuarmemb</li>
+</ul>
+<p>usage</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">west build -b nrf52840_sensortag -- -DCONF_FILE<span style="color:#f92672">=</span>prj-shell.conf
+west build -b nrf52840_sensortag -- -DCONF_FILE<span style="color:#f92672">=</span>prj-log.conf
+west flash
+</code></pre></div><details >
+  <summary>default config</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-conf" data-lang="conf">#
+# Thread Network configuration
+#
+CONFIG_OPENTHREAD_PANID=43981
+CONFIG_OPENTHREAD_CHANNEL=13
+CONFIG_OPENTHREAD_NETWORK_NAME=&quot;ot_zephyr&quot;
+CONFIG_OPENTHREAD_XPANID=&quot;de:ad:00:be:ef:00:ca:fe&quot;
+CONFIG_OPENTHREAD_MASTERKEY=&quot;&quot;
+CONFIG_OPENTHREAD_FTD=y
+# CONFIG_OPENTHREAD_MTD is not set
+CONFIG_OPENTHREAD_MAX_CHILDREN=32
+CONFIG_OPENTHREAD_MAX_IP_ADDR_PER_CHILD=6
+CONFIG_OPENTHREAD_CONFIG_PLATFORM_INFO=&quot;Zephyr&quot;
+CONFIG_OPENTHREAD_RADIO_LINK_IEEE_802_15_4_ENABLE=y
+# CONFIG_OPENTHREAD_RADIO_LINK_TREL_ENABLE is not set
+CONFIG_OPENTHREAD_CSL_SAMPLE_WINDOW=30
+CONFIG_OPENTHREAD_CSL_RECEIVE_TIME_AHEAD=3
+# CONFIG_OPENTHREAD_SRP_CLIENT is not set
+# CONFIG_OPENTHREAD_SRP_SERVER is not set
+# end of Thread Network configuration
+</code></pre>
+  </div>
+</details>
+
+<details >
+  <summary>project shell config</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-conf" data-lang="conf">CONFIG_NETWORKING=y
+CONFIG_NET_L2_OPENTHREAD=y
+
+CONFIG_OPENTHREAD_CHANNEL=13
+CONFIG_OPENTHREAD_PANID=47825
+
+# Disable certain parts of Zephyr IPv6 stack
+CONFIG_NET_IPV6_NBR_CACHE=n
+CONFIG_NET_IPV6_MLD=n
+
+# Kernel options
+CONFIG_MAIN_STACK_SIZE=2048
+CONFIG_INIT_STACKS=y
+
+#pios
+CONFIG_GPIO=y
+CONFIG_SERIAL=n
+
+# Logging
+CONFIG_LOG=n
+CONFIG_LOG_BACKEND_RTT=n
+CONFIG_LOG_BACKEND_UART=n
+CONFIG_BOOT_BANNER=y
+CONFIG_USE_SEGGER_RTT=y
+
+CONFIG_CONSOLE=y
+CONFIG_UART_CONSOLE=n
+CONFIG_RTT_CONSOLE=y
+
+# shell
+CONFIG_SHELL=y
+CONFIG_SHELL_BACKEND_RTT=y
+CONFIG_SHELL_BACKEND_SERIAL=n
+</code></pre>
+  </div>
+</details>
+
+<details >
+  <summary>build log</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-- west build: generating a build system
+Including boilerplate <span style="color:#f92672">(</span>Zephyr base<span style="color:#f92672">)</span>: D:/Projects/zp/zephyrproject/zephyr/cmake/app/boilerplate.cmake
+-- Application: D:/Dev/nrf52/nrf52_thread_sensortag/firmware/08_tag_zephyr_thread
 -- Zephyr version: 2.5.99 <span style="color:#f92672">(</span>D:/Projects/zp/zephyrproject/zephyr<span style="color:#f92672">)</span>
--- Found Python3: C:/Users/User/AppData/Local/Programs/Python/Python39/python.exe <span style="color:#f92672">(</span>found suitable exact version <span style="color:#e6db74">&#34;3.9.0&#34;</span><span style="color:#f92672">)</span> found components: Interpreter 
+-- Found Python3: C:/Users/User/AppData/Local/Programs/Python/Python39/python.exe <span style="color:#f92672">(</span>found suitable exact version <span style="color:#e6db74">&#34;3.9.0&#34;</span><span style="color:#f92672">)</span> found components: Interpreter
 -- Found west <span style="color:#f92672">(</span>found suitable version <span style="color:#e6db74">&#34;0.10.1&#34;</span>, minimum required is <span style="color:#e6db74">&#34;0.7.1&#34;</span><span style="color:#f92672">)</span>
--- Board: nrf52840dk_nrf52840
+-- Board: nrf52840_sensortag
 -- Cache files will be written to: D:/Projects/zp/zephyrproject/zephyr/.cache
 -- Found toolchain: gnuarmemb <span style="color:#f92672">(</span>D:/tools/gnu_arm_embedded/10 2020-q4-major<span style="color:#f92672">)</span>
--- Found BOARD.dts: D:/Projects/zp/zephyrproject/zephyr/boards/arm/nrf52840dk_nrf52840/nrf52840dk_nrf52840.dts
--- Found devicetree overlay: D:/Projects/zp/zephyrproject/zephyr/samples/subsys/usb/audio/headphones_microphone/boards/nrf52840dk_nrf52840.overlay
--- Generated zephyr.dts: D:/Projects/zp/zephyrproject/zephyr/samples/subsys/usb/audio/headphones_microphone/build/zephyr/zephyr.dts
-...
--- west build: building application
-<span style="color:#f92672">[</span>152/159<span style="color:#f92672">]</span> Linking C executable zephyr<span style="color:#ae81ff">\z</span>ephyr_prebuilt.elf
+-- Found BOARD.dts: D:/Dev/nrf52/nrf52_thread_sensortag/firmware/boards/arm/nrf52840_sensortag/nrf52840_sensortag.dts
+</code></pre></div>
+  </div>
+</details>
 
-<span style="color:#f92672">[</span>159/159<span style="color:#f92672">]</span> Linking C executable zephyr<span style="color:#ae81ff">\z</span>ephyr.elf
+<details >
+  <summary>run log</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-log" data-lang="log">rtt:~$ *** Booting Zephyr OS build zephyr-v2.5.0-2187-g757cd12e6602  ***
+ot state
+leader
+
+Done
+
+rtt:~$ ot ipaddr
+fdde:ad00:beef:0:0:ff:fe00:fc00
+
+fdde:ad00:beef:0:0:ff:fe00:1800
+
+fdde:ad00:beef:0:e004:6a1d:8704:d57f
+
+fe80:0:0:0:38a9:1cd0:752:f538
+
+Done
+</code></pre>
+  </div>
+</details>
+
+<h2 id="09-tag-zephyr-i2c">
+  09 tag zephyr i2c
+  <a class="anchor" href="#09-tag-zephyr-i2c">#</a>
+</h2>
+<ul>
+<li>using i2c_0 device from dts</li>
+<li>direct transactions with sensors using <code>i2c_reg_read_byte()</code></li>
+</ul>
+<details >
+  <summary>config</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-conf" data-lang="conf">CONFIG_GPIO=y
+CONFIG_SERIAL=n
+
+CONFIG_I2C=y
+
+# Logging
+CONFIG_LOG=y
+CONFIG_LOG_BACKEND_RTT=y
+CONFIG_LOG_BACKEND_UART=n
+CONFIG_BOOT_BANNER=y
+CONFIG_USE_SEGGER_RTT=y
+CONFIG_CONSOLE=y
+CONFIG_UART_CONSOLE=n
+CONFIG_RTT_CONSOLE=y
+</code></pre>
+  </div>
+</details>
+
+<details >
+  <summary>build log</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">-- west build: generating a build system
+Including boilerplate <span style="color:#f92672">(</span>Zephyr base<span style="color:#f92672">)</span>: D:/Projects/zp/zephyrproject/zephyr/cmake/app/boilerplate.cmake
+-- Application: D:/Dev/nrf52/nrf52_thread_sensortag/firmware/09_tag_zephyr_i2c
+-- Zephyr version: 2.5.99 <span style="color:#f92672">(</span>D:/Projects/zp/zephyrproject/zephyr<span style="color:#f92672">)</span>
+-- Found Python3: C:/Users/User/AppData/Local/Programs/Python/Python39/python.exe <span style="color:#f92672">(</span>found suitable exact version <span style="color:#e6db74">&#34;3.9.0&#34;</span><span style="color:#f92672">)</span> found components: Interpreter
+-- Found west <span style="color:#f92672">(</span>found suitable version <span style="color:#e6db74">&#34;0.10.1&#34;</span>, minimum required is <span style="color:#e6db74">&#34;0.7.1&#34;</span><span style="color:#f92672">)</span>
+-- Board: nrf52840_sensortag
+-- Cache files will be written to: D:/Projects/zp/zephyrproject/zephyr/.cache
+-- Found toolchain: gnuarmemb <span style="color:#f92672">(</span>D:/tools/gnu_arm_embedded/10 2020-q4-major<span style="color:#f92672">)</span>
+-- Found BOARD.dts: D:/Dev/nrf52/nrf52_thread_sensortag/firmware/boards/arm/nrf52840_sensortag/nrf52840_sensortag.dts
+
+...
+
+<span style="color:#f92672">[</span>146/146<span style="color:#f92672">]</span> Linking C executable zephyr<span style="color:#ae81ff">\z</span>ephyr.elf
 Memory region         Used Size  Region Size  %age Used
-           FLASH:       <span style="color:#ae81ff">45912</span> B         <span style="color:#ae81ff">1</span> MB      4.38%
-            SRAM:       <span style="color:#ae81ff">16004</span> B       <span style="color:#ae81ff">256</span> KB      6.11%
+           FLASH:       <span style="color:#ae81ff">27168</span> B         <span style="color:#ae81ff">1</span> MB      2.59%
+            SRAM:        <span style="color:#ae81ff">7936</span> B       <span style="color:#ae81ff">256</span> KB      3.03%
         IDT_LIST:          <span style="color:#ae81ff">0</span> GB         <span style="color:#ae81ff">2</span> KB      0.00%
 </code></pre></div>
   </div>
 </details>
 
-<h1 id="future-plan">
-  Future Plan
-  <a class="anchor" href="#future-plan">#</a>
-</h1>
-<h2 id="interactive-sound-input">
-  Interactive sound input
-  <a class="anchor" href="#interactive-sound-input">#</a>
-</h2>
-<ul>
-<li>inputs in microcontrollers for preprocessing interface to PC for further processing.</li>
-<li>it&rsquo;s also possible to have microcontroller standalone applications</li>
-</ul>
+<details >
+  <summary>run log</summary>
+  <div class="markdown-inner">
+    <pre><code class="language-log" data-lang="log">*** Booting Zephyr OS build zephyr-v2.5.0-2187-g757cd12e6602  ***
 
+[00:00:00.327,209] &lt;inf&gt; main: Hello from Sensor Tag I2C example
+[00:00:00.327,728] &lt;inf&gt; main: VEML6030 @48 reg[0] 'ALS_CONF' = 1
+[00:00:00.328,247] &lt;inf&gt; main: MS8607 @40 'Relative Humidity RH' reg[0xE7] 'user register' = 2
+[00:00:00.328,765] &lt;inf&gt; main: MS8607 @76 'Pressure and Temperature' reg[0] 'ADC Read' =&gt; 0
+</code></pre>
+  </div>
+</details>
 
-
-
-
-
-<div class="text-center">
-  <a >
-    <img
-    src="/images/sound/goal.png"
-    alt=""
-    width=""
-    height=""
-    decoding="async"
-  />
-  </a>
-  
-</div>
-
-<h2 id="debug-workflow">
-  Debug workflow
-  <a class="anchor" href="#debug-workflow">#</a>
-</h2>
-<ul>
-<li>it&rsquo;s possible to debug an embedded sound processing system by injecting packets and retrieving  the results</li>
-</ul>
-
-
-
-
-
-
-<div class="text-center">
-  <a >
-    <img
-    src="/images/sound/usb_cdc_test.png"
-    alt=""
-    width="500"
-    height=""
-    decoding="async"
-  />
-  </a>
-  
-</div>
-
-<h1 id="topics">
-  Topics
-  <a class="anchor" href="#topics">#</a>
-</h1>
-<h2 id="offline-preparation">
-  Offline Preparation
-  <a class="anchor" href="#offline-preparation">#</a>
-</h2>
-<p>The Offline preparation is a necessary step to understand the signal and condition it for the target application where it will be used, that&rsquo;s where Python with its scientific toolkits and machine learning environment will be used.</p>
-<ul>
-<li>Signal Analysis</li>
-<li>Machine Learning</li>
-</ul>
-<h2 id="real-time-processing">
-  Real Time Processing
-  <a class="anchor" href="#real-time-processing">#</a>
-</h2>
-<p>Smart applications are ones that instantly react to the user in an interactive, collaborative or assistive mode such as during tracking.
-Therefore an instant response of the system is what creates a feeling of connection with the instrument.</p>
-<p>Real time Audio processing requires dedicated hardware acceleration to prevent delays.</p>
-<h2 id="capture">
-  Capture
-  <a class="anchor" href="#capture">#</a>
-</h2>
-<p>It&rsquo;s about capture of audio and other user inputs. Audio goes through  I2S microphone arrays connected to microcontrollers. Other user inputs can be accelerometer or touch interfaces that are to be used as control for sound generation</p>
-<ul>
-<li>Microphones</li>
-<li>Accelerometers</li>
-<li>smart touch surface</li>
-<li>USB interfaces (Audio / HID / Serial Data)</li>
-</ul>
-<h2 id="display">
-  Display
-  <a class="anchor" href="#display">#</a>
-</h2>
-<p>The output should not only be hearable as a sound signal but also visual in order to assist the interaction.</p>
-<ul>
-<li>webapp view of live audio signal</li>
-<li>Status feedback through LEDs</li>
-</ul>
-<h2 id="microcontrollers">
-  Microcontrollers
-  <a class="anchor" href="#microcontrollers">#</a>
-</h2>
-
-
-
-
-
-
-<div class="text-center">
-  <a >
-    <img
-    src="/images/hardware.png"
-    alt=""
-    width="800"
-    height=""
-    decoding="async"
-  />
-  </a>
-  
-</div>
-
-<ul>
-<li>MEMS microphones : <a href="https://cdn-reichelt.de/documents/datenblatt/A300/DEBO_MEMS_MIC_DB_EN.pdf">SPH0645</a></li>
-<li><a href="https://stm32-base.org/boards/STM32F407VGT6-STM32F4XX-M.html">STM32F407VGT6</a></li>
-</ul>
-<p>Microcontrollers in scope :</p>
-<ul>
-<li>STM32 based on ARM-M4
-<ul>
-<li>Black pill : STM32F411 (USB)</li>
-<li>Audio Discovery : STM32F407 (USB, stereo out)</li>
-<li>DevEBox : STM32F407 (USB, SDCARD)</li>
-</ul>
-</li>
-<li>ESP32 (wifi / BT)</li>
-<li>nRF52 (custom RF / BT)</li>
-</ul>
-<p>Example integration of cubemx with pio :</p>
-<ul>
-<li><a href="https://github.com/STM32Libs/f411_piocube_lib_blink">f411_piocube_lib_blink</a></li>
-</ul>
 <h1 id="faq---discussion">
   FAQ - Discussion
   <a class="anchor" href="#faq---discussion">#</a>
 </h1>
-<p>If you need support, want to ask a question or suggest an idea, you can join the discussion on the forum
+<ul>
+<li>If you need support, want to ask a question or suggest a different answer, you can join the discussion on the discourse forum
 
 <div class="container">
     <div class="row">
         <div class="col text-center">
         <a  class="book-btn"
             
-                href="https://homesmartmesh.discourse.group/"
+                href="https://homesmartmesh.discourse.group/c/projects/thread-sensortag"
                 target="_blank"
             
             
             role="button"
         >
-            Home Smart Mesh - Forum
+            Home Smart Mesh - Thread Sensor Tag category
             
             
                 
@@ -1730,51 +1628,8 @@ Therefore an instant response of the system is what creates a feeling of connect
     </div>
     </div>
 </div>
-</p>
-
-
-
-  
-  
-  
-  <details>
-    <summary>
-What is the difference between a MediaStream and a MediaSource when used in a real time network ?
-</summary>
-    <div class="markdown-inner">
-      <p>It is possible to append Buffers to a MediaSource which opens its input to a custom websocket while MediaStream, can only be bound to a webRTC RTCPeerConnection.</p>
-<p>Note that <code>audio.src</code> is to be used with a <code>MediaSrouce</code> URL while <code>audio.srcObject</code> is for <code>MediaStream</code>.</p>
-
-    </div>
-  </details>
-
-
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-    
-    
-      
-      
-      
-      
-      
-      {
-        "@type": "Question",
-        "name": "What is the difference between a MediaStream and a MediaSource when used in a real time network ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "\u003cp\u003eIt is possible to append Buffers to a MediaSource which opens its input to a custom websocket while MediaStream, can only be bound to a webRTC RTCPeerConnection.\u003c/p\u003e\n\u003cp\u003eNote that \u003ccode\u003eaudio.src\u003c/code\u003e is to be used with a \u003ccode\u003eMediaSrouce\u003c/code\u003e URL while \u003ccode\u003eaudio.srcObject\u003c/code\u003e is for \u003ccode\u003eMediaStream\u003c/code\u003e.\u003c/p\u003e\n"
-        }
-      }
-    
-    
-    ]
-  }
-</script>
-
+</li>
+</ul>
 </article>
  
       
@@ -1809,38 +1664,14 @@ What is the difference between a MediaStream and a MediaSource when used in a re
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#web-py-loopback">web py loopback</a>
+    <li><a href="#nrf-sdk-firmware">NRF-SDK Firmware</a>
       <ul>
-        <li><a href="#web-audio-script-processor">web audio script processor</a></li>
-        <li><a href="#media-source-extension-api">media source extension API</a></li>
-        <li><a href="#webrtc">webRTC</a></li>
-        <li><a href="#pystream">pystream</a>
-          <ul>
-            <li><a href="#dependencies">dependencies</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#see-sound">see sound</a>
-      <ul>
-        <li><a href="#live-demo">Live demo</a></li>
-      </ul>
-    </li>
-    <li><a href="#librosa-test">librosa test</a></li>
-    <li><a href="#microcontroller-loopback">Microcontroller loopback</a></li>
-    <li><a href="#future-plan">Future Plan</a>
-      <ul>
-        <li><a href="#interactive-sound-input">Interactive sound input</a></li>
-        <li><a href="#debug-workflow">Debug workflow</a></li>
-      </ul>
-    </li>
-    <li><a href="#topics">Topics</a>
-      <ul>
-        <li><a href="#offline-preparation">Offline Preparation</a></li>
-        <li><a href="#real-time-processing">Real Time Processing</a></li>
-        <li><a href="#capture">Capture</a></li>
-        <li><a href="#display">Display</a></li>
-        <li><a href="#microcontrollers">Microcontrollers</a></li>
+        <li><a href="#01-dongle-nrfsdk-mqttsn-client">01 dongle nrfsdk mqttsn client</a></li>
+        <li><a href="#04-dongle-pio-zephyr-blink">04 dongle pio zephyr blink</a></li>
+        <li><a href="#06-tag-zephyr-hello">06 tag zephyr hello</a></li>
+        <li><a href="#07-tag-zephyr-button">07 tag zephyr button</a></li>
+        <li><a href="#08-tag-zephyr-thread">08 tag zephyr thread</a></li>
+        <li><a href="#09-tag-zephyr-i2c">09 tag zephyr i2c</a></li>
       </ul>
     </li>
     <li><a href="#faq---discussion">FAQ - Discussion</a></li>
