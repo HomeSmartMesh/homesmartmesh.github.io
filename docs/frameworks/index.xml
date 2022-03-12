@@ -13,7 +13,7 @@
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/raspi_iot/</guid>
-      <description>Discourse ForumSupport and discussions on the ForumGithub RepoSource code on the Github Repoimport {defined} from &#34;/js/web-js-utils.js&#34;import {Grid} from &#34;/js/grid.js&#34;let grid_div = document.getElementById(&#34;grid-2a00875ce400bf70&#34;);let grid = new Grid(grid_div);grid_div.</description>
+      <description>Discussion ForumSupport and discussions on the Github DiscussionsGithub RepoSource code on the Github Repoimport {defined} from &#34;/js/web-js-utils.js&#34;import {Grid} from &#34;/js/grid.js&#34;let grid_div = document.getElementById(&#34;grid-2a00875ce400bf70&#34;);let grid = new Grid(grid_div);grid_div.</description>
     </item>
     
     <item>
@@ -41,7 +41,8 @@ Relates to#Zephyr RTOSThread ProtocolOverview#The image abov
       <pubDate>Sat, 13 Feb 2021 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/home_assistant/</guid>
-      <description>Official WebsiteBluetooth#BLE Bluetooth Low Energy# This is a simple integration that tracks BLE devices and beacons without even requiring pairing (privacy notice might be required)  BLE TrackerBluetooth Mesh# One investigation path for integrating Bluetooth mesh in Home Assistant is bridging it through an ip layer using the Bearer Layer of the BLE Architecture  BLE Mesh =&amp;gt; IP =&amp;gt; MQTT-SN =&amp;gt; MQTT =&amp;gt; Home Assistant</description>
+      <description>Official WebsiteAutomations#Symfonisk volume rotary remote#The gola of this Automation is to adjust the volume of the sonos system with the rotation but also use the press to play pause another system wich is a smart Samsung Tv.
+ zigbee2mqtt : https://www.zigbee2mqtt.io/ blueprint : https://epmatt.github.io/awesome-ha-blueprints/docs/blueprints/controllers/ikea_e1744 HA entity input_text : https://www.home-assistant.io/integrations/input_text/  alternative to HA Integration : Without HA, it is necessary to pair the rotary remote with IKEA gateway, although it is enough to control the volume, it does not allow fine adjutment and combining functions with different devices.</description>
     </item>
     
     <item>

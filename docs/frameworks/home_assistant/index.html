@@ -16,7 +16,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.aa12dec2a41ca8c8dedf274146c4e4e2fedc37a4a2c9658bcc3c64fb5169b390.js" integrity="sha256-qhLewqQcqMje3ydBRsTk4v7cN6SiyWWLzDxk&#43;1Fps5A="></script>
+<script defer src="/en.search.min.6a14dac77b103f08399ba4950ed34e424d8b1441f5d56be3b1455663ec277e06.js" integrity="sha256-ahTax3sQPwg5m6SVDtNOQk2LFEH11WvjsUVWY&#43;wnfgY="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -989,6 +989,11 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
+    <li><a href="#automations">Automations</a>
+      <ul>
+        <li><a href="#symfonisk-volume-rotary-remote">Symfonisk volume rotary remote</a></li>
+      </ul>
+    </li>
     <li><a href="#bluetooth">Bluetooth</a>
       <ul>
         <li><a href="#ble-bluetooth-low-energy">BLE Bluetooth Low Energy</a></li>
@@ -1053,6 +1058,21 @@ https://github.com/alex-shpak/hugo-book
     </div>
 </div>
 </p>
+<h1 id="automations">
+  Automations
+  <a class="anchor" href="#automations">#</a>
+</h1>
+<h2 id="symfonisk-volume-rotary-remote">
+  Symfonisk volume rotary remote
+  <a class="anchor" href="#symfonisk-volume-rotary-remote">#</a>
+</h2>
+<p>The gola of this Automation is to adjust the volume of the sonos system with the rotation but also use the press to play pause another system wich is a smart Samsung Tv.</p>
+<ul>
+<li>zigbee2mqtt : <a href="https://www.zigbee2mqtt.io/">https://www.zigbee2mqtt.io/</a></li>
+<li>blueprint : <a href="https://epmatt.github.io/awesome-ha-blueprints/docs/blueprints/controllers/ikea_e1744">https://epmatt.github.io/awesome-ha-blueprints/docs/blueprints/controllers/ikea_e1744</a></li>
+<li>HA entity input_text : <a href="https://www.home-assistant.io/integrations/input_text/">https://www.home-assistant.io/integrations/input_text/</a></li>
+</ul>
+<p><strong>alternative to HA Integration</strong> : Without HA, it is necessary to pair the rotary remote with IKEA gateway, although it is enough to control the volume, it does not allow fine adjutment and combining functions with different devices.</p>
 <h1 id="bluetooth">
   Bluetooth
   <a class="anchor" href="#bluetooth">#</a>
@@ -1324,6 +1344,11 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
+    <li><a href="#automations">Automations</a>
+      <ul>
+        <li><a href="#symfonisk-volume-rotary-remote">Symfonisk volume rotary remote</a></li>
+      </ul>
+    </li>
     <li><a href="#bluetooth">Bluetooth</a>
       <ul>
         <li><a href="#ble-bluetooth-low-energy">BLE Bluetooth Low Energy</a></li>
