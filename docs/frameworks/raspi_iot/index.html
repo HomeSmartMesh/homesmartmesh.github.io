@@ -18,7 +18,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.6a14dac77b103f08399ba4950ed34e424d8b1441f5d56be3b1455663ec277e06.js" integrity="sha256-ahTax3sQPwg5m6SVDtNOQk2LFEH11WvjsUVWY&#43;wnfgY="></script>
+<script defer src="/en.search.min.ce0a7cf4c4df8173965c8e68eaf5c341cc9af477c8a76a75005975ac5faf5055.js" integrity="sha256-zgp89MTfgXOWXI5o6vXDQcya9HfIp2p1AFl1rF&#43;vUFU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -991,6 +991,7 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
+    <li><a href="#home-webapp">Home Webapp</a></li>
     <li><a href="#hardware">Hardware</a></li>
     <li><a href="#software">Software</a>
       <ul>
@@ -999,6 +1000,7 @@ https://github.com/alex-shpak/hugo-book
             <li><a href="#openthread-network-configuration">Openthread Network Configuration</a></li>
           </ul>
         </li>
+        <li><a href="#main-webapp">Main Webapp</a></li>
         <li><a href="#meta-website">Meta website</a>
           <ul>
             <li><a href="#what-is-it-">What is it ?</a></li>
@@ -1267,6 +1269,37 @@ https://github.com/alex-shpak/hugo-book
 
 </script>
 
+<h1 id="home-webapp">
+  Home Webapp
+  <a class="anchor" href="#home-webapp">#</a>
+</h1>
+<p>This <code>mobile first</code> webapp from the <a href="https://github.com/HomeSmartMesh/raspi/tree/master/web/home-next">web/home-next</a> directory is based on <a href="https://nextjs.org/">next.js</a>, <a href="https://reactjs.org/">react</a>, <a href="https://mui.com/">Material UI</a> and <a href="https://github.com/mqttjs/MQTT.js#readme">MQTT.js</a>. All of the features are running on a raspberry pi as a server with services from a deployed instance of this repo.</p>
+
+
+
+
+
+
+<div class="text-center">
+  <a >
+    <img
+    src="/images/home-next.gif"
+    alt=""
+    width=""
+    height=""
+    decoding="async"
+  />
+  </a>
+  
+</div>
+
+<ul>
+<li>The Heat panel controls the temperature with <code>Eurotronics</code> Zigbee valves running on <a href="https://zigbee2mqtt.io/">Zigbee2mqtt</a>. The room humidity is also shown from <a href="https://github.com/nRFMesh/nRF52_Mesh">nRF custom sensors</a></li>
+<li>The sound panel controls sonos system to switch it on and off through <code>Tuya</code> smart sockets, and it controls the volume through <a href="https://github.com/jishi/node-sonos-http-api">node-sonos-http-api</a>. The sockets can also be controlled with an <code>Aqara</code> button.</li>
+<li>The power panel controls <code>Tuya</code> smart sockets and displays the power consumption. On and Off images are updated depending on the state. The PC socket is switched on with an <code>Aqara</code> button and switched off with an auto power off <a href="https://github.com/HomeSmartMesh/raspi/tree/master/js/pc_control">pc_control</a> script.</li>
+<li>The Ambient Panel is a Grafana dashboard that shows the last day charts of humidity, temperature and light from the <a href="https://github.com/nRFMesh/nRF52_Mesh">nRF custom sensors</a></li>
+<li>The Energy panels is also a Grafana dashboard that shows cumulated energy for the last 24h or last 30d, combining energy measures from <code>Shelly plug s</code> wifi and <code>Tuya</code> zigbee sockets.</li>
+</ul>
 <h1 id="hardware">
   Hardware
   <a class="anchor" href="#hardware">#</a>
@@ -1498,6 +1531,11 @@ sudo bash setup.sh
 <p>the grafana dashboard <code>SensorTag Compare</code> should be accessible from <code>http://&lt;raspi_ip&gt;:3000</code></p>
 </li>
 </ul>
+<h2 id="main-webapp">
+  Main Webapp
+  <a class="anchor" href="#main-webapp">#</a>
+</h2>
+<p>see <a href="#home-webapp">Home Webapp</a> above.</p>
 <h2 id="meta-website">
   Meta website
   <a class="anchor" href="#meta-website">#</a>
@@ -2642,6 +2680,7 @@ how does the Raspi-IoT framework compare to existing frameworks like home assist
       
   <nav id="TableOfContents">
   <ul>
+    <li><a href="#home-webapp">Home Webapp</a></li>
     <li><a href="#hardware">Hardware</a></li>
     <li><a href="#software">Software</a>
       <ul>
@@ -2650,6 +2689,7 @@ how does the Raspi-IoT framework compare to existing frameworks like home assist
             <li><a href="#openthread-network-configuration">Openthread Network Configuration</a></li>
           </ul>
         </li>
+        <li><a href="#main-webapp">Main Webapp</a></li>
         <li><a href="#meta-website">Meta website</a>
           <ul>
             <li><a href="#what-is-it-">What is it ?</a></li>
