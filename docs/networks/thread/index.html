@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.f5229db16f66f17198a8ebb4f3b0f57161290e892275df4f4fbef99b7b01e881.js" integrity="sha256-9SKdsW9m8XGYqOu087D1cWEpDokidd9PT775m3sB6IE="></script>
+<script defer src="/en.search.min.226dd3d50f4faec8819247ad0a81d287d13a02c215de121035d27e5f6acb18c1.js" integrity="sha256-Im3T1Q9PrsiBkketCoHSh9E6AsIV3hIQNdJ&#43;X2rLGME="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1897,6 +1897,57 @@ https://github.com/alex-shpak/hugo-book
         <div class="col text-center">
         <a  class="book-btn"
             
+                href="https://openthread.io/codelabs/openthread-border-router-nat64#0"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            Border Router with NAT64
+            
+            
+                
+                <span class="external-link">
+                    <svg    viewBox="0 0 511.626 511.627"
+                            fill="currentColor"
+                    >
+                        <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+                            c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+                            c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+                            h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+                            c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+                            c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+                            c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+                            C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+                        <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+                            c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+                            c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+                            s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+                            c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+                    </svg>
+                </span>
+                
+                
+
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
                 href="https://openthread.io/guides/border-router/build#set-up-the-border-router"
                 target="_blank"
             
@@ -1945,6 +1996,7 @@ https://github.com/alex-shpak/hugo-book
 <p>install git if not already available</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/openthread/ot-br-posix
 cd ot-br-posix
+export NAT64<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> NAT64_SERVICE<span style="color:#f92672">=</span>openthread
 ./script/bootstrap
 INFRA_IF_NAME<span style="color:#f92672">=</span>eth0 ./script/setup
 sudo nano /etc/default/otbr-agent
@@ -2379,7 +2431,35 @@ Listening using <code>socat</code>:</p>
   Form a network
   <a class="anchor" href="#form-a-network">#</a>
 </h2>
-<p>Upon success you should be able to connect on the raspberry pi url <code>http://10.0.0.41/</code></p>
+<ul>
+<li>on the raspi command line</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ot-ctl dataset init new
+
+sudo ot-ctl dataset channel <span style="color:#ae81ff">24</span>
+sudo ot-ctl dataset channel
+sudo ot-ctl dataset panid 0x1234
+sudo ot-ctl dataset panid
+sudo ot-ctl dataset networkname ThreadMatter
+sudo ot-ctl dataset networkname
+sudo ot-ctl dataset extpanid <span style="color:#ae81ff">1111111122222222</span>
+sudo ot-ctl dataset networkkey 00112233445566778899aabbccddeeff
+sudo ot-ctl dataset
+
+sudo ot-ctl dataset commit active
+
+sudo ot-ctl ifconfig up
+sudo ot-ctl thread start
+</code></pre></div><ul>
+<li>check with</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ot-ctl state
+sudo ot-ctl netdata show
+sudo ot-ctl ipaddr
+</code></pre></div><ul>
+<li>on the web interface</li>
+</ul>
+<p>connect on the raspberry pi url <code>http://10.0.0.41/</code></p>
 
 
 
@@ -2893,6 +2973,9 @@ sudo ot-ctl
   cli dongle
   <a class="anchor" href="#cli-dongle">#</a>
 </h2>
+<ul>
+<li>building with openthread repo</li>
+</ul>
 
 <div class="container">
     <div class="row">
@@ -3026,6 +3109,59 @@ arm-none-eabi-objcopy -O ihex ot-cli-ftd ot-cli-ftd-com-join.hex
 </p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nrfjprog -f nrf52 --eraseall
 nrfjprog -f nrf52 --program ot-cli-ftd.hex --sectorerase --verify
+</code></pre></div><ul>
+<li>building with nRFSDK</li>
+</ul>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <a  class="book-btn"
+            
+                href="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/samples/openthread/cli/README.html"
+                target="_blank"
+            
+            
+            role="button"
+        >
+            new nRF52840 Build instructions
+            
+            
+                
+                
+                <span class="github">
+                    <svg    viewBox="0 0 24 24" 
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+                
+
+                
+
+                
+
+                
+
+                
+            
+        </a>
+    </div>
+    </div>
+</div>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd nrf<span style="color:#ae81ff">\v</span>2.3.0<span style="color:#ae81ff">\n</span>rf<span style="color:#ae81ff">\s</span>amples<span style="color:#ae81ff">\o</span>penthread<span style="color:#ae81ff">\c</span>li
+&gt;west build -p always -b nrf52840dongle_nrf52840 -- -DOVERLAY_CONFIG<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;overlay-usb.conf&#34;</span> -DDTC_OVERLAY_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;usb.overlay&#34;</span>
+&gt;nrfutil pkg generate --hw-version <span style="color:#ae81ff">52</span> --sd-req<span style="color:#f92672">=</span>0x00 --application build/zephyr/zephyr.hex --application-version <span style="color:#ae81ff">1</span> build/zephyr/zephyr.zip
+nrfutil dfu usb-serial -pkg build/zephyr/zephyr.zip -p COM8
+</code></pre></div><p>then on terminal laways preceed with <code>ot</code> for openthread commands</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">uart:~$ ot state
+disabled
+Done
 </code></pre></div><ul>
 <li>connecting a node with credentials</li>
 </ul>
