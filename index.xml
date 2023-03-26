@@ -13,7 +13,7 @@
       <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag/</guid>
-      <description>Networks / ThreadFrameworks / CHIPOverview# nRF52840 on a MS88SF2 module. i²C bus scl P1.13 and sda P1.15 Light sensor VEMLS6030 @0x48 MS8607 with relative humidity @0x40, pressure and temperature @0x76 Reset button P0.</description>
+      <description>Networks / Thread     Frameworks / CHIP     Overview #     nRF52840 on a MS88SF2 module. i²C bus scl P1.13 and sda P1.15 Light sensor VEMLS6030 @0x48 MS8607 with relative humidity @0x40, pressure and temperature @0x76 Reset button P0.</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/kayak_trailer/</guid>
-      <description>Back to 3D Printing Lightweight small can be taken along, fits in the kayak behind the seat  models available for free on demand, feel free to ask on the forum Home Smart Mesh - website00 real model</description>
+      <description>Back to 3D Printing    Lightweight small can be taken along, fits in the kayak behind the seat  models available for free on demand, feel free to ask on the forum Home Smart Mesh - website         00 real model</description>
     </item>
     
     <item>
@@ -31,8 +31,8 @@
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/applications/web_three_interface/</guid>
-      <description>Webapp Three Interface Github RepoThis repo contains webGL Three.js based interface demos for interactions with 3d data using mouse and touch.
-Final application#This repository has boilerplates samples. A real use case example is a 3d home model. While the focus of this repo is the 3d interactions only, this repo is used in another project linked below where it is connected to real devices and network libraries.</description>
+      <description>Webapp Three Interface Github Repo    This repo contains webGL Three.js based interface demos for interactions with 3d data using mouse and touch.
+Final application #  This repository has boilerplates samples. A real use case example is a 3d home model. While the focus of this repo is the 3d interactions only, this repo is used in another project linked below where it is connected to real devices and network libraries.</description>
     </item>
     
     <item>
@@ -41,7 +41,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0900</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/datasheets/</guid>
-      <description>ESP32#Datasheet# Datasheet  Blockdiagram#Memory Map#Power Modes#WROOM Datasheet# ESP32-WROOM-32 Datasheet  Pin Layout#ESP32-S2#Datasheet# ESP32-S2 Datasheet  Block Diagram#Memory#Power Modes#S2 Technical Reference Manual# TRM  </description>
+      <description>ESP32 #  Datasheet #   Datasheet  Blockdiagram #  Memory Map #  Power Modes #  WROOM Datasheet #   ESP32-WROOM-32 Datasheet  Pin Layout #  ESP32-S2 #  Datasheet #   ESP32-S2 Datasheet  Block Diagram #  Memory #  Power Modes #  S2 Technical Reference Manual #   TRM  </description>
     </item>
     
     <item>
@@ -50,7 +50,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/grafana/light/</guid>
-      <description>Room light east and west#Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-bc6c51b9555f0ff6&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-bc6c51b9555f0ff6&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};</description>
+      <description>Room light east and west #  Full screen Open in a new page     var button = document.getElementById(&#34;btn-bc6c51b9555f0ff6&#34;); button.onclick = ()={ var elem = document.getElementById(&#34;ifm-bc6c51b9555f0ff6&#34;); if (elem.requestFullscreen) { elem.requestFullscreen(); } else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen(); } else if (elem.msRequestFullscreen) { elem.msRequestFullscreen(); } };  </description>
     </item>
     
     <item>
@@ -59,7 +59,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/raspi_iot/</guid>
-      <description>Discussion ForumSupport and discussions on the Github DiscussionsGithub RepoSource code on the Github Repoimport {defined} from &#34;/js/web-js-utils.js&#34;import {Grid} from &#34;/js/grid.js&#34;let grid_div = document.getElementById(&#34;grid-2a00875ce400bf70&#34;);let grid = new Grid(grid_div);grid_div.</description>
+      <description>Discussion Forum     Support and discussions on the Github Discussions  Github Repo   Source code on the Github Repo   import {defined} from &#34;/js/web-js-utils.js&#34; import {Grid} from &#34;/js/grid.js&#34; let grid_div = document.getElementById(&#34;grid-2a00875ce400bf70&#34;); let grid = new Grid(grid_div); grid_div.</description>
     </item>
     
     <item>
@@ -68,7 +68,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/networks/thread/</guid>
-      <description>Thread SensorTagZephyr RTOSProject MatterOverview#Full Screenimport {setup_svg_panzoom,reset_svg_panzoom} from &#34;/js/setup-svg-pan-zoom.js&#34;function window_reset_position(){reset_svg_panzoom(&#34;openthread-environment-1&#34;)}console.log(`into script for &#34;openthread-environment-1&#34;`)window.addEventListener(&#39;load&#39;, ()={let embed = document.</description>
+      <description>Thread SensorTag     Zephyr RTOS     Project Matter     Overview #  Full Screen   import {setup_svg_panzoom,reset_svg_panzoom} from &#34;/js/setup-svg-pan-zoom.js&#34; function window_reset_position(){ reset_svg_panzoom(&#34;openthread-environment-1&#34;) } console.log(`into script for &#34;openthread-environment-1&#34;`) window.addEventListener(&#39;load&#39;, ()={ let embed = document.</description>
     </item>
     
     <item>
@@ -77,7 +77,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Sun, 10 Feb 2019 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/robotics/rover/</guid>
-      <description>Overview#RobLibs Github Organization Open source hobby project, creation of a robot with an original structure that moves in a home environment. The robot structure is a double sided inverted pendulum, with the ability to stand up switching from flat mode (car) to the standing mode (balancing robot), on each of its sides. Further dynamic behaviors to be expected.</description>
+      <description>Overview #  RobLibs Github Organization          Open source hobby project, creation of a robot with an original structure that moves in a home environment. The robot structure is a double sided inverted pendulum, with the ability to stand up switching from flat mode (car) to the standing mode (balancing robot), on each of its sides. Further dynamic behaviors to be expected.</description>
     </item>
     
     <item>
@@ -86,7 +86,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Thu, 13 May 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/matter/</guid>
-      <description>Relates to#Zephyr RTOSOpenThread Guidepreviously known as CHIP Overview#The image above does only focus on the relation between Matter, Thread and Zigbee. Both Matter and Zigbee run on 802.15.4 (optional for Matter), and both are directly or indirectly based on ZCL which is in case of Matter named ZAP Zigbee Cluster Library Advanced Platform.</description>
+      <description>Relates to #   Zephyr RTOS     OpenThread Guide     previously known as CHIP   Overview #     The image above does only focus on the relation between Matter, Thread and Zigbee. Both Matter and Zigbee run on 802.15.4 (optional for Matter), and both are directly or indirectly based on ZCL which is in case of Matter named ZAP Zigbee Cluster Library Advanced Platform.</description>
     </item>
     
     <item>
@@ -95,7 +95,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Sat, 08 May 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm1001_dev/</guid>
-      <description>Networks / Ultra Wide Band RTLSDevelopment Board# DWM1001C Module STM32F072 as J-Link OB debugger USB and battery conenctors Raspberry PI Header connector User Leds buttons  product pagedatasheetuser manualDWM1001C Module# DW1000 Transciever TWR-RTLS : Two Way Ranging - Real Time Location System nRF52832 for a Bluetooth API LIS2DH12TR STM 3-Axis Motion Detector  The product page includes datasheets, schematics, firmware,&amp;hellip; product pageDW1000 Transciever# IEEE 802.</description>
+      <description>Networks / Ultra Wide Band RTLS     Development Board #     DWM1001C Module STM32F072 as J-Link OB debugger USB and battery conenctors Raspberry PI Header connector User Leds buttons   product page       datasheet         user manual         DWM1001C Module #     DW1000 Transciever TWR-RTLS : Two Way Ranging - Real Time Location System nRF52832 for a Bluetooth API LIS2DH12TR STM 3-Axis Motion Detector  The product page includes datasheets, schematics, firmware,&amp;hellip; product page       DW1000 Transciever #     IEEE 802.</description>
     </item>
     
     <item>
@@ -104,7 +104,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Sat, 08 May 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/dwm3001_cdk/</guid>
-      <description>Networks / Ultra Wide Band RTLSDevelopment Board#product page DWM3001C Module STM32 as J-Link OB debugger x2 micro USB for nRF Data and J-Link Program/serial battery conenctor Raspberry PI Header connector User Leds and buttons  DWM3001C Module#product page DW3110 Transciever nRF52833 Thread, Zigbee and Bluetooth (Mesh, Direction finding) IMU : Inertial Motion Unit TWR and TDoA : Two Way Ranging and Time Difference of Arrival  nRF52833DW3110 Transciever#product page 2 RF bands : channel 5 (6.</description>
+      <description>Networks / Ultra Wide Band RTLS     Development Board #   product page          DWM3001C Module STM32 as J-Link OB debugger x2 micro USB for nRF Data and J-Link Program/serial battery conenctor Raspberry PI Header connector User Leds and buttons  DWM3001C Module #  product page        DW3110 Transciever nRF52833 Thread, Zigbee and Bluetooth (Mesh, Direction finding) IMU : Inertial Motion Unit TWR and TDoA : Two Way Ranging and Time Difference of Arrival  nRF52833       DW3110 Transciever #  product page        2 RF bands : channel 5 (6.</description>
     </item>
     
     <item>
@@ -113,7 +113,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Thu, 06 May 2021 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/networks/ultrawideband/</guid>
-      <description>Microcontrollers / nRF52 / UWB DWM3001 cdkMicrocontrollers / nRF52 / UWB DWM1001 devAn Ultra-Wide-Band networks can form a mesh network, in addition, the main feature is the RTLS: Real-Time-Locating-System capability.</description>
+      <description>Microcontrollers / nRF52 / UWB DWM3001 cdk     Microcontrollers / nRF52 / UWB DWM1001 dev     An Ultra-Wide-Band networks can form a mesh network, in addition, the main feature is the RTLS: Real-Time-Locating-System capability.</description>
     </item>
     
     <item>
@@ -122,7 +122,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Sun, 07 Mar 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/robotics/roborock/</guid>
-      <description>Roborock s55#Valetudo#installHome menu#Map#Telegram app#Roborock chat# the valetudo install section will provide the valetudo server  Hypefr server repo this app is using node.js telegraf  telegraf dependency the node.</description>
+      <description>Roborock s55 #    Valetudo #  install       Home menu #    Map #    Telegram app #  Roborock chat #     the valetudo install section will provide the valetudo server  Hypefr server repo        this app is using node.js telegraf  telegraf dependency        the node.</description>
     </item>
     
     <item>
@@ -131,7 +131,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/applications/home3d/</guid>
-      <description>{&#34;@context&#34;:&#34;https://schema.org&#34;,&#34;@type&#34;:&#34;SoftwareApplication&#34;,&#34;applicationCategory&#34;:&#34;HomeAutomation&#34;,&#34;name&#34;:&#34;Smart Home 3D Webapp&#34;,&#34;offers&#34;:{&#34;@type&#34;:&#34;Offer&#34;,&#34;price&#34;:&#34;0.00&#34;,&#34;priceCurrency&#34;:&#34;USD&#34;},&#34;operatingSystem&#34;:&#34;Windows, OSX, ANDROID&#34;}Webapp 3D Github RepoUWB Indoors positioning#  UWB development environment Networks / Ultra Wide Band RTLSSupport, reviews, experience exchange and ideas related to this page content can be discussed in the dedicated forum category Discussions - 3d webapp Getting Started# host this project on your local raspberry pi or see &amp;lsquo;Local host vs Remote host&amp;rsquo; section on how to use the live demo create your own glTF model from blender (optional)  activate hue bridge connection#   adjust the light names to match your hue lights names press the Hue Gateway authorisation button (on the real device) Click on the 3d model of the hue gateway An alert will apear on the screen to wait for confirmation The user creation will proceed and the username will be stored as local storage (ctrl+j in chrome to oben the debug window)  activate mqtt connection#   adjust the mqtt topic names to match your mqtt devices install a mosquitto version with websocket support Click on the 3d model of the mosquitto gateway  Live demo#Full screenOpen in a new pagevar button = document.</description>
+      <description>{&#34;@context&#34;:&#34;https://schema.org&#34;,&#34;@type&#34;:&#34;SoftwareApplication&#34;,&#34;applicationCategory&#34;:&#34;HomeAutomation&#34;,&#34;name&#34;:&#34;Smart Home 3D Webapp&#34;,&#34;offers&#34;:{&#34;@type&#34;:&#34;Offer&#34;,&#34;price&#34;:&#34;0.00&#34;,&#34;priceCurrency&#34;:&#34;USD&#34;},&#34;operatingSystem&#34;:&#34;Windows, OSX, ANDROID&#34;}  Webapp 3D Github Repo    UWB Indoors positioning #    UWB development environment Networks / Ultra Wide Band RTLS     Support, reviews, experience exchange and ideas related to this page content can be discussed in the dedicated forum category Discussions - 3d webapp       Getting Started #   host this project on your local raspberry pi or see &amp;lsquo;Local host vs Remote host&amp;rsquo; section on how to use the live demo create your own glTF model from blender (optional)  activate hue bridge connection #     adjust the light names to match your hue lights names press the Hue Gateway authorisation button (on the real device) Click on the 3d model of the hue gateway An alert will apear on the screen to wait for confirmation The user creation will proceed and the username will be stored as local storage (ctrl+j in chrome to oben the debug window)  activate mqtt connection #     adjust the mqtt topic names to match your mqtt devices install a mosquitto version with websocket support Click on the 3d model of the mosquitto gateway  Live demo #  Full screen Open in a new page     var button = document.</description>
     </item>
     
     <item>
@@ -140,9 +140,9 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/light/</guid>
-      <description>Cover Dumb Switch with Smart Switch#STL Model                             01 black and white 3dprints
-02 black and white breakout
-03 black and white back side</description>
+      <description>Cover Dumb Switch with Smart Switch #       STL Model                                     01 black and white 3dprints
+      02 black and white breakout
+      03 black and white back side</description>
     </item>
     
     <item>
@@ -151,7 +151,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/applications/voronoi/</guid>
-      <description>Webapp#runs with chrome as a web browser Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-f7ccb353b1174faa&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-f7ccb353b1174faa&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};Github repo#Voronoi generator webapp Github Repo3d printing#Voronoi STL Models Description#Parametric Voronoi generator with real time editing and SVG export</description>
+      <description>Webapp #  runs with chrome as a web browser Full screen Open in a new page     var button = document.getElementById(&#34;btn-f7ccb353b1174faa&#34;); button.onclick = ()={ var elem = document.getElementById(&#34;ifm-f7ccb353b1174faa&#34;); if (elem.requestFullscreen) { elem.requestFullscreen(); } else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen(); } else if (elem.msRequestFullscreen) { elem.msRequestFullscreen(); } };  Github repo #  Voronoi generator webapp Github Repo       3d printing #  Voronoi STL Models   Description #  Parametric Voronoi generator with real time editing and SVG export</description>
     </item>
     
     <item>
@@ -160,7 +160,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0900</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/debugger/</guid>
-      <description>PlatformIO# ESP-Prog  Pinout#Connection#Official Guide# Espressif - ESP Prog Guide  </description>
+      <description>PlatformIO #   ESP-Prog  Pinout #  Connection #  Official Guide #   Espressif - ESP Prog Guide  </description>
     </item>
     
     <item>
@@ -169,7 +169,7 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/grafana/sensors/</guid>
-      <description>Hot summer#Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-388b84c89c2369b2&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-388b84c89c2369b2&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};Xiaomi Aqara vs DIY BME280#Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-f8d70b01c18b3285&#34;);button.onclick = ()={var elem = document.</description>
+      <description>Hot summer #  Full screen Open in a new page     var button = document.getElementById(&#34;btn-388b84c89c2369b2&#34;); button.onclick = ()={ var elem = document.getElementById(&#34;ifm-388b84c89c2369b2&#34;); if (elem.requestFullscreen) { elem.requestFullscreen(); } else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen(); } else if (elem.msRequestFullscreen) { elem.msRequestFullscreen(); } };  Xiaomi Aqara vs DIY BME280 #  Full screen Open in a new page     var button = document.getElementById(&#34;btn-f8d70b01c18b3285&#34;); button.onclick = ()={ var elem = document.</description>
     </item>
     
     <item>
@@ -178,8 +178,8 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/simplemesh_sensortag/</guid>
-      <description>Networks / Simple MeshFrameworks / Raspi IoTTindie Product PageConcept#It is possible to mount either CR2032 or CR2477
-Hardware#board render</description>
+      <description>Networks / Simple Mesh     Frameworks / Raspi IoT     Tindie Product Page       Concept #    It is possible to mount either CR2032 or CR2477
+  Hardware #  board render</description>
     </item>
     
     <item>
@@ -188,8 +188,8 @@ Final application#This repository has boilerplates samples. A real use case e
       <pubDate>Fri, 12 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/chip/</guid>
-      <description>Moved to#MatterThis page will be kept as a transitional link
-Relates to#Zephyr RTOSThread ProtocolOverview#The image above does only focus on the relation between CHIP, Thread and Zigbee. Both CHIP and Zigbee run on 802.15.4 (optional for CHIP), and both are directly or indirectly based on ZCL which is in case of CHIP named ZAP Zigbee Cluster Library Advanced Platform.</description>
+      <description>Moved to #  Matter     This page will be kept as a transitional link
+Relates to #   Zephyr RTOS     OpenThread Guide     </description>
     </item>
     
     <item>
@@ -198,7 +198,7 @@ Relates to#Zephyr RTOSThread ProtocolOverview#The image abov
       <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/trick_tracker/</guid>
-      <description>Overview#The Trick-Tracker targets any user who is interested in tracking skill and improvement of certain fun sport devices. The Main focus of the first version are bikes but in general it can be used for any sort of sport devices which can be used to do stunts and tricks.</description>
+      <description>Overview #    The Trick-Tracker targets any user who is interested in tracking skill and improvement of certain fun sport devices. The Main focus of the first version are bikes but in general it can be used for any sort of sport devices which can be used to do stunts and tricks.</description>
     </item>
     
     <item>
@@ -207,7 +207,7 @@ Relates to#Zephyr RTOSThread ProtocolOverview#The image abov
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/light_socket/</guid>
-      <description>Cover Dumb Switch and smart Socket#STL ModelApplication#More details on the raspberry pi service </description>
+      <description> Cover Dumb Switch and smart Socket #       STL Model      Application #     More details on the raspberry pi service   </description>
     </item>
     
     <item>
@@ -216,7 +216,7 @@ Relates to#Zephyr RTOSThread ProtocolOverview#The image abov
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0900</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/software/</guid>
-      <description>Arduino ESP32# platform package as an idf component  ESP-IDF# esp-idf esp-iot-solution mesh-dev-framework mdf prog guide  Over The Air Update#&amp;gt;get_idf&amp;gt;idf.py set-target esp32 OTA Github Readme&amp;gt;idf.py menuconfig https://10.0.0.36:8070/hello-world.bin&amp;gt;cp ca_cert.pem ../simple_ota_example/server_certs/&amp;gt;idf.py -p /dev/ttyUSB0 flash monitor on another linux host, copied ca_cert.pem then tested :
+      <description>Arduino ESP32 #   platform package as an idf component  ESP-IDF #   esp-idf esp-iot-solution mesh-dev-framework mdf prog guide  Over The Air Update #  &amp;gt;get_idf &amp;gt;idf.py set-target esp32  OTA Github Readme    &amp;gt;idf.py menuconfig    https://10.0.0.36:8070/hello-world.bin &amp;gt;cp ca_cert.pem ../simple_ota_example/server_certs/ &amp;gt;idf.py -p /dev/ttyUSB0 flash monitor  on another linux host, copied ca_cert.pem then tested :
 &amp;gt;curl -v https://10.0.0.36:8070/simple_ota.bin --cacert ca_cert.pem &amp;gt; simple_ota.</description>
     </item>
     
@@ -226,7 +226,7 @@ Relates to#Zephyr RTOSThread ProtocolOverview#The image abov
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/grafana/thread_sensortag/</guid>
-      <description>Voltage and Temperature#SensorTag stress test with report every 3 seconds with average over 1 hourFull screenOpen in a new pagevar button = document.getElementById(&#34;btn-7df75999c5c036f9&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-7df75999c5c036f9&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};</description>
+      <description>Voltage and Temperature #  SensorTag stress test with report every 3 seconds with average over 1 hour  Full screen Open in a new page     var button = document.getElementById(&#34;btn-7df75999c5c036f9&#34;); button.onclick = ()={ var elem = document.getElementById(&#34;ifm-7df75999c5c036f9&#34;); if (elem.requestFullscreen) { elem.requestFullscreen(); } else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen(); } else if (elem.msRequestFullscreen) { elem.msRequestFullscreen(); } };  </description>
     </item>
     
     <item>
@@ -235,8 +235,8 @@ Relates to#Zephyr RTOSThread ProtocolOverview#The image abov
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/networks/nrf/</guid>
-      <description>Simple Mesh Overview#A simpler, more efficient alternative to Z-x, BL-x, Thread, standard RF protocols. Open source SW is provided for custom and off the shelf nRF SoC tags and dongles.
-Simple Mesh SensorTagSimple Mesh and thread on ZephyrSimple Mesh RepoFeatures#     2.</description>
+      <description>Simple Mesh Overview #  A simpler, more efficient alternative to Z-x, BL-x, Thread, standard RF protocols. Open source SW is provided for custom and off the shelf nRF SoC tags and dongles.
+Simple Mesh SensorTag     Simple Mesh and thread on Zephyr       Simple Mesh Repo       Features #       2.</description>
     </item>
     
     <item>
@@ -245,7 +245,7 @@ Simple Mesh SensorTagSimple Mesh and thread on ZephyrSimple Mesh Rep
       <pubDate>Sun, 29 Aug 2021 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/grafana/thread_sensortag_compare/</guid>
-      <description>Voltage and Temperature#SensorTag stress test with report every 3 secondsFull screenOpen in a new pagevar button = document.getElementById(&#34;btn-98f35d7bf7cdff04&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-98f35d7bf7cdff04&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};</description>
+      <description>Voltage and Temperature #  SensorTag stress test with report every 3 seconds  Full screen Open in a new page     var button = document.getElementById(&#34;btn-98f35d7bf7cdff04&#34;); button.onclick = ()={ var elem = document.getElementById(&#34;ifm-98f35d7bf7cdff04&#34;); if (elem.requestFullscreen) { elem.requestFullscreen(); } else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen(); } else if (elem.msRequestFullscreen) { elem.msRequestFullscreen(); } };  </description>
     </item>
     
     <item>
@@ -254,7 +254,7 @@ Simple Mesh SensorTagSimple Mesh and thread on ZephyrSimple Mesh Rep
       <pubDate>Sat, 13 Feb 2021 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/home_assistant/</guid>
-      <description>Official WebsiteAutomations#Symfonisk volume rotary remote#The gola of this Automation is to adjust the volume of the sonos system with the rotation but also use the press to play pause another system wich is a smart Samsung Tv.
+      <description>Official Website     Automations #  Symfonisk volume rotary remote #  The gola of this Automation is to adjust the volume of the sonos system with the rotation but also use the press to play pause another system wich is a smart Samsung Tv.
  zigbee2mqtt : https://www.zigbee2mqtt.io/ blueprint : https://epmatt.github.io/awesome-ha-blueprints/docs/blueprints/controllers/ikea_e1744 HA entity input_text : https://www.home-assistant.io/integrations/input_text/  alternative to HA Integration : Without HA, it is necessary to pair the rotary remote with IKEA gateway, although it is enough to control the volume, it does not allow fine adjutment and combining functions with different devices.</description>
     </item>
     
@@ -264,7 +264,7 @@ Simple Mesh SensorTagSimple Mesh and thread on ZephyrSimple Mesh Rep
       <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/thread_sensortag_nrfsdk/</guid>
-      <description>this page is kept as documentation only as the old NRF-SDK is deprecated and this project is continued in the following link using the nRF-Connect SDK based on Zephyr.Thread SensorTagNetworks / ThreadFrameworks / CHIPNRF-SDK Firmware#repo directory01 dongle nrfsdk mqttsn client#Tested firmware with MQTT-SN gateway and Mosquitto broquer example based on nRFSDK for Thread and Zigbee v4.</description>
+      <description>this page is kept as documentation only as the old NRF-SDK is deprecated and this project is continued in the following link using the nRF-Connect SDK based on Zephyr.   Thread SensorTag     Networks / Thread     Frameworks / CHIP     NRF-SDK Firmware #  repo directory       01 dongle nrfsdk mqttsn client #  Tested firmware with MQTT-SN gateway and Mosquitto broquer   example based on nRFSDK for Thread and Zigbee v4.</description>
     </item>
     
     <item>
@@ -273,7 +273,7 @@ Simple Mesh SensorTagSimple Mesh and thread on ZephyrSimple Mesh Rep
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/esp32_remote/</guid>
-      <description>ESP32 Case for up/down remote control#STL models zipApplication#More details on the ESP32 Arduino code 3D printing creation requires sometimes quite a number of iterations                                 </description>
+      <description> ESP32 Case for up/down remote control #       STL models zip      Application #     More details on the ESP32 Arduino code   3D printing creation requires sometimes quite a number of iterations                                 </description>
     </item>
     
     <item>
@@ -282,10 +282,10 @@ Simple Mesh SensorTagSimple Mesh and thread on ZephyrSimple Mesh Rep
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/networks/zigbee/</guid>
-      <description>Devices Overview#Below are examples of used devices in this project
+      <description>Devices Overview #  Below are examples of used devices in this project
   As in the above figure, I kept all the light with the hue gateway for a reliable function, and opted for zigbee2mqtt for all other non lighting devices.
 For a detailed list of used devices and their documentation see the devices list section
-Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in a local network, therefore allowing third party apps integration.</description>
+Frameworks #  Philips Hue #    ✅ Philips Hue have an open API that can run in a local network, therefore allowing third party apps integration.</description>
     </item>
     
     <item>
@@ -294,7 +294,7 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in 
       <pubDate>Sat, 20 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/zephyr/</guid>
-      <description>Thread ProtocolProject MatterTrace with with SystemView# Segger SystemView : Real time OS Tracing SystemView user manual : Getting started, API reference,&amp;hellip;  It&amp;rsquo;s highly recommended to read the SystemView user manual to understand how the RT OS concepts are displayedSteps :</description>
+      <description>Thread Protocol     Project Matter     Trace with with SystemView #   Segger SystemView : Real time OS Tracing SystemView user manual : Getting started, API reference,&amp;hellip;  It&amp;rsquo;s highly recommended to read the SystemView user manual to understand how the RT OS concepts are displayed  Steps :</description>
     </item>
     
     <item>
@@ -303,7 +303,7 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in 
       <pubDate>Sun, 14 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/usb_dongle/</guid>
-      <description>Product Page     nRF52840 ARM M4 64 MHz 1024 KB ROM - 256 KB RAM Bluetooth 5, Mesh 802.15.4, Thread, Zigbee USB 2 GetStarted)  Applications# custom mesh coordinator  nRF52840 Dongle#Pinout#Serial Wire Debug# the usb dongle is referred to as PCA10059 which in projects usually shifts the app to offset 0x1000 as openbootloader usage is expected With serial wire debug, it&amp;rsquo;s possible to flash applications at same address as the PCA10056 which is at address 0x0000  LEDS# LED1 Green : P0.</description>
+      <description>Product Page            nRF52840 ARM M4 64 MHz 1024 KB ROM - 256 KB RAM Bluetooth 5, Mesh 802.15.4, Thread, Zigbee USB 2 GetStarted)  Applications #   custom mesh coordinator  nRF52840 Dongle #  Pinout #  Serial Wire Debug #   the usb dongle is referred to as PCA10059 which in projects usually shifts the app to offset 0x1000 as openbootloader usage is expected With serial wire debug, it&amp;rsquo;s possible to flash applications at same address as the PCA10056 which is at address 0x0000    LEDS #   LED1 Green : P0.</description>
     </item>
     
     <item>
@@ -312,7 +312,7 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in 
       <pubDate>Sat, 03 Apr 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/upython/</guid>
-      <description>nRF52840 usb donglecross compiler# note CROSS_COMPILE is referencing the system toolchain with loose recommendations 7.3.1/2Q18 or 8.2.1/4Q18. check the toolchain version  arm-none-eabi-gcc --version which arm-none-eabi-gcc --version  testing with version 9-2020-q2-update - 9.3.1 20200408  build instructions#git clone --recurse-submodules https://github.com/micropython/micropython.git cd micropython/mpy-cross make cd ../ports/nrf make submodules make BOARD=pca10059 config#usb# each board has the pins configured in a hreader file  ports/nrf/boards/pca10059/mpconfigboard.</description>
+      <description>nRF52840 usb dongle     cross compiler #   note CROSS_COMPILE is referencing the system toolchain with loose recommendations 7.3.1/2Q18 or 8.2.1/4Q18. check the toolchain version  arm-none-eabi-gcc --version which arm-none-eabi-gcc --version  testing with version 9-2020-q2-update - 9.3.1 20200408  build instructions #  git clone --recurse-submodules https://github.com/micropython/micropython.git cd micropython/mpy-cross make cd ../ports/nrf make submodules make BOARD=pca10059 config #  usb #   each board has the pins configured in a hreader file  ports/nrf/boards/pca10059/mpconfigboard.</description>
     </item>
     
     <item>
@@ -321,10 +321,10 @@ Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in 
       <pubDate>Sun, 21 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/uart_dongle/</guid>
-      <description>Board#A usb dongle from the market that includes a 2104 serial to usb converter. Keyword search on shopping websites : nRF52832 USB dongle. Aka &amp;ldquo;nRF52832-YJ-17017-USB-UART&amp;rdquo;
-Software#RF to Serial Gateway#The node connected through serial port will report messages in text format
+      <description>Board #    A usb dongle from the market that includes a 2104 serial to usb converter. Keyword search on shopping websites : nRF52832 USB dongle. Aka &amp;ldquo;nRF52832-YJ-17017-USB-UART&amp;rdquo;
+Software #  RF to Serial Gateway #  The node connected through serial port will report messages in text format
  Local Events  Upon startup such message is sent
-nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_listening the node starts acting as a gatewy that will report messages through serial in text mode</description>
+nodeid:75;channel:10;reset:1  Listening  Upon activation of the uicr config is_listening the node starts acting as a gatewy that will report messages through serial in text mode</description>
     </item>
     
     <item>
@@ -333,7 +333,7 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/handbag_hanger/</guid>
-      <description>Handbag hanger#STL Model</description>
+      <description> Handbag hanger #       STL Model      </description>
     </item>
     
     <item>
@@ -342,11 +342,11 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/under_desk_shelf/</guid>
-      <description>Under desk shelf#                             01 shelf overview
-02 shelf top view
-03 joint close up
-04 joint placement
-05 closer view</description>
+      <description>Under desk shelf #                                 01 shelf overview
+      02 shelf top view
+      03 joint close up
+      04 joint placement
+      05 closer view</description>
     </item>
     
     <item>
@@ -355,7 +355,7 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
       <pubDate>Sat, 26 Dec 2020 00:00:00 +0900</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/fisheye-cam-ov36/</guid>
-      <description>3 Mega Pixels OV3660 Fisheye lens DFOV 120° Ultra low power, sleep current 2μA 270mAh battery PSRAM 8MB  Links#Fisheye Timer camera $20Schematics - ESP32_SUBSYSSchematics - PMS_UARTPlatformio porting#board definition# local file : boards\m5stack-timer-cam.json should be added to the platformio/platform-espressif32 repo still missing from v2.</description>
+      <description>3 Mega Pixels OV3660 Fisheye lens DFOV 120° Ultra low power, sleep current 2μA 270mAh battery PSRAM 8MB  Links #  Fisheye Timer camera $20       Schematics - ESP32_SUBSYS       Schematics - PMS_UART       Platformio porting #  board definition #   local file : boards\m5stack-timer-cam.json should be added to the platformio/platform-espressif32 repo still missing from v2.</description>
     </item>
     
     <item>
@@ -364,11 +364,11 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/house/</guid>
-      <description>House Model#                             01 real house
-02 model house
-03 model side
-04 side zoom
-05 side path</description>
+      <description>House Model #                                 01 real house
+      02 model house
+      03 model side
+      04 side zoom
+      05 side path</description>
     </item>
     
     <item>
@@ -377,7 +377,7 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0900</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/ttgo-t-display/</guid>
-      <description>Simple Example# t-display_controller  dependencies# TFT_eSPI_ttgo_t-display  fork from Bodmer/TFT_eSPI   GfxUi  lib_deps = https://github.com/ESP32Home/TFT_eSPI_ttgo_t-display.git#2.3.4_t-display https://github.com/ESP32Home/GfxUi.git#v1.0.1 Example Code#click to expand the example code...#include &amp;lt;Arduino.h&amp;gt;#include &amp;lt;TFT_eSPI.h&amp;gt;#include &amp;lt;SPI.h&amp;gt;#include &amp;#34;GfxUi.h&amp;#34;#include &amp;lt;SPIFFS.h&amp;gt; TFT_eSPI tft = TFT_eSPI(135, 240); GfxUi ui = GfxUi(&amp;amp;tft); void setup() { Serial.begin(115200); tft.init(); tft.setRotation(3); SPIFFS.begin(true);//FORMAT_SPIFFS_IF_FAILED  ui.drawBmp(&amp;#34;/esp_home.bmp&amp;#34;, 0, 0);//&amp;#39;ui&amp;#39; needs tft and SPIFF  tft.setCursor(0, 0); tft.</description>
+      <description>Simple Example #   t-display_controller  dependencies #   TFT_eSPI_ttgo_t-display  fork from Bodmer/TFT_eSPI   GfxUi  lib_deps = https://github.com/ESP32Home/TFT_eSPI_ttgo_t-display.git#2.3.4_t-display https://github.com/ESP32Home/GfxUi.git#v1.0.1 Example Code #  click to expand the example code... #include &amp;lt;Arduino.h&amp;gt;#include &amp;lt;TFT_eSPI.h&amp;gt;#include &amp;lt;SPI.h&amp;gt;#include &amp;#34;GfxUi.h&amp;#34;#include &amp;lt;SPIFFS.h&amp;gt; TFT_eSPI tft = TFT_eSPI(135, 240); GfxUi ui = GfxUi(&amp;amp;tft); void setup() { Serial.begin(115200); tft.init(); tft.setRotation(3); SPIFFS.begin(true);//FORMAT_SPIFFS_IF_FAILED  ui.drawBmp(&amp;#34;/esp_home.bmp&amp;#34;, 0, 0);//&amp;#39;ui&amp;#39; needs tft and SPIFF  tft.setCursor(0, 0); tft.</description>
     </item>
     
     <item>
@@ -386,7 +386,7 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0900</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/ttgo-t5-epaper/</guid>
-      <description>Simple example# epaper-TTGO-T5_1_2-hello  dependencies# GxEPD  lib_ldf_mode = deep+ lib_deps =GxEPD@3.1.0 Example##include &amp;lt;SPIFFS.h&amp;gt;#include &amp;lt;epaper.h&amp;gt; EPaper epaper; void setup() { Serial.begin(115200); SPIFFS.begin(); epaper.init(); epaper.display.fillScreen(GxEPD_WHITE); epaper.drawBitmap(&amp;#34;/esp_home.bmp&amp;#34;, 0, 50, true); epaper.displayText(&amp;#34;Hello simple&amp;#34;, 20, EPaper::RIGHT_ALIGNMENT); epaper.display.update(); } void loop() { } Display# GxGDEW029Z10 2,9 Zoll White / Black / Red 296x128  References# LilyGo epaper ESP-IDF repo LilyGO/ESP32_T5Epaper_2.9inch  fork from loboris/ESP32_ePaper_example   LilyGo epaper platformio-arduino repo Xinyuan-LilyGO/T5-Ink-Screen-Series  fork from TTGO-EPaper-Series   Waveshare specification pdf 2.</description>
+      <description>Simple example #   epaper-TTGO-T5_1_2-hello  dependencies #   GxEPD  lib_ldf_mode = deep+ lib_deps =GxEPD@3.1.0 Example #  #include &amp;lt;SPIFFS.h&amp;gt;#include &amp;lt;epaper.h&amp;gt; EPaper epaper; void setup() { Serial.begin(115200); SPIFFS.begin(); epaper.init(); epaper.display.fillScreen(GxEPD_WHITE); epaper.drawBitmap(&amp;#34;/esp_home.bmp&amp;#34;, 0, 50, true); epaper.displayText(&amp;#34;Hello simple&amp;#34;, 20, EPaper::RIGHT_ALIGNMENT); epaper.display.update(); } void loop() { } Display #   GxGDEW029Z10 2,9 Zoll White / Black / Red 296x128  References #   LilyGo epaper ESP-IDF repo LilyGO/ESP32_T5Epaper_2.9inch  fork from loboris/ESP32_ePaper_example   LilyGo epaper platformio-arduino repo Xinyuan-LilyGO/T5-Ink-Screen-Series  fork from TTGO-EPaper-Series   Waveshare specification pdf 2.</description>
     </item>
     
     <item>
@@ -395,7 +395,7 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
       <pubDate>Sat, 26 Dec 2020 00:00:00 +0900</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/m5stick-plus/</guid>
-      <description> 6-Axis IMU IR transmitter Microphone RTC LCD (1.14 inch) Lipo Battery Passive Buzzer  Product page# m5stack M5StickC Plus $14  Display# 1.14 inch 135x240 Color TFT LCD ST7789v2  </description>
+      <description> 6-Axis IMU IR transmitter Microphone RTC LCD (1.14 inch) Lipo Battery Passive Buzzer  Product page #   m5stack M5StickC Plus $14  Display #   1.14 inch 135x240 Color TFT LCD ST7789v2  </description>
     </item>
     
     <item>
@@ -404,7 +404,7 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
       <pubDate>Sat, 27 Feb 2021 00:00:00 +0900</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/fire-beetle/</guid>
-      <description>Overview# 10 uA deep sleep current USB and external DC battery power inputs (3.3V - 5V) battery charging from USB external DC TP4056 Li-Ion battery charger RT9080 Low Drop out Linear Regulator supported by platformio (board=firebeetle32)  PINS# LED : (IO2) VBAT : (A0 - 36 - SENSOR_VP) measure ratio = 0.5  The 0 Ohm resistors R10 and R11 needed to sense the battery voltage by A0-Pin38 are not populated (as of the boards I have).</description>
+      <description>Overview #     10 uA deep sleep current USB and external DC battery power inputs (3.3V - 5V) battery charging from USB external DC TP4056 Li-Ion battery charger RT9080 Low Drop out Linear Regulator supported by platformio (board=firebeetle32)  PINS #   LED : (IO2) VBAT : (A0 - 36 - SENSOR_VP) measure ratio = 0.5  The 0 Ohm resistors R10 and R11 needed to sense the battery voltage by A0-Pin38 are not populated (as of the boards I have).</description>
     </item>
     
     <item>
@@ -413,7 +413,7 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
       <pubDate>Sat, 13 Mar 2021 00:00:00 +0900</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/m5stack-atom/</guid>
-      <description>Overview# Tiny 24 x 24 x 10 mm User Button + Reset RGB Led SK6812 IR Led  Pinout#Links#Product Pageschematics#                                 Application - Serial to MQTT# The serial to MQTT App creates a request and response topics that will propagate through a second Serial interface   Although the board is available on platform-espressif32 it was not avialable on platformio release as of Today, therefore the board is stored locally.</description>
+      <description>Overview #     Tiny 24 x 24 x 10 mm User Button + Reset RGB Led SK6812 IR Led  Pinout #    Links #  Product Page       schematics #                                   Application - Serial to MQTT #   The serial to MQTT App creates a request and response topics that will propagate through a second Serial interface     Although the board is available on platform-espressif32 it was not avialable on platformio release as of Today, therefore the board is stored locally.</description>
     </item>
     
     <item>
@@ -422,7 +422,7 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
       <pubDate>Fri, 26 Feb 2021 00:00:00 +0900</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/esp-now/</guid>
-      <description>Relates to#ESP-Mesh WrapperOverview#Github#Github repoESP-Now reference#docs.espressif esp-nowStatus#As we can see in the details of the logs below, running an ESP-Now gateway through wifi, results in dropping the reception success rate from 100% to 25%, therefore, a serial ESP-Now gateway would be recommended and not a Wifi one.</description>
+      <description>Relates to #  ESP-Mesh Wrapper     Overview #  Github #  Github repo       ESP-Now reference #  docs.espressif esp-now       Status #  As we can see in the details of the logs below, running an ESP-Now gateway through wifi, results in dropping the reception success rate from 100% to 25%, therefore, a serial ESP-Now gateway would be recommended and not a Wifi one.</description>
     </item>
     
     <item>
@@ -431,7 +431,7 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/3dprinting/voronoi/</guid>
-      <description>Webapp#Voronoi Generator Tool Cells Circle#STL ModelFantasy pen holder#STL ModelFantasy Turtle Flower#STL ModelGirafe round#STL Model</description>
+      <description> Webapp #  Voronoi Generator Tool   Cells Circle #       STL Model      Fantasy pen holder #     STL Model      Fantasy Turtle Flower #     STL Model      Girafe round #     STL Model      </description>
     </item>
     
     <item>
@@ -440,7 +440,7 @@ nodeid:75;channel:10;reset:1 Listening  Upon activation of the uicr config is_l
       <pubDate>Fri, 26 Feb 2021 00:00:00 +0900</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/microcontrollers/esp32/esp-mesh/</guid>
-      <description>Relates to#ESP-Now WrapperMesh Alternatives#ThreadZigbeeSimple MeshGithub repo#Github repoUsage# flash the data file system containing config files config.json and the passwords secret.json with the command  &amp;gt;pio run -t uploadfs  compile and flash  &amp;gt;pio run &amp;gt;pio run -t upload It&amp;rsquo;s enough repeat for multiple ESP boards and watch the serial output.</description>
+      <description>Relates to #  ESP-Now Wrapper     Mesh Alternatives #   Thread     Zigbee     Simple Mesh     Github repo #  Github repo       Usage #   flash the data file system containing config files config.json and the passwords secret.json with the command  &amp;gt;pio run -t uploadfs  compile and flash  &amp;gt;pio run &amp;gt;pio run -t upload It&amp;rsquo;s enough repeat for multiple ESP boards and watch the serial output.</description>
     </item>
     
   </channel>

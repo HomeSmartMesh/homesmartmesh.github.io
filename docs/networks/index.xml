@@ -13,7 +13,7 @@
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/networks/thread/</guid>
-      <description>Thread SensorTagZephyr RTOSProject MatterOverview#Full Screenimport {setup_svg_panzoom,reset_svg_panzoom} from &#34;/js/setup-svg-pan-zoom.js&#34;function window_reset_position(){reset_svg_panzoom(&#34;openthread-environment-1&#34;)}console.log(`into script for &#34;openthread-environment-1&#34;`)window.addEventListener(&#39;load&#39;, ()={let embed = document.</description>
+      <description>Thread SensorTag     Zephyr RTOS     Project Matter     Overview #  Full Screen   import {setup_svg_panzoom,reset_svg_panzoom} from &#34;/js/setup-svg-pan-zoom.js&#34; function window_reset_position(){ reset_svg_panzoom(&#34;openthread-environment-1&#34;) } console.log(`into script for &#34;openthread-environment-1&#34;`) window.addEventListener(&#39;load&#39;, ()={ let embed = document.</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Thu, 06 May 2021 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/networks/ultrawideband/</guid>
-      <description>Microcontrollers / nRF52 / UWB DWM3001 cdkMicrocontrollers / nRF52 / UWB DWM1001 devAn Ultra-Wide-Band networks can form a mesh network, in addition, the main feature is the RTLS: Real-Time-Locating-System capability.</description>
+      <description>Microcontrollers / nRF52 / UWB DWM3001 cdk     Microcontrollers / nRF52 / UWB DWM1001 dev     An Ultra-Wide-Band networks can form a mesh network, in addition, the main feature is the RTLS: Real-Time-Locating-System capability.</description>
     </item>
     
     <item>
@@ -31,8 +31,8 @@
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/networks/nrf/</guid>
-      <description>Simple Mesh Overview#A simpler, more efficient alternative to Z-x, BL-x, Thread, standard RF protocols. Open source SW is provided for custom and off the shelf nRF SoC tags and dongles.
-Simple Mesh SensorTagSimple Mesh and thread on ZephyrSimple Mesh RepoFeatures#     2.</description>
+      <description>Simple Mesh Overview #  A simpler, more efficient alternative to Z-x, BL-x, Thread, standard RF protocols. Open source SW is provided for custom and off the shelf nRF SoC tags and dongles.
+Simple Mesh SensorTag     Simple Mesh and thread on Zephyr       Simple Mesh Repo       Features #       2.</description>
     </item>
     
     <item>
@@ -41,10 +41,10 @@ Simple Mesh SensorTagSimple Mesh and thread on ZephyrSimple Mesh Rep
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/networks/zigbee/</guid>
-      <description>Devices Overview#Below are examples of used devices in this project
+      <description>Devices Overview #  Below are examples of used devices in this project
   As in the above figure, I kept all the light with the hue gateway for a reliable function, and opted for zigbee2mqtt for all other non lighting devices.
 For a detailed list of used devices and their documentation see the devices list section
-Frameworks#Philips Hue#✅ Philips Hue have an open API that can run in a local network, therefore allowing third party apps integration.</description>
+Frameworks #  Philips Hue #    ✅ Philips Hue have an open API that can run in a local network, therefore allowing third party apps integration.</description>
     </item>
     
   </channel>

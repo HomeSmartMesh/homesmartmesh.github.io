@@ -13,7 +13,7 @@
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/raspi_iot/</guid>
-      <description>Discussion ForumSupport and discussions on the Github DiscussionsGithub RepoSource code on the Github Repoimport {defined} from &#34;/js/web-js-utils.js&#34;import {Grid} from &#34;/js/grid.js&#34;let grid_div = document.getElementById(&#34;grid-2a00875ce400bf70&#34;);let grid = new Grid(grid_div);grid_div.</description>
+      <description>Discussion Forum     Support and discussions on the Github Discussions  Github Repo   Source code on the Github Repo   import {defined} from &#34;/js/web-js-utils.js&#34; import {Grid} from &#34;/js/grid.js&#34; let grid_div = document.getElementById(&#34;grid-2a00875ce400bf70&#34;); let grid = new Grid(grid_div); grid_div.</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Thu, 13 May 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/matter/</guid>
-      <description>Relates to#Zephyr RTOSOpenThread Guidepreviously known as CHIP Overview#The image above does only focus on the relation between Matter, Thread and Zigbee. Both Matter and Zigbee run on 802.15.4 (optional for Matter), and both are directly or indirectly based on ZCL which is in case of Matter named ZAP Zigbee Cluster Library Advanced Platform.</description>
+      <description>Relates to #   Zephyr RTOS     OpenThread Guide     previously known as CHIP   Overview #     The image above does only focus on the relation between Matter, Thread and Zigbee. Both Matter and Zigbee run on 802.15.4 (optional for Matter), and both are directly or indirectly based on ZCL which is in case of Matter named ZAP Zigbee Cluster Library Advanced Platform.</description>
     </item>
     
     <item>
@@ -31,8 +31,8 @@
       <pubDate>Fri, 12 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/chip/</guid>
-      <description>Moved to#MatterThis page will be kept as a transitional link
-Relates to#Zephyr RTOSThread ProtocolOverview#The image above does only focus on the relation between CHIP, Thread and Zigbee. Both CHIP and Zigbee run on 802.15.4 (optional for CHIP), and both are directly or indirectly based on ZCL which is in case of CHIP named ZAP Zigbee Cluster Library Advanced Platform.</description>
+      <description>Moved to #  Matter     This page will be kept as a transitional link
+Relates to #   Zephyr RTOS     OpenThread Guide     </description>
     </item>
     
     <item>
@@ -41,7 +41,7 @@ Relates to#Zephyr RTOSThread ProtocolOverview#The image abov
       <pubDate>Sat, 13 Feb 2021 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/home_assistant/</guid>
-      <description>Official WebsiteAutomations#Symfonisk volume rotary remote#The gola of this Automation is to adjust the volume of the sonos system with the rotation but also use the press to play pause another system wich is a smart Samsung Tv.
+      <description>Official Website     Automations #  Symfonisk volume rotary remote #  The gola of this Automation is to adjust the volume of the sonos system with the rotation but also use the press to play pause another system wich is a smart Samsung Tv.
  zigbee2mqtt : https://www.zigbee2mqtt.io/ blueprint : https://epmatt.github.io/awesome-ha-blueprints/docs/blueprints/controllers/ikea_e1744 HA entity input_text : https://www.home-assistant.io/integrations/input_text/  alternative to HA Integration : Without HA, it is necessary to pair the rotary remote with IKEA gateway, although it is enough to control the volume, it does not allow fine adjutment and combining functions with different devices.</description>
     </item>
     
@@ -51,7 +51,7 @@ Relates to#Zephyr RTOSThread ProtocolOverview#The image abov
       <pubDate>Sat, 20 Feb 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/zephyr/</guid>
-      <description>Thread ProtocolProject MatterTrace with with SystemView# Segger SystemView : Real time OS Tracing SystemView user manual : Getting started, API reference,&amp;hellip;  It&amp;rsquo;s highly recommended to read the SystemView user manual to understand how the RT OS concepts are displayedSteps :</description>
+      <description>Thread Protocol     Project Matter     Trace with with SystemView #   Segger SystemView : Real time OS Tracing SystemView user manual : Getting started, API reference,&amp;hellip;  It&amp;rsquo;s highly recommended to read the SystemView user manual to understand how the RT OS concepts are displayed  Steps :</description>
     </item>
     
     <item>
@@ -60,7 +60,7 @@ Relates to#Zephyr RTOSThread ProtocolOverview#The image abov
       <pubDate>Sat, 03 Apr 2021 08:00:00 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/upython/</guid>
-      <description>nRF52840 usb donglecross compiler# note CROSS_COMPILE is referencing the system toolchain with loose recommendations 7.3.1/2Q18 or 8.2.1/4Q18. check the toolchain version  arm-none-eabi-gcc --version which arm-none-eabi-gcc --version  testing with version 9-2020-q2-update - 9.3.1 20200408  build instructions#git clone --recurse-submodules https://github.com/micropython/micropython.git cd micropython/mpy-cross make cd ../ports/nrf make submodules make BOARD=pca10059 config#usb# each board has the pins configured in a hreader file  ports/nrf/boards/pca10059/mpconfigboard.</description>
+      <description>nRF52840 usb dongle     cross compiler #   note CROSS_COMPILE is referencing the system toolchain with loose recommendations 7.3.1/2Q18 or 8.2.1/4Q18. check the toolchain version  arm-none-eabi-gcc --version which arm-none-eabi-gcc --version  testing with version 9-2020-q2-update - 9.3.1 20200408  build instructions #  git clone --recurse-submodules https://github.com/micropython/micropython.git cd micropython/mpy-cross make cd ../ports/nrf make submodules make BOARD=pca10059 config #  usb #   each board has the pins configured in a hreader file  ports/nrf/boards/pca10059/mpconfigboard.</description>
     </item>
     
   </channel>

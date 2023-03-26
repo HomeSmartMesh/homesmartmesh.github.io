@@ -13,7 +13,7 @@
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/grafana/light/</guid>
-      <description>Room light east and west#Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-bc6c51b9555f0ff6&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-bc6c51b9555f0ff6&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};</description>
+      <description>Room light east and west #  Full screen Open in a new page     var button = document.getElementById(&#34;btn-bc6c51b9555f0ff6&#34;); button.onclick = ()={ var elem = document.getElementById(&#34;ifm-bc6c51b9555f0ff6&#34;); if (elem.requestFullscreen) { elem.requestFullscreen(); } else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen(); } else if (elem.msRequestFullscreen) { elem.msRequestFullscreen(); } };  </description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/grafana/sensors/</guid>
-      <description>Hot summer#Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-388b84c89c2369b2&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-388b84c89c2369b2&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};Xiaomi Aqara vs DIY BME280#Full screenOpen in a new pagevar button = document.getElementById(&#34;btn-f8d70b01c18b3285&#34;);button.onclick = ()={var elem = document.</description>
+      <description>Hot summer #  Full screen Open in a new page     var button = document.getElementById(&#34;btn-388b84c89c2369b2&#34;); button.onclick = ()={ var elem = document.getElementById(&#34;ifm-388b84c89c2369b2&#34;); if (elem.requestFullscreen) { elem.requestFullscreen(); } else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen(); } else if (elem.msRequestFullscreen) { elem.msRequestFullscreen(); } };  Xiaomi Aqara vs DIY BME280 #  Full screen Open in a new page     var button = document.getElementById(&#34;btn-f8d70b01c18b3285&#34;); button.onclick = ()={ var elem = document.</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/grafana/thread_sensortag/</guid>
-      <description>Voltage and Temperature#SensorTag stress test with report every 3 seconds with average over 1 hourFull screenOpen in a new pagevar button = document.getElementById(&#34;btn-7df75999c5c036f9&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-7df75999c5c036f9&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};</description>
+      <description>Voltage and Temperature #  SensorTag stress test with report every 3 seconds with average over 1 hour  Full screen Open in a new page     var button = document.getElementById(&#34;btn-7df75999c5c036f9&#34;); button.onclick = ()={ var elem = document.getElementById(&#34;ifm-7df75999c5c036f9&#34;); if (elem.requestFullscreen) { elem.requestFullscreen(); } else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen(); } else if (elem.msRequestFullscreen) { elem.msRequestFullscreen(); } };  </description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@
       <pubDate>Sun, 29 Aug 2021 08:48:57 +0000</pubDate>
       
       <guid>https://www.homesmartmesh.com/docs/frameworks/grafana/thread_sensortag_compare/</guid>
-      <description>Voltage and Temperature#SensorTag stress test with report every 3 secondsFull screenOpen in a new pagevar button = document.getElementById(&#34;btn-98f35d7bf7cdff04&#34;);button.onclick = ()={var elem = document.getElementById(&#34;ifm-98f35d7bf7cdff04&#34;);if (elem.requestFullscreen) {elem.requestFullscreen();} else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen();} else if (elem.msRequestFullscreen) { elem.msRequestFullscreen();}};</description>
+      <description>Voltage and Temperature #  SensorTag stress test with report every 3 seconds  Full screen Open in a new page     var button = document.getElementById(&#34;btn-98f35d7bf7cdff04&#34;); button.onclick = ()={ var elem = document.getElementById(&#34;ifm-98f35d7bf7cdff04&#34;); if (elem.requestFullscreen) { elem.requestFullscreen(); } else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen(); } else if (elem.msRequestFullscreen) { elem.msRequestFullscreen(); } };  </description>
     </item>
     
   </channel>
