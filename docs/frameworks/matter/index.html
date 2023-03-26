@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.7fab96e30fd033580827df3942b28f3c0429547b0a5d18120ce30960f8d7f380.js" integrity="sha256-f6uW4w/QM1gIJ985QrKPPAQpVHsKXRgSDOMJYPjX84A="></script>
+<script defer src="/en.search.min.dc948b02bbc5e287ad14a2ba9887f22e73a90f57922b41c4fea5d3fbd300fb6a.js" integrity="sha256-3JSLArvF4oetFKK6mIfyLnOpD1eSK0HE/qXT&#43;9MA&#43;2o="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1503,7 +1503,8 @@ export ZAP_DEVELOPMENT_PATH<span style="color:#f92672">=</span>/home/pi/zap
 <ul>
 <li>pairing</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./chip-tool pairing ble-thread &lt;node_id&gt; hex:&lt;operational_dataset&gt; &lt;pin_code&gt; &lt;discriminator&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ot-ctl dataset active -x
+./chip-tool pairing ble-thread &lt;node_id&gt; hex:&lt;operational_dataset&gt; &lt;pin_code&gt; &lt;discriminator&gt;
 ./chip-tool pairing ble-thread <span style="color:#ae81ff">3</span> hex:0e08000000000001000035060004001fffe00708fd14711ac39b204d04102fac2bd6e7c4308f3e8e0cedd893d20f0c0402a0f7f8000300001801021234030c5468726561644d617474657202081111111122222222051000112233445566778899aabbccddeeff <span style="color:#ae81ff">20202021</span> <span style="color:#ae81ff">3840</span>
 </code></pre></div><ul>
 <li>toggle light</li>
@@ -1746,6 +1747,15 @@ source zephyr/zephyr-env.sh
     </div>
 </div>
 
+<ul>
+<li>commands</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ot dataset active
+matter config
+matter device factoryreset
+</code></pre></div><ul>
+<li>config</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd ncs/modules/lib/connectedhomeip/examples/lighting-app/nrfconnect/
 west build -b nrf52840dongle_nrf52840 -t menuconfig
 west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;prj.conf&#34;</span>
