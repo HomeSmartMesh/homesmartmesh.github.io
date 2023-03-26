@@ -1,0 +1,24 @@
+[
+    {
+        "text":"Home",
+        "path": "/content/frameworks",
+        "href_base": "/frameworks/",
+        "href":"/frameworks/matter"
+    },
+    {
+        "text":"About",
+        "path": "/pages/about",
+        "href_base": "/about/",
+        "href":"/about/",
+        "items"        :[
+            {
+                "text":"About page",
+                "href":"/about/"
+            }
+        ]
+    },
+    {
+        "icon":"github",
+        "href":"https://github.com/MicroWebStacks/astro-big-doc"
+    }
+]
