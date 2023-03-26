@@ -86,6 +86,9 @@ async function get_section_data(section_path,href_base){
 
 async function get_nav_menu(pageUrl){
   const section = url_to_section(pageUrl)
+  if(section == ""){
+    return {items:[],visible:false,list:[]}
+  }
   console.log(`menu> get_nav_menu() section = ${section}`)
   const raw_section_menu = raw_menu.find((entry)=>(entry.href.split('/')[1] == section))
   if('items' in raw_section_menu){
