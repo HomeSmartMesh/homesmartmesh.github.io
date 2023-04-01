@@ -1,0 +1,16 @@
+- text: Home
+  href: /
+- text: Frameworks
+  href: /frameworks/matter
+  items:
+    - text: Matter
+      href: /frameworks/matter
+    - text: Raspi IoT
+      href: /frameworks/raspi_iot
+- text: About
+  href: /about/
+  items:
+    - text: About page
+      href: /about/
+- icon: github
+  href: https://github.com/HomeSmartMesh/website-astro

@@ -2,7 +2,7 @@ import raw_menu from '@/menu.json'
 import {promises as fs} from 'fs';
 import {resolve,join,relative} from 'path'
 import {files_map_to_menu_tree,  set_active_expanded} from './menu_nav'
-import {  url_to_section,trim_ext } from './menu_utils';
+import {  remove_first,url_to_section,trim_ext } from './menu_utils';
 import matter from 'gray-matter';
 import { config } from '../../config';
 
@@ -91,20 +91,14 @@ async function get_nav_menu(pageUrl){
   }
   console.log(`menu> get_nav_menu() section = ${section}`)
   const raw_section_menu = raw_menu.find((entry)=>(entry.href.split('/')[1] == section))
+  raw_section_menu.visible = true
   if('items' in raw_section_menu){
-    raw_section_menu.visible = true
-    if(raw_section_menu.items.length ==1){
+    if(raw_section_menu.items.length == 0){
       raw_section_menu.visible = false
     }
-    //console.log(raw_section_menu)
     set_active_expanded(pageUrl,raw_section_menu)
-    return raw_section_menu
-  }else{
-    const section_data = await get_section_data(raw_section_menu.path,raw_section_menu.href_base)
-    //console.log(section_data)
-    set_active_expanded(pageUrl,section_data.menu)
-    return section_data.menu
   }
+  return raw_section_menu
 }
 
 async function get_section_urls(section_path,href_base){

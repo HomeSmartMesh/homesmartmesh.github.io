@@ -1,5 +1,6 @@
 ---
 import Svg from '@/components/svgicons.astro'
+import '@/layout/colors.css'
 export interface Props {
     id: string;
     tag: string;
@@ -21,16 +22,16 @@ const Heading = tag
 
 <style>
 .heading.active{
-  background-color: #37373D;
+  background-color: var(--content-heading-active);
 }
 .heading.hover{
-  background-color: #606060;
+  background-color: var(--content-heading-active);
 }
 .heading:hover{
-    background-color: #606060;
+    background-color: var(--content-heading-active);
 }
 #heading{
-    color:rgb(201, 190, 190);
+    color: var(--content-color);
     text-decoration: none;
     flex-grow: 1;
     display:flex;

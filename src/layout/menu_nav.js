@@ -9,7 +9,8 @@ function set_classes_recursive(url,items){
         if(check_href && check_href.endsWith('/')){
             check_href = check_href.substring(0, check_href.length - 1);
         }
-        item.active = (remove_base(url_path(url)) == check_href)
+        //console.log(`${url_path(url)} == ${check_href}`)
+        item.active = (url_path(url) == check_href)
         active_descendant ||= item.active
         if("items" in item){
             item.parent = true
@@ -162,9 +163,6 @@ function files_map_to_menu_tree(files_map,href_base){
 }
 
 function set_active_expanded(url, menu){
-    if(config.base != ""){
-        url = '/'+remove_first('/'+config.base+'/',url)
-    }
     if('items' in menu){
         set_classes_recursive(url, menu.items)
     }

@@ -89,5 +89,6 @@ export{
     remove_first,
     url_to_section,
     url_path,
-    remove_base
+    remove_base,
+    get_base
 }

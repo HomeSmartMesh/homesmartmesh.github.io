@@ -1,19 +1,25 @@
 [
     {
         "text":"Home",
-        "href_base": "/",
         "href":"/"
     },
     {
         "text":"Frameworks",
-        "path": "/content/frameworks",
-        "href_base": "/frameworks/",
-        "href":"/frameworks/matter"
+        "href":"/frameworks/matter",
+        "items":[
+            {
+                "text":"Matter",
+                "href":"/frameworks/matter"
+            },
+            {
+                "text":"Raspi",
+                "href":"/frameworks/raspi"
+            }
+
+        ]
     },
     {
         "text":"About",
-        "path": "/pages/about",
-        "href_base": "/about/",
         "href":"/about/",
         "items"        :[
             {
