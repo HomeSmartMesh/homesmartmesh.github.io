@@ -37,3 +37,18 @@
 ## nrf zephyr samples
 * [Accelerometer Polling](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/zephyr/samples/sensor/accel_polling/README.html)
 * [Magnetometer polling](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/zephyr/samples/sensor/magn_polling/README.html)
+
+
+# Examples build
+
+```bash
+cd nrf/v2.3.0/zephyr/samples/sensor/bme680
+>west build -b thingy53_nrf5340_cpuapp
+
+```
+* nRF Desktop Programmer
+    * keep internal sw2 while power on with sw1 see [Updating through USB](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/working_with_nrf/nrf53/thingy53_gs.html#updating-through-usb)
+    * on success a new port is detected
+    * use `dfu_application.zip` see [MCUboot output build files](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/app_dev/build_and_config_system/index.html#mcuboot-output-build-files)
+* restore example application firmwa with the same procedure with binaries available on the [Nordic Thingy53 downloads](https://www.nordicsemi.com/Products/Development-hardware/Nordic-Thingy-53/Downloads#infotabs)
+
