@@ -19,6 +19,16 @@
         ]
     },
     {
+        "text":"Boards",
+        "href":"/boards/thingy53",
+        "items":[
+            {
+                "text":"Thingy 53",
+                "href":"/boards/thingy53"
+            }
+        ]
+    },
+    {
         "text":"About",
         "href":"/about/",
         "items"        :[
