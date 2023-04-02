@@ -39,6 +39,8 @@ const { items,root=true} = Astro.props;
         user-select: none;    
         color:var(--content-color);
         display:block;
+        background-color: var(--nav-bg-color);
+        transition: background-color 0.2s ease-in;
     }
     /* active when nav menu item is matching url */
     a.active{

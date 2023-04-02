@@ -12,7 +12,7 @@ const Heading = tag
 
 ---
 <Heading id={id} class="content heading">
-  <a href={`#${id}`} id="heading" >
+  <a href={`#${id}`} id="heading_anchor" >
     <slot/>
     <div class="icon link">
       <Svg filename="link" width={20} color={'white'}/>
@@ -21,21 +21,19 @@ const Heading = tag
 </Heading>
 
 <style>
-.heading.active{
-  background-color: var(--content-heading-active);
-}
-.heading.hover{
-  background-color: var(--content-heading-active);
-}
-.heading:hover{
-    background-color: var(--content-heading-active);
-}
-#heading{
+#heading_anchor{
     color: var(--content-color);
     text-decoration: none;
     flex-grow: 1;
     display:flex;
     align-items: center;
+}
+.content.heading{
+  background-color: var(--content-bg-color);
+  transition: background-color 0.2s ease-in;
+}
+.heading.active, .heading.hover, .heading:hover{
+  background-color: var(--content-heading-active);
 }
 .icon{
   display:none;

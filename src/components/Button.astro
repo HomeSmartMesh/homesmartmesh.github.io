@@ -1,0 +1,35 @@
+---
+import '@/layout/colors.css'
+export interface Props {
+    href: string;
+}
+
+const { href } = Astro.props as Props;
+
+const target = href.startsWith('/')?"_self":"_blank"
+
+---
+<div class="col text-center">
+    <a href={href} target={target} class="button">
+        <slot/>
+    </a>
+</div>
+
+<style>
+.col{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.button{
+    text-decoration: none;
+    background-color: var(--nav-bg-color);
+    padding: 10px;
+    border-radius: 10px;
+    transition: box-shadow 0.2s ease-in;
+}
+.button:hover{
+    box-shadow: 2px 2px 5px 3px var(--button-highlight);
+}
+</style>
