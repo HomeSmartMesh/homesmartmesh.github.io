@@ -26,16 +26,6 @@
     </item>
     
     <item>
-      <title>Project CHIP</title>
-      <link>https://www.homesmartmesh.com/docs/frameworks/chip/</link>
-      <pubDate>Fri, 12 Feb 2021 08:00:00 +0000</pubDate>
-      
-      <guid>https://www.homesmartmesh.com/docs/frameworks/chip/</guid>
-      <description>Moved to #  Matter     This page will be kept as a transitional link
-Relates to #   Zephyr RTOS     OpenThread Guide     </description>
-    </item>
-    
-    <item>
       <title>Home Assistant</title>
       <link>https://www.homesmartmesh.com/docs/frameworks/home_assistant/</link>
       <pubDate>Sat, 13 Feb 2021 08:48:57 +0000</pubDate>

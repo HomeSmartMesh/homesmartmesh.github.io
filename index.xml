@@ -183,16 +183,6 @@ Final application #  This repository has boilerplates samples. A real use case e
     </item>
     
     <item>
-      <title>Project CHIP</title>
-      <link>https://www.homesmartmesh.com/docs/frameworks/chip/</link>
-      <pubDate>Fri, 12 Feb 2021 08:00:00 +0000</pubDate>
-      
-      <guid>https://www.homesmartmesh.com/docs/frameworks/chip/</guid>
-      <description>Moved to #  Matter     This page will be kept as a transitional link
-Relates to #   Zephyr RTOS     OpenThread Guide     </description>
-    </item>
-    
-    <item>
       <title>Trick Tracker</title>
       <link>https://www.homesmartmesh.com/docs/microcontrollers/nrf52/trick_tracker/</link>
       <pubDate>Sun, 07 Feb 2021 08:48:57 +0000</pubDate>
