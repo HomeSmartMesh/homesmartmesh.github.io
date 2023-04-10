@@ -3,6 +3,60 @@
     href="https://www.nordicsemi.com/Products/Development-hardware/Nordic-Thingy-53"
     >Product Page</Button>
 
+![USB Attachments](./thingy53-usb-attachments.webp)
+
+* SoC nRF5340
+    * [nRF5340 Product Page](https://www.nordicsemi.com/Products/nRF5340)
+    * [nRF5340 Product Specification](https://infocenter.nordicsemi.com/pdf/nRF5340_PS_v1.3.pdf)
+    * 128/64 MHz Arm Cortex-M33 application processor with 1 MB Flash & 512 KB RAM
+    * 64 MHz Arm Cortex-M33 network processor with 256 KB Flash & 64 KB RAM
+    * Thread (Matter), Zigbee, ANT, NFC, Bluetooth (LE - Mesh - Arrival Departure Direction)
+    * USB
+    * Trusted Firmware M, CryptoCell-312, key management unit (KMU)
+
+* Sensors
+    * RGB Led
+    * Color sensor BH1749NUC
+    * Digital low power gas, pressure, temperature & humidity sensor with AI
+        * [BME688 Product page](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme688/)
+        * [BME688 Datasheet](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme688-ds000.pdf)
+
+    * Accelerometers
+        * Low Power accelerometer ADXL362
+        * Accelerometer and gyroscope BMI270
+        * Disconnect switch for ADXL362 and BMI270
+    * Magentometer BMM150
+
+    * Microphone VM3011
+    * Buzzer Piezo_4kHz
+
+
+* RF Front End Module nRF21540
+    * [nRF21540 Product Page](https://www.nordicsemi.com/products/nrf21540)
+    * [nRF21540 Product Specification](https://infocenter.nordicsemi.com/pdf/nRF21540_PS_v1.2.pdf)
+    * up to +21 dBm with TX gain control
+    * 13 dB RX gain with 2.7 dB noise figure
+    * 6.3 up to x10 raneg extension
+
+* Power Management Integrated Circuit
+    * [nPM1100 Product Page](https://www.nordicsemi.com/products/npm1100)
+    * [nPM1100 Product Specification](https://infocenter.nordicsemi.com/pdf/nPM1100_PS_v1.3.pdf)
+    * USB input
+    * 400 mA battery charger
+    * 150 mA regulated output
+    * Overvoltage protection
+    * charge and error status
+
+* Interfaces and peripherals
+    * 2 Buttons, one user, second is internal
+    * USB for Firmware update, application Data and chargin
+    * External QSPI Flash MX25R6435F 64 Mbit
+    * NFC Antenna
+    * 10 pin SWD interface
+    * Expansion for trace debug and current measurement
+
+
+# Development with Zephyr
 * Board name `thingy53_nrf5340`
 * Board reference `PCA20053`
 * build targets
@@ -10,7 +64,8 @@
     * `thingy53_nrf5340_cpuapp_ns`
     * `thingy53_nrf5340_cpunet`
 
-# Zephyr Project
+Zephyr Board documentation
+
 * https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/zephyr/boards/arm/thingy53_nrf5340/doc/index.html#
 * https://docs.zephyrproject.org/latest/boards/arm/thingy53_nrf5340/doc/index.html
 
