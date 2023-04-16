@@ -17,7 +17,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.dca78d188e872331fd49a61cb74f0c4142adfbf2816c40e1c18fbdc5f63ad650.css" integrity="sha256-3KeNGI6HIzH9SaYct08MQUKt&#43;/KBbEDhwY&#43;9xfY61lA=">
-<script defer src="/en.search.min.17473a799187654c44edacebc3f6fff9a3811b87ef96fea97eacd18175a84b4f.js" integrity="sha256-F0c6eZGHZUxE7azrw/b/&#43;aOBG4fvlv6pfqzRgXWoS08="></script>
+<script defer src="/en.search.min.325e4a0cd19bbc9152e5814cf04211766a33df95dbbe634687bb51ade173ba90.js" integrity="sha256-Ml5KDNGbvJFS5YFM8EIRdmoz35XbvmNGh7tRreFzupA="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -2390,14 +2390,17 @@ Listening from <code>ot-ctl</code> :</p>
 &gt;udp open
 &gt;udp bind :: <span style="color:#ae81ff">4242</span>
 </code></pre></div><p><blockquote class="book-hint warning">
-  A current issue is that the <code>wpan0</code> adapter is lost after closing the ot-ctl command line
+  note that the port will be freed from bind when closing the ot-ctl command line
 </blockquote>
 
 Listening using <code>socat</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$socat UDP6-LISTEN:4242,fork STDOUT
-</code></pre></div><p>on the nRF52 node Zephyr shell :</p>
+</code></pre></div><p>Multicast on link local</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt;ot udp open
 &gt;ot udp send ff02::1 <span style="color:#ae81ff">4242</span> hi_there_now
+</code></pre></div><p>Multicast on mesh local</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt;ot udp open
+&gt;ot udp send ff03::1 <span style="color:#ae81ff">4242</span> hi_there_now
 </code></pre></div><h2 id="form-a-network">
   Form a network
   <a class="anchor" href="#form-a-network">#</a>
@@ -3176,8 +3179,7 @@ state
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;ping fe80::c85c:d0c4:1103:31d5
 Done
 &gt; <span style="color:#ae81ff">16</span> bytes from fe80:0:0:0:c85c:d0c4:1103:31d5: icmp_seq<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span> hlim<span style="color:#f92672">=</span><span style="color:#ae81ff">64</span> time<span style="color:#f92672">=</span>12ms
-</code></pre></div><p>a good exercice is to commission a device through CLI</p>
-
+</code></pre></div>
 <div class="container">
     <div class="row">
         <div class="col text-center">
@@ -3274,17 +3276,15 @@ Done
     </div>
 </div>
 
-<details >
-  <summary>ncp cli. Click to expand...</summary>
-  <div class="markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cu -l /dev/ttyACM0 -s <span style="color:#ae81ff">115200</span>
+<p>various commands</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cu -l /dev/ttyACM0 -s <span style="color:#ae81ff">115200</span>
 panid 0xabcd
 ifconfig up
 thread start
 state
 ping fd00:0064:0123:4567::0808:0808
 router list
-</code></pre></div><p>adresses</p>
+</code></pre></div><p>debug adresses</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">panid
 rloc16
 eui64
@@ -3293,11 +3293,12 @@ extpanid
 ipaddr
 ipmaddr
 leaderdata
-</code></pre></div>
-  </div>
-</details>
-
-<h1 id="commissioning">
+</code></pre></div><p>ntwrok debug</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">scan
+child list
+child table
+childip
+</code></pre></div><h1 id="commissioning">
   Commissioning
   <a class="anchor" href="#commissioning">#</a>
 </h1>
