@@ -4,6 +4,7 @@ import {remarkPUMLObj} from './src/libs/remark-plantuml-object'
 import {remarkPUMLSvg} from './src/libs/remark-plantuml-svg'
 import {remarkPUMLAstro} from './src/libs/remark-plantuml-astro'
 import {remarkImage} from './src/libs/remark-image-pz'
+import {remarkImageRel} from './src/libs/remark-image-rel'
 import {remarkPanzoom} from './src/libs/remark-panzoom'
 import {remarkGallery} from './src/libs/remark-gallery'
 import {replaceFiledir} from './src/libs/vite-plugin-filedir'
@@ -14,6 +15,7 @@ export default defineConfig({
     syntaxHighlight: false,
     remarkPlugins: [
       remarkImage,
+      remarkImageRel,
       remarkPanzoom,
       remarkGallery,
       remarkPUMLObj,
