@@ -28,7 +28,7 @@ const right_toc_menu = process_toc_list(headings)
 	</head>
 	<body >
 		<div id="fixed-left" class={`fixed-nav ${left_nav_menu.visible?"active":""}`} />
-		<div class="appbar-nav_content-footer">
+		<div class="center-body">
 			<header>
 				<AppBar/>
 			</header>
@@ -71,29 +71,38 @@ const right_toc_menu = process_toc_list(headings)
 <style>
 body{
 	margin:0;
+	padding:0;
 	font-family: Arial, Helvetica, sans-serif;
 	display:flex;
 	flex-direction: row;
+	overflow:hidden;
 }
-/* Body => #fixed-left, .appbar-nav_content-footer, #fixed-right */
-.appbar-nav_content-footer{
+/* Body => #fixed-left, .center-body, #fixed-right */
+.center-body{
 	flex-grow:1;
 	display:flex;
 	flex-direction: column;
 	height:100vh;
 }
-/* appbar-nav_content-footer => header, main, footer */
+/* center-body => header, main, footer */
 header{
     flex-grow:0;
 	background-color: var(--header-bg-color);
     width:100%;
     user-select: none;
 }
+#fixed-left{
+
+}
+#fixed-right{
+
+}
 main{
 	flex-grow:1;
 	display:flex;
 	flex-direction: row;
 	height:80vh;
+	max-width: calc(100vw - 6em);
 }
 footer{
 	flex-grow:0;
@@ -113,8 +122,7 @@ footer{
 .content{
 	color:var(--content-color);
 	background-color: var(--content-bg-color);
-	width:100%;
-	flex-grow: 0;
+	flex-grow: 1;
 	overflow:auto;
 	padding:10px;
     scroll-behavior: smooth;
@@ -122,7 +130,6 @@ footer{
 }
 #right-toc{
 	background: var(--nav-bg-color);
-	flex-grow: 1;
 }
 
 
@@ -132,6 +139,8 @@ footer p{
 }
 
 .fixed-nav{
+	padding:0;
+	margin:0;
 	width:3em;
 	background-color: var(--fixed-nav-bg-color);
 	height:100vh;
@@ -212,7 +221,7 @@ footer p{
 			if(current_state == "open"){
 				nav_el.classList.remove("open")
 				nav_el.classList.add("closed")
-				nav_el.style.width = "0vw"
+				nav_el.style.width = "0px"
 			}else if(current_state == "closed"){
 				nav_el.classList.add("open")
 				nav_el.classList.remove("closed")
