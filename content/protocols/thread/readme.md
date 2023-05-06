@@ -1,34 +1,30 @@
 ---
+protocol: thread
 title: "Thread"
 description: "Build and setup instruction for a Thread network. Compilation from different platforms comapatible with the nRF dongle"
-lead: ""
-date: 2020-10-06T08:48:57+00:00
-lastmod: 2021-03-07T08:00:00+00:00
-draft: false
 images: ["/images/openthread-environment-1.1.svg"]
-weight: 1
-toc: true
-#BR : https://www.kirale.com/products/ktdg102/
-#Dongle : https://www.kirale.com/products/ktbrn1/
 ---
-{{<load-svg-pan-zoom>}}
-{{<load-photoswipe >}}
-
-{{<icon_button relref="/docs/microcontrollers/nrf52/thread_sensortag/" text="Thread SensorTag" >}}
-{{<icon_button relref="/docs/frameworks/zephyr/" text="Zephyr RTOS" >}}
-{{<icon_button relref="/docs/frameworks/matter/" text="Project Matter" >}}
+# heading 
+<Button 
+  href="/docs/microcontrollers/nrf52/thread_sensortag/"
+  >Thread SensorTag</Button>
+<Button 
+  href="/docs/frameworks/zephyr/"
+  >Zephyr RTOS</Button>
+<Button 
+  href="/docs/frameworks/matter/"
+  >Project Matter</Button>
 
 # Overview
-{{< svg-pan-zoom "/images/openthread-environment-1.1.svg" >}}
+<object data="./openthread-environment-1.1.svg" />
 
 * some elements have link to the corresponding websites
 
-{{<icon_button href="https://openthread.io/" text="Open Thread" icon="new" >}}
-{{<icon_button href="https://openthread.io/guides/thread-primer/ipv6-addressing" text="IPV6 adressing"  icon="new" >}}
-{{<icon_button href="https://openthread.io/guides/thread-primer/network-discovery" text="Network discovery"  icon="new" >}}
-{{<icon_button href="https://openthread.io/guides/border-router/docker/test-connectivity" text="test connectivity"  icon="new" >}}
-{{<icon_button href="https://openthread.io/reference" text="openthread API reference"  icon="new" >}}
-
+<Button href="https://openthread.io/">Open Thread</Button>
+<Button href="https://openthread.io/guides/thread-primer/ipv6-addressing">IPV6 adressing</Button>
+<Button href="https://openthread.io/guides/thread-primer/network-discovery">Network discovery</Button>
+<Button href="https://openthread.io/guides/border-router/docker/test-connectivity">test connectivity</Button>
+<Button href="https://openthread.io/reference">openthread API reference</Button>
 
 ## Cheat sheet
 * IPv6 bit length : 128 bit = 8x 16 ibts => `00b1:00b2:00b3:00b4:00b5:00b6:00b7:00b8`
@@ -40,6 +36,8 @@ toc: true
 * RLOC16 Router mask : `0x0400`
 * IID : Interface Identifier (includes RLOC16)
 * RLOC = Mesh-Local Prefix + IID
+
+
 
 ## Specification
 
@@ -224,23 +222,20 @@ wpan0: flags=4305<UP,POINTOPOINT,RUNNING,NOARP,MULTICAST>  mtu 1280
 {{</details>}}
 
 ## Radio Co-Processor (RCP)
-{{<hint warning>}}Using a deprecated version of RCP not matching the raspberry pi installed otbr-agent version will prevent it from running {{</hint>}}
+<hint class="warning">Using a deprecated version of RCP not matching the raspberry pi installed otbr-agent version will prevent it from running </hint>
 
 * Ready binaries : are provided below. Versions with `=USB` can be flashed with nRF-Connect `Programmer` tool and the defaul `nRF52840-usb dongle` bootloader.
 It is also possible to directly flash a non USB version with an SWD debugger or recover the original bootloader (with an SWD debugger) from the hex available from [this post](https://devzone.nordicsemi.com/f/nordic-q-a/40924/how-can-i-restore-the-original-bootloader-of-a-pca10059)
 
-{{<icon_button href="/data/ot-rcp-com-1.2-usb_27.08.2021.hex.zip" text="ot-rcp 27.08.2021 OT_BOOTLOADER=USB" icon="download" >}}
+<Button href="/data/ot-rcp-com-1.2-usb_27.08.2021.hex.zip" icon="download">ot-rcp 27.08.2021 OT_BOOTLOADER=USB</Button>
+<Button href="/data/ot-rcp-com-1.2_27.08.2021.hex.zip" icon="download">ot-rcp 27.08.2021</Button>
+<Button href="/data/ot-rcp_thread-reference-20191113_nRF52840_dongle_no_bootloader.zip" icon="download">ot-rcp thread-reference-20191113</Button>
+<Button href="/data/ot-rcp_de3ddb7169_20.03.2021_USB_BL-USB.zip" icon="download">ot-rcp 20.03.2021 BOOTLOADER=USB</Button>
+<Button href="/data/ot-rcp_de3ddb7169_20.03.2021_USB_BL-No.zip" icon="download">ot-rcp 20.03.2021 No Bootloader</Button>
 
-{{<icon_button href="/data/ot-rcp-com-1.2_27.08.2021.hex.zip" text="ot-rcp 27.08.2021" icon="download" >}}
-
-{{<icon_button href="/data/ot-rcp_thread-reference-20191113_nRF52840_dongle_no_bootloader.zip" text="ot-rcp thread-reference-20191113" icon="download" >}}
-
-{{<icon_button href="/data/ot-rcp_de3ddb7169_20.03.2021_USB_BL-USB.zip" text="ot-rcp 20.03.2021 BOOTLOADER=USB" icon="download" >}}
-
-{{<icon_button href="/data/ot-rcp_de3ddb7169_20.03.2021_USB_BL-No.zip" text="ot-rcp 20.03.2021 No Bootloader" icon="download" >}}
 
 * Manual build : Link to the official documentation of build instructions
-{{<icon_button href="https://github.com/openthread/ot-nrf528xx/blob/main/src/nrf52840/README.md" text="new nRF52840 Build instructions" icon="github" >}}
+<Button href="https://github.com/openthread/ot-nrf528xx/blob/main/src/nrf52840/README.md" icon="github" >new nRF52840 Build instructions</Button>
 Build instructions summary
 ```bash
 cd ~/ot-nrf528xx
@@ -256,9 +251,9 @@ nrfjprog -f nrf52 --chiperase --program ot-rcp-com-1.2.hex --reset
 
 
 ## udp test
-{{<hint warning>}}
+<hint class="warning">
 Note that for networking tests, a border router installation is recommended or network between docker and the host has to be configured.
-{{</hint>}}
+</hint>
 
 The [openthread-setup](#openthread---setup) should be performed to be able to install and use `socat`.
 Listening from `ot-ctl` :
@@ -267,7 +262,7 @@ $sudo ot-ctl
 >udp open
 >udp bind :: 4242
 ```
-{{<hint warning>}}A current issue is that the `wpan0` adapter is lost after closing the ot-ctl command line{{</hint>}}
+<hint class="warning">A current issue is that the `wpan0` adapter is lost after closing the ot-ctl command line</hint>
 Listening using `socat`:
 ```shell
 $socat UDP6-LISTEN:4242,fork STDOUT
@@ -311,7 +306,7 @@ sudo ot-ctl ipaddr
 
 connect on the raspberry pi url `http://10.0.0.41/`
 
-{{<image src="/images/thread_sensortag/OTBR_server.png">}}
+<img src="./OTBR_server.png">
 
 * on the left menu click on `Join` then select the required paramters (e.g. Channel,...) then click on `FORM` 
 ## wireshark sniffing
@@ -323,7 +318,7 @@ connect on the raspberry pi url `http://10.0.0.41/`
 
 When Forming a network, some Pakets can be sniffed including advertisment
 
-{{<image src="/images/thread_sensortag/wireshark_startup.png">}}
+<img src="./wireshark_startup.png"/>
 
 
 # MQTT Sensors Node
@@ -331,11 +326,9 @@ When Forming a network, some Pakets can be sniffed including advertisment
 
 * Example firmware `mqttsn_sleepy_publisher` and `mqttsn_client_publisher` are a port of the nRFSDK example from PCA10056 which was the only supported board to the PCA10059, the nRF52840 USB dongle, therefore the search gateway, connect, publish sequence have been merged in on button and run cyclically on each new press.
 
-{{<icon_button href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware/mqttsn_sleepy_publisher" text="mqttsn_sleepy_publisher"  icon="github" >}}
-
-{{<icon_button href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware/mqttsn_client_publisher" text="mqttsn_client_publisher"  icon="github" >}}
-
-{{<icon_button href="https://www.oasis-open.org/committees/download.php/66091/MQTT-SN_spec_v1.2.pdf" text="MQTT-SN_spec_v1.2.pdf"  icon="new" >}}
+<Button href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware/mqttsn_sleepy_publisher" icon="github">mqttsn_sleepy_publisher</Button>
+<Button href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware/mqttsn_client_publisher" icon="github">mqttsn_client_publisher</Button>
+<Button href="https://www.oasis-open.org/committees/download.php/66091/MQTT-SN_spec_v1.2.pdf" icon="new">MQTT-SN_spec_v1.2.pdf</Button>
 
 useful commands
 ```bash
@@ -343,6 +336,8 @@ sudo systemctl status paho-mqttsn-gateway.service
 sudo /usr/sbin/MQTT-SNGateway -f /etc/paho-mqtt-sn-gateway.conf
 sudo nano /etc/paho-mqtt-sn-gateway.conf
 ```
+
+
 {{<details "paho-mqtt-sn-gateway.conf" >}}
 ```conf
 #**************************************************************************

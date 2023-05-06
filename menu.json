@@ -19,6 +19,16 @@
         ]
     },
     {
+        "text":"Protocols",
+        "href":"/protocols/thread",
+        "items":[
+            {
+                "text":"Thread",
+                "href":"/protocols/thread"
+            }
+        ]
+    },
+    {
         "text":"Boards",
         "href":"/boards/thingy53",
         "items":[

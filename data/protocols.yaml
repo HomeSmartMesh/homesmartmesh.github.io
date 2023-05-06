@@ -1,0 +1,17 @@
+thread:
+  name: Thread
+  phy: 802.15.4
+zigbee:
+  name: Zigbee
+  phy: 802.15.4
+matter:
+  name: Matter
+  phys:
+  - thread
+  - wifi
+  - bluetooth
+  - ethernet
+bluetooth:
+  name: Bluetooth
+uwb:
+  name: Ultra Wide Band

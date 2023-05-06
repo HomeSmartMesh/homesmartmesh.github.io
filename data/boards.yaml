@@ -1,0 +1,11 @@
+thingy53:
+  vendor: nordic
+  soc: nRF5340
+  sensors:
+  - BH1749
+  - BME688
+  - ADXL362
+  - BMI270
+  - BMM150
+  - VM3011
+  page: https://www.nordicsemi.com/Products/Development-hardware/Nordic-Thingy-53
