@@ -5,12 +5,8 @@
     },
     {
         "text":"Frameworks",
-        "href":"/frameworks/matter",
+        "href":"/frameworks/raspi",
         "items":[
-            {
-                "text":"Matter",
-                "href":"/frameworks/matter"
-            },
             {
                 "text":"Raspi",
                 "href":"/frameworks/raspi"
@@ -25,6 +21,10 @@
             {
                 "text":"Thread",
                 "href":"/protocols/thread"
+            },
+            {
+                "text":"Matter",
+                "href":"/frameworks/matter"
             }
         ]
     },

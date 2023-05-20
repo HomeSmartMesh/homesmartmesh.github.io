@@ -6,7 +6,7 @@ zigbee:
   phy: 802.15.4
 matter:
   name: Matter
-  phys:
+  phy:
   - thread
   - wifi
   - bluetooth
