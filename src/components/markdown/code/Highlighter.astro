@@ -24,6 +24,7 @@ const {hash,html} = await codeToHtml(code, { lang: language, theme:'dark-plus' }
     position: relative;
     border: 1px solid #ccc;
     margin-bottom: 20px;
+    max-width: 100ch;
 }
 .copy-btn {
     position: absolute;
@@ -59,6 +60,8 @@ const {hash,html} = await codeToHtml(code, { lang: language, theme:'dark-plus' }
 <style is:global>
 pre{
     padding:10px;
+    white-space: pre-wrap;
+    max-width: 100ch;
 }
 .copy-btn > svg{
   height: 16px;

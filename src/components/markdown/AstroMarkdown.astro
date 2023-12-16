@@ -72,3 +72,10 @@ const other_type = !handled_types.includes(node.type)
 {other_type &&
     <Fragment set:html={toHtml(toHast(node))}></Fragment>
 }
+
+
+<style>
+.paragraph{
+    max-width: 100ch;
+}
+</style>

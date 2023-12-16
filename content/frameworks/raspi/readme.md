@@ -1,5 +1,6 @@
 ---
 title: "Raspi IoT"
+slug: raspi_iot
 description: "raspberry pi server for home automation. For developers, startups, students and hobbyist who want to understand the basics of home automation and IoT and use it for their own projects and products. Networks devices using Thread, Zigbee, wifi are are centralized with mqtt then controlled with servies based on python and node.js scripts interacting with web apps as user Front End."
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2021-02-14T08:00:00+00:00

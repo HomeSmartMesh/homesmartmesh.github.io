@@ -159,8 +159,8 @@ note on config :
 * as CHIP is running over zephyr, a zephyr shell is provided alo through the RTT with config on the `# shell` section
 * the shown `CONFIG_OPENTHREAD_MASTERKEY` is a dummy key and has to be kept secret in a production environment
 
-<details title="prj.conf" >
-```conf
+
+```conf details title="prj.conf"
 #
 #    Copyright (c) 2020 Project CHIP Authors
 #
@@ -222,11 +222,10 @@ CONFIG_SHELL=y
 CONFIG_SHELL_BACKEND_RTT=y
 CONFIG_SHELL_BACKEND_SERIAL=n
 ```
-</details>
 
 The log output is then as follows
-<details title="RTT Log output" >
-```log
+
+```log details title="RTT Log output"
 I: nRF5 802154 radio initialized
 I: 4 Sectors of 4096 bytes
 I: alloc wra: 0, ec0
@@ -253,11 +252,9 @@ I: 832[DL] OpenThread started: OK
 I: 832[DL] Setting OpenThread device type to MINIMAL END DEVICE
 I: 834[ZCL] Using ZAP con
 ```
-</details>
 
 Upon reset, more details in the log with regard to SetupQRCode
-<details title="RTT Log output after reset" >
-```log
+```log details title="RTT Log output after reset"
 I: nRF5 802154 radio initialized
 I: 4 Sectors of 4096 bytes
 I: alloc wra: 0, 9c0
@@ -305,11 +302,9 @@ D: 761[DL]    Thread Unicast Addresses:
 D: 762[DL]         fdde:ad00:beef:0:1e65:2162:2d83:6133/64 valid preferred
 D: 763[DL]         fe80::2c53:1780:f20f:23ad/64 valid preferred
 ```
-</details>
 
 Example shell commands execution on the RTT
-<details title="RTT shell commands and output" >
-```bash
+```bash details title="RTT shell commands and output"
 rtt:~$ ot masterkey
 00112233445566778899aabbccddeeff
 
@@ -343,7 +338,6 @@ D: 2488293[DL]    Extended PAN Id: 0xDEAD00BEEF00CAFE
 D: 2488294[DL]    Channel: 11
 D: 2488295[DL]    Mesh Prefix: fdde:ad00:beef::/64
 ```
-</details>
 
 
 
@@ -358,8 +352,7 @@ D: 2488295[DL]    Mesh Prefix: fdde:ad00:beef::/64
 
 ## runlog
 pc chip-tool
-<details title="chip-tool client - pairing">
-```bash
+```bash title="chip-tool client - pairing"
 wass@ryzen:~/connectedhomeip/examples/chip-tool/out/debug$ ./chip-tool pairing bypass 10.0.0.27 11097
 CHIP:IN: TransportMgr initialized
 CHIP:DIS: Init admin pairing table with server storage
@@ -380,10 +373,8 @@ CHIP:DL: System Layer shutdown
 CHIP:DL: Inet Layer shutdown
 CHIP:DL: BLE layer shutdown
 ```
-</details>
 
-<details title="chip-tool client - command">
-```bash
+```bash details title="chip-tool client - command"
 wass@ryzen:~/connectedhomeip/examples/chip-tool/out/debug$ ./chip-tool onoff toggle 1
 CHIP:IN: TransportMgr initialized
 CHIP:DIS: Init admin pairing table with server storage
@@ -447,11 +438,10 @@ CHIP:DL: System Layer shutdown
 CHIP:DL: Inet Layer shutdown
 CHIP:DL: BLE layer shutdown
 ```
-</details>
  
 esp32 monitor
-<details title="esp32 Matter server">
-```bash
+
+```bash details title="esp32 Matter server"
 E (20563) chip[IN]: Secure transport received message destined to node ID (0x0000000000BC5C01)
 I (20563) chip[IN]: Setting fabricID 1B669 on admin.
 I (20563) chip[IN]: Since admin was modified, persisting changes to KVS
@@ -490,7 +480,6 @@ E (21483) chip[DL]: Long dispatch time: 920 ms
 E (21483) chip[IN]: Secure transport received message destined to node ID (0x0000000000BC5C01)
 I (21493) chip[EM]: Received message of type 16 and protocolId 0
 ```
-</details>
 
 # Comissioning
 Each device will generate a setup QR Code, in this case `CH:I34DV*-00 0C9SS0` which is a sectret not to be shared for production devices.

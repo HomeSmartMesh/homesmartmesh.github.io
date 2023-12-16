@@ -19,10 +19,6 @@
   items:
     - text: Thingy53
       href: /boards/thingy53
-- text: About
-  href: /about/
-  items:
-    - text: About page
-      href: /about/
 - icon: github
   href: https://github.com/HomeSmartMesh/website-astro
+  align: right
