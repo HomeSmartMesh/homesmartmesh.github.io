@@ -1,0 +1,52 @@
+---
+import * as XLSX from 'xlsx';
+import * as fs from "fs";
+import { readFile, set_fs } from "xlsx";
+import {join,dirname} from 'path'
+import {config} from '@/config.js'
+import {xlsxJson_to_DataTable} from './table.js'
+
+export interface Props {
+    src: string;
+    title: string;
+    filepath: string;
+}
+
+const { src, title, filepath } = Astro.props as Props;
+
+set_fs(fs);
+const abs_file = join(config.rootdir,config.content,dirname(filepath),src)
+console.log(` * loading xlsx file '${abs_file}'`)
+const workbook = readFile(abs_file);
+
+const sheet_name = workbook.SheetNames[0]
+const worksheet = workbook.Sheets[sheet_name]
+//const html = XLSX.utils.sheet_to_html(worksheet);
+const xlsxJson = XLSX.utils.sheet_to_json(worksheet);
+const [table_head, ...table_rows] = xlsxJson_to_DataTable(xlsxJson)
+const table_string = JSON.stringify(table_rows)
+---
+<div class="container">
+    <table class="data-table" data-table={table_string}>
+        <thead>
+            <tr>
+            {table_head.map((cell)=>(
+                <th>{cell}</th>
+            ))}
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be populated dynamically using JavaScript -->
+        </tbody>
+    </table>
+</div>
+
+<style>
+.container{
+    padding:5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px 3px #ccc;
+}
+</style>
+
+<script src="./data-tables.js" />

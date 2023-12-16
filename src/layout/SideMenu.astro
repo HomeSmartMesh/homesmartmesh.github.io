@@ -1,0 +1,48 @@
+---
+import './colors.css';
+import SubMenu from "./SubMenu.astro";
+
+export interface Props {
+  items: Array<Object>;
+  category: string;
+}
+
+let { items,category } = Astro.props;
+
+const open_class = (items.length > 0)?"open":"closed"
+const data_width = (items.length > 0)?"20vw":"0vw"
+---
+<nav class={`${open_class} ${category}`} data-width={data_width}>
+    <SubMenu items={items} />
+</nav>
+
+<style define:vars={{ data_width }}>
+nav{
+    background: var(--nav-bg-color);
+    transition: width 0.5s;
+    width:var(--data_width);
+    height:100%;
+    overflow-y: auto;
+    flex-shrink: 0;
+}
+nav::-webkit-scrollbar {
+  width: 1rem;
+}
+nav::-webkit-scrollbar-track {
+  background: var(--nav-bg-color); 
+}
+nav::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb-color); 
+}
+nav::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-hover-color);
+}
+
+@media only screen and (max-width: 700px) {
+  nav{
+      width:100%;
+  }
+}
+
+</style>
+

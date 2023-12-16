@@ -1,0 +1,18 @@
+---
+import {relAssetToUrl} from '@/libs/assets.js'
+import Panzoom from '@/components/panzoom/panzoom.astro'
+
+export interface Props {
+    node: object;
+    filepath: string;
+}
+
+const { node, filepath} = Astro.props as Props;
+const {title, url, alt} = node;
+
+console.log(`url / filepath = ${url} / ${filepath}`)
+const asseturl = await relAssetToUrl(url, filepath)
+console.log(`asseturl = ${asseturl}`)
+const isSvg = asseturl.endsWith(".svg")
+---
+<Panzoom src={asseturl} alt={alt} title={title} />

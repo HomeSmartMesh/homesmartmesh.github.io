@@ -1,12 +1,14 @@
 ---
 import './colors.css';
 import AppBar from './AppBar.astro';
-import NavMenu from './NavMenu.astro';
-import ToCMenu from './ToCMenu.astro';
-import {get_nav_menu} from "./nav_section.js"
-import { process_toc_list } from "./menu_toc";
-import {session_user} from "../../server/auth/auth_utils"
-import {config} from "@/config"
+import Cache from './Cache.astro'
+import SideMenu from './SideMenu.astro';
+import ClientNavMenu from './ClientNavMenu.astro';
+import { section_from_pathname } from '@/libs/assets.js';
+import { get_menu_hash,get_generated_section_menu,process_toc_list } from "./layout_utils";
+import {config} from '@/config'
+
+
 export interface Props {
 	title: string;
 	headings: Array<Object>;
@@ -14,10 +16,13 @@ export interface Props {
 
 const { headings } = Astro.props;
 const { title } = Astro.props.frontmatter || Astro.props;
+const toc_menu_items = process_toc_list(headings)
+const pages_menu_items = await get_generated_section_menu(Astro.url.pathname)
+const section = section_from_pathname(Astro.url.pathname)
+const menu_hash = get_menu_hash()
+const left_menu_open = (pages_menu_items.length > 0)
 
-const left_nav_menu = await get_nav_menu(Astro.url.pathname)
-const right_toc_menu = process_toc_list(headings)
-
+console.log(`Layout> sectiom = '${section}'`)
 ---
 <html lang="en">
 	<head>
@@ -27,43 +32,46 @@ const right_toc_menu = process_toc_list(headings)
 		<title>{title}</title>
 	</head>
 	<body >
-		<div id="fixed-left" class={`fixed-nav ${left_nav_menu.visible?"active":""}`} />
-		<div class="center-body">
+		<div id="fixed-left" class="fixed-nav active" />
+		<div class="appbar-nav_content-footer">
 			<header>
 				<AppBar/>
 			</header>
 			<main>
-				{left_nav_menu.visible &&
-					<>
-						<div id="wide-nav" class="scroll">
-							<NavMenu items={left_nav_menu.items} />
-						</div>
-						<div id="resize-left" class="nav-resize active"/>
-					</>
-				}
-
+				<div id="wide-nav" class="scroll">
+					{config.client_menu?
+						<ClientNavMenu open={left_menu_open} hash={menu_hash}/>:
+						<Cache name={section}>
+							<SideMenu items={pages_menu_items} category="pages_menu"/>
+						</Cache>
+					}
+				</div>
+				<div id="resize-left" class="nav-resize active"/>
 				<article class="content scroll">
 					<div id="mobile-nav">
-						<NavMenu items={left_nav_menu.items} />
+						{config.client_menu?
+							<ClientNavMenu open={left_menu_open} hash={menu_hash}/>:
+							<Cache name={section}>
+								<SideMenu items={pages_menu_items} category="pages_menu"/>
+							</Cache>
+						}
 					</div>
 					<div class="article-slot">
 						<slot/>
 					</div>
 				</article>
-				{right_toc_menu.visible &&
-				<>
-					<div id="resize-right" class="nav-resize active"/>
-					<div id="right-toc">
-						<ToCMenu items={right_toc_menu.items} />
-					</div>
-				</>
-				}
+				<div id="resize-right" class="nav-resize active"/>
+				<div id="toc-nav-div">
+					{toc_menu_items.visible && 
+						<SideMenu items={toc_menu_items.items} category="toc_menu"/>
+					}
+				</div>
 			</main>
 			<footer>
-				<p> </p>
+				<p>footer</p>
 			</footer>
 		</div>
-		<div id="fixed-right" class={`fixed-nav ${right_toc_menu.visible?"active":""}`}/>
+		<div id="fixed-right" class={`fixed-nav ${toc_menu_items.visible?"active":""}`}/>
 	</body>
 </html>
 
@@ -71,38 +79,29 @@ const right_toc_menu = process_toc_list(headings)
 <style>
 body{
 	margin:0;
-	padding:0;
 	font-family: Arial, Helvetica, sans-serif;
 	display:flex;
 	flex-direction: row;
-	overflow:hidden;
 }
-/* Body => #fixed-left, .center-body, #fixed-right */
-.center-body{
+/* Body => #fixed-left, .appbar-nav_content-footer, #fixed-right */
+.appbar-nav_content-footer{
 	flex-grow:1;
 	display:flex;
 	flex-direction: column;
 	height:100vh;
 }
-/* center-body => header, main, footer */
+/* appbar-nav_content-footer => header, main, footer */
 header{
     flex-grow:0;
 	background-color: var(--header-bg-color);
     width:100%;
     user-select: none;
 }
-#fixed-left{
-
-}
-#fixed-right{
-
-}
 main{
 	flex-grow:1;
 	display:flex;
 	flex-direction: row;
 	height:80vh;
-	max-width: calc(100vw - 6em);
 }
 footer{
 	flex-grow:0;
@@ -111,7 +110,7 @@ footer{
 	text-align: center;
 	overflow: hidden;
 }
-/* main => #wide-nav, resize-left, article.content, #resize-right, #right-toc */
+/* main => #wide-nav, resize-left, article.content, #resize-right, #toc-nav-div */
 
 #wide-nav{
 	background: var(--nav-bg-color);
@@ -122,25 +121,24 @@ footer{
 .content{
 	color:var(--content-color);
 	background-color: var(--content-bg-color);
-	flex-grow: 1;
+	width:100%;
+	flex-grow: 0;
 	overflow:auto;
 	padding:10px;
     scroll-behavior: smooth;
     scroll-padding-top: 10px;
 }
-#right-toc{
+#toc-nav-div{
 	background: var(--nav-bg-color);
+	flex-grow: 1;
 }
 
 
 footer p{
-	margin: 0px;
-	height: 10px;
+	margin:6px;
 }
 
 .fixed-nav{
-	padding:0;
-	margin:0;
 	width:3em;
 	background-color: var(--fixed-nav-bg-color);
 	height:100vh;
@@ -183,7 +181,7 @@ footer p{
 }
 
 @media only screen and (max-width: 700px) {
-	#fixed-left, #fixed-right, #resize-right, #resize-left, #right-toc {
+	#fixed-left, #fixed-right, #resize-right, #resize-left, #toc-nav-div {
 		display:none;
 	}
 	.content{
@@ -196,6 +194,9 @@ footer p{
 	#mobile-nav{
 		display: block;
 	}
+	.article-slot{
+
+	}
 
 }
 
@@ -207,99 +208,4 @@ footer p{
 	}
 </style>
 
-<script >
-
-	const root = document.querySelector(':root');
-	//root.style.setProperty('--header-bg-color', 'blue');
-	const header_bg_color = getComputedStyle(root).getPropertyValue('--header-bg-color');
-	const content_bg_color = getComputedStyle(root).getPropertyValue('--content-bg-color');
-
-	function configure_nav(fixed_el,resize_el,nav_el,left_to_right){
-		fixed_el.addEventListener("click",(e)=>{
-			const current_state = nav_el.classList.contains("open")?"open":"closed"
-			//console.log(current_state)
-			if(current_state == "open"){
-				nav_el.classList.remove("open")
-				nav_el.classList.add("closed")
-				nav_el.style.width = "0px"
-			}else if(current_state == "closed"){
-				nav_el.classList.add("open")
-				nav_el.classList.remove("closed")
-				nav_el.style.width = nav_el.getAttribute("data-width")
-			}
-			e.preventDefault()
-		})
-
-		var global_resize_state = false
-		var x_down
-		var start_width
-		
-		function finish_mouse(){
-			global_resize_state = false
-			nav_el.style.transition = "width 0.5s"
-		if(nav_el.clientWidth < 20){
-			nav_el.classList.add("closed")
-			nav_el.classList.remove("open")
-			nav_el.setAttribute("data-width","20vw")
-		}else{
-			nav_el.classList.add("open")
-			nav_el.classList.remove("closed")
-		}
-		resize_el.style.backgroundColor = content_bg_color
-		}
-		
-		resize_el.addEventListener("mouseenter",(e)=>{
-			resize_el.style.backgroundColor = header_bg_color
-		})
-		resize_el.addEventListener("mouseleave",(e)=>{
-			resize_el.style.backgroundColor = content_bg_color
-		})
-		resize_el.addEventListener("mousedown",(e)=>{
-			global_resize_state = true
-			x_down = e.x
-			start_width = nav_el.clientWidth
-			nav_el.style.transition = "none"
-		})
-		resize_el.addEventListener("mouseup",(e)=>{
-			finish_mouse()
-		})
-		document.addEventListener("mouseup",(e)=>{
-			if(global_resize_state == true){
-				finish_mouse()
-			}
-		})
-		document.addEventListener("mousemove",(e)=>{
-			if(global_resize_state == true){
-				const new_width = left_to_right?(start_width + e.x - x_down):(start_width - e.x + x_down)
-				if(new_width <= 60){//snap effect
-					nav_el.style.width = "0px"
-					nav_el.setAttribute("data-width","0px")
-					resize_el.style.backgroundColor = header_bg_color
-				}else if(new_width < 160){
-					//do nothing here
-				}else if(new_width < (document.documentElement.clientWidth)*0.4){
-					nav_el.style.width = new_width+"px"
-					nav_el.setAttribute("data-width",new_width+"px")
-					resize_el.style.backgroundColor = header_bg_color
-				}else{
-					resize_el.style.backgroundColor = "red"
-				}
-				e.preventDefault()
-			}
-		})
-	}
-	
-	const fixed_left = document.getElementById("fixed-left")
-	if(fixed_left.classList.contains("active")){
-		const resize_left = document.getElementById("resize-left")
-		const nav = resize_left.previousElementSibling.firstElementChild
-		configure_nav(fixed_left,resize_left,nav,true)
-	}
-	const fixed_right = document.getElementById("fixed-right")
-	if(fixed_right.classList.contains("active")){
-		const resize_right = document.getElementById("resize-right")
-		const nav = resize_right.nextElementSibling.firstElementChild
-		configure_nav(fixed_right,resize_right,nav,false)
-	}
-
-</script>
+<script src="./menu_interactions_activation.js" />

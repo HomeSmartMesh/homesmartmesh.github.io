@@ -7,6 +7,18 @@
       href: /frameworks/matter
     - text: Raspi IoT
       href: /frameworks/raspi_iot
+- text: Protocols
+  href: /protocols/thread
+  items:
+    - text: Thread
+      href: /protocols/thread
+    - text: Matter
+      href: /frameworks/matter
+- text: Boards
+  href: /boards/thingy53
+  items:
+    - text: Thingy53
+      href: /boards/thingy53
 - text: About
   href: /about/
   items:

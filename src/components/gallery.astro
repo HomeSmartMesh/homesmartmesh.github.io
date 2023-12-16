@@ -1,7 +1,6 @@
 ---
-import { url } from '@/dist/server/chunks/very_deep.23f95693.mjs';
 import {existsSync,readFileSync} from 'fs';
-import {relAssetToUrl} from '../libs/utils'
+import {relAssetToUrl} from '@/libs/assets.js'
 import PanZoomModal from './panzoommodal.astro'
 
 export interface Props {
@@ -15,11 +14,16 @@ const { 'src':filename,'data-filedir':filedir,expanded } = Astro.props as Props;
 const filepath = filedir+'/'+filename
 const json_text = existsSync(filepath)?readFileSync(filepath).toString():"[]"
 const relImages = JSON.parse(json_text)
-const imagesUrls = relImages.map((relFile)=>({
-        url:relAssetToUrl(relFile,filedir,import.meta.env.BASE_URL),
-        isSVG:relAssetToUrl(relFile,filedir,import.meta.env.BASE_URL).endsWith(".svg"),
+
+let imagesUrls = []
+for(const relFile of relImages){
+    const url = await relAssetToUrl(relFile,filedir)
+    imagesUrls.push({
+        url:url,
+        isSVG:url.endsWith(".svg"),
         name:relFile
-    }))
+    })
+}
 
 ---
 
