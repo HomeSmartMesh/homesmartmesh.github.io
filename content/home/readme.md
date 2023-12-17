@@ -5,152 +5,13 @@ date: 2020-10-06T08:48:23+00:00
 lastmod: 2021-02-14T08:00:00+00:00
 BookToC: false
 images: ["/images/meta.png", "/images/thread_sensortag/concept.png", "/images/3dprinting/3dmodels.png", "/images/nRF52_mesh.png", "/images/floor_temperature.png" ]
-grid:
-    filters:
-    - All
-    - Frameworks
-    - Applications
-    - Microcontrollers
-    - Network
-    slot: 300
-    items:
-    - name: "Matter"
-      width: 300
-      tags: [Frameworks]
-    - name: "Ultra Wide Band"
-      width: 300
-      tags: [Network]
-    - name: "Thread SensorTag"
-      width: 300
-      tags: [Microcontrollers]
-    - name: "Raspi IoT"
-      width: 300
-      tags: [Frameworks]
-    - name: "ESP32 Boards"
-      width: 300
-      tags: [Microcontrollers,ESP32]
-    - name: "3D Printing"
-      width: 300
-      tags: []
-    - name: "Simple Mesh"
-      width: 300
-      tags: [Network,nRF52]
-    - name: "Thread"
-      width: 300
-      tags: [Network]
-    - name: "Zigbee"
-      width: 300
-      tags: [Network]
-    - name: "Smart Home 3D"
-      width: 600
-      tags: [Applications]
-    - name: "Home Assistant"
-      width: 150
-      tags: [Frameworks]
+cards: true
 ---
-
-{{< grid "my_grid" >}}
-{{< image src="/images/matter/overview.png" height="150px" href="/docs/frameworks/matter/" >}}
-
-{{< my_button href="/docs/frameworks/matter/" text="Matter Protocol" >}}
-
-Multiple networks supported (Thread, BT, Wifi)
-
-Application "Advanced ZCL" over IP
-
-<--->
-{{<image src="/images/uwb/DRTLS.webp" height="150px" href="/docs/networks/ultrawideband/" >}}
-{{<my_button href="/docs/networks/ultrawideband/" text="Ultra Wide Band Evaluation" >}}
-
-Mesh network 802.15.4-uwb with positioning
-
-Qorvo/Decawave Modules evaluation
-
-<--->
-{{< image src="/images/thread_sensortag/sensortag_v1.1.webp" height="150px" href="/docs/microcontrollers/nrf52/thread_sensortag/" >}}
-{{< my_button href="/docs/microcontrollers/nrf52/thread_sensortag/" text="Thread SensorTag" >}}
-
-Thread mesh with nRF52840
-
-BME280 Temperature Humidity Pressure
-
-MAX44009 Ambient Light
-
-<--->
-{{< image src="/images/raspi_iot.png" height="150px" href="/docs/frameworks/raspi_iot/" >}}
-
-{{< my_button href="/docs/frameworks/raspi_iot/" text="Raspi IoT Doc" >}}
-
-Learning examples using as few dependencies as possible
-
-Sensors to MQTT to influx to Grafana.
-
-Multiple Python and Node.js standalone services
-
-<--->
-{{< image src="/images/espressif.png" href="/docs/microcontrollers/esp32/"  height=100 >}}
-{{< my_button href="/docs/microcontrollers/esp32/" text="ESP32 Boards" >}}
-
-samples code with wifi MQTT json payload
-
-filesystem with json config
-
-MQTT Timer camera, e-ink, remote control,...
-<--->
-{{< image src="/images/3dprinting/3dmodels.png" href="/docs/3dprinting/" height=150 >}}
-
-3D Models for Smart Home, electronics and house utilities
-
-{{< my_button href="/docs/3dprinting/" text="3D Printing" >}}
-
-<--->
-{{< image src="/images/nRF52_mesh.png" height=150 href="/docs/networks/nrf/" >}}
-{{< my_button href="/docs/networks/nrf/" text="nRF Mesh Doc" >}}
-
-A simpler, more efficient alternative to Z-x, BL-x, Thread, standard RF protocols.
-
-Custom HW but also SW for nRF SoC tags and dongles on the market.
-<--->
-{{< image src="/images/threadgrouplogo.ico" height=100 href="/docs/networks/thread/" >}}
-
-{{< my_button href="/docs/networks/thread/" text="Thread Doc" >}}
-
-Protocol Documentation
-
-Tools
-
-Boarder Router
-<--->
-{{< image src="/images/zigbee.png" height=100 href="docs/networks/zigbee/" >}}
-{{< my_button href="docs/networks/zigbee/" text="Zigbee Doc" >}}
-
-Showcase of all used devices and their integration
-
-References for deeper dive in the Zigbee standard
-
-References for DIY coordinators and software
-
-
-
-<--->
-{{< image src="/images/floor_temperature.png" height=100 href="/docs/applications/home3d" >}}
-
-{{< my_button relref="/docs/applications/home3d" text="Webapps Doc" >}}
-
-Smart Home 3d : Control your home like a Video Game served from your local pi. See your 3d rooms model real time colored with your temperature sensor.
-<--->
-{{< image src="/images/hassio.png" height=100 href="/docs/frameworks/home_assistant/">}}
-{{< button href="/docs/frameworks/home_assistant/" >}}Home Assistant{{</button>}}
-{{< /grid >}}
-
-
-
-
-## Home Automation Mind Map
+# Home Automation Mind Map
 
 ![home automation](home_automation.svg)
 
-## Home Automation Devices
+# Home Automation Devices
 
 ![devices](devices.svg)
 
@@ -160,6 +21,7 @@ The same partitioning is done for the devices,  where the ESP32 and the Arduino 
 
 Then comes [Thread](/docs/networks/thread/), which is the current hope of unifying all vendors and makers around one protocol and a common gateway. It is indeed promising as the current gateway reference design is based on a raspberry pi boarder router
 
+# Background
 ## Networks
 Ethernet and wifi being used by most generic consumer devices is very convenient and is used wherever it is possible. Even smaller devices with relatively low power such as [ESP32](/docs/microcontrollers/esp32/) can use wifi, which solves all communication questions and can even provide a webserver hosted on the microcontroller. Usage of websocket allow browsers and webapps such as [Home 3D](/docs/applications/home3d/) to be independent from proxy servers which increases the flexibility of the client servers architecture and allows clients to run on any device (Smartphone / PC : mac, win,linux).  MQTT lowers the application overhead in comparison to REST API and solves all communication scenarios with client polling and server based events notification.
 

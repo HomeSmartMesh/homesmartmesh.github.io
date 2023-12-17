@@ -1,0 +1,48 @@
+---
+import {dirname} from 'path'
+import {getDocuments, getEntry} from 'content-structure'
+import AstroMarkdown from '@/components/markdown/AstroMarkdown.astro'
+
+export interface Props {
+    filepath: string;
+}
+
+const {filepath} = Astro.props;
+const dirpath = dirname(filepath)
+
+const all_cards = await getDocuments({format:"markdown",content_type: "cards"})
+const dir_cards = all_cards.filter((entry)=>(entry.path.startsWith(dirpath))).sort((a, b) => a.order - b.order);
+const promises = dir_cards.map(entry => getEntry({ sid: entry.sid }));
+const entries = await Promise.all(promises);
+---
+<div class="cards container">
+    {
+        entries.map((entry)=>(
+            <div class="card">
+                <h1 class="title">{entry.data.title}</h1>
+                <AstroMarkdown node={entry.tree} data={entry.data} />
+            </div>
+        ))
+    }
+</div>
+
+<style>
+.title{
+    width:100%;
+    text-align:center;
+    
+}
+.cards.container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+.card{
+    background-color: #222;
+    box-shadow: 2px 2px 3px 3px #333;
+    border-radius:10px;
+    max-width:300px;
+    padding:10px;
+}
+
+</style>

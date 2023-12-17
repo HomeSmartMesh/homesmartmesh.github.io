@@ -6,16 +6,20 @@
     directory: frameworks
 - label: Protocols
   link: /protocols/thread
-  items:
-    - label: Thread
-      link: /protocols/thread
-    - label: Matter
-      link: /frameworks/matter
+  autogenerate:
+    directory: protocols
 - label: Boards
   link: /boards/thingy53
-  items:
-    - label: Thingy53
-      link: /boards/thingy53
+  autogenerate:
+    directory: boards
+- label: Microcontrollers
+  link: /microcontrollers
+  autogenerate:
+    directory: microcontrollers
+- label: 3D Printing
+  link: /3d-printing
+  autogenerate:
+    directory: 3dprinting
 - icon: github
   link: https://github.com/HomeSmartMesh/website-astro
   align: right
