@@ -11,8 +11,8 @@ export async function getStaticPaths(){
 	const pages = documents.map((entry)=>({params:{url:entry.url}}))
 	return pages
 }
-
+const headings = (Object.hasOwn(entry.data,"toc")&&entry.data.toc == false)?[]:entry.data.headings
 ---
-<Layout title={entry.title} headings={entry.data.headings} >
+<Layout title={entry.title} headings={headings} >
     <AstroMarkdown node={entry.tree} data={entry.data} />
 </Layout>

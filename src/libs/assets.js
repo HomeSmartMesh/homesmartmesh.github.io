@@ -85,6 +85,10 @@ async function assetToUrl(path,refFile){
     return src
 }
 
+function assetUrlToPath(src){
+    return join(config.rootdir,config.content_out,src)
+}
+  
 function contentPathToStaticPath(section,entry_path){
     const p1 = join(dirname(entry_path))
     const p2 = p1.replaceAll('\\','/')
@@ -135,6 +139,7 @@ function file_mime(path){
 export{
   assetToUrl,
   relAssetToUrl,
+  assetUrlToPath,
   shortMD5,
   exists,
   contentPathToStaticPath,

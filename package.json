@@ -31,6 +31,7 @@
     "passport-github": "^1.1.0",
     "plantuml-encoder": "^1.4.0",
     "remark": "^15.0.1",
+    "sharp": "^0.33.0",
     "shikiji": "^0.6.10",
     "three": "0.157.0",
     "unist-util-visit": "^4.1.1",
