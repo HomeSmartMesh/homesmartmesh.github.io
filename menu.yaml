@@ -1,24 +1,21 @@
-- text: Home
-  href: /
-- text: Frameworks
-  href: /frameworks/matter
+- label: Home
+  link: /
+- label: Frameworks
+  link: /frameworks/matter
+  autogenerate:
+    directory: frameworks
+- label: Protocols
+  link: /protocols/thread
   items:
-    - text: Matter
-      href: /frameworks/matter
-    - text: Raspi IoT
-      href: /frameworks/raspi_iot
-- text: Protocols
-  href: /protocols/thread
+    - label: Thread
+      link: /protocols/thread
+    - label: Matter
+      link: /frameworks/matter
+- label: Boards
+  link: /boards/thingy53
   items:
-    - text: Thread
-      href: /protocols/thread
-    - text: Matter
-      href: /frameworks/matter
-- text: Boards
-  href: /boards/thingy53
-  items:
-    - text: Thingy53
-      href: /boards/thingy53
+    - label: Thingy53
+      link: /boards/thingy53
 - icon: github
-  href: https://github.com/HomeSmartMesh/website-astro
+  link: https://github.com/HomeSmartMesh/website-astro
   align: right

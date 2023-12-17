@@ -11,7 +11,6 @@ if(import.meta.env.DEV){
 }
 
 const config = {
-    port:process.env.PORT,
     rootdir: rootdir,
     outDir: "dist",
     content: "content",
