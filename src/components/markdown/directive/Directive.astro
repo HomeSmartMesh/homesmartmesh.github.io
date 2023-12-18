@@ -5,10 +5,10 @@ import ButtonDirective from './ButtonDirective.astro'
 
 export interface Props {
     node: object;
-    filepath: string;
+    dirpath: string;
 }
 
-const { node, filepath} = Astro.props as Props;
+const { node, dirpath} = Astro.props as Props;
 
 const is_image = (node.name == "image")
 const is_button = (node.name == "button")
@@ -16,7 +16,7 @@ const is_other = !(is_image || is_button)
 
 let asseturl = ""
 if(is_image){
-  asseturl = await relAssetToUrl(node.attributes.src, filepath)
+  asseturl = await relAssetToUrl(node.attributes.src, dirpath)
 }
 if(is_button){
   console.log(node)

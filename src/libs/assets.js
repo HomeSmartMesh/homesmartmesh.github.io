@@ -64,22 +64,21 @@ async function relAssetToUrlCopy(relativepath,refFile){
     }
 }
 
-async function relAssetToUrl(relativepath,refFile){
-    console.log(relativepath)
+async function relAssetToUrl(relativepath,dirpath){
     if(relativepath.startsWith("/")){
         return relativepath
     }
-    const dir_rel = dirname(refFile)
-    const newurl = join("assets",dir_rel,relativepath)
+    //handled by /assets/[...path].js to config.rootdir / config.content
+    const newurl = join("assets",dirpath,relativepath)
     return "/"+newurl.replaceAll('\\','/')
 }
 
-async function assetToUrl(path,refFile){
+async function assetToUrl(path,dirpath){
     let src = path
     const external = path.startsWith('http')
     if(!external){
     if(!path.startsWith("/")){
-        src = await relAssetToUrl(path,refFile)
+        src = await relAssetToUrl(path,dirpath)
     }
     }
     return src

@@ -9,6 +9,7 @@ import Cards from './cards/Cards.astro'
 import Directive from './directive/Directive.astro'
 import {toHast} from 'mdast-util-to-hast'
 import {toHtml} from 'hast-util-to-html'
+import {dirname} from 'path'
 export interface Props {
     node: object;
     data: object;
@@ -20,12 +21,12 @@ const handled_types = [ "root","heading","table","paragraph",
                         "list", "listItem","textDirective"
                     ]
 const other_type = !handled_types.includes(node.type)
-const has_cards = Object.hasOwn(data,"cards") && data.cards
+data.dirpath = dirname(data.path)
 ---
 {(node.type == "root") &&
     <>
-        {(has_cards)&&
-        <Cards filepath={data.path}/>
+    {(Object.hasOwn(data,"cards"))&&
+            <Cards cards={data.cards} />
         }
         {node.children.map((node)=>(
             <Astro.self node={node} data={data} />
@@ -60,19 +61,19 @@ const has_cards = Object.hasOwn(data,"cards") && data.cards
     <DataTable node={node} />
 }
 {(node.type == "image") &&
-    <MarkdownImage node={node}  filepath={data.path}/>
+    <MarkdownImage node={node}  dirpath={data.dirpath}/>
 }
 {(node.type == "code") &&
-    <Code node={node}  filepath={data.path}/>
+    <Code node={node}  dirpath={data.dirpath}/>
 }
 {(node.type == "tag") &&
     <Tag node={node}  />
 }
 {(node.type == "link") &&
-    <Link node={node}  filepath={data.path}/>
+    <Link node={node}  dirpath={data.dirpath}/>
 }
 {(node.type == "textDirective") &&
-    <Directive node={node}  filepath={data.path}/>
+    <Directive node={node}  dirpath={data.dirpath}/>
 }
 {other_type &&
     <Fragment set:html={toHtml(toHast(node))}></Fragment>

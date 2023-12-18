@@ -1,32 +1,19 @@
 ---
-title: "Raspi IoT"
+title: Raspi IoT
 slug: raspi_iot
 description: "raspberry pi server for home automation. For developers, startups, students and hobbyist who want to understand the basics of home automation and IoT and use it for their own projects and products. Networks devices using Thread, Zigbee, wifi are are centralized with mqtt then controlled with servies based on python and node.js scripts interacting with web apps as user Front End."
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2021-02-14T08:00:00+00:00
-draft: false
 images: ["/images/software.png", "/images/devices.png" ]
-weight: 1
-toc: true
-grid:
-    slot: 300
-    items:
-    - name: "Discussion Forum"
-      width: 300
-      tags: []
-    - name: "Github Repo"
-      width: 300
-      tags: [Network]
+order: 1
+cards:
+  - uid: cards.discussions
+    body: true
+    width: 300
+  - uid: cards.github-repo
+    body: true
+    width: 300
 ---
-
-<image src="/images/discourse.svg" height="60" href="https://github.com/HomeSmartMesh/raspi/discussions" />
-<image src="/images/discourse/discourse_simple.png" height="100" href="https://github.com/HomeSmartMesh/raspi/discussions" />
-Support and discussions on the [Github Discussions](https://github.com/HomeSmartMesh/raspi/discussions)
-
-
-<image src="/images/raspi_iot.png" height="170px" href="https://github.com/HomeSmartMesh/raspi" target="_blank" />
-
-Source code on the [Github Repo](https://github.com/HomeSmartMesh/raspi)
 
 # Home Webapp
 This `mobile first` webapp from the [web/home-next](https://github.com/HomeSmartMesh/raspi/tree/master/web/home-next) directory is based on [next.js](https://nextjs.org/), [react](https://reactjs.org/), [Material UI](https://mui.com/) and [MQTT.js](https://github.com/mqttjs/MQTT.js#readme). All of the features are running on a raspberry pi as a server with services from a deployed instance of this repo.

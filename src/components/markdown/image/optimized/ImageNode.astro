@@ -10,7 +10,7 @@ export interface Props {
 
 const { src, node } = Astro.props as Props;
 
-const alt = node.attributes.alt
+const alt = node.attributes.alt?node.attributes.alt:node.attributes.src
 
 const image_path = assetUrlToPath(src)
 
