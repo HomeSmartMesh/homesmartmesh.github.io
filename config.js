@@ -1,37 +1,38 @@
 //in DEV Mode process.env does not have .env content
 import * as dotenv from 'dotenv'
-
-const rootdir = process.cwd()
+import {join} from 'path'
 
 dotenv.config()
+const rootdir = process.cwd()
 
-let content_out = "dist"
-if(import.meta.env.DEV){
-    content_out = "public"
-}
+const outdir = (process.env.OUT_DIR==null)?"dist":process.env.OUT_DIR
+const contentdir = "content"
 
 const config = {
     rootdir: rootdir,
-    outDir: "dist",
-    content: "content",
-    content_out: content_out,
+    outDir: outdir,
+    content_path: join(rootdir,contentdir),
+    code_path: join(rootdir,outdir,"codes"),
     plantuml_server: "https://www.plantuml.com/plantuml/svg",
     kroki_server: "https://kroki.io",
     client_menu:true,
-    assets_hash_dir:false,
     highlighter:{
         theme:"dark-plus",
         langs:['javascript','js','python','yaml']
-    }
+    },
+    copy_assets:false,
+    copy_assets_dir: "_astro",
+    assets_hash_dir:true    //N.A. if(copy_assets == false)
 }
 
 config.collect_content = {
     rootdir:config.rootdir,
-    rel_contentdir:config.content,
+    rel_contentdir:contentdir,
     content_ext:["md"],
     assets_ext:["svg","webp","png","jpeg","jpg","xlsx","glb","hdr"],
-    rel_outdir:"public",//because integrations cannot persist on dist before start of build
+    rel_outdir:".structure",//dist does not persist before build
     raw_menu:"menu.yaml",
+    out_menu:"public/menu.json",//used by src\layout\client_nav_menu.js
     debug:false
 }
 

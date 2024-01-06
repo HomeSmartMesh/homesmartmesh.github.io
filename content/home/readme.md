@@ -5,10 +5,44 @@ date: 2020-10-06T08:48:23+00:00
 lastmod: 2021-02-14T08:00:00+00:00
 toc: false
 images: ["/images/meta.png", "/images/thread_sensortag/concept.png", "/images/3dprinting/3dmodels.png", "/images/nRF52_mesh.png", "/images/floor_temperature.png" ]
-nocards:
-    - title: Matter
-      width: 300
 ---
+
+```yaml cards
+- uid: cards.matter
+  body: true
+  width: 300
+- uid: cards.ultra-wide-band
+  body: true
+  width: 300
+- uid: cards.thread-sensortag
+  body: true
+  width: 300
+- uid: cards.raspi-iot
+  body: true
+  width: 300
+- uid: cards.esp32-boards
+  body: true
+  width: 300
+- uid: cards.3d-printing
+  body: true
+  width: 300
+- uid: cards.simple-mesh
+  body: true
+  width: 300
+- uid: cards.thread
+  body: true
+  width: 300
+- uid: cards.zigbee
+  body: true
+  width: 300
+- uid: cards.smart-home-3d
+  body: true
+  width: 600
+- uid: cards.home-assistant
+  body: true
+  width: 300
+```
+
 # Home Automation Mind Map
 
 ![home automation](home_automation.svg)

@@ -1,14 +1,13 @@
 ---
+format: markdown_card
 title: Ultra Wide Band
-order: 2
 width: 300
 tags: [Network]
 ---
 
-{{<image src="/images/uwb/DRTLS.webp" height="150px" href="/docs/networks/ultrawideband/" >}}
-{{<my_button href="/docs/networks/ultrawideband/" text="Ultra Wide Band Evaluation" >}}
+:image[]{src=/images/uwb/DRTLS.webp alt="Ultra Wide Band" width=280}
 
-Mesh network 802.15.4-uwb with positioning
+:button[]{label="Ultra Wide Band Evaluation" link=/docs/networks/ultrawideband/}
 
-Qorvo/Decawave Modules evaluation
-
+- Mesh network 802.15.4-uwb with positioning
+- Qorvo/Decawave Modules evaluation

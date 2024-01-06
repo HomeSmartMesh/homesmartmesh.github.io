@@ -5,7 +5,7 @@ import {load_json} from '@/libs/utils.js'
 import {file_mime} from '@/libs/assets.js'
 
 export async function GET({params}){
-    const imagePath = resolve(join(config.rootdir,config.content_out,"codes",params.path));
+    const imagePath = resolve(join(config.code_path,params.path));
     console.log(`codes> serving '${imagePath}'`)
     try {
         const stream = createReadStream(imagePath);
@@ -21,7 +21,7 @@ export async function GET({params}){
 
 export async function getStaticPaths(){
     if(import.meta.env.DEV){
-        const asset_list = await load_json('public/asset_list.json')
+        const asset_list = await load_json(join(config.collect_content.rel_outdir,'asset_list.json'))
         const codes_diagrams = ["plantuml", "blockdiag", "mermaid"]
         const diagrams = asset_list.filter((asset)=>
                 ((asset.type == "code") && (codes_diagrams.includes(asset.language)))

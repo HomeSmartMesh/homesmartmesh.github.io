@@ -1,6 +1,11 @@
 ---
-import {relAssetToUrl} from '@/libs/assets.js'
-import ImageDirective from '../image/optimized/ImageDirective.astro';
+//to use Optimized Images, do the following :
+// - uncomment import line with OptimizedImageDirective.astro
+// - set config.copy_assets = true
+// - set assets_hash_dir = true
+
+import ImageDirective from './ImageDirective.astro';
+//import ImageDirective from './OptimizedImageDirective.astro';
 import ButtonDirective from './ButtonDirective.astro'
 
 export interface Props {
@@ -14,16 +19,12 @@ const is_image = (node.name == "image")
 const is_button = (node.name == "button")
 const is_other = !(is_image || is_button)
 
-let asseturl = ""
-if(is_image){
-  asseturl = await relAssetToUrl(node.attributes.src, dirpath)
-}
 if(is_button){
   console.log(node)
 }
 ---
 {is_image &&
-  <ImageDirective src={asseturl} node={node} />
+  <ImageDirective node={node} dirpath={dirpath}/>
 }
 {is_button &&
   <ButtonDirective label={node.attributes.label} link={node.attributes.link} />

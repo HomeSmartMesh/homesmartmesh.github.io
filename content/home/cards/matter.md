@@ -1,6 +1,6 @@
 ---
+format: markdown_card
 title: Matter
-order: 1
 width: 300
 tags: [Frameworks]
 ---

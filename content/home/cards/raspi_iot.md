@@ -1,15 +1,14 @@
 ---
+format: markdown_card
 title: Raspi IoT
-order: 4
 width: 300
 tags: [Frameworks]
 ---
-{{< image src="/images/raspi_iot.png" height="150px" href="/docs/frameworks/raspi_iot/" >}}
 
-{{< my_button href="/docs/frameworks/raspi_iot/" text="Raspi IoT Doc" >}}
+:image[]{src=/images/raspi_iot.png alt="Raspi IoT" width=280}
+:button[]{label="Raspi IoT Doc" link=/docs/frameworks/raspi_iot/}
 
-Learning examples using as few dependencies as possible
 
-Sensors to MQTT to influx to Grafana.
-
-Multiple Python and Node.js standalone services
+- Learning examples using as few dependencies as possible
+- Sensors to MQTT to influx to Grafana.
+- Multiple Python and Node.js standalone services

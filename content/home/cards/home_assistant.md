@@ -1,9 +1,10 @@
 ---
+format: markdown_card
 title: Home Assistant
-order: 11
 width: 150
 tags: [Frameworks]
 ---
-{{< image src="/images/hassio.png" height=100 href="/docs/frameworks/home_assistant/">}}
-{{< button href="/docs/frameworks/home_assistant/" >}}Home Assistant{{</button>}}
+
+:image[]{src=/images/hassio.png alt="Home Assistant" height=180}
+:button[]{label="Home Assistant" link=/docs/frameworks/home_assistant/}
 
