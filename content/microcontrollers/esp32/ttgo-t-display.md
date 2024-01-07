@@ -3,10 +3,17 @@ title: "TTGO T-Display"
 description: "Small dev kit with O-LED display"
 date: 2020-12-25T00:00:00+09:00
 draft: false
-weight: 12
+order: 12
+image: /images/ttgo_t-display.png
+tags: [Board,Display]
+features:
+    - LCD ST7789V
+    - 1,14 Zoll
+    - 135x240
+    - "Charger : TP4054"
 ---
 
-{{< image src="/images/ttgo_t-display.png" >}}
+:image[]{src=/images/ttgo_t-display.png alt="TTGO T display" }
 
 ## Simple Example
 * [t-display_controller](https://github.com/ESP32Home/t-display_controller)

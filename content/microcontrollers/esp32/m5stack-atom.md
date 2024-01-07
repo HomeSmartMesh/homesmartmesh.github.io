@@ -1,11 +1,18 @@
 ---
 title: "M5 Atom Lite"
 description: "Smallest tiny ESP32 pico with button and RGB LED"
+order: 16
 date: 2021-03-13T00:00:00+09:00
 draft: false
-images: ["/images/esp32/M5-Atom-Lite.webp"]
-weight: 16
+image: /images/esp32/M5-Atom-Lite.webp
+tags: [Board]
+features:
+  - Tiny 24 x 24 x 10 mm
+  - User Button + Reset
+  - RGB Led SK6812
+  - IR Led
 ---
+
 # Overview
 {{<image src="/images/esp32/M5-Atom-Lite.webp" width="300" >}}
 

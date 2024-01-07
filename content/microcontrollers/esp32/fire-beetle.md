@@ -1,13 +1,20 @@
 ---
 title: "FireBeetle"
 description: "Low power design with ESP-WROOM-32 module with 10 uA deep sleep"
+order: 15
 date: 2021-02-27T00:00:00+09:00
 draft: false
-images: ["/images/esp32/firebeetle/3 Charging.jpg"]
-weight: 15
+image: /images/esp32/firebeetle_board.png
+tags: [Board,LowPower]
+features:
+  - 10 uA deep sleep current
+  - USB and external DC
+  - TP4056 Li-Ion battery charger
 ---
+
 # Overview
-{{<image src="/images/esp32/firebeetle_board.png" width="300" >}}
+
+:image[]{src="/images/esp32/firebeetle_board.png" width="300"}
 
 * 10 uA deep sleep current
 * USB and external DC battery power inputs (3.3V - 5V)

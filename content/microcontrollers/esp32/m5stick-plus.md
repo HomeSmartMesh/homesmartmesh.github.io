@@ -1,9 +1,18 @@
 ---
-title: "M5 Stick Plus"
+title: "M5 Stick C Plus"
 description: "Small ESP32 with housing and lots of sensors"
 date: 2020-12-26T00:00:00+09:00
-draft: false
-weight: 14
+order: 14
+image: /images/m5_stick_plus.png
+tags: [Board,Display]
+features:
+    - 6-Axis IMU
+    - IR transmitter
+    - Microphone
+    - RTC
+    - LCD (1.14 inch)
+    - Lipo Battery
+    - Passive Buzzer
 ---
 
 ![img](/images/m5_stick_plus.png)

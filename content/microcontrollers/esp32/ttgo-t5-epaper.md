@@ -1,10 +1,18 @@
 ---
 title: "TTGO T5-EPaper"
 description: "ESP32 with epaper display"
+order: 13
 date: 2020-12-25T00:00:00+09:00
 draft: false
-weight: 13
+image: /images/ttgo_t5-epaper.png
+tags: [Board,Display]
+features:
+    - GxGDEW029Z10
+    - 2,9 Zoll
+    - White / Black / Red
+    - 296x128
 ---
+
 ![img](/images/ttgo_t5-epaper.png)
 
 ## Simple example

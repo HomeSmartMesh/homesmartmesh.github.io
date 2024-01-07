@@ -1,9 +1,16 @@
 ---
 title: "Fisheye Cam OV3660"
 description: "ESP32 timer camera OV3660 with low power sleep. An Time lapse application sends images through MQTT to a raspberry pi image recorder"
+order: 11
 date: 2020-12-26T00:00:00+09:00
-images: ["/images/esp32/camera_lapse_app.png"]
-weight: 11
+image: /images/esp32/timer-cam-3mp.png
+tags: [Board,Camera,LowPower]
+features:
+    - 3 Mega Pixels OV3660
+    - Fisheye lens DFOV 120°
+    - Ultra low power, sleep current 2μA
+    - 270mAh battery
+    - PSRAM 8MB
 ---
 
 {{<image src="/images/esp32/timer-cam-3mp.png" width="300" >}}
