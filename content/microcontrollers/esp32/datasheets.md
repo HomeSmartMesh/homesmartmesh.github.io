@@ -2,8 +2,7 @@
 title: "Datasheets"
 description: "Official reference documents"
 date: 2020-12-25T00:00:00+09:00
-draft: false
-weight: 1
+order: 1
 ---
 
 ## ESP32
@@ -43,3 +42,16 @@ weight: 1
 ### S2 Technical Reference Manual
 * [TRM](https://www.espressif.com/sites/default/files/documentation/esp32-s2_technical_reference_manual_en.pdf)
 
+## ESP32-C3
+* [ESP32-C3 datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf)
+
+### Block Diagram
+
+![Block Diagram](./c3-block-diagram.webp)
+
+### Address Mapping structure
+
+![Address Mapping Structure](./c3-address-mapping.webp)
+
+### C3 Technical Reference Manual
+* [TRM](https://www.espressif.com/sites/default/files/documentation/esp32-c3_technical_reference_manual_en.pdf)
