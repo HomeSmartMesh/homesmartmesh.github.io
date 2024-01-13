@@ -1,18 +1,16 @@
 ---
-title : "Sound Processing"
+title : Sound Processing
 description: "Mastering real time sound capture processing and generation on embedded processors"
 date: 2021-01-31T00:00:00+00:00
-weight: 8
-bookToC: true
-images: ["/images/sound/web_py_loop.png"]
+order: 8
+image: "/images/sound/web_py_loop.png"
 ---
-{{<load-photoswipe >}}
 
 # web py loopback
 
-{{<icon_button text="repo" href="https://github.com/SoundHacking/web_py_loop" icon="github" >}}
+:button[]{label="repo" link="https://github.com/SoundHacking/web_py_loop" icon="github"}
 
-{{<image src="/images/sound/web_py_loop.png" >}}
+![Webpy logo](/images/sound/web_py_loop.png)
 
 * using `createScriptProcessor` which is to be deprecated
 * Note `MediaStreamTrackProcessor` is not supported yet as of 02 Apr 2021. [Sample demo](https://github.com/webrtc/samples/blob/gh-pages/src/content/insertable-streams/audio-processing/js/main.js) available
@@ -30,14 +28,14 @@ images: ["/images/sound/web_py_loop.png"]
 
 ## webRTC
 Official example 
-{{<icon_button text="peerconnection audio" href="https://github.com/webrtc/samples/tree/gh-pages/src/content/peerconnection/audio" icon="github" >}}
+:button[]{label="peerconnection audio" link="https://github.com/webrtc/samples/tree/gh-pages/src/content/peerconnection/audio" icon="github"}
 
 {{<gfigure src="/design/web_rtc.svg" width="300px">}}
 
 
 
 ## pystream
-{{<icon_button text="repo" href="https://github.com/SoundHacking/pystream" icon="github" >}}
+:button[]{label="repo" link="https://github.com/SoundHacking/pystream" icon="github" }
 
 {{<image src="/images/sound/python_process.png" >}}
 
@@ -55,7 +53,7 @@ Official example
 
 # see sound
 
-{{<icon_button text="repo" href="https://github.com/SoundHacking/see_sound/" icon="github" >}}
+:button[]{label="repo" link="https://github.com/SoundHacking/see_sound/" icon="github" }
 
 {{<image src="/images/sound/analyser.png" >}}
 
@@ -68,7 +66,7 @@ Official example
 
 # librosa test
 
-{{< new_button href="https://github.com/SoundHacking/librosa_demo/" text="github project" >}}
+{{< new_button link="https://github.com/SoundHacking/librosa_demo/" text="github project" >}}
 
 * Jupyter notebooks to showcase librosa functions
 
@@ -170,7 +168,7 @@ Example integration of cubemx with pio :
 
 # FAQ - Discussion
 If you need support, want to ask a question or suggest an idea, you can join the discussion on the forum
-{{<icon_button text="Home Smart Mesh - Discussions" href="https://github.com/HomeSmartMesh/raspi/discussions" icon="github" >}}
+:button[]{label="Home Smart Mesh - Discussions" link="https://github.com/HomeSmartMesh/raspi/discussions" icon="github" }
 
 {{<faq>}}
 What is the difference between a MediaStream and a MediaSource when used in a real time network ?

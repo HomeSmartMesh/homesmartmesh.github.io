@@ -1,8 +1,6 @@
 ---
-weight: 4
-bookFlatSection: true
-bookCollapseSection: false
-title: "nRF52"
+title: nRF52
+order: 4
 grid:
     slot: 300
     filters:
