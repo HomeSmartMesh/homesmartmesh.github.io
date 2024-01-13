@@ -1,0 +1,31 @@
+---
+import NotesDirective from "./NotesDirective.astro"
+import DetailsDirective from "./DetailsDirective.astro"
+export interface Props {
+  name: string; //note, tip, caution, danger
+  attributes: object;
+}
+
+const {name, attributes} = Astro.props as Props;
+const className = name.toLowerCase()
+let typeName = "other"
+if(["note","tip","caution","danger"].includes(className)){
+  typeName = "notes"
+}else if(className == "details"){
+  typeName = "details"
+}
+---
+{(typeName == "notes")&&
+  <NotesDirective name={name} attributes={attributes}>
+    <slot/>
+  </NotesDirective>
+}
+{(typeName == "details")&&
+  <DetailsDirective name={name} attributes={attributes}>
+    <slot/>
+  </DetailsDirective>
+}
+{(typeName == "other")&&
+  <p>{className}</p>
+  <slot/>
+}
