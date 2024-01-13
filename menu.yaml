@@ -1,21 +1,17 @@
 - label: Home
   link: /
+- label: Microcontrollers
+  link: /microcontrollers
+  autogenerate:
+    directory: microcontrollers
 - label: Frameworks
-  link: /frameworks/matter
+  link: /frameworks
   autogenerate:
     directory: frameworks
 - label: Protocols
   link: /protocols/thread
   autogenerate:
     directory: protocols
-- label: Boards
-  link: /boards/thingy53
-  autogenerate:
-    directory: boards
-- label: Microcontrollers
-  link: /microcontrollers
-  autogenerate:
-    directory: microcontrollers
 - label: 3D Printing
   link: /3d-printing
   autogenerate:
