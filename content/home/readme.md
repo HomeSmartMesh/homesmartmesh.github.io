@@ -10,37 +10,37 @@ images: ["/images/meta.png", "/images/thread_sensortag/concept.png", "/images/3d
 ```yaml cards
 - uid: cards.matter
   body: true
-  width: 300
+  width_rem: 20
 - uid: cards.ultra-wide-band
   body: true
-  width: 300
+  width_rem: 20
 - uid: cards.thread-sensortag
   body: true
-  width: 300
+  width_rem: 20
 - uid: cards.raspi-iot
   body: true
-  width: 300
+  width_rem: 20
 - uid: cards.esp32-boards
   body: true
-  width: 300
+  width_rem: 20
 - uid: cards.3d-printing
   body: true
-  width: 300
+  width_rem: 20
 - uid: cards.simple-mesh
   body: true
-  width: 300
+  width_rem: 20
 - uid: cards.thread
   body: true
-  width: 300
+  width_rem: 20
 - uid: cards.zigbee
   body: true
-  width: 300
+  width_rem: 20
 - uid: cards.smart-home-3d
   body: true
-  width: 600
+  width_rem: 40
 - uid: cards.home-assistant
   body: true
-  width: 300
+  width_rem: 20
 ```
 
 # Home Automation Mind Map

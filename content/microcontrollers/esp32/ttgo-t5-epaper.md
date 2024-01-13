@@ -3,7 +3,6 @@ title: "TTGO T5-EPaper"
 description: "ESP32 with epaper display"
 order: 13
 date: 2020-12-25T00:00:00+09:00
-draft: false
 image: /images/ttgo_t5-epaper.png
 tags: [Board,Display]
 features:

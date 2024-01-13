@@ -60,6 +60,17 @@ let hasTags = Object.hasOwn(data,"tags") && (data.tags.length > 0)
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    height:100%;
+}
+.content{
+    width:100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.bottom{
+    margin-top: auto;
+    width:100%;
 }
 .title{
     width:100%;
@@ -107,8 +118,5 @@ li{
     padding: 5px;
     border-radius: 5px;
     color: #aaa;
-}
-.bottom{
-    margin-top: auto;
 }
 </style>
