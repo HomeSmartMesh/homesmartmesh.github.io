@@ -43,7 +43,7 @@ image: /images/thread_sensortag/sensortag_v1.1.webp
 :button[]{ link="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/v1.1" label="tag v1.1" icon="github" }
 
 * gerber files
-:button[]{label="Gerber files v1.1" href="/data/manufacturing_v1.1.zip" icon="download" }
+:button[]{label="Gerber files v1.1" link="/data/manufacturing_v1.1.zip" icon="download" }
 
 ## Board
 
@@ -69,11 +69,11 @@ image: /images/thread_sensortag/sensortag_v1.1.webp
 * SWD pogo pins adapter
 * Pogo Pin P75-E2 Dia 1.3mm Length 16.5mm
 
-:button[]{label="STL Model" href="/models/thread4_lower.stl" icon="download" }
+:button[]{label="STL Model" link="/models/thread4_lower.stl" icon="download" }
 
 [Pogo pin adapter](/models/thread4_lower.glb)
 
-```yaml gallery
+```yaml
 dir: /images/thread_sensortag/swd-pogo
 ```
 
@@ -122,7 +122,7 @@ west build -b nrf52840_sensortag
 west flash
 ```
 
-{<details "default config">}
+:::details{summary="default config"}
 ```conf
 # Peripherals
 CONFIG_ADC=y
@@ -201,7 +201,7 @@ CONFIG_NET_IF_UNICAST_IPV6_ADDR_COUNT=3
 CONFIG_NET_IF_MCAST_IPV6_ADDR_COUNT=4
 CONFIG_NET_MAX_CONTEXTS=10
 ```
-{</details>}
+:::
 
 {<details "build log">}
 ```bash
@@ -610,7 +610,7 @@ Memory region         Used Size  Region Size  %age Used
 
 # FAQ - Discussion
 * If you need support, want to ask a question or suggest a different answer, you can join the discussion on the Github forum
-:button[]{label="Home Smart Mesh - sdk-hsm-sensortag" href="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/discussions" icon="github" }
+:button[]{label="Home Smart Mesh - sdk-hsm-sensortag" link="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/discussions" icon="github" }
 
 {<faq>}
 Does this Thread SensorTag support MQTT ?
