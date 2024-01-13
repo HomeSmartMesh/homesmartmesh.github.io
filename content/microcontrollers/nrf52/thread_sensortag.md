@@ -1,21 +1,17 @@
 ---
-title: "Thread SensorTag"
+title: Thread SensorTag
+order: 1
 description: "A Low power SensorTag with High quality measures of light, Temperature, Humidity and Pressure. Based on nRF52840 which supports Thread and other protocols"
 date: 2021-02-07T08:48:57+00:00
 lastmod: 2021-05-14T08:00:00+00:00
-images: ["/images/thread_sensortag/sensortag_v1.1.webp"]
-weight: 1
-toc: true
+image: /images/thread_sensortag/sensortag_v1.1.webp
 ---
-{{<load-svg-pan-zoom>}}
-{{<load-model_viewer>}}
-{{<load-photoswipe >}}
 
-{{<icon_button relref="/docs/networks/thread/" text="Networks / Thread" >}}
-{{<icon_button relref="/docs/frameworks/chip/" text="Frameworks / CHIP" >}}
+:button[]{link="/docs/networks/thread/" label="Networks / Thread" }
+:button[]{link="/docs/frameworks/chip/" label="Frameworks / CHIP" }
 
 # Overview
-{{<image src="/images/thread_sensortag/sensortag_v1.1.webp" width="600px" >}}
+![Overview](/images/thread_sensortag/sensortag_v1.1.webp)
 
 * `nRF52840` on a [MS88SF2](?svg=nrf52-sensor-tag&text=MS88SF2) module.
 * i²C bus scl `P1.13` and sda `P1.15`
@@ -27,80 +23,80 @@ toc: true
 # Hardware
 ## Schematics
 
-{{<svg-pan-zoom "/images/thread_sensortag/nrf52-sensor-tag.svg" "white" >}}
+![Scematics](/images/thread_sensortag/nrf52-sensor-tag.svg)
 
 * version 1.1
 * update from v1.0 added RGB LED
 
-{{<icon_button href="https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52840" text="nRF52840" icon="new" >}}
+:button[]{link="https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52840" label="nRF52840" icon="new" }
 
-{{<icon_button href="https://www.minew.com/products/nrf52840-module-ms88sf2.html" text="MS88SF2" icon="new" >}}
+:button[]{link="https://www.minew.com/products/nrf52840-module-ms88sf2.html" label="MS88SF2" icon="new" }
 
-{{<icon_button href="https://www.mouser.com/datasheet/2/418/5/NG_DS_MS8607-02BA01_B3-1134999.pdf" text="MS86072" icon="new" >}}
+:button[]{link="https://www.mouser.com/datasheet/2/418/5/NG_DS_MS8607-02BA01_B3-1134999.pdf" label="MS86072" icon="new" }
 
-{{<icon_button href="https://www.vishay.com/docs/84366/veml6030.pdf" text="VEML6030 DS" icon="new" >}}
-{{<icon_button href="https://www.vishay.com/docs/84367/designingveml6030.pdf" text="VEML6030 AN" icon="new" >}}
+:button[]{link="https://www.vishay.com/docs/84366/veml6030.pdf" label="VEML6030 DS" icon="new" }
+:button[]{link="https://www.vishay.com/docs/84367/designingveml6030.pdf" label="VEML6030 AN" icon="new" }
 
 ## Manufacturing
 * v 1.1 15.04.2021
 * design files by [Mirko Informaticore](https://github.com/Informaticore)
-{{<icon_button href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/v1.1" text="tag v1.1" icon="github" >}}
+:button[]{ link="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/v1.1" label="tag v1.1" icon="github" }
 
 * gerber files
-{{<icon_button text="Gerber files v1.1" href="/data/manufacturing_v1.1.zip" icon="download" >}}
+:button[]{label="Gerber files v1.1" href="/data/manufacturing_v1.1.zip" icon="download" }
 
 ## Board
 
-{{<image src="/images/thread_sensortag/board_top_v1.1.webp" width="500px" >}}
+![Board](/images/thread_sensortag/board_top_v1.1.webp)
 
 ## Produced versions
 * v 1.1 15.04.2021
 
-{{<icon_button href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/v1.1" text="tag v1.1" icon="github" >}}
+:button[]{ link="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/v1.1" label="tag v1.1" icon="github" }
 
-{{<gfigure src="/images/thread_sensortag/prototype_top_v1.1.webp" width="200px" >}}
+![Prototype top](/images/thread_sensortag/prototype_top_v1.1.webp)
 
-{{<gfigure src="/images/thread_sensortag/prototype_bottom_v1.1.webp" width="200px" >}}
+![Prototype bottom](/images/thread_sensortag/prototype_bottom_v1.1.webp)
 
 * v 1.0 10.02.2021
 
-{{<icon_button href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/v1.0" text="tag v1.0" icon="github" >}}
+:button[]{ link="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/v1.0" label="tag v1.0" icon="github" }
 
-{{<gfigure src="/images/thread_sensortag/prototype_top.webp" width="200px" >}}
-
-{{<gfigure src="/images/thread_sensortag/prototype_bottom.webp" width="200px" >}}
+![Prototype top](/images/thread_sensortag/prototype_top.webp)
+![Prototype bottom](/images/thread_sensortag/prototype_bottom.webp)
 
 ## Pogo pins adapter
 * SWD pogo pins adapter
 * Pogo Pin P75-E2 Dia 1.3mm Length 16.5mm
 
-{{<icon_button text="STL Model" href="/models/thread4_lower.stl" icon="download" >}}
-{{< model_viewer "/models/thread4_lower.glb" "400" >}}
-{{< gallery dir="/images/thread_sensortag/swd-pogo" />}}
+:button[]{label="STL Model" href="/models/thread4_lower.stl" icon="download" }
 
+[Pogo pin adapter](/models/thread4_lower.glb)
+
+```yaml gallery
+dir: /images/thread_sensortag/swd-pogo
+```
 
 # Software
-{{<image src="/images/thread_sensortag/software.webp" width="600px" >}}
+![Software](/images/thread_sensortag/software.webp)
 
 ## Openthread Dongle
 This section includes instructions how to create an openthread dongle called `Radio Co-Processor` (RCP), that needs to be flashed then attached to the raspberry pi USB port.
  
-{{<button relref="/docs/networks/thread#radio-co-processor-rcp">}}nRF52840-usb RCP{{</button>}}
+:button[]{ link="/docs/networks/thread#radio-co-processor-rcp" label="nRF52840-usb RCP"}
 ## Raspberry Pi Setup
 This section includes steps to install all needed services to run the SensorTag udp-v6 broadcast to mqtt, influxdb and grafana this also inlcudes the boarder router setup as intermediate step.
  
-{{<button relref="/docs/frameworks/raspi_iot#raspberry-pi-setup">}}raspberry pi setup{{</button>}}
-
-
+:button[]{ link="/docs/frameworks/raspi_iot#raspberry-pi-setup" label="raspberry pi setup"}
 
 ## Zephyr Tag Firmware
-{{<icon_button href="https://github.com/HomeSmartMesh/sdk-hsm-sensortag" text="Zephyr nRF-Connect SensorTag repo" icon="github" >}}
+:button[]{ link="https://github.com/HomeSmartMesh/sdk-hsm-sensortag" label="Zephyr nRF-Connect SensorTag repo" icon="github" }
 
 * The development environment is based on [zephyr and west](http://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/zephyr/getting_started/index.html#getting-started)
 
-{{<hint warning>}}
+{hint warning}
 make sure there is no environment variable `ZEPHYR_BASE` in order to use the local zephyr version
-{{</hint>}}
+{/hint}
 
 * create directory structure and fetch the sdk :
 ```bash
@@ -116,9 +112,9 @@ west update
 The first presented SDK sample is the overall application that broadcasts all sensors measures, followed by a list of basic applications with minimal code for each driver and sensor separately
 
 ### tag_sensors_broadcast
-{{<icon_button href="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/tree/main/samples/openthread_tag_sensors" text="tag sensors broadcast" icon="github" >}}
+:button[]{ link="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/tree/main/samples/openthread_tag_sensors" label="tag sensors broadcast" icon="github" }
 
-{{<gfigure src="/images/thread_sensortag/application.png" >}}
+![tag sensor broadcast](/images/thread_sensortag/application.png)
 
 ```bash
 cd hsm/samples/tag_sensors_broadcast
@@ -126,7 +122,7 @@ west build -b nrf52840_sensortag
 west flash
 ```
 
-{{<details "default config">}}
+{<details "default config">}
 ```conf
 # Peripherals
 CONFIG_ADC=y
@@ -205,9 +201,9 @@ CONFIG_NET_IF_UNICAST_IPV6_ADDR_COUNT=3
 CONFIG_NET_IF_MCAST_IPV6_ADDR_COUNT=4
 CONFIG_NET_MAX_CONTEXTS=10
 ```
-{{</details>}}
+{</details>}
 
-{{<details "build log">}}
+{<details "build log">}
 ```bash
 D:\Dev\nrf52\hsm\hsm\samples\tag_sensors_broadcast>west build -b nrf52840_sensortag -- -DCONF_FILE=prj.conf
 -- west build: generating a build system
@@ -228,9 +224,9 @@ Memory region         Used Size  Region Size  %age Used
             SRAM:       71200 B       256 KB     27.16%
         IDT_LIST:          0 GB         2 KB      0.00%
 ```
-{{</details>}}
+{</details>}
 
-{{<details "run log">}}
+{<details "run log">}
 ```log
 *** Booting Zephyr OS build zephyr-v2.5.0-2187-g757cd12e6602  ***
 rtt:~$ rtt:~$ [00:00:00.264,617] <inf> fs_nvs: 8 Sectors of 4096 bytes
@@ -264,33 +260,31 @@ rtt:~$ [00:00:23.631,896] <inf> battery: battery_get_mv() raw = 3460
 rtt:~$ rtt:~$ thread_tags/7009D837C7BB557A{"alive":2,"voltage":3.041,"light":10.097,"temperature":25.16,"humidity":41.95,"pressure":951.01}
 [00:00:25.298,156] <inf> main: sleeping 10 sec
 ```
-{{</details>}}
+{</details>}
 
 Low power performance :
 
-{{<gfigure src="/images/thread_sensortag/deep_sleep_current.png" >}}
+![Seep Sleep Current](/images/thread_sensortag/deep_sleep_current.png)
 
-{{<table "table table-striped table-bordered">}}
 Period | Average Current
 -----------|-----
 deep sleep | 3.19 uA
 sensors acquisition | 54 uA
 wakeup cycle 1.7 sec including RF | 125 uA
-{{</table>}}
 
 * it's possible to listen to the ipv6 thread udp packets using `socat`
 ```bash
 socat UDP6-LISTEN:4242,fork STDOUT
 ```
-{{<gfigure src="/images/thread_sensortag/socat.png" >}}
+![Socat](/images/thread_sensortag/socat.png)
 
 * This python script captures Ipv6 UDP packets and forwards their json payload to a configured MQTT broker
 
-{{<icon_button href="https://github.com/HomeSmartMesh/raspi/blob/master/py/thread_tags/thread_tags.py" text="python json string to MQTT" icon="github" >}}
+:button[]{ link="https://github.com/HomeSmartMesh/raspi/blob/master/py/thread_tags/thread_tags.py" label="python json string to MQTT" icon="github" }
 
 * the config file of the script allows to provide the MQTT broquer and to replace the device id with a friendly name, which is important not to hardcode the id in any source and to avoid firmware updates when moving the sensors from one room to another.
 
-{{<details "python script config">}}
+{<details "python script config">}
 ```json
 {  
     "mqtt":{
@@ -312,12 +306,12 @@ socat UDP6-LISTEN:4242,fork STDOUT
     }
 }
 ```
-{{</details>}}
+{</details>}
 
 
 and [another raspi python scripts](https://github.com/HomeSmartMesh/raspi/tree/master/py/influx) forwards them to influxDB to end up in Grafana, which can also [run as a service](https://github.com/HomeSmartMesh/raspi/blob/92f549866482c3a65e2b738ad909ef740f6919e5/run_services.sh#L72).
 
-{{<gfigure src="/images/thread_sensortag/grafana.png" width="200px">}}
+![Grafana](/images/thread_sensortag/grafana.png)
 
 ### device treee drivers
 the driver sensors are declared in the custom board device treee source `nrf52840_sensortag.dts`.
@@ -341,7 +335,7 @@ the driver sensors are declared in the custom board device treee source `nrf5284
 	};
 };
 ```
-{{<hint warning>}}The MS8607 uses x2 i2c adresses `0x40` and `0x76`, which makes it require two separate drivers to fit in the Zephyr dts declaration. For simplicity purpose, the vendor driver has been reused with minimal adaptations for Zephyr. Only the adress `0x40` is declared in the dts. That loses the multi instance feature as the adress `0x76` is hardcoded in the driver, the sensor anyway does not have any i2c multi instance configuration option.{{</hint>}}
+{<hint warning>}The MS8607 uses x2 i2c adresses `0x40` and `0x76`, which makes it require two separate drivers to fit in the Zephyr dts declaration. For simplicity purpose, the vendor driver has been reused with minimal adaptations for Zephyr. Only the adress `0x40` is declared in the dts. That loses the multi instance feature as the adress `0x76` is hardcoded in the driver, the sensor anyway does not have any i2c multi instance configuration option.{</hint>}
 
 ### tag_sensor_veml6030
 
@@ -352,10 +346,10 @@ west build -b nrf52840_sensortag -- -DCONF_FILE=prj-shell.conf
 west build -b nrf52840_sensortag -- -DCONF_FILE=prj-log.conf
 west flash
 ```
-{{<icon_button href="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/tree/main/samples/tag_sensor_veml6030" text="tag sensor veml6030" icon="github" >}}
+:button[]{ link="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/tree/main/samples/tag_sensor_veml6030" label="tag sensor veml6030" icon="github" }
 
 
-{{<details "default config">}}
+{<details "default config">}
 ```conf
 CONFIG_GPIO=y
 CONFIG_SERIAL=n
@@ -367,9 +361,9 @@ CONFIG_VEML6030=y
 CONFIG_NEWLIB_LIBC=y
 CONFIG_NEWLIB_LIBC_FLOAT_PRINTF=y
 ```
-{{</details>}}
+{</details>}
 
-{{<details "build log">}}
+{<details "build log">}
 ```bash
 -- west build: generating a build system
 Including boilerplate (Zephyr base (cached)): D:/Dev/nrf52/hsm/zephyr/cmake/app/boilerplate.cmake
@@ -381,11 +375,11 @@ Including boilerplate (Zephyr base (cached)): D:/Dev/nrf52/hsm/zephyr/cmake/app/
 -- Found toolchain: gnuarmemb (D:/tools/gnu_arm_embedded/10 2020-q4-major)
 -- Found BOARD.dts: D:/Dev/nrf52/hsm/hsm/boards/arm/nrf52840_sensortag/nrf52840_sensortag.dts
 ```
-{{</details>}}
+{</details>}
 
 running the initial versions on ambiant light, hand cover then flash light
 
-{{<details "run log preliminary">}}
+{<details "run log preliminary">}
 ```log
 [00:00:00.325,683] <inf> VEML6030: veml6030_init() power on
 [00:00:00.326,202] <inf> VEML6030: i2c_burst_write(0x0000) success
@@ -425,11 +419,11 @@ Found device "VEML6030", getting sensor data
 
 [00:01:11.836,944] <inf> main: sensor: lum reading: 1274
 ```
-{{</details>}}
+{</details>}
 
 running with auto mode
 
-{{<details "run log auto">}}
+{<details "run log auto">}
 ```log
 [00:00:00.324,188] <inf> VEML6030: veml6030_init()
 *** Booting Zephyr OS build zephyr-v2.5.0-2187-g757cd12e6602  ***
@@ -461,12 +455,12 @@ auto_measure>new params => gain = 2.000000 ; it = 800
 =====> light 4.478 lux
 =====> light 3.139 lux
 ```
-{{</details>}}
+{</details>}
 
 * The previous auto mode has a disadvantage, when saturating, the best guess is still biased as it used a wrong saturated measure.
 * The following example makes a special case of a saturated measure and directly jumps to the highest mode which has the lowes integration time anyway so only 25 ms are spent, after which the sample is sure not to be saturated and either has a chance to already be in optimal mode (if it is the highest) or guqrantees that the next selected mode will be the optimal.
 
-{{<details "run log auto sat">}}
+{<details "run log auto sat"}
 ```log
 [00:00:00.325,836] <inf> main: VEML6030 light sensor application
 =====> light 70.247 lux
@@ -484,7 +478,7 @@ auto_measure>new params => gain = 2.000000 ; it = 800
 =====> light 68.566 lux
 =====> light 68.465 lux
 ```
-{{</details>}}
+{</details}
 
 
 ### tag_sensor_ms8607
@@ -495,10 +489,10 @@ west build -b nrf52840_sensortag -t guiconfig
 west build -b nrf52840_sensortag -- -DCONF_FILE=prj.conf
 west flash
 ```
-{{<icon_button href="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/tree/main/samples/tag_sensor_ms8607" text="tag sensor ms8607" icon="github" >}}
+:button[]{ link="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/tree/main/samples/tag_sensor_ms8607" label="tag sensor ms8607" icon="github" }
 
 
-{{<details "default config">}}
+{<details "default config">}
 ```conf
 CONFIG_GPIO=y
 CONFIG_SERIAL=n
@@ -513,9 +507,9 @@ CONFIG_NEWLIB_LIBC=y
 CONFIG_NEWLIB_LIBC_FLOAT_PRINTF=y
 
 ```
-{{</details>}}
+{</details>}
 
-{{<details "build log">}}
+{<details "build log">}
 ```bash
 Including boilerplate (Zephyr base): D:/Dev/nrf52/hsm/zephyr/cmake/app/boilerplate.cmake
 -- Application: D:/Dev/nrf52/hsm/hsm/samples/tag_sensor_ms8607
@@ -534,9 +528,9 @@ Memory region         Used Size  Region Size  %age Used
             SRAM:        8544 B       256 KB      3.26%
         IDT_LIST:          0 GB         2 KB      0.00%
 ```
-{{</details>}}
+{</details>}
 
-{{<details "run log">}}
+{<details "run log">}
 ```log
 *** Booting Zephyr OS build zephyr-v2.5.0-2187-g757cd12e6602  ***
 
@@ -553,7 +547,7 @@ ms8607> t=23.16 °  p=963.69 mbar  h=72.36 %RH
 ms8607> t=22.67 °  p=963.63 mbar  h=77.52 %RH
 ms8607> t=22.65 °  p=963.55 mbar  h=53.33 %RH
 ```
-{{</details>}}
+{</details>}
 
 ### tag_battery
 
@@ -563,10 +557,10 @@ west build -b nrf52840_sensortag -t guiconfig
 west build -b nrf52840_sensortag -- -DCONF_FILE=prj.conf
 west flash
 ```
-{{<icon_button href="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/tree/main/samples/tag_battery" text="tag battery" icon="github" >}}
+:button[]{ link="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/tree/main/samples/tag_battery" label="tag battery" icon="github" }
 
 
-{{<details "default config">}}
+{<details "default config">}
 ```conf
 CONFIG_GPIO=y
 CONFIG_SERIAL=n
@@ -577,9 +571,9 @@ CONFIG_NEWLIB_LIBC=y
 CONFIG_NEWLIB_LIBC_FLOAT_PRINTF=y
 
 ```
-{{</details>}}
+{</details>}
 
-{{<details "build log">}}
+{<details "build log">}
 ```bash
 Including boilerplate (Zephyr base (cached)): D:/Dev/nrf52/hsm/zephyr/cmake/app/boilerplate.cmake
 -- Application: D:/Dev/nrf52/hsm/hsm/samples/tag_battery
@@ -597,9 +591,9 @@ Memory region         Used Size  Region Size  %age Used
             SRAM:        8544 B       256 KB      3.26%
         IDT_LIST:          0 GB         2 KB      0.00%
 ```
-{{</details>}}
+{</details>}
 
-{{<details "run log">}}
+{<details "run log">}
 ```log
 *** Booting Zephyr OS build zephyr-v2.5.0-2187-g757cd12e6602  ***
 
@@ -612,13 +606,13 @@ Memory region         Used Size  Region Size  %age Used
 [00:00:05.426,086] <inf> battery: battery_get_mv() raw = 3768
 [00:00:05.426,116] <inf> main: battery> Voltage = 3311 mV
 ```
-{{</details>}}
+{</details>}
 
 # FAQ - Discussion
 * If you need support, want to ask a question or suggest a different answer, you can join the discussion on the Github forum
-{{<icon_button text="Home Smart Mesh - sdk-hsm-sensortag" href="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/discussions" icon="github" >}}
+:button[]{label="Home Smart Mesh - sdk-hsm-sensortag" href="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/discussions" icon="github" }
 
-{{<faq>}}
+{<faq>}
 Does this Thread SensorTag support MQTT ?
 <--->
 A first firmware was tested with MQTT-SN [MQTT Sensors Node](/docs/networks/thread/#mqtt-sensors-node), but given that it used the nRF SDK and not Zephyr, development was discontinued. As alternative a simple udp protocol with a python scripts can fulfill the broadcast function from openthread to an MQTT broker details in the [udp broadcast](/docs/microcontrollers/nrf52/thread_sensortag/#tag_sensors_broadcast) example.
@@ -635,6 +629,6 @@ Can this firmware be used on nRF51 ? which families are supported ?
 <--->
 No, Thread is relaying on the RF MAC layer 802.15.4 which is unfortunately only supported by nRF5340, nRF52840, nRF52833, nRF52820, nRF52811 more details on the nordic [Thread](https://www.nordicsemi.com/Products/Thread) page.
 Note that this application is developed for the nRF family but openthread is supported on other chips as well e.g. TI, NXP,... 
-{{</faq>}}
+{</faq>}
 
 
