@@ -6,5 +6,5 @@ tags: [Frameworks]
 ---
 
 :image[]{src=/images/hassio.png alt="Home Assistant" height=180}
-:button[]{label="Home Assistant" link=/docs/frameworks/home_assistant/}
+:button[]{label="Home Assistant" link=/frameworks/home-assistant/}
 

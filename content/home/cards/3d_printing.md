@@ -7,7 +7,7 @@ tags: []
 ---
 
 :image[]{src=/images/3dprinting/3dmodels.png alt="" width=280}
-:button[]{label="3D Printing" link=/docs/3dprinting/}
+:button[]{label="3D Printing" link=/3d-printing}
 
 3D Models for Smart Home, electronics and house utilities
 

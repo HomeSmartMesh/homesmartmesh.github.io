@@ -26,8 +26,7 @@ images: ["/images/meta.png", "/images/thread_sensortag/concept.png", "/images/3d
 - uid: cards.3d-printing
   body: true
   width_rem: 20
-- uid: cards.simple-mesh
-  body: true
+- uid: protocols.simple-mesh
   width_rem: 20
 - uid: cards.thread
   body: true

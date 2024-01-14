@@ -6,7 +6,7 @@ tags: [Frameworks]
 ---
 
 :image[]{src=/images/raspi_iot.png alt="Raspi IoT" width=280}
-:button[]{label="Raspi IoT Doc" link=/docs/frameworks/raspi_iot/}
+:button[]{label="Raspi IoT Doc" link=/frameworks/raspi_iot/}
 
 
 - Learning examples using as few dependencies as possible

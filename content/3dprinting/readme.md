@@ -1,9 +1,10 @@
 ---
-title : "3D Printing"
-description: "3D Printing objects"
+title : 3D Printing
+description: 3D Models for Smart Home, electronics and house utilities
 date: 2021-01-17T00:00:00+00:00
 order: 9
 toc: false
+image: /images/3dprinting/3dmodels.png
 ---
 
 # 3D Models

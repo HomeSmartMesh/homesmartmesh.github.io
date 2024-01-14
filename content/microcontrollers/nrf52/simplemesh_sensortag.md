@@ -1,14 +1,11 @@
 ---
-title: "Simple Mesh SensorTag"
+title: Simple Mesh SensorTag
 description: "A Sensor tag to monitor Light brightness with MAX44009, Temperature, Humidity and Pressure with BME280. The SoC is an nRF52832 that communicates through a Simple Mesh Framework"
-images: ["/images/simplemesh_sensortag.png"]
+image: "/images/simplemesh_sensortag.png"
 date: 2021-02-14T08:00:00+00:00
 lastmod: 2021-02-14T08:00:00+00:00
-weight: 3
-toc: true
+order: 3
 ---
-{{<load-svg-pan-zoom>}}
-{{<load-photoswipe >}}
 
 {{<icon_button relref="/docs/networks/nrf/" text="Networks / Simple Mesh" >}}
 {{<icon_button relref="/docs/frameworks/raspi_iot/" text="Frameworks / Raspi IoT" >}}

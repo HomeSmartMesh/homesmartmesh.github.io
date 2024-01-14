@@ -6,7 +6,7 @@ tags: [Frameworks]
 ---
 :image[]{src=/images/matter/overview.png alt="Matter" width=280}
 
-:button[]{label="Matter Protocol" link=/docs/frameworks/matter/}
+:button[]{label="Matter Protocol" link=/frameworks/matter/}
 
 - Multiple networks supported (Thread, BT, Wifi)
 - Application "Advanced ZCL" over IP
