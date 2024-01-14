@@ -14,7 +14,7 @@ features:
 ---
 
 # Overview
-{{<image src="/images/esp32/M5-Atom-Lite.webp" width="300" >}}
+![M5 Atom Lite](/images/esp32/M5-Atom-Lite.webp)
 
 * Tiny 24 x 24 x 10 mm
 * User Button + Reset
@@ -22,29 +22,27 @@ features:
 * IR Led
 
 ## Pinout
-{{<image src="/images/esp32/M5-Atom-pinout.webp" width="300" >}}
-
+:image[]{alt="M5 Atom pinout" src=/images/esp32/M5-Atom-pinout.webp width=600}
 ## Links
-{{<icon_button text="Product Page" href="https://docs.m5stack.com/#/en/core/atom_lite" icon="new">}}
+:button[]{label="Product Page" link="https://docs.m5stack.com/#/en/core/atom_lite" icon="new"}
 
 ## schematics
-{{< load-photoswipe >}}
-{{<gfigure alt="Atom Schematics" src="/images/esp32/ATOM_LITE_SIMPLE_CIRCUT_20200514.webp">}}
+:image[]{alt="Atom Schematics" src=/images/esp32/ATOM_LITE_SIMPLE_CIRCUT_20200514.webp width="800"}
 
 # Application - Serial to MQTT
 * The serial to MQTT App creates a `request` and `response` topics that will propagate through a second Serial interface
 
-{{<image src="/images/esp32/atom-serial-mqtt.png" >}}
+![Atom serial MQTT](/images/esp32/atom-serial-mqtt.png)
 
 * Although the board is available on `platform-espressif32` it was not avialable on platformio release as of Today, therefore the board is stored locally.
-{{<icon_button href="https://github.com/platformio/platform-espressif32/blob/develop/boards/m5stack-atom.json" text="board on platform-espressif32" icon="github">}}
+:button[]{link=https://github.com/platformio/platform-espressif32/blob/develop/boards/m5stack-atom.json label="board on platform-espressif32" icon="github"}
 
 Application repo
 
-{{<icon_button href="https://github.com/ESP32Home/mqtt_serial" text="ESP32 Program Github Repo" icon="github">}}
+:button[]{link=https://github.com/ESP32Home/mqtt_serial label="ESP32 Program Github Repo" icon="github"}
 
 ## Application Details
-{{<details "main.cpp" >}}
+:::details{summary="main.cpp"}
 ```c++
 #include <Arduino.h>
 #include <ArduinoJson.h>
@@ -115,10 +113,10 @@ void loop() {
   }
 }
 ```
-{{</details>}}
+:::
 
 
-{{<details "Build info...">}}
+:::details{summary="Build info..."}
 ```bash
 PACKAGES:
  - framework-arduinoespressif32 3.10005.210308 (1.0.5)
@@ -134,9 +132,9 @@ Dependency Graph
 |-- <FastLED> 3.4.0
 |-- <WiFi> 1.0
 ```
-{{</details>}}
+:::
 
-{{< details "Platformio ini file ..." >}}
+:::details{summary="Platformio ini file ..."}
 ```ini
 [env]
 board = m5stack-atom
@@ -151,4 +149,4 @@ lib_ldf_mode = deep+
 platform = espressif32
 monitor_speed = 115200
 ```
-{{< /details >}}
+:::
