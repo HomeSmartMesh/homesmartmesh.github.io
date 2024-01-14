@@ -1,6 +1,6 @@
 ---
-title: "Fisheye Cam OV3660"
-description: "ESP32 timer camera OV3660 with low power sleep. An Time lapse application sends images through MQTT to a raspberry pi image recorder"
+title: Fisheye Cam OV3660
+description: ESP32 timer camera OV3660 with low power sleep. An Time lapse application sends images through MQTT to a raspberry pi image recorder
 order: 11
 date: 2020-12-26T00:00:00+09:00
 image: /images/esp32/timer-cam-3mp.png
@@ -13,7 +13,7 @@ features:
     - PSRAM 8MB
 ---
 
-{{<image src="/images/esp32/timer-cam-3mp.png" width="300" >}}
+![Timer Cam 3MP](/images/esp32/timer-cam-3mp.png)
 
 * 3 Mega Pixels OV3660
 * Fisheye lens DFOV 120°
@@ -22,12 +22,12 @@ features:
 * PSRAM 8MB
 
 ## Links
-{{<icon_button text="Fisheye Timer camera $20" href="https://m5stack.com/collections/m5-unit/products/esp32-psram-timer-camera-fisheye-ov3660" icon="new">}}
+:button[]{label="Fisheye Timer camera $20" link="https://m5stack.com/collections/m5-unit/products/esp32-psram-timer-camera-fisheye-ov3660" icon="new"}
 
 
-{{<icon_button text="Schematics - ESP32_SUBSYS" href="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/schematic/TimerCAM/TimerCAM_A1-ESP32_SUBSYS.pdf" icon="new">}}
+:button[]{label="Schematics - ESP32_SUBSYS" link="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/schematic/TimerCAM/TimerCAM_A1-ESP32_SUBSYS.pdf" icon="new"}
 
-{{<icon_button text="Schematics - PMS_UART" href="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/schematic/TimerCAM/TimerCAM_A2-PMS_UART.pdf" icon="new">}}
+:button[]{label="Schematics - PMS_UART" link="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/schematic/TimerCAM/TimerCAM_A2-PMS_UART.pdf" icon="new"}
 
 ## Platformio porting
 ### board definition
@@ -44,7 +44,7 @@ features:
 * [m5stack/Arduino wakeup example](https://github.com/m5stack/TimerCam-arduino/tree/master/examples/wakeup)
 * [sep32home/Platformio wakeup example](https://github.com/ESP32Home/timercam_wakeup)
 
-{{< details "Build info" "..." >}}
+:::details{summary="Build info ..."}
 ```log
 PACKAGES:
  - framework-arduinoespressif32 0.0.0+sha.b05bdf6
@@ -53,7 +53,7 @@ PACKAGES:
 Dependency Graph
 |-- <Timer-CAM> 0.0.1
 ```
-{{< /details >}}
+:::
 
 
 ### webcam
@@ -61,7 +61,7 @@ Dependency Graph
 * [esp32home/Platformio webcam example](https://github.com/ESP32Home/timercam_webcam)
 
 
-{{< details "Build info" "..." >}}
+:::details{summary="Build info ..."}
 Note `app_httpd` is part of the `Timer-CAM` lib
 ```log
 PACKAGES:
@@ -73,19 +73,19 @@ Dependency Graph
 |-- <Timer-CAM> 0.0.1   
 |-- <WiFi> 1.0
 ```
-{{< /details >}}
+:::
 
 ### mqtt timer cam
 
-{{<image src="/images/esp32/camera_lapse_app.png" >}}
+![Camera Lapse App](/images/esp32/camera_lapse_app.png)
 
 
-{{< new_button href="https://github.com/ESP32Home/timercam_mqtt" text="ESP32 Program Github Repo" >}}
+:button[]{link="https://github.com/ESP32Home/timercam_mqtt" label="ESP32 Program Github Repo" }
 
-{{< new_button href="https://github.com/HomeSmartMesh/raspi/tree/master/js/camera_lapse" text="Node.js record service Github Repo" >}}
+:button[]{link="https://github.com/HomeSmartMesh/raspi/tree/master/js/camera_lapse" label="Node.js record service Github Repo" }
 
 
-{{< details "Json Config ..." >}}
+:::details{summary="Json Conf ..."}
 ```json
 {
     "mqtt" : {
@@ -103,10 +103,10 @@ Dependency Graph
     }
 }
 ```
-{{< /details >}}
+:::
 
 
-{{< details "Platformio ini file ..." >}}
+:::details{summary="Platformio ini fi ..."}
 ```ini
 [env]
 board = m5stack-timer-cam
@@ -126,7 +126,7 @@ platform_packages =
 ```
 {{< /details >}}
 
-{{< details "Build info" "..." >}}
+:::details{summary="Build info ..."}
 ```ini
 PACKAGES:
  - framework-arduinoespressif32 0.0.0+sha.b05bdf6
@@ -145,6 +145,4 @@ Dependency Graph
 |-- <SPIFFS> 1.0
 |   |-- <FS> 1.0
 ```
-{{< /details >}}
-
-
+:::

@@ -13,7 +13,7 @@ features:
     - "Charger : TP4054"
 ---
 
-:image[]{src=/images/ttgo_t-display.png alt="TTGO T display" }
+![TTGO T display](/images/ttgo_t-display.png)
 
 ## Simple Example
 * [t-display_controller](https://github.com/ESP32Home/t-display_controller)
@@ -29,7 +29,7 @@ lib_deps =
     https://github.com/ESP32Home/GfxUi.git#v1.0.1
 ```
 ### Example Code
-{{< details "click to expand the example code..." >}}
+:::details{summary="click to expand the example code..."}
 ```c++
 #include <Arduino.h>
 #include <TFT_eSPI.h>
@@ -61,10 +61,13 @@ void loop()
 
 }
 ```
-{{</details>}}
+:::
+
 ## 3D printed case
-{{< image src="/images/3dprinting/esp32_remote.png" >}}
-{{< button relref="/docs/3dprinting/esp32_remote">}} STL Model for 3D printing {{</button>}}
+![ESP32 Remote](/images/3dprinting/esp32_remote.png)
+
+:button[]{link=/docs/3dprinting/esp32_remote label="STL Model for 3D printing"}
+
 ## Display
 * IPS ST7789V
 * 1,14 Zoll
@@ -76,11 +79,12 @@ void loop()
 ## Applications
 ### Thermostat control
 
-{{< image src="/images/esp32/display-control-app-all info.png"  width=500 >}}
-{{< image src="/images/esp32/esp32_remote.png" >}}
+![Display control app all](/images/esp32/display-control-app-all-info.png)
+
+![ESP32 remote](/images/esp32/esp32_remote.png)
 
 
-{{< new_button href="https://github.com/ESP32Home/t-display_controller" text="Project Github Repo" >}}
+:button[]{link=https://github.com/ESP32Home/t-display_controller label="Project Github Repo"}
 
 **Features**
 * C++ Platformio project
@@ -97,7 +101,7 @@ void loop()
 * Json payload
 * LCD Graphics splash screen
 
-{{< details "Build info" "..." >}}
+:::details{summary="Build info..."}
 ```log
 PACKAGES:
  - framework-arduinoespressif32 3.10004.201016 (1.0.4)
@@ -129,4 +133,4 @@ Dependency Graph
 |-- <Wire> 1.0.1
 |-- <Button2>
 ```
-{{< /details >}}
+:::

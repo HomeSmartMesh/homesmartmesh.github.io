@@ -203,7 +203,7 @@ CONFIG_NET_MAX_CONTEXTS=10
 ```
 :::
 
-{<details "build log">}
+:::details{summary="build log"}
 ```bash
 D:\Dev\nrf52\hsm\hsm\samples\tag_sensors_broadcast>west build -b nrf52840_sensortag -- -DCONF_FILE=prj.conf
 -- west build: generating a build system
@@ -224,9 +224,9 @@ Memory region         Used Size  Region Size  %age Used
             SRAM:       71200 B       256 KB     27.16%
         IDT_LIST:          0 GB         2 KB      0.00%
 ```
-{</details>}
+:::
 
-{<details "run log">}
+:::details{summary="run log"}
 ```log
 *** Booting Zephyr OS build zephyr-v2.5.0-2187-g757cd12e6602  ***
 rtt:~$ rtt:~$ [00:00:00.264,617] <inf> fs_nvs: 8 Sectors of 4096 bytes
@@ -260,7 +260,7 @@ rtt:~$ [00:00:23.631,896] <inf> battery: battery_get_mv() raw = 3460
 rtt:~$ rtt:~$ thread_tags/7009D837C7BB557A{"alive":2,"voltage":3.041,"light":10.097,"temperature":25.16,"humidity":41.95,"pressure":951.01}
 [00:00:25.298,156] <inf> main: sleeping 10 sec
 ```
-{</details>}
+:::
 
 Low power performance :
 
@@ -284,7 +284,7 @@ socat UDP6-LISTEN:4242,fork STDOUT
 
 * the config file of the script allows to provide the MQTT broquer and to replace the device id with a friendly name, which is important not to hardcode the id in any source and to avoid firmware updates when moving the sensors from one room to another.
 
-{<details "python script config">}
+:::details{summary="python script config"}
 ```json
 {  
     "mqtt":{
@@ -306,7 +306,7 @@ socat UDP6-LISTEN:4242,fork STDOUT
     }
 }
 ```
-{</details>}
+:::
 
 
 and [another raspi python scripts](https://github.com/HomeSmartMesh/raspi/tree/master/py/influx) forwards them to influxDB to end up in Grafana, which can also [run as a service](https://github.com/HomeSmartMesh/raspi/blob/92f549866482c3a65e2b738ad909ef740f6919e5/run_services.sh#L72).
@@ -349,7 +349,7 @@ west flash
 :button[]{ link="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/tree/main/samples/tag_sensor_veml6030" label="tag sensor veml6030" icon="github" }
 
 
-{<details "default config">}
+:::details{summary="default config"}
 ```conf
 CONFIG_GPIO=y
 CONFIG_SERIAL=n
@@ -361,9 +361,9 @@ CONFIG_VEML6030=y
 CONFIG_NEWLIB_LIBC=y
 CONFIG_NEWLIB_LIBC_FLOAT_PRINTF=y
 ```
-{</details>}
+:::
 
-{<details "build log">}
+:::details{summary="build log"}
 ```bash
 -- west build: generating a build system
 Including boilerplate (Zephyr base (cached)): D:/Dev/nrf52/hsm/zephyr/cmake/app/boilerplate.cmake
@@ -375,11 +375,11 @@ Including boilerplate (Zephyr base (cached)): D:/Dev/nrf52/hsm/zephyr/cmake/app/
 -- Found toolchain: gnuarmemb (D:/tools/gnu_arm_embedded/10 2020-q4-major)
 -- Found BOARD.dts: D:/Dev/nrf52/hsm/hsm/boards/arm/nrf52840_sensortag/nrf52840_sensortag.dts
 ```
-{</details>}
+:::
 
 running the initial versions on ambiant light, hand cover then flash light
 
-{<details "run log preliminary">}
+:::details{summary="run log preliminary"}
 ```log
 [00:00:00.325,683] <inf> VEML6030: veml6030_init() power on
 [00:00:00.326,202] <inf> VEML6030: i2c_burst_write(0x0000) success
@@ -419,11 +419,11 @@ Found device "VEML6030", getting sensor data
 
 [00:01:11.836,944] <inf> main: sensor: lum reading: 1274
 ```
-{</details>}
+:::
 
 running with auto mode
 
-{<details "run log auto">}
+:::details{summary="run log auto"}
 ```log
 [00:00:00.324,188] <inf> VEML6030: veml6030_init()
 *** Booting Zephyr OS build zephyr-v2.5.0-2187-g757cd12e6602  ***
@@ -455,12 +455,12 @@ auto_measure>new params => gain = 2.000000 ; it = 800
 =====> light 4.478 lux
 =====> light 3.139 lux
 ```
-{</details>}
+:::
 
 * The previous auto mode has a disadvantage, when saturating, the best guess is still biased as it used a wrong saturated measure.
 * The following example makes a special case of a saturated measure and directly jumps to the highest mode which has the lowes integration time anyway so only 25 ms are spent, after which the sample is sure not to be saturated and either has a chance to already be in optimal mode (if it is the highest) or guqrantees that the next selected mode will be the optimal.
 
-{<details "run log auto sat"}
+:::details{summary="run log auto sat}
 ```log
 [00:00:00.325,836] <inf> main: VEML6030 light sensor application
 =====> light 70.247 lux
@@ -478,7 +478,7 @@ auto_measure>new params => gain = 2.000000 ; it = 800
 =====> light 68.566 lux
 =====> light 68.465 lux
 ```
-{</details}
+:::
 
 
 ### tag_sensor_ms8607
@@ -492,7 +492,7 @@ west flash
 :button[]{ link="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/tree/main/samples/tag_sensor_ms8607" label="tag sensor ms8607" icon="github" }
 
 
-{<details "default config">}
+:::details{summary="default config"}
 ```conf
 CONFIG_GPIO=y
 CONFIG_SERIAL=n
@@ -507,9 +507,9 @@ CONFIG_NEWLIB_LIBC=y
 CONFIG_NEWLIB_LIBC_FLOAT_PRINTF=y
 
 ```
-{</details>}
+:::
 
-{<details "build log">}
+:::details{summary="build log"}
 ```bash
 Including boilerplate (Zephyr base): D:/Dev/nrf52/hsm/zephyr/cmake/app/boilerplate.cmake
 -- Application: D:/Dev/nrf52/hsm/hsm/samples/tag_sensor_ms8607
@@ -528,9 +528,9 @@ Memory region         Used Size  Region Size  %age Used
             SRAM:        8544 B       256 KB      3.26%
         IDT_LIST:          0 GB         2 KB      0.00%
 ```
-{</details>}
+:::
 
-{<details "run log">}
+:::details{summary="run log"}
 ```log
 *** Booting Zephyr OS build zephyr-v2.5.0-2187-g757cd12e6602  ***
 
@@ -547,7 +547,7 @@ ms8607> t=23.16 °  p=963.69 mbar  h=72.36 %RH
 ms8607> t=22.67 °  p=963.63 mbar  h=77.52 %RH
 ms8607> t=22.65 °  p=963.55 mbar  h=53.33 %RH
 ```
-{</details>}
+:::
 
 ### tag_battery
 
@@ -560,7 +560,7 @@ west flash
 :button[]{ link="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/tree/main/samples/tag_battery" label="tag battery" icon="github" }
 
 
-{<details "default config">}
+:::details{summary="default config"}
 ```conf
 CONFIG_GPIO=y
 CONFIG_SERIAL=n
@@ -571,9 +571,9 @@ CONFIG_NEWLIB_LIBC=y
 CONFIG_NEWLIB_LIBC_FLOAT_PRINTF=y
 
 ```
-{</details>}
+:::
 
-{<details "build log">}
+:::details{summary="build log"}
 ```bash
 Including boilerplate (Zephyr base (cached)): D:/Dev/nrf52/hsm/zephyr/cmake/app/boilerplate.cmake
 -- Application: D:/Dev/nrf52/hsm/hsm/samples/tag_battery
@@ -591,9 +591,9 @@ Memory region         Used Size  Region Size  %age Used
             SRAM:        8544 B       256 KB      3.26%
         IDT_LIST:          0 GB         2 KB      0.00%
 ```
-{</details>}
+:::
 
-{<details "run log">}
+:::details{summary="run log"}
 ```log
 *** Booting Zephyr OS build zephyr-v2.5.0-2187-g757cd12e6602  ***
 
@@ -606,29 +606,26 @@ Memory region         Used Size  Region Size  %age Used
 [00:00:05.426,086] <inf> battery: battery_get_mv() raw = 3768
 [00:00:05.426,116] <inf> main: battery> Voltage = 3311 mV
 ```
-{</details>}
+:::
 
 # FAQ - Discussion
 * If you need support, want to ask a question or suggest a different answer, you can join the discussion on the Github forum
 :button[]{label="Home Smart Mesh - sdk-hsm-sensortag" link="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/discussions" icon="github" }
 
-{<faq>}
-Does this Thread SensorTag support MQTT ?
-<--->
+
+:::details{summary="Does this Thread SensorTag support MQTT ?"}
 A first firmware was tested with MQTT-SN [MQTT Sensors Node](/docs/networks/thread/#mqtt-sensors-node), but given that it used the nRF SDK and not Zephyr, development was discontinued. As alternative a simple udp protocol with a python scripts can fulfill the broadcast function from openthread to an MQTT broker details in the [udp broadcast](/docs/microcontrollers/nrf52/thread_sensortag/#tag_sensors_broadcast) example.
-<===>
-Is it possible to save energy by collecting many sensor samples over time and sending them together?
-<--->
+:::
+
+:::details{summary="Is it possible to save energy by collecting many sensor samples over time and sending them together?"}
 Yes, sure, the use cases could be slpit as follows :
 * For short term buffering, it's possible to use the RAM retention feature, you pay as you go fine granular (per 4 kB block: 30nA)
 * For long term buffering, we're no longer on the sensors network use case and rather on the logger tag use case, there you can use the Flash, 1 MB is huge.
 In my use case, I don't use buffering in order to allow live update of measures on the user's apps, but combining like a level trigger to immediately send values on big changes with buffering and sending all the values cyclically could be quite smart, you will need a QoS through to ensure your data is really sent after a while, which will also consume RF transactions, I opted for sending every single value on an RF packet which is also used as an alive signal to know when the sensor is dead or out of reach, so no problem if once a packet is lost in a while, but practically, as I use a flood mesh, most measures arrive more than once to the server.
 I think after all, such things should be configurable by the end users's app, and should not be hardcoded
-<===>
-Can this firmware be used on nRF51 ? which families are supported ?
-<--->
+:::
+
+:::details{summary="Can this firmware be used on nRF51 ? which families are supported ?"}
 No, Thread is relaying on the RF MAC layer 802.15.4 which is unfortunately only supported by nRF5340, nRF52840, nRF52833, nRF52820, nRF52811 more details on the nordic [Thread](https://www.nordicsemi.com/Products/Thread) page.
 Note that this application is developed for the nRF family but openthread is supported on other chips as well e.g. TI, NXP,... 
-{</faq>}
-
-
+:::

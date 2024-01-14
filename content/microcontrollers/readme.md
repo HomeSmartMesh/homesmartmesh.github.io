@@ -107,7 +107,7 @@ grid:
 * [more details](/docs/microcontrollers/esp32/ttgo-t5-epaper)
 
 <--->
-{{<image src="/images/esp32/display-control-app-all info.png" width=300 >}}
+{{<image src="/images/esp32/display-control-app-all-info.png" width=300 >}}
 * Boards : [ttgo-t-display](/docs/microcontrollers/esp32/ttgo-t-display)
 * Platformio
 * MQTT

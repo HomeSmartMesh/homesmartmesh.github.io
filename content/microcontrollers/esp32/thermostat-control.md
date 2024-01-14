@@ -2,7 +2,7 @@
 title: Thermostat Control
 format: markdown_card
 tags: [Program,Display,Buttons]
-image: "/images/esp32/display-control-app-all info.png"
+image: /images/esp32/display-control-app-all-info.png
 features:
     - "Board : ttgo-t-display"
     - Platformio
