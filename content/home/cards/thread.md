@@ -6,7 +6,7 @@ tags: [Network]
 ---
 
 :image[]{src=/images/threadgrouplogo.ico alt="Thread Group" height=180}
-:button[]{label="Thread Doc" link=/docs/networks/thread/}
+:button[]{label="Thread Doc" link=/networks/thread/}
 
 - Protocol Documentation
 - Tools

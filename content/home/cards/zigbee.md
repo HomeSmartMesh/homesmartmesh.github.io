@@ -6,7 +6,7 @@ tags: [Network]
 ---
 
 :image[]{src=/images/zigbee.png alt="Zigbee" height=180}
-:button[]{label="Zigbee Doc" link=/docs/networks/zigbee/}
+:button[]{label="Zigbee Doc" link=/networks/zigbee/}
 
 - Showcase of all used devices and their integration
 - References for deeper dive in the Zigbee standard
