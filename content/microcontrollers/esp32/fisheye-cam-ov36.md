@@ -106,7 +106,7 @@ Dependency Graph
 :::
 
 
-:::details{summary="Platformio ini fi ..."}
+:::details{summary="Platformio ini file ..."}
 ```ini
 [env]
 board = m5stack-timer-cam
@@ -124,7 +124,7 @@ monitor_speed = 115200
 platform_packages =
     platformio/framework-arduinoespressif32 @ https://github.com/espressif/arduino-esp32.git#1.0.5-rc4
 ```
-{{< /details >}}
+:::
 
 :::details{summary="Build info ..."}
 ```ini

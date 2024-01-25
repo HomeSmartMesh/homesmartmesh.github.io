@@ -1,8 +1,8 @@
 ---
-title: "Software"
-description: "ESP32 Software frameworks"
+title: Software
+description: ESP32 Software frameworks
+order: 3
 date: 2020-12-25T00:00:00+09:00
-weight: 3
 ---
 
 ## Arduino ESP32
@@ -20,11 +20,11 @@ weight: 3
     >get_idf
     >idf.py set-target esp32
 
-{{< new_button href="https://github.com/espressif/esp-idf/tree/master/examples/system/ota" text="OTA Github Readme">}}
+:button[]{link="https://github.com/espressif/esp-idf/tree/master/examples/system/ota" label="OTA Github Readme"}
     
     >idf.py menuconfig
 
-{{< image src="/images/esp32/ota-config.png" >}}
+![OTA Config](/images/esp32/ota-config.png)
 
     https://10.0.0.36:8070/hello-world.bin
 
@@ -37,14 +37,14 @@ on another linux host, copied `ca_cert.pem` then tested :
 
     >curl -v https://10.0.0.36:8070/simple_ota.bin --cacert ca_cert.pem > simple_ota.bin
 
-{{<image src="/images/esp32/cert-test.png" >}}
+![Cert Test](/images/esp32/cert-test.png)
 
 Common Name (e.g. server FQDN or YOUR name) []:10.0.0.36
 
     >openssl req -x509 -newkey rsa:2048 -keyout ca_key.pem -out ca_cert.pem -days 365 -nodes
     >openssl s_server -WWW -key ca_key.pem -cert ca_cert.pem -port 8070
 
-{{< details "Log output, click to expand..." >}}
+:::details{summary="Log output, click to expand..."}
 ```bash
 wass@wass-vb:~/esp/simple_ota_example$ idf.py -p /dev/ttyUSB0 flash monitor
 Executing action: flash
@@ -388,16 +388,16 @@ load:0x40080400,len:3660
 
 entry 0x40080678
 ```
-{{< /details>}}
+:::
 
 error message (various reasons, certificate not copied, wrong filename,...) :
 
-{{< image src="/images/esp32/ota-error.png" >}}
+![OTA Error](/images/esp32/ota-error.png)
 
 success message :
 
-{{< image src="/images/esp32/ota-success.png" >}}
+![OTA Success](/images/esp32/ota-success.png)
 
 server log :
-{{< image src="/images/esp32/server.png" >}}
+![Server](/images/esp32/server.png)
 

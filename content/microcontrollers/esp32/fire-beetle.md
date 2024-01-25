@@ -3,7 +3,6 @@ title: "FireBeetle"
 description: "Low power design with ESP-WROOM-32 module with 10 uA deep sleep"
 order: 15
 date: 2021-02-27T00:00:00+09:00
-draft: false
 image: /images/esp32/firebeetle_board.png
 tags: [Board,LowPower]
 features:
@@ -27,32 +26,34 @@ features:
 * LED : (IO2)
 * VBAT : (A0 - 36 - SENSOR_VP) measure ratio = 0.5
 
-{{<hint danger>}}
+:::Danger
 The 0 Ohm resistors R10 and R11 needed to sense the battery voltage by A0-Pin38 are not populated (as of the boards I have). Therefore solder bridges are required to be added manually 😢
-{{</hint>}}
+:::
+
 * Another caveat is the usage of pin 36 A0 which conflicts with wifi. To avoid that, in the program below, the battery is measured before the wifi is activated.
 ## Gallery
 
-{{< load-photoswipe >}}
-{{< gallery dir="/images/esp32/firebeetle/" />}}
+```yaml gallery_dir
+dir: /images/esp32/firebeetle/
+```
 
 ## Links
-{{<icon_button text="FireBeetle - DFRobot" href="https://www.dfrobot.com/product-1590.html" icon="new">}}
+:button[]{label="FireBeetle - DFRobot" link="https://www.dfrobot.com/product-1590.html"}
 
-{{<icon_button text="Wiki" href="https://wiki.dfrobot.com/FireBeetle_ESP32_IOT_Microcontroller(V3.0)__Supports_Wi-Fi_&_Bluetooth__SKU__DFR0478" icon="new">}}
+:button[]{label="Wiki" link="https://wiki.dfrobot.com/FireBeetle_ESP32_IOT_Microcontroller(V3.0)__Supports_Wi-Fi_&_Bluetooth__SKU__DFR0478"}
 
-{{<icon_button text="Schematics" href="https://raw.githubusercontent.com/DFRobot/Wiki/master/DFR0478/%5BDFR0478%5DFireBeetle%20Board-ESP32(V4.0)%E7%94%9F%E4%BA%A7%E6%A3%80%E6%9F%A5%E5%9B%BE.PDF" icon="download">}}
+:button[]{label="Schematics" link="https://raw.githubusercontent.com/DFRobot/Wiki/master/DFR0478/%5BDFR0478%5DFireBeetle%20Board-ESP32(V4.0)%E7%94%9F%E4%BA%A7%E6%A3%80%E6%9F%A5%E5%9B%BE.PDF" icon="download"}
 
-{{<icon_button text="User Manual" href="https://github.com/Robert-MARKII/Document/raw/master/FireBeetle%20Board-ESP32%20User%20Manual%20update.pdf" icon="download">}}
+:button[]{label="User Manual" link="https://github.com/Robert-MARKII/Document/raw/master/FireBeetle%20Board-ESP32%20User%20Manual%20update.pdf" icon="download"}
 
 ## Related products
 
 
-{{<icon_button text="Solar Power Manager Micro" href="https://www.dfrobot.com/product-1781.html" icon="new">}}
+:button{label="Solar Power Manager Micro" link="https://www.dfrobot.com/product-1781.html" icon="new"}
 
 # Applications
 
-{{<icon_button href="https://github.com/ESP32Home/firebeetle_solar_small.git" text="ESP32 Program Github Repo" icon="github">}}
+:button{link="https://github.com/ESP32Home/firebeetle_solar_small.git" label="ESP32 Program Github Repo" icon="github"}
 
 ## Config
 ```json
@@ -67,7 +68,8 @@ The 0 Ohm resistors R10 and R11 needed to sense the battery voltage by A0-Pin38 
 }
 ```
 ## Main
-{{<details "main.cpp" >}}
+
+:::details{summary="main.cpp"}
 ```c++
 #include "Arduino.h"
 #include <WiFi.h>
@@ -121,10 +123,10 @@ void loop() {
 }
 
 ```
-{{</details>}}
+:::
 
 
-{{<details "Build info...">}}
+:::details{summary="Build info..."}
 ```bash
 PACKAGES:
  - framework-arduinoespressif32 3.10004.201016 (1.0.4)
@@ -139,9 +141,9 @@ PACKAGES:
 |-- <SPIFFS> 1.0        
 |   |-- <FS> 1.0   
 ```
-{{</details>}}
+:::
 
-{{< details "Platformio ini file ..." >}}
+:::details{sumamary="Platformio ini file ..."}
 ```ini
 [env]
 board = firebeetle32
@@ -155,4 +157,4 @@ lib_ldf_mode = deep+
 platform = espressif32
 monitor_speed = 115200
 ```
-{{< /details >}}
+:::

@@ -8,7 +8,7 @@ tags: [Microcontrollers]
 
 :image[]{src=/images/thread_sensortag/sensortag_v1.1.webp alt="Thread sensortag" width=280}
 
-:button[]{label="Thread SensorTag" link=/microcontrollers/nrf52/thread_sensortag/}
+:button[]{label="Thread SensorTag" link=/microcontrollers/nrf52/thread-sensortag/}
 
 - Thread mesh with nRF52840
 - BME280 Temperature Humidity Pressure
