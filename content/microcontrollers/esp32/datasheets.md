@@ -27,7 +27,6 @@ order: 1
 
 ## ESP32-S2
 
-### Datasheet
 * [ESP32-S2 Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s2_datasheet_en.pdf)
 
 #### Block Diagram
@@ -42,6 +41,20 @@ order: 1
 ### S2 Technical Reference Manual
 * [TRM](https://www.espressif.com/sites/default/files/documentation/esp32-s2_technical_reference_manual_en.pdf)
 
+## ESP32-S3
+* [ESP32-S3 Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
+
+### Block Diagram
+![img](./s3-block-diagram.webp)
+
+
+### Address Mapping
+![Address Mapping](./s3-address-mapping.webp)
+
+### S3 Technical Reference Manual
+* [TRM](https://www.espressif.com/sites/default/files/documentation/esp32-s3_technical_reference_manual_en.pdf)
+
+
 ## ESP32-C3
 * [ESP32-C3 datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf)
 
@@ -49,9 +62,9 @@ order: 1
 
 ![Block Diagram](./c3-block-diagram.webp)
 
-### Address Mapping structure
+### Address Mapping
 
-![Address Mapping Structure](./c3-address-mapping.webp)
+![Address Mapping](./c3-address-mapping.webp)
 
 ### C3 Technical Reference Manual
 * [TRM](https://www.espressif.com/sites/default/files/documentation/esp32-c3_technical_reference_manual_en.pdf)
