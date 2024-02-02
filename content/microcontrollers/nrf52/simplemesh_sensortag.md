@@ -78,10 +78,10 @@ board render
 
 ## PPK-II Measures
 ### First wakeup
-![First wakeup](/images/simplemesh_sensortag/first%20wakeup.png)
+![First wakeup](/images/simplemesh_sensortag/first_wakeup.png)
 
 ### wakeup cycle type 1
-![wakeup cycle](/images/simplemesh_sensortag/wakeup%20cycle.png)
+![wakeup cycle](/images/simplemesh_sensortag/wakeup_cycle.png)
 
 ### wakeup cycle type 2
 ![wakeup cycle t2](/images/simplemesh_sensortag/wakeup_cycle_t2.png)
