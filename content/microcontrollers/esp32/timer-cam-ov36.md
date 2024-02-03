@@ -1,5 +1,5 @@
 ---
-title: Fisheye Cam OV3660
+title: Timer Cam OV3660
 description: ESP32 timer camera OV3660 with low power sleep. An Time lapse application sends images through MQTT to a raspberry pi image recorder
 order: 11
 date: 2020-12-26T00:00:00+09:00

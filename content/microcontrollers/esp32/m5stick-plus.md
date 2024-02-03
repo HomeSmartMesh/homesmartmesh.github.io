@@ -1,6 +1,6 @@
 ---
-title: "M5 Stick C Plus"
-description: "Small ESP32 with housing and lots of sensors"
+title: M5 Stick C Plus
+description: Small ESP32 with housing and lots of sensors
 date: 2020-12-26T00:00:00+09:00
 order: 14
 image: /images/m5_stick_plus.png

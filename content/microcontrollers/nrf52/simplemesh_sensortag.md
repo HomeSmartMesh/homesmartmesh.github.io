@@ -1,10 +1,11 @@
 ---
 title: Simple Mesh SensorTag
 order: 3
-description: "A Sensor tag to monitor Light brightness with MAX44009, Temperature, Humidity and Pressure with BME280. The SoC is an nRF52832 that communicates through a Simple Mesh Framework"
+description: A Sensor tag to monitor Light brightness with MAX44009, Temperature, Humidity and Pressure with BME280. The SoC is an nRF52832 that communicates through a Simple Mesh Framework
 image: /images/simplemesh_sensortag.png
 date: 2021-02-14T08:00:00+00:00
 lastmod: 2021-02-14T08:00:00+00:00
+tags: [Board,NRF52,SimpleMesh]
 ---
 
 :button[]{link=/docs/networks/nrf/ label="Networks / Simple Mesh" }

@@ -1,11 +1,19 @@
 ---
-title: "nRF52832 UART dongle"
-description: "nRF52832 with SIL2104 UART to USB converter"
-images: ["/images/nrf_usb_dongle.png"]
+title: nRF52832 UART dongle
+description: nRF52832 with SIL2104 UART to USB converter
+image: /images/nrf_usb_dongle.png
+order: 6
 date: 2021-02-21T08:00:00+00:00
 lastmod: 2021-02-21T08:00:00+00:00
-weight: 6
-toc: true
+tag: [Board,NRF52]
+features:
+    - board codename PCA10056
+    - nRF52840
+    - ARM M4 64 MHz
+    - 1024 KB ROM - 256 KB RAM
+    - Bluetooth 5, Mesh
+    - 802.15.4, Thread, Zigbee
+    - USB 2
 ---
 
 # Board

@@ -1,15 +1,15 @@
 ---
-title: "UWB DWM1001 dev"
-description: "An Ultra Wide Band development kit including the DWM1001C Module"
+title: UWB DWM1001 dev
+description: An Ultra Wide Band development kit including the DWM1001C Module
+order: 2
 date: 2021-05-08T08:00:00+00:00
 lastmod: 2021-05-08T08:00:00+00:00
-images: ["/images/uwb/DWM1001 DevKit.png"]
-weight: 2
-toc: true
-#{{<load-svg-pan-zoom>}}
-#{{<svg-pan-zoom "/images/uwb/dwm1001-dev-schematic.svg" "white" >}}
+image: /images/uwb/DWM1001 DevKit.png
+tags: [Board,NRF52]
+features:
+    - nRF52832
+    - UWB DWM1001C Module
 ---
-{{<load-photoswipe >}}
 
 {{<icon_button relref="/docs/networks/ultrawideband/" text="Networks / Ultra Wide Band RTLS" >}}
 
