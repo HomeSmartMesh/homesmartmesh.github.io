@@ -45,11 +45,11 @@ order: 1
 * [ESP32-S3 Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
 
 ### Block Diagram
-![img](./s3-block-diagram.webp)
+![img](./images/s3-block-diagram.webp)
 
 
 ### Address Mapping
-![Address Mapping](./s3-address-mapping.webp)
+![Address Mapping](./images/s3-address-mapping.webp)
 
 ### S3 Technical Reference Manual
 * [TRM](https://www.espressif.com/sites/default/files/documentation/esp32-s3_technical_reference_manual_en.pdf)
@@ -60,11 +60,11 @@ order: 1
 
 ### Block Diagram
 
-![Block Diagram](./c3-block-diagram.webp)
+![Block Diagram](./images/c3-block-diagram.webp)
 
 ### Address Mapping
 
-![Address Mapping](./c3-address-mapping.webp)
+![Address Mapping](./images/c3-address-mapping.webp)
 
 ### C3 Technical Reference Manual
 * [TRM](https://www.espressif.com/sites/default/files/documentation/esp32-c3_technical_reference_manual_en.pdf)
