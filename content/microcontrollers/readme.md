@@ -1,6 +1,6 @@
 ---
-title: "Microcontrollers"
-description: "collection of Microcontroller boards, ready made and custom made for ESP32, nRF52, STM32,..."
+title: Microcontrollers
+description: collection of Microcontroller boards, ready made and custom made for ESP32, nRF52, STM32,...
 bookFlatSection: true
 bookCollapseSection: true
 bookToC: false

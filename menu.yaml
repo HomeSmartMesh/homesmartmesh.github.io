@@ -13,9 +13,13 @@
   autogenerate:
     directory: protocols
 - label: 3D Printing
-  link: /3d-printing
+  link: /3dprinting
   autogenerate:
     directory: 3dprinting
+- label: Web
+  link: /web
+  autogenerate:
+    directory: web
 - label: Other
   link: /other/sound-processing
   autogenerate:

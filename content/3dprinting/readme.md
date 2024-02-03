@@ -1,9 +1,9 @@
 ---
 title : 3D Printing
+slug: 3dprinting
 description: 3D Models for Smart Home, electronics and house utilities
-date: 2021-01-17T00:00:00+00:00
 order: 9
-toc: false
+date: 2021-01-17T00:00:00+00:00
 image: /images/3dprinting/3dmodels.png
 ---
 
