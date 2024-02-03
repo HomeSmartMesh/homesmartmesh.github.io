@@ -1,20 +1,20 @@
 ---
 title: Raspi IoT
-slug: raspi_iot
-description: "raspberry pi server for home automation. For developers, startups, students and hobbyist who want to understand the basics of home automation and IoT and use it for their own projects and products. Networks devices using Thread, Zigbee, wifi are are centralized with mqtt then controlled with servies based on python and node.js scripts interacting with web apps as user Front End."
+slug: raspi-iot
+description: raspberry pi server for home automation. For developers, startups, students and hobbyist who want to understand the basics of home automation and IoT and use it for their own projects and products. Networks devices using Thread, Zigbee, wifi are are centralized with mqtt then controlled with servies based on python and node.js scripts interacting with web apps as user Front End.
+order: 1
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2021-02-14T08:00:00+00:00
 images: ["/images/software.png", "/images/devices.png" ]
-order: 1
 ---
 
 ```yaml cards
 - uid: cards.discussions
   body: true
-  width: 300
+  width_rem: 20
 - uid: cards.github-repo
   body: true
-  width: 300
+  width_rem: 20
 ```
 
 # Home Webapp

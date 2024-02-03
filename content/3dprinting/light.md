@@ -21,5 +21,5 @@ bookToC: false
 # Application
 
 {{< image src="/images/aqara hue zigbee.png" >}}
-{{< button relref="/docs/frameworks/raspi_iot#hue-light-control" >}} More details on the raspberry pi service {{</button>}}
+{{< button relref="/docs/frameworks/raspi-iot#hue-light-control" >}} More details on the raspberry pi service {{</button>}}
 

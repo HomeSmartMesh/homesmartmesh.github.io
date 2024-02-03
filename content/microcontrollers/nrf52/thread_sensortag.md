@@ -24,7 +24,7 @@ tags: [Board,NRF52,Thread]
 # Hardware
 ## Schematics
 
-![Scematics](/images/thread_sensortag/nrf52-sensor-tag.svg)
+![Scematics](nrf52-sensor-tag.svg)
 
 * version 1.1
 * update from v1.0 added RGB LED
@@ -88,7 +88,7 @@ This section includes instructions how to create an openthread dongle called `Ra
 ## Raspberry Pi Setup
 This section includes steps to install all needed services to run the SensorTag udp-v6 broadcast to mqtt, influxdb and grafana this also inlcudes the boarder router setup as intermediate step.
  
-:button[]{ link="/docs/frameworks/raspi_iot#raspberry-pi-setup" label="raspberry pi setup"}
+:button[]{ link="/docs/frameworks/raspi-iot#raspberry-pi-setup" label="raspberry pi setup"}
 
 ## Zephyr Tag Firmware
 :button[]{ link="https://github.com/HomeSmartMesh/sdk-hsm-sensortag" label="Zephyr nRF-Connect SensorTag repo" icon="github" }

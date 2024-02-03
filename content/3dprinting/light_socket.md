@@ -17,4 +17,4 @@ bookToC: false
 # Application
 
 {{< image src="/images/double smart switch.png" >}}
-{{< button relref="/docs/frameworks/raspi_iot#home-status" >}} More details on the raspberry pi service {{</button>}}
+{{< button relref="/docs/frameworks/raspi-iot#home-status" >}} More details on the raspberry pi service {{</button>}}

@@ -4,6 +4,7 @@ description: Home Automation Frameworks, Microcontrollers, Wireless Networks, Ap
 date: 2020-10-06T08:48:23+00:00
 lastmod: 2021-02-14T08:00:00+00:00
 images: ["/images/meta.png", "/images/thread_sensortag/concept.png", "/images/3dprinting/3dmodels.png", "/images/nRF52_mesh.png", "/images/floor_temperature.png" ]
+toc: false
 ---
 
 ```yaml cards

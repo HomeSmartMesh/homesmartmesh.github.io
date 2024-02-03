@@ -9,7 +9,7 @@ tags: [Board,NRF52,SimpleMesh]
 ---
 
 :button[]{link=/docs/networks/nrf/ label="Networks / Simple Mesh" }
-:button[]{link=/docs/frameworks/raspi_iot/ label="Frameworks / Raspi IoT" }
+:button[]{link=/docs/frameworks/raspi-iot/ label="Frameworks / Raspi IoT" }
 :button[]{link=https://www.tindie.com/products/wassfila/nrf52-mesh-sensor-node/ label="Tindie Product Page" icon="new" }
 
 # Concept

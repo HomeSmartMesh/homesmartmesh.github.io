@@ -5,7 +5,7 @@
   autogenerate:
     directory: microcontrollers
 - label: Frameworks
-  link: /frameworks
+  link: /frameworks/raspi-iot
   autogenerate:
     directory: frameworks
 - label: Protocols
