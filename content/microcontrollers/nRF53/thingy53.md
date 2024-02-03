@@ -10,12 +10,9 @@ protocol:
 ---
 # Thingy53 Overview
 
-<Button
-    href="https://github.com/HomeSmartMesh/sdk-hsm-thingy53"
-    >Github Repo</Button>
-<br/>
+:button[]{link="https://github.com/HomeSmartMesh/sdk-hsm-thingy53" label="Github Repo"}
 
-<img src="./thingy53-usb-attachments.webp" height="400" alt="USB Attachments" />
+![USB Attachments](./thingy53-usb-attachments.webp)
 
 ## Features
 
@@ -125,4 +122,4 @@ cd nrf/v2.3.0/zephyr/samples/sensor/bme680
 * restore example application firmwa with the same procedure with binaries available on the [Nordic Thingy53 downloads](https://www.nordicsemi.com/Products/Development-hardware/Nordic-Thingy-53/Downloads#infotabs)
 
 # Current measure
-<img src="./current_measure.webp" height="353" alt="USB Attachments" />
+:image[]{src="./current_measure.webp" height="353" alt="USB Attachments"}
