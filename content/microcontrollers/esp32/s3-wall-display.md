@@ -1,12 +1,13 @@
 ---
-title: S3 4-inch Touch Display
+title: S3 Wall Display
 description: Module name 'ESP32-4848S040' ESP32-S3 4.9 inch LCD TFT Module Capacitive Touch
 image: /images/s3-display-product-front.webp
 tags: [S3, display]
 features:
     - ESP32-S3-WROOM-1
     - 16 MB Flash, 8 MB PSRAM
-    - LCD touch Display
+    - TFT LCD touch Display
+    - ST7701 480 x 480
 ---
 
 :button[]{link="/microcontrollers/esp32/datasheets#esp32-s3" label="ESP32-S3"}

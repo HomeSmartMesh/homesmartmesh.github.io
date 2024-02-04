@@ -1,19 +1,21 @@
 ---
-title: "TTGO T-Display"
-description: "Small dev kit with O-LED display"
+title: TTGO T-Display
+description: Small dev kit with O-LED display
 date: 2020-12-25T00:00:00+09:00
-draft: false
+edit: 2024-02-04T00:00:00+00:00
 order: 12
-image: /images/ttgo_t-display.png
+image: /images/esp32/ttgo-t-display.webp
 tags: [Board,Display]
 features:
     - LCD ST7789V
-    - 1,14 Zoll
+    - 1.14 Inch
     - 135x240
     - "Charger : TP4054"
 ---
+# TTGO T-Display
+:button[]{label="Product Page" link="https://www.lilygo.cc/en-pl/products/lilygo%C2%AE-ttgo-t-display-1-14-inch-lcd-esp32-control-board"}
 
-![TTGO T display](/images/ttgo_t-display.png)
+:image[]{alt="TTGO T display" src="/images/esp32/ttgo-t-display.webp" width="300" center}
 
 ## Simple Example
 * [t-display_controller](https://github.com/ESP32Home/t-display_controller)
