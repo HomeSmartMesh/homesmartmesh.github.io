@@ -1,7 +1,7 @@
 ---
 title: nRF52840 USB dongle
 description: Nordic's official dev kit PCA10059 in a form of a usb dongle for the nRF52840
-images: /images/nrf_usb_dongle.png
+image: /images/nrf_usb_dongle.png
 order: 5
 date: 2021-02-14T08:00:00+00:00
 lastmod: 2021-02-14T08:00:00+00:00
@@ -16,9 +16,9 @@ features:
     - USB 2
 ---
 
-{{<icon_button text="Product Page" href="https://www.nordicsemi.com/Software-and-tools/Development-Kits/nRF52840-Dongle/" icon="new">}}
+:button[]{label="Product Page" link="https://www.nordicsemi.com/Software-and-tools/Development-Kits/nRF52840-Dongle/" icon="new"}
 
-{{<gfigure src="/images/nrf_usb_dongle.png" >}}
+:image[]{src="/images/nrf_usb_dongle.png" center}
 
 * [nRF52840](https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52840)
 * ARM M4 64 MHz
@@ -38,7 +38,7 @@ GetStarted)
 * the usb dongle is referred to as `PCA10059` which in projects usually shifts the app to offset `0x1000` as openbootloader usage is expected
 * With serial wire debug, it's possible to flash applications at same address as the `PCA10056` which is at address 0x0000
 
-{{< image src="/images/thread_sensortag/serial_wire_debug.png" >}}
+[Serial Wier Debug](/images/thread_sensortag/serial_wire_debug.png)
 
 ### LEDS
 
@@ -51,16 +51,17 @@ GetStarted)
 ## pogo pin adapter
 * Pogo Pin P75-E2 Dia 1.3mm Length 16.5mm
 
-{{< model_viewer "/models/nrf/pogo_adapter_swd.glb" "400" >}}
+[Pgogo Adapter](/models/nrf/pogo_adapter_swd.glb)
 
-{{<icon_button text="STL models zip" href="/models/nrf/nRF52840_usb_pogo_top.zip" icon="download">}}
+:button[]{label="STL models zip" link="/models/nrf/nRF52840_usb_pogo_top.zip" icon="download"}
 
 ## micro python
-{{<icon_button text="build micro python" relref="/docs/frameworks/upython/#config" >}}
+:button[]{label="build micro python" link="/docs/frameworks/upython/#config" }
 
 ## gallery
-{{< load-photoswipe >}}
-{{< gallery dir="/images/nrf52_dongle" />}}
+```yaml gallery
+dir: /images/nrf52_dongle
+```
 
 # bootloader
 ## options
@@ -75,14 +76,17 @@ GetStarted)
 * without nRF SDK, download the bootloader from the [nordic tutorial](https://devzone.nordicsemi.com/guides/short-range-guides/b/getting-started/posts/nrf52840-dongle-programming-tutorial) and rename to `pca10059_bootloader.hex`
 
 then run
+
 ```bash
 J-Link>Power on
 cd pca10059_bootloader
 >nrfjprog -f nrf52 --eraseall
  >nrfjprog -f nrf52 --chiperase --program pca10059_bootloader.hex --verify --reset
 ```
+
 ## build for USB DFU
 on any sample from nRF Connect that supports the nrf52840dongle_nrf52840 run
+
 ```bash
 cd nrf\v2.3.0\nrf\samples\xxx\
 >west build -p always -b nrf52840dongle_nrf52840 -- -DOVERLAY_CONFIG="overlay-usb.conf" -DDTC_OVERLAY_FILE="usb.overlay"

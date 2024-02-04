@@ -1,7 +1,7 @@
 ---
 title: nRF52832 UART dongle
 description: nRF52832 with SIL2104 UART to USB converter
-image: /images/nrf_usb_dongle.png
+image: ./dongle.png
 order: 6
 date: 2021-02-21T08:00:00+00:00
 lastmod: 2021-02-21T08:00:00+00:00
@@ -17,7 +17,7 @@ features:
 ---
 
 # Board
-{{<image src="/images/dongle.png" width="200" >}}
+:image[]{src="./dongle.png" width="200" center}
 
 A usb dongle from the market that includes a **2104** serial to usb converter. Keyword search on shopping websites : **nRF52832 USB dongle**. Aka "nRF52832-YJ-17017-USB-UART"
 
@@ -110,13 +110,13 @@ don't forget to save
 
 # Flashing
 ## outside
-{{<image src="/images/dongle.png" width="200" >}}
+:image[]{src="./dongle.png" width="200" center}
 
 ## inside
 ### Components side
-{{<image src="/images/components.png" width="300" >}}
+:image[]{src="/images/components.png" width="300" center}
 ### SWDIO pins side
-{{<image src="/images/back_swdio.png" width="300" >}}
+:image[]{src="/images/back_swdio.png" width="300" center}
 
 ## pinout
 | nRF52 | pin |
@@ -132,12 +132,12 @@ don't forget to save
 ## Needle adapter
 Making a needle adapter is made easier with 3d printing. The used pogo pin is seen below
 
-{{< figure src="/images/pogo-pin 0.5mm x 16.35mm.png" title="Pogo pin" width="300" >}}
+:image[]{src="/images/pogo-pin 0.5mm x 16.35mm.png" title="Pogo pin" width="300" }
 
 The adapter model still in preparation can be found [here](https://a360.co/2IcKZK9). It should look something like this:
 
 Adapter model
-{{<image src="/images/adapter.png" width="300" >}}
+:image[]{src="/images/adapter.png" width="300"}
 
 Adapter
-{{<image src="/images/pogo-pin adapter.jpg" width="200" >}}
+:image[]{src="/images/pogo-pin adapter.jpg" width="200"}

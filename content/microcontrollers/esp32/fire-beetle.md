@@ -1,6 +1,6 @@
 ---
-title: "FireBeetle"
-description: "Low power design with ESP-WROOM-32 module with 10 uA deep sleep"
+title: FireBeetle
+description: Low power design with ESP-WROOM-32 module with 10 uA deep sleep
 order: 15
 date: 2021-02-27T00:00:00+09:00
 image: /images/esp32/firebeetle_board.png
