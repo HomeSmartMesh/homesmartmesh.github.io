@@ -13,4 +13,5 @@ order: 1
 - uid: esp32.m5-atom-lite
 - uid: esp32.ttgo-t5-epaper
 - uid: esp32.thermostat-control
+- uid: esp32.esp32-d1-mini
 ```

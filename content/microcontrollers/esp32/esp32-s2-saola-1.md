@@ -1,7 +1,7 @@
 ---
 title: S2 Saola 1
 image: /images/esp32/esp32-s2-saola-1.webp
-tag: []
+tags: [S2, RGB]
 features:
     - ESP32-S2-WROVER
     - RGB LED (GPIO18)
