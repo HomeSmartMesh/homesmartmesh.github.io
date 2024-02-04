@@ -7,9 +7,8 @@ order: 12
 image: /images/esp32/ttgo-t-display.webp
 tags: [Board,Display]
 features:
-    - LCD ST7789V
-    - 1.14 Inch
-    - 135x240
+    - LCD 1.14 Inch
+    - ST7789V 135 x 240
     - "Charger : TP4054"
 ---
 # TTGO T-Display

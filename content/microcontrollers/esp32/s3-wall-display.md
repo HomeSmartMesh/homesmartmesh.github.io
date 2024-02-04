@@ -6,7 +6,7 @@ tags: [S3, display]
 features:
     - ESP32-S3-WROOM-1
     - 16 MB Flash, 8 MB PSRAM
-    - TFT LCD touch Display
+    - LCD touch 4 Inch
     - ST7701 480 x 480
 ---
 

@@ -6,10 +6,9 @@ date: 2020-12-25T00:00:00+09:00
 image: /images/ttgo_t5-epaper.png
 tags: [Board,Display]
 features:
-    - GxGDEW029Z10
-    - 2,9 Zoll
+    - ePaper 2.9 Inch
+    - GxGDEW029Z10 296 x 128
     - White / Black / Red
-    - 296x128
 ---
 
 ![img](/images/ttgo_t5-epaper.png)
