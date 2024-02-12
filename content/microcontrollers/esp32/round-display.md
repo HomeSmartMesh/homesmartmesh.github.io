@@ -25,7 +25,7 @@ features:
 
 # Pinout
 
-|Pin|Function|
+|Function|Pin|
 |---------|---|
 |TFT_MOSI | 7  |
 |TFT_SCLK  | 6  |
