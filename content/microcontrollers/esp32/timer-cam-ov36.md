@@ -6,11 +6,12 @@ date: 2020-12-26T00:00:00+09:00
 image: /images/esp32/timer-cam-3mp.png
 tags: [Board,Camera,LowPower]
 features:
+    - 4 MB Flash
+    - 8 MB PSRAM
     - 3 Mega Pixels OV3660
     - Fisheye lens DFOV 120°
     - Ultra low power, sleep current 2μA
     - 270mAh battery
-    - PSRAM 8MB
 ---
 
 ![Timer Cam 3MP](/images/esp32/timer-cam-3mp.png)

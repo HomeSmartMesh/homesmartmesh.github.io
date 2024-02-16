@@ -2,10 +2,13 @@
 import Layout from "@/layout/Layout.astro"
 import AstroMarkdown from '@/components/markdown/AstroMarkdown.astro'
 import {getDocuments, getEntry} from 'content-structure'
+import {remove_base} from '@/libs/assets.js'
 
-const {url} = Astro.params;
+let {url} = Astro.params;
+url = remove_base(url)
 console.log(`in [...path] > path = ${url}`)
 const entry = await getEntry({url:url})
+
 export async function getStaticPaths(){
 	const documents = await getDocuments({format:"markdown"})
 	const pages = documents.map((entry)=>({params:{url:entry.url}}))
