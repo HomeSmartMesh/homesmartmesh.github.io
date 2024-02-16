@@ -4,7 +4,8 @@ order: 1
 ---
 
 ```yaml cards
-- uid: esp32.s3-wall-display
+- uid: esp32.wall-display
+- uid: esp32.round-display
 - uid: esp32.s2-saola-1
 - uid: esp32.ttgo-t-display
 - uid: esp32.m5-stick-c-plus
