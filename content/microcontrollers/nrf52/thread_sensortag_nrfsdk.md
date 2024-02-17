@@ -1,32 +1,30 @@
 ---
-title: "nRF-SDK Thread"
+title: nRF-SDK Thread
 description: "deprecated nrf SDK samples for a Low power SensorTag with High quality measures of light, Temperature, Humidity and Pressure. Based on nRF52840 which supports Thread and other protocols"
+order: 4
 date: 2021-02-07T08:48:57+00:00
 lastmod: 2021-05-14T08:00:00+00:00
-images: ["/images/thread_sensortag/sensortag_v1.1.webp"]
-weight: 4
-toc: true
+image: /images/thread_sensortag/sensortag_v1.1.webp
 ---
-{{<load-svg-pan-zoom>}}
-{{<load-model_viewer>}}
-{{<load-photoswipe >}}
 
-{{<hint warning>}} this page is kept as documentation only as the old NRF-SDK is deprecated and this project is continued in the following link using the nRF-Connect SDK based on Zephyr.
-{{</hint>}}
+:::Caution
+this page is kept as documentation only as the old NRF-SDK is deprecated and this project is continued in the following link using the nRF-Connect SDK based on Zephyr.
+:::
 
-{{<icon_button relref="/docs/microcontrollers/nrf52/thread_sensortag/" text="Thread SensorTag" >}}
-{{<icon_button relref="/docs/networks/thread/" text="Networks / Thread" >}}
-{{<icon_button relref="/docs/frameworks/chip/" text="Frameworks / CHIP" >}}
+:button[]{link="/microcontrollers/nrf52/thread_sensortag/" label="Thread SensorTag" }
+:button[]{link="/protocols/thread/" label="Networks / Thread" }
+:button[]{link="/frameworks/chip/" label="Frameworks / CHIP" }
 
 
 # NRF-SDK Firmware
 
-{{<icon_button href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware" text="repo directory" icon="github" >}}
+:button[]{link="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware" link="repo directory" icon="github"}
 
 ## 01 dongle nrfsdk mqttsn client
 
-{{<hint info>}} Tested firmware with MQTT-SN gateway and Mosquitto broquer
-{{</hint>}}
+:::Note
+Tested firmware with MQTT-SN gateway and Mosquitto broquer
+:::
 
 * example based on `nRFSDK for Thread and Zigbee v4.1.0` which path should be declared in an environment variable `THREAD_SDK_ROOT`
 * Note that, as specified in the SDK file `components\toolchain\gcc\Makefile.windows` the used toolchain is `GNU Tools ARM Embedded/7 2018-q2-update`

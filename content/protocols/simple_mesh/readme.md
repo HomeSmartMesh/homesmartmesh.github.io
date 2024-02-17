@@ -15,7 +15,7 @@ features:
 # Simple Mesh Overview
 A simpler, more efficient alternative to Z-x, BL-x, Thread, standard RF protocols. Open source SW is provided for custom and off the shelf nRF SoC tags and dongles.
 
-:button[]{link="/docs/microcontrollers/nrf52/simplemesh_sensortag" label="Simple Mesh SensorTag" }
+:button[]{link="/microcontrollers/nrf52/simplemesh_sensortag" label="Simple Mesh SensorTag" }
 
 :button[]{link="https://github.com/HomeSmartMesh/sdk-hsm-sensortag" label="Simple Mesh and thread on Zephyr" icon="github" }
 
@@ -99,7 +99,7 @@ application/01_sensortag> make paramw
 * Smooth graphana logs with cyclic broadcast ~ 30 sec => battery life ~ 6 month on CR2032
 * `make paramw` detects the device uid and writes the config parameters available in [nodes.json](./nodes.json)
 
-:button[]{link=/docs/microcontrollers/nrf52/simplemesh_sensortag label="Simple Mesh SensorTag details..."}
+:button[]{link="/microcontrollers/nrf52/simplemesh_sensortag" label="Simple Mesh SensorTag details..."}
 
 ## uart dongle
 ```shell
@@ -115,7 +115,7 @@ application/04_uart_dongle> make paramw
 * RF Mesh repeater + RF Mesh to Host interface
 * `make paramw` detects the device uid and writes the config parameters available in [nodes.json](./nodes.json)
 
-:button[]{link=/docs/microcontrollers/nrf52/uart_dongle label="UART Dongle details..."}
+:button[]{link="/microcontrollers/nrf52/uart_dongle" label="UART Dongle details..."}
 
 ## usb dongle (nRF52840)
 ```shell
@@ -382,5 +382,5 @@ If you need support, want to ask a question or suggest an idea, you can join the
 :button[]{label="Home Smart Mesh - sdk-hsm-sensortag" link="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/discussions" icon="github"}
 
 :::details{summary="What are the alternatives to Simple-Mesh ?"}
-Simple Mesh is a playground for Mesh experimentation but does not intend to cover production grade features, therefore when it comes to 2.4 GHz mesh solutions, Standards such as [Zigbee](/docs/networks/zigbee/) and [Thread](/docs/networks/thread/) exist, provide all needed features and are more affordable as the documentation is open and the development is also open source.
+Simple Mesh is a playground for Mesh experimentation but does not intend to cover production grade features, therefore when it comes to 2.4 GHz mesh solutions, Standards such as `Zigbee` and [Thread](/protocols/thread/) exist, provide all needed features and are more affordable as the documentation is open and the development is also open source.
 :::

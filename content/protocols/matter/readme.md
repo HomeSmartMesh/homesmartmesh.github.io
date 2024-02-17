@@ -7,8 +7,9 @@ lastmod: 2021-05-13T08:00:00+00:00
 image: /design/Protocols.svg
 ---
 # Relates to
-:button{link="/docs/frameworks/zephyr/" label="Zephyr RTOS"}
-:button{link="/docs/networks/thread/"label="OpenThread Guide "}
+:button[]{link="/frameworks/zephyr/" label="Zephyr RTOS"}
+:button[]{link="/networks/thread/" label="OpenThread Guide"}
+
 previously known as `CHIP`
 
 :image[]{alt="Matter Overview" src="/images/matter/overview.png" width="400px" center}
@@ -30,9 +31,9 @@ The statement above dates back to 12 Feb 2021 shows the discomfort of the Zigbee
 
 ## Links
 
-:button{link="https://buildwithmatter.com/" icon="new"label="build with Matter website"}
-:button{link="https://github.com/project-chip/connectedhomeip" icon="github" label="Github Repo"}
-:button{link="https://zigbeealliance.org/wp-content/uploads/2020/08/Zigbee-Alliance-Associate-Member-Agreement-V2.pdf" icon="pdf" label="Associate Member Agreement"}
+:button[]{link="https://buildwithmatter.com/" label="build with Matter website" icon="new" }
+:button[]{link="https://github.com/project-chip/connectedhomeip" label="Github Repo" icon="github" }
+:button[]{link="https://zigbeealliance.org/wp-content/uploads/2020/08/Zigbee-Alliance-Associate-Member-Agreement-V2.pdf" label="Associate Member Agreement" icon="pdf" }
 
 ## Tools
 
@@ -40,7 +41,7 @@ The statement above dates back to 12 Feb 2021 shows the discomfort of the Zigbee
 
 **ZCL** : Zigbee Cluster Library
 
-:button{link="https://github.com/project-chip/zap" icon="github" label="ZAP Repo"}
+:button[]{link="https://github.com/project-chip/zap" label="ZAP Repo" icon="github"}
 
 on windows install with node `v14.15.1` failed, errors after manuall install of GTK filed an [issue](https://github.com/project-chip/zap/issues/101)
 
@@ -58,17 +59,17 @@ npm run zap
 # Chip Tool
 Command line helper tool :
 
-:button{link="https://github.com/project-chip/connectedhomeip/tree/master/examples/chip-tool" icon="github" label="examples / chip-tool"}
+:button[]{link="https://github.com/project-chip/connectedhomeip/tree/master/examples/chip-tool" label="examples / chip-tool" icon="github" }
 
 ## building the chip-tool
 
 clone, install dependencies and activate as described in this page
 
-:button{link="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/matter/BUILDING.html" icon="new" label="Building Matter"}
+:button[]{link="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/matter/BUILDING.html" label="Building Matter" icon="new" }
 
 continue building the tool as described in this page
 
-:button[]{link="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/matter/chip_tool_guide.html#building-and-running-the-chip-tool" icon="new" label="Building Matter"}
+:button[]{link="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/matter/chip_tool_guide.html#building-and-running-the-chip-tool" label="Building Matter" icon="new" }
 
 install nodejs and zap, only one mode is enough in case of no errors
 
@@ -93,10 +94,12 @@ cd connectedhomeip
 ## using the chip tool
 
 * pairing
+:::details{summary="Chip tool commands for pairing"}
 ```bash
 ./chip-tool pairing ble-thread <node_id> hex:<operational_dataset> <pin_code> <discriminator>
 ./chip-tool pairing ble-thread 3 hex:0e08000000000001000035060004001fffe00708fd14711ac39b204d04102fac2bd6e7c4308f3e8e0cedd893d20f0c0402a0f7f8000300001801021234030c5468726561644d617474657202081111111122222222051000112233445566778899aabbccddeeff 20202021 3840
 ```
+:::
 
 * toggle light
 
@@ -112,15 +115,15 @@ cd connectedhomeip
 The above diagram taken from the CHIP repo link in the button below, shows the integration of a CHIP application on top of the nRF Connect SDK.
 
 The MPSL is only required if needed to combine both bluetooth and Thread. Also the softDevice is only needed for bluetooth but not for Thread.
-:button[]{link="https://github.com/project-chip/connectedhomeip/blob/master/docs/guides/nrfconnect_platform_overview.md" icon="github" label="Reference in github CHIP repo"}
+:button[]{link="https://github.com/project-chip/connectedhomeip/blob/master/docs/guides/nrfconnect_platform_overview.md" label="Reference in github CHIP repo" icon="github" }
 
-:::Note
+:::Tip
 Note that `zephyr` and `connectedhomeip` will be managed as ncs dependencies with west from `nrf/west.yml`
 :::
 
 ## install
 * install nRF Connect SDK
-:button[]{link="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/gs_installing.html" icon="new" label="install nRF Connect SDK"}
+:button[]{link="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/gs_installing.html" label="install nRF Connect SDK" icon="new"}
 
 ```bash
 mkdir ~/ncs && cd ~/ncs
@@ -143,10 +146,9 @@ source zephyr/zephyr-env.sh
 * Update `prj.conf` params to match the thread border router parametrs (e.g. channel,...)
 * add CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n
 
-:button[]{link="https://github.com/project-chip/connectedhomeip/tree/master/examples/lighting-app/nrfconnect" icon="github" label="github readme guide"}
+:button[]{link="https://github.com/project-chip/connectedhomeip/tree/master/examples/lighting-app/nrfconnect" label="github readme guide" icon="github" }
 
-:button[]{link="/data/nRF52840_chip-v1.5.0-rc1.zip" icon="download" label="zephyr.hex v1.5.0-rc1"}
-
+:button[]{link="/data/nRF52840_chip-v1.5.0-rc1.zip" label="zephyr.hex v1.5.0-rc1" icon="download" }
 
 
 ```bash
@@ -161,7 +163,8 @@ note on config :
 * as CHIP is running over zephyr, a zephyr shell is provided alo through the RTT with config on the `# shell` section
 * the shown `CONFIG_OPENTHREAD_MASTERKEY` is a dummy key and has to be kept secret in a production environment
 
-:::details{Summary="prj.conf"}
+
+:::details{summary="prj.conf"}
 ```conf
 #
 #    Copyright (c) 2020 Project CHIP Authors
@@ -225,10 +228,9 @@ CONFIG_SHELL_BACKEND_RTT=y
 CONFIG_SHELL_BACKEND_SERIAL=n
 ```
 :::
-
 The log output is then as follows
 
-:::details[]{summary="RTT Log output"}
+:::details{summary="RTT Log output"}
 ```log
 I: nRF5 802154 radio initialized
 I: 4 Sectors of 4096 bytes
@@ -259,8 +261,8 @@ I: 834[ZCL] Using ZAP con
 :::
 
 Upon reset, more details in the log with regard to SetupQRCode
-:::details[]{summary="RTT Log output after reset"}
-```log
+:::details{summary="RTT Log output after reset"}
+```log 
 I: nRF5 802154 radio initialized
 I: 4 Sectors of 4096 bytes
 I: alloc wra: 0, 9c0
@@ -311,7 +313,7 @@ D: 763[DL]         fe80::2c53:1780:f20f:23ad/64 valid preferred
 :::
 
 Example shell commands execution on the RTT
-:::details[]{summary="RTT shell commands and output"}
+:::details{summary="RTT shell commands and output"}
 ```bash
 rtt:~$ ot masterkey
 00112233445566778899aabbccddeeff
@@ -348,9 +350,10 @@ D: 2488295[DL]    Mesh Prefix: fdde:ad00:beef::/64
 ```
 :::
 
+
 # Running on ESP32
 
-:button[]{link="https://codelabs.developers.google.com/codelabs/chip-get-started?utm_source=google-io&utm_medium=organic&utm_campaign=io21-learninglab#0" icon="new" label="CHIP Getting Started codelab"}
+:button[]{link="https://codelabs.developers.google.com/codelabs/chip-get-started?utm_source=google-io&utm_medium=organic&utm_campaign=io21-learninglab#0" label="CHIP Getting Started codelab" icon="new"}
 
 * tested on board `ESP32 wemos mini`
 * selected `ESP32-DevKitC` from menu config
@@ -359,7 +362,7 @@ D: 2488295[DL]    Mesh Prefix: fdde:ad00:beef::/64
 
 ## runlog
 pc chip-tool
-:::details[]{summary="chip-tool client - pairing"}
+:::details{summary="chip-tool client - pairing"}
 ```bash
 wass@ryzen:~/connectedhomeip/examples/chip-tool/out/debug$ ./chip-tool pairing bypass 10.0.0.27 11097
 CHIP:IN: TransportMgr initialized
@@ -383,7 +386,7 @@ CHIP:DL: BLE layer shutdown
 ```
 :::
 
-:::details[]{summary="chip-tool client - command"}
+:::details{summary="chip-tool client - command"}
 ```bash
 wass@ryzen:~/connectedhomeip/examples/chip-tool/out/debug$ ./chip-tool onoff toggle 1
 CHIP:IN: TransportMgr initialized
@@ -449,9 +452,10 @@ CHIP:DL: Inet Layer shutdown
 CHIP:DL: BLE layer shutdown
 ```
 :::
- 
+
 esp32 monitor
-:::details[]{summary="esp32 Matter server"}
+
+:::details{summary="esp32 Matter server"}
 ```bash
 E (20563) chip[IN]: Secure transport received message destined to node ID (0x0000000000BC5C01)
 I (20563) chip[IN]: Setting fabricID 1B669 on admin.
@@ -496,7 +500,7 @@ I (21493) chip[EM]: Received message of type 16 and protocolId 0
 # Comissioning
 Each device will generate a setup QR Code, in this case `CH:I34DV*-00 0C9SS0` which is a sectret not to be shared for production devices.
 
-:image[]{alt="QRCode Example" src="/images/chip/qrcode-example.png" width="200"}
+:image[]{alt="QRCode example" src="/images/chip/qrcode-example.png" width="200" }
 
 QR code generators services are abundant, but for production devices, better not to use an online generator and rely on an offline one to minimize risks.
 In order to facilitate the creation, an url is provided where the string to be converted is passed as argument in the `data=` param to an app that cretates the QR code on the page :
@@ -504,18 +508,19 @@ In order to facilitate the creation, an url is provided where the string to be c
 https://dhrishi.github.io/connectedhomeip/qrcode.html?data=CH%3AI34DV%2A-00%200C9SS0
 ## using an Android App
 
-:button[]{link="https://github.com/project-chip/connectedhomeip/blob/master/docs/guides/nrfconnect_android_commissioning.md" icon="github" label="github readme"}
+:button[]{ link="https://github.com/project-chip/connectedhomeip/blob/master/docs/guides/nrfconnect_android_commissioning.md" label="github readme" icon="github" }
 
 # FAQ - Discussion
 If you need support, want to ask a question or suggest an idea, you can join the discussion on the forum
-:button[]{link="https://github.com/HomeSmartMesh/website/discussions" icon="github" label="Home Smart Mesh - Discussions"}
+:button[]{ label="Home Smart Mesh - Discussions" link="https://github.com/HomeSmartMesh/website/discussions" icon="github" }
 
-:::details[]{summary="Is CHIP yet another invention to push consumers into buing new products ?"}
+:::details{summary="Is CHIP yet another invention to push consumers into buing new products ?"}
 * I do not think so. If existing devices have their own gateway and consumers already have them, there's no need to update.
 * If a user now buys a new product with the new technology (CHIP, Thread), its integration should not require a vendor specific gateway, this is an advantage for the user. This dissolves the lockin to a particular device supplier which is also for the users benefit.
 :::
 
-:::details[]{summary="Will CHIP replace zigbee ?"}
+
+:::details{summary="Will CHIP replace zigbee ?"}
 * For new products, I would expect more CHIP devices in the future than zigbee, although this is a bet that depends on how hard the transition is. Given that the underlying RF physical layer is the same `802.15.4`, hardware suppliers have no excuses about hardware incompatibilities.
 * Software is not an easy task, for already deployed devices, this will depend on the reliability of the firmware update, and if old devices do have enough capacity for a bigger sw stack. For new devices, all of the software stack is available as opensouce and any startup or maker can use it as described in this page.
 * Even if new products would have CHIP exclusively, the provided solutions will have to allow cohabitation of CHIP/Thread and zigbee for a long time. This is possible through usage of different channels or even the same with different network ids.
