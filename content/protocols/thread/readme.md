@@ -2,30 +2,23 @@
 title: Thread
 protocol: thread
 description: "Build and setup instruction for a Thread network. Compilation from different platforms comapatible with the nRF dongle"
-images: ["./openthread-environment-1.1.svg"]
+image: openthread-environment-1.1.svg
 ---
 
-# heading 
-<Button 
-  href="/docs/microcontrollers/nrf52/thread_sensortag/"
-  >Thread SensorTag</Button>
-<Button 
-  href="/docs/frameworks/zephyr/"
-  >Zephyr RTOS</Button>
-<Button 
-  href="/docs/frameworks/matter/"
-  >Project Matter</Button>
+:button[]{link="/microcontrollers/nrf52/thread_sensortag/" label="Thread SensorTag"}
+:button[]{link="/frameworks/zephyr/" label="Zephyr RTOS"}
+:button[]{link="/frameworks/matter/" label="Project Matter"}
 
 # Overview
-<object data="./openthread-environment-1.1.svg" />
+![Openthread Environment](./openthread-environment-1.1.svg)
 
 * some elements have link to the corresponding websites
 
-<Button href="https://openthread.io/">Open Thread</Button>
-<Button href="https://openthread.io/guides/thread-primer/ipv6-addressing">IPV6 adressing</Button>
-<Button href="https://openthread.io/guides/thread-primer/network-discovery">Network discovery</Button>
-<Button href="https://openthread.io/guides/border-router/docker/test-connectivity">test connectivity</Button>
-<Button href="https://openthread.io/reference">openthread API reference</Button>
+:button[]{link="https://openthread.io/" label="Open Thread"}
+:button[]{link="https://openthread.io/guides/thread-primer/ipv6-addressing" label="IPV6 adressing"}
+:button[]{link="https://openthread.io/guides/thread-primer/network-discovery" label="Network discovery"}
+:button[]{link="https://openthread.io/guides/border-router/docker/test-connectivity" label="test connectivity"}
+:button[]{link="https://openthread.io/reference" label="openthread API reference"}
 
 ## Cheat sheet
 * IPv6 bit length : 128 bit = 8x 16 ibts => `00b1:00b2:00b3:00b4:00b5:00b6:00b7:00b8`
@@ -41,16 +34,16 @@ images: ["./openthread-environment-1.1.svg"]
 
 ## Specification
 
-<Button href="https://www.threadgroup.org/ThreadSpec">request the specification...</Button>
+:button[]{link="https://www.threadgroup.org/ThreadSpec" label="request the specification"}
 
 ## Tools
 
-<Button href="https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Connect-for-desktop/Download#infotabs">nRF Connect for desktop...</Button>
-<Button href="https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Command-Line-Tools/Download#infotabs">nRF Command Line Tools...</Button>
-<Button href="https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads/7-2018-q2-update">GNU Arm Embedded Toolchain v7-2018-q2</Button>
-<Button href="https://infocenter.nordicsemi.com/topic/struct_sdk/struct/sdk_thread_zigbee_latest.html">nRF SDK for Thread and Zigbee v4.1.0...</Button>
-<Button href="https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK-for-Thread-and-Zigbee/Download#infotabs">download the SDK</Button>
-<Button href="http://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/gs_assistant.html">nRF Connect SDK installing...</Button>
+:button[]{link="https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Connect-for-desktop/Download#infotabs" label="nRF Connect for desktop"}
+:button[]{link="https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Command-Line-Tools/Download#infotabs" label="nRF Command Line Tools"}
+:button[]{link="https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads/7-2018-q2-update" label="GNU Arm Embedded Toolchain v7-2018-q2"}
+:button[]{link="https://infocenter.nordicsemi.com/topic/struct_sdk/struct/sdk_thread_zigbee_latest.html" label="nRF SDK for Thread and Zigbee v4.1.0"}
+:button[]{link="https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK-for-Thread-and-Zigbee/Download#infotabs" label="download the SDK"}
+:button[]{link="http://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/gs_assistant.html" label="nRF Connect SDK installing"}
 
 * install `nRF Connect for deskop`
 * From within nRF connect, install `Toolchain Manager`
@@ -73,8 +66,8 @@ A Thread network setup contains the following Nodes
 To create a border router, a usb dongle needs to be flashed (Radio Co-Processor) and attached to a raspberry pi where the following services are installed.
 ## raspberry pi
 
-<Button href="https://openthread.io/codelabs/openthread-border-router-nat64#0" >Border Router with NAT64</Button>
-<Button href="https://openthread.io/guides/border-router/build#set-up-the-border-router" >Setup - OpenThread...</Button>
+:button[]{link="https://openthread.io/codelabs/openthread-border-router-nat64#0" label="Border Router with NAT64"}
+:button[]{link="https://openthread.io/guides/border-router/build#set-up-the-border-router" label="Setup - OpenThread"}
 
 install git if not already available
 
@@ -107,7 +100,7 @@ These services should now be available :
 * `otbr-agent` : access the usb device and creates wpan0
 * `otbr-web`   : creates the OTBorderRouter web server
 * `wpa_supplicant`
-<details title="sudo systemctl status" >
+:::details{summary="sudo systemctl status"}
 ```bash
 pi@metal:~ $ sudo systemctl status
 ● metal
@@ -198,10 +191,10 @@ pi@metal:~ $ sudo systemctl status
              └─dhcpcd.service
                └─473 /sbin/dhcpcd -q -b
 ```
-</details>
+:::
 
 After forming a network, the interface would look as follows 
-<details title="ifconfig wpan0" >
+:::details{summary="ifconfig wpan0"}
 ```bash
 wpan0: flags=4305<UP,POINTOPOINT,RUNNING,NOARP,MULTICAST>  mtu 1280
         inet6 fd85:454:6529:a0c5:9ebb:d761:b6d:df4e  prefixlen 64  scopeid 0x0<global>
@@ -215,23 +208,25 @@ wpan0: flags=4305<UP,POINTOPOINT,RUNNING,NOARP,MULTICAST>  mtu 1280
         TX packets 9  bytes 1524 (1.4 KiB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
-</details>
+:::
 
 ## Radio Co-Processor (RCP)
-<hint class="warning">Using a deprecated version of RCP not matching the raspberry pi installed otbr-agent version will prevent it from running </hint>
+:::Caution
+Using a deprecated version of RCP not matching the raspberry pi installed otbr-agent version will prevent it from running
+:::
 
 * Ready binaries : are provided below. Versions with `=USB` can be flashed with nRF-Connect `Programmer` tool and the defaul `nRF52840-usb dongle` bootloader.
 It is also possible to directly flash a non USB version with an SWD debugger or recover the original bootloader (with an SWD debugger) from the hex available from [this post](https://devzone.nordicsemi.com/f/nordic-q-a/40924/how-can-i-restore-the-original-bootloader-of-a-pca10059)
 
-<Button href="/data/ot-rcp-com-1.2-usb_27.08.2021.hex.zip" >ot-rcp 27.08.2021 OT_BOOTLOADER=USB</Button>
-<Button href="/data/ot-rcp-com-1.2_27.08.2021.hex.zip" >ot-rcp 27.08.2021</Button>
-<Button href="/data/ot-rcp_thread-reference-20191113_nRF52840_dongle_no_bootloader.zip" >ot-rcp thread-reference-20191113</Button>
-<Button href="/data/ot-rcp_de3ddb7169_20.03.2021_USB_BL-USB.zip" >ot-rcp 20.03.2021 BOOTLOADER=USB</Button>
-<Button href="/data/ot-rcp_de3ddb7169_20.03.2021_USB_BL-No.zip" >ot-rcp 20.03.2021 No Bootloader</Button>
+:button[]{link="/data/ot-rcp-com-1.2-usb_27.08.2021.hex.zip" label="ot-rcp 27.08.2021 OT_BOOTLOADER=USB"}
+:button[]{link="/data/ot-rcp-com-1.2_27.08.2021.hex.zip" label="ot-rcp 27.08.2021"}
+:button[]{link="/data/ot-rcp_thread-reference-20191113_nRF52840_dongle_no_bootloader.zip" label="ot-rcp thread-reference-20191113"}
+:button[]{link="/data/ot-rcp_de3ddb7169_20.03.2021_USB_BL-USB.zip" label="ot-rcp 20.03.2021 BOOTLOADER=USB"}
+:button[]{link="/data/ot-rcp_de3ddb7169_20.03.2021_USB_BL-No.zip" label="ot-rcp 20.03.2021 No Bootloader"}
 
 
 * Manual build : Link to the official documentation of build instructions
-<Button href="https://github.com/openthread/ot-nrf528xx/blob/main/src/nrf52840/README.md" >new nRF52840 Build instructions</Button>
+:button[]{link="https://github.com/openthread/ot-nrf528xx/blob/main/src/nrf52840/README.md" label="new nRF52840 Build instructions"}
 
 Build instructions summary
 ```bash
@@ -248,7 +243,9 @@ nrfjprog -f nrf52 --chiperase --program ot-rcp-com-1.2.hex --reset
 
 
 ## udp test
-<hint class="warning">Note that for networking tests, a border router installation is recommended or network between docker and the host has to be configured.</hint>
+:::Caution
+Note that for networking tests, a border router installation is recommended or network between docker and the host has to be configured.
+:::
 
 
 The [openthread-setup](#openthread---setup) should be performed to be able to install and use `socat`.
@@ -258,7 +255,10 @@ $sudo ot-ctl
 >udp open
 >udp bind :: 4242
 ```
-<hint class="warning">A current issue is that the `wpan0` adapter is lost after closing the ot-ctl command line</hint>
+:::Caution
+A current issue is that the `wpan0` adapter is lost after closing the ot-ctl command line
+:::
+
 Listening using `socat`:
 ```shell
 $socat UDP6-LISTEN:4242,fork STDOUT
@@ -302,7 +302,7 @@ sudo ot-ctl ipaddr
 
 connect on the raspberry pi url `http://10.0.0.41/`
 
-<img src="./OTBR_server.png"/>
+![OTBR Server](./OTBR_server.png)
 
 * on the left menu click on `Join` then select the required paramters (e.g. Channel,...) then click on `FORM` 
 ## wireshark sniffing
@@ -314,7 +314,7 @@ connect on the raspberry pi url `http://10.0.0.41/`
 
 When Forming a network, some Pakets can be sniffed including advertisment
 
-<img src="./wireshark_startup.png"/>
+![Wireshark Startup](./wireshark_startup.png)
 
 
 # MQTT Sensors Node
@@ -322,9 +322,9 @@ When Forming a network, some Pakets can be sniffed including advertisment
 
 * Example firmware `mqttsn_sleepy_publisher` and `mqttsn_client_publisher` are a port of the nRFSDK example from PCA10056 which was the only supported board to the PCA10059, the nRF52840 USB dongle, therefore the search gateway, connect, publish sequence have been merged in on button and run cyclically on each new press.
 
-<Button href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware/mqttsn_sleepy_publisher" icon="github">mqttsn_sleepy_publisher</Button>
-<Button href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware/mqttsn_client_publisher" icon="github">mqttsn_client_publisher</Button>
-<Button href="https://www.oasis-open.org/committees/download.php/66091/MQTT-SN_spec_v1.2.pdf" icon="new">MQTT-SN_spec_v1.2.pdf</Button>
+:button[]{link="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware/mqttsn_sleepy_publisher" icon="github" label="mqttsn_sleepy_publisher"}
+:button[]{link="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware/mqttsn_client_publisher" icon="github" label="mqttsn_client_publisher"}
+:button[]{link="https://www.oasis-open.org/committees/download.php/66091/MQTT-SN_spec_v1.2.pdf" icon="new" label="MQTT-SN_spec_v1.2.pdf"}
 
 
 useful commands
@@ -334,8 +334,7 @@ sudo /usr/sbin/MQTT-SNGateway -f /etc/paho-mqtt-sn-gateway.conf
 sudo nano /etc/paho-mqtt-sn-gateway.conf
 ```
 
-
-<details title="paho-mqtt-sn-gateway.conf" >
+:::details{summary="paho-mqtt-sn-gateway.conf"}
 ```conf
 #**************************************************************************
 # Copyright (c) 2016-2019, Tomoaki Yamaguchi
@@ -406,7 +405,7 @@ ApiMode=2
 # LOG
 ShearedMemory=NO;
 ```
-</details>
+:::
 
 Test vector for sending a `SEARCHGW` message to the MQTT-SQ gateway service
 ```bash
@@ -417,7 +416,7 @@ echo -n -e "030101" | xxd -r -p | nc -u fd11:1111:1122:0:98bf:60c7:9431:ee90 471
 ## Firmware flow diagram
 running the firmware example `mqtt_client_publisher` results in the following logs
 
-<details title="MQTT-SN gateway log" >
+:::details{summary="MQTT-SN gateway log"}
 ```shell
 pi@raspberrypi:~ $ sudo /usr/sbin/MQTT-SNGateway -f /etc/paho-mqtt-sn-gateway.conf
 ClientList can not open the Predefined Topic List.     /etc/predefinedTopic.conf
@@ -469,9 +468,9 @@ ClientList can not open the Predefined Topic List.     /etc/predefinedTopic.conf
 20210213 194602.547   PUBACK      0004  <===  nRF52840_publisher                  40 02 00 04
 20210213 194602.547   PUBACK      0004  --->  nRF52840_publisher                  07 0D 00 01 00 04 00
 ```
-</details>
+:::
 
-<details title="Firmware J-Link RTT log">
+:::details{summary="Firmware J-Link RTT log"}
 ```shell
 <info> app_timer: RTC: initialized.
 <info> app: Thread version   : OPENTHREAD/20191113-00534-gc6a258e3; NRF52840; Apr  5 2020 21:53:43
@@ -502,13 +501,12 @@ ClientList can not open the Predefined Topic List.     /etc/predefinedTopic.conf
 <info> app: Wake up next times
 <info> app: MQTT-SN event: Client has successfully published content.
 ```
-</details>
+:::
 
 
 ## Firmware search gateway
 
-<Panzoom src="./mqtt-sn gateway.svg" />
-
+![MQTT SN Gateway](./mqtt-sn gateway.svg)
 
 # Building on other frameworks
 ## Platformio
@@ -520,11 +518,11 @@ ClientList can not open the Predefined Topic List.     /etc/predefinedTopic.conf
 # Build with Matter Node
 As the `Matter Protocol` can run over `Thread`, it is possible to connect Matter applications.
 
-<Button href="/docs/frameworks/matter/">More about Project Matter</Button>
+:button[]{link="/docs/frameworks/matter/" label="More about Project Matter"}
 
 # Command Line Interface
 
-<Button href="https://github.com/openthread/openthread/blob/main/src/cli/README.md#openthread-cli-reference">Openthread CLI Reference</Button>
+:button[]{link="https://github.com/openthread/openthread/blob/main/src/cli/README.md#openthread-cli-reference" label="Openthread CLI Reference"}
 
 ## cli on border router
 in this case the dongle is flashed with ot-rcp.hex not with ot-cli.hex
@@ -538,7 +536,7 @@ sudo ot-ctl
 
 * building with openthread repo
 
-<Button href="https://github.com/openthread/ot-nrf528xx/blob/main/src/nrf52840/README.md">new nRF52840 Build instructions</Button>
+:button[]{link="https://github.com/openthread/ot-nrf528xx/blob/main/src/nrf52840/README.md" label="new nRF52840 Build instructions"}
 ```bash
 cd ~/ot-nrf528xx
 ./script/bootstrap
@@ -549,8 +547,8 @@ cd build/bin/
 arm-none-eabi-objcopy -O ihex ot-cli-ftd ot-cli-ftd-com-join.hex
 ```
 
-<Button href="/data/ot-cli-ftd_thread-reference-20191113_nRF52840_dongle_no_bootloader.zip">ot-cli-ftd thread-reference-20191113</Button>
-<Button href="/data/ot-cli-ftd-com-join-11.06.2021.hex">ot-cli-ftd thread-reference-20191113</Button>
+:button[]{link="/data/ot-cli-ftd_thread-reference-20191113_nRF52840_dongle_no_bootloader.zip" label="ot-cli-ftd thread-reference-20191113"}
+:button[]{link="/data/ot-cli-ftd-com-join-11.06.2021.hex" label="ot-cli-ftd thread-reference-20191113"}
 
 ```bash
 nrfjprog -f nrf52 --eraseall
@@ -559,7 +557,7 @@ nrfjprog -f nrf52 --program ot-cli-ftd.hex --sectorerase --verify
 
 * building with nRFSDK
 
-<Button href="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/samples/openthread/cli/README.html">new nRF52840 Build instructions</Button>
+:button{link="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/samples/openthread/cli/README.html" label="new nRF52840 Build instructions"}
 
 
 ```bash
@@ -599,7 +597,7 @@ at this stage the `state` command should log `child`
 
 wireshark should log the join as follows
 
-<img src="./child_join.png"/>
+![Child join](./child_join.png)
 
 * it's possible to ping with the router ip
 
@@ -611,13 +609,13 @@ Done
 
 a good exercice is to commission a device through CLI
 
-<Button href="https://openthread.io/guides/border-router/external-commissioning">External commitioning...</Button>
+:button[]{link="https://openthread.io/guides/border-router/external-commissioning" label="External commitioning"}
 
 
 ## cli reference
-<Button href="https://github.com/openthread/openthread/blob/master/src/cli/README.md">thread cli reference</Button>
+:button[]{link="https://github.com/openthread/openthread/blob/master/src/cli/README.md" label="thread cli reference"}
 
-<details title="ncp cli. Click to expand..." >
+:::details[]{summary="ncp cli. Click to expand..."}
 ```shell
 cu -l /dev/ttyACM0 -s 115200
 panid 0xabcd
@@ -639,10 +637,12 @@ ipaddr
 ipmaddr
 leaderdata
 ```
-</details>
+:::
 
 # Commissioning
-<hint class="warning">note that the security concept is based on the confidentiality of the masterkey, the one used here is a dummy key used for demo purpose only. Setting a predefined masterkey is optional, the stack will generate a random one that can be retrieved with the `masterkey` command if it's needed for analysis purpose.</hint>
+:::Caution
+note that the security concept is based on the confidentiality of the masterkey, the one used here is a dummy key used for demo purpose only. Setting a predefined masterkey is optional, the stack will generate a random one that can be retrieved with the `masterkey` command if it's needed for analysis purpose.
+:::
 
 * make sure you use cli dongles with Commissioner and joiner compile options, see [cli dongle](#cli-dongle)
 * [openthread commissioning](https://openthread.io/guides/build/commissioning)
@@ -673,7 +673,7 @@ ifconfig up
 joiner start ABCDE2
 ```
 
-<details title="commissioner and joiner logs" >
+:::details{summary="commissioner and joiner logs"}
 * commissioner log
 ```bash
 > commissioner start
@@ -703,7 +703,7 @@ Done
   * DTLSv1.2 : Server Hello, Server Key Exchange, Server Hello Done
   * DTLSv1.2 : Client Key Exchange, Change Cipher Spec, Encrypted Handshake Message
   * ...
-</details>
+:::
 
 # Thread UDP packets
 * Thread UDP packets are encapsulated using 6LoWPAN which has a payload of 88 Bytes, that's why such a json UDP text message 
@@ -712,201 +712,51 @@ thread_tags/7009D837C7BB557A{"alive":18673,"voltage":3.106,"light":184.948,"temp
 ```
 is split in two packets where each has an ACK. From one side that's a lot x4 times of what the RF power consumption could be for a simple broadcast, but at the same time it avoids taking care of manually adapting the program behaviour to accomodate the protocol. Also keeping a json text format instead of binary avoids a middle layer converting binary to text readable by apps, that would cost a bottleneck dependency between each device and the gateway.
 
-<img src="./udp over 6LoWPAN.png"/>
+![udp over 6LowPAN](./udp over 6LoWPAN.png)
 
 # FAQ - Discussion
 * If you need support, want to ask a question or suggest a different answer, you can join the discussion on the github forum
-<Button href="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/discussions">Home Smart Mesh - OpenThread category</Button>
+:button[]{link="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/discussions" label="Home Smart Mesh - OpenThread category"}
 
 
 * see also
-<Button href="https://groups.google.com/g/openthread-users">google groups openthread users</Button>
-<Button href="https://www.threadgroup.org/support#faq">threadgroup FAQ</Button>
+:button[]{link="https://groups.google.com/g/openthread-users" label="google groups openthread users"}
+:button[]{link="https://www.threadgroup.org/support#faq" label="threadgroup FAQ"}
 
-<faq>
-What is the difference between RCP/NCP Thread Stack ?
-/*separators*/
+
+:::details{summary="What is the difference between RCP/NCP Thread Stack ?"}
 RCP stands for Radio Co-Processor and only includes the MAC Layer not the full Thread Core stack. More details : https://openthread.io/platforms#network-co-processor-ncp
-/* big section separator */
-What is the link between FTD/ETD Thread Devices ?
-/*separators*/
-FTD = `Full Thread device` can be a Thread router or more, an ETD `End Thread Device` can be M:minial or S:Sleepy and in both cases does not route packets. More details https://openthread.io/guides/thread-primer/node-roles-and-types
-/* big section separator */
-What is the difference between using an RCP/NCP and running Thread as a stand alone device ?
-/*separators*/
+:::
+
+:::details{summary="What is the difference between FTD/ETD Thread Devices ?"}
+FTD = `Full Thread device` can be a Thread router or more, an ETD `End Thread Device` can be `M:minial` or `S:Sleepy` and in both cases does not route packets. More details https://openthread.io/guides/thread-primer/node-roles-and-types
+:::
+
+:::details{summary="What is the difference between using an RCP/NCP and running Thread as a stand alone device ?"}
 The difference only lays on the partitioning of the application, in the RCP/NCP the application runs on the Host be it a raspberry pi or another uC, in the stand alone the whole thread stack and app run on the same device. We can think of the NCP as example like the CLI=`command line interface` Thread utility, but the protocol is not text mode rather binary. If the host is an uC itself, the question would be, why using two uC and if it is possible rather to merge them in just one, a corner case might need that like for example a double uC with WiFi and thread capabiltiy.
-/* big section separator */
-Does the Thread Topolog Monitor use the same CLI firmware as the openthread CLI ?
-/*separators*/
+:::
+
+:::details{summary="Does the Thread Topolog Monitor use the same CLI firmware as the openthread CLI ?"}
 No, the Thread Topology monitor TTM comes with it own firmware that needs to be flashed
-/* big section separator */
-How does the Thread Topolog Monitor work ? What can it see ?
-/*separators*/
+:::
+
+:::details{summary="How does the Thread Topolog Monitor work ? What can it see ?"}
 The Thread Topolog Monitor TTM is an active node on the network, it needs the credentials to be able to join it and only then it can retrieve info from the network it will also display itself in the network.
-/* big section separator */
-What is the difference between the Thread Topology Monitor and the 802.15.4 sniffer ?
-/*separators*/
+:::
+
+:::details{summary="What is the difference between the Thread Topology Monitor and the 802.15.4 sniffer ?"}
 The 802.15.4 sniffer does not join the network and is totally passive. It can listen to all the traffic of the channel it is in, including all pan ids. If it has the master key, it can then decript data from the corresponding network.
-/* big section separator */
-can I run openthread with Arduino ?
-/*separators*/
-No, at least not at the moment and not within a native integration similar to the wifi and network in arduino. Despite being known to be an IDE, under the hoods, Arduino is also a framework. The current preferred and supported framework for openthread is Zephyr-OS.
-/* big section separator */
-can I run openthread with platformio ?
-/*separators*/
+:::
+
+:::details{summary="can I run openthread with Arduino ?"}
+No, at least not at the moment and not within a native integration similar to the wifi and network in arduino, see the list of libraries and the connectivity section https://www.arduino.cc/reference/en/libraries/. Despite being known to be an IDE, under the hoods, Arduino is also a framework. The current preferred and supported framework for openthread is Zephyr-OS.
+:::
+
+:::details{summary="can I run openthread with platformio ?"}
 This is under investigation and should be available soon. The current platformio integration of Zephyr-OS does not include openthread, but this is likely to change any time soon.
-/* big section separator */
-Which other families than nRF from Nordic support Thread ?
-/*separators*/
+:::
+
+:::details{summary="Which other families than nRF from Nordic support Thread ?"}
 Many platforms are supported including but not limited to `Cascoda`, `NXP`, `Qorvo` which extends to uwb variant, `Samsung`, `Silicon Labs`, `STMicroelectronics`, `Synopsys`, `Telink Semiconductors`, `TI`  more details on openthread [platforms](https://openthread.io/platforms).
 Note that `Espressif` although listed in the platforms, does not support `802.15.4` therefore can only run the openthread stack as a host that requires an external RCP from the previous list.
-</faq>
-
-# History
-In the history are moved sections that are deprecated or no longer relevant kept for historical info only
-## Network Co-Processor (NCP)
-Note, see the RCP version above for recent border routers. Given the open source nature of OpenThread, it is quite challenging to find the right build instructions and version match to the right border router. See [Vendor support NCP](https://openthread.io/platforms#network-co-processor-ncp) for mode details. Different NCP versions are listed here.
-### Nordic - nRF 4.1.0
-* successfull match between the SDK and Rpi image, both available from the link below
-  * nRFSDK for Thread and Zigbee v4.1.0
-  * RaspPi OT Border Router Demo v4.1.0-1.alpha
-<Button href="https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK-for-Thread-and-Zigbee/Download">nRF SDK Download</Button>
-
-
-build and flash the ncp example
-```bash
->cd "examples\thread\ncp\ftd\usb\pca10059\mbr\armgcc\Makefile"
->make
->make flash_mbr
->make flash
-```
-
-### Zephyr v2.4.99
-* This section is about the `nRF Connect SDK` using the `zephyr` directory
-* successfully built and tested with `v1.4.99-dev1` which contains Zephyr version `2.4.99`
-* recognised as USB device
-<Button href="http://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/gs_assistant.html">nRF Connect SDK installing...</Button>
-
-* add `CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n` to `prj.conf`
-
-```bash
-cd nrf/v1.4.99-dev1/zephyr/samples/net/openthread/ncp
-west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE="prj.conf overlay-usb-nrf-br.conf"
-```
-
-### Nordic - nRF Connect
-* This section is about the `nRF Connect SDK` using the `nrf` directory
-* Not yet successfull with the nRF52 dongle, likely due to the missing usb overlay
-<Button href="http://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/gs_assistant.html">nRF Connect SDK installing...</Button>
-
-* add `CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n` to `prj.conf`
-
-```bash
-cd nrf/v1.4.99-dev1/nrf/samples/openthread/ncp
-west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE="prj.conf overlay-logging.conf"
-```
-
-### Open Thread
-
-* Available pre-build ncp firmware
-
-<Button href="https://openthread.io/platforms/co-processor/firmware#download_nrf52840_firmware_image">nRF52840 ncp firmare...></Button>
-
-```cmd
-nrfjprog -f nrf52 --program ot-ncp-ftd-gd81d769e-nrf52840.hex --sectorerase --verify
-```
-
-* for build instructions see the rcp building steps in the [rcp OpenThread](#openthread) section, the build commands generates both npc and rcp elf files.
-
-
-## Nordic - sdcard image
-
-* download a ready raspberry pi image
-* successfully tested with the Nordif Firmware from the SDK v4.1.0
-
-<Button href="https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK-for-Thread-and-Zigbee/Download#infotabs" >Download the nRF5 SDK for Thread and Zigbee...</Button>
-
-## OpenThread - docker
-<Button href="https://openthread.io/guides/border-router/docker/run" >Reference on 'Run OTBR Docker'...</Button>
-### latest
-<hint class="warning">This method only deploys the lates available docker container, see [version](#version) for a specific version.</hint>
-* use with the OpenThread dongle firmware [detailed above](#openthread)
-* The docker command below runs deamonized (in the background) and maps port 80.
-* Note that restarting the same container does not work there fore `-rm` would help restart a new container each time
-* Two issues happen when mapping port 80 only, the `Topology` menu does not show anything and the Android commissioning App can't reach the border router so a falback on `host` networking with the second docker command solves these issues.
-```bash
-docker run --rm --name otbr-metal -d --sysctl "net.ipv6.conf.all.disable_ipv6=0 \
-        net.ipv4.conf.all.forwarding=1 net.ipv6.conf.all.forwarding=1" \
-        -p 80:80 --dns=127.0.0.1 --volume \
-        /dev/ttyACM0:/dev/ttyACM0 --privileged openthread/otbr \
-        --radio-url spinel+hdlc+uart:///dev/ttyACM0
-
-docker run --rm --name otbr-metal -d \
-  --sysctl "net.ipv6.conf.all.disable_ipv6=0 net.ipv4.conf.all.forwarding=1 net.ipv6.conf.all.forwarding=1" \
-  --network host --dns=127.0.0.1 \
-  --volume /dev/ttyACM0:/dev/ttyACM0 \
-  --privileged openthread/otbr \
-  --radio-url spinel+hdlc+uart:///dev/ttyACM0
-```
-Below commands to run in separate windows
-* listen to the conainer logs
-* open a shell in the container
-* open a command line to the RCP
-```bash
-docker logs --follow otbr-metal
-docker exec -it otbr-metal /bin/bash
-ot-ctl
-```
-### version
-These commands allow creating a docker image based on a specific commit, e.g. for testing with Thread version 1.1 instead of 1.2. The image is built with this [Dockerfile](https://github.com/openthread/ot-br-posix/blob/main/etc/docker/Dockerfile).
-```bash
-git clone https://github.com/openthread/ot-br-posix
-cd ot-br-posix
-git checkout 4b6d3b863f
-#git checkout 615de5  #2021-03-22
-#git checkout thread-br-certified-20180819
-git submodule update --init --recursive
-docker build --no-cache -t openthread/otbr -f etc/docker/Dockerfile .
-```
-Now running the same command above from the section [latest](#latest) with the same image `openthread/otbr` will run the newly built image.
-
-
-##  RCP - Zephyr v2.5.99
-* Zephyr version `2.5.99` has a `coprocessor` directory replacing the old `ncp`
-* For details on Zephyr install see
-<Button href="/docs/frameworks/zephyr/" >Zephyr RTOS</Button>
-
-* add `CONFIG_BOARD_HAS_NRF5_BOOTLOADER=n` to `prj.conf`
-
-```bash
-cd zephyrproject
-source zephyr/zephyr-env.sh
-cd zephyr/samples/net/openthread/coprocessor
-west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE="prj.conf overlay-rcp.conf overlay-usb-nrf-br.conf"
-cd build/zephyr
-nrfjprog -f nrf52 --program zephyr.hex --sectorerase --verify
-```
-
-<details title="border router error details...">
-tested version in zephyr 2.5.99 and border router openthread docker
-```bash
-Mar  6 13:00:06 3d926b9c2cee avahi-daemon[129]: Server startup complete. Host name is 3d926b9c2cee.local. Local service cookie is 2646371747.
-Mar  6 13:00:07 3d926b9c2cee otbr-agent[145]: [CRIT]-PLAT----: HandleRcpTimeout() at ../../third_party/openthread/repo/src/lib/spinel/radio_spinel_impl.hpp:2168: RadioSpinelNoResponse
-```
-</details>
-
-
-## Radio Co-Processor (RCP) from main repo
-<Button href="https://github.com/openthread/openthread/tree/master/examples/platforms/nrf528xx/nrf52840" >nRF52840 Build instructions</Button>
-
-```bash
-cd ~/opentrhead
-./script/bootstrap
-./bootstrap
-sudo rm -rf output/
-make -f examples/Makefile-nrf52840 USB=1
-cd output/nrf52840/bin/
-arm-none-eabi-objcopy -O ihex ot-rcp ot-rcp.hex
-nrfjprog -f nrf52 --eraseall
-nrfjprog -f nrf52 --program ot-rcp.hex --sectorerase --verify
-```
+:::

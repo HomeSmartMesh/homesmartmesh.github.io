@@ -59,7 +59,7 @@ see below the [Drivers & Custom Mesh protocol](#drivers--custom-mesh-protocol) s
 * [USB : dongle firmware - directory](https://github.com/nRFMesh/nRF52_Mesh/tree/master/applications/08_usb_dongle)
 
 ```shell
-    cu -l /dev/ttyACM0 -s 460800 
+cu -l /dev/ttyACM0 -s 460800 
 ```
 
 ![nRF Serial](/images/nrf_serial.gif)
@@ -67,13 +67,13 @@ see below the [Drivers & Custom Mesh protocol](#drivers--custom-mesh-protocol) s
 subscribe to topic
 
 ```shell
-    mosquitto_sub -t 'nrf/#' -v | ts
+mosquitto_sub -t 'nrf/#' -v | ts
 ```
 
 start nrf_mesh [py/nrf_mesh](https://github.com/HomeSmartMesh/raspi/tree/master/py/nrf_mesh) from [raspi](https://github.com/HomeSmartMesh/raspi/) Project
 
 ```shell
-    python3 nrf_mesh.py
+python3 nrf_mesh.py
 ```
 
 ![nRF MQTT](/images/nrf_mqtt.gif)
@@ -86,8 +86,8 @@ This custom sensors RF mesh can expand to cover a home area. Onces connected to 
 
 ## sensor tag
 ```shell
-    application/01_sensortag> make flash
-    application/01_sensortag> make paramw
+application/01_sensortag> make flash
+application/01_sensortag> make paramw
 ```
 
 ![nRF52832 Sensortag](/images/nRF52832_sensortag.png)
@@ -103,8 +103,8 @@ This custom sensors RF mesh can expand to cover a home area. Onces connected to 
 
 ## uart dongle
 ```shell
-    application/04_uart_dongle> make flash
-    application/04_uart_dongle> make paramw
+application/04_uart_dongle> make flash
+application/04_uart_dongle> make paramw
 ```
 
 ![Dongle](/images/dongle.png)
@@ -119,8 +119,8 @@ This custom sensors RF mesh can expand to cover a home area. Onces connected to 
 
 ## usb dongle (nRF52840)
 ```shell
-    application/08_usb_dongle> make flash
-    application/08_usb_dongle> make paramw
+application/08_usb_dongle> make flash
+application/08_usb_dongle> make paramw
 ```
 
 ![nRF52840 Dongle Debug](/images/nRF52840-dongle-debug.png)
@@ -265,7 +265,7 @@ Once in the application directory just use ```make conf``` to call a cmsis [conf
 The repo contais a directory for boards declaration "boards/" and a directory for applications "applications/". Although every application targets a particular board, it is possible to use any application for any other board. In the makefile a sinlge line has to be edited
 
 ```shell
-    USED_BOARD := BOARD_NRF52_SENSOR_TAG
+USED_BOARD := BOARD_NRF52_SENSOR_TAG
 ```
 
 ## PPI automation
@@ -281,7 +281,7 @@ The programmable peripheral interconnect is used for "real" real-time operations
 ### Commands
 get mesh node id of attached dongle
 ```shell
-    mosquitto_pub -t 'cmd/request/get_node_id' -m ''
+mosquitto_pub -t 'cmd/request/get_node_id' -m ''
 ```
 
 Response
@@ -290,36 +290,36 @@ Response
 
 get channel of attached dongle
 ```shell
-    mosquitto_pub -t 'cmd/request/get_channel' -m ''
+mosquitto_pub -t 'cmd/request/get_channel' -m ''
 ```
 
 Response
 ```shell
-    cmd/response/get_channel {"cmd": "get_channel", "channel": "2"}
+cmd/response/get_channel {"cmd": "get_channel", "channel": "2"}
 ```
 
 ### Remote Commands
 Request to set remote node 74 on RF channel 2
 ```shell
-    mosquitto_pub -t 'remote_cmd/request/set_channel' -m '{"channel":2,"remote":74}'
+mosquitto_pub -t 'remote_cmd/request/set_channel' -m '{"channel":2,"remote":74}'
 ```
 
 Response
 
 ```shell
-    remote_cmd/response/set_channel {"pid": "236", "ctrl": "0x02", "src": "74", "dest": "73", "cmd": "set_channel", "set": "2", "get": "2"}
+remote_cmd/response/set_channel {"pid": "236", "ctrl": "0x02", "src": "74", "dest": "73", "cmd": "set_channel", "set": "2", "get": "2"}
 ```
 
 ### Actions
 Ping node 74
 ```shell
-    mosquitto_pub -t 'Nodes/79/ping' -m '{"remote":"74"}'
+mosquitto_pub -t 'Nodes/79/ping' -m '{"remote":"74"}'
 ```
 
 Aknowledge
 
 ```shell
-    Nodes/79/ack 1
+Nodes/79/ack 1
 ```
 
 # Other nRF52 Applications
@@ -379,9 +379,8 @@ Aknowledge
 
 # FAQ - Discussion
 If you need support, want to ask a question or suggest an idea, you can join the discussion on the forum
-{{<icon_button text="Home Smart Mesh - sdk-hsm-sensortag" href="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/discussions" icon="github" >}}
+:button[]{label="Home Smart Mesh - sdk-hsm-sensortag" link="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/discussions" icon="github"}
 
 :::details{summary="What are the alternatives to Simple-Mesh ?"}
-
 Simple Mesh is a playground for Mesh experimentation but does not intend to cover production grade features, therefore when it comes to 2.4 GHz mesh solutions, Standards such as [Zigbee](/docs/networks/zigbee/) and [Thread](/docs/networks/thread/) exist, provide all needed features and are more affordable as the documentation is open and the development is also open source.
 :::
