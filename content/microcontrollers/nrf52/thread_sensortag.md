@@ -5,7 +5,12 @@ description: A Low power SensorTag with High quality measures of light, Temperat
 date: 2021-02-07T08:48:57+00:00
 lastmod: 2021-05-14T08:00:00+00:00
 image: /images/thread_sensortag/sensortag_v1.1.webp
-tags: [Board,NRF52,Thread]
+tags: [nRF52840,Thread]
+features:
+- nRF52840
+- OpetnThread
+- Zephyr
+- Light, Temperature, Humidity, Pressure
 ---
 
 :button[]{link="/docs/networks/thread/" label="Networks / Thread" }
@@ -55,16 +60,16 @@ tags: [Board,NRF52,Thread]
 
 :button[]{ link="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/v1.1" label="tag v1.1" icon="github" }
 
-![Prototype top](/images/thread_sensortag/prototype_top_v1.1.webp)
+:image[]{alt="Prototype top" src="/images/thread_sensortag/prototype_top_v1.1.webp" width="400" center}
 
-![Prototype bottom](/images/thread_sensortag/prototype_bottom_v1.1.webp)
+:image[]{alt="Prototype bottom" src="/images/thread_sensortag/prototype_bottom_v1.1.webp" width="400" center}
 
 * v 1.0 10.02.2021
 
 :button[]{ link="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/v1.0" label="tag v1.0" icon="github" }
 
-![Prototype top](/images/thread_sensortag/prototype_top.webp)
-![Prototype bottom](/images/thread_sensortag/prototype_bottom.webp)
+:image[]{alt="Prototype top" src="/images/thread_sensortag/prototype_top.webp" width="400" center}
+:image[]{alt="Prototype bottom" src="/images/thread_sensortag/prototype_bottom.webp" width="400" center}
 
 ## Pogo pins adapter
 * SWD pogo pins adapter

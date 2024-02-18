@@ -5,11 +5,18 @@ description: A Sensor tag to monitor Light brightness with MAX44009, Temperature
 image: /images/simplemesh_sensortag.png
 date: 2021-02-14T08:00:00+00:00
 lastmod: 2021-02-14T08:00:00+00:00
-tags: [Board,NRF52,SimpleMesh]
+tags: [nRF52832,SimpleMesh]
+features:
+- nRF52840 in PCA10056
+- ARM M4 64 MHz
+- ROM 1024 KB, RAM 256 KB
+- Bluetooth 5, Mesh
+- 802.15.4, Thread, Zigbee
+- USB 2
 ---
 
-:button[]{link=/docs/networks/nrf/ label="Networks / Simple Mesh" }
-:button[]{link=/docs/frameworks/raspi-iot/ label="Frameworks / Raspi IoT" }
+:button[]{link=/networks/nrf/ label="Networks / Simple Mesh" }
+:button[]{link=/frameworks/raspi-iot/ label="Frameworks / Raspi IoT" }
 :button[]{link=https://www.tindie.com/products/wassfila/nrf52-mesh-sensor-node/ label="Tindie Product Page" icon="new" }
 
 # Concept

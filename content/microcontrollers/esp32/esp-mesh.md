@@ -1,19 +1,19 @@
 ---
-title: "ESP-Mesh"
-description: "An ESP-MESH wrapper library for an Arduino like API and using json for runtime configuration"
+title: ESP-Mesh
+description: An ESP-MESH wrapper library for an Arduino like API and using json for runtime configuration
 date: 2021-02-26T00:00:00+09:00
-images: []
-weight: 21
+order: 21
+image: []
 ---
 # Relates to
-{{<icon_button relref="/docs/microcontrollers/esp32/esp-mesh_wrapper/" text="ESP-Now Wrapper" >}}
+:button[]{link="/microcontrollers/esp32/esp-mesh_wrapper/" label="ESP-Now Wrapper" }
 ## Mesh Alternatives
-{{<icon_button relref="/docs/networks/thread/" text="Thread" >}}
-{{<icon_button relref="/docs/networks/thread/" text="Zigbee" >}}
-{{<icon_button relref="/docs/networks/nrf/" text="Simple Mesh" >}}
+:button[]{link="/networks/thread/" label="Thread" }
+:button[]{link="/networks/thread/" label="Zigbee" }
+:button[]{link="/networks/nrf/" label="Simple Mesh" }
 
 # Github repo
-{{<icon_button text="Github repo" href="https://github.com/ESP32Home/ESPMeshWrapper" icon="github">}}
+:button[]{link="https://github.com/ESP32Home/ESPMeshWrapper" icon="github" label="Github repo"}
 
 # Usage
 
@@ -105,8 +105,8 @@ in `data\secret.json`
 ```
 # Log
 ## log output root node
-{{<details "Console output..." >}}
-```console
+:::details{summary="Console output..." }
+```shell
 rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
 configsip: 0, SPIWP:0xee
 clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
@@ -186,10 +186,11 @@ route table size = 2
 RX> from(80:7d:3a:d5:2f:cc) => (Hello dowlink neighbors : 20)
   Sending to 3C:71:BF:83:BD:40
 ```
-{{</details>}}
+:::
+
 ## log output second node
-{{<details "Console output">}}
-```console
+:::details{summary="Console output"}
+```shell
 281870 : loop start cycle 29
 *Layer=2 Parent=80:7d:3a:d5:2f:cd  Not root  NbNodes=2  TableSize=1
 route table size = 1
@@ -211,15 +212,13 @@ route table size = 1
 RX> from(3c:71:bf:83:bd:40) => (Hello dowlink neighbors : 31)
 RX> from(80:7d:3a:d5:2f:cc) => (Hello dowlink neighbors : 32)
 ```
-{{</details>}}
+:::
 
 
 # FAQ - Discussion
 If you need support, want to ask a question or suggest an idea, you can join the discussion on the forum
-{{<icon_button text="Home Smart Mesh - Discussions" href="https://github.com/HomeSmartMesh/website/discussions" icon="github" >}}
+:button[]{link="https://github.com/HomeSmartMesh/website/discussions" icon="github" label="Home Smart Mesh - Discussions"}
 
-{{<faq>}}
-What are the alternatives to ESP-Mesh ?
-<--->
+:::details{summary="What are the alternatives to ESP-Mesh ?"}
 The ESP devices do implement wifi and Bluetooth standards, when it comes to the ESP-Mesh, it is a custom protocol and not used beyond Espressif devices, therefore when it comes to 2.4 GHz mesh solutions, Standards exist and are in quick expansion such as [Zigbee](/docs/networks/zigbee/) and [Thread](/docs/networks/thread/).
-{{</faq>}}
+:::

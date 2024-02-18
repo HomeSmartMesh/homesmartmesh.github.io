@@ -1,32 +1,32 @@
 ---
-title: "ESP-Now"
-description: "An ESP-Now wrapper library is created and used in a Broadcast and Gateway examples. The ESP-Now Broadcast had 100% RX success with another ESP-Now only device, but the ESP-Now to wifi gateway had only 25% RX success rate"
+title: ESP-Now
+description: An ESP-Now wrapper library is created and used in a Broadcast and Gateway examples. The ESP-Now Broadcast had 100% RX success with another ESP-Now only device, but the ESP-Now to wifi gateway had only 25% RX success rate
+order: 20
 date: 2021-02-26T00:00:00+09:00
-lastmod: 2021-03-08T08:00:00+00:00
-images: []
-weight: 20
+lastmod: 2024-02-18T08:00:00+00:00
+image: []
 ---
 # Relates to
-{{<icon_button relref="/docs/microcontrollers/esp32/esp-mesh_wrapper/" text="ESP-Mesh Wrapper" >}}
+:button[]{link="/microcontrollers/esp32/esp-mesh/" label="ESP-Mesh Wrapper" }
 
 # Overview
 ## Github
-{{<icon_button text="Github repo" href="https://github.com/ESP32Home/ESPNowWrapper" icon="github">}}
+:button[]{link="https://github.com/ESP32Home/ESPNowWrapper" label="Github repo" icon="github"}
 
 ## ESP-Now reference
-{{<icon_button text="docs.espressif esp-now" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/network/esp_now.html" icon="github">}}
+:button[]{link="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/network/esp_now.html" label="docs.espressif esp-now"  icon="github"}
 
 ## Status
-{{<hint warning>}}
+:::Caution
 As we can see in the details of the logs below, running an ESP-Now gateway through wifi, results in dropping the reception success rate from 100% to 25%, therefore, a serial ESP-Now gateway would be recommended and not a Wifi one.
-{{</hint>}}
+:::
 
 # Examples
 ## Broadcast
 In this example, a 5 sec loop is sending an ESP-Now broadcast message then keeps listening the rest of the time.
-{{<icon_button text="esp32_iot 09_esp_now_broadcast" href="https://github.com/ESP32Home/esp32_iot/tree/master/09_esp_now_broadcast" icon="github">}}
+:button[]{link="https://github.com/ESP32Home/esp32_iot/tree/master/09_esp_now_broadcast" icon="github" label="esp32_iot 09_esp_now_broadcast"}
 
-{{<details "Broadcast 'main.cpp'">}}
+:::details{summary="Broadcast 'main.cpp'"}
 ```c++
 #include <Arduino.h>
 #include <ArduinoJson.h>
@@ -82,13 +82,13 @@ void loop() {
   delay(5000);
 }
 ```
-{{</details>}}
+:::
 
-{{<hint info>}}
+:::Note
 In this example, we notice in the log below a broadcast from an ESP-Now only device is received by another  ESP-Now only device with 100% success. This success is due to the receiving device listening most of the time except when transmitting. A higher frequency can reveal misses on collision times.
-{{</hint>}}
+:::
 
-{{<details "Broadcast startup 'main.cpp'">}}
+:::details{summary="Broadcast startup 'main.cpp'"}
 ```log
 rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
 configsip: 0, SPIWP:0xee
@@ -129,9 +129,9 @@ send => (ff:ff:ff:ff:ff:ff) 'Good Morning Everyone (0)'
 send => (ff:ff:ff:ff:ff:ff) 'Hello Everyone (1)'
   send_cb> Sent data to ff:ff:ff:ff:ff:ff, status: 0
 ```
-{{</details>}}
+:::
 
-{{<details "Log of Two boradcasters receivers">}}
+:::details{summary="Log of Two boradcasters receivers"}
 first instance
 ```log
 540465 : loop start cycle (109)
@@ -162,18 +162,18 @@ send => (ff:ff:ff:ff:ff:ff) 'Hello Everyone (110)'
   send_cb> Sent data to ff:ff:ff:ff:ff:ff, status: 0
 RX> from(10:52:1c:68:e8:84) => [Hello Everyone (21)]
 ```
-{{</details>}}
+:::
 
 ## MQTT Wifi Gateway
 In this example, a gateway is listening to ESP-Now, once a message is received, it is relayed to an MQTT broquer through wifi. This Gateway example is run with another device running the `Broadcast` example.
 
-{{<icon_button text="esp32_iot 10_esp_now_mqtt_gateway" href="https://github.com/ESP32Home/esp32_iot/tree/master/10_esp_now_mqtt_gateway" icon="github">}}
+:button[]{link="https://github.com/ESP32Home/esp32_iot/tree/master/10_esp_now_mqtt_gateway" icon="github" label="esp32_iot 10_esp_now_mqtt_gateway"}
 
-{{<hint danger>}}
+:::Caution
 Although the implementation is successfull, we can notice in the log below that the success rate is only `25%`. The issue that the Gateway is skipping reception during parallel wifi activity. 
-{{</hint>}}
+:::
 
-{{<details "Wifi Gateway 'main.cpp'">}}
+:::details{summary="Wifi Gateway 'main.cpp'"}
 ```c++
 #include <Arduino.h>
 #include <ArduinoJson.h>
@@ -229,9 +229,9 @@ void loop() {
   delay(5000);
 }
 ```
-{{</details>}}
+:::
 
-{{<details "Broadcaster log">}}
+:::details{summary="Broadcaster log"}
 ```log
 rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
 configsip: 0, SPIWP:0xee
@@ -307,9 +307,9 @@ send => (ff:ff:ff:ff:ff:ff) 'Hello Everyone (9)'
 send => (ff:ff:ff:ff:ff:ff) 'Hello Everyone (10)'
   send_cb> Sent data to ff:ff:ff:ff:ff:ff, status: 0
 ```
-{{</details>}}
+:::
 
-{{<details "Gateway log">}}
+:::details{summary="Gateway log"}
 ```log
 272534 : loop start cycle (55)
 5
@@ -350,32 +350,31 @@ send => (ff:ff:ff:ff:ff:ff) 'Hello Everyone (10)'
 327578 : loop start cycle (66)
 5
 ```
-{{</details>}}
+:::
 
 MQTT Explorer showing both topics received from the gateway:
 * the gateway itself with its mac address
 * the one related from the ESP-Now broadcaster device with the broadcaster mac address
-{{<image src="/images/esp32/esp-now mqtt gateway.png" >}}
+
+![ESP Now MQTT Gateway](/images/esp32/esp-now_mqtt_gateway.png)
 
 
-{{<icon_button text="espnow_mqtt_gateway.ino" href="https://github.com/ESP32Home/ESPNowWrapper/blob/master/examples/espnow_mqtt_gateway.ino" icon="github">}}
+:button[]{link="https://github.com/ESP32Home/ESPNowWrapper/blob/master/examples/espnow_mqtt_gateway.ino" icon="github" label="espnow_mqtt_gateway.ino"}
 
 # FAQ - Discussion
 If you need support, want to ask a question or suggest an idea, you can join the discussion on the forum
-{{<icon_button text="Home Smart Mesh - Discussions" href="https://github.com/HomeSmartMesh/website/discussions" icon="github" >}}
+:button[]{link="https://github.com/HomeSmartMesh/website/discussions" icon="github" label="Home Smart Mesh - Discussions"}
 
-{{<faq>}}
-Can I ran an ESP-Now wifi gateway ?
-<--->
+:::details[]{summary="Can I ran an ESP-Now wifi gateway ?"}
 No, because relaying messages through wifi drops reception success from almost 100% to 25%. It is possible to remediate to this through retries but this will harm the power consumption of end devices which might be the first motivation to use ESP-Now. Therefore, it is recommended that the Gateway forwards messages to another device through a serial uart to maximize ESP-Now listening time.
-<===>
-Is it possible for a device to identify its ESP-Now peers ?
-<--->
+:::
+
+:::details{summary="Is it possible for a device to identify its ESP-Now peers ?"}
 * No, given the ESP-Now [API Reference](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/network/esp_now.html#api-reference), it looks like that it is a low level point to point messaging including broadcast, but not more. Therefore it's only based on mac addresses and does not have a higher level management. If it's needed to discover devices without entering their mac manually as a peer list, then it's probably better to look for [ESP-Mesh](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/mesh.html) which is intended to manage a fleet of devices. This [ESP-Mesh-Wrapper](/docs/microcontrollers/esp32/esp-mesh_wrapper/) is a wrapper for Arduino framework to make usage ESP-Mesh easier.
 * but I'm not really much satisfied with the custom protocols ideas, the ESP is at its best with wifi, when it comes to 2.4 GHz mesh solutions, why use a custom one while Standards exist like zigbee and Thread.
-<===>
-Can ESP-Now solve the 'Provisioning' Problem or make it easier ?
-<--->
+:::
+
+:::details{summary="Can ESP-Now solve the 'Provisioning' Problem or make it easier ?"}
 * No, the provisioning dilemma is unfortunately common to all protocols and is a Home Automation Nightmare : "Provisioning / Pairing / Joining / Configuring".
 
 Let's first have a look on other protocols deal with provisioning :
@@ -387,10 +386,10 @@ Let's first have a look on other protocols deal with provisioning :
 
 Now, we might find wifi inconvenient for two reasons, provisioning and also range which is very limited compared to mesh networks that have repeaters.
 
-* Custom RF : e.g. the same here applies for ESP-NOW or any other custom mesh such as the [SimpleMesh](/docs/networks/nrf/) which is as it's names suggest simple, but also stable. Changing the battery is not more complex than changing the battery. The way I solved the configuration issue there, is by an automated script run after attaching a devices with the debugger, it reads the serial number, which has an associated short id coming from a config file. That short id will be used in radio packets as unique ID, I could also assign a master key for encryption, but I did not need security as it is only about light and temperature values, no control.
+* Custom RF : e.g. the same here applies for ESP-NOW or any other custom mesh such as the [SimpleMesh](/networks/nrf/) which is as it's names suggest simple, but also stable. Changing the battery is not more complex than changing the battery. The way I solved the configuration issue there, is by an automated script run after attaching a devices with the debugger, it reads the serial number, which has an associated short id coming from a config file. That short id will be used in radio packets as unique ID, I could also assign a master key for encryption, but I did not need security as it is only about light and temperature values, no control.
 
 So when it comes to ESP-Now, you also need to configure each of them to give them the security with "esp_now_set_pmk()" if you do not want everyone using your devices to spy on each other.
 The problem gets bigger if you want to give your devices to a user that has to use it securely on his network with a unique pmk and that user does not want to be flashing and messing with a configuration.
 
 To summarize, there's no way around a "provisioning" process whatever protocol you use unless you need no security, nor networks isolation, or can flash the secret uniquely for each device, which is also a sort of provisioning. And not mentioning the provisioning that needs an internet connection to synchronise with a backend and user account.
-{{</faq>}}
+:::

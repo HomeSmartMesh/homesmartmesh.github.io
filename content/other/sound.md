@@ -20,24 +20,24 @@ image: "/images/sound/web_py_loop.png"
 * on the same processing loop, the audio is replacing with the incoming `Float32Array` stream from the server
 * During the first iteration of the processing loop, as the queue is empty, the output is filled with zeros
 
-{{<gfigure src="/design/02_script_processor_loopback.svg" width="500px">}}
+:image[]{src="/design/02_script_processor_loopback.svg" width="500"}
 
 ## media source extension API
 * using `MediaRecorder` and `MediaSource` for encoded stream loopback through websocket
-{{<gfigure src="/design/06_media_recorder_source_loopback.svg" width="400px">}}
+:image[]{src="/design/06_media_recorder_source_loopback.svg" width="400"}
 
 ## webRTC
 Official example 
 :button[]{label="peerconnection audio" link="https://github.com/webrtc/samples/tree/gh-pages/src/content/peerconnection/audio" icon="github"}
 
-{{<gfigure src="/design/web_rtc.svg" width="300px">}}
+:image[]{src="/design/web_rtc.svg" width="300"}
 
 
 
 ## pystream
 :button[]{label="repo" link="https://github.com/SoundHacking/pystream" icon="github" }
 
-{{<image src="/images/sound/python_process.png" >}}
+:image[]{src="/images/sound/python_process.png" }
 
 * List audio devices
 * Test Audio input and output
@@ -55,7 +55,7 @@ Official example
 
 :button[]{label="repo" link="https://github.com/SoundHacking/see_sound/" icon="github" }
 
-{{<image src="/images/sound/analyser.png" >}}
+:image[]{src="/images/sound/analyser.png" }
 
 * a web app framework to see the sound in different forms
 * real-time analysis of played audio
@@ -66,16 +66,16 @@ Official example
 
 # librosa test
 
-{{< new_button link="https://github.com/SoundHacking/librosa_demo/" text="github project" >}}
+:button[]{link="https://github.com/SoundHacking/librosa_demo/" label="github project" }
 
 * Jupyter notebooks to showcase librosa functions
 
-{{<image src="/images/sound/librosa.png" width=600 >}}
+:image[]{src="/images/sound/librosa.png" width=600 }
 
 
 
 # Microcontroller loopback
-{{<image src="/images/sound/nRF52_usb_loopback.png" width=600 >}}
+:image[]{src="/images/sound/nRF52_usb_loopback.png" width=600 }
 * usb audio loopback zephyr example on `nrf52840dk_nrf52840`
 * tested on the nRF52 dongle with debugger attached
 
@@ -86,7 +86,7 @@ west build -b nrf52840dk_nrf52840 -- -DCONF_FILE=prj.conf
 west flash
 ```
 
-{{<details "build log">}}
+:::details{summary="build log"}
 ```bash
 -- west build: generating a build system
 -- Application: D:/Projects/zp/zephyrproject/zephyr/samples/subsys/usb/audio/headphones_microphone
@@ -109,7 +109,7 @@ Memory region         Used Size  Region Size  %age Used
             SRAM:       16004 B       256 KB      6.11%
         IDT_LIST:          0 GB         2 KB      0.00%
 ```
-{{</details>}}
+:::
 
 # Future Plan
 
@@ -149,7 +149,7 @@ The output should not only be hearable as a sound signal but also visual in orde
 * Status feedback through LEDs
 
 ## Microcontrollers
-{{< image src="/images/hardware.png" width=800 >}}
+:image[]{src="/images/hardware.png" width=800 }
 
 * MEMS microphones : [SPH0645](https://cdn-reichelt.de/documents/datenblatt/A300/DEBO_MEMS_MIC_DB_EN.pdf)
 * [STM32F407VGT6](https://stm32-base.org/boards/STM32F407VGT6-STM32F4XX-M.html)
@@ -170,10 +170,8 @@ Example integration of cubemx with pio :
 If you need support, want to ask a question or suggest an idea, you can join the discussion on the forum
 :button[]{label="Home Smart Mesh - Discussions" link="https://github.com/HomeSmartMesh/raspi/discussions" icon="github" }
 
-{{<faq>}}
-What is the difference between a MediaStream and a MediaSource when used in a real time network ?
-<--->
+:::details{summary="What is the difference between a MediaStream and a MediaSource when used in a real time network ?"}
 It is possible to append Buffers to a MediaSource which opens its input to a custom websocket while MediaStream, can only be bound to a webRTC RTCPeerConnection.
 
 Note that `audio.src` is to be used with a `MediaSrouce` URL while `audio.srcObject` is for `MediaStream`.
-{{</faq>}}
+:::

@@ -289,7 +289,7 @@
       </a>
     </g>
     <g id="y.node.4">
-      <a target="_blank" xlink:type="simple" xlink:href="/docs/networks/nrf/" xlink:show="new">
+      <a target="_blank" xlink:type="simple" xlink:href="/networks/nrf/" xlink:show="new">
         <g text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,372.3183,170)" image-rendering="optimizeQuality">
           <image preserveAspectRatio="none" x="0" width="32" y="0" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA3klEQVR4Xu2TuQrC&#13;&#10;UBBFnxtuoCAuhU0EFQQLwaUSxEIU/f//8R6eadLkZUw5B06bO3fmJQTHcRzHqZ9G&#13;&#10;RWsh/1hTtmS7gn9DMKEd2ZV9OZDDRP+CxrQgmI+N5UTO5PznokQzNCe8J0chhi5l&#13;&#10;JtdyI7cJmmHtNCecJiu5kwd5lGd5SdAE7bk5a6c54fsQP3iVN3lP1AS3pz03Z+00&#13;&#10;J5zgh3zKV6ImGIDb8+CyENdOc8Lf8lNBE9yfX20a4oM7hdie5sWAMk3kA/Cb8ZJZ&#13;&#10;P/dkpcWAMk34AD6AD+AD1DbAFxDXRUoOLltuAAAAAElFTkSuQmCC"/>
           <image x="0" y="0" transform="matrix(5.7812,0,0,1,32,0)" width="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAUklEQVR4Xu3IsQ2A&#13;&#10;QBDEQCORUcB3QAnkZEj0388X4Hw3OUuTGKZpmqYJjjLOMq4yVhl3GU8ZbxlfGX+Z&#13;&#10;RppGmkaaRppGmkaaRppGmkaaRppG1AbG7ZIBO0NCHAAAAABJRU5ErkJggg==" height="32" preserveAspectRatio="none"/>
@@ -310,7 +310,7 @@
       </a>
     </g>
     <g id="y.node.5">
-      <a target="_blank" xlink:type="simple" xlink:href="/docs/raspi/readme/" xlink:show="new">
+      <a target="_blank" xlink:type="simple" xlink:href="/raspi/readme/" xlink:show="new">
         <g text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,749.9433,102)" image-rendering="optimizeQuality">
           <image preserveAspectRatio="none" x="0" width="32" y="0" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA3klEQVR4Xu2TuQrC&#13;&#10;UBBFnxtuoCAuhU0EFQQLwaUSxEIU/f//8R6eadLkZUw5B06bO3fmJQTHcRzHqZ9G&#13;&#10;RWsh/1hTtmS7gn9DMKEd2ZV9OZDDRP+CxrQgmI+N5UTO5PznokQzNCe8J0chhi5l&#13;&#10;JtdyI7cJmmHtNCecJiu5kwd5lGd5SdAE7bk5a6c54fsQP3iVN3lP1AS3pz03Z+00&#13;&#10;J5zgh3zKV6ImGIDb8+CyENdOc8Lf8lNBE9yfX20a4oM7hdie5sWAMk3kA/Cb8ZJZ&#13;&#10;P/dkpcWAMk34AD6AD+AD1DbAFxDXRUoOLltuAAAAAElFTkSuQmCC"/>
           <image x="0" y="0" transform="matrix(5.7812,0,0,1,32,0)" width="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAUklEQVR4Xu3IsQ2A&#13;&#10;QBDEQCORUcB3QAnkZEj0388X4Hw3OUuTGKZpmqYJjjLOMq4yVhl3GU8ZbxlfGX+Z&#13;&#10;RppGmkaaRppGmkaaRppGmkaaRppG1AbG7ZIBO0NCHAAAAABJRU5ErkJggg==" height="32" preserveAspectRatio="none"/>
@@ -331,7 +331,7 @@
       </a>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.6" onmousemove="ShowTooltip(evt)">
-      <a target="_blank" xlink:type="simple" xlink:href="/docs/webapps/home3d/" xlink:show="new">
+      <a target="_blank" xlink:type="simple" xlink:href="/webapps/home3d/" xlink:show="new">
         <g text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,980.6933,170)" image-rendering="optimizeQuality">
           <image preserveAspectRatio="none" x="0" width="32" y="0" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA3klEQVR4Xu2TuQrC&#13;&#10;UBBFnxtuoCAuhU0EFQQLwaUSxEIU/f//8R6eadLkZUw5B06bO3fmJQTHcRzHqZ9G&#13;&#10;RWsh/1hTtmS7gn9DMKEd2ZV9OZDDRP+CxrQgmI+N5UTO5PznokQzNCe8J0chhi5l&#13;&#10;JtdyI7cJmmHtNCecJiu5kwd5lGd5SdAE7bk5a6c54fsQP3iVN3lP1AS3pz03Z+00&#13;&#10;J5zgh3zKV6ImGIDb8+CyENdOc8Lf8lNBE9yfX20a4oM7hdie5sWAMk3kA/Cb8ZJZ&#13;&#10;P/dkpcWAMk34AD6AD+AD1DbAFxDXRUoOLltuAAAAAElFTkSuQmCC"/>
           <image x="0" y="0" transform="matrix(5.7812,0,0,1,32,0)" width="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAUklEQVR4Xu3IsQ2A&#13;&#10;QBDEQCORUcB3QAnkZEj0388X4Hw3OUuTGKZpmqYJjjLOMq4yVhl3GU8ZbxlfGX+Z&#13;&#10;RppGmkaaRppGmkaaRppGmkaaRppG1AbG7ZIBO0NCHAAAAABJRU5ErkJggg==" height="32" preserveAspectRatio="none"/>
@@ -399,7 +399,7 @@
       </g>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.10" onmousemove="ShowTooltip(evt)">
-      <a target="_blank" xlink:type="simple" xlink:href="/docs/networks/zigbee/" xlink:show="new">
+      <a target="_blank" xlink:type="simple" xlink:href="/networks/zigbee/" xlink:show="new">
         <g text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,138.25,436.5)" image-rendering="optimizeQuality">
           <image preserveAspectRatio="none" x="0" width="32" y="0" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA3klEQVR4Xu2TuQrC&#13;&#10;UBBFnxtuoCAuhU0EFQQLwaUSxEIU/f//8R6eadLkZUw5B06bO3fmJQTHcRzHqZ9G&#13;&#10;RWsh/1hTtmS7gn9DMKEd2ZV9OZDDRP+CxrQgmI+N5UTO5PznokQzNCe8J0chhi5l&#13;&#10;JtdyI7cJmmHtNCecJiu5kwd5lGd5SdAE7bk5a6c54fsQP3iVN3lP1AS3pz03Z+00&#13;&#10;J5zgh3zKV6ImGIDb8+CyENdOc8Lf8lNBE9yfX20a4oM7hdie5sWAMk3kA/Cb8ZJZ&#13;&#10;P/dkpcWAMk34AD6AD+AD1DbAFxDXRUoOLltuAAAAAElFTkSuQmCC"/>
           <image x="0" y="0" transform="matrix(3.7188,0,0,1,32,0)" width="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAUklEQVR4Xu3IsQ2A&#13;&#10;QBDEQCORUcB3QAnkZEj0388X4Hw3OUuTGKZpmqYJjjLOMq4yVhl3GU8ZbxlfGX+Z&#13;&#10;RppGmkaaRppGmkaaRppGmkaaRppG1AbG7ZIBO0NCHAAAAABJRU5ErkJggg==" height="32" preserveAspectRatio="none"/>
@@ -435,7 +435,7 @@
       </g>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.12" onmousemove="ShowTooltip(evt)">
-      <a target="_blank" xlink:type="simple" xlink:href="/docs/networks/thread/" xlink:show="new">
+      <a target="_blank" xlink:type="simple" xlink:href="/networks/thread/" xlink:show="new">
         <g text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,256.0569,381)" image-rendering="optimizeQuality">
           <image preserveAspectRatio="none" x="0" width="32" y="0" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA3klEQVR4Xu2TuQrC&#13;&#10;UBBFnxtuoCAuhU0EFQQLwaUSxEIU/f//8R6eadLkZUw5B06bO3fmJQTHcRzHqZ9G&#13;&#10;RWsh/1hTtmS7gn9DMKEd2ZV9OZDDRP+CxrQgmI+N5UTO5PznokQzNCe8J0chhi5l&#13;&#10;JtdyI7cJmmHtNCecJiu5kwd5lGd5SdAE7bk5a6c54fsQP3iVN3lP1AS3pz03Z+00&#13;&#10;J5zgh3zKV6ImGIDb8+CyENdOc8Lf8lNBE9yfX20a4oM7hdie5sWAMk3kA/Cb8ZJZ&#13;&#10;P/dkpcWAMk34AD6AD+AD1DbAFxDXRUoOLltuAAAAAElFTkSuQmCC"/>
           <image x="0" y="0" transform="matrix(4.0589,0,0,1,32,0)" width="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAUklEQVR4Xu3IsQ2A&#13;&#10;QBDEQCORUcB3QAnkZEj0388X4Hw3OUuTGKZpmqYJjjLOMq4yVhl3GU8ZbxlfGX+Z&#13;&#10;RppGmkaaRppGmkaaRppGmkaaRppG1AbG7ZIBO0NCHAAAAABJRU5ErkJggg==" height="32" preserveAspectRatio="none"/>
@@ -473,7 +473,7 @@
       </a>
     </g>
     <g id="y.node.14">
-      <a target="_blank" xlink:type="simple" xlink:href="/docs/raspi/readme/" xlink:show="new">
+      <a target="_blank" xlink:type="simple" xlink:href="/raspi/readme/" xlink:show="new">
         <g text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,710.1933,433)" image-rendering="optimizeQuality">
           <image preserveAspectRatio="none" x="0" width="32" y="0" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA3klEQVR4Xu2TuQrC&#13;&#10;UBBFnxtuoCAuhU0EFQQLwaUSxEIU/f//8R6eadLkZUw5B06bO3fmJQTHcRzHqZ9G&#13;&#10;RWsh/1hTtmS7gn9DMKEd2ZV9OZDDRP+CxrQgmI+N5UTO5PznokQzNCe8J0chhi5l&#13;&#10;JtdyI7cJmmHtNCecJiu5kwd5lGd5SdAE7bk5a6c54fsQP3iVN3lP1AS3pz03Z+00&#13;&#10;J5zgh3zKV6ImGIDb8+CyENdOc8Lf8lNBE9yfX20a4oM7hdie5sWAMk3kA/Cb8ZJZ&#13;&#10;P/dkpcWAMk34AD6AD+AD1DbAFxDXRUoOLltuAAAAAElFTkSuQmCC"/>
           <image x="0" y="0" transform="matrix(3.7188,0,0,1,32,0)" width="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAUklEQVR4Xu3IsQ2A&#13;&#10;QBDEQCORUcB3QAnkZEj0388X4Hw3OUuTGKZpmqYJjjLOMq4yVhl3GU8ZbxlfGX+Z&#13;&#10;RppGmkaaRppGmkaaRppGmkaaRppG1AbG7ZIBO0NCHAAAAABJRU5ErkJggg==" height="32" preserveAspectRatio="none"/>
@@ -635,7 +635,7 @@
       </g>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.25" onmousemove="ShowTooltip(evt)">
-      <a target="_blank" xlink:type="simple" xlink:href="/docs/networks/nrf/" xlink:show="new">
+      <a target="_blank" xlink:type="simple" xlink:href="/networks/nrf/" xlink:show="new">
         <g text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,517.9433,254)" image-rendering="optimizeQuality">
           <image preserveAspectRatio="none" x="0" width="32" y="0" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA3klEQVR4Xu2TuQrC&#13;&#10;UBBFnxtuoCAuhU0EFQQLwaUSxEIU/f//8R6eadLkZUw5B06bO3fmJQTHcRzHqZ9G&#13;&#10;RWsh/1hTtmS7gn9DMKEd2ZV9OZDDRP+CxrQgmI+N5UTO5PznokQzNCe8J0chhi5l&#13;&#10;JtdyI7cJmmHtNCecJiu5kwd5lGd5SdAE7bk5a6c54fsQP3iVN3lP1AS3pz03Z+00&#13;&#10;J5zgh3zKV6ImGIDb8+CyENdOc8Lf8lNBE9yfX20a4oM7hdie5sWAMk3kA/Cb8ZJZ&#13;&#10;P/dkpcWAMk34AD6AD+AD1DbAFxDXRUoOLltuAAAAAElFTkSuQmCC"/>
           <image x="0" y="0" transform="matrix(3.7188,0,0,1,32,0)" width="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAUklEQVR4Xu3IsQ2A&#13;&#10;QBDEQCORUcB3QAnkZEj0388X4Hw3OUuTGKZpmqYJjjLOMq4yVhl3GU8ZbxlfGX+Z&#13;&#10;RppGmkaaRppGmkaaRppGmkaaRppG1AbG7ZIBO0NCHAAAAABJRU5ErkJggg==" height="32" preserveAspectRatio="none"/>
@@ -713,7 +713,7 @@
       </g>
     </g>
     <g onmouseout="HideTooltip(evt)" id="y.node.30" onmousemove="ShowTooltip(evt)">
-      <a target="_blank" xlink:type="simple" xlink:href="/docs/webapps/home3d/" xlink:show="new">
+      <a target="_blank" xlink:type="simple" xlink:href="/webapps/home3d/" xlink:show="new">
         <g text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,1063.4433,313)" image-rendering="optimizeQuality">
           <image preserveAspectRatio="none" x="0" width="32" y="0" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA3klEQVR4Xu2TuQrC&#13;&#10;UBBFnxtuoCAuhU0EFQQLwaUSxEIU/f//8R6eadLkZUw5B06bO3fmJQTHcRzHqZ9G&#13;&#10;RWsh/1hTtmS7gn9DMKEd2ZV9OZDDRP+CxrQgmI+N5UTO5PznokQzNCe8J0chhi5l&#13;&#10;JtdyI7cJmmHtNCecJiu5kwd5lGd5SdAE7bk5a6c54fsQP3iVN3lP1AS3pz03Z+00&#13;&#10;J5zgh3zKV6ImGIDb8+CyENdOc8Lf8lNBE9yfX20a4oM7hdie5sWAMk3kA/Cb8ZJZ&#13;&#10;P/dkpcWAMk34AD6AD+AD1DbAFxDXRUoOLltuAAAAAElFTkSuQmCC"/>
           <image x="0" y="0" transform="matrix(4,0,0,1,32,0)" width="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAUklEQVR4Xu3IsQ2A&#13;&#10;QBDEQCORUcB3QAnkZEj0388X4Hw3OUuTGKZpmqYJjjLOMq4yVhl3GU8ZbxlfGX+Z&#13;&#10;RppGmkaaRppGmkaaRppGmkaaRppG1AbG7ZIBO0NCHAAAAABJRU5ErkJggg==" height="32" preserveAspectRatio="none"/>

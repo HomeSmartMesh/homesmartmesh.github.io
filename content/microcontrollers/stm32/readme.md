@@ -4,14 +4,16 @@ order: 3
 ---
 
 ## Black pill
-![Black pill](/images/stm32_blackpill.png)
+:image[]{alt="Black pill" src="/images/stm32_blackpill.png" width="400"}
+
 * [STM32F411CE](https://www.st.com/en/microcontrollers-microprocessors/stm32f411ce.html)
 * ARM M4 100 MHz
 * 512 KB ROM - 128 KB RAM
 * USB 2 Full Speed (device host otg)
 
 ## Dev EBox F407
-![Dev EBox F407](/images/STM32F407.png)
+:image[]{alt="Dev EBox F407" src="/images/STM32F407.png" width="400"}
+
 * [STM32F407VG](https://www.st.com/en/microcontrollers-microprocessors/stm32f407vg.html)
 * ARM M4 168 MHz
 * 1024 KB ROM - 192 KB RAM
@@ -25,7 +27,7 @@ order: 3
 * USB 2 Full Speed
 
 ### Applications
-![Applications](/images/stm32_bluepill.jpg)
+:image[]{alt="Applications" src="/images/stm32_bluepill.webp" width="400"}
 
 * [Expansion boards Hackaday project](https://hackaday.io/project/21396-stm32-blue-pill-iot-expansion-boards)
 * [MQTT 8 Channels dimmer](https://hackaday.io/project/28678-stm32-bluepill-x8-edison-bulbs-with-nrf-and-mqtt)

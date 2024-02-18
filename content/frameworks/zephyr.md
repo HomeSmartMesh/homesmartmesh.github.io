@@ -23,7 +23,7 @@ Steps :
 * SystemView `Start Recording` the `Stop Recording`
 * if SystemViewer keeps crashing try closing the window `CPU load`
 
-{{<gfigure src="/images/zephyr/systemview.webp" width="500px">}}
+:image[]{src="/images/zephyr/systemview.webp" width="500" }
 
 content of `overlay-tracing.conf`
 ```conf
@@ -63,7 +63,7 @@ Steps :
 * in the bottom left console type `Project.SetOSPlugin("ZephyrPlugin_CM4")`. That will load the Zephyr RTOS awareness plugin
 * you should now be able to access the Zephyr debug window from the menu `View` then in the `Advanced` section `Zephyr`
 
-{{<gfigure src="/images/zephyr/ozone_zephyr.png" width="500px">}}
+:image[]{src="/images/zephyr/ozone_zephyr.png" width="500" }
 
 # Serial Debug
 * Log : `CONFIG_LOG` creates a `logging` thread and enables `LOG_INF()`, `LOG_DBG()`,... functions

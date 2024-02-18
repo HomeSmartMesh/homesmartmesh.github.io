@@ -5,15 +5,12 @@ image: ./dongle.png
 order: 6
 date: 2021-02-21T08:00:00+00:00
 lastmod: 2021-02-21T08:00:00+00:00
-tag: [Board,NRF52]
+tag: [nRF52832]
 features:
-    - board codename PCA10056
-    - nRF52840
+    - nRF52832
     - ARM M4 64 MHz
-    - 1024 KB ROM - 256 KB RAM
-    - Bluetooth 5, Mesh
-    - 802.15.4, Thread, Zigbee
-    - USB 2
+    - 512 KB ROM - 64 KB RAM
+    - Bluetooth Low Energy, mesh, custom RF
 ---
 
 # Board

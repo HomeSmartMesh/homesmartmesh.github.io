@@ -1,18 +1,21 @@
 ---
 title: "Trick Tracker"
 description: "The Trick Tracker that tracks tricks"
+order: 3
 date: 2021-02-07T08:48:57+00:00
 lastmod: 2021-05-14T08:00:00+00:00
-images: ["/images/trick_tracker/title_image.jpg"]
-weight: 3
-toc: true
+image: /images/trick_tracker/title_image.jpg
+tags: [nRF52840, Sensors]
+features:
+- Bluetooth
+- Battery 1000mAh
+- Acc, Magneto, Gyro, Pressure
+- USB-C, mass storage, SD-Card
+- QWIIC ToF (Optional)
 ---
-{{<load-svg-pan-zoom>}}
-{{<load-model_viewer>}}
-{{<load-photoswipe >}}
 
 # Overview
-{{<image src="/images/trick_tracker/concept.png" width="600px" >}}
+:image[]{src="/images/trick_tracker/concept.png" width="600" }
 
 The Trick-Tracker targets any user who is interested in tracking skill and improvement of certain fun sport devices. The Main focus of the first version are bikes but in general it can be used for any sort of sport devices which can be used to do stunts and tricks.
 It targets beginners as well as professionals to either compete or just compare skills like Wheelie/Manual driving distance, jump height and distance etc. how steep was that ride. What was the bike doing in its airtime while doing a trick. Visualize your tricks digital to go through them step by step to see what can be improved. Was the front wheel not high enough or maybe the angle to less during the landing. 
@@ -54,5 +57,6 @@ LED to indicate power on
 
 ## Schematics
 
-{{<svg-pan-zoom "/images/trick_tracker/trick_tracker_schematics.svg" "white" >}}
+![Trick Tracker Schematics]{src="/images/trick_tracker/trick_tracker_schematics.svg" }
+
 Version 1.0

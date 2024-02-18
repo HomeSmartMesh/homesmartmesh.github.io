@@ -12,7 +12,7 @@ image: /design/Protocols.svg
 
 previously known as `CHIP`
 
-:image[]{alt="Matter Overview" src="/images/matter/overview.png" width="400px" center}
+:image[]{alt="Matter Overview" src="/images/matter/overview.png" width="400" center}
 
 # Overview
 

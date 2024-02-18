@@ -138,7 +138,8 @@ It is not necessary but recommended to perform the install on a new sd card imag
   </details>
 ### Openthread Network Configuration
 * discover the raspi ip address from the router (will be used to replace `<raspi_ip>`) then navigate on a browser on `http://<raspi_ip>`, the OT Border Router web GUI should appear. Use it to form a network e.g. (channel 18, panid 0x4412,...). Make sure that the same parameters are used in the thread sensor tag firmware.
-<gfigure src="/images/thread_sensortag/form_network.png" width="300px" />
+
+:image[]{src="/images/thread_sensortag/form_network.png" width="300" }
 
 * the grafana dashboard `SensorTag Compare` should be accessible from `http://raspi_ip:3000`
 

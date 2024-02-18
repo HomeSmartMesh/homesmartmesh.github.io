@@ -1,4 +1,9 @@
-<svg width="105" height="78" viewBox="0 0 105 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg 
+    width="105mm"
+    height="78mm"
+    viewBox="0 0 105 78"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0)">
 <rect x="1" y="1" width="103" height="76" fill="black"/>
 <path d="M1 1L104.44 76.96" stroke="white" stroke-width="0.12" stroke-linecap="square" stroke-linejoin="bevel"/>

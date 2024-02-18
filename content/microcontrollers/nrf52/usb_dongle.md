@@ -5,12 +5,12 @@ image: /images/nrf_usb_dongle.png
 order: 5
 date: 2021-02-14T08:00:00+00:00
 lastmod: 2021-02-14T08:00:00+00:00
-tags: [Board,NRF52]
+tags: [nRF52840, USB]
 features:
     - board codename : PCA10056
     - nRF52840
     - ARM M4 64 MHz
-    - 1024 KB ROM - 256 KB RAM
+    - ROM 1024 KB, RAM 256 KB
     - Bluetooth 5, Mesh
     - 802.15.4, Thread, Zigbee
     - USB 2
@@ -18,15 +18,15 @@ features:
 
 :button[]{label="Product Page" link="https://www.nordicsemi.com/Software-and-tools/Development-Kits/nRF52840-Dongle/" icon="new"}
 
-:image[]{src="/images/nrf_usb_dongle.png" center}
+:image[]{src="/images/nrf_usb_dongle.png" center width="400"}
 
 * [nRF52840](https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52840)
 * ARM M4 64 MHz
-* 1024 KB ROM - 256 KB RAM
+* ROM 1024 KB, RAM 256 KB
 * Bluetooth 5, Mesh
 * 802.15.4, Thread, Zigbee
 * USB 2
-GetStarted)
+
 ### Applications
 * [custom mesh coordinator](https://github.com/nRFMesh/nRF52_Mesh#08-usb-dongle-nrf52840-dongle)
 
