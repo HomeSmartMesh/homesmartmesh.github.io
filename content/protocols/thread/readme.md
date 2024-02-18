@@ -506,7 +506,7 @@ ClientList can not open the Predefined Topic List.     /etc/predefinedTopic.conf
 
 ## Firmware search gateway
 
-![MQTT SN Gateway](./mqtt-sn gateway.svg)
+![MQTT SN Gateway](./mqtt-sn_gateway.svg)
 
 # Building on other frameworks
 ## Platformio

@@ -27,7 +27,7 @@ features:
 :button[]{ link="https://eu.mouser.com/datasheet/2/412/MDEK1001_System_User_Manual-1.1-1878639.pdf" icon="pdf" label="user manual" }
 
 ## DWM1001C Module
-:image[]{ src="/images/uwb/dwm1001_module.webp" width="250" }
+:image[]{ src="/images/uwb/dwm1001_module.webp" width="250" center}
 
 * DW1000 Transciever
 * TWR-RTLS : Two Way Ranging - Real Time Location System

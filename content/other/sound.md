@@ -20,17 +20,18 @@ image: "/images/sound/web_py_loop.png"
 * on the same processing loop, the audio is replacing with the incoming `Float32Array` stream from the server
 * During the first iteration of the processing loop, as the queue is empty, the output is filled with zeros
 
-:image[]{src="/design/02_script_processor_loopback.svg" width="500"}
+![Script Processor](/design/02_script_processor_loopback.svg)
 
 ## media source extension API
 * using `MediaRecorder` and `MediaSource` for encoded stream loopback through websocket
-:image[]{src="/design/06_media_recorder_source_loopback.svg" width="400"}
+
+![Media recorder source loopback](/design/06_media_recorder_source_loopback.svg)
 
 ## webRTC
 Official example 
 :button[]{label="peerconnection audio" link="https://github.com/webrtc/samples/tree/gh-pages/src/content/peerconnection/audio" icon="github"}
 
-:image[]{src="/design/web_rtc.svg" width="300"}
+![Web RTC](/design/web_rtc.svg)
 
 
 
