@@ -6,6 +6,7 @@ features:
     - ESP32-C3-Mini-1
     - RGB LED (GPIO8)
 ---
+# C3 Dev Kit M1
 
 :image[]{src="/images/esp32/c3-m1.webp" width="300" center}
 
@@ -16,4 +17,12 @@ board = esp32-c3-devkitm-1
 ```
 
 # ESP32 C3 Mini
-.button[]{link="https://www.espressif.com/sites/default/files/documentation/esp32-c3-mini-1_datasheet_en.pdf" label "C3 Module"}
+:button[]{label="C3 Module" link="https://www.espressif.com/sites/default/files/documentation/esp32-c3-mini-1_datasheet_en.pdf"}
+
+# Schematics
+
+![Schmeatics](./images/esp32-c3-yd_schematics.svg)
+
+# Pinout
+[pinout](./images/c3-m1-pinout.xlsx)
+
