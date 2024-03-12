@@ -47,10 +47,10 @@ The gola of this Automation is to adjust the volume of the sonos system with the
 
 * I'm still analyzing the options how CHIP can or will be integrated in Home Assistant
 
-{{< icon_button relref="/docs/frameworks/chip/" text="Project CHIP">}}
+{{< icon_button relref="/frameworks/chip/" text="Project CHIP">}}
 
 ## MQTT-SN over Thread
 * MQTT-SN integration should be trensparent to Home Assistant and treated as any other MQTT connection
 * MQTT-SN is a light weight protocol that plays the role of a bridge between an MQTT broker and constrained devices that need to minimise payload and packets traffic. Therefore it's appropriate for Low power wirelss mesh netwroks such as Thread
 
-{{< button relref="/docs/networks/thread#mqtt-sn" >}}Thread - MQTT-SN{{</button>}}
+{{< button relref="/networks/thread#mqtt-sn" >}}Thread - MQTT-SN{{</button>}}

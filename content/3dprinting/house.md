@@ -1,20 +1,21 @@
 ---
-title: "House model"
-description: "House model reproduction"
+title: House model
+description: House model reproduction
 date: 2021-01-01T00:00:00+00:00
-weight: 12
-bookToC: false
+order: 12
+image: ./house/03 Model Side.JPG
 ---
-{{<load-model_viewer>}}
 
 # House Model
 
-{{< load-photoswipe >}}
-{{<gallery dir="/images/3dprinting/house" />}}
+```yaml gallery
+dir: ./house
+```
 
 The house model shown above was 3d printed with the model below, then decorated and painted by hand. The roof was made ready plastic material and painted.
 
-{{< model_viewer "/models/house.glb" "400" >}}
-{{< icon_button text="STL Model" href="/models/house.zip" icon="download" >}}
+[house](/models/house.glb)
 
-{{< icon_button text="Fusion 3D Model" href="/models/house model print.f3d" icon="download" >}}
+:button[]{label="STL Model" link="/models/house.zip" icon="download" }
+
+:button[]{label="Fusion 3D Model" link="/models/house model print.f3d" icon="download" }

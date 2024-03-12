@@ -67,7 +67,7 @@ void loop()
 ## 3D printed case
 ![ESP32 Remote](/images/3dprinting/esp32_remote.png)
 
-:button[]{link=/docs/3dprinting/esp32_remote label="STL Model for 3D printing"}
+:button[]{link=/3dprinting/esp32_remote label="STL Model for 3D printing"}
 
 ## Display
 * IPS ST7789V

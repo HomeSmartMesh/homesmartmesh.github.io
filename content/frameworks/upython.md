@@ -7,7 +7,7 @@ weight: 6
 toc: true
 ---
 
-{{<icon_button text="nRF52840 usb dongle" relref="/docs/microcontrollers/nrf52/usb_dongle" >}}
+{{<icon_button text="nRF52840 usb dongle" relref="/microcontrollers/nrf52/usb_dongle" >}}
 
 # cross compiler
 * note `CROSS_COMPILE` is referencing the system toolchain with loose recommendations `7.3.1/2Q18 or 8.2.1/4Q18.`

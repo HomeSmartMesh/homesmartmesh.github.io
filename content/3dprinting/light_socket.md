@@ -1,20 +1,21 @@
 ---
-title: "Switch Socket Cover"
-description: "How to cover a dumb switch and a Socket"
+title: Switch Socket Cover
+description: How to cover a dumb switch and a Socket
 date: 2021-01-01T00:00:00+00:00
-weight: 3
-bookToC: false
+order: 3
+image: ./cover_switch_socket.png
+tags: ["Smart Light"]
 ---
-{{<load-model_viewer>}}
 
 # Cover Dumb Switch and smart Socket
 
-{{< image src="/images/3dprinting/cover_switch_socket.png" >}}
+![Cover Switch Socket](./cover_switch_socket.png)
 
-{{< model_viewer "/models/wall_switch_double.glb" "400" >}}
-{{< icon_button text="STL Model" href="/models/wall_switch_double.stl" icon="download" >}}
+[Wall Switch Double](/models/wall_switch_double.glb)
+
+:button[]{label="STL Model" link="/models/wall_switch_double.stl" icon="download"}
 
 # Application
 
-{{< image src="/images/double smart switch.png" >}}
-{{< button relref="/docs/frameworks/raspi-iot#home-status" >}} More details on the raspberry pi service {{</button>}}
+![](/images/double smart switch.png)
+:button[]{link="/frameworks/raspi-iot#home-status" label="More details on the raspberry pi service"}

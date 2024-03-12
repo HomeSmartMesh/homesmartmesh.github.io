@@ -518,7 +518,7 @@ ClientList can not open the Predefined Topic List.     /etc/predefinedTopic.conf
 # Build with Matter Node
 As the `Matter Protocol` can run over `Thread`, it is possible to connect Matter applications.
 
-:button[]{link="/docs/frameworks/matter/" label="More about Project Matter"}
+:button[]{link="/frameworks/matter/" label="More about Project Matter"}
 
 # Command Line Interface
 

@@ -7,7 +7,7 @@ image: /images/uwb/dwm3001-cdk.webp
 order: 2
 ---
 
-:button[]{link="/docs/networks/ultrawideband/" label="Networks / Ultra Wide Band RTLS"}
+:button[]{link="/networks/ultrawideband/" label="Networks / Ultra Wide Band RTLS"}
 
 # Development Board
 :button[]{link="https://www.qorvo.com/products/p/DWM3001CDK" icon="new" label="product page"}

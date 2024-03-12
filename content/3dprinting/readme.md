@@ -4,76 +4,35 @@ slug: 3dprinting
 description: 3D Models for Smart Home, electronics and house utilities
 order: 9
 date: 2021-01-17T00:00:00+00:00
-image: /images/3dprinting/3dmodels.png
+image: ./3dmodels.png
 ---
 
 # 3D Models
 
-```yaml grid
-filters:
-  - All
-  - Smart Light
-  - Electronics
-slot: 200
-items:
-  - name: "Kayak Trailer"
-    width: 200
-    tags: []
-  - name: "Smart Light Switch"
-    width: 200
-    tags: [Smart Light]
-  - name: "Switch with Socket"
-    width: 200
-    tags: [Smart Light]
-  - name: "Under desk shelf"
-    width: 200
-    tags: []
-  - name: "ESP32 remote"
-    width: 400
-    tags: [Electronics]
-  - name: "Handbag hanger"
-    width: 200
-    tags: []
-  - name: "House Model"
-    width: 200
-    tags: []
-  - name: "Voronoi"
-    width: 200
-    tags: []
+```yaml cards
+- uid: "Kayak Trailer"
+- uid: "Smart Light Switch"
+- uid: "Switch with Socket"
+- uid: "Under desk shelf"
+- uid: "ESP32 remote"
+- uid: "Handbag hanger"
+- uid: "House Model"
+- uid: "Voronoi"
 ```
 
-{{< grid "my_grid" >}}
-{{< image src="/images/3dprinting/kayak_trailer/13 shape fit mounted.png" href="/docs/3dprinting/kayak_trailer/" >}}
-
-<--->
-{{< image src="/images/3dprinting/dumb_to_smart.png" href="/docs/3dprinting/light/" >}}
-<--->
-
-{{< image src="/images/3dprinting/cover_switch_socket.png" href="/docs/3dprinting/light_socket/" >}}
-<--->
-{{< image src="/images/3dprinting/shelf/02 Shelf Top View.jpg" href="/docs/3dprinting/under_desk_shelf/" >}}
-<--->
-{{< image src="/images/3dprinting/esp32_remote.png" href="/docs/3dprinting/esp32_remote/" >}}
-<--->
-{{< image src="/images/3dprinting/handbag carrier.jpg" href="/docs/3dprinting/handbag_hanger/" >}}
-<--->
-{{< image src="/images/3dprinting/house/03 Model Side.JPG" href="/docs/3dprinting/house" >}}
-<--->
-{{< image src="/images/3dprinting/Voronoi cells.jpg" href="/docs/3dprinting/voronoi/" >}}
-{{< /grid >}}
-
-# Discord
-* Not all models have their own dedicated page and uploaded model, but if you like one of the below gallery models, feel free to ask on the github forum and I would upload it.
-
-:button[]{ label="Home Smart Mesh - website" link="https://github.com/HomeSmartMesh/website/discussions" icon="github" }
+:button[]{ label="Home Smart Mesh - Discussions" link="https://github.com/HomeSmartMesh/website/discussions" icon="github" }
 
 # Gallery
+```yaml gallery
+dir: "./all models"
+```
 
-{{<gallery dir="/images/3dprinting/all models" />}}
+:button[]{link="/3dprinting/kayak_trailer" label="Kayak Trailer"}
+```yaml gallery
+dir: "./kayak_trailer"
+```
 
-{{<button relref="/docs/3dprinting/kayak_trailer" >}}Kayak Trailer{{</button>}}
-{{<gallery dir="/images/3dprinting/kayak_trailer" />}}
-
-{{<button relref="/docs/3dprinting/house" >}}House Model{{</button>}}
-{{<gallery dir="/images/3dprinting/house" />}}
-
+:button[]{link="/3dprinting/house" label="House Model"}
+```yaml gallery
+dir: "./house"
+```

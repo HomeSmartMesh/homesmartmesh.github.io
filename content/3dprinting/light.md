@@ -1,25 +1,26 @@
 ---
-title: "Switch Cover"
-description: "How to cover a dumb switch with a smart switch"
+title: Switch Cover
+description: How to cover a dumb switch with a smart switch
 date: 2021-01-01T00:00:00+00:00
-weight: 2
-images: ["/images/3dprinting/dumb_to_smart.png"]
-bookToC: false
+order: 2
+image: ./dumb_to_smart.png
+tags: ["Smart Light"]
 ---
-{{<load-model_viewer>}}
 
 # Cover Dumb Switch with Smart Switch
 
-{{< image src="/images/3dprinting/dumb_to_smart.png" >}}
+![Dumb to smart](./dumb_to_smart.png)
 
-{{< model_viewer "/models/wall_switch.glb" "400" >}}
-{{< icon_button text="STL Model" href="/models/switch_cover_switch.stl" icon="download" >}}
+[Wall Switch](/models/wall_switch.glb)
 
-{{< load-photoswipe >}}
-{{< gallery dir="/images/3dprinting/wall switch" />}}
+:button[]{label="STL Model" link="/models/switch_cover_switch.stl" icon="download" }
+
+```yaml gallery
+dir: "/images/3dprinting/wall switch"
+```
 
 # Application
 
-{{< image src="/images/aqara hue zigbee.png" >}}
-{{< button relref="/docs/frameworks/raspi-iot#hue-light-control" >}} More details on the raspberry pi service {{</button>}}
+![Aqara hue zigbee](/images/aqara hue zigbee.png)
 
+:button[]{link="/frameworks/raspi-iot#hue-light-control" label="More details on the raspberry pi service"}

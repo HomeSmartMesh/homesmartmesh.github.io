@@ -1,17 +1,15 @@
 ---
-title: "Handbag hanger"
-description: "Hang your handbag like you hang clothes"
+title: Handbag hanger
+description: Hang your handbag like you hang clothes
 date: 2021-01-01T00:00:00+00:00
-weight: 10
-bookToC: false
+orged: 10
+image: ./handbag carrier.jpg
 ---
-{{<load-model_viewer>}}
 
 # Handbag hanger
 
-{{< image src="/images/3dprinting/handbag carrier.jpg" >}}
+![Handbag carrier](./handbag carrier.jpg)
 
-{{< model_viewer "/models/handbag_hanger.glb" "400" >}}
-{{< icon_button text="STL Model" href="/models/Hang bag v2.stl" icon="download" >}}
+[Handbag hanger](/models/handbag_hanger.glb)
 
-
+:button[]{label="STL Model" link="/models/Hang bag v2.stl" icon="download" }

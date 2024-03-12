@@ -11,7 +11,7 @@ features:
     - UWB DWM1001C Module
 ---
 
-:button[]{link="/docs/networks/ultrawideband/" label="Networks / Ultra Wide Band RTLS" }
+:button[]{link="/networks/ultrawideband/" label="Networks / Ultra Wide Band RTLS" }
 
 # Development Board
 :image[]{src="/images/uwb/DWM1001_DevKit.png" width="250" center}
@@ -54,7 +54,7 @@ The product page includes datasheets, schematics, firmware,...
 
 # Application
 
-:button[]{link="/docs/networks/ultrawideband#mesh-positioning-framework" label="Mesh Positioning Framework" }
+:button[]{link="/networks/ultrawideband#mesh-positioning-framework" label="Mesh Positioning Framework" }
 
 # 3d printed box for 18650 battery
 ![08a UWB 18650 battery](/images/uwb/devkit/08a_UWB_18650_battery.png)
@@ -63,7 +63,7 @@ The product page includes datasheets, schematics, firmware,...
 # Gallery
 
 ```yaml gallery
-#dir: /images/uwb/devkit
+dir: /images/uwb/devkit
 ```
 
 * `01 Unboxing` : A cable and x4 usb angles provided that can keep x4 Anchors up right.

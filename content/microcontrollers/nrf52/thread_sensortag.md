@@ -13,8 +13,8 @@ features:
 - Light, Temperature, Humidity, Pressure
 ---
 
-:button[]{link="/docs/networks/thread/" label="Networks / Thread" }
-:button[]{link="/docs/frameworks/chip/" label="Frameworks / CHIP" }
+:button[]{link="/networks/thread/" label="Networks / Thread" }
+:button[]{link="/frameworks/chip/" label="Frameworks / CHIP" }
 
 # Overview
 ![Overview](/images/thread_sensortag/sensortag_v1.1.webp)
@@ -89,11 +89,11 @@ dir: /images/thread_sensortag/swd-pogo
 ## Openthread Dongle
 This section includes instructions how to create an openthread dongle called `Radio Co-Processor` (RCP), that needs to be flashed then attached to the raspberry pi USB port.
  
-:button[]{ link="/docs/networks/thread#radio-co-processor-rcp" label="nRF52840-usb RCP"}
+:button[]{ link="/networks/thread#radio-co-processor-rcp" label="nRF52840-usb RCP"}
 ## Raspberry Pi Setup
 This section includes steps to install all needed services to run the SensorTag udp-v6 broadcast to mqtt, influxdb and grafana this also inlcudes the boarder router setup as intermediate step.
  
-:button[]{ link="/docs/frameworks/raspi-iot#raspberry-pi-setup" label="raspberry pi setup"}
+:button[]{ link="/frameworks/raspi-iot#raspberry-pi-setup" label="raspberry pi setup"}
 
 ## Zephyr Tag Firmware
 :button[]{ link="https://github.com/HomeSmartMesh/sdk-hsm-sensortag" label="Zephyr nRF-Connect SensorTag repo" icon="github" }

@@ -56,7 +56,7 @@ features:
 :button[]{label="STL models zip" link="/models/nrf/nRF52840_usb_pogo_top.zip" icon="download"}
 
 ## micro python
-:button[]{label="build micro python" link="/docs/frameworks/upython/#config" }
+:button[]{label="build micro python" link="/frameworks/upython/#config" }
 
 ## gallery
 ```yaml gallery
