@@ -65,7 +65,7 @@ void loop()
 :::
 
 ## 3D printed case
-![ESP32 Remote](/images/3dprinting/esp32_remote.png)
+`![ESP32 Remote](/images/3dprinting/esp32_remote.png)`
 
 :button[]{link=/3dprinting/esp32_remote label="STL Model for 3D printing"}
 
@@ -82,7 +82,7 @@ void loop()
 
 ![Display control app all](/images/esp32/display-control-app-all-info.png)
 
-![ESP32 remote](/images/esp32/esp32_remote.png)
+`![ESP32 remote](/images/esp32/esp32_remote.png)`
 
 
 :button[]{link=https://github.com/ESP32Home/t-display_controller label="Project Github Repo"}

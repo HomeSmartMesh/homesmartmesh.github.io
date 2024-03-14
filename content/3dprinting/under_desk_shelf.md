@@ -4,6 +4,7 @@ description: Hang a shelf below the desk fixed with 3d printed joints
 date: 2021-01-01T00:00:00+00:00
 order: 11
 image: ./shelf/02 Shelf Top View.jpg
+tags: [home]
 ---
 
 # Under desk shelf

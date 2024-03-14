@@ -7,7 +7,7 @@ image: ./Voronoi cells.jpg
 ---
 # Webapp
 
-:button[]{relref="/applications/voronoi" >}} Voronoi Generator Tool {{</button>}}
+:button[]{link="/applications/voronoi" label="Voronoi Generator Tool"}
 
 ## Cells Circle
 

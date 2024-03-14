@@ -4,7 +4,7 @@ description: How to cover a dumb switch and a Socket
 date: 2021-01-01T00:00:00+00:00
 order: 3
 image: ./cover_switch_socket.png
-tags: ["Smart Light"]
+tags: [Light]
 ---
 
 # Cover Dumb Switch and smart Socket

@@ -4,7 +4,7 @@ description: How to cover a dumb switch with a smart switch
 date: 2021-01-01T00:00:00+00:00
 order: 2
 image: ./dumb_to_smart.png
-tags: ["Smart Light"]
+tags: [Light]
 ---
 
 # Cover Dumb Switch with Smart Switch
