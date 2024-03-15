@@ -17,5 +17,6 @@ tags: [Light]
 
 # Application
 
-![](/images/double smart switch.png)
+![Double Smart Switch](/images/double smart switch.png)
+
 :button[]{link="/frameworks/raspi-iot#home-status" label="More details on the raspberry pi service"}

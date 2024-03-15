@@ -9,7 +9,7 @@ tags: [home]
 
 # Handbag hanger
 
-![Handbag carrier](./handbag carrier.jpg)
+![Handbag carrier](./handbag%20carrier.jpg)
 
 [Handbag hanger](/models/handbag_hanger.glb)
 

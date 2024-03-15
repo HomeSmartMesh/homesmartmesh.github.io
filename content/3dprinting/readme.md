@@ -12,7 +12,7 @@ toc: false
 
 ```yaml cards
 - uid: 3dprinting.kayak-trailer
-- uid: 3dprinting.switch-cover
+- uid: 3dprinting.light-switch-cover
 - uid: 3dprinting.switch-socket-cover
 - uid: 3dprinting.under-desk-shelf
 - uid: 3dprinting.esp32-remote
@@ -25,15 +25,15 @@ toc: false
 
 # Gallery
 ```yaml gallery
-dir: "./all models"
+dir: ./all models
 ```
 
 :button[]{link="/3dprinting/kayak_trailer" label="Kayak Trailer"}
 ```yaml gallery
-dir: "./kayak_trailer"
+dir: ./kayak_trailer
 ```
 
 :button[]{link="/3dprinting/house" label="House Model"}
 ```yaml gallery
-dir: "./house"
+dir: ./house
 ```

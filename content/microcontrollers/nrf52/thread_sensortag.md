@@ -80,7 +80,7 @@ features:
 [Pogo pin adapter](/models/thread4_lower.glb)
 
 ```yaml
-dir: /images/thread_sensortag/swd-pogo
+dir: ./swd-pogo
 ```
 
 # Software

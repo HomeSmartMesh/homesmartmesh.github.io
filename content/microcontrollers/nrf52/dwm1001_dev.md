@@ -57,13 +57,13 @@ The product page includes datasheets, schematics, firmware,...
 :button[]{link="/networks/ultrawideband#mesh-positioning-framework" label="Mesh Positioning Framework" }
 
 # 3d printed box for 18650 battery
-![08a UWB 18650 battery](/images/uwb/devkit/08a_UWB_18650_battery.png)
+![08a UWB 18650 battery](./uwb_devkit/08a_UWB_18650_battery.png)
 
 :button[]{link="/models/DWM1001-Dev-3dprint-18650.f3d" icon="download" label="Fusion360 model"}
 # Gallery
 
 ```yaml gallery
-dir: /images/uwb/devkit
+dir: ./uwb_devkit
 ```
 
 * `01 Unboxing` : A cable and x4 usb angles provided that can keep x4 Anchors up right.

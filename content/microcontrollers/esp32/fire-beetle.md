@@ -34,7 +34,7 @@ The 0 Ohm resistors R10 and R11 needed to sense the battery voltage by A0-Pin38 
 ## Gallery
 
 ```yaml gallery_dir
-dir: /images/esp32/firebeetle/
+dir: ./firebeetle/
 ```
 
 ## Links

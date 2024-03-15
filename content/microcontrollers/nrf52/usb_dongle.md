@@ -60,7 +60,7 @@ features:
 
 ## gallery
 ```yaml gallery
-dir: /images/nrf52_dongle
+dir: ./nrf52_dongle
 ```
 
 # bootloader

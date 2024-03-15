@@ -3,8 +3,7 @@ title: Kayak Trailer
 description: minimal weight and size kayak trailer
 date: 2021-01-01T00:00:00+00:00
 order: 1
-image: "./kayak_trailer/13 shape fit mounted.png"
-bookToC: false
+image: ./kayak_trailer/13 shape fit mounted.png
 ---
 :button[]{ link="/3dprinting" label="← Back to 3D Printing"}
 
