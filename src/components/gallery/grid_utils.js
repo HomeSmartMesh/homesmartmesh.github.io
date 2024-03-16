@@ -52,7 +52,8 @@ async function yaml_to_grid_images(code,dirpath){
             ext:extname(url).toLowerCase(),
             name:getFilenameWithoutExtension(relFile),
             spanWidth:spanWidth,
-            spanHeight:spanHeight
+            spanHeight:spanHeight,
+            ratio:aspectRatio
         })
     }
     return imagesUrls
