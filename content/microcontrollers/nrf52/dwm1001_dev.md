@@ -4,7 +4,7 @@ description: An Ultra Wide Band development kit including the DWM1001C Module
 order: 2
 date: 2021-05-08T08:00:00+00:00
 lastmod: 2021-05-08T08:00:00+00:00
-image: /images/uwb/DWM1001_DevKit.png
+image: ./DWM1001_DevKit.png
 tags: [nRF52832, uwb]
 features:
     - nRF52832
@@ -14,7 +14,7 @@ features:
 :button[]{link="/networks/ultrawideband/" label="Networks / Ultra Wide Band RTLS" }
 
 # Development Board
-:image[]{src="/images/uwb/DWM1001_DevKit.png" width="250" center}
+:image[]{src="./DWM1001_DevKit.png" width="250" center}
 
 * DWM1001C Module
 * STM32F072 as J-Link OB debugger
@@ -27,7 +27,7 @@ features:
 :button[]{ link="https://eu.mouser.com/datasheet/2/412/MDEK1001_System_User_Manual-1.1-1878639.pdf" icon="pdf" label="user manual" }
 
 ## DWM1001C Module
-:image[]{ src="/images/uwb/dwm1001_module.webp" width="250" center}
+:image[]{ src="./dwm1001_module.webp" width="250" center}
 
 * DW1000 Transciever
 * TWR-RTLS : Two Way Ranging - Real Time Location System
@@ -38,7 +38,7 @@ The product page includes datasheets, schematics, firmware,...
 :button[]{link="https://www.decawave.com/product/dwm1001-module/" icon="new" label="product page" }
 
 ## DW1000 Transciever
-:image[]{src="/images/uwb/dw1000.webp" width="150" center}
+:image[]{src="./dw1000.webp" width="150" center}
 
 * IEEE 802.15.4-2011 UWB
 * 6 RF bands : 3.5 GHz - 6.5 GHz

@@ -8,7 +8,7 @@ image: ./3dmodels.png
 toc: false
 ---
 
-# 3D Models
+# 3D Printing
 
 ```yaml cards
 - uid: 3dprinting.kayak-trailer
@@ -21,5 +21,11 @@ toc: false
 - uid: 3dprinting.voronoi-shapes
 ```
 
+# Get in touch
 :button[]{ label="Home Smart Mesh - Discussions" link="https://github.com/HomeSmartMesh/website/discussions" icon="github" }
 
+# Gallery
+
+```yaml gallery
+dir: ./all models
+```

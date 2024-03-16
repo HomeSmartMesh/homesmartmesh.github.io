@@ -58,7 +58,7 @@ async function get_dir_files(dirpath,rel_dir){
   const results = await glob(content_dir+"/**/*.*")
   const files = results.map((file)=>(relative(content_dir,resolve(content_dir,file)).split(sep).join('/')))
   process.chdir(originalDirectory)
-  return files.map(file=>join(rel_dir,file))
+  return files.map(file=>join(rel_dir,file)).sort()
 }
 
 export{
