@@ -23,17 +23,3 @@ toc: false
 
 :button[]{ label="Home Smart Mesh - Discussions" link="https://github.com/HomeSmartMesh/website/discussions" icon="github" }
 
-# Gallery
-```yaml gallery
-dir: ./all models
-```
-
-:button[]{link="/3dprinting/kayak_trailer" label="Kayak Trailer"}
-```yaml gallery
-dir: ./kayak_trailer
-```
-
-:button[]{link="/3dprinting/house" label="House Model"}
-```yaml gallery
-dir: ./house
-```
