@@ -1,0 +1,39 @@
+---
+import {yaml_to_grid_images} from './grid_utils.js'
+
+export interface Props {
+    code: string;
+    dirpath: string;
+    expanded: boolean;
+}
+
+const { code, dirpath, expanded=true } = Astro.props as Props;
+
+const imagesUrls = await yaml_to_grid_images(code,dirpath)
+
+---
+
+<div class="container">
+    {imagesUrls.map((image)=>(
+        <div class="item" style={`grid-area: span ${image.spanHeight} / span ${image.spanWidth};`}>
+            {(image.ext == ".svg")?
+                <object data={image.url} />:
+                <img src={image.url} />
+            }
+        </div>
+    ))}
+</div>
+
+<style>
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-auto-rows: minmax(10rem, 1fr);
+    grid-gap: 10px;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+</style>
