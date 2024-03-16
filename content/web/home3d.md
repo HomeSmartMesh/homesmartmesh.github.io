@@ -1,29 +1,26 @@
 ---
-title: "Home 3D"
-description: "Control your home like a Video Game served from your local pi. See your 3d rooms model real time colored with your temperature sensor"
-lead: "Control your home like a Video Game served from your local pi. See your 3d rooms model real time colored with your temperature sensor"
+title: Home 3D
+description: Control your home like a Video Game served from your local pi. See your 3d rooms model real time colored with your temperature sensor
+lead: Control your home like a Video Game served from your local pi. See your 3d rooms model real time colored with your temperature sensor
 date: 2021-01-01T00:00:00+00:00
 lastmod: 2021-01-01T00:00:00+00:00
-draft: false
-images: ["/images/floor_temperature.png"]
-weight: 2
-toc: true
+image: ./floor_temperature.png
+order: 2
+data: ./home3d.json
 #https://schema.org/SoftwareSourceCode
 ---
-{{<linked_data "/static/data/home3d.json">}}
 
-
-{{< new_button href="https://github.com/HomeSmartMesh/smart_home_3d_webapp" text="Webapp 3D Github Repo" >}}
+:button[]{link="https://github.com/HomeSmartMesh/smart_home_3d_webapp" label="Webapp 3D Github Repo" }
 
 ## UWB Indoors positioning
 
-{{< figure src="/images/home3d/uwb-tag-3d.gif" width=600 >}}
+:image[]{src="/images/home3d/uwb-tag-3d.gif" width=600 }
 
 UWB development environment
-{{<icon_button relref="/docs/networks/ultrawideband/" text="Networks / Ultra Wide Band RTLS" >}}
+:button[]{link="/docs/networks/ultrawideband/" label="Networks / Ultra Wide Band RTLS" }
 
 Support, reviews, experience exchange and ideas related to this page content can be discussed in the dedicated forum category
-{{<icon_button text="Discussions - 3d webapp " href="https://github.com/HomeSmartMesh/smart_home_3d_webapp/discussions" icon="github" >}}
+:button[]{link="https://github.com/HomeSmartMesh/smart_home_3d_webapp/discussions" label="Discussions - 3d webapp " icon="github" }
 
 
 ## Getting Started
@@ -41,7 +38,7 @@ Support, reviews, experience exchange and ideas related to this page content can
 
 
 ### activate mqtt connection
-{{< figure src="/images/mqtt_activate.gif" width=600 >}}
+:image[]{src="/images/mqtt_activate.gif" width=600 }
 
 1. adjust the mqtt topic names to match your mqtt devices
 2. install a mosquitto version with websocket support
@@ -49,18 +46,18 @@ Support, reviews, experience exchange and ideas related to this page content can
 
 ### Live demo
 
-{{< iframe src="https://homesmartmesh.github.io/smart_home_3d_webapp/" height="500" >}}
+[demo](https://homesmartmesh.github.io/smart_home_3d_webapp/)
 
 ### Demo light control with power log
 
-{{< figure src="/images/demo1.gif" width=600 >}}
+:image[]{src="/images/demo1.gif" width=600 }
 
 We see in this demo a home 3d model augmented with interactive mesh items. Some meshes represent light bulbs and generate events when the user clicks on them. Those events are handled by a hue light client that interacts with the real hue gateway. The hue client publishes as events the actual state of the switched light, and that state is updated by the mesh bulb color and the associated 3d light.
 
 As a demonstration for the reaction time of the real light switching on and off, we can see in the gif animation the power consumption log of the light switched. This log comes from a [shelly 2.5 device](https://shelly.cloud/shelly-25-wifi-smart-relay-roller-shutter-home-automation/) with power monitoring capabilites. This measure device is itself powering up the hue light. Note that the slow power up and down ramp are due to the hue effect of slow variation when switching on and off.
 
 ## Concept
-{{< figure src="/images/concept.png" width=600 >}}
+:image[]{src="/images/concept.png" width=600 }
 
 Home automation connected to 3d events in javascript
 
@@ -72,11 +69,11 @@ send_custom_event("three_param",{name:"Kitchen", pull:0.3});
 send_custom_event("three_param",{name:"Kitchen", push:0.3});
 ```
 
-{{< image src="https://github.com/HomeSmartMesh/web_three_interface/raw/master/12_multiple_parameters/media/demo.gif" >}}
+[demo](https://github.com/HomeSmartMesh/web_three_interface/raw/master/12_multiple_parameters/media/demo.gif)
 
 Step by step details with 12 example in the link below :
 
-{{< my_button href="/docs/applications/web_three_interface/" text="Web Three Interface" >}}
+:button[]{link="/docs/applications/web_three_interface/" label="Web Three Interface" }
 
 ## Hue lights usage
 Note : This project is not related to the hue devices supplier and is a simple user of the provided API.
@@ -92,7 +89,7 @@ Note : This project is not related to the hue devices supplier and is a simple u
 
 
 ### Hue config in blender
-{{< figure src="/images/hue_blender.png" width=500 >}}
+:image[]{src="/images/hue_blender.png" width=500 }
 
 configuration of hue light name in blender Light bulb object Custom properties.
 
@@ -114,11 +111,11 @@ lights broadcast their state on startup and as a feedback when updated from java
 * Lightgroup are optional and the individual light items configuration does not differ depending on if they are part of a light group or not.
 * only the hue gateway lightgroup is being used. That means a lightgroup has to be created with the hue app before it can be used in this webapp.
 
-{{< figure src="/images/hue_lightgroup_structure.png" width=300 >}}
+:image[]{src="/images/hue_lightgroup_structure.png" width=300 }
 
 Indiviual lights have to be attached to a parent mesh that have these custom properties
 
-{{< figure src="/images/hue_light_groups.png" width=500 >}}
+:image[]{src="/images/hue_light_groups.png" width=500 }
 
 * a lightgroup shall also have a `hue` field, the only differerence is that it has no blender light item and does have a `type:lightgroup` property.
 * as the hue gateway allow it, a normal light and a lightgroup can have the same name.
@@ -165,14 +162,14 @@ Indiviual lights have to be attached to a parent mesh that have these custom pro
 ct unit is Mired M = 1000000/T; [Mired](https://en.wikipedia.org/wiki/Mired)
 
 ### demo light groups
-{{< figure src="/images/lightgroup.gif" width=600 >}}
+:image[]{src="/images/lightgroup.gif" width=600 }
 
 ### demo light and group dimming
-{{< figure src="/images/light_dimming.gif" width=600 >}}
+:image[]{src="/images/light_dimming.gif" width=600 }
 
 ### Mqtt config in blender
 
-{{< figure src="/images/mqtt_blender.png" width=500 >}}
+:image[]{src="/images/mqtt_blender.png" width=500 }
 
 The mqtt topic has to be assigned to an `mqtt` custom property
 
@@ -191,12 +188,12 @@ function onMqttMessage(e){
 ```
 ### Mqtt temperature sensors on room floor color
 
-{{< figure src="/images/floor_temperature.png" width=500 >}}
+:image[]{src="/images/floor_temperature.png" width=500 }
 
 
 ## blender home model
 
-{{< figure src="/images/blender_model.png" width=600 >}}
+:image[]{src="/images/blender_model.png" width=600 }
 
 [blender file download from google drive](https://drive.google.com/drive/folders/1DFyGKp_6VMN4Vp36PCXglEsV0zEX9iyz?usp=sharing)
 

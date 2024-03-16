@@ -2,7 +2,7 @@ import {relAssetToUrl} from '@/libs/assets.js'
 import {get_dir_files} from '@/libs/utils.js'
 import yaml from 'js-yaml'
 import {extname,join} from 'path'
-import sizeOf from 'image-size'
+import sharp from 'sharp';
 import { config } from '@/config'
 
 const getFilenameWithoutExtension = (fullPath) => {
@@ -31,15 +31,21 @@ async function yaml_to_grid_images(code,dirpath){
     let imagesUrls = []
     for(const relFile of relImages){
         const abs_file = join(config.content_path,dirpath,relFile)
-        const dimensions = sizeOf(abs_file)
-        const aspectRatio = dimensions.width / dimensions.height
+        const image = sharp(abs_file);
+        const metadata = await image.metadata();
+        let width = metadata.width
+        let height = metadata.height
+        if (metadata.orientation >= 5 && metadata.orientation <= 8) {
+            [width, height] = [height, width]; // Swap width and height
+        }
+        const aspectRatio = width / height
         let spanWidth = 1, spanHeight = 1
         if(aspectRatio > 1) { // Wider image
             spanWidth = Math.round(aspectRatio) // Adjust this logic as per your grid layout needs
         } else if(aspectRatio < 1) { // Taller image
             spanHeight = Math.round(1 / aspectRatio) // Adjust this logic as per your grid layout needs
         }
-        console.log(`width ${dimensions.width} ; height ${dimensions.height} ; ratio ${aspectRatio} ; span ${spanWidth} / ${spanHeight}`)
+        console.log(`${relFile} : width ${width} ; height ${height}; ratio ${aspectRatio} ; span ${spanWidth} / ${spanHeight}`)
         const url = await relAssetToUrl(relFile,dirpath)
         imagesUrls.push({
             url:url,
