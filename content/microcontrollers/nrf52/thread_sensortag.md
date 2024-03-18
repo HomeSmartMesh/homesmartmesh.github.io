@@ -8,7 +8,7 @@ image: /images/thread_sensortag/sensortag_v1.1.webp
 tags: [nRF52840,Thread]
 features:
 - nRF52840
-- OpetnThread
+- OpenThread
 - Zephyr
 - Light, Temperature, Humidity, Pressure
 ---

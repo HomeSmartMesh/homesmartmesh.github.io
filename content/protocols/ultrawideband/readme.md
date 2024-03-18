@@ -4,8 +4,12 @@ slug: ultrawideband
 description: Ultra Wide Band open source positioning framework, link to hardware producst and survey of exisiting open source libraries
 date: 2021-05-06T08:48:57+00:00
 lastmod: 2021-05-15T08:00:00+00:00
-image: ./mesh positioning.png
 order: 2
+image: ./DRTLS.webp
+tags: [Protocol]
+features:
+- Mesh network 802.15.4-uwb with positioning
+- Qorvo/Decawave Modules evaluation
 ---
 
 :button[]{link="/docs/microcontrollers/nrf52/dwm3001_cdk/" label="Microcontrollers / nRF52 / UWB DWM3001 cdk" }

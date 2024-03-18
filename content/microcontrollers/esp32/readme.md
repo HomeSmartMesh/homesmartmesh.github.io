@@ -1,6 +1,12 @@
 ---
 title: ESP32
 order: 1
+image: ./espressif.png
+tags: [Microcontrollers, ESP32]
+features:
+- samples code with wifi MQTT json payload
+- filesystem with json config
+- MQTT Timer camera, e-ink, remote control,...
 ---
 
 ```yaml cards

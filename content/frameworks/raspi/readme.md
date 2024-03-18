@@ -5,17 +5,15 @@ description: raspberry pi server for home automation. For developers, startups, 
 order: 1
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2021-02-14T08:00:00+00:00
-images: ["/images/software.png", "/images/devices.png" ]
+image: ./raspi_iot.png
+tags: [Framewrok]
+features:
+- Learning examples using as few dependencies as possible
+- Sensors to MQTT to influx to Grafana.
+- Multiple Python and Node.js standalone services
 ---
 
-```yaml cards
-- uid: cards.discussions
-  body: true
-  width_rem: 20
-- uid: cards.github-repo
-  body: true
-  width_rem: 20
-```
+:button[]{label="github repo" link="https://github.com/HomeSmartMesh/raspi" target="_blank" height="170"}
 
 # Home Webapp
 This `mobile first` webapp from the [web/home-next](https://github.com/HomeSmartMesh/raspi/tree/master/web/home-next) directory is based on [next.js](https://nextjs.org/), [react](https://reactjs.org/), [Material UI](https://mui.com/) and [MQTT.js](https://github.com/mqttjs/MQTT.js#readme). All of the features are running on a raspberry pi as a server with services from a deployed instance of this repo.

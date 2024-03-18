@@ -5,6 +5,8 @@ description: 3D Models for Smart Home, electronics and house utilities
 order: 9
 date: 2021-01-17T00:00:00+00:00
 image: ./3dmodels.png
+features:
+- 3D Models for Smart Home, electronics and house utilities
 toc: false
 ---
 

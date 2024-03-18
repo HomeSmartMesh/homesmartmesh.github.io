@@ -4,7 +4,11 @@ description: Matter is the new name of project Connected Home Over IP
 order: 2
 date: 2021-05-13T08:00:00+00:00
 lastmod: 2021-05-13T08:00:00+00:00
-image: /design/Protocols.svg
+image: /images/matter/overview.png
+tags: [Protocol]
+features:
+- Multiple networks supported (Thread, BT, Wifi)
+- Application "Advanced ZCL" over IP
 ---
 # Relates to
 :button[]{link="/frameworks/zephyr/" label="Zephyr RTOS"}

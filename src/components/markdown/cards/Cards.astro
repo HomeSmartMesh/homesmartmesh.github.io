@@ -16,6 +16,7 @@ const cards = yaml.load(code)
 console.log("----------------- cards ------------------")
 const promises = cards.map(entry => getEntry({ uid: entry.uid }));
 const entries = await Promise.all(promises);
+console.log(entries)
 ---
 <div class="cards container">
     {

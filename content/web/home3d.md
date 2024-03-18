@@ -7,6 +7,11 @@ lastmod: 2021-01-01T00:00:00+00:00
 image: ./floor_temperature.png
 order: 2
 data: ./home3d.json
+tags: [Applications]
+features:
+- Control your home like a Video Game served from your local pi.
+- See your 3d rooms model real time colored with your temperature sensor.
+
 #https://schema.org/SoftwareSourceCode
 ---
 

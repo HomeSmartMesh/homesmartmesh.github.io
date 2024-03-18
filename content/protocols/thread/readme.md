@@ -1,8 +1,13 @@
 ---
 title: Thread
 protocol: thread
-description: "Build and setup instruction for a Thread network. Compilation from different platforms comapatible with the nRF dongle"
-image: openthread-environment-1.1.svg
+description: Build and setup instruction for a Thread network. Compilation from different platforms comapatible with the nRF dongle
+image: ./threadgrouplogo.ico
+tags: [Protocol]
+features:
+- Protocol Documentation
+- Tools
+- Boarder Router
 ---
 
 :button[]{link="/microcontrollers/nrf52/thread_sensortag/" label="Thread SensorTag"}

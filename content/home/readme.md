@@ -3,42 +3,32 @@ title : Smart Home Hardware Software Development
 description: Home Automation Frameworks, Microcontrollers, Wireless Networks, Applications, with tutorials and references to the documentation of protocol standards and hardware manufacturers
 date: 2020-10-06T08:48:23+00:00
 lastmod: 2021-02-14T08:00:00+00:00
-images: ["/images/meta.png", "/images/thread_sensortag/concept.png", "/images/3dprinting/3dmodels.png", "/images/nRF52_mesh.png", "/images/floor_temperature.png" ]
+image: /images/floor_temperature.png
 toc: false
 ---
 
 ```yaml cards
-- uid: cards.matter
-  body: true
+- uid: protocols.matter
   width_rem: 20
-- uid: cards.ultra-wide-band
-  body: true
+- uid: protocols.ultrawideband
   width_rem: 20
-- uid: cards.thread-sensortag
-  body: true
+- uid: nrf52.thread-sensortag
   width_rem: 20
-- uid: cards.raspi-iot
-  body: true
+- uid: frameworks.raspi-iot
   width_rem: 20
-- uid: cards.esp32-boards
-  body: true
+- uid: microcontrollers.esp32
   width_rem: 20
-- uid: cards.3d-printing
-  body: true
+- uid: 3dprinting
   width_rem: 20
 - uid: protocols.simple-mesh
   width_rem: 20
-- uid: cards.thread
-  body: true
+- uid: protocols.thread
   width_rem: 20
-- uid: cards.zigbee
-  body: true
+- uid: protocols.zigbee
   width_rem: 20
-- uid: cards.smart-home-3d
-  body: true
+- uid: web.home-3d
   width_rem: 40
-- uid: cards.home-assistant
-  body: true
+- uid: frameworks.home-assistant
   width_rem: 20
 ```
 
