@@ -150,7 +150,7 @@ The output should not only be hearable as a sound signal but also visual in orde
 * Status feedback through LEDs
 
 ## Microcontrollers
-:image[]{src="/images/hardware.png" width=800 }
+:image[]{src="/images/sound/hardware.png" width=800 }
 
 * MEMS microphones : [SPH0645](https://cdn-reichelt.de/documents/datenblatt/A300/DEBO_MEMS_MIC_DB_EN.pdf)
 * [STM32F407VGT6](https://stm32-base.org/boards/STM32F407VGT6-STM32F4XX-M.html)

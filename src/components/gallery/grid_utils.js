@@ -48,18 +48,25 @@ async function yaml_to_grid_images(code,dirpath){
         console.log(`${relFile} : width ${width} ; height ${height}; ratio ${aspectRatio} ; span ${spanWidth} / ${spanHeight}`)
         const url = await relAssetToUrl(relFile,dirpath)
         imagesUrls.push({
-            url:url,
+            url,
             ext:extname(url).toLowerCase(),
             name:getFilenameWithoutExtension(relFile),
-            spanWidth:spanWidth,
-            spanHeight:spanHeight,
+            width,
+            height,
+            spanWidth,
+            spanHeight,
             ratio:aspectRatio
         })
     }
     return imagesUrls
 }
 
+function select_masonry(imageUrls){
+    const countGreaterOrEqualOne = imageUrls.filter(item => item.ratio >= 1).length;
+    return countGreaterOrEqualOne > imageUrls.length / 2;
+}
 
 export {
-    yaml_to_grid_images
+    yaml_to_grid_images,
+    select_masonry
 }

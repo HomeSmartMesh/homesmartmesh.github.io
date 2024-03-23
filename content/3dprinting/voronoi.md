@@ -11,7 +11,7 @@ image: ./Voronoi cells.jpg
 
 ## Cells Circle
 
-![Voronoi cells](./Voronoi cells.jpg)
+![Voronoi cells](./Voronoi%20cells.jpg)
 
 [Cells circle](/models/cells_circle.glb)
 :button[]{label="STL Model" link="/models/cells_circle.stl"  icon="download" }

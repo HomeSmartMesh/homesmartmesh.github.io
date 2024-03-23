@@ -1,5 +1,6 @@
 ---
-import {yaml_to_grid_images} from './grid_utils.js'
+import {yaml_to_grid_images,select_masonry} from './grid_utils.js'
+import PhotoGallery from '../photoswipe/Gallery.astro'
 
 export interface Props {
     code: string;
@@ -8,19 +9,29 @@ export interface Props {
     masonry: boolean;
 }
 
-const { code, dirpath, expanded=true, masonry=false } = Astro.props as Props;
+const { code, dirpath, expanded=true, masonry=null } = Astro.props as Props;
 
 const imagesUrls = await yaml_to_grid_images(code,dirpath)
+let mas = masonry
+if(mas == null){
+    mas = select_masonry(imagesUrls)
+}
 ---
 
-<div class={`container ${masonry?'masonry':'grid'}`}>
+<div class={`pswp-gallery container ${mas?'masonry':'grid'}`} id="my-gallery">
     {imagesUrls.map((image)=>(
-        <div class={`item  ${masonry?'masonry':'grid'}`} style={`grid-area: span ${image.spanHeight} / span ${image.spanWidth};`}>
+        <a  href={image.url}
+            class={`item  ${mas?'masonry':'grid'}`}
+            style={`grid-area: span ${image.spanHeight} / span ${image.spanWidth};`}
+            itemscope
+            itemtype="http://schema.org/ImageGallery"
+            data-pswp-width={image.width} 
+            data-pswp-height={image.height} >
             {(image.ext == ".svg")?
                 <object data={image.url} />:
                 <img src={image.url} />
             }
-        </div>
+        </a>
     ))}
 </div>
 
@@ -45,3 +56,5 @@ img{
     margin-bottom: 1rem;
 }
 </style>
+
+<script src="./pswp_gallery.js" />

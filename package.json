@@ -30,6 +30,7 @@
     "panzoom": "^9.4.3",
     "passport": "^0.6.0",
     "passport-github": "^1.1.0",
+    "photoswipe": "^5.4.3",
     "plantuml-encoder": "^1.4.0",
     "remark": "^15.0.1",
     "sharp": "^0.33.0",
