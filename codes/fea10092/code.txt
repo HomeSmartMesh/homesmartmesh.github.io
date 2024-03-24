@@ -1,0 +1,5 @@
+    <defs>
+        <clipPath id="cut-off-cells">
+            <path xmlns="http://www.w3.org/2000/svg" d=${path} fill="#991155" fill-opacity="0.9"></path>
+        </clipPath>
+    </defs>

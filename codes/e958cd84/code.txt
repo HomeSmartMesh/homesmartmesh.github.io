@@ -1,0 +1,4 @@
+pinger = 0
+target = 1
+diag = uwb_ping_diag(pinger, target)
+print(f"test_uwb_ping> ({pinger})->({target}) stdNoise = {diag['stdNoise']}")

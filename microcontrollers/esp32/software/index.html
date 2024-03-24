@@ -1,0 +1,613 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-s6tr6vzr> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v4.5.9"><title></title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="stylesheet" href="/_astro/hoisted.CD2-kdrS.css">
+<link rel="stylesheet" href="/_astro/_url_.BHmp-vPX.css">
+<link rel="stylesheet" href="/_astro/photoswipe.z3i1z0Ou.css"><script type="module" src="/_astro/hoisted.CWlp_WgU.js"></script></head> <body data-astro-cid-s6tr6vzr> <div id="fixed-left" class="fixed-nav active" data-astro-cid-s6tr6vzr></div> <div class="appbar-nav_content-footer" data-astro-cid-s6tr6vzr> <header data-astro-cid-s6tr6vzr> <div class="navbar" data-astro-cid-ju4t2drc> <ul class="navbar-left" data-astro-cid-ju4t2drc> <li data-astro-cid-ju4t2drc> <a href="/" class="" data-astro-cid-ju4t2drc> Home  </a> </li><li data-astro-cid-ju4t2drc> <a href="/microcontrollers" class="active" data-astro-cid-ju4t2drc> Microcontrollers  </a> </li><li data-astro-cid-ju4t2drc> <a href="/frameworks/raspi-iot" class="" data-astro-cid-ju4t2drc> Frameworks  </a> </li><li data-astro-cid-ju4t2drc> <a href="/protocols/thread" class="" data-astro-cid-ju4t2drc> Protocols  </a> </li><li data-astro-cid-ju4t2drc> <a href="/3dprinting" class="" data-astro-cid-ju4t2drc> 3D Printing  </a> </li><li data-astro-cid-ju4t2drc> <a href="/web" class="" data-astro-cid-ju4t2drc> Web  </a> </li><li data-astro-cid-ju4t2drc> <a href="/other/sound-processing" class="" data-astro-cid-ju4t2drc> Other  </a> </li> </ul> <ul class="navbar-right" data-astro-cid-ju4t2drc> <li data-astro-cid-ju4t2drc> <a href="https://github.com/HomeSmartMesh/website-astro" target="_blank" data-astro-cid-ju4t2drc> <img src="/_astro/github-dark.yX09hC67.png" height="32px"> </a> </li> </ul> </div>  </header> <main data-astro-cid-s6tr6vzr> <div id="wide-nav" class="scroll" data-astro-cid-s6tr6vzr> <nav class="open pages_menu client" data-width="20vw" data-hash="f5c3faa8" data-astro-cid-2yctggdy style="--data_width: 20vw;"></nav>    </div> <div id="resize-left" class="nav-resize active" data-astro-cid-s6tr6vzr></div> <article class="content scroll" data-astro-cid-s6tr6vzr> <div id="mobile-nav" data-astro-cid-s6tr6vzr> <nav class="open pages_menu client" data-width="20vw" data-hash="f5c3faa8" data-astro-cid-2yctggdy style="--data_width: 20vw;"></nav>    </div> <div class="article-slot" data-astro-cid-s6tr6vzr>  <h2 id="arduino-esp32" class="heading bar" data-astro-cid-wcjwfpce> <a href="#arduino-esp32" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Arduino ESP32 </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <ul><li><div class="paragraph text"><a href="https://github.com/espressif/arduino-esp32" class="link external" target="_blank" data-astro-cid-xd5t2nax>platform package</a></div></li><li><div class="paragraph text"><a href="https://github.com/espressif/arduino-esp32/blob/master/docs/esp-idf_component.md" class="link external" target="_blank" data-astro-cid-xd5t2nax>as an idf component</a></div></li></ul><h2 id="esp-idf" class="heading bar" data-astro-cid-wcjwfpce> <a href="#esp-idf" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> ESP-IDF </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <ul><li><div class="paragraph text"><a href="https://github.com/espressif/esp-idf" class="link external" target="_blank" data-astro-cid-xd5t2nax>esp-idf</a></div></li><li><div class="paragraph text"><a href="https://github.com/espressif/esp-iot-solution.git" class="link external" target="_blank" data-astro-cid-xd5t2nax>esp-iot-solution</a></div></li><li><div class="paragraph text"><a href="https://github.com/espressif/esp-mdf" class="link external" target="_blank" data-astro-cid-xd5t2nax>mesh-dev-framework</a></div></li><li><div class="paragraph text"><a href="https://docs.espressif.com/projects/esp-mdf/en/latest/" class="link external" target="_blank" data-astro-cid-xd5t2nax>mdf prog guide</a></div></li></ul><h3 id="over-the-air-update" class="heading bar" data-astro-cid-wcjwfpce> <a href="#over-the-air-update" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Over The Air Update </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h3> <div class="highlighter container" data-hash="4af3c64d" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#D4D4D4">></span><span style="color:#9CDCFE">get_idf</span></span>
+<span class="line"><span style="color:#D4D4D4">></span><span style="color:#9CDCFE">idf</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">py</span><span style="color:#9CDCFE"> set</span><span style="color:#D4D4D4">-</span><span style="color:#9CDCFE">target</span><span style="color:#9CDCFE"> esp32</span></span></code></pre> <button class="copy-btn" data-hash="4af3c64d" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="4af3c64d" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <div class="paragraph"><div class="container" data-astro-cid-pptsj4fg> <a href="https://github.com/espressif/esp-idf/tree/master/examples/system/ota" class="link external" target="_blank" data-astro-cid-pptsj4fg> <span class="button text" data-astro-cid-pptsj4fg>OTA Github Readme</span> <span class="icon" data-astro-cid-pptsj4fg><svg    xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 511.626 511.627"
+        fill="currentColor"
+    >
+    <path d="M392.857,292.354h-18.274c-2.669,0-4.859,0.855-6.563,2.573c-1.718,1.708-2.573,3.897-2.573,6.563v91.361
+        c0,12.563-4.47,23.315-13.415,32.262c-8.945,8.945-19.701,13.414-32.264,13.414H82.224c-12.562,0-23.317-4.469-32.264-13.414
+        c-8.945-8.946-13.417-19.698-13.417-32.262V155.31c0-12.562,4.471-23.313,13.417-32.259c8.947-8.947,19.702-13.418,32.264-13.418
+        h200.994c2.669,0,4.859-0.859,6.57-2.57c1.711-1.713,2.566-3.9,2.566-6.567V82.221c0-2.662-0.855-4.853-2.566-6.563
+        c-1.711-1.713-3.901-2.568-6.57-2.568H82.224c-22.648,0-42.016,8.042-58.102,24.125C8.042,113.297,0,132.665,0,155.313v237.542
+        c0,22.647,8.042,42.018,24.123,58.095c16.086,16.084,35.454,24.13,58.102,24.13h237.543c22.647,0,42.017-8.046,58.101-24.13
+        c16.085-16.077,24.127-35.447,24.127-58.095v-91.358c0-2.669-0.856-4.859-2.574-6.57
+        C397.709,293.209,395.519,292.354,392.857,292.354z"/>
+    <path d="M506.199,41.971c-3.617-3.617-7.905-5.424-12.85-5.424H347.171c-4.948,0-9.233,1.807-12.847,5.424
+        c-3.617,3.615-5.428,7.898-5.428,12.847s1.811,9.233,5.428,12.85l50.247,50.248L198.424,304.067
+        c-1.906,1.903-2.856,4.093-2.856,6.563c0,2.479,0.953,4.668,2.856,6.571l32.548,32.544c1.903,1.903,4.093,2.852,6.567,2.852
+        s4.665-0.948,6.567-2.852l186.148-186.148l50.251,50.248c3.614,3.617,7.898,5.426,12.847,5.426s9.233-1.809,12.851-5.426
+        c3.617-3.616,5.424-7.898,5.424-12.847V54.818C511.626,49.866,509.813,45.586,506.199,41.971z"/>
+</svg>
+</span> </a> </div> </div><div class="highlighter container" data-hash="b2c9d14f" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#D4D4D4">></span><span style="color:#9CDCFE">idf</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">py</span><span style="color:#9CDCFE"> menuconfig</span></span></code></pre> <button class="copy-btn" data-hash="b2c9d14f" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="b2c9d14f" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <div class="paragraph image"><div class="container panzoom" data-type="img" data-name="ota-config.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/esp32/ota-config.png" alt="OTA Config" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/esp32/ota-config.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><div class="highlighter container" data-hash="eaab6de2" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#C8C8C8">https</span><span style="color:#D4D4D4">:</span><span style="color:#6A9955">//10.0.0.36:8070/hello-world.bin</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D4D4D4">></span><span style="color:#9CDCFE">cp</span><span style="color:#9CDCFE"> ca_cert</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">pem</span><span style="color:#D4D4D4"> ../</span><span style="color:#9CDCFE">simple_ota_example</span><span style="color:#D4D4D4">/</span><span style="color:#9CDCFE">server_certs</span><span style="color:#D4D4D4">/</span></span>
+<span class="line"><span style="color:#D4D4D4">></span><span style="color:#9CDCFE">idf</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">py</span><span style="color:#D4D4D4"> -</span><span style="color:#9CDCFE">p</span><span style="color:#D4D4D4"> /</span><span style="color:#9CDCFE">dev</span><span style="color:#D4D4D4">/</span><span style="color:#9CDCFE">ttyUSB0</span><span style="color:#9CDCFE"> flash</span><span style="color:#9CDCFE"> monitor</span></span></code></pre> <button class="copy-btn" data-hash="eaab6de2" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="eaab6de2" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <div class="paragraph">on another linux host, copied <code>ca_cert.pem</code> then tested :</div><div class="highlighter container" data-hash="26009c6f" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#D4D4D4">></span><span style="color:#9CDCFE">curl</span><span style="color:#D4D4D4"> -</span><span style="color:#9CDCFE">v</span><span style="color:#C8C8C8"> https</span><span style="color:#D4D4D4">:</span><span style="color:#6A9955">//10.0.0.36:8070/simple_ota.bin --cacert ca_cert.pem > simple_ota.bin</span></span></code></pre> <button class="copy-btn" data-hash="26009c6f" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="26009c6f" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <div class="paragraph image"><div class="container panzoom" data-type="img" data-name="cert-test.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/esp32/cert-test.png" alt="Cert Test" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/esp32/cert-test.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><div class="paragraph text">Common Name (e.g. server FQDN or YOUR name) []:10.0.0.36</div><div class="highlighter container" data-hash="03ced6e7" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#D4D4D4">></span><span style="color:#9CDCFE">openssl</span><span style="color:#9CDCFE"> req</span><span style="color:#D4D4D4"> -</span><span style="color:#9CDCFE">x509</span><span style="color:#D4D4D4"> -</span><span style="color:#9CDCFE">newkey</span><span style="color:#C8C8C8"> rsa</span><span style="color:#D4D4D4">:</span><span style="color:#B5CEA8">2048</span><span style="color:#D4D4D4"> -</span><span style="color:#9CDCFE">keyout</span><span style="color:#9CDCFE"> ca_key</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">pem</span><span style="color:#D4D4D4"> -</span><span style="color:#9CDCFE">out</span><span style="color:#9CDCFE"> ca_cert</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">pem</span><span style="color:#D4D4D4"> -</span><span style="color:#9CDCFE">days</span><span style="color:#B5CEA8"> 365</span><span style="color:#D4D4D4"> -</span><span style="color:#9CDCFE">nodes</span></span>
+<span class="line"><span style="color:#D4D4D4">></span><span style="color:#9CDCFE">openssl</span><span style="color:#9CDCFE"> s_server</span><span style="color:#D4D4D4"> -</span><span style="color:#4FC1FF">WWW</span><span style="color:#D4D4D4"> -</span><span style="color:#9CDCFE">key</span><span style="color:#9CDCFE"> ca_key</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">pem</span><span style="color:#D4D4D4"> -</span><span style="color:#9CDCFE">cert</span><span style="color:#9CDCFE"> ca_cert</span><span style="color:#D4D4D4">.</span><span style="color:#9CDCFE">pem</span><span style="color:#D4D4D4"> -</span><span style="color:#9CDCFE">port</span><span style="color:#B5CEA8"> 8070</span></span></code></pre> <button class="copy-btn" data-hash="03ced6e7" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="03ced6e7" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <details class="directive" data-astro-cid-kibhusm5> <summary data-astro-cid-kibhusm5> <span data-astro-cid-kibhusm5>Log output, click to expand...</span> <span class="arrow" data-astro-cid-kibhusm5><svg viewBox="0 0 100 100" width="60" height="60" fill="#00000000" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 20,10 L 70,50 L 20,90" stroke-width="20px" stroke="#d0d0d0" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span> </summary> <article data-astro-cid-kibhusm5> <div class="highlighter container" data-hash="448a0deb" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#DCDCAA">wass@wass-vb:~/esp/simple_ota_example$</span><span style="color:#CE9178"> idf.py</span><span style="color:#569CD6"> -p</span><span style="color:#CE9178"> /dev/ttyUSB0</span><span style="color:#CE9178"> flash</span><span style="color:#CE9178"> monitor</span></span>
+<span class="line"><span style="color:#DCDCAA">Executing</span><span style="color:#CE9178"> action:</span><span style="color:#CE9178"> flash</span></span>
+<span class="line"><span style="color:#DCDCAA">Running</span><span style="color:#CE9178"> ninja</span><span style="color:#CE9178"> in</span><span style="color:#CE9178"> directory</span><span style="color:#CE9178"> /home/wass/esp/simple_ota_example/build</span></span>
+<span class="line"><span style="color:#DCDCAA">Executing</span><span style="color:#CE9178"> "ninja flash"...</span></span>
+<span class="line"><span style="color:#D4D4D4">[</span><span style="color:#B5CEA8">1</span><span style="color:#D4D4D4">/4] Performing build step </span><span style="color:#C586C0">for</span><span style="color:#CE9178"> 'bootloader'</span></span>
+<span class="line"><span style="color:#DCDCAA">ninja:</span><span style="color:#CE9178"> no</span><span style="color:#CE9178"> work</span><span style="color:#CE9178"> to</span><span style="color:#CE9178"> do.</span></span>
+<span class="line"><span style="color:#D4D4D4">[</span><span style="color:#B5CEA8">1</span><span style="color:#D4D4D4">/2] cd /home/wass/esp/esp-idf/components/esptool_py &#x26;&#x26; </span><span style="color:#DCDCAA">/usr/bin/cm...d</span><span style="color:#DCDCAA">" -P /home/wass/esp/esp-idf/components/esptool_py/run_esptool.cmake</span></span>
+<span class="line"><span style="color:#DCDCAA">esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x8000 partition_table/partition-table.bin 0xd000 ota_data_initial.bin 0x1000 bootloader/bootloader.bin 0x10000 simple_ota.bin</span></span>
+<span class="line"><span style="color:#DCDCAA">esptool.py v3.0-dev</span></span>
+<span class="line"><span style="color:#DCDCAA">Serial port /dev/ttyUSB0</span></span>
+<span class="line"><span style="color:#DCDCAA">Connecting.....</span></span>
+<span class="line"><span style="color:#DCDCAA">Chip is ESP32-D0WDQ6 (revision 1)</span></span>
+<span class="line"><span style="color:#DCDCAA">Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None</span></span>
+<span class="line"><span style="color:#DCDCAA">Crystal is 40MHz</span></span>
+<span class="line"><span style="color:#DCDCAA">MAC: 10:52:1c:67:b1:10</span></span>
+<span class="line"><span style="color:#DCDCAA">Uploading stub...</span></span>
+<span class="line"><span style="color:#DCDCAA">Running stub...</span></span>
+<span class="line"><span style="color:#DCDCAA">Stub running...</span></span>
+<span class="line"><span style="color:#DCDCAA">Changing baud rate to 460800</span></span>
+<span class="line"><span style="color:#DCDCAA">Changed.</span></span>
+<span class="line"><span style="color:#DCDCAA">Configuring flash size...</span></span>
+<span class="line"><span style="color:#DCDCAA">Compressed 3072 bytes to 138...</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00008000... (100 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Wrote 3072 bytes (138 compressed) at 0x00008000 in 0.0 seconds (effective 2801.9 kbit/s)...</span></span>
+<span class="line"><span style="color:#DCDCAA">Hash of data verified.</span></span>
+<span class="line"><span style="color:#DCDCAA">Compressed 8192 bytes to 31...</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x0000d000... (100 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Wrote 8192 bytes (31 compressed) at 0x0000d000 in 0.0 seconds (effective 14189.4 kbit/s)...</span></span>
+<span class="line"><span style="color:#DCDCAA">Hash of data verified.</span></span>
+<span class="line"><span style="color:#DCDCAA">Compressed 25024 bytes to 15395...</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00001000... (100 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Wrote 25024 bytes (15395 compressed) at 0x00001000 in 0.4 seconds (effective 552.6 kbit/s)...</span></span>
+<span class="line"><span style="color:#DCDCAA">Hash of data verified.</span></span>
+<span class="line"><span style="color:#DCDCAA">Compressed 815728 bytes to 514732...</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00010000... (3 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00014000... (6 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00018000... (9 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x0001c000... (12 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00020000... (15 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00024000... (18 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00028000... (21 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x0002c000... (25 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00030000... (28 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00034000... (31 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00038000... (34 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x0003c000... (37 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00040000... (40 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00044000... (43 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00048000... (46 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x0004c000... (50 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00050000... (53 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00054000... (56 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00058000... (59 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x0005c000... (62 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00060000... (65 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00064000... (68 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00068000... (71 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x0006c000... (75 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00070000... (78 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00074000... (81 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00078000... (84 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x0007c000... (87 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00080000... (90 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00084000... (93 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x00088000... (96 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Writing at 0x0008c000... (100 %)</span></span>
+<span class="line"><span style="color:#DCDCAA">Wrote 815728 bytes (514732 compressed) at 0x00010000 in 12.2 seconds (effective 535.5 kbit/s)...</span></span>
+<span class="line"><span style="color:#DCDCAA">Hash of data verified.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#DCDCAA">Leaving...</span></span>
+<span class="line"><span style="color:#DCDCAA">Hard resetting via RTS pin...</span></span>
+<span class="line"><span style="color:#DCDCAA">Executing action: monitor</span></span>
+<span class="line"><span style="color:#DCDCAA">Running idf_monitor in directory /home/wass/esp/simple_ota_example</span></span>
+<span class="line"><span style="color:#DCDCAA">Executing "</span><span style="color:#DCDCAA">/home/wass/.espressif/python_env/idf4.3_py3.8_env/bin/python</span><span style="color:#CE9178"> /home/wass/esp/esp-idf/tools/idf_monitor.py</span><span style="color:#569CD6"> -p</span><span style="color:#CE9178"> /dev/ttyUSB0</span><span style="color:#569CD6"> -b</span><span style="color:#B5CEA8"> 115200</span><span style="color:#569CD6"> --toolchain-prefix</span><span style="color:#CE9178"> xtensa-esp32-elf-</span><span style="color:#CE9178"> /home/wass/esp/simple_ota_example/build/simple_ota.elf</span><span style="color:#569CD6"> -m</span><span style="color:#CE9178"> '/home/wass/.espressif/python_env/idf4.3_py3.8_env/bin/python'</span><span style="color:#CE9178"> '/home/wass/esp/esp-idf/tools/idf.py'</span><span style="color:#CE9178"> '-p'</span><span style="color:#CE9178"> '/dev/ttyUSB0'"...</span></span>
+<span class="line"><span style="color:#CE9178">--- idf_monitor on /dev/ttyUSB0 115200 ---</span></span>
+<span class="line"><span style="color:#CE9178">--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---</span></span>
+<span class="line"><span style="color:#CE9178">ets Jun  8 2016 00:22:57</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)</span></span>
+<span class="line"><span style="color:#CE9178">configsip: 0, SPIWP:0xee</span></span>
+<span class="line"><span style="color:#CE9178">clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00</span></span>
+<span class="line"><span style="color:#CE9178">mode:DIO, clock div:2</span></span>
+<span class="line"><span style="color:#CE9178">load:0x3fff0030,len:4</span></span>
+<span class="line"><span style="color:#CE9178">load:0x3fff0034,len:6928</span></span>
+<span class="line"><span style="color:#CE9178">ho 0 tail 12 room 4</span></span>
+<span class="line"><span style="color:#CE9178">load:0x40078000,len:14328</span></span>
+<span class="line"><span style="color:#CE9178">ho 0 tail 12 room 4</span></span>
+<span class="line"><span style="color:#CE9178">load:0x40080400,len:3660</span></span>
+<span class="line"><span style="color:#CE9178">0x40080400: _init at ??:?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">entry 0x40080678</span></span>
+<span class="line"><span style="color:#CE9178">I (32) boot: ESP-IDF v4.3-dev-1561-g357a27760 2nd stage bootloader</span></span>
+<span class="line"><span style="color:#CE9178">I (32) boot: compile time 18:10:59</span></span>
+<span class="line"><span style="color:#CE9178">I (32) boot: chip revision: 1</span></span>
+<span class="line"><span style="color:#CE9178">I (36) boot_comm: chip revision: 1, min. bootloader chip revision: 0</span></span>
+<span class="line"><span style="color:#CE9178">I (43) boot.esp32: SPI Speed      : 40MHz</span></span>
+<span class="line"><span style="color:#CE9178">I (48) boot.esp32: SPI Mode       : DIO</span></span>
+<span class="line"><span style="color:#CE9178">I (52) boot.esp32: SPI Flash Size : 4MB</span></span>
+<span class="line"><span style="color:#CE9178">I (57) boot: Enabling RNG early entropy source...</span></span>
+<span class="line"><span style="color:#CE9178">I (62) boot: Partition Table:</span></span>
+<span class="line"><span style="color:#CE9178">I (66) boot: ## Label            Usage          Type ST Offset   Length</span></span>
+<span class="line"><span style="color:#CE9178">I (73) boot:  0 nvs              WiFi data        01 02 00009000 00004000</span></span>
+<span class="line"><span style="color:#CE9178">I (81) boot:  1 otadata          OTA data         01 00 0000d000 00002000</span></span>
+<span class="line"><span style="color:#CE9178">I (88) boot:  2 phy_init         RF data          01 01 0000f000 00001000</span></span>
+<span class="line"><span style="color:#CE9178">I (96) boot:  3 factory          factory app      00 00 00010000 00100000</span></span>
+<span class="line"><span style="color:#CE9178">I (103) boot:  4 ota_0            OTA app          00 10 00110000 00100000</span></span>
+<span class="line"><span style="color:#CE9178">I (111) boot:  5 ota_1            OTA app          00 11 00210000 00100000</span></span>
+<span class="line"><span style="color:#CE9178">I (118) boot: End of partition table</span></span>
+<span class="line"><span style="color:#CE9178">I (123) boot: Defaulting to factory image</span></span>
+<span class="line"><span style="color:#CE9178">I (127) boot_comm: chip revision: 1, min. application chip revision: 0</span></span>
+<span class="line"><span style="color:#CE9178">I (134) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x1e510 (124176) map</span></span>
+<span class="line"><span style="color:#CE9178">I (191) esp_image: segment 1: paddr=0x0002e538 vaddr=0x3ffb0000 size=0x01ae0 (  6880) load</span></span>
+<span class="line"><span style="color:#CE9178">I (194) esp_image: segment 2: paddr=0x00030020 vaddr=0x400d0020 size=0x90374 (590708) map</span></span>
+<span class="line"><span style="color:#CE9178">0x400d0020: _stext at ??:?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">I (422) esp_image: segment 3: paddr=0x000c039c vaddr=0x3ffb1ae0 size=0x02428 (  9256) load</span></span>
+<span class="line"><span style="color:#CE9178">I (426) esp_image: segment 4: paddr=0x000c27cc vaddr=0x40080000 size=0x00404 (  1028) load</span></span>
+<span class="line"><span style="color:#CE9178">0x40080000: _WindowOverflow4 at /home/wass/esp/esp-idf/components/freertos/xtensa/xtensa_vectors.S:1730</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">I (429) esp_image: segment 5: paddr=0x000c2bd8 vaddr=0x40080404 size=0x1466c ( 83564) load</span></span>
+<span class="line"><span style="color:#CE9178">I (486) boot: Loaded app from partition at offset 0x10000</span></span>
+<span class="line"><span style="color:#CE9178">I (486) boot: Disabling RNG early entropy source...</span></span>
+<span class="line"><span style="color:#CE9178">I (498) cpu_start: Pro cpu up.</span></span>
+<span class="line"><span style="color:#CE9178">I (498) cpu_start: Starting app cpu, entry point is 0x40081150</span></span>
+<span class="line"><span style="color:#CE9178">0x40081150: call_start_cpu1 at /home/wass/esp/esp-idf/components/esp_system/port/cpu_start.c:124</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">I (0) cpu_start: App cpu up.</span></span>
+<span class="line"><span style="color:#CE9178">I (512) cpu_start: Pro cpu start user code</span></span>
+<span class="line"><span style="color:#CE9178">I (512) cpu_start: cpu freq: 160000000</span></span>
+<span class="line"><span style="color:#CE9178">I (512) cpu_start: Application information:</span></span>
+<span class="line"><span style="color:#CE9178">I (516) cpu_start: Project name:     simple_ota</span></span>
+<span class="line"><span style="color:#CE9178">I (522) cpu_start: App version:      1</span></span>
+<span class="line"><span style="color:#CE9178">I (526) cpu_start: Compile time:     Feb  4 2021 18:10:53</span></span>
+<span class="line"><span style="color:#CE9178">I (532) cpu_start: ELF file SHA256:  16c58cb2140dc9a6...</span></span>
+<span class="line"><span style="color:#CE9178">I (538) cpu_start: ESP-IDF:          v4.3-dev-1561-g357a27760</span></span>
+<span class="line"><span style="color:#CE9178">I (545) heap_init: Initializing. RAM available for dynamic allocation:</span></span>
+<span class="line"><span style="color:#CE9178">I (552) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM</span></span>
+<span class="line"><span style="color:#CE9178">I (558) heap_init: At 3FFB7D30 len 000282D0 (160 KiB): DRAM</span></span>
+<span class="line"><span style="color:#CE9178">I (564) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM</span></span>
+<span class="line"><span style="color:#CE9178">I (570) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM</span></span>
+<span class="line"><span style="color:#CE9178">I (577) heap_init: At 40094A70 len 0000B590 (45 KiB): IRAM</span></span>
+<span class="line"><span style="color:#CE9178">I (584) spi_flash: detected chip: generic</span></span>
+<span class="line"><span style="color:#CE9178">I (588) spi_flash: flash io: dio</span></span>
+<span class="line"><span style="color:#CE9178">I (593) cpu_start: Starting scheduler on PRO CPU.</span></span>
+<span class="line"><span style="color:#CE9178">I (0) cpu_start: Starting scheduler on APP CPU.</span></span>
+<span class="line"><span style="color:#CE9178">I (1037) wifi:wifi driver task: 3ffc1b2c, prio:23, stack:6656, core=0</span></span>
+<span class="line"><span style="color:#CE9178">I (1037) system_api: Base MAC address is not set</span></span>
+<span class="line"><span style="color:#CE9178">I (1037) system_api: read default base MAC address from EFUSE</span></span>
+<span class="line"><span style="color:#CE9178">I (1077) wifi:wifi firmware version: a94a000</span></span>
+<span class="line"><span style="color:#CE9178">I (1077) wifi:wifi certification version: v7.0</span></span>
+<span class="line"><span style="color:#CE9178">I (1077) wifi:config NVS flash: enabled</span></span>
+<span class="line"><span style="color:#CE9178">I (1077) wifi:config nano formating: disabled</span></span>
+<span class="line"><span style="color:#CE9178">I (1087) wifi:Init data frame dynamic rx buffer num: 32</span></span>
+<span class="line"><span style="color:#CE9178">I (1087) wifi:Init management frame dynamic rx buffer num: 32</span></span>
+<span class="line"><span style="color:#CE9178">I (1097) wifi:Init management short buffer num: 32</span></span>
+<span class="line"><span style="color:#CE9178">I (1097) wifi:Init dynamic tx buffer num: 32</span></span>
+<span class="line"><span style="color:#CE9178">I (1107) wifi:Init static rx buffer size: 1600</span></span>
+<span class="line"><span style="color:#CE9178">I (1107) wifi:Init static rx buffer num: 10</span></span>
+<span class="line"><span style="color:#CE9178">I (1107) wifi:Init dynamic rx buffer num: 32</span></span>
+<span class="line"><span style="color:#CE9178">I (1117) wifi_init: rx ba win: 6</span></span>
+<span class="line"><span style="color:#CE9178">I (1117) wifi_init: tcpip mbox: 32</span></span>
+<span class="line"><span style="color:#CE9178">I (1127) wifi_init: udp mbox: 6</span></span>
+<span class="line"><span style="color:#CE9178">I (1127) wifi_init: tcp mbox: 6</span></span>
+<span class="line"><span style="color:#CE9178">I (1127) wifi_init: tcp tx win: 5744</span></span>
+<span class="line"><span style="color:#CE9178">I (1137) wifi_init: tcp rx win: 5744</span></span>
+<span class="line"><span style="color:#CE9178">I (1137) wifi_init: tcp mss: 1440</span></span>
+<span class="line"><span style="color:#CE9178">I (1147) wifi_init: WiFi IRAM OP enabled</span></span>
+<span class="line"><span style="color:#CE9178">I (1147) wifi_init: WiFi RX IRAM OP enabled</span></span>
+<span class="line"><span style="color:#CE9178">I (1157) example_connect: Connecting to N-WLAN...</span></span>
+<span class="line"><span style="color:#CE9178">W (1157) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">Brownout detector was triggered</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">ets Jun  8 2016 00:22:57</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)</span></span>
+<span class="line"><span style="color:#CE9178">configsip: 0, SPIWP:0xee</span></span>
+<span class="line"><span style="color:#CE9178">clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00</span></span>
+<span class="line"><span style="color:#CE9178">mode:DIO, clock div:2</span></span>
+<span class="line"><span style="color:#CE9178">load:0x3fff0030,len:4</span></span>
+<span class="line"><span style="color:#CE9178">load:0x3fff0034,len:6928</span></span>
+<span class="line"><span style="color:#CE9178">ho 0 tail 12 room 4</span></span>
+<span class="line"><span style="color:#CE9178">load:0x40078000,len:14328</span></span>
+<span class="line"><span style="color:#CE9178">ho 0 tail 12 room 4</span></span>
+<span class="line"><span style="color:#CE9178">load:0x40080400,len:3660</span></span>
+<span class="line"><span style="color:#CE9178">0x40080400: _init at ??:?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">entry 0x40080678</span></span>
+<span class="line"><span style="color:#CE9178">I (32) boot: ESP-IDF v4.3-dev-1561-g357a27760 2nd stage bootloader</span></span>
+<span class="line"><span style="color:#CE9178">I (32) boot: compile time 18:10:59</span></span>
+<span class="line"><span style="color:#CE9178">I (33) boot: chip revision: 1</span></span>
+<span class="line"><span style="color:#CE9178">I (37) boot_comm: chip revision: 1, min. bootloader chip revision: 0</span></span>
+<span class="line"><span style="color:#CE9178">I (44) boot.esp32: SPI Speed      : 40MHz</span></span>
+<span class="line"><span style="color:#CE9178">I (49) boot.esp32: SPI Mode       : DIO</span></span>
+<span class="line"><span style="color:#CE9178">I (53) boot.esp32: SPI Flash Size : 4MB</span></span>
+<span class="line"><span style="color:#CE9178">I (58) boot: Enabling RNG early entropy source...</span></span>
+<span class="line"><span style="color:#CE9178">I (63) boot: Partition Table:</span></span>
+<span class="line"><span style="color:#CE9178">I (67) boot: ## Label            Usage          Type ST Offset   Length</span></span>
+<span class="line"><span style="color:#CE9178">I (74) boot:  0 nvs              WiFi data        01 02 00009000 00004000</span></span>
+<span class="line"><span style="color:#CE9178">I (82) boot:  1 otadata          OTA data         01 00 0000d000 00002000</span></span>
+<span class="line"><span style="color:#CE9178">I (89) boot:  2 phy_init         RF data          01 01 0000f000 00001000</span></span>
+<span class="line"><span style="color:#CE9178">I (97) boot:  3 factory          factory app      00 00 00010000 00100000</span></span>
+<span class="line"><span style="color:#CE9178">I (104) boot:  4 ota_0            OTA app          00 10 00110000 00100000</span></span>
+<span class="line"><span style="color:#CE9178">I (112) boot:  5 ota_1            OTA app          00 11 00210000 00100000</span></span>
+<span class="line"><span style="color:#CE9178">I (119) boot: End of partition table</span></span>
+<span class="line"><span style="color:#CE9178">I (123) boot: Defaulting to factory image</span></span>
+<span class="line"><span style="color:#CE9178">I (128) boot_comm: chip revision: 1, min. application chip revision: 0</span></span>
+<span class="line"><span style="color:#CE9178">I (135) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x1e510 (124176) map</span></span>
+<span class="line"><span style="color:#CE9178">I (192) esp_image: segment 1: paddr=0x0002e538 vaddr=0x3ffb0000 size=0x01ae0 (  6880) load</span></span>
+<span class="line"><span style="color:#CE9178">I (195) esp_image: segment 2: paddr=0x00030020 vaddr=0x400d0020 size=0x90374 (590708) map</span></span>
+<span class="line"><span style="color:#CE9178">0x400d0020: _stext at ??:?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">I (423) esp_image: segment 3: paddr=0x000c039c vaddr=0x3ffb1ae0 size=0x02428 (  9256) load</span></span>
+<span class="line"><span style="color:#CE9178">I (427) esp_image: segment 4: paddr=0x000c27cc vaddr=0x40080000 size=0x00404 (  1028) load</span></span>
+<span class="line"><span style="color:#CE9178">0x40080000: _WindowOverflow4 at /home/wass/esp/esp-idf/components/freertos/xtensa/xtensa_vectors.S:1730</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">I (430) esp_image: segment 5: paddr=0x000c2bd8 vaddr=0x40080404 size=0x1466c ( 83564) load</span></span>
+<span class="line"><span style="color:#CE9178">I (487) boot: Loaded app from partition at offset 0x10000</span></span>
+<span class="line"><span style="color:#CE9178">I (487) boot: Disabling RNG early entropy source...</span></span>
+<span class="line"><span style="color:#CE9178">I (498) cpu_start: Pro cpu up.</span></span>
+<span class="line"><span style="color:#CE9178">I (499) cpu_start: Starting app cpu, entry point is 0x40081150</span></span>
+<span class="line"><span style="color:#CE9178">0x40081150: call_start_cpu1 at /home/wass/esp/esp-idf/components/esp_system/port/cpu_start.c:124</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">I (483) cpu_start: App cpu up.</span></span>
+<span class="line"><span style="color:#CE9178">I (513) cpu_start: Pro cpu start user code</span></span>
+<span class="line"><span style="color:#CE9178">I (513) cpu_start: cpu freq: 160000000</span></span>
+<span class="line"><span style="color:#CE9178">I (513) cpu_start: Application information:</span></span>
+<span class="line"><span style="color:#CE9178">I (518) cpu_start: Project name:     simple_ota</span></span>
+<span class="line"><span style="color:#CE9178">I (523) cpu_start: App version:      1</span></span>
+<span class="line"><span style="color:#CE9178">I (527) cpu_start: Compile time:     Feb  4 2021 18:10:53</span></span>
+<span class="line"><span style="color:#CE9178">I (533) cpu_start: ELF file SHA256:  16c58cb2140dc9a6...</span></span>
+<span class="line"><span style="color:#CE9178">I (539) cpu_start: ESP-IDF:          v4.3-dev-1561-g357a27760</span></span>
+<span class="line"><span style="color:#CE9178">I (546) heap_init: Initializing. RAM available for dynamic allocation:</span></span>
+<span class="line"><span style="color:#CE9178">I (553) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM</span></span>
+<span class="line"><span style="color:#CE9178">I (559) heap_init: At 3FFB7D30 len 000282D0 (160 KiB): DRAM</span></span>
+<span class="line"><span style="color:#CE9178">I (565) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM</span></span>
+<span class="line"><span style="color:#CE9178">I (571) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM</span></span>
+<span class="line"><span style="color:#CE9178">I (578) heap_init: At 40094A70 len 0000B590 (45 KiB): IRAM</span></span>
+<span class="line"><span style="color:#CE9178">I (585) spi_flash: detected chip: generic</span></span>
+<span class="line"><span style="color:#CE9178">I (589) spi_flash: flash io: dio</span></span>
+<span class="line"><span style="color:#CE9178">I (594) cpu_start: Starting scheduler on PRO CPU.</span></span>
+<span class="line"><span style="color:#CE9178">I (0) cpu_start: Starting scheduler on APP CPU.</span></span>
+<span class="line"><span style="color:#CE9178">I (698) wifi:wifi driver task: 3ffc2024, prio:23, stack:6656, core=0</span></span>
+<span class="line"><span style="color:#CE9178">I (698) system_api: Base MAC address is not set</span></span>
+<span class="line"><span style="color:#CE9178">I (698) system_api: read default base MAC address from EFUSE</span></span>
+<span class="line"><span style="color:#CE9178">I (718) wifi:wifi firmware version: a94a000</span></span>
+<span class="line"><span style="color:#CE9178">I (718) wifi:wifi certification version: v7.0</span></span>
+<span class="line"><span style="color:#CE9178">I (718) wifi:config NVS flash: enabled</span></span>
+<span class="line"><span style="color:#CE9178">I (718) wifi:config nano formating: disabled</span></span>
+<span class="line"><span style="color:#CE9178">I (728) wifi:Init data frame dynamic rx buffer num: 32</span></span>
+<span class="line"><span style="color:#CE9178">I (728) wifi:Init management frame dynamic rx buffer num: 32</span></span>
+<span class="line"><span style="color:#CE9178">I (738) wifi:Init management short buffer num: 32</span></span>
+<span class="line"><span style="color:#CE9178">I (738) wifi:Init dynamic tx buffer num: 32</span></span>
+<span class="line"><span style="color:#CE9178">I (748) wifi:Init static rx buffer size: 1600</span></span>
+<span class="line"><span style="color:#CE9178">I (748) wifi:Init static rx buffer num: 10</span></span>
+<span class="line"><span style="color:#CE9178">I (748) wifi:Init dynamic rx buffer num: 32</span></span>
+<span class="line"><span style="color:#CE9178">I (758) wifi_init: rx ba win: 6</span></span>
+<span class="line"><span style="color:#CE9178">I (758) wifi_init: tcpip mbox: 32</span></span>
+<span class="line"><span style="color:#CE9178">I (758) wifi_init: udp mbox: 6</span></span>
+<span class="line"><span style="color:#CE9178">I (768) wifi_init: tcp mbox: 6</span></span>
+<span class="line"><span style="color:#CE9178">I (768) wifi_init: tcp tx win: 5744</span></span>
+<span class="line"><span style="color:#CE9178">I (778) wifi_init: tcp rx win: 5744</span></span>
+<span class="line"><span style="color:#CE9178">I (778) wifi_init: tcp mss: 1440</span></span>
+<span class="line"><span style="color:#CE9178">I (778) wifi_init: WiFi IRAM OP enabled</span></span>
+<span class="line"><span style="color:#CE9178">I (788) wifi_init: WiFi RX IRAM OP enabled</span></span>
+<span class="line"><span style="color:#CE9178">I (788) example_connect: Connecting to N-WLAN...</span></span>
+<span class="line"><span style="color:#CE9178">W (798) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration</span></span>
+<span class="line"><span style="color:#CE9178">I (948) phy: phy_version: 4500, 0cd6843, Sep 17 2020, 15:37:07, 0, 2</span></span>
+<span class="line"><span style="color:#CE9178">I (958) wifi:mode : sta (10:52:1c:67:b1:10)</span></span>
+<span class="line"><span style="color:#CE9178">I (968) wifi:enable tsf</span></span>
+<span class="line"><span style="color:#CE9178">I (968) example_connect: Waiting for IP(s)</span></span>
+<span class="line"><span style="color:#CE9178">I (1568) wifi:new:&#x3C;5,1>, old:&#x3C;1,0>, ap:&#x3C;255,255>, sta:&#x3C;5,1>, prof:1</span></span>
+<span class="line"><span style="color:#CE9178">I (2308) wifi:state: init -> auth (b0)</span></span>
+<span class="line"><span style="color:#CE9178">I (2308) wifi:state: auth -> assoc (0)</span></span>
+<span class="line"><span style="color:#CE9178">I (2318) wifi:state: assoc -> run (10)</span></span>
+<span class="line"><span style="color:#CE9178">I (2368) wifi:connected with N-WLAN, aid = 9, channel 5, 40U, bssid = 2c:30:33:9c:bf:c0</span></span>
+<span class="line"><span style="color:#CE9178">I (2368) wifi:security: WPA2-PSK, phy: bgn, rssi: -84</span></span>
+<span class="line"><span style="color:#CE9178">I (2368) wifi:pm start, type: 1</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">I (2378) wifi:AP's beacon interval = 102400 us, DTIM period = 2</span></span>
+<span class="line"><span style="color:#CE9178">W (3098) wifi:&#x3C;ba-add>idx:0 (ifx:0, 2c:30:33:9c:bf:c0), tid:6, ssn:2, winSize:64</span></span>
+<span class="line"><span style="color:#CE9178">I (3688) example_connect: Got IPv6 event: Interface "example_connect:</span><span style="color:#CE9178"> sta" address: fe80:0000:0000:0000:1252:1cff:fe67:b110, type: ESP_IP6_ADDR_IS_LINK_LOCAL</span></span>
+<span class="line"><span style="color:#CE9178">I (5688) esp_netif_handlers: example_connect: sta ip: 10.0.0.32, mask: 255.255.255.0, gw: 10.0.0.1</span></span>
+<span class="line"><span style="color:#CE9178">I (5688) example_connect: Got IPv4 event: Interface "example_connect:</span><span style="color:#CE9178"> sta" address: 10.0.0.32</span></span>
+<span class="line"><span style="color:#CE9178">I (5698) example_connect: Connected to example_connect: sta</span></span>
+<span class="line"><span style="color:#CE9178"> (6198) example_connect: - IPv4 address: 10.0.0.32</span></span>
+<span class="line"><span style="color:#CE9178">I (6208) example_connect: - IPv6 address: fe80:0000:0000:0000:1252:1cff:fe67:b110, type: ESP_IP6_ADDR_IS_LINK_LOCAL</span></span>
+<span class="line"><span style="color:#CE9178">I (6218) wifi:Set ps type: 0</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">I (6218) simple_ota_example: Starting OTA example</span></span>
+<span class="line"><span style="color:#CE9178">W (6278) wifi:&#x3C;ba-add>idx:1 (ifx:0, 2c:30:33:9c:bf:c0), tid:0, ssn:0, winSize:64</span></span>
+<span class="line"><span style="color:#CE9178">I (8168) esp_https_ota: Starting OTA...</span></span>
+<span class="line"><span style="color:#CE9178">I (8168) esp_https_ota: Writing to partition subtype 16 at offset 0x110000</span></span>
+<span class="line"><span style="color:#CE9178">D (26758) HTTP_CLIENT: esp_transport_read returned:-1 and errno:128 </span></span>
+<span class="line"><span style="color:#CE9178">I (26758) esp_https_ota: Connection closed</span></span>
+<span class="line"><span style="color:#CE9178">I (26758) esp_image: segment 0: paddr=0x00110020 vaddr=0x3f400020 size=0x1e558 (124248) map</span></span>
+<span class="line"><span style="color:#CE9178">I (26808) esp_image: segment 1: paddr=0x0012e580 vaddr=0x3ffb0000 size=0x01a98 (  6808) </span></span>
+<span class="line"><span style="color:#CE9178">I (26808) esp_image: segment 2: paddr=0x00130020 vaddr=0x400d0020 size=0x90374 (590708) map</span></span>
+<span class="line"><span style="color:#CE9178">0x400d0020: _stext at ??:?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">I (27008) esp_image: segment 3: paddr=0x001c039c vaddr=0x3ffb1a98 size=0x02470 (  9328) </span></span>
+<span class="line"><span style="color:#CE9178">I (27018) esp_image: segment 4: paddr=0x001c2814 vaddr=0x40080000 size=0x00404 (  1028) </span></span>
+<span class="line"><span style="color:#CE9178">0x40080000: _WindowOverflow4 at /home/wass/esp/esp-idf/components/freertos/xtensa/xtensa_vectors.S:1730</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">I (27018) esp_image: segment 5: paddr=0x001c2c20 vaddr=0x40080404 size=0x1466c ( 83564) </span></span>
+<span class="line"><span style="color:#CE9178">I (27058) esp_image: segment 0: paddr=0x00110020 vaddr=0x3f400020 size=0x1e558 (124248) map</span></span>
+<span class="line"><span style="color:#CE9178">I (27108) esp_image: segment 1: paddr=0x0012e580 vaddr=0x3ffb0000 size=0x01a98 (  6808) </span></span>
+<span class="line"><span style="color:#CE9178">I (27108) esp_image: segment 2: paddr=0x00130020 vaddr=0x400d0020 size=0x90374 (590708) map</span></span>
+<span class="line"><span style="color:#CE9178">0x400d0020: _stext at ??:?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">I (27308) esp_image: segment 3: paddr=0x001c039c vaddr=0x3ffb1a98 size=0x02470 (  9328) </span></span>
+<span class="line"><span style="color:#CE9178">I (27308) esp_image: segment 4: paddr=0x001c2814 vaddr=0x40080000 size=0x00404 (  1028) </span></span>
+<span class="line"><span style="color:#CE9178">0x40080000: _WindowOverflow4 at /home/wass/esp/esp-idf/components/freertos/xtensa/xtensa_vectors.S:1730</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">I (27318) esp_image: segment 5: paddr=0x001c2c20 vaddr=0x40080404 size=0x1466c ( 83564) </span></span>
+<span class="line"><span style="color:#CE9178">I (27408) wifi:state: run -> init (0)</span></span>
+<span class="line"><span style="color:#CE9178">I (27408) wifi:pm stop, total sleep time: 2993121 us / 25102797 us</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">W (27408) wifi:&#x3C;ba-del>idx</span></span>
+<span class="line"><span style="color:#CE9178">W (27408) wifi:&#x3C;ba-del>idx</span></span>
+<span class="line"><span style="color:#CE9178">I (27408) wifi:new:&#x3C;5,0>, old:&#x3C;5,1>, ap:&#x3C;255,255>, sta:&#x3C;5,1>, prof:1</span></span>
+<span class="line"><span style="color:#CE9178">W (27418) wifi:hmac tx: ifx0 stop, discard</span></span>
+<span class="line"><span style="color:#CE9178">I (27448) wifi:flush txq</span></span>
+<span class="line"><span style="color:#CE9178">I (27448) wifi:stop sw txq</span></span>
+<span class="line"><span style="color:#CE9178">I (27448) wifi:lmac stop hw txq</span></span>
+<span class="line"><span style="color:#CE9178">I (27448) wifi:Deinit lldesc rx mblock:10</span></span>
+<span class="line"><span style="color:#CE9178">ets Jun  8 2016 00:22:57</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)</span></span>
+<span class="line"><span style="color:#CE9178">configsip: 0, SPIWP:0xee</span></span>
+<span class="line"><span style="color:#CE9178">clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00</span></span>
+<span class="line"><span style="color:#CE9178">mode:DIO, clock div:2</span></span>
+<span class="line"><span style="color:#CE9178">load:0x3fff0030,len:4</span></span>
+<span class="line"><span style="color:#CE9178">load:0x3fff0034,len:6928</span></span>
+<span class="line"><span style="color:#CE9178">ho 0 tail 12 room 4</span></span>
+<span class="line"><span style="color:#CE9178">load:0x40078000,len:14328</span></span>
+<span class="line"><span style="color:#CE9178">ho 0 tail 12 room 4</span></span>
+<span class="line"><span style="color:#CE9178">load:0x40080400,len:3660</span></span>
+<span class="line"><span style="color:#CE9178">0x40080400: _init at ??:?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CE9178">entry 0x40080678</span></span></code></pre> <button class="copy-btn" data-hash="448a0deb" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="448a0deb" data-astro-cid-kg2zvp4p>Copied!</span> </div>    </article> </details> <div class="paragraph text">error message (various reasons, certificate not copied, wrong filename,...) :</div><div class="paragraph image"><div class="container panzoom" data-type="img" data-name="ota-error.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/esp32/ota-error.png" alt="OTA Error" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/esp32/ota-error.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><div class="paragraph text">success message :</div><div class="paragraph image"><div class="container panzoom" data-type="img" data-name="ota-success.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/esp32/ota-success.png" alt="OTA Success" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/esp32/ota-success.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><div class="paragraph image">server log :
+<div class="container panzoom" data-type="img" data-name="server.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/esp32/server.png" alt="Server" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/esp32/server.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div>  </div> </article> <div id="resize-right" class="nav-resize active" data-astro-cid-s6tr6vzr></div> <div id="toc-nav-div" data-astro-cid-s6tr6vzr> <nav class="open toc_menu" data-width="20vw" data-astro-cid-e4uyrypl style="--data_width: 20vw;"> <ul class="root" data-astro-cid-fbowtcfp><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#arduino-esp32" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>Arduino ESP32</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container parent expanded" data-astro-cid-fbowtcfp><span class="icon expand" data-astro-cid-fbowtcfp><svg viewBox="0 0 100 100" width="60" height="60" fill="#00000000" xmlns="http://www.w3.org/2000/svg" data-astro-cid-fbowtcfp><path d="M 20,10 L 70,50 L 20,90" stroke-width="20px" stroke="#d0d0d0" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-fbowtcfp></path></svg></span><a href="#esp-idf" data-astro-cid-fbowtcfp><span class="text href_hover parent" data-astro-cid-fbowtcfp>ESP-IDF</span></a></div><ul class="nested" data-astro-cid-fbowtcfp><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#over-the-air-update" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>Over The Air Update</span></a></div></li></ul></li></ul> </nav>  </div> </main> <footer data-astro-cid-s6tr6vzr> <p data-astro-cid-s6tr6vzr>footer</p> </footer> </div> <div id="fixed-right" class="fixed-nav active" data-astro-cid-s6tr6vzr></div>  </body></html>

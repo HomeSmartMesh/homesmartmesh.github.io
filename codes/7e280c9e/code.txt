@@ -1,0 +1,73 @@
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0018,len:4
+load:0x3fff001c,len:1044
+load:0x40078000,len:8896
+load:0x40080400,len:5828
+entry 0x400806ac
+36 : Boot ready
+151 : config loaded
+358 : config loaded
+361 : setup() done
+
+
+361 : loop start cycle (1)
+ Version=1;  channel=5;  peers=1 encrypted=0;
+send => (ff:ff:ff:ff:ff:ff) 'Hello Everyone (1)'
+  send_cb> Sent data to ff:ff:ff:ff:ff:ff, status: 0
+
+
+5365 : loop start cycle (2)
+ Version=1;  channel=5;  peers=1 encrypted=0;
+send => (ff:ff:ff:ff:ff:ff) 'Hello Everyone (2)'
+  send_cb> Sent data to ff:ff:ff:ff:ff:ff, status: 0
+
+
+10366 : loop start cycle (3)
+ Version=1;  channel=5;  peers=1 encrypted=0;
+send => (ff:ff:ff:ff:ff:ff) 'Hello Everyone (3)'
+  send_cb> Sent data to ff:ff:ff:ff:ff:ff, status: 0
+
+
+15367 : loop start cycle (4)
+ Version=1;  channel=5;  peers=1 encrypted=0;
+send => (ff:ff:ff:ff:ff:ff) 'Hello Everyone (4)'
+  send_cb> Sent data to ff:ff:ff:ff:ff:ff, status: 0
+
+
+20368 : loop start cycle (5)
+ Version=1;  channel=5;  peers=1 encrypted=0;
+send => (ff:ff:ff:ff:ff:ff) 'Hello Everyone (5)'
+  send_cb> Sent data to ff:ff:ff:ff:ff:ff, status: 0
+
+
+25369 : loop start cycle (6)
+ Version=1;  channel=5;  peers=1 encrypted=0;
+send => (ff:ff:ff:ff:ff:ff) 'Hello Everyone (6)'
+  send_cb> Sent data to ff:ff:ff:ff:ff:ff, status: 0
+
+
+30370 : loop start cycle (7)
+ Version=1;  channel=5;  peers=1 encrypted=0;
+send => (ff:ff:ff:ff:ff:ff) 'Hello Everyone (7)'
+  send_cb> Sent data to ff:ff:ff:ff:ff:ff, status: 0
+
+
+35371 : loop start cycle (8)
+ Version=1;  channel=5;  peers=1 encrypted=0;
+send => (ff:ff:ff:ff:ff:ff) 'Hello Everyone (8)'
+  send_cb> Sent data to ff:ff:ff:ff:ff:ff, status: 0
+
+
+40372 : loop start cycle (9)
+ Version=1;  channel=5;  peers=1 encrypted=0;
+send => (ff:ff:ff:ff:ff:ff) 'Hello Everyone (9)'
+  send_cb> Sent data to ff:ff:ff:ff:ff:ff, status: 0
+
+
+45373 : loop start cycle (10)
+ Version=1;  channel=5;  peers=1 encrypted=0;
+send => (ff:ff:ff:ff:ff:ff) 'Hello Everyone (10)'
+  send_cb> Sent data to ff:ff:ff:ff:ff:ff, status: 0

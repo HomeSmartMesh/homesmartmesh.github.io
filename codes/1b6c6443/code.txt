@@ -1,0 +1,1 @@
+mosquitto_pub -t 'cmd/request/get_channel' -m ''

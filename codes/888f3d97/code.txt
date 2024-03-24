@@ -1,0 +1,8 @@
+wget https://github.com/project-chip/zap/releases/download/v2023.02.27/zap-linux.zip
+unzip zap-linux.zip -d zap-linux
+export ZAP_INSTALL_PATH=/home/pi/zap-linux/
+curl -sSL https://deb.nodesource.com/setup_16.x | sudo bash -
+git clone git@github.com:project-chip/zap.git
+sudo apt-get update
+sudo apt-get install --fix-missing libpixman-1-dev libcairo-dev libsdl-pango-dev libjpeg-dev libgif-dev
+export ZAP_DEVELOPMENT_PATH=/home/pi/zap

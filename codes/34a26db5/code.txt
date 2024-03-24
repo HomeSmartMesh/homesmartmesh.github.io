@@ -1,0 +1,4 @@
+    "extras" : {
+        "mouseEvent" : "true",
+        "type" : "light",
+        "hue" : "Bathroom main"

@@ -1,0 +1,2 @@
+application/01_sensortag> make flash
+application/01_sensortag> make paramw

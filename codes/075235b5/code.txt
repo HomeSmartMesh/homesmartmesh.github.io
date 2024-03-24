@@ -1,0 +1,46 @@
+I: nRF5 802154 radio initialized
+I: 4 Sectors of 4096 bytes
+I: alloc wra: 0, 9c0
+I: data wra: 0, 885
+*** Booting Zephyr OS build v2.4.99-ncs1-rc1  ***
+I: Init CHIP stack
+I: SoftDevice Controller build revision: 
+I: e5 c7 9c d9 91 00 1d 66 |.......f
+I: ea fb 6e 7b 98 2f 42 0d |..n./B.
+I: f1 60 93 c8             |...    
+I: Starting CHIP task
+I: Init Thread stack
+I: 647[DL] OpenThread ifconfig up and thread start
+I: 648[DL] OpenThread started: OK
+I: 648[DL] Setting OpenThread device type to MINIMAL END DEVICE
+I: 650[ZCL] Using ZAP configuration...
+I: 651[ZCL] deactivate report event
+I: 651[ZCL] Cluster callback: 6
+I: 652[ZCL] Cluster callback: 8
+I: 653[ZCL] Value: 255, length 1
+D: 654[IN] TransportMgr initialized
+I: 654[IN] local node id is lu
+
+D: 655[IN] New pairing for device lu, key 112233!!
+I: 657[SVR] Received a new connection.
+I: 670[SVR] Network already provisioned. Disabling BLE advertisement
+I: 672[SVR] Server Listening...
+I: 672[DL] Device Configuration:
+I: 682[DL]   Serial Number: (not set)
+I: 682[DL]   Vendor Id: 9050 (0x235A)
+I: 683[DL]   Product Id: 65279 (0xFEFF)
+I: 693[DL]   Product Revision: 1
+I: 702[DL]   Setup Pin Code: 12345678
+I: 711[DL]   Setup Discriminator: 3840 (0xF00)
+I: 721[DL]   Manufacturing Date: (not set)
+I: 739[SVR] SetupQRCode:  [CH:I34DV*-00 0C9SS0]
+I: 740[SVR] Copy/paste the below URL in a browser to see the QR Code:
+I: 741[SVR] https://dhrishi.github.io/connectedhomeip/qrcode.html?data=CH%3AI34DV%2A-00%200C9SS0
+D: 743[DL] CHIP task running
+D: 744[DL] In DriveBLEState
+I: 757[DL] CHIPoBLE advertising disabled because device is fully provisioned
+D: 759[DL] OpenThread State Changed (Flags: 0x1100107d)
+D: 760[DL]    Device Role: DETACHED
+D: 761[DL]    Thread Unicast Addresses:
+D: 762[DL]         fdde:ad00:beef:0:1e65:2162:2d83:6133/64 valid preferred
+D: 763[DL]         fe80::2c53:1780:f20f:23ad/64 valid preferred

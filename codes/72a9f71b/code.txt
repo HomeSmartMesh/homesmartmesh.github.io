@@ -1,0 +1,11 @@
+panid 0x1234
+panid
+channel 24
+channel
+networkname OpenThreadDemo
+networkname
+extpanid 1111111122222222
+masterkey
+ifconfig up
+thread start
+state

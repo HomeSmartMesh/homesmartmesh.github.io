@@ -1,0 +1,3 @@
+uart:~$ ot state
+disabled
+Done

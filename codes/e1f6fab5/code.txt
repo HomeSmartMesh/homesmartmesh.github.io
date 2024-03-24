@@ -1,0 +1,3 @@
+$sudo ot-ctl
+>udp open
+>udp bind :: 4242

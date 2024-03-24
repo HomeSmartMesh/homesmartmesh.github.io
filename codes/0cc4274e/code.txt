@@ -1,0 +1,3 @@
+mkdir hsm_workspace
+cd hsm_workspace
+west init -m https://github.com/HomeSmartMesh/sdk-hsm-sensortag --mr main

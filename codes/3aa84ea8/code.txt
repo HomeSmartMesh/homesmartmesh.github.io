@@ -1,0 +1,1 @@
+./chip-tool onoff toggle 3 1

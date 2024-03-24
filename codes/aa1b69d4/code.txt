@@ -1,0 +1,1 @@
+nrfjprog -f nrf52 --program DWM1001_PANS_R2.0.hex --sectorerase --verify

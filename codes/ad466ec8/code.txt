@@ -1,0 +1,2 @@
+cd nrf/v2.3.0/zephyr/samples/sensor/bme680
+>west build -b thingy53_nrf5340_cpuapp

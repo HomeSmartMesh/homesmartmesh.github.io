@@ -1,0 +1,5 @@
+window.addEventListener( 'mesh_control', onMeshControl, false );
+
+function onMeshControl(e){
+    console.log(`update of ${e.detail.name} value to ${e.detail.val}`);
+}

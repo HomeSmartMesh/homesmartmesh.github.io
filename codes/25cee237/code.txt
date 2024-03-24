@@ -1,0 +1,4 @@
+sm{"uwb_cmd":"ping", "pinger":0,"target":1,"at_ms":100,"count":3,"count_ms":6}
+sm/C24FD51212E905F0{"diag":{"fpAmp1":4771,"fpAmp2":7206,"fpAmp3":7313,"maxGrowthCIR":2091,"maxNoise":1516,"rxPreamCount":124,"stdNoise":68},"uwb_cmd":"ping"}
+sm/C24FD51212E905F0{"diag":{"fpAmp1":7344,"fpAmp2":7710,"fpAmp3":7008,"maxGrowthCIR":2146,"maxNoise":1712,"rxPreamCount":118,"stdNoise":68},"uwb_cmd":"ping"}
+sm/C24FD51212E905F0{"diag":{"fpAmp1":6346,"fpAmp2":6986,"fpAmp3":6808,"maxGrowthCIR":1976,"maxNoise":1339,"rxPreamCount":124,"stdNoise":60},"uwb_cmd":"ping"}

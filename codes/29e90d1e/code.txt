@@ -1,0 +1,88 @@
+pi@metal:~ $ sudo systemctl status
+● metal
+    State: running
+     Jobs: 0 queued
+   Failed: 0 units
+    Since: Thu 1970-01-01 01:00:01 CET; 51 years 1 months ago
+   CGroup: /
+           ├─user.slice
+           │ └─user-1000.slice
+           │   ├─session-3.scope
+           │   │ ├─1663 sshd: pi [priv]
+           │   │ ├─1669 sshd: pi@pts/0
+           │   │ ├─1670 -bash
+           │   │ ├─1687 sudo systemctl status
+           │   │ ├─1688 systemctl status
+           │   │ └─1689 pager
+           │   ├─user@1000.service
+           │   │ └─init.scope
+           │   │   ├─1637 /lib/systemd/systemd --user
+           │   │   └─1638 (sd-pam)
+           │   └─session-1.scope
+           │     ├─ 864 /bin/login -f
+           │     └─1648 -bash
+           ├─init.scope
+           │ └─1 /sbin/init splash
+           └─system.slice
+             ├─ncp_state_notifier.service
+             │ ├─427 /bin/sh /usr/sbin/ncp_state_notifier
+             │ ├─432 dbus-monitor --system type='signal', interface=org.freedesktop.DBus.Properties, path
+             │ └─433 /bin/sh /usr/sbin/ncp_state_notifier
+             ├─alsa-state.service
+             │ └─395 /usr/sbin/alsactl -E HOME=/run/alsa -s -n 19 -c rdaemon
+             ├─containerd.service
+             │ └─553 /usr/bin/containerd
+             ├─systemd-timesyncd.service
+             │ └─341 /lib/systemd/systemd-timesyncd
+             ├─NetworkManager.service
+             │ ├─420 /usr/sbin/NetworkManager --no-daemon
+             │ └─633 /sbin/dhclient -d -q -sf /usr/lib/NetworkManager/nm-dhcp-helper -pf /run/dhclient-et
+             ├─dbus.service
+             │ └─409 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-acti
+             ├─hciuart.service
+             │ └─826 /usr/bin/hciattach /dev/serial1 bcm43xx 3000000 flow -
+             ├─udisks2.service
+             │ └─394 /usr/lib/udisks2/udisksd
+             ├─docker.service
+             │ └─853 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+             ├─ssh.service
+             │ └─564 /usr/sbin/sshd -D
+             ├─ser2net.service
+             │ └─868 /usr/sbin/ser2net -c /etc/ser2net.conf -P /run/ser2net.pid
+             ├─avahi-daemon.service
+             │ ├─393 avahi-daemon: running [metal.local]
+             │ └─398 avahi-daemon: chroot helper
+             ├─otbr-web.service
+             │ └─428 /usr/sbin/otbr-web
+             ├─wpa_supplicant.service
+             │ └─419 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+             ├─triggerhappy.service
+             │ └─442 /usr/sbin/thd --triggers /etc/triggerhappy/triggers.d/ --socket /run/thd.socket --us
+             ├─systemd-logind.service
+             │ └─439 /lib/systemd/systemd-logind
+             ├─polkit.service
+             │ └─511 /usr/lib/policykit-1/polkitd --no-debug
+             ├─otbr-agent.service
+             │ └─423 /usr/sbin/otbr-agent -I wpan0 spinel+hdlc+uart:///dev/ttyACM0
+             ├─telegraf.service
+             │ └─542 /usr/bin/telegraf -config /etc/telegraf/telegraf.conf -config-directory /etc/telegra
+             ├─cron.service
+             │ └─437 /usr/sbin/cron -f
+             ├─systemd-udevd.service
+             │ └─181 /lib/systemd/systemd-udevd
+             ├─rsyslog.service
+             │ └─403 /usr/sbin/rsyslogd -n -iNONE
+             ├─bluetooth.service
+             │ └─831 /usr/lib/bluetooth/bluetoothd
+             ├─inetd.service
+             │ └─857 /usr/sbin/inetd
+             ├─bluealsa.service
+             │ └─834 /usr/bin/bluealsa
+             ├─systemd-journald.service
+             │ └─121 /lib/systemd/systemd-journald
+             ├─bind9.service
+             │ └─560 /usr/sbin/named -u bind
+             ├─rng-tools.service
+             │ └─415 /usr/sbin/rngd -r /dev/hwrng
+             └─dhcpcd.service
+               └─473 /sbin/dhcpcd -q -b

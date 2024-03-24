@@ -1,0 +1,30 @@
+[
+    {
+        "pinger": 0,
+        "target": 1,
+        "diag": {
+            "fpAmp1": 6699,
+            "fpAmp2": 6986,
+            "fpAmp3": 5772,
+            "maxGrowthCIR": 1953,
+            "maxNoise": 908,
+            "rxPreamCount": 120,
+            "stdNoise": 40
+        },
+        "seq": 0
+    },
+    {
+        "pinger": 0,
+        "target": 1,
+        "diag": {
+            "fpAmp1": 7886,
+            "fpAmp2": 7867,
+            "fpAmp3": 6459,
+            "maxGrowthCIR": 3164,
+            "maxNoise": 1725,
+            "rxPreamCount": 122,
+            "stdNoise": 68
+        },
+        "seq": 1
+    }
+]

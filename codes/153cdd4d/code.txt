@@ -1,0 +1,2 @@
+cd raspi
+sudo bash setup.sh

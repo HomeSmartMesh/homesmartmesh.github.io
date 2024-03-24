@@ -1,0 +1,11 @@
+#include <zephyr.h>
+#include <logging/log.h>
+LOG_MODULE_REGISTER(main, LOG_LEVEL_INF);
+void main(void)
+{
+	LOG_INF("Starting");
+	int count = 0;
+	while (1) {
+		LOG_INF("loop: %d",count++);
+	}
+}

@@ -1,0 +1,2 @@
+cd nrf\v2.3.0\nrf\samples\xxx\
+>west build -p always -b nrf52840dongle_nrf52840 -- -DOVERLAY_CONFIG="overlay-usb.conf" -DDTC_OVERLAY_FILE="usb.overlay"

@@ -1,0 +1,4 @@
+>help
+>kernel threads
+>kernel stacks
+>log enable dbg main

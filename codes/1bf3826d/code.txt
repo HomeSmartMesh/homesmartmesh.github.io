@@ -1,0 +1,2 @@
+sm{"uwb_cmd":"twr","initiator":0,"responder":1,"at_ms":100}
+sm/C24FD51212E905F0{"initiator":0,"range":"0.375","responder":1,"seq":0,"uwb_cmd":"twr"}

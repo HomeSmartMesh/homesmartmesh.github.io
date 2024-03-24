@@ -1,0 +1,18 @@
+D:\Dev\nrf52\hsm\hsm\samples\tag_sensors_broadcast>west build -b nrf52840_sensortag -- -DCONF_FILE=prj.conf
+-- west build: generating a build system
+Including boilerplate (Zephyr base): D:/Dev/nrf52/hsm/zephyr/cmake/app/boilerplate.cmake
+-- Application: D:/Dev/nrf52/hsm/hsm/samples/tag_sensors_broadcast
+-- Zephyr version: 2.6.0-rc1 (D:/Dev/nrf52/hsm/zephyr), build: v2.6.0-rc1-120-g41e885947e4f
+-- Found Python3: C:/Users/User/AppData/Local/Programs/Python/Python39/python.exe (found suitable exact version "3.9.0") found components: Interpreter 
+-- Found west (found suitable version "0.10.1", minimum required is "0.7.1")
+-- Board: nrf52840_sensortag
+-- Cache files will be written to: D:/Dev/nrf52/hsm/zephyr/.cache
+-- Found toolchain: gnuarmemb (D:/tools/gnu_arm_embedded/10 2020-q4-major)
+-- Found BOARD.dts: D:/Dev/nrf52/hsm/hsm/boards/arm/nrf52840_sensortag/nrf52840_sensortag.dts
+-- Generated zephyr.dts: D:/Dev/nrf52/hsm/hsm/samples/tag_sensors_broadcast/build/zephyr/zephyr.dts
+...
+[536/536] Linking CXX executable zephyr\zephyr.elf
+Memory region         Used Size  Region Size  %age Used
+           FLASH:      177224 B         1 MB     16.90%
+            SRAM:       71200 B       256 KB     27.16%
+        IDT_LIST:          0 GB         2 KB      0.00%

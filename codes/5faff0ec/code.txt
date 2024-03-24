@@ -1,0 +1,2 @@
+>ot udp open
+>ot udp send ff02::1 4242 hi_there_now

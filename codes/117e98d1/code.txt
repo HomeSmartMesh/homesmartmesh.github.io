@@ -1,0 +1,9 @@
+window.addEventListener( 'mqtt_message', onMqttMessage, false);
+
+function onMqttMessage(e){
+    ...
+	if(obj.userData.type == "heating"){
+		const heating_demand = e.detail.payload.pi_heating_demand;
+		send_custom_event('three_param',{name:obj_name,color:heating_demand});
+	}
+}

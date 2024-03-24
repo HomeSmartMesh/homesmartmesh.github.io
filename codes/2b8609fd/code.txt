@@ -1,0 +1,3 @@
+cd hsm/samples/tag_sensors_broadcast
+west build -b nrf52840_sensortag
+west flash

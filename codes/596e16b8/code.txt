@@ -1,0 +1,1 @@
+mosquitto_pub -t 'Nodes/79/ping' -m '{"remote":"74"}'

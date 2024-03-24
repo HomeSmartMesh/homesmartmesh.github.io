@@ -1,0 +1,14 @@
+*** Booting Zephyr OS build zephyr-v2.5.0-2187-g757cd12e6602  ***
+
+[00:00:00.325,714] <inf> main: MS8607 Temperature Humidity pressure sensor application
+[00:00:00.326,049] <inf> main: ms8607> connected
+ms8607> t=22.59 °  p=963.62 mbar  h=38.59 %RH
+ms8607> t=22.59 °  p=963.63 mbar  h=38.90 %RH
+ms8607> t=22.59 °  p=963.63 mbar  h=38.88 %RH
+ms8607> t=22.60 °  p=963.64 mbar  h=39.74 %RH
+ms8607> t=22.17 °  p=963.62 mbar  h=51.82 %RH
+ms8607> t=22.10 °  p=963.62 mbar  h=58.70 %RH
+ms8607> t=22.09 °  p=963.62 mbar  h=60.83 %RH
+ms8607> t=23.16 °  p=963.69 mbar  h=72.36 %RH
+ms8607> t=22.67 °  p=963.63 mbar  h=77.52 %RH
+ms8607> t=22.65 °  p=963.55 mbar  h=53.33 %RH

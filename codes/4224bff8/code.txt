@@ -1,0 +1,50 @@
+#include "Arduino.h"
+#include <WiFi.h>
+
+#include <ArduinoJson.h>
+#include "freertos/FreeRTOS.h"
+#include <WiFi.h>
+#include <MQTT.h>
+#include <esp_wifi.h>
+
+#include "json_file.h"
+#include "battery.h"
+#include "wifi_secret.h"
+
+DynamicJsonDocument config(1*1024);//5 KB
+MQTTClient mqtt(1*1024);// 1KB for small messages
+WiFiClient wifi;//needed to stay on global scope
+
+void setup() {
+
+  Serial.begin(115200);
+  uint32_t vref = bat_init();
+  Serial.printf("eFuse Vref:%u mV\n", vref);
+  float battery_f = bat_get_voltage();
+  battery_f /=1000;
+
+  pinMode(LED_BUILTIN, OUTPUT);
+  blink(100);
+  WiFi.begin(ssid, password);
+  load_config(config,true);
+  timelog("config loaded");
+
+  if(connect()){
+    mqtt_publish_status(battery_f);    timelog("=>status");
+    mqtt.loop();
+  }
+
+  Serial.println("ESP going to deep sleep");
+  Serial.flush();
+  blink(100);
+
+  esp_wifi_stop();
+  uint32_t deep_sleep_sec = config["deep_sleep_sec"];
+  esp_deep_sleep(deep_sleep_sec*1000000);
+  esp_deep_sleep_start();
+
+}
+
+void loop() {
+  //no loop
+}

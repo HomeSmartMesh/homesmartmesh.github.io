@@ -1,0 +1,4 @@
+1. >sm/1CF6567337562176{"rf_diag":"target_ping","target":"CBC216DC164B1DE8"}
+2. >sm/CBC216DC164B1DE8{"rf_diag":"ping"}
+3. sm/1CF6567337562176{"rf_diag":"pinger","rssi":52,"time":4200857}
+4. sm/CBC216DC164B1DE8{"rf_diag":"pong","rssi":41,"time":3898403}

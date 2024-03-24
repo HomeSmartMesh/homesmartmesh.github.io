@@ -1,0 +1,28 @@
+<info> app_timer: RTC: initialized.
+<info> app: Thread version   : OPENTHREAD/20191113-00534-gc6a258e3; NRF52840; Apr  5 2020 21:53:43
+<info> app: Network name     : OpenThreadDemo
+<info> app: Thread interface has been enabled.
+<info> app: 802.15.4 Channel : 13
+<info> app: 802.15.4 PAN ID  : 0x1234
+<info> app: Radio mode       : rx-on-when-idle
+<warning> app_timer: RTC instance already initialized.
+<info> app: State changed! Flags: 0x0117D33D Current role: 1
+<info> app: State changed! <info> app: (0)
+<info> app: MQTT-SN event: Client has found an active gateway.
+<info> app: MQTT-SN event: Client has found an active gateway.
+<info> app: MQTT-SN event: Gateway discovery procedure has finished.
+<info> app: MQTT-SN event: Gateway discovery result: 0x0.
+<info> app: (1)
+<info> app: Wake up first time
+<info> app: MQTT-SN event: Client connected.
+<info> app: MQTT-SN event: Client registered topic.
+<info> app: MQTT-SN event: Topic has been registered with ID: 1.
+<info> app: (2)
+<info> app: Wake up next times
+<info> app: MQTT-SN event: Client has successfully published content.
+<info> app: (2)
+<info> app: Wake up next times
+<info> app: MQTT-SN event: Client has successfully published content.
+<info> app: (2)
+<info> app: Wake up next times
+<info> app: MQTT-SN event: Client has successfully published content.

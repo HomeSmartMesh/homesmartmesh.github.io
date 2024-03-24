@@ -1,0 +1,1 @@
+mosquitto_pub -t 'remote_cmd/request/set_channel' -m '{"channel":2,"remote":74}'

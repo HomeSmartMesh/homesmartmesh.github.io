@@ -1,0 +1,7 @@
+cd ~/ot-nrf528xx
+./script/bootstrap
+./bootstrap
+sudo rm -rf build/
+./script/build nrf52840 USB_trans -DOT_COMMISSIONER=ON -DOT_JOINER=ON -DOT_THREAD_VERSION=1.2
+cd build/bin/
+arm-none-eabi-objcopy -O ihex ot-cli-ftd ot-cli-ftd-com-join.hex

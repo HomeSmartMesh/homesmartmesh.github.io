@@ -1,0 +1,3 @@
+sudo systemctl status paho-mqttsn-gateway.service
+sudo /usr/sbin/MQTT-SNGateway -f /etc/paho-mqtt-sn-gateway.conf
+sudo nano /etc/paho-mqtt-sn-gateway.conf

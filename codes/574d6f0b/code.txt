@@ -1,0 +1,1 @@
+nodeid:75;channel:10;reset:1

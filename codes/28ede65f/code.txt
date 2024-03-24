@@ -1,0 +1,21 @@
+#include <SPIFFS.h>
+#include <epaper.h>
+
+EPaper epaper;
+
+void setup()
+{
+    Serial.begin(115200);
+    SPIFFS.begin();
+
+    epaper.init();
+    epaper.display.fillScreen(GxEPD_WHITE);
+    epaper.drawBitmap("/esp_home.bmp", 0, 50, true);
+    epaper.displayText("Hello simple", 20, EPaper::RIGHT_ALIGNMENT);
+    epaper.display.update();
+
+}
+
+void loop()
+{
+}

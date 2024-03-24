@@ -1,0 +1,3 @@
+> pub 'lzig/office heat/set' -m '{"current_heating_setpoint": 9}'
+> pub 'zig/living heat/set' -m '{"current_system_mode": 16}'
+> pub 'zig/living heat/set' -m '{"current_system_mode": 32}'

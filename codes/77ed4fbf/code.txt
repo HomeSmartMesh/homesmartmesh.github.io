@@ -1,0 +1,7 @@
+	window.addEventListener( 'mesh_control', onMeshControl, false );
+	window.addEventListener( 'mesh_click', onMeshClick, false );
+	window.addEventListener( 'mesh_hold', onMeshHold, false );
+
+    send_custom_event("three_param",{name:"Kitchen", emissive:items_anim.Emissive});
+    send_custom_event("three_param",{name:"Kitchen", light:items_anim.Light});
+    send_custom_event("three_param",{name:"Kitchen", color:items_anim.Color});

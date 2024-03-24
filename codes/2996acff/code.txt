@@ -1,0 +1,16 @@
+PACKAGES:
+ - framework-arduinoespressif32 0.0.0+sha.b05bdf6
+ - tool-esptoolpy 1.30000.201119 (3.0.0)
+ - toolchain-xtensa32 2.50200.80 (5.2.0)
+LDF: Library Dependency Finder -> http://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ deep+, Compatibility ~ soft
+Found 31 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- <Timer-CAM> 0.0.1
+|-- <WiFi> 1.0
+|-- <ArduinoJson> 6.16.1
+|-- <MQTT> 2.4.7
+|-- <FS> 1.0
+|-- <SPIFFS> 1.0
+|   |-- <FS> 1.0

@@ -1,0 +1,16 @@
+>node_id_get:98501ED22B42EB41
+node_id_get:98501ED22B42EB41
+node_id_get:98501ED22B42EB41
+sm/98501ED22B42EB41{"shortid":0}
+sm/98501ED22B42EB41{"simplemesh":"started"}
+sm/98501ED22B42EB41{"chan":5,"dataRate":"DWT_BR_6M8","nsSFD":"NonStandard","phrMode":"DWT_PHRMODE_EXT","prf":"DWT_PRF_64M","rxCode":9,"rxPAC":"DWT_PAC8","sfdTO":129,"txCode":9,"txPreambLength":"DWT_PLEN_128"}
+node_id_get:E8D81FEE52C283EB
+node_id_set:E8D81FEE52C283EB:01
+sm/E8D81FEE52C283EB{"simplemesh":"started"}
+sm/E8D81FEE52C283EB{"shortid":1}
+sm/E8D81FEE52C283EB{"chan":5,"dataRate":"DWT_BR_6M8","nsSFD":"NonStandard","phrMode":"DWT_PHRMODE_EXT","prf":"DWT_PRF_64M","rxCode":9,"rxPAC":"DWT_PAC8","sfdTO":129,"txCode":9,"txPreambLength":"DWT_PLEN_128"}
+
+>sm{"twr_command":{"initiator":0,"responder":1,"at_ms":100}}
+>sm/E8D81FEE52C283EB{"at_ms":100,"initiator":0,"responder":1,"result":{"range":"0.211"}}
+sm{"twr_command":{"initiator":0,"responder":1,"at_ms":100}}
+>sm/E8D81FEE52C283EB{"at_ms":100,"initiator":0,"responder":1,"result":{"range":"0.220"}}

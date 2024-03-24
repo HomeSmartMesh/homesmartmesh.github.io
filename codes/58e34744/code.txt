@@ -1,0 +1,13 @@
+PACKAGES:
+ - framework-arduinoespressif32 3.10005.210308 (1.0.5)
+ - tool-esptoolpy 1.30000.201119 (3.0.0)
+ - toolchain-xtensa32 2.50200.97 (5.2.0)
+...
+Dependency Graph
+|-- <ArduinoJson> 6.16.1
+|-- <MQTT> 2.4.7
+|-- <M5Atom> 0.0.1
+|   |-- <FastLED> 3.4.0
+|   |-- <Wire> 1.0.1
+|-- <FastLED> 3.4.0
+|-- <WiFi> 1.0

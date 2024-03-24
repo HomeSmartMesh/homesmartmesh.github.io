@@ -1,0 +1,5 @@
+window.addEventListener( 'mesh_touch_start', onMeshTouch, false );
+
+function onMeshMouseDown(e){
+    console.log(`Mesh Touch on ${e.detail.name}`);
+}

@@ -1,0 +1,16 @@
+{
+  "configuration": {
+    "label": "BatteryTag",
+    "nodeType": "TAG",
+    "uwbFirmwareUpdate": false,
+    "leds": false,
+    "ble": false,
+    "tag": {
+      "locationEngine": true,
+      "responsive": true,
+      "stationaryDetection": true,
+      "nomUpdateRate": 100,
+      "statUpdateRate": 2000
+    }
+  }
+}

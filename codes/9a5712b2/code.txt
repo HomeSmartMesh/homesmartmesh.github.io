@@ -1,0 +1,19 @@
+wass@ryzen:~/connectedhomeip/examples/chip-tool/out/debug$ ./chip-tool pairing bypass 10.0.0.27 11097
+CHIP:IN: TransportMgr initialized
+CHIP:DIS: Init admin pairing table with server storage
+CHIP:IN: Loading certs from KVS
+CHIP:IN: local node id is 0x000000000001B669
+CHIP:ZCL: Using ZAP configuration...
+CHIP:ZCL: deactivate report event
+CHIP:CTL: Getting operational keys
+CHIP:CTL: Generating credentials
+CHIP:CTL: Loaded credentials successfully
+CHIP:IN: New pairing for device 0x0000000000bc5c01, key 0!!CHIP:DL: 
+CHIP task running
+CHIP:TOO: Secure Pairing Success
+CHIP:TOO: Pairing Success
+CHIP:CTL: Shutting down the commissioner
+CHIP:CTL: Shutting down the controller
+CHIP:DL: System Layer shutdown
+CHIP:DL: Inet Layer shutdown
+CHIP:DL: BLE layer shutdown

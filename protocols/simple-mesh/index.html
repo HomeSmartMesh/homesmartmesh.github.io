@@ -1,0 +1,1586 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-s6tr6vzr> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v4.5.9"><title></title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="stylesheet" href="/_astro/hoisted.CD2-kdrS.css">
+<link rel="stylesheet" href="/_astro/_url_.BHmp-vPX.css">
+<link rel="stylesheet" href="/_astro/photoswipe.z3i1z0Ou.css"><script type="module" src="/_astro/hoisted.CWlp_WgU.js"></script></head> <body data-astro-cid-s6tr6vzr> <div id="fixed-left" class="fixed-nav active" data-astro-cid-s6tr6vzr></div> <div class="appbar-nav_content-footer" data-astro-cid-s6tr6vzr> <header data-astro-cid-s6tr6vzr> <div class="navbar" data-astro-cid-ju4t2drc> <ul class="navbar-left" data-astro-cid-ju4t2drc> <li data-astro-cid-ju4t2drc> <a href="/" class="" data-astro-cid-ju4t2drc> Home  </a> </li><li data-astro-cid-ju4t2drc> <a href="/microcontrollers" class="" data-astro-cid-ju4t2drc> Microcontrollers  </a> </li><li data-astro-cid-ju4t2drc> <a href="/frameworks/raspi-iot" class="" data-astro-cid-ju4t2drc> Frameworks  </a> </li><li data-astro-cid-ju4t2drc> <a href="/protocols/thread" class="active" data-astro-cid-ju4t2drc> Protocols  </a> </li><li data-astro-cid-ju4t2drc> <a href="/3dprinting" class="" data-astro-cid-ju4t2drc> 3D Printing  </a> </li><li data-astro-cid-ju4t2drc> <a href="/web" class="" data-astro-cid-ju4t2drc> Web  </a> </li><li data-astro-cid-ju4t2drc> <a href="/other/sound-processing" class="" data-astro-cid-ju4t2drc> Other  </a> </li> </ul> <ul class="navbar-right" data-astro-cid-ju4t2drc> <li data-astro-cid-ju4t2drc> <a href="https://github.com/HomeSmartMesh/website-astro" target="_blank" data-astro-cid-ju4t2drc> <img src="/_astro/github-dark.yX09hC67.png" height="32px"> </a> </li> </ul> </div>  </header> <main data-astro-cid-s6tr6vzr> <div id="wide-nav" class="scroll" data-astro-cid-s6tr6vzr> <nav class="open pages_menu client" data-width="20vw" data-hash="f5c3faa8" data-astro-cid-2yctggdy style="--data_width: 20vw;"></nav>    </div> <div id="resize-left" class="nav-resize active" data-astro-cid-s6tr6vzr></div> <article class="content scroll" data-astro-cid-s6tr6vzr> <div id="mobile-nav" data-astro-cid-s6tr6vzr> <nav class="open pages_menu client" data-width="20vw" data-hash="f5c3faa8" data-astro-cid-2yctggdy style="--data_width: 20vw;"></nav>    </div> <div class="article-slot" data-astro-cid-s6tr6vzr>  <h1 id="simple-mesh-overview" class="heading bar" data-astro-cid-wcjwfpce> <a href="#simple-mesh-overview" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Simple Mesh Overview </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h1> <div class="paragraph text">A simpler, more efficient alternative to Z-x, BL-x, Thread, standard RF protocols. Open source SW is provided for custom and off the shelf nRF SoC tags and dongles.</div><div class="paragraph"><div class="container" data-astro-cid-pptsj4fg> <a href="/microcontrollers/nrf52/simplemesh_sensortag" class="link " target="_self" data-astro-cid-pptsj4fg> <span class="button text" data-astro-cid-pptsj4fg>Simple Mesh SensorTag</span>  </a> </div> </div><div class="paragraph"><div class="container" data-astro-cid-pptsj4fg> <a href="https://github.com/HomeSmartMesh/sdk-hsm-sensortag" class="link external" target="_blank" data-astro-cid-pptsj4fg> <span class="button text" data-astro-cid-pptsj4fg>Simple Mesh and thread on Zephyr</span> <span class="icon" data-astro-cid-pptsj4fg><svg    xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 24 24" 
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    >
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</span> </a> </div> </div><div class="paragraph"><div class="container" data-astro-cid-pptsj4fg> <a href="https://github.com/nRFMesh/nRF52_Mesh" class="link external" target="_blank" data-astro-cid-pptsj4fg> <span class="button text" data-astro-cid-pptsj4fg>Simple Mesh Repo</span> <span class="icon" data-astro-cid-pptsj4fg><svg    xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 24 24" 
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    >
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</span> </a> </div> </div><h2 id="features" class="heading bar" data-astro-cid-wcjwfpce> <a href="#features" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Features </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <div class="paragraph image"><div class="container panzoom" data-type="img" data-name="nRF52-features.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/nRF52-features.png" alt="nRF52 features" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/nRF52-features.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><ul><li><div class="paragraph text">2.4 GHz 2 Mbps Mesh Network</div><ul><li><div class="paragraph text">tested with 300 packets / second</div></li></ul></li><li><div class="paragraph text">Flash time automated database config</div></li><li><div class="paragraph text">Zero install time configuration</div><ul><li><div class="paragraph text">No association, No pairing, No factory resets</div></li></ul></li><li><div class="paragraph text">Router = Coordinator = Repeater = Sniffer = CLI</div></li><li><div class="paragraph text">text serial line protocol</div></li><li><div class="paragraph text">Multiple Network endpoints</div><ul><li><div class="paragraph text">No single point of failure</div></li></ul></li><li><div class="paragraph text">Server, Dongles, Sensors</div><ul><li><div class="paragraph text">Full Stack Open Source (no softdevices required)</div></li><li><div class="paragraph text">HW On the shelves</div></li><li><div class="paragraph text">optional DIY HW</div></li></ul></li><li><div class="paragraph text">Alive trace routing</div><ul><li><div class="paragraph text">a heartbeat message that gives info about the age and RF tx/rx hops through the route</div></li></ul></li></ul><div class="paragraph text">see below the <a href="/assets/protocols/simple_mesh/#drivers--custom-mesh-protocol" class="link " target="_self" data-astro-cid-xd5t2nax>Drivers &#x26; Custom Mesh protocol</a> section for the RF Protocol details</div><h2 id="description" class="heading bar" data-astro-cid-wcjwfpce> <a href="#description" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Description </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <ul><li><div class="paragraph text">2 Mbps (e.g. Zgibee is at 250 Kbps to have a higher range), lowering the bitrate does not improve the range enough to get rid of repeaters, and once you need repeaters these are continuous listeners and require permanent power anyway, so the strategy is to have a repeater for every slot of the house and those repeaters can have power amplifiers and the range problem is solved keeping the high bitrate feature.</div></li><li><div class="paragraph text">successfull stress tests including up to 300 packets / second.</div></li><li><div class="paragraph text">This <a href="/assets/protocols/simple_mesh/nodes.json" class="link " target="_self" data-astro-cid-xd5t2nax>nodes.json</a> configuration file contains the short id for device unique identifier (uid64) and other configurations such as the channel, the sleep time, the required function,... Note that a python script using jLink API automate the flashing process as the uid is read every time from the attached device and matches the parameters to be flashed from the config file.</div></li><li><div class="paragraph text">As the short id (8 bits) is flashed, there is no association process required and all sensor devices can act as a pure beacons (no listening required) which considerably increases battery life time. We can keep arguing about the need of an acknowledged protocol for sensors logging, I do not think it is required as the feedback of battery level and rssi are both logged as well so the user knows if the sensor is in a healthy position or not.</div></li><li><div class="paragraph text">Router = Coordinator = Repeater = Sniffer = CLI : actually, a configuration activates the repeat functionality in case someone wants a completely stealth sniffer and this config does not require a different FW. There is nothing to coordinate as the mesh is fully dynamic with a flood and time to live concept. And every dongle has a CLI in text mode to report heard packets and takes commands as text input.</div></li><li><div class="paragraph text">A consequence of the simplified design allows to have multiple dongles in different locations listening to the network and reporting it to mqtt which avoids any single point of failure. By design there is no id 0 privileged coordinator and end devices do not require to know any particular associated address, they just wake up, broadcast and sleep.</div></li><li><div class="paragraph text">As visible in the gif animations below, Open Source SW is provided for all steps, devices firmware and server python code.</div></li></ul><h2 id="static-demo" class="heading bar" data-astro-cid-wcjwfpce> <a href="#static-demo" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Static Demo </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <ul><li><div class="paragraph text"><a href="https://github.com/nRFMesh/nRF52_Mesh/tree/master/applications/04_uart_dongle" class="link external" target="_blank" data-astro-cid-xd5t2nax>UART : dongle firmware - directory</a></div></li><li><div class="paragraph text"><a href="https://github.com/nRFMesh/nRF52_Mesh/tree/master/applications/08_usb_dongle" class="link external" target="_blank" data-astro-cid-xd5t2nax>USB : dongle firmware - directory</a></div></li></ul><div class="highlighter container" data-hash="79680578" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#DCDCAA">cu</span><span style="color:#569CD6"> -l</span><span style="color:#CE9178"> /dev/ttyACM0</span><span style="color:#569CD6"> -s</span><span style="color:#B5CEA8"> 460800</span><span style="color:#D4D4D4"> </span></span></code></pre> <button class="copy-btn" data-hash="79680578" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="79680578" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <div class="paragraph image"><div class="container panzoom" data-type="img" data-name="nrf_serial.gif" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/nrf_serial.gif" alt="nRF Serial" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/nrf_serial.gif" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><div class="paragraph text">subscribe to topic</div><div class="highlighter container" data-hash="60db3ad2" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#DCDCAA">mosquitto_sub</span><span style="color:#569CD6"> -t</span><span style="color:#CE9178"> 'nrf/#'</span><span style="color:#569CD6"> -v</span><span style="color:#D4D4D4"> | </span><span style="color:#DCDCAA">ts</span></span></code></pre> <button class="copy-btn" data-hash="60db3ad2" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="60db3ad2" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <div class="paragraph text">start nrf_mesh <a href="https://github.com/HomeSmartMesh/raspi/tree/master/py/nrf_mesh" class="link external" target="_blank" data-astro-cid-xd5t2nax>py/nrf_mesh</a> from <a href="https://github.com/HomeSmartMesh/raspi/" class="link external" target="_blank" data-astro-cid-xd5t2nax>raspi</a> Project</div><div class="highlighter container" data-hash="a7f1c190" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#DCDCAA">python3</span><span style="color:#CE9178"> nrf_mesh.py</span></span></code></pre> <button class="copy-btn" data-hash="a7f1c190" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="a7f1c190" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <div class="paragraph image"><div class="container panzoom" data-type="img" data-name="nrf_mqtt.gif" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/nrf_mqtt.gif" alt="nRF MQTT" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/nrf_mqtt.gif" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><div class="paragraph text">This custom sensors RF mesh can expand to cover a home area. Onces connected to services provided in the <a href="https://github.com/HomeSmartMesh/raspi" class="link external" target="_blank" data-astro-cid-xd5t2nax>raspi</a> project, including python scripts, influxdb and grafana, the end result dashboard looks like this</div><div class="paragraph image"><div class="container panzoom" data-type="img" data-name="grafana-dashboard.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/grafana-dashboard.png" alt="Grafana Dashboard" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/grafana-dashboard.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><h1 id="mesh-nodes" class="heading bar" data-astro-cid-wcjwfpce> <a href="#mesh-nodes" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Mesh Nodes </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h1> <h2 id="sensor-tag" class="heading bar" data-astro-cid-wcjwfpce> <a href="#sensor-tag" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> sensor tag </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <div class="highlighter container" data-hash="098d747d" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#DCDCAA">application/01_sensortag></span><span style="color:#CE9178"> make</span><span style="color:#CE9178"> flash</span></span>
+<span class="line"><span style="color:#DCDCAA">application/01_sensortag></span><span style="color:#CE9178"> make</span><span style="color:#CE9178"> paramw</span></span></code></pre> <button class="copy-btn" data-hash="098d747d" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="098d747d" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <div class="paragraph image"><div class="container panzoom" data-type="img" data-name="nRF52832_sensortag.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/nRF52832_sensortag.png" alt="nRF52832 Sensortag" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/nRF52832_sensortag.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><ul><li><div class="paragraph text">Status : deployed > 1 year</div></li><li><div class="paragraph text">nRF52832 module</div></li><li><div class="paragraph text">Temperature, Humidity, Pressure : BME280</div></li><li><div class="paragraph text">Light : MAX44009</div></li><li><div class="paragraph text">Smooth graphana logs with cyclic broadcast ~ 30 sec => battery life ~ 6 month on CR2032</div></li><li><div class="paragraph"><code>make paramw</code> detects the device uid and writes the config parameters available in <a href="/assets/protocols/simple_mesh/nodes.json" class="link " target="_self" data-astro-cid-xd5t2nax>nodes.json</a></div></li></ul><div class="paragraph"><div class="container" data-astro-cid-pptsj4fg> <a href="/microcontrollers/nrf52/simplemesh_sensortag" class="link " target="_self" data-astro-cid-pptsj4fg> <span class="button text" data-astro-cid-pptsj4fg>Simple Mesh SensorTag details...</span>  </a> </div> </div><h2 id="uart-dongle" class="heading bar" data-astro-cid-wcjwfpce> <a href="#uart-dongle" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> uart dongle </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <div class="highlighter container" data-hash="4dfb2859" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#DCDCAA">application/04_uart_dongle></span><span style="color:#CE9178"> make</span><span style="color:#CE9178"> flash</span></span>
+<span class="line"><span style="color:#DCDCAA">application/04_uart_dongle></span><span style="color:#CE9178"> make</span><span style="color:#CE9178"> paramw</span></span></code></pre> <button class="copy-btn" data-hash="4dfb2859" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="4dfb2859" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <div class="paragraph image"><div class="container panzoom" data-type="img" data-name="dongle.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/dongle.png" alt="Dongle" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/dongle.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><ul><li><div class="paragraph text">Status : deployed > 1 year</div></li><li><div class="paragraph text">buy : "nRF52832 BLE USB UART dongle"</div></li><li><div class="paragraph text">custom firmware and pogo-pins jtag adapter see below</div></li><li><div class="paragraph text">RF Mesh repeater + RF Mesh to Host interface</div></li><li><div class="paragraph"><code>make paramw</code> detects the device uid and writes the config parameters available in <a href="/assets/protocols/simple_mesh/nodes.json" class="link " target="_self" data-astro-cid-xd5t2nax>nodes.json</a></div></li></ul><div class="paragraph"><div class="container" data-astro-cid-pptsj4fg> <a href="/microcontrollers/nrf52/uart_dongle" class="link " target="_self" data-astro-cid-pptsj4fg> <span class="button text" data-astro-cid-pptsj4fg>UART Dongle details...</span>  </a> </div> </div><h2 id="usb-dongle-(nrf52840)" class="heading bar" data-astro-cid-wcjwfpce> <a href="#usb-dongle-(nrf52840)" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> usb dongle (nRF52840) </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <div class="highlighter container" data-hash="daa920b5" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#DCDCAA">application/08_usb_dongle></span><span style="color:#CE9178"> make</span><span style="color:#CE9178"> flash</span></span>
+<span class="line"><span style="color:#DCDCAA">application/08_usb_dongle></span><span style="color:#CE9178"> make</span><span style="color:#CE9178"> paramw</span></span></code></pre> <button class="copy-btn" data-hash="daa920b5" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="daa920b5" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <div class="paragraph image"><div class="container panzoom" data-type="img" data-name="nRF52840-dongle-debug.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/nRF52840-dongle-debug.png" alt="nRF52840 Dongle Debug" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/nRF52840-dongle-debug.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><ul><li><div class="paragraph text">buy : "nRF52840 usb dongle"</div></li><li><div class="paragraph text">custom firmware for RF mesh</div></li><li><div class="paragraph text">RF Mesh repeater + RF Mesh to Host interface</div></li><li><div class="paragraph text">buffered USB CDC tx and rx</div></li><li><div class="paragraph"><code>make paramw</code> detects the device uid and writes the config parameters available in <a href="/assets/protocols/simple_mesh/nodes.json" class="link " target="_self" data-astro-cid-xd5t2nax>nodes.json</a></div></li><li><div class="paragraph text">pogo-pins jtag adapter 3dprint :</div><ul><li><div class="paragraph text"><a href="https://a360.co/3jr91PD" class="link external" target="_blank" data-astro-cid-xd5t2nax>Version two CAD Model</a></div></li><li><div class="paragraph text"><a href="https://a360.co/2CDqeTA" class="link external" target="_blank" data-astro-cid-xd5t2nax>Version one Fusion360 CAD model</a></div></li></ul></li></ul><div class="paragraph image"><div class="container panzoom" data-type="img" data-name="pogo-versions.jpg" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/pogo-versions.jpg" alt="Pogo Versions" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/pogo-versions.jpg" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><h1 id="protocol" class="heading bar" data-astro-cid-wcjwfpce> <a href="#protocol" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Protocol </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h1> <div class="paragraph">The directory <code>./drivers/</code> contains the custom drivers for this project from which the <a href="/assets/protocols/simple_mesh/drivers/mesh.c" class="link " target="_self" data-astro-cid-xd5t2nax>mesh.c</a> a Simple Mesh Protocol connecting all the devices using a custom RF protocol (without softdevice)</div><ul><li><div class="paragraph text">Sleepy nodes (low power) and router nodes (always listening)</div></li><li><div class="paragraph text">single layer ultra simple rpotocol. App into mac with unique ids to small ids mapping</div></li><li><div class="paragraph text">A simple alternative to the Bluetooth Mesh and Zigbee Thread IPV6</div></li></ul><div class="paragraph image"><div class="container panzoom" data-type="img" data-name="mesh.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/mesh.png" alt="Mesh" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/mesh.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><ul><li><div class="paragraph text">Low power node : Mesh node that can be a sensor Tag that wakes up on RTC or on sensor value interrupt to log a parameter. Can also be a button that wakes up on a press PIO interrupt.</div></li><li><div class="paragraph text">Router node : Mesh node that cooperates with the Low power nodes, the router has to be a device that keeps listening permanently on the same RF channel, this might require ~ 13 mA. Example router devices are light controllers, server’s RF dongle or USB powered sensors and status devices.</div></li><li><div class="paragraph text">Server : A Raspberry pi running linux. The RF signals come through the serial port or with a USB adapter, then published on MQTT, from which Python scripts inject signals on the Database, connected to Grafana web server. Note that there can be multiple router dongles connected to servers.</div></li></ul><h2 id="overview" class="heading bar" data-astro-cid-wcjwfpce> <a href="#overview" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Overview </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <div class="paragraph text">This project introduce an RF Mesh protocol which is a complete stack implementation to allow devices to communicate in a Mesh Network Topology. This protocol implementation is using the nRF SDK 15 it is using the Radio module through a modified Enhanced Shock-burst custom protocol. Implementations range from nRF24L01+ with an STM8L and STM32 to the nRF51 and nRF52 families that add features such as RSSI and bigger packets sizes.</div><h2 id="description-2" class="heading bar" data-astro-cid-wcjwfpce> <a href="#description-2" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Description </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <ul><li><div class="paragraph text">100% Open source Mesh RF Stack</div></li><li><div class="paragraph text">Ported on STM8L, STM32, nRF51 and nRF52</div></li><li><div class="paragraph text">Concept designed for Low Power Nodes and Router Nodes</div></li><li><div class="paragraph text">Same radio channel configured for the whole network</div></li><li><div class="paragraph text">Single channel allows maximum power save with unlimited sleep periods, and random wake up with button press or sensor event.</div></li><li><div class="paragraph text">Mesh with flooding broadcast, where every message has its own configurable time to live. This brings multiple advantages of usage simplicity.</div></li><li><div class="paragraph text">Short addresses allow efficient packets sizes. Possibility for extensions with short address reuse and exception addresses to allow unlimited network size.</div></li><li><div class="paragraph text">For simplicity purpose, security is a matter of application payload content.</div></li><li><div class="paragraph text">The stack is so small that the RAM and ROM are left for the application logic, not requiring a network co-processor.</div></li></ul><h3 id="mesh-broadcast" class="heading bar" data-astro-cid-wcjwfpce> <a href="#mesh-broadcast" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Mesh Broadcast </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h3> <ul><li><div class="paragraph text">A simple flood mechanism is implemented where every router repeats the signal heard decrementing the time to live to avoid infinite propagation.</div></li><li><div class="paragraph text">Future extensions can extend the routing by gathering statistics and deciding of the optimal path in a decentralized fashion. Note that small installations in a home do not bring any significant advantage, thus the interest for a simple protocol for such use case.</div></li></ul><h3 id="directed-messages-with-ack" class="heading bar" data-astro-cid-wcjwfpce> <a href="#directed-messages-with-ack" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Directed messages with ack </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h3> <ul><li><div class="paragraph text">This type of communication uses a source and destination addresses</div></li><li><div class="paragraph text">Only the node recognizing itself as destination will send a packet as acknowledge</div></li><li><div class="paragraph text">The acknowledge packet is propagated the same way, until it reaches the source, which make it an end to end acknowledge</div></li><li><div class="paragraph text">If the source did not got an acknowledge back while it was requested, it can retry the transmission again.</div></li></ul><h3 id="packet-format" class="heading bar" data-astro-cid-wcjwfpce> <a href="#packet-format" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Packet Format </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h3> <div class="paragraph text">custom stack vs softdevices : This protocol is using the direct Radio module capabilities and does not require the sofdevices. The softdevices are Nordic firmware that are closed source and distributed as binaries, they have higher privileges than the user application. Softdevices guarantee that the RF functions keep always working as the user application is untrusted. This comes at a big price to pay, as the rest of the SoC cannot be properly used, no free configuration of interrupts for example, they have also a big memory footprint that prevents safe double paged firmware updates.</div><div class="paragraph image"><div class="container panzoom" data-type="img" data-name="packet.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/packet.png" alt="Packet" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/packet.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><div class="paragraph text">The configuration has discarded the usage of S0 and S1 which are intended for compatibility with other protocols which require a certain number of bits on the air that do not map to 8 aligned to form bytes in memory.</div><div class="paragraph image"><div class="container panzoom" data-type="img" data-name="protocol.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/protocol.png" alt="Protocol" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/protocol.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><div class="paragraph text">the RF Payload Format contains another software header. That is the header used to manage the packets in the mesh network.</div><ul><li><div class="paragraph text">control: bit 7 defines whether a packet is to be broadcasted or has a target destination. Bits 6 and 5 allow safe communication with acknowledge, and a request response type. That allows the sw stack to handle the acknowledge and re-transmission. bit 3 allows streaming of messages without acknowledge.</div></li><li><div class="paragraph text">pid: is defining the application function which maps to a particular payload serialization</div></li><li><div class="paragraph text">Source and dest: are the Node Id, and are unique within every mesh. Although 8 bits, exceptions allow further reserved sizes.</div></li><li><div class="paragraph text">Time to live : used by the routers to know when to drop the packet.</div></li></ul><h3 id="alive-trace-routing" class="heading bar" data-astro-cid-wcjwfpce> <a href="#alive-trace-routing" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Alive trace routing </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h3> <div class="paragraph image"><div class="container panzoom" data-type="img" data-name="alive-trace-route.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/alive-trace-route.png" alt="Alive trace route" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/alive-trace-route.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><ul><li><div class="paragraph text">All Nodes including the low power, send a periodic “alive” packet</div></li><li><div class="paragraph text">The initiator includes a counter that informs about the live cycle count</div></li><li><div class="paragraph text">Every retransmission appends information about</div><ul><li><div class="paragraph text">Received RSSI (Radio Signal Strength Indicator)</div></li><li><div class="paragraph text">The Node Id of the Router performing the re transmission</div></li><li><div class="paragraph text">Transmission power with which the packet has been re transmitted</div></li></ul></li></ul><div class="paragraph image"><div class="container panzoom" data-type="img" data-name="alive-json.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/alive-json.png" alt="Alive json" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/alive-json.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><ul><li><div class="paragraph text">The “alive” packet that reaches the server’s dongle has the full route information</div></li><li><div class="paragraph text">Multiple paths can reach the server for the same original broadcast</div></li><li><div class="paragraph text">A single “alive” packet can provide link status of the complete mesh netwrok</div></li><li><div class="paragraph text">The signal route information is packed in a json structure</div></li><li><div class="paragraph text">json structures are broadcasted on the jNodes topics path</div></li></ul><h2 id="mesh-stack" class="heading bar" data-astro-cid-wcjwfpce> <a href="#mesh-stack" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Mesh Stack </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <div class="paragraph text">Functions call graph. Fifos dataflow between interrupts and main loop.</div><div class="paragraph image"><div class="container panzoom" data-type="svg" data-name="nrf_mesh.svg" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz> <object data="/images/nrf_mesh.svg" data-alt="nRF Mesh" data-astro-cid-v74iesrz></object>  </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/nrf_mesh.svg" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><hr><h1 id="tools" class="heading bar" data-astro-cid-wcjwfpce> <a href="#tools" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Tools </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h1> <h2 id=".nrf5_sdk_15.0.0_prf" class="heading bar" data-astro-cid-wcjwfpce> <a href="#.nrf5_sdk_15.0.0_prf" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> ./nRF5_SDK_15.0.0_prf/ </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <div class="paragraph text">This is a submodule that minifies the nRF15 SDK for the content required by this repository.
+When compiling the nRF applications firmware don't forget to call the submodule update command, it is also possible to do that without git by going to the repository link, downloading it and placing it under the same path. Although if you do not use git command line at this stage, you might want to consider following a git tutorial.</div><div class="highlighter container" data-hash="e36e9970" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#DCDCAA">    git</span><span style="color:#CE9178"> submodule</span><span style="color:#CE9178"> update</span><span style="color:#569CD6"> --init</span></span></code></pre> <button class="copy-btn" data-hash="e36e9970" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="e36e9970" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <h2 id=".tools" class="heading bar" data-astro-cid-wcjwfpce> <a href="#.tools" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> ./tools/ </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <div class="paragraph text">Contains the Makefile extensions that allow :</div><ul><li><div class="paragraph text">switch power on and off using a Segger jlink</div></li><li><div class="paragraph text">read and write parameters matching the device's unique identifier read from the HW registers</div></li></ul><h2 id="installation" class="heading bar" data-astro-cid-wcjwfpce> <a href="#installation" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> installation </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <ul><li><div class="paragraph text">For the Raspberry pi tools and scripts see full installation steps in the <a href="https://www.homesmartmesh.com/install/" class="link external" target="_blank" data-astro-cid-xd5t2nax>Installation</a> website page</div></li><li><div class="paragraph text">For the nRF52 firmare :</div><ul><li><div class="paragraph text">GNU Tools ARM Embedded version 6 2017-q2-update, referenced from the SDK Makefile.windows</div></li><li><div class="paragraph">Python <a href="https://github.com/square/pylink" class="link external" target="_blank" data-astro-cid-xd5t2nax>jlink wrapper</a>. Used in Makefile and tools of this repo, more on <a href="http://pylink.readthedocs.io/en/latest/pylink.html" class="link external" target="_blank" data-astro-cid-xd5t2nax>pylink.readthedocs</a>. Note that it has to be used with a 32 bit python version referenced in the tools scripts as <strong>C:\Python27\python.exe</strong>. wrapper scripts already availabe in the tools directory</div></li></ul></li></ul><h2 id="details-about-the-nrf52-frimware-environment" class="heading bar" data-astro-cid-wcjwfpce> <a href="#details-about-the-nrf52-frimware-environment" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Details about the nRF52 Frimware environment </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <div class="paragraph image"><div class="container panzoom" data-type="img" data-name="pylink.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/pylink.png" alt="PyLink" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/pylink.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><ul><li><div class="paragraph"><code>nodes.json</code> is provided locally in this repo and the docker command <a href="/assets/protocols/simple_mesh/nodes-server.sh" class="link " target="_self" data-astro-cid-xd5t2nax>nodes-server.sh</a> can also serve it at <a href="http://hostname:8080/nodes.json" class="link external" target="_blank" data-astro-cid-xd5t2nax>http://hostname:8080/nodes.json</a></div></li></ul><div class="paragraph image"><div class="container panzoom" data-type="img" data-name="nodes.json.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/nodes.json.png" alt="Nodes json" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/nodes.json.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><div class="paragraph text">The parameters here are used by external tools to have a consistent undersanding of the mesh network. From simple id to name translation, to location display according to coordinates down to user data flashing.</div><h2 id="configuration" class="heading bar" data-astro-cid-wcjwfpce> <a href="#configuration" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Configuration </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <h3 id="sdk-config-tool" class="heading bar" data-astro-cid-wcjwfpce> <a href="#sdk-config-tool" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> sdk config tool </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h3> <div class="paragraph">Once in the application directory just use <code>make conf</code> to call a cmsis <a href="http://helmpcb.com/software/cmsis-configuration-wizard" class="link external" target="_blank" data-astro-cid-xd5t2nax>configuration wizard</a>, as provided in the SDK. Note that it was here extended to make the user drivers shared and configurable as well, e.g. the I²C frequency of the <strong>Application</strong> in the screenshot</div><div class="paragraph image"><div class="container panzoom" data-type="img" data-name="cmsis-wizard.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/cmsis-wizard.png" alt="Cmsis Wizard" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/cmsis-wizard.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><h3 id="automated-mesh-devices-configuration" class="heading bar" data-astro-cid-wcjwfpce> <a href="#automated-mesh-devices-configuration" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Automated mesh devices configuration </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h3> <div class="paragraph">User data flashing is done with Pylink which reads in <a href="/assets/protocols/simple_mesh/tools/uicr.py" class="link " target="_self" data-astro-cid-xd5t2nax>uicr.py</a> the registers of the attached device, look it up in the <strong>config</strong> file, retrives which parameters should be flashed, the mapping of parameters to CUSTOMER_X registers come from "uicr_map.json".</div><h2 id="simple-board-switch" class="heading bar" data-astro-cid-wcjwfpce> <a href="#simple-board-switch" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> simple board switch </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <div class="paragraph text">The repo contais a directory for boards declaration "boards/" and a directory for applications "applications/". Although every application targets a particular board, it is possible to use any application for any other board. In the makefile a sinlge line has to be edited</div><div class="highlighter container" data-hash="3ea89dda" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#DCDCAA">USED_BOARD</span><span style="color:#CE9178"> :=</span><span style="color:#CE9178"> BOARD_NRF52_SENSOR_TAG</span></span></code></pre> <button class="copy-btn" data-hash="3ea89dda" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="3ea89dda" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <h2 id="ppi-automation" class="heading bar" data-astro-cid-wcjwfpce> <a href="#ppi-automation" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> PPI automation </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <div class="paragraph text">The programmable peripheral interconnect is used for "real" real-time operations rf time synch,...</div><div class="paragraph image"><div class="container panzoom" data-type="svg" data-name="ppi.svg" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz> <object data="/images/ppi.svg" data-alt="PPI" data-astro-cid-v74iesrz></object>  </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/ppi.svg" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><h1 id="raspi-host-controller-interface" class="heading bar" data-astro-cid-wcjwfpce> <a href="#raspi-host-controller-interface" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Raspi Host Controller Interface </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h1> <h2 id="hci-mqtt-test-vector" class="heading bar" data-astro-cid-wcjwfpce> <a href="#hci-mqtt-test-vector" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> HCI MQTT Test vector </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <h3 id="commands" class="heading bar" data-astro-cid-wcjwfpce> <a href="#commands" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Commands </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h3> <div class="paragraph text">get mesh node id of attached dongle</div><div class="highlighter container" data-hash="7deb17e0" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#DCDCAA">mosquitto_pub</span><span style="color:#569CD6"> -t</span><span style="color:#CE9178"> 'cmd/request/get_node_id'</span><span style="color:#569CD6"> -m</span><span style="color:#CE9178"> ''</span></span></code></pre> <button class="copy-btn" data-hash="7deb17e0" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="7deb17e0" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <div class="paragraph text">Response</div><div class="highlighter container" data-hash="f4886858" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#9CDCFE">cmd</span><span style="color:#D4D4D4">/</span><span style="color:#9CDCFE">response</span><span style="color:#D4D4D4">/</span><span style="color:#9CDCFE">get_node_id</span><span style="color:#D4D4D4"> {</span><span style="color:#CE9178">"cmd"</span><span style="color:#D4D4D4">: </span><span style="color:#CE9178">"get_node_id"</span><span style="color:#D4D4D4">, </span><span style="color:#CE9178">"node_id"</span><span style="color:#D4D4D4">: </span><span style="color:#CE9178">"73"</span><span style="color:#D4D4D4">}</span></span></code></pre> <button class="copy-btn" data-hash="f4886858" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="f4886858" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <div class="paragraph text">get channel of attached dongle</div><div class="highlighter container" data-hash="1b6c6443" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#DCDCAA">mosquitto_pub</span><span style="color:#569CD6"> -t</span><span style="color:#CE9178"> 'cmd/request/get_channel'</span><span style="color:#569CD6"> -m</span><span style="color:#CE9178"> ''</span></span></code></pre> <button class="copy-btn" data-hash="1b6c6443" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="1b6c6443" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <div class="paragraph text">Response</div><div class="highlighter container" data-hash="e7347db1" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#DCDCAA">cmd/response/get_channel</span><span style="color:#CE9178"> {"cmd":</span><span style="color:#CE9178"> "get_channel",</span><span style="color:#CE9178"> "channel":</span><span style="color:#CE9178"> "2"}</span></span></code></pre> <button class="copy-btn" data-hash="e7347db1" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="e7347db1" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <h3 id="remote-commands" class="heading bar" data-astro-cid-wcjwfpce> <a href="#remote-commands" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Remote Commands </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h3> <div class="paragraph text">Request to set remote node 74 on RF channel 2</div><div class="highlighter container" data-hash="da3ae0c5" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#DCDCAA">mosquitto_pub</span><span style="color:#569CD6"> -t</span><span style="color:#CE9178"> 'remote_cmd/request/set_channel'</span><span style="color:#569CD6"> -m</span><span style="color:#CE9178"> '{"channel":2,"remote":74}'</span></span></code></pre> <button class="copy-btn" data-hash="da3ae0c5" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="da3ae0c5" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <div class="paragraph text">Response</div><div class="highlighter container" data-hash="f42da5c2" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#DCDCAA">remote_cmd/response/set_channel</span><span style="color:#CE9178"> {"pid":</span><span style="color:#CE9178"> "236",</span><span style="color:#CE9178"> "ctrl":</span><span style="color:#CE9178"> "0x02",</span><span style="color:#CE9178"> "src":</span><span style="color:#CE9178"> "74",</span><span style="color:#CE9178"> "dest":</span><span style="color:#CE9178"> "73",</span><span style="color:#CE9178"> "cmd":</span><span style="color:#CE9178"> "set_channel",</span><span style="color:#CE9178"> "set":</span><span style="color:#CE9178"> "2",</span><span style="color:#CE9178"> "get":</span><span style="color:#CE9178"> "2"}</span></span></code></pre> <button class="copy-btn" data-hash="f42da5c2" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="f42da5c2" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <h3 id="actions" class="heading bar" data-astro-cid-wcjwfpce> <a href="#actions" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Actions </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h3> <div class="paragraph text">Ping node 74</div><div class="highlighter container" data-hash="596e16b8" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#DCDCAA">mosquitto_pub</span><span style="color:#569CD6"> -t</span><span style="color:#CE9178"> 'Nodes/79/ping'</span><span style="color:#569CD6"> -m</span><span style="color:#CE9178"> '{"remote":"74"}'</span></span></code></pre> <button class="copy-btn" data-hash="596e16b8" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="596e16b8" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <div class="paragraph text">Aknowledge</div><div class="highlighter container" data-hash="1020047b" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#DCDCAA">Nodes/79/ack</span><span style="color:#B5CEA8"> 1</span></span></code></pre> <button class="copy-btn" data-hash="1020047b" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="1020047b" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <h1 id="other-nrf52-applications" class="heading bar" data-astro-cid-wcjwfpce> <a href="#other-nrf52-applications" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> Other nRF52 Applications </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h1> <div class="highlighter container" data-hash="38b93a03" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#9CDCFE">cd</span><span style="color:#D4D4D4"> .</span><span style="color:#D16969">/applications/</span></span></code></pre> <button class="copy-btn" data-hash="38b93a03" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="38b93a03" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <h2 id="02-acell-tag" class="heading bar" data-astro-cid-wcjwfpce> <a href="#02-acell-tag" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> 02 acell tag </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <div class="highlighter container" data-hash="bbe789be" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#9CDCFE">application</span><span style="color:#D4D4D4">/02</span><span style="color:#9CDCFE">_accell_tag</span><span style="color:#D4D4D4">> </span><span style="color:#9CDCFE">make</span><span style="color:#9CDCFE"> flash</span></span></code></pre> <button class="copy-btn" data-hash="bbe789be" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="bbe789be" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <div class="paragraph image"><div class="container panzoom" data-type="img" data-name="motion_tag.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/motion_tag.png" alt="Motion tag" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/motion_tag.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><ul><li><div class="paragraph text">Status : experimental, low battery life</div></li><li><div class="paragraph text">nRF52832 module</div></li><li><div class="paragraph text">MPU-6050 module</div></li><li><div class="paragraph text">interrupt pio from MPU-6050</div></li></ul><h2 id="03-buttons" class="heading bar" data-astro-cid-wcjwfpce> <a href="#03-buttons" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> 03 buttons </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <div class="highlighter container" data-hash="44c34558" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#9CDCFE">application</span><span style="color:#D4D4D4">/03</span><span style="color:#9CDCFE">_buttons</span><span style="color:#D4D4D4">> </span><span style="color:#9CDCFE">make</span><span style="color:#9CDCFE"> flash</span></span></code></pre> <button class="copy-btn" data-hash="44c34558" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="44c34558" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <div class="paragraph image"><div class="container panzoom" data-type="img" data-name="buttons.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/buttons.png" alt="Buttons" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/buttons.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><ul><li><div class="paragraph text">Status : experiemntal, low battery life</div></li><li><div class="paragraph text">nRF52832 module</div></li><li><div class="paragraph text">x6 buttons</div></li></ul><h2 id="05-rotary-decoder" class="heading bar" data-astro-cid-wcjwfpce> <a href="#05-rotary-decoder" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> 05 rotary decoder </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <div class="highlighter container" data-hash="3e437142" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#9CDCFE">application</span><span style="color:#D4D4D4">/05</span><span style="color:#9CDCFE">_rotary_decoder</span><span style="color:#D4D4D4">> </span><span style="color:#9CDCFE">make</span><span style="color:#9CDCFE"> flash</span></span></code></pre> <button class="copy-btn" data-hash="3e437142" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="3e437142" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <div class="paragraph image"><div class="container panzoom" data-type="img" data-name="rf_encoder.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/rf_encoder.png" alt="RF Encoder" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/rf_encoder.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><ul><li><div class="paragraph text">buy : "600 pulses Optical Rotary encoder"</div></li><li><div class="paragraph text">custom wiring +5V, encoder pullups to +3.3 V</div></li><li><div class="paragraph text">rf timestamp synchronisation</div></li><li><div class="paragraph text">HW capture of timestamp</div></li><li><div class="paragraph text">RF Mesh log of modulo 600 position with timestamp</div></li><li><div class="paragraph text">4 ms status on change, otherwise 4 s reminder</div></li></ul><h2 id="06-bldc-52832" class="heading bar" data-astro-cid-wcjwfpce> <a href="#06-bldc-52832" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> 06 bldc 52832 </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <div class="highlighter container" data-hash="a9042d47" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#9CDCFE">application</span><span style="color:#D4D4D4">/06</span><span style="color:#9CDCFE">_bldc_52832</span><span style="color:#D4D4D4">> </span><span style="color:#9CDCFE">make</span><span style="color:#9CDCFE"> flash</span></span></code></pre> <button class="copy-btn" data-hash="a9042d47" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="a9042d47" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <div class="paragraph image"><div class="container panzoom" data-type="img" data-name="bldc_control.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/bldc_control.png" alt="BLDC control" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/bldc_control.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><ul><li><div class="paragraph text">Status : RF magnetic angle control OK, rest is in development</div></li><li><div class="paragraph text">nRF52832 sensor tag board used</div></li><li><div class="paragraph text">buy : "L6234d breakout"</div></li><li><div class="paragraph text">custom wiring power supply 9.6 V / nRF powered with 3.3 V separately</div></li><li><div class="paragraph text">RF bldc control : magnetic angle, voltage ratio, speed, absolute angle</div></li></ul><h2 id="07-bldc-52840" class="heading bar" data-astro-cid-wcjwfpce> <a href="#07-bldc-52840" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> 07 bldc 52840 </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h2> <div class="highlighter container" data-hash="d4b57dc1" data-astro-cid-kg2zvp4p> <pre class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#9CDCFE">application</span><span style="color:#D4D4D4">/07</span><span style="color:#9CDCFE">_usb_dongle</span><span style="color:#D4D4D4">> </span><span style="color:#9CDCFE">make</span><span style="color:#9CDCFE"> flash</span></span></code></pre> <button class="copy-btn" data-hash="d4b57dc1" data-astro-cid-kg2zvp4p><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 	height="800px" width="800px" version="1.1"
+		id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 	viewBox="0 0 352.804 352.804" xml:space="preserve"
+		>
+<g>
+	<path d="M318.54,57.282h-47.652V15c0-8.284-6.716-15-15-15H34.264c-8.284,0-15,6.716-15,15v265.522c0,8.284,6.716,15,15,15h47.651
+		v42.281c0,8.284,6.716,15,15,15H318.54c8.284,0,15-6.716,15-15V72.282C333.54,63.998,326.824,57.282,318.54,57.282z
+		 M49.264,265.522V30h191.623v27.282H96.916c-8.284,0-15,6.716-15,15v193.24H49.264z M303.54,322.804H111.916V87.282H303.54V322.804
+		z"/>
+</g>
+</svg>
+</button> <span class="copy-message" data-hash="d4b57dc1" data-astro-cid-kg2zvp4p>Copied!</span> </div>   <div class="paragraph image"><div class="container panzoom" data-type="img" data-name="nrf52840-usb-dongle.png" data-astro-cid-v74iesrz> <div class="header open" data-astro-cid-v74iesrz> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+    width="32px" height="28px" viewBox="-0.5 -0.5 321 281">
+    <defs />
+    <g>
+        <rect x="0" y="0" width="320" height="280" fill="none" stroke="none" pointer-events="all" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 40 L 280 40 L 280 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 240 L 40 240 L 40 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 200 240 L 280 240 L 280 190" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="none" pointer-events="stroke" />
+        <path d="M 120 40 L 40 40 L 40 90" fill="none" stroke="#333333" stroke-width="28"
+            stroke-miterlimit="10" pointer-events="stroke" />
+    </g>
+</svg> </div> <div class="figure" data-astro-cid-v74iesrz>  <img src="/images/nrf52840-usb-dongle.png" alt="nRF52840 USB Dongle" data-astro-cid-v74iesrz> </div> <div class="modal-background" data-state="init" data-astro-cid-osnkmqp4> <div class="modal" data-astro-cid-osnkmqp4> <div class="modal-header close" data-astro-cid-osnkmqp4> <span class="close-x" data-astro-cid-osnkmqp4>&times;</span> </div> <div class="modal-content" data-astro-cid-osnkmqp4> <div class="modal-center" data-url="/images/nrf52840-usb-dongle.png" data-astro-cid-osnkmqp4> <!-- injected svg or img on modal init --> </div> </div> </div> </div>   </div>  </div><ul><li><div class="paragraph text">Status : preparation</div></li><li><div class="paragraph text">previous application "03 bldc 52832" ported to the nRF52840-dongle</div></li></ul><h1 id="faq-discussion" class="heading bar" data-astro-cid-wcjwfpce> <a href="#faq-discussion" class="link" data-astro-cid-wcjwfpce> <div class="text" data-astro-cid-wcjwfpce> FAQ - Discussion </div> <div class="icon" data-astro-cid-wcjwfpce><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" 
+	 xmlns="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 x="0px" 
+	 y="0px"
+	 width="18px"
+	 viewBox="0 0 512 512" 
+	 enable-background="new 0 0 512 512" 
+	 xml:space="preserve" >
+<path d="M459.654,233.373l-90.531,90.5c-49.969,50-131.031,50-181,0c-7.875-7.844-14.031-16.688-19.438-25.813
+	l42.063-42.063c2-2.016,4.469-3.172,6.828-4.531c2.906,9.938,7.984,19.344,15.797,27.156c24.953,24.969,65.563,24.938,90.5,0
+	l90.5-90.5c24.969-24.969,24.969-65.563,0-90.516c-24.938-24.953-65.531-24.953-90.5,0l-32.188,32.219
+	c-26.109-10.172-54.25-12.906-81.641-8.891l68.578-68.578c50-49.984,131.031-49.984,181.031,0
+	C509.623,102.342,509.623,183.389,459.654,233.373z M220.326,382.186l-32.203,32.219c-24.953,24.938-65.563,24.938-90.516,0
+	c-24.953-24.969-24.953-65.563,0-90.531l90.516-90.5c24.969-24.969,65.547-24.969,90.5,0c7.797,7.797,12.875,17.203,15.813,27.125
+	c2.375-1.375,4.813-2.5,6.813-4.5l42.063-42.047c-5.375-9.156-11.563-17.969-19.438-25.828c-49.969-49.984-131.031-49.984-181.016,0
+	l-90.5,90.5c-49.984,50-49.984,131.031,0,181.031c49.984,49.969,131.031,49.969,181.016,0l68.594-68.594
+	C274.561,395.092,246.42,392.342,220.326,382.186z"/>
+</svg>
+</div> </a> </h1> <div class="paragraph">If you need support, want to ask a question or suggest an idea, you can join the discussion on the forum
+<div class="container" data-astro-cid-pptsj4fg> <a href="https://github.com/HomeSmartMesh/sdk-hsm-sensortag/discussions" class="link external" target="_blank" data-astro-cid-pptsj4fg> <span class="button text" data-astro-cid-pptsj4fg>Home Smart Mesh - sdk-hsm-sensortag</span> <span class="icon" data-astro-cid-pptsj4fg><svg    xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 24 24" 
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    >
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</span> </a> </div> </div><details class="directive" data-astro-cid-kibhusm5> <summary data-astro-cid-kibhusm5> <span data-astro-cid-kibhusm5>What are the alternatives to Simple-Mesh ?</span> <span class="arrow" data-astro-cid-kibhusm5><svg viewBox="0 0 100 100" width="60" height="60" fill="#00000000" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 20,10 L 70,50 L 20,90" stroke-width="20px" stroke="#d0d0d0" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span> </summary> <article data-astro-cid-kibhusm5> <div class="paragraph">Simple Mesh is a playground for Mesh experimentation but does not intend to cover production grade features, therefore when it comes to 2.4 GHz mesh solutions, Standards such as <code>Zigbee</code> and <a href="/protocols/thread/" class="link " target="_self" data-astro-cid-xd5t2nax>Thread</a> exist, provide all needed features and are more affordable as the documentation is open and the development is also open source.</div> </article> </details>   </div> </article> <div id="resize-right" class="nav-resize active" data-astro-cid-s6tr6vzr></div> <div id="toc-nav-div" data-astro-cid-s6tr6vzr> <nav class="open toc_menu" data-width="20vw" data-astro-cid-e4uyrypl style="--data_width: 20vw;"> <ul class="root" data-astro-cid-fbowtcfp><li data-astro-cid-fbowtcfp><div class="entry_container parent expanded" data-astro-cid-fbowtcfp><span class="icon expand" data-astro-cid-fbowtcfp><svg viewBox="0 0 100 100" width="60" height="60" fill="#00000000" xmlns="http://www.w3.org/2000/svg" data-astro-cid-fbowtcfp><path d="M 20,10 L 70,50 L 20,90" stroke-width="20px" stroke="#d0d0d0" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-fbowtcfp></path></svg></span><a href="#simple-mesh-overview" data-astro-cid-fbowtcfp><span class="text href_hover parent" data-astro-cid-fbowtcfp>Simple Mesh Overview</span></a></div><ul class="nested" data-astro-cid-fbowtcfp><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#features" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>Features</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#description" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>Description</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#static-demo" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>Static Demo</span></a></div></li></ul></li><li data-astro-cid-fbowtcfp><div class="entry_container parent expanded" data-astro-cid-fbowtcfp><span class="icon expand" data-astro-cid-fbowtcfp><svg viewBox="0 0 100 100" width="60" height="60" fill="#00000000" xmlns="http://www.w3.org/2000/svg" data-astro-cid-fbowtcfp><path d="M 20,10 L 70,50 L 20,90" stroke-width="20px" stroke="#d0d0d0" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-fbowtcfp></path></svg></span><a href="#mesh-nodes" data-astro-cid-fbowtcfp><span class="text href_hover parent" data-astro-cid-fbowtcfp>Mesh Nodes</span></a></div><ul class="nested" data-astro-cid-fbowtcfp><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#sensor-tag" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>sensor tag</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#uart-dongle" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>uart dongle</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#usb-dongle-(nrf52840)" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>usb dongle (nRF52840)</span></a></div></li></ul></li><li data-astro-cid-fbowtcfp><div class="entry_container parent expanded" data-astro-cid-fbowtcfp><span class="icon expand" data-astro-cid-fbowtcfp><svg viewBox="0 0 100 100" width="60" height="60" fill="#00000000" xmlns="http://www.w3.org/2000/svg" data-astro-cid-fbowtcfp><path d="M 20,10 L 70,50 L 20,90" stroke-width="20px" stroke="#d0d0d0" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-fbowtcfp></path></svg></span><a href="#protocol" data-astro-cid-fbowtcfp><span class="text href_hover parent" data-astro-cid-fbowtcfp>Protocol</span></a></div><ul class="nested" data-astro-cid-fbowtcfp><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#overview" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>Overview</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container parent expanded" data-astro-cid-fbowtcfp><span class="icon expand" data-astro-cid-fbowtcfp><svg viewBox="0 0 100 100" width="60" height="60" fill="#00000000" xmlns="http://www.w3.org/2000/svg" data-astro-cid-fbowtcfp><path d="M 20,10 L 70,50 L 20,90" stroke-width="20px" stroke="#d0d0d0" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-fbowtcfp></path></svg></span><a href="#description-2" data-astro-cid-fbowtcfp><span class="text href_hover parent" data-astro-cid-fbowtcfp>Description</span></a></div><ul class="nested" data-astro-cid-fbowtcfp><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#mesh-broadcast" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>Mesh Broadcast</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#directed-messages-with-ack" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>Directed messages with ack</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#packet-format" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>Packet Format</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#alive-trace-routing" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>Alive trace routing</span></a></div></li></ul></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#mesh-stack" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>Mesh Stack</span></a></div></li></ul></li><li data-astro-cid-fbowtcfp><div class="entry_container parent expanded" data-astro-cid-fbowtcfp><span class="icon expand" data-astro-cid-fbowtcfp><svg viewBox="0 0 100 100" width="60" height="60" fill="#00000000" xmlns="http://www.w3.org/2000/svg" data-astro-cid-fbowtcfp><path d="M 20,10 L 70,50 L 20,90" stroke-width="20px" stroke="#d0d0d0" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-fbowtcfp></path></svg></span><a href="#tools" data-astro-cid-fbowtcfp><span class="text href_hover parent" data-astro-cid-fbowtcfp>Tools</span></a></div><ul class="nested" data-astro-cid-fbowtcfp><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#.nrf5_sdk_15.0.0_prf" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>./nRF5_SDK_15.0.0_prf/</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#.tools" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>./tools/</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#installation" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>installation</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#details-about-the-nrf52-frimware-environment" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>Details about the nRF52 Frimware environment</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container parent expanded" data-astro-cid-fbowtcfp><span class="icon expand" data-astro-cid-fbowtcfp><svg viewBox="0 0 100 100" width="60" height="60" fill="#00000000" xmlns="http://www.w3.org/2000/svg" data-astro-cid-fbowtcfp><path d="M 20,10 L 70,50 L 20,90" stroke-width="20px" stroke="#d0d0d0" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-fbowtcfp></path></svg></span><a href="#configuration" data-astro-cid-fbowtcfp><span class="text href_hover parent" data-astro-cid-fbowtcfp>Configuration</span></a></div><ul class="nested" data-astro-cid-fbowtcfp><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#sdk-config-tool" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>sdk config tool</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#automated-mesh-devices-configuration" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>Automated mesh devices configuration</span></a></div></li></ul></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#simple-board-switch" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>simple board switch</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#ppi-automation" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>PPI automation</span></a></div></li></ul></li><li data-astro-cid-fbowtcfp><div class="entry_container parent expanded" data-astro-cid-fbowtcfp><span class="icon expand" data-astro-cid-fbowtcfp><svg viewBox="0 0 100 100" width="60" height="60" fill="#00000000" xmlns="http://www.w3.org/2000/svg" data-astro-cid-fbowtcfp><path d="M 20,10 L 70,50 L 20,90" stroke-width="20px" stroke="#d0d0d0" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-fbowtcfp></path></svg></span><a href="#raspi-host-controller-interface" data-astro-cid-fbowtcfp><span class="text href_hover parent" data-astro-cid-fbowtcfp>Raspi Host Controller Interface</span></a></div><ul class="nested" data-astro-cid-fbowtcfp><li data-astro-cid-fbowtcfp><div class="entry_container parent expanded" data-astro-cid-fbowtcfp><span class="icon expand" data-astro-cid-fbowtcfp><svg viewBox="0 0 100 100" width="60" height="60" fill="#00000000" xmlns="http://www.w3.org/2000/svg" data-astro-cid-fbowtcfp><path d="M 20,10 L 70,50 L 20,90" stroke-width="20px" stroke="#d0d0d0" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-fbowtcfp></path></svg></span><a href="#hci-mqtt-test-vector" data-astro-cid-fbowtcfp><span class="text href_hover parent" data-astro-cid-fbowtcfp>HCI MQTT Test vector</span></a></div><ul class="nested" data-astro-cid-fbowtcfp><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#commands" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>Commands</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#remote-commands" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>Remote Commands</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#actions" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>Actions</span></a></div></li></ul></li></ul></li><li data-astro-cid-fbowtcfp><div class="entry_container parent expanded" data-astro-cid-fbowtcfp><span class="icon expand" data-astro-cid-fbowtcfp><svg viewBox="0 0 100 100" width="60" height="60" fill="#00000000" xmlns="http://www.w3.org/2000/svg" data-astro-cid-fbowtcfp><path d="M 20,10 L 70,50 L 20,90" stroke-width="20px" stroke="#d0d0d0" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-fbowtcfp></path></svg></span><a href="#other-nrf52-applications" data-astro-cid-fbowtcfp><span class="text href_hover parent" data-astro-cid-fbowtcfp>Other nRF52 Applications</span></a></div><ul class="nested" data-astro-cid-fbowtcfp><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#02-acell-tag" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>02 acell tag</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#03-buttons" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>03 buttons</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#05-rotary-decoder" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>05 rotary decoder</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#06-bldc-52832" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>06 bldc 52832</span></a></div></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#07-bldc-52840" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>07 bldc 52840</span></a></div></li></ul></li><li data-astro-cid-fbowtcfp><div class="entry_container" data-astro-cid-fbowtcfp><a href="#faq-discussion" data-astro-cid-fbowtcfp><span class="text href_hover" data-astro-cid-fbowtcfp>FAQ - Discussion</span></a></div></li></ul> </nav>  </div> </main> <footer data-astro-cid-s6tr6vzr> <p data-astro-cid-s6tr6vzr>footer</p> </footer> </div> <div id="fixed-right" class="fixed-nav active" data-astro-cid-s6tr6vzr></div>  </body></html>

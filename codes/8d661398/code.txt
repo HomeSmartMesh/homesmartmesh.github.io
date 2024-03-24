@@ -1,0 +1,6 @@
+west init -m https://github.com/nRFMesh/sdk-uwb-zephyr --mr main
+cd uwb/samples/06_uwb_node_sm
+west build -b decawave_dwm1001_dev -- -DCONF_FILE=prj.conf
+west flash
+west flash --snr 760130093
+west flash --snr 760130128

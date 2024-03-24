@@ -1,0 +1,2 @@
+>sm/1CF6567337562176{"rf_diag":"ping"}
+>sm/1CF6567337562176{"rf_diag":"pong","rssi":51,"time":197086}

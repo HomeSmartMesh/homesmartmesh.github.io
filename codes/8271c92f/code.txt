@@ -1,0 +1,1 @@
+curl https://raw.githubusercontent.com/HomeSmartMesh/raspi/master/get_raspi.sh -o get_raspi.sh && sudo bash get_raspi.sh

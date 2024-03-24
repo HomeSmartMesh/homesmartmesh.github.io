@@ -1,0 +1,16 @@
+#define MICROPY_HW_LED1             (4) // LED1
+#define MICROPY_HW_LED2             (6) // LED2
+#define MICROPY_HW_LED3             (8) // LED3
+#define MICROPY_HW_LED4             (1) // LED4
+
+// UART config
+#define MICROPY_HW_UART1_RX         (2)
+#define MICROPY_HW_UART1_TX         (29)
+#define MICROPY_HW_UART1_CTS        (1)
+#define MICROPY_HW_UART1_RTS        (1)
+#define MICROPY_HW_UART1_HWFC       (0)
+
+// I2C busses
+#define MICROPY_HW_I2C1_NAME        "I2C1"
+#define MICROPY_HW_I2C1_SCL         (45)  // SCL
+#define MICROPY_HW_I2C1_SDA         (47)  // SDA

@@ -1,0 +1,4 @@
+        "types":{
+            "energy"      :"int",
+            "power"      :"float",
+            "pressure"      :"float",

@@ -1,0 +1,1 @@
+send_custom_event("three_color",{name:"Kitchen", val:0.3});

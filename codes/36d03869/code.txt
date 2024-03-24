@@ -1,0 +1,17 @@
+ DWM1001 TWR Real Time Location System
+
+ Copyright :  2016-2019 LEAPS and Decawave
+ License   :  Please visit https://decawave.com/dwm1001_license
+ Compiled  :  Jun  7 2019 18:00:03
+
+ Help      :  ? or help
+
+dwm> si
+[000042.580 INF] sys: fw2 fw_ver=x01030001 cfg_ver=x00010700
+[000042.580 INF] uwb0: panid=x0000 addr=xDECA50BFBF5001D2
+[000042.590 INF] mode: tn (pasv,twr,np,le)
+[000042.590 INF] uwbmac: disconnected
+[000042.590 INF] uwbmac: bh disconnected
+[000042.600 INF] cfg: sync=0 fwup=0 ble=1 leds=1 le=1 lp=0 stat_det=1 (sens=1) m                                   ode=0 upd_rate_norm=1 upd_rate_stat=100 label=DW01D2
+[000042.610 INF] enc: off
+[000042.610 INF] ble: addr=E0:69:AF:07:D2:94

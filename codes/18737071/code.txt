@@ -1,0 +1,2 @@
+  npm install file-saver --save
+  file-saver@2.0.2

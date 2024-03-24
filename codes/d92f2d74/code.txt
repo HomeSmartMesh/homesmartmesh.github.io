@@ -1,0 +1,31 @@
+*** Booting Zephyr OS build zephyr-v2.5.0-2187-g757cd12e6602  ***
+rtt:~$ rtt:~$ [00:00:00.264,617] <inf> fs_nvs: 8 Sectors of 4096 bytes
+rtt:~$ [00:00:00.264,617] <inf> fs_nvs: alloc wra: 2, d60
+rtt:~$ [00:00:00.264,617] <inf> fs_nvs: data wra: 2, 448
+rtt:~$ [00:00:00.275,970] <inf> net_l2_openthread: State changed! Flags: 0x101fc300 Current role: 0
+rtt:~$ [00:00:00.276,275] <inf> net_l2_openthread: OpenThread version: OPENTHREAD/gfd27fc3a7; Zephyr; May 13 2021 18:19:06
+rtt:~$ [00:00:00.280,517] <inf> net_l2_openthread: Network name: ot_zephyr
+rtt:~$ [00:00:00.289,459] <inf> net_l2_openthread: State changed! Flags: 0x0100103d Current role: 1
+rtt:~$ [00:00:00.290,344] <inf> VEML6030: veml6030_init()
+rtt:~$ [00:00:00.290,344] <inf> MS8607: ms8607_init> i2c_master_init()
+rtt:~$ [00:00:00.292,602] <inf> main: Hello Sensors Broadcast
+rtt:~$ [00:00:00.292,633] <inf> battery: battery_init() vref = 600
+rtt:~$ rtt:~$ [00:00:00.292,968] <inf> main: ms8607> connected
+rtt:~$ [00:00:00.292,999] <inf> main: starting loop (0)
+rtt:~$ [00:00:00.293,060] <inf> battery: battery_start> adc_read()
+rtt:~$ [00:00:00.293,487] <inf> battery: battery_get_mv() raw = 3447
+rtt:~$ rtt:~$ [00:00:00.314,117] <inf> net_l2_openthread: State changed! Flags: 0x000010e4 Current role: 2
+rtt:~$ [00:00:00.374,145] <inf> net_l2_openthread: State changed! Flags: 0x00000200 Current role: 2
+rtt:~$ rtt:~$ thread_tags/7009D837C7BB557A{"alive":0,"voltage":3.029,"light":9.909,"temperature":25.15,"humidity":42.79,"pressure":951.03}
+[00:00:01.961,029] <inf> udp_client: CONFIG_NET_IPV6
+rtt:~$ [00:00:01.964,843] <inf> main: sleeping 10 sec
+rtt:~$ rtt:~$ [00:00:11.964,904] <inf> main: starting loop (1)
+rtt:~$ [00:00:11.964,996] <inf> battery: battery_start> adc_read()
+rtt:~$ [00:00:11.965,148] <inf> battery: battery_get_mv() raw = 3460
+rtt:~$ rtt:~$ thread_tags/7009D837C7BB557A{"alive":1,"voltage":3.041,"light":11.095,"temperature":25.16,"humidity":42.01,"pressure":950.98}
+[00:00:13.631,591] <inf> main: sleeping 10 sec
+rtt:~$ rtt:~$ [00:00:23.631,652] <inf> main: starting loop (2)
+rtt:~$ [00:00:23.631,744] <inf> battery: battery_start> adc_read()
+rtt:~$ [00:00:23.631,896] <inf> battery: battery_get_mv() raw = 3460
+rtt:~$ rtt:~$ thread_tags/7009D837C7BB557A{"alive":2,"voltage":3.041,"light":10.097,"temperature":25.16,"humidity":41.95,"pressure":951.01}
+[00:00:25.298,156] <inf> main: sleeping 10 sec

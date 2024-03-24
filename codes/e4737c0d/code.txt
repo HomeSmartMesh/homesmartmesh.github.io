@@ -1,0 +1,1 @@
+    send_custom_event("three_param",{name:"Cameleon", appear1:0.3, appear2:0.7});

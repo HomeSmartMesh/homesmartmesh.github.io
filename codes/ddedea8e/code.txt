@@ -1,0 +1,8 @@
+PACKAGES:
+ - framework-arduinoespressif32 0.0.0+sha.b05bdf6
+ - tool-esptoolpy 1.30000.201119 (3.0.0)
+ - tool-mkspiffs 2.230.0 (2.30)
+ - toolchain-xtensa32 2.50200.80 (5.2.0)
+Dependency Graph
+|-- <Timer-CAM> 0.0.1   
+|-- <WiFi> 1.0

@@ -1,0 +1,4 @@
+        "discard":[
+            "path",
+            "eurotronic_host_flags",
+            "occupancy"

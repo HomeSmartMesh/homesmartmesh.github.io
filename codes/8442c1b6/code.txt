@@ -1,0 +1,8 @@
+panid
+rloc16
+eui64
+extaddr
+extpanid
+ipaddr
+ipmaddr
+leaderdata

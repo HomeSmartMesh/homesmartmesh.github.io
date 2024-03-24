@@ -1,0 +1,1 @@
+application/07_usb_dongle> make flash

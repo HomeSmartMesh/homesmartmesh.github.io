@@ -1,0 +1,2 @@
+#send (Length 3)(MsgType SEARCHGW=1)(Radius 1)
+echo -n -e "030101" | xxd -r -p | nc -u fd11:1111:1122:0:98bf:60c7:9431:ee90 47193

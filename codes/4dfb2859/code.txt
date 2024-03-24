@@ -1,0 +1,2 @@
+application/04_uart_dongle> make flash
+application/04_uart_dongle> make paramw

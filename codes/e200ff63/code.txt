@@ -1,0 +1,6 @@
+git clone --recurse-submodules https://github.com/micropython/micropython.git
+cd micropython/mpy-cross
+make
+cd ../ports/nrf
+make submodules
+make BOARD=pca10059

@@ -1,0 +1,5 @@
+initiator = 0
+responders = [1, 2, 3, 4]
+result_list = uwb_twr(initiator=initiator, responders=responders, step_ms=10)
+for res in result_list:
+    print(f"mp> ({res['initiator']})->({res['responder']}) range= {res['range']}")

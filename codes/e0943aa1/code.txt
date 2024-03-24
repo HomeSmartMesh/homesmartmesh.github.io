@@ -1,0 +1,3 @@
+lib_deps =    
+    https://github.com/ESP32Home/TFT_eSPI_ttgo_t-display.git#2.3.4_t-display
+    https://github.com/ESP32Home/GfxUi.git#v1.0.1

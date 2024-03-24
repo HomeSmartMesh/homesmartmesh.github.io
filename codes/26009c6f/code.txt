@@ -1,0 +1,1 @@
+>curl -v https://10.0.0.36:8070/simple_ota.bin --cacert ca_cert.pem > simple_ota.bin

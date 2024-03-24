@@ -1,0 +1,4 @@
+initiator = 0
+responder = 1
+range_measure = uwb_twr(initiator, responder)
+print(f"mp> test ({initiator})->({responder}) range = {range_measure}")

@@ -1,0 +1,3 @@
+function onMeshControl(e){
+    items_anim[e.detail.name] = e.detail.val;
+}

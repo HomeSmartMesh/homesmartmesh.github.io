@@ -1,0 +1,4 @@
+        "subscriptions":[   "lzig/living heat",
+                            "+/bed weather",
+                            "lzig/bedroom heat",
+                            "+/balcony window left",

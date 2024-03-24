@@ -1,0 +1,32 @@
+rtt:~$ ot masterkey
+00112233445566778899aabbccddeeff
+
+Done
+
+rtt:~$ kernel threads
+Scheduler: 104 since last call
+Threads:
+ 0x200048e0 CHIP      
+  options: 0x0, priority: -1 timeout: 536889700
+  state: pending
+  stack size 8192, unused 7104, usage 1088 / 8192 (13 %)
+
+ 0x20002e40 SDC RX    
+  options: 0x0, priority: -10 timeout: 536882884
+  state: pending
+  stack size 1024, unused 832, usage 192 / 1024 (18 %)
+
+ 0x20002588 BT RX     
+  options: 0x0, priority: -8 timeout: 536880652
+  state: pending
+  stack size 1024, unused 832, usage 192 / 1024 (18 %)
+...
+rtt:~$ ot panid 0x1234
+Done
+
+D: 2488290[DL] OpenThread State Changed (Flags: 0x30008000)
+D: 2488291[DL]    Network Name: ot_zephyr
+D: 2488292[DL]    PAN Id: 0x1234
+D: 2488293[DL]    Extended PAN Id: 0xDEAD00BEEF00CAFE
+D: 2488294[DL]    Channel: 11
+D: 2488295[DL]    Mesh Prefix: fdde:ad00:beef::/64

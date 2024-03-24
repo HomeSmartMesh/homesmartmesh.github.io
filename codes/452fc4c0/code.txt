@@ -1,0 +1,7 @@
+> cd /opt/zigbee2mqtt
+> ./update
+> sudo systemctl restart zigbee2mqtt
+> nano /opt/zigbee2mqtt/data/configuration.yaml
+> nano /opt/zigbee2mqtt/data/database.db
+> pub 'lzig/bridge/config/permit_join' -m 'true'
+> pub 'lzig/bridge/config/force_remove' -m '0x00158d0012341234'

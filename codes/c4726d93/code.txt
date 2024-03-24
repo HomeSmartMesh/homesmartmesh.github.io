@@ -1,0 +1,37 @@
+E (20563) chip[IN]: Secure transport received message destined to node ID (0x0000000000BC5C01)
+I (20563) chip[IN]: Setting fabricID 1B669 on admin.
+I (20563) chip[IN]: Since admin was modified, persisting changes to KVS
+I (21273) chip[SVR]: Stored value in server storage
+I (21293) chip[DIS]: Admin (0) persisted to storage. Calling OnAdminPersistedToStorage
+I (21293) chip[ZCL]: OpCreds: Admin 0 was persisted to storage. FabricId 00001B66900000000, NodeId bc5c01000000000000306E, VendorId 0x0632
+I (21303) chip[ZCL]: OpCreds: Call to writeAdminsIntoFabricsListAttribute
+I (21313) chip[ZCL]: OpCreds: Skipping over unitialized admin with fabricId 0x000000000001B669, nodeId 0x0000000000BC5C01 vendorId 0x0000
+I (21323) chip[ZCL]: OpCreds: Stored 0 admins in fabrics list attribute.
+I (21333) chip[EM]: Received message of type 8 and protocolId 327680
+V (21343) chip[EM]: ec id: 39017, Delegate: 0x3ffcca68
+V (21343) chip[DMG]: ICR moving to [Initialize]
+V (21353) chip[ZCL]: Received Cluster Command: Cluster=6 Command=2 Endpoint=1
+I (21353) chip[ZCL]: On/Off set value: 1 2
+I (21363) chip[ZCL]: Toggle on/off from 0 to 1
+I (21363) app-devicecallbacks: PostAttributeChangeCallback - Cluster ID: '0x0006', EndPoint ID: '0x01', Attribute ID: '0x0000'
+I (21383) app-devicecallbacks: set ZCL_ON_OFF_ATTRIBUTE_ID to value: 1
+I (21383) app-devicecallbacks: Current free heap: 115004
+
+I (21393) app-devicecallbacks: PostAttributeChangeCallback - Cluster ID: '0x0008', EndPoint ID: '0x01', Attribute ID: '0x0000'
+I (21403) app-devicecallbacks: Unhandled cluster ID: 8
+I (21413) app-devicecallbacks: Current free heap: 115004
+
+I (21413) app-devicecallbacks: PostAttributeChangeCallback - Cluster ID: '0x0005', EndPoint ID: '0x01', Attribute ID: '0x0003'
+I (21433) app-devicecallbacks: Unhandled cluster ID: 5
+I (21433) app-devicecallbacks: Current free heap: 115004
+
+V (21443) chip[DMG]: ICR moving to [AddCommand]
+V (21443) chip[IN]: Secure message was encrypted: Msg ID 1
+I (21453) chip[IN]: Sending msg from 0x0000000000BC5C01 to 0x000000000001B669 at utc time: 20779 msec
+I (21463) chip[IN]: Sending secure msg on generic transport
+I (21473) chip[IN]: Secure msg send status No Error
+V (21473) chip[DMG]: ICR moving to [   Sending]
+V (21473) chip[DMG]: ICR moving to [Uninitiali]
+E (21483) chip[DL]: Long dispatch time: 920 ms
+E (21483) chip[IN]: Secure transport received message destined to node ID (0x0000000000BC5C01)
+I (21493) chip[EM]: Received message of type 16 and protocolId 0

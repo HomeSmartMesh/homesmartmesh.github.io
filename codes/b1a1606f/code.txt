@@ -1,0 +1,12 @@
+sm/90A971A3D1A1B648{"initiator":4,"range":"0.305","responder":0,"seq":0,"uwb_cmd":"twr"}
+sm/C24FD51212E905F0{"initiator":4,"range":"0.614","responder":1,"seq":1,"uwb_cmd":"twr"}
+sm/98501ED22B42EB41{"initiator":4,"range":"0.005","responder":2,"seq":2,"uwb_cmd":"twr"}
+sm/E8D81FEE52C283EB{"initiator":4,"range":"0.178","responder":3,"seq":3,"uwb_cmd":"twr"}
+sm/90A971A3D1A1B648{"initiator":4,"range":"0.310","responder":0,"seq":4,"uwb_cmd":"twr"}
+sm/C24FD51212E905F0{"initiator":4,"range":"0.591","responder":1,"seq":5,"uwb_cmd":"twr"}
+sm/98501ED22B42EB41{"initiator":4,"range":"0.038","responder":2,"seq":6,"uwb_cmd":"twr"}
+sm/E8D81FEE52C283EB{"initiator":4,"range":"0.183","responder":3,"seq":7,"uwb_cmd":"twr"}
+sm/90A971A3D1A1B648{"initiator":4,"range":"0.319","responder":0,"seq":8,"uwb_cmd":"twr"}
+sm/C24FD51212E905F0{"initiator":4,"range":"0.577","responder":1,"seq":9,"uwb_cmd":"twr"}
+sm/98501ED22B42EB41{"initiator":4,"range":"0.019","responder":2,"seq":10,"uwb_cmd":"twr"}
+sm/E8D81FEE52C283EB{"initiator":4,"range":"0.169","responder":3,"seq":11,"uwb_cmd":"twr"}

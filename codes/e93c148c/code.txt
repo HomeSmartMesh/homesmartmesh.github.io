@@ -1,0 +1,7 @@
+window.addEventListener( 'hue_lights_on_startup', onHueStartup, false );
+window.addEventListener( 'hue_light_state', onHueLightState, false );
+
+function onHueLightState(e){
+    const name = hue_mesh_name[e.detail.name];
+    send_custom_event("three_param",{name:name, light:e.detail.on});
+}

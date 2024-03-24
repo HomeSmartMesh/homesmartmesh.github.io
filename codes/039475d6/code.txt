@@ -1,0 +1,4 @@
+J-Link>Power on
+cd pca10059_bootloader
+>nrfjprog -f nrf52 --eraseall
+ >nrfjprog -f nrf52 --chiperase --program pca10059_bootloader.hex --verify --reset

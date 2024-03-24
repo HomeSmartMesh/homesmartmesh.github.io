@@ -1,0 +1,5 @@
+cd ncs/modules/lib/connectedhomeip/examples/lighting-app/nrfconnect/
+west build -b nrf52840dongle_nrf52840 -t menuconfig
+west build -b nrf52840dongle_nrf52840 -- -DCONF_FILE="prj.conf"
+west flash
+nrfjprog -f nrf52 --program zephyr.hex --sectorerase --verify

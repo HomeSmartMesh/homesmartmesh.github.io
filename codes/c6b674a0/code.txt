@@ -1,0 +1,3 @@
+cd zephyr/samples/subsys/usb/audio/headphones_microphone
+west build -b nrf52840dk_nrf52840 -- -DCONF_FILE=prj.conf
+west flash

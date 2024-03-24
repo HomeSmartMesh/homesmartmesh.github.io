@@ -1,0 +1,49 @@
+pi@raspberrypi:~ $ sudo /usr/sbin/MQTT-SNGateway -f /etc/paho-mqtt-sn-gateway.conf
+ClientList can not open the Predefined Topic List.     /etc/predefinedTopic.conf
+
+ ***************************************************************************
+ * MQTT-SN Transparent Gateway
+ * Part of Project Paho in Eclipse
+ * (http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt-sn.embedded-c.git/)
+ *
+ * Author : Tomoaki YAMAGUCHI
+ * Version: 1.3.1
+ ***************************************************************************
+
+20210213 194529.539 PahoGateway-01 has been started.
+
+ ConfigFile: /etc/paho-mqtt-sn-gateway.conf
+ SensorN/W:   Gateway Port: 47193 Broadcast Address: ff03::1 Interface: wpan0
+ Broker:     10.0.0.42 : 1883, 8883
+ RootCApath: (null)
+ RootCAfile: (null)
+ CertKey:    (null)
+ PrivateKey: (null)
+
+
+
+20210213 194535.931   SEARCHGW          <---  Client                              03 01 01
+20210213 194535.932   GWINFO            --->  Clients                             03 02 01
+
+20210213 194541.989   CONNECT           <---  nRF52840_publisher                  18 04 04 01 00 3C 6E 52 46 35 32 38 34 30 5F 70 75 62 6C 69 73 68 65 72
+20210213 194541.997   CONNECT           ===>  nRF52840_publisher                  10 1E 00 04 4D 51 54 54 04 02 00 3C 00 12 6E 52 46 35 32 38 34 30 5F 70 75 62 6C 69 73 68 65 72
+20210213 194542.042   CONNACK           <===  nRF52840_publisher                  20 02 00 00
+20210213 194542.042   CONNACK           --->  nRF52840_publisher                  03 05 00
+
+20210213 194542.055   REGISTER    0001  <---  nRF52840_publisher                  1D 0A 00 00 00 01 6E 52 46 35 32 38 34 30 5F 72 65 73 6F 75 72 63 65 73 2F 6C 65 64 33
+20210213 194542.056   REGACK      0001  --->  nRF52840_publisher                  07 0B 00 01 00 01 00
+
+20210213 194550.331   PUBLISH     0002  <---  nRF52840_publisher                  08 0C 20 00 01 00 02 01
+20210213 194550.331   PUBLISH     0002  ===>  nRF52840_publisher                  32 1C 00 17 6E 52 46 35 32 38 34 30 5F 72 65 73 6F 75 72 63 65 73 2F 6C 65 64 33 00 02 01
+20210213 194550.338   PUBACK      0002  <===  nRF52840_publisher                  40 02 00 02
+20210213 194550.338   PUBACK      0002  --->  nRF52840_publisher                  07 0D 00 01 00 02 00
+
+20210213 194557.499   PUBLISH     0003  <---  nRF52840_publisher                  08 0C 20 00 01 00 03 00
+20210213 194557.500   PUBLISH     0003  ===>  nRF52840_publisher                  32 1C 00 17 6E 52 46 35 32 38 34 30 5F 72 65 73 6F 75 72 63 65 73 2F 6C 65 64 33 00 03 00
+20210213 194557.515   PUBACK      0003  <===  nRF52840_publisher                  40 02 00 03
+20210213 194557.516   PUBACK      0003  --->  nRF52840_publisher                  07 0D 00 01 00 03 00
+
+20210213 194602.541   PUBLISH     0004  <---  nRF52840_publisher                  08 0C 20 00 01 00 04 01
+20210213 194602.542   PUBLISH     0004  ===>  nRF52840_publisher                  32 1C 00 17 6E 52 46 35 32 38 34 30 5F 72 65 73 6F 75 72 63 65 73 2F 6C 65 64 33 00 04 01
+20210213 194602.547   PUBACK      0004  <===  nRF52840_publisher                  40 02 00 04
+20210213 194602.547   PUBACK      0004  --->  nRF52840_publisher                  07 0D 00 01 00 04 00

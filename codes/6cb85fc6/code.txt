@@ -1,0 +1,1 @@
+board = esp32-c3-devkitm-1

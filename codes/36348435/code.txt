@@ -1,0 +1,2 @@
+cd connectedhomeip
+>./scripts/examples/gn_build_example.sh examples/chip-tool examples/chip-tool/build

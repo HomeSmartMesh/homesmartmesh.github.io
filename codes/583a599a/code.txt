@@ -1,0 +1,3 @@
+factoryreset
+ifconfig up
+joiner start ABCDE2

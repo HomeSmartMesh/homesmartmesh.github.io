@@ -1,0 +1,1 @@
+cu -l /dev/ttyACM0 -s 460800 

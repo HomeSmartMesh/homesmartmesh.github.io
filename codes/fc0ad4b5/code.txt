@@ -1,0 +1,9 @@
+#define MICROPY_HW_USB_CDC          (1)
+...
+// UART config
+#define MICROPY_HW_UART1_RX         (13)
+#define MICROPY_HW_UART1_TX         (15)
+#define MICROPY_HW_UART1_CTS        (17)
+#define MICROPY_HW_UART1_RTS        (20)
+#define MICROPY_HW_UART1_HWFC       (1)
+...

@@ -1,0 +1,2 @@
+sm{"uwb_cmd":"ping", "pinger":0,"target":1,"at_ms":100}
+sm/C24FD51212E905F0{"diag":{"fpAmp1":7196,"fpAmp2":7220,"fpAmp3":6969,"maxGrowthCIR":1995,"maxNoise":1495,"rxPreamCount":118,"stdNoise":64},"uwb_cmd":"ping"}

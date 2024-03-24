@@ -1,0 +1,1 @@
+application/06_bldc_52832> make flash

@@ -1,0 +1,5 @@
+west init -m https://github.com/HomeSmartMesh/sdk-hsm-sensortag -mr main
+cd hsm/samples/simplemesh_cli
+west build -b decawave_dwm1001_dev -- -DCONF_FILE=prj-dwm.conf
+west flash
+west flash --snr 260103215

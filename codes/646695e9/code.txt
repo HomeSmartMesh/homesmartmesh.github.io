@@ -1,0 +1,2 @@
+nrfjprog -f nrf52 --eraseall
+nrfjprog -f nrf52 --program ot-cli-ftd.hex --sectorerase --verify

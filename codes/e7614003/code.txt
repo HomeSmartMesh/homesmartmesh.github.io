@@ -1,0 +1,20 @@
+281870 : loop start cycle 29
+*Layer=2 Parent=80:7d:3a:d5:2f:cd  Not root  NbNodes=2  TableSize=1
+route table size = 1
+  Sending to 3C:71:BF:83:BD:40
+RX> from(3c:71:bf:83:bd:40) => (Hello dowlink neighbors : 29)
+RX> from(80:7d:3a:d5:2f:cc) => (Hello dowlink neighbors : 30)
+
+291878 : loop start cycle 30
+*Layer=2 Parent=80:7d:3a:d5:2f:cd  Not root  NbNodes=2  TableSize=1
+route table size = 1
+  Sending to 3C:71:BF:83:BD:40
+RX> from(3c:71:bf:83:bd:40) => (Hello dowlink neighbors : 30)
+RX> from(80:7d:3a:d5:2f:cc) => (Hello dowlink neighbors : 31)
+
+301886 : loop start cycle 31
+*Layer=2 Parent=80:7d:3a:d5:2f:cd  Not root  NbNodes=2  TableSize=1
+route table size = 1
+  Sending to 3C:71:BF:83:BD:40
+RX> from(3c:71:bf:83:bd:40) => (Hello dowlink neighbors : 31)
+RX> from(80:7d:3a:d5:2f:cc) => (Hello dowlink neighbors : 32)

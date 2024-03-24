@@ -1,0 +1,664 @@
+{
+  "hash": "f5c3faa8",
+  "raw_menu": [
+    {
+      "label": "Home",
+      "link": "/"
+    },
+    {
+      "label": "Microcontrollers",
+      "link": "/microcontrollers",
+      "autogenerate": {
+        "directory": "microcontrollers"
+      }
+    },
+    {
+      "label": "Frameworks",
+      "link": "/frameworks/raspi-iot",
+      "autogenerate": {
+        "directory": "frameworks"
+      }
+    },
+    {
+      "label": "Protocols",
+      "link": "/protocols/thread",
+      "autogenerate": {
+        "directory": "protocols"
+      }
+    },
+    {
+      "label": "3D Printing",
+      "link": "/3dprinting",
+      "autogenerate": {
+        "directory": "3dprinting"
+      }
+    },
+    {
+      "label": "Web",
+      "link": "/web",
+      "autogenerate": {
+        "directory": "web"
+      }
+    },
+    {
+      "label": "Other",
+      "link": "/other/sound-processing",
+      "autogenerate": {
+        "directory": "other"
+      }
+    },
+    {
+      "icon": "github",
+      "link": "https://github.com/HomeSmartMesh/website-astro",
+      "align": "right"
+    }
+  ],
+  "sections": {
+    "home": [],
+    "microcontrollers": [
+      {
+        "label": "ESP32",
+        "path": "microcontrollers/esp32/readme.md",
+        "url": "microcontrollers/esp32",
+        "url_type": "dir",
+        "link": "/microcontrollers/esp32",
+        "level": 3,
+        "format": "markdown",
+        "order": 1,
+        "items": [
+          {
+            "label": "Datasheets",
+            "path": "microcontrollers/esp32/datasheets.md",
+            "url": "microcontrollers/esp32/datasheets",
+            "url_type": "file",
+            "link": "/microcontrollers/esp32/datasheets",
+            "level": 4,
+            "format": "markdown",
+            "order": 1,
+            "parent": false
+          },
+          {
+            "label": "Software",
+            "path": "microcontrollers/esp32/software.md",
+            "url": "microcontrollers/esp32/software",
+            "url_type": "file",
+            "link": "/microcontrollers/esp32/software",
+            "level": 4,
+            "format": "markdown",
+            "order": 3,
+            "parent": false
+          },
+          {
+            "label": "Timer Cam OV3660",
+            "path": "microcontrollers/esp32/timer-cam-ov36.md",
+            "url": "microcontrollers/esp32/timer-cam-ov3660",
+            "url_type": "file",
+            "link": "/microcontrollers/esp32/timer-cam-ov3660",
+            "level": 4,
+            "format": "markdown",
+            "order": 11,
+            "parent": false
+          },
+          {
+            "label": "TTGO T-Display",
+            "path": "microcontrollers/esp32/ttgo-t-display.md",
+            "url": "microcontrollers/esp32/ttgo-t-display",
+            "url_type": "file",
+            "link": "/microcontrollers/esp32/ttgo-t-display",
+            "level": 4,
+            "format": "markdown",
+            "order": 12,
+            "parent": false
+          },
+          {
+            "label": "TTGO T5-EPaper",
+            "path": "microcontrollers/esp32/ttgo-t5-epaper.md",
+            "url": "microcontrollers/esp32/ttgo-t5-epaper",
+            "url_type": "file",
+            "link": "/microcontrollers/esp32/ttgo-t5-epaper",
+            "level": 4,
+            "format": "markdown",
+            "order": 13,
+            "parent": false
+          },
+          {
+            "label": "M5 Stick C Plus",
+            "path": "microcontrollers/esp32/m5stick-plus.md",
+            "url": "microcontrollers/esp32/m5-stick-c-plus",
+            "url_type": "file",
+            "link": "/microcontrollers/esp32/m5-stick-c-plus",
+            "level": 4,
+            "format": "markdown",
+            "order": 14,
+            "parent": false
+          },
+          {
+            "label": "FireBeetle",
+            "path": "microcontrollers/esp32/fire-beetle.md",
+            "url": "microcontrollers/esp32/firebeetle",
+            "url_type": "file",
+            "link": "/microcontrollers/esp32/firebeetle",
+            "level": 4,
+            "format": "markdown",
+            "order": 15,
+            "parent": false
+          },
+          {
+            "label": "M5 Atom Lite",
+            "path": "microcontrollers/esp32/m5stack-atom.md",
+            "url": "microcontrollers/esp32/m5-atom-lite",
+            "url_type": "file",
+            "link": "/microcontrollers/esp32/m5-atom-lite",
+            "level": 4,
+            "format": "markdown",
+            "order": 16,
+            "parent": false
+          },
+          {
+            "label": "ESP-Now",
+            "path": "microcontrollers/esp32/esp-now.md",
+            "url": "microcontrollers/esp32/esp-now",
+            "url_type": "file",
+            "link": "/microcontrollers/esp32/esp-now",
+            "level": 4,
+            "format": "markdown",
+            "order": 20,
+            "parent": false
+          },
+          {
+            "label": "ESP-Mesh",
+            "path": "microcontrollers/esp32/esp-mesh.md",
+            "url": "microcontrollers/esp32/esp-mesh",
+            "url_type": "file",
+            "link": "/microcontrollers/esp32/esp-mesh",
+            "level": 4,
+            "format": "markdown",
+            "order": 21,
+            "parent": false
+          },
+          {
+            "label": "Wall Display",
+            "path": "microcontrollers/esp32/wall-display.md",
+            "url": "microcontrollers/esp32/wall-display",
+            "url_type": "file",
+            "link": "/microcontrollers/esp32/wall-display",
+            "level": 4,
+            "format": "markdown",
+            "order": 100,
+            "parent": false
+          },
+          {
+            "label": "Round Display",
+            "path": "microcontrollers/esp32/round-display.md",
+            "url": "microcontrollers/esp32/round-display",
+            "url_type": "file",
+            "link": "/microcontrollers/esp32/round-display",
+            "level": 4,
+            "format": "markdown",
+            "order": 100,
+            "parent": false
+          },
+          {
+            "label": "S2 Saola 1",
+            "path": "microcontrollers/esp32/esp32-s2-saola-1.md",
+            "url": "microcontrollers/esp32/s2-saola-1",
+            "url_type": "file",
+            "link": "/microcontrollers/esp32/s2-saola-1",
+            "level": 4,
+            "format": "markdown",
+            "order": 100,
+            "parent": false
+          },
+          {
+            "label": "C3 Dev Kit M1",
+            "path": "microcontrollers/esp32/esp32-c3-devkitm-1.md",
+            "url": "microcontrollers/esp32/c3-dev-kit-m1",
+            "url_type": "file",
+            "link": "/microcontrollers/esp32/c3-dev-kit-m1",
+            "level": 4,
+            "format": "markdown",
+            "order": 100,
+            "parent": false
+          },
+          {
+            "label": "Debug",
+            "path": "microcontrollers/esp32/debugger.md",
+            "url": "microcontrollers/esp32/debug",
+            "url_type": "file",
+            "link": "/microcontrollers/esp32/debug",
+            "level": 4,
+            "format": "markdown",
+            "order": 100,
+            "parent": false
+          },
+          {
+            "label": "ESP32 D1 Mini",
+            "path": "microcontrollers/esp32/d1-mini.md",
+            "url": "microcontrollers/esp32/esp32-d1-mini",
+            "url_type": "file",
+            "link": "/microcontrollers/esp32/esp32-d1-mini",
+            "level": 4,
+            "format": "markdown",
+            "order": 100,
+            "parent": false
+          },
+          {
+            "label": "ESP32 C3 DevKit M1",
+            "path": "microcontrollers/esp32/c3-devkit-m1.md",
+            "url": "microcontrollers/esp32/esp32-c3-devkit-m1",
+            "url_type": "file",
+            "link": "/microcontrollers/esp32/esp32-c3-devkit-m1",
+            "level": 4,
+            "format": "markdown",
+            "order": 100,
+            "parent": false
+          }
+        ],
+        "parent": true,
+        "expanded": true
+      },
+      {
+        "label": "Risc-V",
+        "path": "microcontrollers/riscv/readme.md",
+        "url": "microcontrollers/risc-v",
+        "url_type": "dir",
+        "link": "/microcontrollers/risc-v",
+        "level": 3,
+        "format": "markdown",
+        "order": 2,
+        "parent": false
+      },
+      {
+        "label": "STM32",
+        "path": "microcontrollers/stm32/readme.md",
+        "url": "microcontrollers/stm32",
+        "url_type": "dir",
+        "link": "/microcontrollers/stm32",
+        "level": 3,
+        "format": "markdown",
+        "order": 3,
+        "parent": false
+      },
+      {
+        "label": "nRF52",
+        "path": "microcontrollers/nrf52/readme.md",
+        "url": "microcontrollers/nrf52",
+        "url_type": "dir",
+        "link": "/microcontrollers/nrf52",
+        "level": 3,
+        "format": "markdown",
+        "order": 4,
+        "items": [
+          {
+            "label": "Thread SensorTag",
+            "path": "microcontrollers/nrf52/thread_sensortag.md",
+            "url": "microcontrollers/nrf52/thread-sensortag",
+            "url_type": "file",
+            "link": "/microcontrollers/nrf52/thread-sensortag",
+            "level": 4,
+            "format": "markdown",
+            "order": 1,
+            "parent": false
+          },
+          {
+            "label": "UWB DWM3001 cdk",
+            "path": "microcontrollers/nrf52/dwm3001_cdk.md",
+            "url": "microcontrollers/nrf52/uwb-dwm3001-cdk",
+            "url_type": "file",
+            "link": "/microcontrollers/nrf52/uwb-dwm3001-cdk",
+            "level": 4,
+            "format": "markdown",
+            "order": 2,
+            "parent": false
+          },
+          {
+            "label": "UWB DWM1001 dev",
+            "path": "microcontrollers/nrf52/dwm1001_dev.md",
+            "url": "microcontrollers/nrf52/uwb-dwm1001-dev",
+            "url_type": "file",
+            "link": "/microcontrollers/nrf52/uwb-dwm1001-dev",
+            "level": 4,
+            "format": "markdown",
+            "order": 2,
+            "parent": false
+          },
+          {
+            "label": "Trick Tracker",
+            "path": "microcontrollers/nrf52/trick_tracker.md",
+            "url": "microcontrollers/nrf52/trick-tracker",
+            "url_type": "file",
+            "link": "/microcontrollers/nrf52/trick-tracker",
+            "level": 4,
+            "format": "markdown",
+            "order": 3,
+            "parent": false
+          },
+          {
+            "label": "Simple Mesh SensorTag",
+            "path": "microcontrollers/nrf52/simplemesh_sensortag.md",
+            "url": "microcontrollers/nrf52/simple-mesh-sensortag",
+            "url_type": "file",
+            "link": "/microcontrollers/nrf52/simple-mesh-sensortag",
+            "level": 4,
+            "format": "markdown",
+            "order": 3,
+            "parent": false
+          },
+          {
+            "label": "nRF52840 USB dongle",
+            "path": "microcontrollers/nrf52/usb_dongle.md",
+            "url": "microcontrollers/nrf52/nrf52840-usb-dongle",
+            "url_type": "file",
+            "link": "/microcontrollers/nrf52/nrf52840-usb-dongle",
+            "level": 4,
+            "format": "markdown",
+            "order": 5,
+            "parent": false
+          },
+          {
+            "label": "nRF52832 UART dongle",
+            "path": "microcontrollers/nrf52/uart_dongle.md",
+            "url": "microcontrollers/nrf52/nrf52832-uart-dongle",
+            "url_type": "file",
+            "link": "/microcontrollers/nrf52/nrf52832-uart-dongle",
+            "level": 4,
+            "format": "markdown",
+            "order": 6,
+            "parent": false
+          }
+        ],
+        "parent": true,
+        "expanded": true
+      },
+      {
+        "label": "nRF53",
+        "path": "microcontrollers/nrf53/readme.md",
+        "url": "microcontrollers/nrf53",
+        "url_type": "dir",
+        "link": "/microcontrollers/nrf53",
+        "level": 3,
+        "format": "markdown",
+        "order": 100,
+        "items": [
+          {
+            "label": "thingy53",
+            "path": "microcontrollers/nrf53/thingy53.md",
+            "url": "microcontrollers/nrf53/thingy53",
+            "url_type": "file",
+            "link": "/microcontrollers/nrf53/thingy53",
+            "level": 4,
+            "format": "markdown",
+            "order": 100,
+            "parent": false
+          }
+        ],
+        "parent": true,
+        "expanded": true
+      }
+    ],
+    "frameworks": [
+      {
+        "label": "Raspi IoT",
+        "path": "frameworks/raspi/readme.md",
+        "url": "frameworks/raspi-iot",
+        "url_type": "dir",
+        "link": "/frameworks/raspi-iot",
+        "level": 3,
+        "format": "markdown",
+        "order": 1,
+        "parent": false
+      },
+      {
+        "label": "Home Assistant",
+        "path": "frameworks/home_assistant.md",
+        "url": "frameworks/home-assistant",
+        "url_type": "file",
+        "link": "/frameworks/home-assistant",
+        "level": 3,
+        "format": "markdown",
+        "order": 4,
+        "parent": false
+      },
+      {
+        "label": "Zephyr RTOS",
+        "path": "frameworks/zephyr.md",
+        "url": "frameworks/zephyr-rtos",
+        "url_type": "file",
+        "link": "/frameworks/zephyr-rtos",
+        "level": 3,
+        "format": "markdown",
+        "order": 100,
+        "parent": false
+      },
+      {
+        "label": "micro Python",
+        "path": "frameworks/upython.md",
+        "url": "frameworks/micro-python",
+        "url_type": "file",
+        "link": "/frameworks/micro-python",
+        "level": 3,
+        "format": "markdown",
+        "order": 100,
+        "parent": false
+      }
+    ],
+    "protocols": [
+      {
+        "label": "Ultra Wide Band",
+        "path": "protocols/ultrawideband/readme.md",
+        "url": "protocols/ultrawideband",
+        "url_type": "dir",
+        "link": "/protocols/ultrawideband",
+        "level": 3,
+        "format": "markdown",
+        "order": 2,
+        "parent": false
+      },
+      {
+        "label": "Matter",
+        "path": "protocols/matter/readme.md",
+        "url": "protocols/matter",
+        "url_type": "dir",
+        "link": "/protocols/matter",
+        "level": 3,
+        "format": "markdown",
+        "order": 2,
+        "parent": false
+      },
+      {
+        "label": "Simple Mesh",
+        "path": "protocols/simple_mesh/readme.md",
+        "url": "protocols/simple-mesh",
+        "url_type": "dir",
+        "link": "/protocols/simple-mesh",
+        "level": 3,
+        "format": "markdown",
+        "order": 3,
+        "parent": false
+      },
+      {
+        "label": "Zigbee",
+        "path": "protocols/zigbee/readme.md",
+        "url": "protocols/zigbee",
+        "url_type": "dir",
+        "link": "/protocols/zigbee",
+        "level": 3,
+        "format": "markdown",
+        "order": 4,
+        "parent": false
+      },
+      {
+        "label": "Thread",
+        "path": "protocols/thread/readme.md",
+        "url": "protocols/thread",
+        "url_type": "dir",
+        "link": "/protocols/thread",
+        "level": 3,
+        "format": "markdown",
+        "order": 100,
+        "parent": false
+      }
+    ],
+    "3dprinting": [
+      {
+        "label": "Kayak Trailer",
+        "path": "3dprinting/kayak_trailer.md",
+        "url": "3dprinting/kayak-trailer",
+        "url_type": "file",
+        "link": "/3dprinting/kayak-trailer",
+        "level": 3,
+        "format": "markdown",
+        "order": 1,
+        "parent": false
+      },
+      {
+        "label": "Light Switch Cover",
+        "path": "3dprinting/light_switch_cover.md",
+        "url": "3dprinting/light-switch-cover",
+        "url_type": "file",
+        "link": "/3dprinting/light-switch-cover",
+        "level": 3,
+        "format": "markdown",
+        "order": 2,
+        "parent": false
+      },
+      {
+        "label": "Switch Socket Cover",
+        "path": "3dprinting/switch_socket_cover.md",
+        "url": "3dprinting/switch-socket-cover",
+        "url_type": "file",
+        "link": "/3dprinting/switch-socket-cover",
+        "level": 3,
+        "format": "markdown",
+        "order": 3,
+        "parent": false
+      },
+      {
+        "label": "ESP32 remote",
+        "path": "3dprinting/esp32_remote.md",
+        "url": "3dprinting/esp32-remote",
+        "url_type": "file",
+        "link": "/3dprinting/esp32-remote",
+        "level": 3,
+        "format": "markdown",
+        "order": 4,
+        "parent": false
+      },
+      {
+        "label": "Under desk shelf",
+        "path": "3dprinting/under_desk_shelf.md",
+        "url": "3dprinting/under-desk-shelf",
+        "url_type": "file",
+        "link": "/3dprinting/under-desk-shelf",
+        "level": 3,
+        "format": "markdown",
+        "order": 11,
+        "parent": false
+      },
+      {
+        "label": "House model",
+        "path": "3dprinting/house.md",
+        "url": "3dprinting/house-model",
+        "url_type": "file",
+        "link": "/3dprinting/house-model",
+        "level": 3,
+        "format": "markdown",
+        "order": 12,
+        "parent": false
+      },
+      {
+        "label": "Voronoi Shapes",
+        "path": "3dprinting/voronoi.md",
+        "url": "3dprinting/voronoi-shapes",
+        "url_type": "file",
+        "link": "/3dprinting/voronoi-shapes",
+        "level": 3,
+        "format": "markdown",
+        "order": 20,
+        "parent": false
+      },
+      {
+        "label": "Handbag hanger",
+        "path": "3dprinting/handbag_hanger.md",
+        "url": "3dprinting/handbag-hanger",
+        "url_type": "file",
+        "link": "/3dprinting/handbag-hanger",
+        "level": 3,
+        "format": "markdown",
+        "order": 100,
+        "parent": false
+      }
+    ],
+    "web": [
+      {
+        "label": "Home 3D",
+        "path": "web/home3d.md",
+        "url": "web/home-3d",
+        "url_type": "file",
+        "link": "/web/home-3d",
+        "level": 3,
+        "format": "markdown",
+        "order": 2,
+        "parent": false
+      },
+      {
+        "label": "Web Three Interface",
+        "path": "web/web_three_interface.md",
+        "url": "web/web-three-interface",
+        "url_type": "file",
+        "link": "/web/web-three-interface",
+        "level": 3,
+        "format": "markdown",
+        "order": 100,
+        "parent": false
+      },
+      {
+        "label": "Voronoi",
+        "path": "web/voronoi.md",
+        "url": "web/voronoi",
+        "url_type": "file",
+        "link": "/web/voronoi",
+        "level": 3,
+        "format": "markdown",
+        "order": 100,
+        "parent": false
+      }
+    ],
+    "other": [
+      {
+        "label": "Sound Processing",
+        "path": "other/sound.md",
+        "url": "other/sound-processing",
+        "url_type": "file",
+        "link": "/other/sound-processing",
+        "level": 3,
+        "format": "markdown",
+        "order": 8,
+        "parent": false
+      },
+      {
+        "label": "Rover Balance",
+        "path": "other/rover.md",
+        "url": "other/rover-balance",
+        "url_type": "file",
+        "link": "/other/rover-balance",
+        "level": 3,
+        "format": "markdown",
+        "order": 100,
+        "parent": false
+      },
+      {
+        "label": "Roborock Valetudo",
+        "path": "other/roborock.md",
+        "url": "other/roborock-valetudo",
+        "url_type": "file",
+        "link": "/other/roborock-valetudo",
+        "level": 3,
+        "format": "markdown",
+        "order": 100,
+        "parent": false
+      }
+    ],
+    "external": []
+  }
+}

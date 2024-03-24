@@ -1,0 +1,1 @@
+sm{"uwb_cmd":"twr","initiator":0,"responders":[1,1],"at_ms":100,"step_ms":10,"count":10,"count_ms":50}

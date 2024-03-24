@@ -1,0 +1,25 @@
+I: nRF5 802154 radio initialized
+I: 4 Sectors of 4096 bytes
+I: alloc wra: 0, ec0
+I: data wra: 0, 227
+*** Booting Zephyr OS build v2.4.99-ncs1-rc1  ***
+I: Init CHIP stack
+I: SoftDevice Controller build revision: 
+I: e5 c7 9c d9 91 00 1d 66 |.......f
+I: ea fb 6e 7b 98 2f 42 0d |..n./B.
+I: f1 60 93 c8             |...    
+I: Starting CHIP task
+I: Init Thread stack
+D: 593[DL] CHIP task running
+D: 594[DL] In DriveBLEState
+I: 614[DL] CHIPoBLE advertising disabled because device is fully provisioned
+D: 615[DL] OpenThread State Changed (Flags: 0x0100103d)
+D: 616[DL]    Device Role: DETACHED
+D: 617[DL]    Thread Unicast Addresses:
+D: 618[DL]         fdb0:f51f:154a:11be:0:ff:fe00:f002/64 valid preferred rloc
+D: 620[DL]         fdb0:f51f:154a:11be:2294:a147:3648:185d/64 valid preferred
+D: 621[DL]         fe80::4b5:84fc:320f:d2/64 valid preferred
+I: 830[DL] OpenThread ifconfig up and thread start
+I: 832[DL] OpenThread started: OK
+I: 832[DL] Setting OpenThread device type to MINIMAL END DEVICE
+I: 834[ZCL] Using ZAP con

@@ -1,0 +1,5 @@
+send_custom_event("three_param",{name:"Kitchen", color:0.3});
+send_custom_event("three_param",{name:"Kitchen", light:0.3});
+send_custom_event("three_param",{name:"Kitchen", anim:0.3});
+send_custom_event("three_param",{name:"Kitchen", pull:0.3});
+send_custom_event("three_param",{name:"Kitchen", push:0.3});

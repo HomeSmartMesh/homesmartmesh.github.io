@@ -1,0 +1,13 @@
+thread stop
+ifconfig down
+
+dataset init new
+dataset
+dataset channel 24
+dataset channel
+dataset masterkey 00112233445566778899aabbccddeeff
+dataset commit active
+ifconfig up
+thread start
+commissioner start
+commissioner joiner add * ABCDE2

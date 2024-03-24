@@ -1,0 +1,7 @@
+cu -l /dev/ttyACM0 -s 115200
+panid 0xabcd
+ifconfig up
+thread start
+state
+ping fd00:0064:0123:4567::0808:0808
+router list

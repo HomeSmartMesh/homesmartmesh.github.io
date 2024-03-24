@@ -1,0 +1,1 @@
+cmd/response/get_channel {"cmd": "get_channel", "channel": "2"}

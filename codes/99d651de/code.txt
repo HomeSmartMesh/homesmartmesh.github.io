@@ -1,0 +1,7 @@
+mkdir ~/ncs && cd ~/ncs
+west init -m https://github.com/nrfconnect/sdk-nrf --mr v1.4.0
+west update
+west zephyr-export
+pip3 install --user -r zephyr/scripts/requirements.txt
+pip3 install --user -r nrf/scripts/requirements.txt
+pip3 install --user -r bootloader/mcuboot/scripts/requirements.txt

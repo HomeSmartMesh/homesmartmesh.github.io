@@ -1,0 +1,10 @@
+*** Booting Zephyr OS build zephyr-v2.5.0-2187-g757cd12e6602  ***
+
+[00:00:00.325,714] <inf> main: Test App for Battery Voltage Measure through ADC
+[00:00:00.325,744] <inf> battery: battery_init() vref = 600
+[00:00:00.325,805] <inf> battery: battery_start> adc_read()
+[00:00:00.425,872] <inf> battery: battery_get_mv() raw = 3764
+[00:00:00.425,872] <inf> main: battery> Voltage = 3308 mV
+[00:00:05.326,049] <inf> battery: battery_start> adc_read()
+[00:00:05.426,086] <inf> battery: battery_get_mv() raw = 3768
+[00:00:05.426,116] <inf> main: battery> Voltage = 3311 mV

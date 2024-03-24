@@ -1,0 +1,9 @@
+{
+    "wifi":{
+        "access_point":"MY-WLAN",
+        "password":"**************"
+    },
+    "mesh":{
+        "password":"**********"
+    }
+}

@@ -1,0 +1,2 @@
+tar -xf nRFCommandLineTools10121Linuxamd64.tar.gz
+sudo dpkg -i nRF-Command-Line-Tools_10_12_1_Linux-amd64.deb

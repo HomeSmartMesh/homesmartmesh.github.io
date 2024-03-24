@@ -1,0 +1,9 @@
+git clone https://github.com/openthread/ot-br-posix
+cd ot-br-posix
+export NAT64=1 NAT64_SERVICE=openthread
+./script/bootstrap
+INFRA_IF_NAME=eth0 ./script/setup
+sudo nano /etc/default/otbr-agent
+sudo reboot now
+sudo systemctl status
+sudo ot-ctl state

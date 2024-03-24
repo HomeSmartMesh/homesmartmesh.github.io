@@ -1,0 +1,2 @@
+>get_idf
+>idf.py set-target esp32

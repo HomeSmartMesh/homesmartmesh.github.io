@@ -1,0 +1,1 @@
+$socat UDP6-LISTEN:4242,fork STDOUT

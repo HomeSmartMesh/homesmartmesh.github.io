@@ -1,0 +1,11 @@
+zig/living heat {
+    "current_heating_setpoint":17,
+    "eurotronic_system_mode":1,
+    "local_temperature":18.49,
+    "occupied_heating_setpoint":21,
+    "unoccupied_heating_setpoint":16,
+    "eurotronic_error_status":0,
+    "pi_heating_demand":0,
+    "battery":100,
+    "linkquality":44
+}

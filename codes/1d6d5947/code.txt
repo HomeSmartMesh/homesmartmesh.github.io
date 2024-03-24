@@ -1,0 +1,5 @@
+npm uninstall node-pre-gyp --save
+npm install @mapbox/node-pre-gyp --save
+
+npm install
+npm run zap

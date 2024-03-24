@@ -1,0 +1,12 @@
+> commissioner start
+Commissioner: petitioning
+Done
+> Commissioner: active
+
+> commissioner joiner add * ABCDE2
+Done
+> ~ Discovery Request from 76380f6b58cf89f6: version=3,joiner=1
+Commissioner: Joiner start a320c9053f0862ce
+Commissioner: Joiner connect a320c9053f0862ce
+Commissioner: Joiner finalize a320c9053f0862ce
+Commissioner: Joiner end a320c9053f0862ce

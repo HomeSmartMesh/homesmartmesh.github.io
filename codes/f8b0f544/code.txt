@@ -1,0 +1,11 @@
+wpan0: flags=4305<UP,POINTOPOINT,RUNNING,NOARP,MULTICAST>  mtu 1280
+        inet6 fd85:454:6529:a0c5:9ebb:d761:b6d:df4e  prefixlen 64  scopeid 0x0<global>
+        inet6 fd11:22::7005:5eac:6482:e2ec  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::94bf:4de7:183c:f37d  prefixlen 64  scopeid 0x20<link>
+        inet6 fd85:454:6529:a0c5:0:ff:fe00:fc00  prefixlen 64  scopeid 0x0<global>
+        inet6 fd85:454:6529:a0c5:0:ff:fe00:d400  prefixlen 64  scopeid 0x0<global>
+        unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  txqueuelen 500  (UNSPEC)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 9  bytes 1524 (1.4 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0

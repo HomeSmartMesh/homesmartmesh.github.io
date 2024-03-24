@@ -1,0 +1,2 @@
+application/08_usb_dongle> make flash
+application/08_usb_dongle> make paramw

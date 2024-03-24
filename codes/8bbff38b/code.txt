@@ -1,0 +1,3 @@
+sudo ot-ctl state
+sudo ot-ctl
+>

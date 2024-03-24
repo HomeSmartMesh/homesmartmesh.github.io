@@ -1,0 +1,1 @@
+    send_custom_event("three_param",{name:"Cameleon", val:"plate1"});

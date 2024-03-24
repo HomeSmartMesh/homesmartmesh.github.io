@@ -1,0 +1,10 @@
+    "heatings":{
+        "living heat":{
+            "topic":"lzig/living heat/set",
+            "Apertures":[
+                "balcony door",
+                "balcony window right",
+                "balcony window left"
+            ]
+        }
+    }
