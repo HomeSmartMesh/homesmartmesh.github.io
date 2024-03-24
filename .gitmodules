@@ -1,6 +1,3 @@
-[submodule "public/models"]
-	path = public/models
-	url = https://github.com/HomeSmartMesh/models.git
 [submodule "dist"]
 	path = dist
 	url = https://github.com/HomeSmartMesh/homesmartmesh.github.io.git
