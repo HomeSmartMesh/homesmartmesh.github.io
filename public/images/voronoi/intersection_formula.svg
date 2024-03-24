@@ -1,4 +1,9 @@
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="64.679ex" height="13.176ex" style="vertical-align: -6.005ex;" viewBox="0 -3087.6 27848 5673" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" 
+width="64.679ex"
+height="13.176ex"
+style="vertical-align: -6.005ex;"
+viewBox="0 -3087.6 27848 5673" 
+role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">{\displaystyle {\begin{aligned}(P_{x},P_{y})={\bigg (}&amp;{\frac {(x_{1}y_{2}-y_{1}x_{2})(x_{3}-x_{4})-(x_{1}-x_{2})(x_{3}y_{4}-y_{3}x_{4})}{(x_{1}-x_{2})(y_{3}-y_{4})-(y_{1}-y_{2})(x_{3}-x_{4})}},\\&amp;{\frac {(x_{1}y_{2}-y_{1}x_{2})(y_{3}-y_{4})-(y_{1}-y_{2})(x_{3}y_{4}-y_{3}x_{4})}{(x_{1}-x_{2})(y_{3}-y_{4})-(y_{1}-y_{2})(x_{3}-x_{4})}}{\bigg )}\end{aligned}}}</title>
 <defs aria-hidden="true">
 <path stroke-width="1" id="E1-MJMAIN-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path>
@@ -16,7 +21,8 @@
 <path stroke-width="1" id="E1-MJMAIN-34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path>
 <path stroke-width="1" id="E1-MJSZ3-29" d="M34 1438Q34 1446 37 1448T50 1450H56H71Q73 1448 99 1423T144 1380T198 1319T260 1238T323 1137T385 1013T440 864T485 688T514 485T526 251Q526 134 519 53Q472 -519 162 -860Q139 -885 119 -904T86 -936T71 -949H56Q43 -949 39 -947T34 -937Q88 -883 140 -813Q428 -430 428 251Q428 453 402 628T338 922T245 1146T145 1309T46 1425Q44 1427 42 1429T39 1433T36 1436L34 1438Z"></path>
 </defs>
-<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+<rect x="0" y="-3087.6" width="27848" height="5673" fill="white" />
+<g stroke="black" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(167,0)">
 <g transform="translate(-11,0)">
 <g transform="translate(0,1421)">

@@ -1,22 +1,22 @@
 ---
-title: "Voronoi"
-description: "Control your home like a Video Game served from your local pi. See your 3d rooms model real time colored with your temperature sensor"
+title: Voronoi
+description: Control your home like a Video Game served from your local pi. See your 3d rooms model real time colored with your temperature sensor
 date: 2021-01-01T00:00:00+00:00
 lastmod: 2021-01-01T00:00:00+00:00
-weight: 2
-toc: true
-images: ["/images/voronoi/screenshot.png"]
+order: 2
+image: /images/voronoi/screenshot.png
 ---
 
 # Webapp
 runs with chrome as a web browser
-{{< iframe src="https://voronoi-editor.web.app/" height="600" >}}
+
+https://voronoi-editor.web.app/
 
 # Github repo
-{{< icon_button href="https://github.com/WebSVG/voronoi" text="Voronoi generator webapp Github Repo"  icon="github" >}}
+:button[]{link="https://github.com/WebSVG/voronoi" label="Voronoi generator webapp Github Repo"  icon="github" }
 
 # 3d printing
-{{< button relref="/docs/3dprinting/voronoi" >}} Voronoi STL Models {{</button>}}
+:button[]{link="/docs/3dprinting/voronoi" label="Voronoi STL Models"}
 
 # Description
 Parametric Voronoi generator with real time editing and SVG export
@@ -26,14 +26,14 @@ Parametric Voronoi generator with real time editing and SVG export
 * Edit cells
 * Export SVG
 
-<img src ="/images/voronoi/demo_overview.gif">
+![demo overview](/images/voronoi/demo_overview.gif)
 
 We see above the user generating new sets of seeds with their resulting voronoi diagram, hiding and viewing seeds, cells and edges, changing the number of seeds with a slider while the view updates in real time, editing the cells by moving them, removing and adding cells, changing the cells shape to quadratic bezier, simple edges and back to cubic bezier, finally adjusting the space between cells before exporting in an SVG file.
 
 ## Export seeds coordinates
 The seeds coordinates are what allows to generate again the same voronoig diagram
 
-<img src="/images/voronoi/export_seeds.gif">
+![export_seeds](/images/voronoi/export_seeds.gif)
 
 * seeds can be exported as a json text file containing each seed coordinate
 * the `seeds.json` can be imported by drag and drop on the view area
@@ -43,14 +43,14 @@ The seeds coordinates are what allows to generate again the same voronoig diagra
 * The cells are not scaled down, their edges are rather retracted in parallel to their original location.
 * When retracting cells as a consequence some edges could become irrelevant and the shape might decrese in edges number.
 
-<img src="/images/voronoi/retraction_discard.gif">
+![retraction_discard](/images/voronoi/retraction_discard.gif)
 
 * Below is another example where we see in debug mode the translated edges and the discarded one is red
 
-<img src="/images/voronoi/correct_retraction.gif">
+![correct_retraction](/images/voronoi/correct_retraction.gif)
 
 ## cubic bezier minimum edge size
-<img src="/images/voronoi/min_edges.gif" width=400>
+![min_edges](/images/voronoi/min_edges.gif)
 
 * goal is to filter small edge to avoid sharp bezier curves
 * the quadratic bezier only has one control point, so using the center of the removed edge would still break the tangency alignment with the previous curve
@@ -60,7 +60,7 @@ The seeds coordinates are what allows to generate again the same voronoig diagra
 ## Shaped tesselation area
 ### step 1 : sampling
 the shape is approximated with a set of linear interpolation points along the path
-<img src="/images/voronoi/area_sampling.gif"  width=600>
+![area_sampling](/images/voronoi/area_sampling.gif)
 
 ## step 2 : cells isolation 
 ### the naive (and not so nice) way
@@ -73,7 +73,7 @@ the shape is approximated with a set of linear interpolation points along the pa
 
 ```
 this applies an svg mask, with the SVG `clipPath` function, it would result in this
-<img src="/images/voronoi/cut_outs.gif"  width=600>
+![cut_outs](/images/voronoi/cut_outs.gif)
 
 * First issue, Fusion360 as example does not support `clipPath`
 * Second issue, the cut is very sharp and breaks the bezier shape of the cells
@@ -81,19 +81,14 @@ this applies an svg mask, with the SVG `clipPath` function, it would result in t
 ### the nicer way
 Note : the higher the number of samples per seed, the more the cells will allign the shape's path
 
-<img src="/images/voronoi/shape_inside_cells.png" width=600>
+![shape_inside_cells](/images/voronoi/shape_inside_cells.png)
 
 Before explaining how this works, let's inspect that the voronoi cells are natually alligned along the custom path we provided as input
 
 Below is the revealed secret. There are seeds actually being sampled outside the path area for the sole purpose of giving support to the inside cells not to expand till the external frame. Also important that the cells are not just simply randomly sampled inside and outside the area, they are rather avoiding the path with a distance cost factor, that prevents cells from cutting the edges to a certain extent.
 
-{{<center-col>}}
-<img src="/images/voronoi/shape_seeds.png" >
-<--->
-<img src="/images/voronoi/shape_all_cells.png" >
-{{</center-col>}}
-
-
+![shape_seeds](/images/voronoi/shape_seeds.png)
+![shape_all_cells](/images/voronoi/shape_all_cells.png)
 
 ## Seeds sampling cost map
 * drag and drop a png file on the editor's window
@@ -101,24 +96,20 @@ Below is the revealed secret. There are seeds actually being sampled outside the
 
 In all sampling variants, the seeds do have the neighbors distance as cost minimzation factor. Using a shape's path, the cost add up to avoid the path with a distance. Here, a png image gray scale is used as a cost map that is weighted with the neighbors distance.
 
-{{<center-col>}}
-<img src="/images/voronoi/grad_hor.png" >
-<--->
-<img src="/images/voronoi/cost_map.png" >
-{{</center-col>}}
-
+![grad_hor](/images/voronoi/grad_hor.png)
+![cost_map](/images/voronoi/cost_map.png)
 
 In the animation below, after dropping a spiral cost map, the `Map Cost Vs Dist` slider is moved from 5 to 20 to concentrate the cells in the darker areas.
 
-<img src="/images/voronoi/spiral_cost_map.gif" width=700>
+![spiral_cost_map](/images/voronoi/spiral_cost_map.gif)
 
 ## SVG Path Shaped area and png seeds cost map
-<img src="/images/voronoi/shape_and_map.gif">
+![shape_and_map](/images/voronoi/shape_and_map.gif)
 
 ## Filters : Displacement with Turbulence
 warning ! The svg filters effect, though part of the standard and viewable in browsers are not always supported by CAD programs such as Fusion360 !
 
-<img src="/images/voronoi/filters.gif">
+![filters](/images/voronoi/filters.gif)
 
 
 # Features details
@@ -227,7 +218,7 @@ node dependencies are not required to serve the project locally, but only to ref
 * https://www.jasondavies.com/maps/voronoi/
 * [wikipedia - lines intersection](https://en.wikipedia.org/wiki/Line%E2%80%93line_intersection)
 
-<img src="/images/voronoi/intersection_formula.svg">
+![intersection_formula](/images/voronoi/intersection_formula.svg)
 
 * Bezier curves https://pomax.github.io/bezierinfo/
 * Closest point on path approximation : https://bl.ocks.org/mbostock/8027637

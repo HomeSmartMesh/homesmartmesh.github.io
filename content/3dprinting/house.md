@@ -3,7 +3,7 @@ title: House model
 description: House model reproduction
 date: 2021-01-01T00:00:00+00:00
 order: 12
-image: ./house_images/03 Model Side.JPG
+image: ./house_images/03 Model Side.jpg
 ---
 
 # House Model

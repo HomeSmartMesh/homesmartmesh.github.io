@@ -33,7 +33,8 @@ Support, reviews, experience exchange and ideas related to this page content can
 2. create your own glTF model from blender (optional)
 
 ### activate hue bridge connection
-{{< figure src="/images/hue_register.gif" width=600 >}}
+
+:image[]{src="/images/hue_register.gif" width=600 }
 
 1. adjust the light names to match your hue lights names
 2. press the Hue Gateway authorisation button (on the real device)

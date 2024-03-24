@@ -63,7 +63,7 @@ Official example
 * Playing sound with html5 [web Audio API](https://www.w3.org/TR/webaudio/)
 ## Live demo
 
-{{< iframe src="https://soundhacking.github.io/see_sound/" height="300" >}}
+https://soundhacking.github.io/see_sound/
 
 # librosa test
 
@@ -118,12 +118,12 @@ Memory region         Used Size  Region Size  %age Used
 * inputs in microcontrollers for preprocessing interface to PC for further processing.
 * it's also possible to have microcontroller standalone applications
 
-{{< image src="/images/sound/goal.png" >}}
+![goal](/images/sound/goal.png)
 
 ## Debug workflow
 * it's possible to debug an embedded sound processing system by injecting packets and retrieving  the results
 
-{{< image src="/images/sound/usb_cdc_test.png" width="500">}}
+:image[]{src="/images/sound/usb_cdc_test.png" width="500"}
 
 # Topics
 ## Offline Preparation

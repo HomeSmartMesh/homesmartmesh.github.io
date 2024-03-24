@@ -1,13 +1,12 @@
 ---
-title: "micro Python"
-description: "links and instructions for uPython"
+title: micro Python
+description: links and instructions for uPython
 date: 2021-04-03T08:00:00+00:00
 lastmod: 2021-04-03T08:00:00+00:00
-weight: 6
-toc: true
+order: 6
 ---
 
-{{<icon_button text="nRF52840 usb dongle" relref="/microcontrollers/nrf52/usb_dongle" >}}
+:button[]{label="nRF52840 usb dongle" link="/microcontrollers/nrf52/usb_dongle" }
 
 # cross compiler
 * note `CROSS_COMPILE` is referencing the system toolchain with loose recommendations `7.3.1/2Q18 or 8.2.1/4Q18.`
@@ -61,9 +60,9 @@ int mp_hal_stdin_rx_chr(void) {
 * use board `PCA10056` note that this board has `MICROPY_HW_USB_CDC` not defined, disabled, set to `(0)`
 * edit the config file `ports/nrf/boards/pca10056/mpconfigboard.h`
 
-{{<hint warning>}}
+:::Caution
 In case the Hardware flow control is not used, which means the UART CTS and RTS pins are not attached, it is important to disable the `MICROPY_HW_UART1_HWFC` by setting it to `(0)`
-{{</hint>}}
+:::
 
 ```c++
 // UART config

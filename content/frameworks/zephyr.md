@@ -1,20 +1,21 @@
 ---
-title: "Zephyr RTOS"
-description: "The linux style RTOS for microcontrollers"
+title: Zephyr RTOS
+description: The linux style RTOS for microcontrollers
 date: 2021-02-20T08:00:00+00:00
 lastmod: 2021-02-20T08:00:00+00:00
-weight: 5
-toc: true
+order: 5
 ---
-{{<load-photoswipe >}}
-{{<icon_button relref="/docs/networks/thread/" text="Thread Protocol" >}}
-{{<icon_button relref="/docs/frameworks/chip/" text="Project Matter" >}}
+
+:button[]{link="/docs/networks/thread/" label="Thread Protocol" }
+:button[]{link="/docs/frameworks/chip/" label="Project Matter" }
 
 # Trace with with SystemView
 * [Segger SystemView](https://www.segger.com/products/development-tools/systemview/) : Real time OS Tracing
 * [SystemView user manual](https://www.segger.com/downloads/free-utilities/UM08027) : Getting started, API reference,...
 
-{{<hint warning>}}It's highly recommended to read the SystemView user manual to understand how the RT OS concepts are displayed{{</hint>}}
+:::Caution
+It's highly recommended to read the SystemView user manual to understand how the RT OS concepts are displayed
+:::
 
 Steps :
 * Install SystemView
@@ -40,14 +41,11 @@ CONFIG_SEGGER_SYSVIEW_RTT_BUFFER_SIZE=131072
 * ISR ID Identification : the function `sysview_get_interrupt()` is using `SCB->ICSR VECTACTIVE`
 * not the same as `IRQn_Type` defined in `modules\hal\nordic\nrfx\mdk\nrf52840.h`
 
-{{<table "table table-striped table-bordered">}}
 VECTACTIVE | IRQ
 -----------|-----
 16 | nrf_clock_event_check
 17 | nrf5_radio_irq
 19 | nrfx_twi_0_irq_handler
-
-{{</table>}}
 
 
 # Debug with OZone
@@ -80,7 +78,7 @@ Steps :
 ```
 
 # Windows Install
-{{<icon_button href="https://docs.zephyrproject.org/2.3.0/getting_started/index.html" text="Getting Started details..."  icon="new" >}}
+:button[]{link="https://docs.zephyrproject.org/2.3.0/getting_started/index.html" label="Getting Started details..."  icon="new" }
 
 The details are in the link above, the summary of the step for installing on windows are
 * Installing `choco`
@@ -117,7 +115,7 @@ nrfjprog -f nrf52 --reset
 ```
 ## RTT config
 required configuration to have logs running over the segger j-link RTT (log through the same SWD interface used for programming)
-{{<details "prj.conf">}}
+:::details{summary="prj.conf"}
 ```conf
 CONFIG_GPIO=y
 CONFIG_SERIAL=n
@@ -133,9 +131,9 @@ CONFIG_CONSOLE=y
 CONFIG_UART_CONSOLE=n
 CONFIG_RTT_CONSOLE=y
 ```
-{{</details>}}
+:::
 
-{{<details "main.c">}}
+:::details{summary="main.c"}
 ```C
 #include <zephyr.h>
 #include <logging/log.h>
@@ -150,6 +148,6 @@ void main(void)
 }
 
 ```
-{{</details>}}
+:::
 
-{{<icon_button text="pio zephyr log example" href="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware/pio_zephyr_blink" icon="github">}}
+:button[]{label="pio zephyr log example" link="https://github.com/HomeSmartMesh/nrf52_thread_sensortag/tree/main/firmware/pio_zephyr_blink" icon="github" }

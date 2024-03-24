@@ -170,8 +170,8 @@ Another request
 sm{"uwb_cmd":"twr","initiator":0,"responders":[1,1],"at_ms":100,"step_ms":10,"count":10,"count_ms":50}
 ```
 In the figure below we can see a gpio debug output from the two uwb modules. The initiator is asking the same responder twice, and then repeats the same for x10 times with a period of 50 ms.
-{{<gfigure src="./twr seq x2x10.png" >}}
 
+![twr](./twr%20seq%20x2x10.png)
 
 ### RF Mesh Diagnosis
 * `ping` command and response. The goal is to evaluate the link between the cli and one uid node :
@@ -501,7 +501,9 @@ PANS binary library for nRF52832 module
 * based on `Nordik SDK` version `12.1.0`
 * Used `GNU Tools ARM Embedded` version `5.4 2016q3`
 
-{{<hint warning>}}Although reporting the same firmware version, two UWB commands are missing from the PANS lib `utpg, utps` (transmit power get and set){{</hint>}}
+:::Caution
+Although reporting the same firmware version, two UWB commands are missing from the PANS lib `utpg, utps` (transmit power get and set)
+:::
 
 ### DWM3000
 Software for the [DWM3000 evb](#dwm3000-evb) hardware.
@@ -524,7 +526,9 @@ Transciever driver DW1000 for nRF52
 * based on `Nordik SDK` version `14.2.0`
 * decadriver : `DW1000 Device Driver Version 04.00.06`
 
-{{<hint warning>}}with Embedded studio V5.40, it is required to enable the updated #ifdef for `__putchar` in `retarget.c` line 100{{</hint>}}
+:::Caution
+with Embedded studio V5.40, it is required to enable the updated #ifdef for `__putchar` in `retarget.c` line 100
+:::
 
 ### Variant on top of dwm1001-examples
 

@@ -1,19 +1,17 @@
 ---
-title: "Rover Balance"
-description: "Open source home robot with a double pendulum balance. Targetting the ability to stand up switching from flat mode (car) to the standing mode (balancing robot), on each of its sides. Further dynamic behaviors expected."
+title: Rover Balance
+description: Open source home robot with a double pendulum balance. Targetting the ability to stand up switching from flat mode (car) to the standing mode (balancing robot), on each of its sides. Further dynamic behaviors expected
 date: 2019-02-10T08:00:00+00:00
 lastmod: 2021-03-07T08:00:00+00:00
 draft: false
-images: ["/images/robotics/rover_concept.png" ]
-weight: 1
-toc: true
+image: /images/robotics/rover_concept.png
+order: 1
 ---
-{{<load-svg-pan-zoom>}}
 
 # Overview
-{{<icon_button text="RobLibs Github Organization" href="https://github.com/Roblibs" icon="github" >}}
+:button[]{label="RobLibs Github Organization" link="https://github.com/Roblibs" icon="github" }
 
-{{<image src="/images/robotics/rover_concept.png" >}}
+![rover_concept](/images/robotics/rover_concept.png)
 
 * Open source hobby project, creation of a robot with an original structure that moves in a home environment.
 * The robot structure is a double sided inverted pendulum, with the ability to stand up switching from flat mode (car) to the standing mode (balancing robot), on each of its sides. Further dynamic behaviors to be expected. 
@@ -37,12 +35,12 @@ toc: true
 
 # Simulation
 * intro video to the concept, Joystick controlled to check the possibilities of a multi legged wheeled robot.
-{{<youtube 1Tv4VYB-lmo>}}
+https://youtu.be/1Tv4VYB-lmo
 
 # BLDC control
 * This BLDC control, although running STM32F103C8T6 is a showcase for combined speed and position control of a BLDC motor, the Raspberry pi is only used as a PS4 joystick interface, the STM32 is controlling an L6234D triple H bridge module.
 
-{{<youtube Z7JaMNv-Two>}}
+https://youtu.be/Z7JaMNv-Two
 
 
 # Repository structure
@@ -51,18 +49,16 @@ Gray boxes are git repositories / submodules with html links
 
 
 
-{{<svg-pan-zoom "/design/rover_repo_structure.svg" >}}
+![rover_repo_structure](/design/rover_repo_structure.svg)
 
 # FAQ - Discussion
 If you need support, want to ask a question or suggest an idea, you can join the discussion on the forum
-{{<icon_button text="Home Smart Mesh - Discussions" href="https://github.com/HomeSmartMesh/raspi/discussions" icon="github" >}}
+:button[]{label="Home Smart Mesh - Discussions" link="https://github.com/HomeSmartMesh/raspi/discussions" icon="github" }
 
-{{<faq>}}
-Is this robot ready ?
-<--->
+:::details{summary="Is this robot ready ?"}
 No, this project started in 2019 is currently in slow progress mode and only have concept and simulation. The electronic design is still in progress.
-<===>
-Why not use existing BLDC drivers such as Flipsky ?
-<--->
+:::
+
+:::details{summary="Why not use existing BLDC drivers such as Flipsky ?"}
 Flipsky is overdimensioned in size and in power for driving a small robot.
-{{</faq>}}
+:::
