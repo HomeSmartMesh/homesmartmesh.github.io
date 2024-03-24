@@ -21,6 +21,6 @@ dir: ./shelf
 :button[]{label="Hexagon head screws on amazon" link="https://www.amazon.de/gp/product/B07MJY4SJ3/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1"}
 
 
-[PC Platform](/models/pc_platform.glb)
+[PC Platform](https://raw.githubusercontent.com/HomeSmartMesh/models/main/pc_platform.glb)
 
-:button[]{label="STL Model" link="/models/pc_platform.stl" icon="download"}
+:button[]{label="STL Model" link="https://raw.githubusercontent.com/HomeSmartMesh/models/main/pc_platform.stl" icon="download"}

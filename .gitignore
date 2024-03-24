@@ -1,5 +1,4 @@
 .structure/
-dist/
 public/menu.json
 pnpm-lock.yaml
 

@@ -51,9 +51,9 @@ features:
 ## pogo pin adapter
 * Pogo Pin P75-E2 Dia 1.3mm Length 16.5mm
 
-[Pgogo Adapter](/models/nrf/pogo_adapter_swd.glb)
+[Pgogo Adapter](https://raw.githubusercontent.com/HomeSmartMesh/models/main/nrf/pogo_adapter_swd.glb)
 
-:button[]{label="STL models zip" link="/models/nrf/nRF52840_usb_pogo_top.zip" icon="download"}
+:button[]{label="STL models zip" link="https://raw.githubusercontent.com/HomeSmartMesh/models/main/nrf/nRF52840_usb_pogo_top.zip" icon="download"}
 
 ## micro python
 :button[]{label="build micro python" link="/frameworks/upython/#config" }

@@ -11,9 +11,9 @@ tags: [Light]
 
 ![Dumb to smart](./dumb_to_smart.png)
 
-[Wall Switch](/models/wall_switch.glb)
+[Wall Switch](https://raw.githubusercontent.com/HomeSmartMesh/models/main/wall_switch.glb)
 
-:button[]{label="STL Model" link="/models/switch_cover_switch.stl" icon="download" }
+:button[]{label="STL Model" link="https://raw.githubusercontent.com/HomeSmartMesh/models/main/switch_cover_switch.stl" icon="download" }
 
 ```yaml gallery
 dir: ./wall switch

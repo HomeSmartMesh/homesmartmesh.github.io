@@ -11,9 +11,9 @@ tags: [Electronics]
 
 ![ESP32 Remote](./esp32_remote.png)
 
-[ESP32 Rmote](/models/esp32_remote.glb)
+[ESP32 Rmote](https://raw.githubusercontent.com/HomeSmartMesh/models/main/esp32_remote.glb)
 
-:button[]{ label="STL models zip" link="/models/esp32_remote.zip" icon="download"}
+:button[]{ label="STL models zip" link="https://raw.githubusercontent.com/HomeSmartMesh/models/main/esp32_remote.zip" icon="download"}
 
 # Application
 

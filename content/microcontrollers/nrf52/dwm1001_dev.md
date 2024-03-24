@@ -59,7 +59,7 @@ The product page includes datasheets, schematics, firmware,...
 # 3d printed box for 18650 battery
 ![08a UWB 18650 battery](./uwb_devkit/08a_UWB_18650_battery.png)
 
-:button[]{link="/models/DWM1001-Dev-3dprint-18650.f3d" icon="download" label="Fusion360 model"}
+:button[]{link="https://raw.githubusercontent.com/HomeSmartMesh/models/main/DWM1001-Dev-3dprint-18650.f3d" icon="download" label="Fusion360 model"}
 # Gallery
 
 ```yaml gallery

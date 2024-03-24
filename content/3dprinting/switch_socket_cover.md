@@ -11,9 +11,9 @@ tags: [Light]
 
 ![Cover Switch Socket](./cover_switch_socket.png)
 
-[Wall Switch Double](/models/wall_switch_double.glb)
+[Wall Switch Double](https://raw.githubusercontent.com/HomeSmartMesh/models/main/wall_switch_double.glb)
 
-:button[]{label="STL Model" link="/models/wall_switch_double.stl" icon="download"}
+:button[]{label="STL Model" link="https://raw.githubusercontent.com/HomeSmartMesh/models/main/wall_switch_double.stl" icon="download"}
 
 # Application
 

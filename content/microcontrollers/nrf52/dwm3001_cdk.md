@@ -47,7 +47,7 @@ order: 2
     * Angle precision (for dual antenna) : +/- 10° accuracy, 5° std dev
 
 :button[]{link="https://www.decawave.com/wp-content/uploads/2021/03/DW3000_Datasheet.pdf" icon="pdf" label="DW3000 datasheet"}
-:button[]{link="https://www.decawave.com/wp-content/uploads/2021/05/DW3000-User-Manual.pdf" icon="pdf" label="DW3000 user manual"}
+:button[]{link="https://www.decawave.com/wp-content/uploads/2021/05/DW3000-User-Manual-1.pdf" icon="pdf" label="DW3000 user manual"}
 
 :button[]{link="https://www.firaconsortium.org/news/press-releases/2020/05/fira-consortium-publishes-uwb-mac-technical-requirements-to-build-ultrawideband-interoperable-ecosystem" icon="new" label="FiRa"}
 

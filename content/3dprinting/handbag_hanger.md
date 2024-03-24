@@ -11,6 +11,6 @@ tags: [home]
 
 ![Handbag carrier](./handbag%20carrier.jpg)
 
-[Handbag hanger](/models/handbag_hanger.glb)
+[Handbag hanger](https://raw.githubusercontent.com/HomeSmartMesh/models/main/handbag_hanger.glb)
 
-:button[]{label="STL Model" link="/models/Hang bag v2.stl" icon="download" }
+:button[]{label="STL Model" link="https://raw.githubusercontent.com/HomeSmartMesh/models/main/Hang%20bag%20v2.stl" icon="download" }

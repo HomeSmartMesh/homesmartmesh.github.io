@@ -13,21 +13,21 @@ image: ./Voronoi cells.jpg
 
 ![Voronoi cells](./Voronoi%20cells.jpg)
 
-[Cells circle](/models/cells_circle.glb)
-:button[]{label="STL Model" link="/models/cells_circle.stl"  icon="download" }
+[Cells circle](https://raw.githubusercontent.com/HomeSmartMesh/models/main/cells_circle.glb)
+:button[]{label="STL Model" link="https://raw.githubusercontent.com/HomeSmartMesh/models/main/cells_circle.stl"  icon="download" }
 
 ## Fantasy pen holder
 
-[Fantasy Pen holder](/models/fantasy_pen_holder.glb)
-:button[]{label="STL Model" link="/models/fantasy_pen_holder.stl"  icon="download" }
+[Fantasy Pen holder](https://raw.githubusercontent.com/HomeSmartMesh/models/main/fantasy_pen_holder.glb)
+:button[]{label="STL Model" link="https://raw.githubusercontent.com/HomeSmartMesh/models/main/fantasy_pen_holder.stl"  icon="download" }
 
 ## Fantasy Turtle Flower
 
-[turtle Flower](/models/trtl_flower.glb)
-:button[]{label="STL Model" link="/models/trtl_flower.stl"  icon="download" }
+[turtle Flower](https://raw.githubusercontent.com/HomeSmartMesh/models/main/trtl_flower.glb)
+:button[]{label="STL Model" link="https://raw.githubusercontent.com/HomeSmartMesh/models/main/trtl_flower.stl"  icon="download" }
 
 ## Girafe round
 
-[girafe round](/models/girafe_round.glb)
-:button[]{label="STL Model" link="/models/girafe_round.stl"  icon="download" }
+[girafe round](https://raw.githubusercontent.com/HomeSmartMesh/models/main/girafe_round.glb)
+:button[]{label="STL Model" link="https://raw.githubusercontent.com/HomeSmartMesh/models/main/girafe_round.stl"  icon="download" }
 

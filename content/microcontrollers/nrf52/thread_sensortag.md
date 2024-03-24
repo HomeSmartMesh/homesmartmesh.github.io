@@ -75,9 +75,9 @@ features:
 * SWD pogo pins adapter
 * Pogo Pin P75-E2 Dia 1.3mm Length 16.5mm
 
-:button[]{label="STL Model" link="/models/thread4_lower.stl" icon="download" }
+:button[]{label="STL Model" link="https://raw.githubusercontent.com/HomeSmartMesh/models/main/thread4_lower.stl" icon="download" }
 
-[Pogo pin adapter](/models/thread4_lower.glb)
+[Pogo pin adapter](https://raw.githubusercontent.com/HomeSmartMesh/models/main/thread4_lower.glb)
 
 ```yaml
 dir: ./swd-pogo
