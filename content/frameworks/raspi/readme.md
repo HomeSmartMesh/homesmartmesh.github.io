@@ -18,8 +18,7 @@ features:
 # Home Webapp
 This `mobile first` webapp from the [web/home-next](https://github.com/HomeSmartMesh/raspi/tree/master/web/home-next) directory is based on [next.js](https://nextjs.org/), [react](https://reactjs.org/), [Material UI](https://mui.com/) and [MQTT.js](https://github.com/mqttjs/MQTT.js#readme). All of the features are running on a raspberry pi as a server with services from a deployed instance of this repo.
 
-<image src="/images/home-next.gif" />
-
+![home next](/images/home-next.gif)
 
 * The Heat panel controls the temperature with `Eurotronics` Zigbee valves running on [Zigbee2mqtt](https://zigbee2mqtt.io/). The room humidity is also shown from [nRF custom sensors](https://github.com/nRFMesh/nRF52_Mesh)
 * The sound panel controls sonos system to switch it on and off through `Tuya` smart sockets, and it controls the volume through [node-sonos-http-api](https://github.com/jishi/node-sonos-http-api). The sockets can also be controlled with an `Aqara` button.
@@ -29,7 +28,7 @@ This `mobile first` webapp from the [web/home-next](https://github.com/HomeSmart
 
 
 # Hardware
-<img src="/images/devices.png" width="600" />
+:image[]{src="/images/devices.png" width="600" }
 
 * Thread
   * See [Thread SensorTag](/docs/microcontrollers/nrf52/thread_sensortag/)
@@ -49,7 +48,7 @@ This `mobile first` webapp from the [web/home-next](https://github.com/HomeSmart
   * bed heating [github esp32_iot bed_heater](https://github.com/HomeSmartMesh/esp32_iot/tree/master/bed_heater)
 
 # Software
-<img src="/images/software.png" width="600" />
+:image[]{src="/images/software.png" width="600" }
 
 * Raspbian OS
 * Base services
@@ -80,60 +79,62 @@ This `mobile first` webapp from the [web/home-next](https://github.com/HomeSmart
 
 ## raspberry pi setup
 It is not necessary but recommended to perform the install on a new sd card image, that is how these scripts have been tested.
-  <details title="Image creation and ssh connection" >
-  1. download an os from https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit tested with `2021-05-07-raspios-buster-armhf-lite.img`
 
-  2. use the Raspberry pi Imager tool to write the image. The tool is available from https://www.raspberrypi.org/software/
+:::details{summary="Image creation and ssh connection"}
+1. download an os from https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit tested with `2021-05-07-raspios-buster-armhf-lite.img`
 
-  3. eject, then reinsert the sdcard, write a file on root named `ssh` without extensions
-    **Optional**: Enable WiFi"
-      Create a file called `wpa_supplicant.conf` on root
-      ```
-        country=US # Your 2-digit country code
-        ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-        network={
-            ssid="YOUR_NETWORK_NAME"
-            psk="YOUR_PASSWORD"
-            key_mgmt=WPA-PSK
-        }
-      ```
+2. use the Raspberry pi Imager tool to write the image. The tool is available from https://www.raspberrypi.org/software/
 
-  4. connect through ethernet, identify the ip from the router connect through ssh with `pi` and pw `raspberry`. 
-  In case the same raspberry pi was already known under a different host, make sure to delete it from `~/.ssh/known_hosts`.
-  </details>
+3. eject, then reinsert the sdcard, write a file on root named `ssh` without extensions
+  **Optional**: Enable WiFi"
+    Create a file called `wpa_supplicant.conf` on root
+    ```
+      country=US # Your 2-digit country code
+      ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+      network={
+          ssid="YOUR_NETWORK_NAME"
+          psk="YOUR_PASSWORD"
+          key_mgmt=WPA-PSK
+      }
+    ```
+
+4. connect through ethernet, identify the ip from the router connect through ssh with `pi` and pw `raspberry`. 
+In case the same raspberry pi was already known under a different host, make sure to delete it from `~/.ssh/known_hosts`.
+:::
 
 1. download and run the `get_raspi.sh` with the following commands
     ```shell
     curl https://raw.githubusercontent.com/HomeSmartMesh/raspi/master/get_raspi.sh -o get_raspi.sh && sudo bash get_raspi.sh
     ```
-  <details title="Script Details" >
-  The `get_raspi.sh` script will run the following
-  * `apt-get update` and `apt-get upgrade` with auto-confirmation `-y` option
-  * install git if not available
-  * clone the raspi_iot repo
-  * run the `raspi/setup.sh` script
-  </details>
+:::details{summary="Script Details"}
+The `get_raspi.sh` script will run the following
+* `apt-get update` and `apt-get upgrade` with auto-confirmation `-y` option
+* install git if not available
+* clone the raspi_iot repo
+* run the `raspi/setup.sh` script
+:::
 
 2. the setup script will need to be relaunched every time the raspi reboots (2 times)
     ```shell
     cd raspi
     sudo bash setup.sh
     ```
-  <details title="Script Details" >
-  The `raspi/setup.sh` script will run the following
-  * check if `docker` is available otherwise install it
-  * check if `docker-compose` is available otherwise install it
-  * check if `openthread` is available otherwise install it
-  * if any or all of the services above were install a reboot will be performed before continuing, in which case the script has to be run again manually
-  * when the script is run and all of the above services are availalble, the script will proceed with the last step of launching the `setup_thread_services.sh`
+:::details{summary="Script Details"}
+The `raspi/setup.sh` script will run the following
+* check if `docker` is available otherwise install it
+* check if `docker-compose` is available otherwise install it
+* check if `openthread` is available otherwise install it
+* if any or all of the services above were install a reboot will be performed before continuing, in which case the script has to be run again manually
+* when the script is run and all of the above services are availalble, the script will proceed with the last step of launching the `setup_thread_services.sh`
 
-  The `setup_thread_services.sh` script will perform the following
-  * start the docker compose file that includes docker images for `mosquitto`, `influx` and `grafana`
-    * the grafana container have the config and provisioning mapped from the raspi `grafana` directory
-    * the grafana has porivioned the databse `mqtt` from `http://localhost:8086`
-  * install the `influx_mqtt` which is an mqtt to influx python service, then creates an influx databse named `mqtt`
-  * install the `thread_tags` udp-v6 to mqtt python service
-  </details>
+The `setup_thread_services.sh` script will perform the following
+* start the docker compose file that includes docker images for `mosquitto`, `influx` and `grafana`
+  * the grafana container have the config and provisioning mapped from the raspi `grafana` directory
+  * the grafana has porivioned the databse `mqtt` from `http://localhost:8086`
+* install the `influx_mqtt` which is an mqtt to influx python service, then creates an influx databse named `mqtt`
+* install the `thread_tags` udp-v6 to mqtt python service
+:::
+
 ### Openthread Network Configuration
 * discover the raspi ip address from the router (will be used to replace `<raspi_ip>`) then navigate on a browser on `http://<raspi_ip>`, the OT Border Router web GUI should appear. Use it to form a network e.g. (channel 18, panid 0x4412,...). Make sure that the same parameters are used in the thread sensor tag firmware.
 
@@ -144,9 +145,9 @@ It is not necessary but recommended to perform the install on a new sd card imag
 ## Main Webapp
 see [Home Webapp](#home-webapp) above.
 ## Meta website
-<img src="/images/meta_website.png" width="100%" />
+[meta website](/images/meta_website.png)
 
-< my_button href="https://github.com/HomeSmartMesh/raspi/tree/master/web/overview" text="website source code" >
+:button[]{link="https://github.com/HomeSmartMesh/raspi/tree/master/web/overview" label="website source code"}
 
 ### What is it ?
 * Hugo : a website as easy to customise as writing markdown
@@ -156,30 +157,30 @@ see [Home Webapp](#home-webapp) above.
 ### How does it work ?
 * create a new file : `homeassistant.md`
 
-<img src="/images/hugo_md_file.png" width="200" />
+:image[]{src="/images/hugo_md_file.png" width="200" }
 
 * call `hugo server` to test or `hugo` to generate the website (more details on [using hugo](https://gohugo.io/getting-started/))
 * this will already create a new menu entry
 
-<img src="/images/hugo_menu.png" width="200" />
+:image[]{src="/images/hugo_menu.png" width="200" }
 
 * Fill it with the link to your webapp instance
 
-<img src="/images/hugo_markdown.png" width="400" />
+:image[]{src="/images/hugo_markdown.png" width="400" }
 
 * `weight` : defines the order in the menu entry
 * `title` : The text that will appear on the menu entry
 * `BookToC` : Table Of Content not required so that the iframe can be wider
 * `... iframe...` : call of the `iframe` html shortcode file that has been added in the `layouts\shortcodes` directory
 
-<img src="/images/hugo_shortcodes.png" width="200" />
+:image[]{src="/images/hugo_shortcodes.png" width="200" }
 
 ### Demo video
 
-<youtube OUtunnrMKI4 />
+`<youtube OUtunnrMKI4 />`
 
 ## Smart home 3D webapp
-<img src="/images/floor_temperature.png" width="600" />
+:image[]{src="./floor_temperature.png" width="600" }
 
 Attempt to unify interfaces in one app. Result is quite a success though requires a beast GPU and quite some effort to arrange 3D details and camera positioning to get a nice user experiance out of it.
 * Has it's own github repo : https://github.com/HomeSmartMesh/smart_home_3d_webapp
@@ -188,20 +189,21 @@ Attempt to unify interfaces in one app. Result is quite a success though require
 
 ## thread tags
 
-<gfigure src="/images/thread_sensortag/application.png" />
+![Applications](/images/thread_sensortag/application.png)
 
 this python script listens to an ipv6 udp port and takes a text in the form of `mqtt_topic{json_payload}` then broadcasts the `json_payload` on the `mqtt_topic` of the configured mqtt broquer in the [config.json]() file
 
 usage with a thread sensor gag
-<button relref="/docs/microcontrollers/nrf52/thread_sensortag#tag_sensors_broadcast">tag sensors broadcast</button>
+:button[]{link="/docs/microcontrollers/nrf52/thread_sensortag#tag_sensors_broadcast" label="tag sensors broadcast"}
+
 
 ## Led Panel webapp
-<img src="/images/led_panel_app.jpg" width="600" />
-<img src="/images/ledpanel.jpg" width="600" />
+:image[]{src="/images/led_panel_app.jpg" width="600" }
+:image[]{src="/images/ledpanel.jpg" width="600" }
 
 * Hackaday project : https://hackaday.io/project/162825-neopixels-animations-on-esp32-mqtt-json-webapp
 
-<youtube url="LMJBS6VYZzk" />
+`<youtube url="LMJBS6VYZzk" />`
 
 
 ## mqtt2influx
@@ -250,7 +252,7 @@ Features :
 
 ### web heat control
 
-<img src="/images/demo.gif" width="600" />
+:image[]{src="/images/demo.gif" width="600" }
 
 The control of the heating has a feedback that ensures the execution of the command. The green displayed numbers represent the time since the last status of the zigbee device. Once a slider is modified and a command is sent, a feedback shall be received within few seconds and the time since last message should drop to `0 mn`
 
@@ -298,12 +300,12 @@ zig/living heat {
 - on release working : https://codepen.io/mhartington/pen/HKGno
 
 ## Bed Heating app
-<img src="/images/bed_heating.png" width="400" />
+:image[]{src="/images/bed_heating.png" width="400" }
 
 * web app : [js/bed_heater](./js/bed_heating/)
 
 ### Bed Heating hardware
-<img src="/images/esp_32_bed_heater.png" width="200" />
+:image[]{src="/images/esp_32_bed_heater.png" width="200" }
 
 * ESP32 firmware : [github esp32_iot bed_heater](https://github.com/HomeSmartMesh/esp32_iot/tree/master/bed_heater)
 * using a Shelly 1 pm : https://shelly.cloud/shelly-1pm-wifi-smart-relay-home-automation/
@@ -311,23 +313,23 @@ zig/living heat {
 * A Solid state relay
 
 ## Roborock chat
-<img src="/images/hover_chat.png" width="600" />
+:image[]{src="/images/hover_chat.png" width="600" }
 
 * using the amazing node.js telegraf framework : https://github.com/telegraf/telegraf
 * Roborock Chat : [js/telegraf/hover_poll.js](./js/telegraf/hover_poll.js)
 
 ## Hue Light control
 
-<img src="/images/aqara hue zigbee.png" />
+![Aqara Hue Zigbee](/images/aqara hue zigbee.png)
 
 * Controls all the Hue light bulbs from Aquara sensor switches using the [HUE rest API](https://developers.meethue.com/develop/get-started-2/)
 * custom functions
   * Long press for minimal dimming
   * Toggle on of or Toggle dim states
 
-<new_button href="https://github.com/HomeSmartMesh/raspi/tree/master/py/hue" text="hue ruler service (Github repo)" />
+:button[]{link="https://github.com/HomeSmartMesh/raspi/tree/master/py/hue" label="hue ruler service (Github repo)"}
 
-<details title="Config example. Click for details..." >
+:::details{summary="Config example. Click for details..."} 
 ```json
 {  
     "bridges":{
@@ -375,12 +377,11 @@ zig/living heat {
     }
 }
 ```
-</details>
+:::
 
-<img src="/images/3dprinting/dumb_to_smart.png" width="600" />
-<button relref="/docs/3dprinting/light"> 3D print a Smart Switch Cover </button>
+:image[]{src="./dumb_to_smart.png" width="600"}
 
-
+:button[]{link="/3dprinting/light-switch-cover/" label="3D print a Smart Switch Cover"}
 
 ## Phantom Load cut
 * Some home devices especially device clusters such as TV sets and surroundings or PC and surroundings do have a significant cumulated power usage when in a standby mode.
@@ -397,7 +398,7 @@ zig/living heat {
 
 ## Heat cut
 
-<img src="/images/heat_windows.png" width="600" />
+:image[]{src="/images/heat_windows.png" width="600"}
 
 * Hackaday page : [Aquara and Eurotronics hand in hand to save energy](https://hackaday.io/project/124114-nrf5-custom-mesh-network/log/168774-aqara-and-eurotronics-hand-in-hand-to-save-energy)
 
@@ -407,8 +408,8 @@ zig/living heat {
 * Python service : [py/heating](./py/heating)
 
 ## Home status
-<img src="/images/shelly_status.png" width="150" />
-<img src="/images/home_status.png" />
+:image[]{src="/images/shelly_status.png" width="150"}
+![Home Status](/images/home_status.png)
 
 < new_button href="https://github.com/HomeSmartMesh/raspi/tree/master/py/home_status" text="home status service (Github repo)" >
 
@@ -421,7 +422,7 @@ zig/living heat {
 How does this work. In a controlled environemnt where the wifi is reliable, there is no need for wifi status as it is always on. Therefore the led status disable function can be re-used for another purpose. This provide the nicest integration of led status including power supply, mqtt connection without even blocking the socket for other usage.
 
 Below are the control URLs to turn led color on and off
-< details title="json Config example. Click for details..." >
+:::details{summary="json Config example. Click for details..."}
 ```json
     "status":{
         "red":{
@@ -434,12 +435,10 @@ Below are the control URLs to turn led color on and off
         }
     }
 ```
-< /details>
+:::
 
-<img src="/images/3dprinting/cover_switch_socket.png" width="400" />
-<button relref="/docs/3dprinting/light_socket"> 3D print a Switch and Socket Cover </button>
-
-
+:image[]{src="./cover_switch_socket.png" width="400" }
+:button[]{link="/3dprinting/light-switch-cover/" label="3D print a Light Switch Cover"}
 
 ## Roborock button
 As Roborock [valetudo](https://github.com/Hypfer/Valetudo) provides an mqtt interface, all it takes is this script [py/hover](./py/hover) to order cleaning of a room or a section with a click on an aquara zigbee button.
@@ -448,19 +447,19 @@ As Roborock [valetudo](https://github.com/Hypfer/Valetudo) provides an mqtt inte
 ### graphview
 * Github repo directory
 
-<icon_button href="https://github.com/HomeSmartMesh/raspi/tree/master/zigbee/graph_view" text="zigbee/graph_view" icon="github" />
+:button[]{link="https://github.com/HomeSmartMesh/raspi/tree/master/zigbee/graph_view" label="zigbee/graph_view" icon="github"}
 
 * js library used to generate SVG from graph
 
-<icon_button href="https://github.com/magjac/d3-graphviz" text="d3-graphviz" icon="github" />
+:button[]{link="https://github.com/magjac/d3-graphviz" label="d3-graphviz" icon="github" }
 
 * the js library is a port of the graphviz project
 
-<icon_button href="https://graphviz.org/" text="graphviz" icon="github" />
+:button[]{link="https://graphviz.org/" label="graphviz" icon="github" }
 
 * An alternative that is also configure in this project's docker-compose file is to use Zigbee2Mqtt-Assistant which in addition to providing a nice devices listing and control also offers a graph view of the network
 
-<icon_button href="https://github.com/yllibed/Zigbee2MqttAssistant" text="Zigbee2MqttAssistant" icon="github" />
+:button[]{link="https://github.com/yllibed/Zigbee2MqttAssistant" label="Zigbee2MqttAssistant" icon="github" }
 ### zigbee2mqtt
 * bind usb device to a static name, failure to do so can result on occasional total failure where usb devices gets mixed and none of them can operate
 * hints from [stackexchange post](https://unix.stackexchange.com/questions/66901/how-to-bind-usb-device-under-a-static-name)
@@ -483,7 +482,7 @@ references
 * [stackexchange - post](https://unix.stackexchange.com/questions/66901/how-to-bind-usb-device-under-a-static-name)
 
 ### Gif Demo
-<img src="/images/zig_demo.gif" width="600" />
+:image[]{src="/images/zig_demo.gif" width="600" }
 
 ### Features
 * configurable ip, port and mqtt base name
@@ -493,7 +492,7 @@ references
 * logging : `js/log.io/server.json`https://github.com/NarrativeScience/log.io
 * transport-browserconsole https://www.npmjs.com/package/winston-transport-browserconsole
 
-# Safety warning
+# Safety notice
 * Power Sockets have deadly voltage and should not be self altered
 * Usage of certified products such as Shelly or others is recommended for any high voltage product
 * hacking custom scripts to control equipment might improve safety in case you add power cut off to a lower power for each section and device, but might also alter your food if your fridge inadvertantly goes off due to a wrong configuration
@@ -503,10 +502,9 @@ references
 
 # FAQ - Discussion
 * If you need support, want to ask a question or suggest a different answer, you can join the discussion on the github forum
-<icon_button text="Home Smart Mesh - Discussions" href="https://github.com/HomeSmartMesh/raspi/discussions" icon="github" />
+:button{label="Home Smart Mesh - Discussions" link="https://github.com/HomeSmartMesh/raspi/discussions" icon="github" }
 
-<faq>
-how does the Raspi-IoT framework compare to existing frameworks like home assistant or OpenHAB
+:::details{summary="how does the Raspi-IoT framework compare to existing frameworks like home assistant or OpenHAB"}
 
 Raspi-IoT is intended for developpers that prefer to stick to standard scripting like Python or Node.js and would like to use a minimalistic framework where everything can be debugged with standard tools, and also for sutdents and startups who would like to understand the underlaying techniques of home automation and IoT in order to create their own projects or products.
-</faq>
+:::
