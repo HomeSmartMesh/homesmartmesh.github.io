@@ -1,0 +1,29 @@
+---
+import Kroki from './Kroki.astro'
+import kroki from './kroki.yaml'
+import {join} from 'path'
+import {config} from '@/config.js'
+import {readFile} from 'fs/promises'
+
+export interface Props {
+    ext: string;
+    url: string;
+    dirpath: string;
+}
+
+const { ext, url, dirpath } = Astro.props as Props;
+
+let language = ""
+let code = ""
+const params = []
+
+const is_kroki = Object.keys(kroki.formats).includes(ext)
+if(is_kroki){
+    language = kroki.formats[ext]
+    const abs_file = join(config.content_path,dirpath,url)
+    code = await readFile(abs_file,'utf-8')
+}
+---
+{(is_kroki)&&
+    <Kroki language={language} code={code} params={params} />
+}

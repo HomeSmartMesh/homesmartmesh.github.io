@@ -1,5 +1,5 @@
 ---
-title : Smart Home Hardware Software Development
+title: Home
 description: Home Automation Frameworks, Microcontrollers, Wireless Networks, Applications, with tutorials and references to the documentation of protocol standards and hardware manufacturers
 date: 2020-10-06T08:48:23+00:00
 lastmod: 2021-02-14T08:00:00+00:00

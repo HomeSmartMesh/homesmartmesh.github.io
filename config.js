@@ -7,8 +7,8 @@ const rootdir = process.cwd()
 
 const outdir = (process.env.OUT_DIR==null)?"dist":process.env.OUT_DIR
 const base = (process.env.PUBLIC_BASE==null)?"":process.env.PUBLIC_BASE
-const contentdir = join(rootdir,"content")
-const structuredir = join(rootdir,".structure")
+const structuredir = (process.env.STRUCTURE==null)?join(rootdir,".structure"):process.env.STRUCTURE
+const contentdir = (process.env.CONTENT==null)?join(rootdir,"content"):process.env.CONTENT
 
 const config = {
     rootdir: rootdir,
@@ -16,7 +16,6 @@ const config = {
     base: base,
     content_path: contentdir,
     code_path: `${rootdir}/${outdir}/codes`,
-    plantuml_server: "https://www.plantuml.com/plantuml/svg",
     kroki_server: "https://kroki.io",
     client_menu:true,
     highlighter:{
@@ -32,8 +31,8 @@ config.collect_content = {
     rootdir:config.rootdir,
     contentdir:contentdir,
     content_ext:["md"],
-    assets_ext:["svg","webp","png","jpeg","jpg","xlsx","glb","hdr","ico"],
-    outdir:structuredir,
+    assets_ext:["svg","webp","png","jpeg","jpg","xlsx","glb","hdr","ico","puml"],
+    outdir:structuredir,//dist does not persist before build
     out_menu:"public/menu.json",//used by src\layout\client_nav_menu.js
     debug:false
 }
