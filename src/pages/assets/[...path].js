@@ -2,7 +2,7 @@ import { createReadStream } from 'fs';
 import {resolve,join} from 'path'
 import { config } from "@/config";
 import {load_json_abs} from '@/libs/utils.js'
-import {file_mime} from '@/libs/assets.js'
+import {exists, file_mime} from '@/libs/assets.js'
 import {remove_base} from '@/libs/assets.js'
 
 export async function GET({params}){
@@ -14,7 +14,16 @@ export async function GET({params}){
         imagePath = resolve(join(config.rootdir,"public",params.path));
     }
     imagePath = remove_base(imagePath)
-    console.log(`assets> serving '${imagePath}'`)
+    //due to a markdown limitation, abs assets are stripped of starting '/' in linux
+    //workaround : if the file does not exist, then try the public
+    if(! await exists(imagePath)){
+        imagePath = resolve(join(config.rootdir,"public",params.path));
+    }
+    if(! await exists(imagePath)){
+        console.log(`\nassets> * NOT FOUND ${params.path}`)
+    }else{
+        console.log(`\nassets> serving '${imagePath}'`)
+    }
     try {
         const stream = createReadStream(imagePath);
         const contentType = file_mime(imagePath)
