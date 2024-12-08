@@ -1,29 +1,24 @@
-import { createReadStream } from 'fs';
+import { createReadStream } from 'fs'
 import {resolve,join} from 'path'
-import { config } from "@/config";
+import { config } from '@/config'
 import {load_json_abs} from '@/libs/utils.js'
-import {exists, file_mime} from '@/libs/assets.js'
+import {file_mime} from '@/libs/assets.js'
 import {remove_base} from '@/libs/assets.js'
 
-export async function GET({params}){
+export async function GET({params,props}){
     if(config.copy_assets){
         return new Response('Not supported and not needed with copy_assets = true', { status: 404 });
     }
+    console.log(`\nassets> props.asset.path '${props.asset.path}'`)
     let imagePath = resolve(join(config.content_path,params.path));
-    if(params.path.startsWith("/")){
-        imagePath = resolve(join(config.rootdir,"public",params.path));
-    }
     imagePath = remove_base(imagePath)
-    //due to a markdown limitation, abs assets are stripped of starting '/' in linux
-    //workaround : if the file does not exist, then try the public
-    if(! await exists(imagePath)){
-        imagePath = resolve(join(config.rootdir,"public",params.path));
+    if(props.asset.path.startsWith("/")){
+        const asset = props.asset
+        if(asset.exists){
+            imagePath = asset.abs_path
+        }
     }
-    if(! await exists(imagePath)){
-        console.log(`\nassets> * NOT FOUND ${params.path}`)
-    }else{
-        console.log(`\nassets> serving '${imagePath}'`)
-    }
+    console.log(`assets> serving '${imagePath}'`)
     try {
         const stream = createReadStream(imagePath);
         const contentType = file_mime(imagePath)
@@ -42,10 +37,13 @@ export async function getStaticPaths(){
     }
 
     const asset_list = await load_json_abs(join(config.collect_content.outdir,'asset_list.json'))
-    const paths = asset_list.filter((asset)=>(
+    const assets = asset_list.filter((asset)=>(
         ((asset.type != "link") && (Object.hasOwn(asset,"path"))) ||
         ((asset.type == "link") && (!asset.external) && asset.filter_ext))
-    ).map((entry)=>(entry.path))
-    console.log(`serving API endpoit ${paths.length} assets`)
-    return paths.map((path)=>({params:{path:path}}))
+    ).map((entry)=>(entry))
+    console.log(`serving API endpoit ${assets.length} assets`)
+    return assets.map((asset)=>({
+        params:{path:asset.path},
+        props:{asset}
+    }))
 }
