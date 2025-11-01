@@ -26,7 +26,12 @@ const { src, title} = Astro.props as Props;
 </model-viewer>
 
 <script>
-  import '@google/model-viewer';
+  // Load the heavy model-viewer library only when a <model-viewer> tag exists on the page
+  if (typeof window !== 'undefined' && !customElements.get('model-viewer')) {
+    if (document.querySelector('model-viewer')) {
+      import('@google/model-viewer');
+    }
+  }
 </script>
 
 <style>
