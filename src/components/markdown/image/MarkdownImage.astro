@@ -3,7 +3,7 @@ import {relAssetToUrl} from '@/libs/assets.js'
 import Panzoom from '@/components/panzoom/panzoom.astro'
 
 export interface Props {
-    node: object;
+    node: any;
     dirpath: string;
 }
 
@@ -14,4 +14,4 @@ console.log(`url / dirpath = ${url} / ${dirpath}`)
 const asseturl = await relAssetToUrl(url, dirpath)
 console.log(`asseturl = ${asseturl}`)
 ---
-<Panzoom src={asseturl} alt={alt} title={title} />
+<Panzoom src={asseturl} alt={alt} title={title} dirpath={dirpath} rel={url} />

@@ -1,6 +1,6 @@
 ---
-import { relAssetToUrl, relAssetToPath } from '../../libs/assets.js'
 import { exists } from '../../libs/utils.js'
+import { config } from '../../../config.js'
 
 export interface Props {
   src: string; // URL to original image
@@ -34,32 +34,38 @@ const {
 
 // Determine candidate target widths based on original dimensions
 const originalW = width ?? 0;
-const candidateWidths: number[] = [];
-if (originalW > 1280) candidateWidths.push(640);
-if (originalW > 640) candidateWidths.push(320);
+let candidateWidths: number[] = [];
+if (originalW > 0) {
+  if (originalW > 1280) candidateWidths.push(640);
+  if (originalW > 640) candidateWidths.push(320);
+} else {
+  // If original width is unknown, optimistically probe common sizes
+  candidateWidths = [640, 320];
+}
 
 // Map rel (inside dirpath) to sizes path: first segment gets _sizes suffix
-function toSizesRel(relPath: string): { dirRel: string; name: string } {
-  const normalized = relPath.replaceAll('\\', '/');
-  const parts = normalized.split('/');
-  const firstSeg = parts.shift() || '';
-  const rest = parts.join('/');
-  const sizesRoot = `${firstSeg}_sizes`;
-  const name = (rest ? rest.split('/').pop() : firstSeg).split('.').slice(0, -1).join('.') || (rest ? rest.split('/').pop() : firstSeg);
-  const dirOnly = rest ? rest.split('/').slice(0, -1).join('/') : '';
-  const dirRel = dirOnly ? `${sizesRoot}/${dirOnly}` : sizesRoot;
-  return { dirRel, name };
+// Build public/images relative dir and base name from dirpath + rel
+function getImageRelParts(dirpath: string, relPath: string): { dirRel: string; name: string } {
+  const relNorm = relPath.replaceAll('\\','/');
+  const dirNorm = dirpath.replaceAll('\\','/');
+  const lastSlash = relNorm.lastIndexOf('/');
+  const relDir = lastSlash >= 0 ? relNorm.slice(0, lastSlash) : '';
+  const file = lastSlash >= 0 ? relNorm.slice(lastSlash + 1) : relNorm;
+  const dot = file.lastIndexOf('.');
+  const base = dot >= 0 ? file.slice(0, dot) : file;
+  const dirRel = relDir ? `${dirNorm}/${relDir}` : dirNorm;
+  return { dirRel, name: base };
 }
 
 // Probe filesystem for available WebP variants and build srcset
 const variants: Array<{ w: number; url: string }> = [];
 if (candidateWidths.length && rel) {
-  const { dirRel, name } = toSizesRel(rel);
+  const { dirRel, name } = getImageRelParts(dirpath, rel);
   for (const w of candidateWidths.sort((a,b)=>a-b)) {
-    const relCandidate = `${dirRel}/${name}-${w}.webp`;
-    const absCandidate = relAssetToPath(relCandidate, dirpath);
+    const relInImages = `${dirRel ? dirRel + '/' : ''}${name}-${w}.webp`;
+    const absCandidate = `${config.rootdir}/public/images/${relInImages}`.replaceAll('\\','/');
     if (await exists(absCandidate)) {
-      const url = await relAssetToUrl(relCandidate, dirpath);
+      const url = `${config.base}/images/${relInImages}`.replaceAll('\\','/');
       variants.push({ w, url });
     }
   }

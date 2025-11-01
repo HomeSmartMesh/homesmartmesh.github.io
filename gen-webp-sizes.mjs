@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
+import { config } from './config.js';
 
 const IMG_EXTS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.tif', '.tiff', '.bmp']);
 
@@ -11,12 +12,12 @@ function parseArgs(argv) {
     if (a.startsWith('--quality=')) opts.quality = Number(a.split('=')[1]) || 75;
     else args.push(a);
   }
-  if (args.length < 2) {
-    console.error('Usage: node gen-webp-sizes.mjs <inputDir> <outputDir> [--quality=75]');
+  if (args.length < 1) {
+    console.error('Usage: node gen-webp-sizes.mjs <inputDirInsideContent> [--quality=75]');
     process.exit(1);
   }
-  const [inputDir, outputDir] = args.map(p => path.resolve(p));
-  return { inputDir, outputDir, ...opts };
+  const inputDir = path.resolve(args[0]);
+  return { inputDir, ...opts };
 }
 
 async function ensureDir(dir) {
@@ -49,10 +50,10 @@ function targetWidthsFor(originalWidth) {
   return targets;
 }
 
-function outPathFor(inputDir, outputDir, absFile, width) {
-  const rel = path.relative(inputDir, absFile);
-  const { dir, name } = path.parse(rel);
-  const outDir = path.join(outputDir, dir);
+function outPathFor(contentRoot, imagesRoot, absFile, width) {
+  const relFromContent = path.relative(contentRoot, absFile);
+  const { dir, name } = path.parse(relFromContent);
+  const outDir = path.join(imagesRoot, dir);
   const outFile = path.join(outDir, `${name}-${width}.webp`);
   return { outDir, outFile };
 }
@@ -67,7 +68,7 @@ async function fileNewerOrEqual(a, b) {
   }
 }
 
-async function processImage(absIn, inputDir, outputDir, quality) {
+async function processImage(absIn, contentRoot, imagesRoot, quality) {
   const buf = await fs.readFile(absIn);
   const img = sharp(buf).rotate(); // honor EXIF orientation
   const meta = await img.metadata();
@@ -79,7 +80,7 @@ async function processImage(absIn, inputDir, outputDir, quality) {
   let created = 0;
   await Promise.all(
     targets.map(async (w) => {
-      const { outDir, outFile } = outPathFor(inputDir, outputDir, absIn, w);
+      const { outDir, outFile } = outPathFor(contentRoot, imagesRoot, absIn, w);
       await ensureDir(outDir);
 
       // Skip if up-to-date
@@ -92,7 +93,7 @@ async function processImage(absIn, inputDir, outputDir, quality) {
         .toFile(outFile);
 
       created += 1;
-      console.log(`✓ ${path.relative(inputDir, absIn)} -> ${path.relative(outputDir, outFile)}`);
+      console.log(`✓ ${path.relative(contentRoot, absIn)} -> ${path.relative(imagesRoot, outFile)}`);
     })
   );
 
@@ -100,15 +101,26 @@ async function processImage(absIn, inputDir, outputDir, quality) {
 }
 
 async function main() {
-  const { inputDir, outputDir, quality } = parseArgs(process.argv);
-  await ensureDir(outputDir);
+  const { inputDir, quality } = parseArgs(process.argv);
+
+  const contentRoot = path.resolve(config.content_path);
+  const imagesRoot = path.join(config.rootdir, 'public', 'images');
+
+  const normInput = inputDir.replaceAll('\\','/');
+  const normContent = contentRoot.replaceAll('\\','/');
+  if (!normInput.startsWith(normContent)) {
+    console.error(`Input directory must be inside content root: ${contentRoot}`);
+    process.exit(1);
+  }
+
+  await ensureDir(imagesRoot);
 
   let total = 0, created = 0, skipped = 0;
-  for await (const f of walk(inputDir, outputDir)) {
+  for await (const f of walk(inputDir, imagesRoot)) {
     if (!isImageFile(f)) continue;
     total++;
     try {
-      const res = await processImage(f, inputDir, outputDir, quality);
+      const res = await processImage(f, contentRoot, imagesRoot, quality);
       created += res.created;
       skipped += res.skipped;
     } catch (e) {
