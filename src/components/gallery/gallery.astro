@@ -1,6 +1,6 @@
 ---
 import {yaml_to_grid_images,select_masonry} from './grid_utils.js'
-import PhotoGallery from '../photoswipe/Gallery.astro'
+import OptimisedImg from './OptimisedImg.astro'
 
 export interface Props {
     code: string;
@@ -27,10 +27,19 @@ if(mas == null){
             itemtype="http://schema.org/ImageGallery"
             data-pswp-width={image.width} 
             data-pswp-height={image.height} >
-            {(image.ext == ".svg")?
-                <object data={image.url} />:
-                <img src={image.url} />
-            }
+                        {(image.ext == ".svg")?
+                                <object data={image.url} />:
+                                <OptimisedImg
+                                    src={image.url}
+                                    rel={image.rel}
+                                    dirpath={dirpath}
+                                    width={image.width}
+                                    height={image.height}
+                                    masonry={mas}
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                        }
         </a>
     ))}
 </div>

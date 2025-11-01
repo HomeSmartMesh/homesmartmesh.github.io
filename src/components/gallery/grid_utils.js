@@ -49,6 +49,7 @@ async function yaml_to_grid_images(code,dirpath){
         const url = await relAssetToUrl(relFile,dirpath)
         imagesUrls.push({
             url,
+            rel: relFile,
             ext:extname(url).toLowerCase(),
             name:getFilenameWithoutExtension(relFile),
             width,
