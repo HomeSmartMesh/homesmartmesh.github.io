@@ -76,14 +76,17 @@ Links
 * Orbbec OpenNI SDK : https://github.com/orbbec/OpenNI_SDK
     * OpenNI API : https://github.com/orbbec/OpenNI_SDK/blob/main/Doc/English/0400_API.md
 
-# Bringup testing
+# Python Bringup testing
 before starting with ROS2, every function of the robot is tested separately with native drivers and as few softwre layers as possible.
-
-## Control board
 
 :button[]{label="Control board python joystick" link="https://github.com/Roblibs/rovi_control_board" icon="github"}
 
 Testing the ROS Control board with unitary python scripts, then with a joystick.
+
+# ROS Workspace
+An overview of the ros packaegs and the exchanged topics
+
+![package_flow](./rovi_packages.drawio.svg)
 
 # Gallery
 ```yaml gallery
