@@ -2,6 +2,12 @@
 title: Room View Bot
 description: A car robot platform based on the Yahboom Rosmaster X3-Plus mecanum chassis, customized sensors and fresh new ROS2 Jazzy software for native ubuntu 24 development (no docker) on Raspberry pi 5
 order: 1
+image: ./room_view_bot/20251018_141343.jpg
+tags: [raspi5, ros2, lidar, depth]
+features:
+    - Mecanum wheels
+    - RPLidar A1 UP
+    - ORBBEC Depth Astra Stereo S U3
 ---
 
 # Description

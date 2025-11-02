@@ -6,6 +6,11 @@ lastmod: 2021-03-07T08:00:00+00:00
 draft: false
 image: /images/robotics/rover_concept.png
 order: 1
+tags: [ros, simulation, bldc]
+features:
+    - Concept only
+    - Gazebo simulation
+    - BLDC control
 ---
 
 # Overview

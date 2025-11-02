@@ -5,6 +5,11 @@ date: 2021-03-07T08:00:00+00:00
 lastmod: 2021-03-07T08:00:00+00:00
 image: /images/robotics/valetudo_map.png
 order: 2
+tags: [hover, lidar, mapping]
+features:
+  - modified firmware
+  - custom webapp
+  - telegram chat
 ---
 # Roborock s55
 :image[]{src="/images/robotics/roborock.png" width="400" }
