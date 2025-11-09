@@ -13,8 +13,8 @@ features:
 - Light, Temperature, Humidity, Pressure
 ---
 
-:button[]{link="/networks/thread/" label="Networks / Thread" }
-:button[]{link="/frameworks/chip/" label="Frameworks / CHIP" }
+:button[]{link="/protocols/thread/" label="Protocols / Thread" }
+:button[]{link="/protocols/matter/" label="Protocols / Matter" }
 
 # Overview
 ![Overview](/images/thread_sensortag/sensortag_v1.1.webp)
