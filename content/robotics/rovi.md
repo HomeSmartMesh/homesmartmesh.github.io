@@ -10,6 +10,10 @@ features:
     - ORBBEC Depth Astra Stereo S U3
 ---
 
+# Github
+
+:button[]{label="Rovi ROS2 Jazzy Workspace" link="https://github.com/Roblibs/rovi_ros_ws" icon="github"}
+
 # Description
 A car robot platform based on the Yahboom Rosmaster X3-Plus mecanum chassis, customized sensors and fresh new ROS2 Jazzy software for native ubuntu 24 development (no docker) on Raspberry pi 5
 
@@ -17,17 +21,18 @@ A car robot platform based on the Yahboom Rosmaster X3-Plus mecanum chassis, cus
 
 Photo from the latest development stage. The robot can be controlled with PS4 joystick over bluetooth and using python and Rosmaster_Lib.
 
-# Versions
+# Steps
 
 This robot will be built in stage with progressive functionalities
 
-| version | Description | Peripherals | Batteries | USB |
-| ---     |     ---  | --- | --- | --- |
-|Manual | Test car movement with a Joystick| WiFi, M-Control, BT Joystick | 12_V | Raspi_Ports |
-|Navi | ROS2 Navigation with Lidar | WiFi, M-Control, Lidar | 12_V + USB_Bank | x1 Hub |
-|Navi+ | Navigation with Depth obstacles avoidance | WiFi, M-Control, Lidar, Depth | 12_V + USB_Bank | x1 Hub |
-| VR | Stereo Camera for Virtual Reality telepresence and inspection | WiFi, M-Control, Lidar, Depth, Stereo_Cam | 12_V + USB_Bank | x1 Hub |
-| Interaction | Interactive voice communication | WiFi, M-Control, Lidar, Depth, Stereo_Cam, Mic_Array, Speaker | 12_V + USB_Bank | x2 Hubs |
+| version | status | Description | Peripherals | Batteries | USB |
+| ---     | ---    | ---         | ---         | ---       | --- |
+| Manual  | Done | Test car movement with a Joystick | WiFi, M-Control, BT Joystick | 12_V | Raspi_Ports |
+| Slam    | Done | ROS2 Slam with Lidar | WiFi, M-Control, Lidar | 12_V + USB_Bank | x1 Hub |
+| Navi    |  -     | ROS2 Slam+Nav with Lidar | WiFi, M-Control, Lidar | 12_V + USB_Bank | x1 Hub |
+| Navi+   |  -     | Slam+Nav with Depth obstacles avoidance | WiFi, M-Control, Lidar, Depth | 12_V + USB_Bank | x1 Hub |
+| VR      |  -     | Stereo Camera for Virtual Reality telepresence and inspection | WiFi, M-Control, Lidar, Depth, Stereo_Cam | 12_V + USB_Bank | x1 Hub |
+| Interaction | -  | Interactive voice communication | WiFi, M-Control, Lidar, Depth, Stereo_Cam, Mic_Array, Speaker | 12_V + USB_Bank | x2 Hubs |
 
 # USB Peripherals
 In order to extend the robot runtime, in addition to the the 12_V motors board battery, a second USB power bank is used to power the Raspberry Pi 5 and its USB peripherals.
