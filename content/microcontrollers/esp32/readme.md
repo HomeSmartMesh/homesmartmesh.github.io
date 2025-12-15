@@ -10,6 +10,7 @@ features:
 ---
 
 ```yaml cards
+- uid: esp32.waveshare-s3-3.5-inch-display
 - uid: esp32.c3-dev-kit-m1
 - uid: esp32.wall-display
 - uid: esp32.round-display
