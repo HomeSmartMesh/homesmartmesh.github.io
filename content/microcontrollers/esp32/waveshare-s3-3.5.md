@@ -14,5 +14,5 @@ features:
 
 ![display](./waveshare-3.5.png)
 
-- https://www.waveshare.com/esp32-s3-touch-lcd-3.5.htm
-
+- product : https://www.waveshare.com/esp32-s3-touch-lcd-3.5.htm
+- wiki : https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-3.5
