@@ -9,27 +9,29 @@ order: 1
 ---
 
 ```yaml cards
-- uid: protocols.matter
+- uid: robotics.room-view-bot
+  width_rem: 20
+- uid: 3dprinting
+  width_rem: 20
+- uid: frameworks.raspi-iot
+  width_rem: 20
+- uid: web.home-3d
+  width_rem: 20
+- uid: web.voronoi
   width_rem: 20
 - uid: protocols.ultrawideband
   width_rem: 20
 - uid: nrf52.thread-sensortag
   width_rem: 20
-- uid: frameworks.raspi-iot
-  width_rem: 20
 - uid: microcontrollers.esp32
   width_rem: 20
-- uid: 3dprinting
+- uid: protocols.matter
   width_rem: 20
 - uid: protocols.simple-mesh
   width_rem: 20
 - uid: protocols.thread
   width_rem: 20
 - uid: protocols.zigbee
-  width_rem: 20
-- uid: web.home-3d
-  width_rem: 40
-- uid: frameworks.home-assistant
   width_rem: 20
 ```
 

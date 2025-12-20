@@ -5,6 +5,10 @@ date: 2021-01-01T00:00:00+00:00
 lastmod: 2021-01-01T00:00:00+00:00
 order: 2
 image: /images/voronoi/screenshot.png
+features:
+  - Online Voronoi Editor
+  - Shaped tesslation
+  - SVG export
 ---
 
 # Webapp

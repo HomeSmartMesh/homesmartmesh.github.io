@@ -5,6 +5,7 @@ order: 1
 image: ./room_view_bot/20251018_141343.jpg
 tags: [raspi5, ros2, lidar, depth]
 features:
+    - ROS2 Jazzy on RPi5 Ubuntu24
     - Mecanum wheels
     - RPLidar A1 UP
     - ORBBEC Depth Astra Stereo S U3
