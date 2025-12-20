@@ -12,14 +12,22 @@ features:
 
 # Github
 
+The source code of all ROS2 packages developed in this project are available in this repo. The readme contains detailed documentation and diagrams.
+
 :button[]{label="Rovi ROS2 Jazzy Workspace" link="https://github.com/Roblibs/rovi_ros_ws" icon="github"}
 
 # Description
 A car robot platform based on the Yahboom Rosmaster X3-Plus mecanum chassis, customized sensors and fresh new ROS2 Jazzy software for native ubuntu 24 development (no docker) on Raspberry pi 5
 
-![rovi-controlled-with-joystick](./room_view_bot/20251018_141343.jpg)
+Video from the latest development stage. The robot can navigate to a goal while building a map with SLAM, control can also be overriden from a Joystick.
 
-Photo from the latest development stage. The robot can be controlled with PS4 joystick over bluetooth and using python and Rosmaster_Lib.
+:iframe[]{src="https://youtu.be/TfBXTf1QenI" title="Centered Video" center}
+
+
+This video below demonstrates the Mecanum wheels omnidirectional capabilities
+
+:iframe[]{src="https://youtu.be/-Qnhs4Jbu7k" title="Centered Video" center}
+
 
 # Steps
 
@@ -29,7 +37,7 @@ This robot will be built in stage with progressive functionalities
 | ---     | ---    | ---         | ---         | ---       | --- |
 | Manual  | Done | Test car movement with a Joystick | WiFi, M-Control, BT Joystick | 12_V | Raspi_Ports |
 | Slam    | Done | ROS2 Slam with Lidar | WiFi, M-Control, Lidar | 12_V + USB_Bank | x1 Hub |
-| Navi    |  -     | ROS2 Slam+Nav with Lidar | WiFi, M-Control, Lidar | 12_V + USB_Bank | x1 Hub |
+| Navi    | Done   | ROS2 Slam+Nav with Lidar | WiFi, M-Control, Lidar | 12_V + USB_Bank | x1 Hub |
 | Navi+   |  -     | Slam+Nav with Depth obstacles avoidance | WiFi, M-Control, Lidar, Depth | 12_V + USB_Bank | x1 Hub |
 | VR      |  -     | Stereo Camera for Virtual Reality telepresence and inspection | WiFi, M-Control, Lidar, Depth, Stereo_Cam | 12_V + USB_Bank | x1 Hub |
 | Interaction | -  | Interactive voice communication | WiFi, M-Control, Lidar, Depth, Stereo_Cam, Mic_Array, Speaker | 12_V + USB_Bank | x2 Hubs |
