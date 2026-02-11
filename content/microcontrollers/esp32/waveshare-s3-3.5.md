@@ -3,7 +3,7 @@ title: Waveshare S3 3.5 Inch display
 description: Touch display
 order: 5
 date: 2025-12-15T00:00:00+09:00
-image: waveshare-3.5.png.png
+image: waveshare-3.5.png
 tags: [Board,Display]
 features:
     - LCD 3.5 Inch
