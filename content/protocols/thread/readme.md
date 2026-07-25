@@ -10,7 +10,7 @@ features:
 - Boarder Router
 ---
 
-:button[]{link="/microcontrollers/nrf52/thread-sensortag/" label="Thread SensorTag"}
+:button[]{link="/microcontrollers/nrf52/thread_sensortag/" label="Thread SensorTag"}
 :button[]{link="/frameworks/zephyr/" label="Zephyr RTOS"}
 :button[]{link="/protocols/matter/" label="Project Matter"}
 

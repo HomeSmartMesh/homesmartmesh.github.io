@@ -12,14 +12,14 @@ toc: false
 # 3D Printing
 
 ```yaml cards
-- uid: 3dprinting.kayak-trailer
-- uid: 3dprinting.light-switch-cover
-- uid: 3dprinting.switch-socket-cover
-- uid: 3dprinting.under-desk-shelf
-- uid: 3dprinting.esp32-remote
-- uid: 3dprinting.handbag-hanger
-- uid: 3dprinting.house-model
-- uid: 3dprinting.voronoi-shapes
+- uid: 3dprinting.kayak_trailer
+- uid: 3dprinting.light_switch_cover
+- uid: 3dprinting.switch_socket_cover
+- uid: 3dprinting.under_desk_shelf
+- uid: 3dprinting.esp32_remote
+- uid: 3dprinting.handbag_hanger
+- uid: 3dprinting.house
+- uid: 3dprinting.voronoi
 ```
 
 # Get in touch

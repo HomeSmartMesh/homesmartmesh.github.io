@@ -32,7 +32,7 @@ For a detailed list of used devices and their documentation see the [devices lis
 :button[]{link="https://developers.meethue.com/develop/get-started-2/" label="meethue developers" }
 
 * [Hue Light Control](/frameworks/raspi/#hue-light-control) from Aquara wall switches and buttons
-* The [Smart Home3D webapp](/web/home-3d/) is using the hue API, and advanced light groups dimming with 3d sliders
+* The [Smart Home3D webapp](/web/home3d/) is using the hue API, and advanced light groups dimming with 3d sliders
 
 ### Zigbee2mqtt
 ✅ The most popular framework that enables DIY fans to use even non-standard devices on standard gateways
@@ -202,7 +202,7 @@ Unfortunately not supported by Zigbee2mqtt, but there's chance in case they move
 
 * cheap, around 9€ [on Mouser](https://www.mouser.de/ProductDetail/Nordic-Semiconductor/nRF52840-Dongle?qs=gTYE2QTfZfTbdrOaMHWEZg==)
 
-* See also its usage in the [custom mesh framework](/protocols/simple-mesh/#usb-dongle-nrf52840).
+* See also its usage in the [custom mesh framework](/protocols/simple_mesh/#usb-dongle-nrf52840).
 
 ### Eurotronics Heating
 

@@ -15,7 +15,7 @@ features:
 # Simple Mesh Overview
 A simpler, more efficient alternative to Z-x, BL-x, Thread, standard RF protocols. Open source SW is provided for custom and off the shelf nRF SoC tags and dongles.
 
-:button[]{link="/microcontrollers/nrf52/simple-mesh-sensortag" label="Simple Mesh SensorTag" }
+:button[]{link="/microcontrollers/nrf52/simplemesh_sensortag" label="Simple Mesh SensorTag" }
 
 :button[]{link="https://github.com/HomeSmartMesh/sdk-hsm-sensortag" label="Simple Mesh and thread on Zephyr" icon="github" }
 
@@ -99,7 +99,7 @@ application/01_sensortag> make paramw
 * Smooth graphana logs with cyclic broadcast ~ 30 sec => battery life ~ 6 month on CR2032
 * `make paramw` detects the device uid and writes the config parameters available in [nodes.json](https://github.com/nRFMesh/nRF52_Mesh/blob/master/nodes.json)
 
-:button[]{link="/microcontrollers/nrf52/simple-mesh-sensortag" label="Simple Mesh SensorTag details..."}
+:button[]{link="/microcontrollers/nrf52/simplemesh_sensortag" label="Simple Mesh SensorTag details..."}
 
 ## uart dongle
 ```shell
@@ -115,7 +115,7 @@ application/04_uart_dongle> make paramw
 * RF Mesh repeater + RF Mesh to Host interface
 * `make paramw` detects the device uid and writes the config parameters available in [nodes.json](https://github.com/nRFMesh/nRF52_Mesh/blob/master/nodes.json)
 
-:button[]{link="/microcontrollers/nrf52/nrf52832-uart-dongle" label="UART Dongle details..."}
+:button[]{link="/microcontrollers/nrf52/uart_dongle" label="UART Dongle details..."}
 
 ## usb dongle (nRF52840)
 ```shell

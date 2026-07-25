@@ -4,10 +4,10 @@ order: 4
 ---
 
 ```yaml cards
-- uid: microcontrollers.nrf52.uwb-dwm1001-dev
-- uid: microcontrollers.nrf52.thread-sensortag
-- uid: microcontrollers.nrf52.simple-mesh-sensortag
-- uid: microcontrollers.nrf52.nrf52840-usb-dongle
-- uid: microcontrollers.nrf52.nrf52832-uart-dongle
-- uid: microcontrollers.nrf52.trick-tracker
+- uid: microcontrollers.nrf52.dwm1001_dev
+- uid: microcontrollers.nrf52.thread_sensortag
+- uid: microcontrollers.nrf52.simplemesh_sensortag
+- uid: microcontrollers.nrf52.usb_dongle
+- uid: microcontrollers.nrf52.uart_dongle
+- uid: microcontrollers.nrf52.trick_tracker
 ```

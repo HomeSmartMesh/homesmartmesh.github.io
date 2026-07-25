@@ -79,7 +79,7 @@ send_custom_event("three_param",{name:"Kitchen", push:0.3});
 
 Step by step details with 12 example in the link below :
 
-:button[]{link="/web/web-three-interface/" label="Web Three Interface"}
+:button[]{link="/web/web_three_interface/" label="Web Three Interface" }
 
 ## Hue lights usage
 Note : This project is not related to the hue devices supplier and is a simple user of the provided API.

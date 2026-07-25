@@ -7,6 +7,6 @@ Robotics section
 
 ```yaml cards
 - uid: robotics.rovi
-- uid: robotics.roborock-valetudo
-- uid: robotics.rover-balance
+- uid: robotics.roborock
+- uid: robotics.rover
 ```

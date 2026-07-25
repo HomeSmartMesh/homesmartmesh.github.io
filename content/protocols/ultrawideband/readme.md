@@ -11,8 +11,8 @@ features:
 - Qorvo/Decawave Modules evaluation
 ---
 
-:button[]{link="/microcontrollers/nrf52/uwb-dwm3001-cdk/" label="Microcontrollers / nRF52 / UWB DWM3001 cdk" }
-:button[]{link="/microcontrollers/nrf52/uwb-dwm1001-dev/" label="Microcontrollers / nRF52 / UWB DWM1001 dev" }
+:button[]{link="/microcontrollers/nrf52/dwm3001_cdk/" label="Microcontrollers / nRF52 / UWB DWM3001 cdk" }
+:button[]{link="/microcontrollers/nrf52/dwm1001_dev/" label="Microcontrollers / nRF52 / UWB DWM1001 dev" }
 
 An Ultra-Wide-Band networks can form a mesh network, in addition, the main feature is the RTLS: Real-Time-Locating-System capability.
 
@@ -394,7 +394,7 @@ the screenshot was made from the below commit which is a separate branch not inc
 ## RTLS Gen 2
 ### DWM3001 cdk
 
-:button[]{link="/microcontrollers/nrf52/uwb-dwm3001-cdk/" label="Microcontrollers / nRF52 / UWB DWM3001 cdk" }
+:button[]{link="/microcontrollers/nrf52/dwm3001_cdk/" label="Microcontrollers / nRF52 / UWB DWM3001 cdk" }
 :image[]{src="./dwm3001-cdk.webp" width="150px"}
 
 * form factor 65 mm x 45 mm (single board)
@@ -428,7 +428,7 @@ UWM Chips available from Decawave, now Qorvo. Qorvo is also the supplier of Appl
 
 More details about the UWB DWM1001 development kit :
 :image{src="./DWM1001 DevKit.png" width="150px" }
-:button[]{link="/microcontrollers/nrf52/uwb-dwm1001-dev/" label="Microcontrollers / nRF52 / UWB DWM1001 dev" }
+:button[]{link="/microcontrollers/nrf52/dwm1001_dev/" label="Microcontrollers / nRF52 / UWB DWM1001 dev" }
 ## DW Tranceiver
 available in a Decawave webpage
 
@@ -626,7 +626,7 @@ check that your raspberry pi is a model 3b not b+ with 100 Mbit only with `sudo 
 * the webapp is provided on the raspberry pi on the path `/var/www/html/`.
 * The webapp is based on [three.js](https://threejs.org/) which is a viable choice for 3d gemoetry calculations of anchors and tag coordinates.
 * The view is limited to an orthogonal projection which makes the app 2d only. Although the created tags and anchros are actual 3d meshes, only 2d shapes appear on the screen.
-* The down side of 3d is the need for ray casting to create click events on objects. But on the upside it's a frameowrk that can easily extend to 3D models. Maybe for the future, Decawave will get inspired by the [smart home 3d webapp](/web/home-3d/) project.
+* The down side of 3d is the need for ray casting to create click events on objects. But on the upside it's a frameowrk that can easily extend to 3D models. Maybe for the future, Decawave will get inspired by the [smart home 3d webapp](/web/home3d/) project.
 * The menus are handled with injected jquery html with classes.
 * All in all, this webapp is an amazing user experience and a reference for open design, that's how all mdoern apps should be
 

@@ -30,7 +30,7 @@ This `mobile first` webapp from the [web/home-next](https://github.com/HomeSmart
 :image[]{src="/images/devices.png" width="600" }
 
 * Thread
-  * See [Thread SensorTag](/microcontrollers/nrf52/thread-sensortag/)
+  * See [Thread SensorTag](/microcontrollers/nrf52/thread_sensortag/)
 * Zigbee
   * Hue Light with Hue gateway
   * Eurotronics thermostats with zigbee2mqtt
@@ -193,7 +193,7 @@ Attempt to unify interfaces in one app. Result is quite a success though require
 this python script listens to an ipv6 udp port and takes a text in the form of `mqtt_topic{json_payload}` then broadcasts the `json_payload` on the `mqtt_topic` of the configured mqtt broquer in the [config.json]() file
 
 usage with a thread sensor gag
-:button[]{link="/microcontrollers/nrf52/thread-sensortag#tag_sensors_broadcast" label="tag sensors broadcast"}
+:button[]{link="/microcontrollers/nrf52/thread_sensortag#tag_sensors_broadcast" label="tag sensors broadcast"}
 
 
 ## Led Panel webapp

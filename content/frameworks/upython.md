@@ -6,7 +6,7 @@ lastmod: 2021-04-03T08:00:00+00:00
 order: 6
 ---
 
-:button[]{label="nRF52840 usb dongle" link="/microcontrollers/nrf52/nrf52840-usb-dongle"}
+:button[]{label="nRF52840 usb dongle" link="/microcontrollers/nrf52/usb_dongle" }
 
 # cross compiler
 * note `CROSS_COMPILE` is referencing the system toolchain with loose recommendations `7.3.1/2Q18 or 8.2.1/4Q18.`

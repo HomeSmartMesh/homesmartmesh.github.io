@@ -620,7 +620,7 @@ Memory region         Used Size  Region Size  %age Used
 
 
 :::details{summary="Does this Thread SensorTag support MQTT ?"}
-A first firmware was tested with MQTT-SN [MQTT Sensors Node](/protocols/thread/#mqtt-sensors-node), but given that it used the nRF SDK and not Zephyr, development was discontinued. As alternative a simple udp protocol with a python scripts can fulfill the broadcast function from openthread to an MQTT broker details in the [udp broadcast](/microcontrollers/nrf52/thread-sensortag/#tag_sensors_broadcast) example.
+A first firmware was tested with MQTT-SN [MQTT Sensors Node](/protocols/thread/#mqtt-sensors-node), but given that it used the nRF SDK and not Zephyr, development was discontinued. As alternative a simple udp protocol with a python scripts can fulfill the broadcast function from openthread to an MQTT broker details in the [udp broadcast](/microcontrollers/nrf52/thread_sensortag/#tag_sensors_broadcast) example.
 :::
 
 :::details{summary="Is it possible to save energy by collecting many sensor samples over time and sending them together?"}
