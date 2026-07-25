@@ -31,8 +31,8 @@ For a detailed list of used devices and their documentation see the [devices lis
 
 :button[]{link="https://developers.meethue.com/develop/get-started-2/" label="meethue developers" }
 
-* [Hue Light Control](/docs/raspi/readme/#hue-light-control) from Aquara wall switches and buttons
-* The [Smart Home3D webapp](/docs/applications/home3d/) is using the hue API, and advanced light groups dimming with 3d sliders
+* [Hue Light Control](/frameworks/raspi/#hue-light-control) from Aquara wall switches and buttons
+* The [Smart Home3D webapp](/web/home-3d/) is using the hue API, and advanced light groups dimming with 3d sliders
 
 ### Zigbee2mqtt
 ✅ The most popular framework that enables DIY fans to use even non-standard devices on standard gateways
@@ -202,7 +202,7 @@ Unfortunately not supported by Zigbee2mqtt, but there's chance in case they move
 
 * cheap, around 9€ [on Mouser](https://www.mouser.de/ProductDetail/Nordic-Semiconductor/nRF52840-Dongle?qs=gTYE2QTfZfTbdrOaMHWEZg==)
 
-* See also its usage in the [custom mesh framework](/docs/networks/nrf/#08-usb-dongle-nrf52840-dongle).
+* See also its usage in the [custom mesh framework](/protocols/simple-mesh/#usb-dongle-nrf52840).
 
 ### Eurotronics Heating
 
@@ -233,8 +233,7 @@ Provided measures
 
 Used in applications
 
-* [Home heating app](/docs/raspi/readme/#home-heating-app)
-* [Heat cut rule](/docs/raspi/readme/#heat-cut)
+* [Home heating app](/frameworks/raspi/#home-heating-app)
+* [Heat cut rule](/frameworks/raspi/#heat-cut)
 
 ❌ Unresolved Problem : it happened few times in 2 years that a device starts spontaneously heating with full power after a sort of connection loss or self reset. Not funny when this happens in summer, especially when someone is not at home. No answer from the support.
-

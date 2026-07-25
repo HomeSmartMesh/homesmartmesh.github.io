@@ -54,4 +54,4 @@ The gola of this Automation is to adjust the volume of the sonos system with the
 * MQTT-SN integration should be trensparent to Home Assistant and treated as any other MQTT connection
 * MQTT-SN is a light weight protocol that plays the role of a bridge between an MQTT broker and constrained devices that need to minimise payload and packets traffic. Therefore it's appropriate for Low power wirelss mesh netwroks such as Thread
 
-:button[]{link="/networks/thread#mqtt-sn" label="Thread - MQTT-SN"}
+:button[]{link="/protocols/thread#mqtt-sn" label="Thread - MQTT-SN"}

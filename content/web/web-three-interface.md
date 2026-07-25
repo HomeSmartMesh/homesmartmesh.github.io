@@ -18,7 +18,7 @@ This repository has boilerplates samples. A real use case example is a 3d home m
 
 :image[]{ src="/images/floor_temperature.png" width="400" }
 
-:button[]{ link="/docs/applications/home3d/" label="Smart Home 3d Webapp" }
+:button[]{ link="/web/home-3d/" label="Smart Home 3d Webapp"}
 
 Now back to the "Web three Interface"
 

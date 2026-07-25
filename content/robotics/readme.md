@@ -6,7 +6,7 @@ order: 2
 Robotics section
 
 ```yaml cards
-- uid: robotics.room-view-bot
+- uid: robotics.rovi
 - uid: robotics.roborock-valetudo
 - uid: robotics.rover-balance
 ```

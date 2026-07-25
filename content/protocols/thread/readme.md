@@ -10,9 +10,9 @@ features:
 - Boarder Router
 ---
 
-:button[]{link="/microcontrollers/nrf52/thread_sensortag/" label="Thread SensorTag"}
+:button[]{link="/microcontrollers/nrf52/thread-sensortag/" label="Thread SensorTag"}
 :button[]{link="/frameworks/zephyr/" label="Zephyr RTOS"}
-:button[]{link="/frameworks/matter/" label="Project Matter"}
+:button[]{link="/protocols/matter/" label="Project Matter"}
 
 # Overview
 ![Openthread Environment](./openthread-environment-1.1.svg)
@@ -523,7 +523,7 @@ ClientList can not open the Predefined Topic List.     /etc/predefinedTopic.conf
 # Build with Matter Node
 As the `Matter Protocol` can run over `Thread`, it is possible to connect Matter applications.
 
-:button[]{link="/frameworks/matter/" label="More about Project Matter"}
+:button[]{link="/protocols/matter/" label="More about Project Matter"}
 
 # Command Line Interface
 

@@ -15,7 +15,7 @@ features:
 # Simple Mesh Overview
 A simpler, more efficient alternative to Z-x, BL-x, Thread, standard RF protocols. Open source SW is provided for custom and off the shelf nRF SoC tags and dongles.
 
-:button[]{link="/microcontrollers/nrf52/simplemesh_sensortag" label="Simple Mesh SensorTag" }
+:button[]{link="/microcontrollers/nrf52/simple-mesh-sensortag" label="Simple Mesh SensorTag" }
 
 :button[]{link="https://github.com/HomeSmartMesh/sdk-hsm-sensortag" label="Simple Mesh and thread on Zephyr" icon="github" }
 
@@ -45,7 +45,7 @@ see below the [Drivers & Custom Mesh protocol](#drivers--custom-mesh-protocol) s
 ## Description
 * 2 Mbps (e.g. Zgibee is at 250 Kbps to have a higher range), lowering the bitrate does not improve the range enough to get rid of repeaters, and once you need repeaters these are continuous listeners and require permanent power anyway, so the strategy is to have a repeater for every slot of the house and those repeaters can have power amplifiers and the range problem is solved keeping the high bitrate feature.
 * successfull stress tests including up to 300 packets / second.
-* This [nodes.json](./nodes.json) configuration file contains the short id for device unique identifier (uid64) and other configurations such as the channel, the sleep time, the required function,... Note that a python script using jLink API automate the flashing process as the uid is read every time from the attached device and matches the parameters to be flashed from the config file.
+* This [nodes.json](https://github.com/nRFMesh/nRF52_Mesh/blob/master/nodes.json) configuration file contains the short id for device unique identifier (uid64) and other configurations such as the channel, the sleep time, the required function,... Note that a python script using jLink API automate the flashing process as the uid is read every time from the attached device and matches the parameters to be flashed from the config file.
 * As the short id (8 bits) is flashed, there is no association process required and all sensor devices can act as a pure beacons (no listening required) which considerably increases battery life time. We can keep arguing about the need of an acknowledged protocol for sensors logging, I do not think it is required as the feedback of battery level and rssi are both logged as well so the user knows if the sensor is in a healthy position or not.
 * Router = Coordinator = Repeater = Sniffer = CLI : actually, a configuration activates the repeat functionality in case someone wants a completely stealth sniffer and this config does not require a different FW. There is nothing to coordinate as the mesh is fully dynamic with a flood and time to live concept. And every dongle has a CLI in text mode to report heard packets and takes commands as text input.
 * A consequence of the simplified design allows to have multiple dongles in different locations listening to the network and reporting it to mqtt which avoids any single point of failure. By design there is no id 0 privileged coordinator and end devices do not require to know any particular associated address, they just wake up, broadcast and sleep.
@@ -97,9 +97,9 @@ application/01_sensortag> make paramw
 * Temperature, Humidity, Pressure : BME280
 * Light : MAX44009
 * Smooth graphana logs with cyclic broadcast ~ 30 sec => battery life ~ 6 month on CR2032
-* `make paramw` detects the device uid and writes the config parameters available in [nodes.json](./nodes.json)
+* `make paramw` detects the device uid and writes the config parameters available in [nodes.json](https://github.com/nRFMesh/nRF52_Mesh/blob/master/nodes.json)
 
-:button[]{link="/microcontrollers/nrf52/simplemesh_sensortag" label="Simple Mesh SensorTag details..."}
+:button[]{link="/microcontrollers/nrf52/simple-mesh-sensortag" label="Simple Mesh SensorTag details..."}
 
 ## uart dongle
 ```shell
@@ -113,9 +113,9 @@ application/04_uart_dongle> make paramw
 * buy : "nRF52832 BLE USB UART dongle"
 * custom firmware and pogo-pins jtag adapter see below
 * RF Mesh repeater + RF Mesh to Host interface
-* `make paramw` detects the device uid and writes the config parameters available in [nodes.json](./nodes.json)
+* `make paramw` detects the device uid and writes the config parameters available in [nodes.json](https://github.com/nRFMesh/nRF52_Mesh/blob/master/nodes.json)
 
-:button[]{link="/microcontrollers/nrf52/uart_dongle" label="UART Dongle details..."}
+:button[]{link="/microcontrollers/nrf52/nrf52832-uart-dongle" label="UART Dongle details..."}
 
 ## usb dongle (nRF52840)
 ```shell
@@ -129,7 +129,7 @@ application/08_usb_dongle> make paramw
 * custom firmware for RF mesh
 * RF Mesh repeater + RF Mesh to Host interface
 * buffered USB CDC tx and rx
-* `make paramw` detects the device uid and writes the config parameters available in [nodes.json](./nodes.json)
+* `make paramw` detects the device uid and writes the config parameters available in [nodes.json](https://github.com/nRFMesh/nRF52_Mesh/blob/master/nodes.json)
 * pogo-pins jtag adapter 3dprint : 
   * [Version two CAD Model](https://a360.co/3jr91PD)
   * [Version one Fusion360 CAD model](https://a360.co/2CDqeTA)
@@ -139,7 +139,7 @@ application/08_usb_dongle> make paramw
 # Protocol
 
 
-The directory `./drivers/` contains the custom drivers for this project from which the [mesh.c](./drivers/mesh.c) a Simple Mesh Protocol connecting all the devices using a custom RF protocol (without softdevice)
+The directory `./drivers/` contains the custom drivers for this project from which the [mesh.c](https://github.com/nRFMesh/nRF52_Mesh/blob/master/drivers/mesh.c) a Simple Mesh Protocol connecting all the devices using a custom RF protocol (without softdevice)
 * Sleepy nodes (low power) and router nodes (always listening)
 * single layer ultra simple rpotocol. App into mac with unique ids to small ids mapping
 * A simple alternative to the Bluetooth Mesh and Zigbee Thread IPV6
@@ -246,7 +246,7 @@ Contains the Makefile extensions that allow :
 
 ![PyLink](/images/pylink.png)
 
-* `nodes.json` is provided locally in this repo and the docker command [nodes-server.sh](./nodes-server.sh) can also serve it at http://hostname:8080/nodes.json
+* `nodes.json` is provided locally in this repo and the docker command [nodes-server.sh](https://github.com/nRFMesh/nRF52_Mesh/blob/master/nodes-server.sh) can also serve it at http://hostname:8080/nodes.json
 
 ![Nodes json](/images/nodes.json.png)
 
@@ -259,7 +259,7 @@ Once in the application directory just use ```make conf``` to call a cmsis [conf
 ![Cmsis Wizard](/images/cmsis-wizard.png)
 
 ### Automated mesh devices configuration
- User data flashing is done with Pylink which reads in [uicr.py](tools\uicr.py) the registers of the attached device, look it up in the **config** file, retrives which parameters should be flashed, the mapping of parameters to CUSTOMER_X registers come from "uicr_map.json".
+ User data flashing is done with Pylink which reads in [uicr.py](https://github.com/nRFMesh/nRF52_Mesh/blob/master/tools/uicr.py) the registers of the attached device, look it up in the **config** file, retrives which parameters should be flashed, the mapping of parameters to CUSTOMER_X registers come from "uicr_map.json".
 
 ## simple board switch
 The repo contais a directory for boards declaration "boards/" and a directory for applications "applications/". Although every application targets a particular board, it is possible to use any application for any other board. In the makefile a sinlge line has to be edited

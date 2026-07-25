@@ -6,7 +6,7 @@ lastmod: 2021-02-20T08:00:00+00:00
 order: 5
 ---
 
-:button[]{link="/docs/networks/thread/" label="Thread Protocol" }
+:button[]{link="/protocols/thread/" label="Thread Protocol"}
 :button[]{link="/docs/frameworks/chip/" label="Project Matter" }
 
 # Trace with with SystemView

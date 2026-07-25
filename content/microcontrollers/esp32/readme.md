@@ -10,18 +10,18 @@ features:
 ---
 
 ```yaml cards
-- uid: esp32.esp32-c3-0.42-oled
-- uid: esp32.waveshare-s3-3.5-inch-display
-- uid: esp32.c3-dev-kit-m1
-- uid: esp32.wall-display
-- uid: esp32.round-display
-- uid: esp32.s2-saola-1
-- uid: esp32.ttgo-t-display
-- uid: esp32.m5-stick-c-plus
-- uid: esp32.timer-cam-ov3660
-- uid: esp32.firebeetle
-- uid: esp32.m5-atom-lite
-- uid: esp32.ttgo-t5-epaper
-- uid: esp32.thermostat-control
-- uid: esp32.esp32-d1-mini
+- uid: microcontrollers.esp32.esp32-c3-0-42-oled
+- uid: microcontrollers.esp32.waveshare-s3-3-5-inch-display
+- uid: microcontrollers.esp32.c3-dev-kit-m1
+- uid: microcontrollers.esp32.wall-display
+- uid: microcontrollers.esp32.round-display
+- uid: microcontrollers.esp32.s2-saola-1
+- uid: microcontrollers.esp32.ttgo-t-display
+- uid: microcontrollers.esp32.m5-stick-c-plus
+- uid: microcontrollers.esp32.timer-cam-ov3660
+- uid: microcontrollers.esp32.firebeetle
+- uid: microcontrollers.esp32.m5-atom-lite
+- uid: microcontrollers.esp32.ttgo-t5-epaper
+- uid: microcontrollers.esp32.thermostat-control
+- uid: microcontrollers.esp32.esp32-d1-mini
 ```

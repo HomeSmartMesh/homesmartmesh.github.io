@@ -4,19 +4,19 @@ description: collection of Microcontroller boards, ready made and custom made fo
 order: 5
 ---
 ```yaml cards
-- uid: nrf52.uwb-dwm1001-dev
-- uid: nrf52.thread-sensortag
-- uid: nrf52.simple-mesh-sensortag
-- uid: esp32.ttgo-t-display
-- uid: esp32.m5-stick-c-plus
-- uid: esp32.timer-cam-ov3660
-- uid: esp32.ttgo-t5-epaper
-- uid: esp32.thermostat-control
-- uid: esp32.m5-stick-v
+- uid: microcontrollers.nrf52.uwb-dwm1001-dev
+- uid: microcontrollers.nrf52.thread-sensortag
+- uid: microcontrollers.nrf52.simple-mesh-sensortag
+- uid: microcontrollers.esp32.ttgo-t-display
+- uid: microcontrollers.esp32.m5-stick-c-plus
+- uid: microcontrollers.esp32.timer-cam-ov3660
+- uid: microcontrollers.esp32.ttgo-t5-epaper
+- uid: microcontrollers.esp32.thermostat-control
+- uid: microcontrollers.esp32.m5-stick-v
   width_rem: 20
-- uid: stm32.black-pill
-- uid: stm32.dev-ebox-f407
-- uid: nrf52.nrf52840-usb-dongle
-- uid: stm32.blue-pill
-- uid: nrf52.nrf52832-uart-dongle
+- uid: microcontrollers.stm32.black-pill
+- uid: microcontrollers.stm32.dev-ebox-f407
+- uid: microcontrollers.nrf52.nrf52840-usb-dongle
+- uid: microcontrollers.stm32.blue-pill
+- uid: microcontrollers.nrf52.nrf52832-uart-dongle
 ```

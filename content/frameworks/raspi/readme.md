@@ -1,6 +1,5 @@
 ---
 title: Raspi IoT
-slug: raspi-iot
 description: raspberry pi server for home automation. For developers, startups, students and hobbyist who want to understand the basics of home automation and IoT and use it for their own projects and products. Networks devices using Thread, Zigbee, wifi are are centralized with mqtt then controlled with servies based on python and node.js scripts interacting with web apps as user Front End.
 order: 1
 date: 2020-10-06T08:48:57+00:00
@@ -31,7 +30,7 @@ This `mobile first` webapp from the [web/home-next](https://github.com/HomeSmart
 :image[]{src="/images/devices.png" width="600" }
 
 * Thread
-  * See [Thread SensorTag](/docs/microcontrollers/nrf52/thread_sensortag/)
+  * See [Thread SensorTag](/microcontrollers/nrf52/thread-sensortag/)
 * Zigbee
   * Hue Light with Hue gateway
   * Eurotronics thermostats with zigbee2mqtt
@@ -61,18 +60,18 @@ This `mobile first` webapp from the [web/home-next](https://github.com/HomeSmart
   * Zigbee2mqtt : https://www.zigbee2mqtt.io/
   * nrf2mqtt : [github nRF52_Mesh nrf_mesh](https://github.com/nRFMesh/nRF52_Mesh/tree/master/raspi/nrf_mesh)
   * miflora2mqtt : https://github.com/RaymondMouthaan/miflora-mqtt-daemon
-  * telegram bots2mqtt : [js/telegraf](./js/telegraf) based on https://github.com/telegraf/telegraf
+  * telegram bots2mqtt : [js/telegraf](https://github.com/HomeSmartMesh/raspi/tree/master/js/telegraf) based on https://github.com/telegraf/telegraf
 * automation services
-  * Light control : [py/hue](./py/hue)
-  * Phantom Load cut : [js/pc_control](./js/pc_control)
-  * Heat cut : [py/heating](./py/heating)
-  * Home status : [py/home_status](./py/home_status)
-  * Roborock button : [py/hover](./py/hover)
+  * Light control : [py/hue](https://github.com/HomeSmartMesh/raspi/tree/master/py/hue)
+  * Phantom Load cut : [js/pc_control](https://github.com/HomeSmartMesh/raspi/tree/master/js/pc_control)
+  * Heat cut : [py/heating](https://github.com/HomeSmartMesh/raspi/tree/master/py/heating)
+  * Home status : [py/home_status](https://github.com/HomeSmartMesh/raspi/tree/master/py/home_status)
+  * Roborock button : [py/hover](https://github.com/HomeSmartMesh/raspi/tree/master/py/hover)
 * user interface
   * 3D webapp : https://github.com/HomeSmartMesh/smart_home_3d_webapp
-  * Led panel : [js/leds_panel](./js/leds_panel)
-  * Bed heating : [js/bed_heating](./js/bed_heating)
-  * Roborock Chat : [js/telegraf/hover_poll.js](./js/telegraf/hover_poll.js)
+  * Led panel : [js/leds_panel](https://github.com/HomeSmartMesh/raspi/tree/master/js/leds_panel)
+  * Bed heating : [js/bed_heating](https://github.com/HomeSmartMesh/raspi/tree/master/js/bed_heating)
+  * Roborock Chat : [js/telegraf/hover_poll.js](https://github.com/HomeSmartMesh/raspi/blob/master/js/telegraf/hover_poll.js)
 * others
   * graphql sensors : experimental service, details in [js/graphql](https://github.com/HomeSmartMesh/raspi/blob/master/js/graphql/readme.md)
 
@@ -194,7 +193,7 @@ Attempt to unify interfaces in one app. Result is quite a success though require
 this python script listens to an ipv6 udp port and takes a text in the form of `mqtt_topic{json_payload}` then broadcasts the `json_payload` on the `mqtt_topic` of the configured mqtt broquer in the [config.json]() file
 
 usage with a thread sensor gag
-:button[]{link="/docs/microcontrollers/nrf52/thread_sensortag#tag_sensors_broadcast" label="tag sensors broadcast"}
+:button[]{link="/microcontrollers/nrf52/thread-sensortag#tag_sensors_broadcast" label="tag sensors broadcast"}
 
 
 ## Led Panel webapp
@@ -258,7 +257,7 @@ The control of the heating has a feedback that ensures the execution of the comm
 
 ### python heat windows monitor
 
-1. adjust your mqtt configuration in [config.json](raspi/heat/config.json)
+1. adjust your mqtt configuration in [config.json](https://github.com/HomeSmartMesh/raspi/blob/master/heat/config.json)
 2. adjust the eurotronic heater topic and apertures (apertures are the contact sensors list)
 ```json
     "heatings":{
@@ -302,7 +301,7 @@ zig/living heat {
 ## Bed Heating app
 :image[]{src="/images/bed_heating.png" width="400" }
 
-* web app : [js/bed_heater](./js/bed_heating/)
+* web app : [js/bed_heater](https://github.com/HomeSmartMesh/raspi/tree/master/js/bed_heating)
 
 ### Bed Heating hardware
 :image[]{src="/images/esp_32_bed_heater.png" width="200" }
@@ -316,7 +315,7 @@ zig/living heat {
 :image[]{src="/images/hover_chat.png" width="600" }
 
 * using the amazing node.js telegraf framework : https://github.com/telegraf/telegraf
-* Roborock Chat : [js/telegraf/hover_poll.js](./js/telegraf/hover_poll.js)
+* Roborock Chat : [js/telegraf/hover_poll.js](https://github.com/HomeSmartMesh/raspi/blob/master/js/telegraf/hover_poll.js)
 
 ## Hue Light control
 
@@ -387,7 +386,7 @@ zig/living heat {
 * Some home devices especially device clusters such as TV sets and surroundings or PC and surroundings do have a significant cumulated power usage when in a standby mode.
 * Who likes to pay money for non used electricity ?
 * Who likes to keep remembering each time and toggling switching on locations hard to access ?
-* This scrips [js/pc_control](./js/pc_control) comes to the rescue and does this for you in a smart way.
+* This scrips [js/pc_control](https://github.com/HomeSmartMesh/raspi/tree/master/js/pc_control) comes to the rescue and does this for you in a smart way.
 
 ### Features
 * configurable standby power level. For example a TV set with sound system consumes 100 W to 200 W but when on standby, still ~ 11 W
@@ -405,7 +404,7 @@ zig/living heat {
 * Opening a window without remembering to switch the heating off can cost a peak of heat that consists of the major power cost of the whole day !
 * The smart detection based on temperature drop is no reliable and only acts late sometimes when not necessary.
 * With a simple aquara contact switch the system is now reliable
-* Python service : [py/heating](./py/heating)
+* Python service : [py/heating](https://github.com/HomeSmartMesh/raspi/tree/master/py/heating)
 
 ## Home status
 :image[]{src="/images/shelly_status.png" width="150"}
@@ -441,7 +440,7 @@ Below are the control URLs to turn led color on and off
 :button[]{link="/3dprinting/light-switch-cover/" label="3D print a Light Switch Cover"}
 
 ## Roborock button
-As Roborock [valetudo](https://github.com/Hypfer/Valetudo) provides an mqtt interface, all it takes is this script [py/hover](./py/hover) to order cleaning of a room or a section with a click on an aquara zigbee button.
+As Roborock [valetudo](https://github.com/Hypfer/Valetudo) provides an mqtt interface, all it takes is this script [py/hover](https://github.com/HomeSmartMesh/raspi/tree/master/py/hover) to order cleaning of a room or a section with a click on an aquara zigbee button.
 
 ## zigbee
 ### graphview

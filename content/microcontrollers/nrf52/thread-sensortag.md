@@ -89,7 +89,7 @@ dir: ./swd-pogo
 ## Openthread Dongle
 This section includes instructions how to create an openthread dongle called `Radio Co-Processor` (RCP), that needs to be flashed then attached to the raspberry pi USB port.
  
-:button[]{ link="/networks/thread#radio-co-processor-rcp" label="nRF52840-usb RCP"}
+:button[]{ link="/protocols/thread#radio-co-processor-rcp" label="nRF52840-usb RCP"}
 ## Raspberry Pi Setup
 This section includes steps to install all needed services to run the SensorTag udp-v6 broadcast to mqtt, influxdb and grafana this also inlcudes the boarder router setup as intermediate step.
  
@@ -620,7 +620,7 @@ Memory region         Used Size  Region Size  %age Used
 
 
 :::details{summary="Does this Thread SensorTag support MQTT ?"}
-A first firmware was tested with MQTT-SN [MQTT Sensors Node](/docs/networks/thread/#mqtt-sensors-node), but given that it used the nRF SDK and not Zephyr, development was discontinued. As alternative a simple udp protocol with a python scripts can fulfill the broadcast function from openthread to an MQTT broker details in the [udp broadcast](/docs/microcontrollers/nrf52/thread_sensortag/#tag_sensors_broadcast) example.
+A first firmware was tested with MQTT-SN [MQTT Sensors Node](/protocols/thread/#mqtt-sensors-node), but given that it used the nRF SDK and not Zephyr, development was discontinued. As alternative a simple udp protocol with a python scripts can fulfill the broadcast function from openthread to an MQTT broker details in the [udp broadcast](/microcontrollers/nrf52/thread-sensortag/#tag_sensors_broadcast) example.
 :::
 
 :::details{summary="Is it possible to save energy by collecting many sensor samples over time and sending them together?"}

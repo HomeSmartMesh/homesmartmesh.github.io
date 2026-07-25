@@ -22,7 +22,7 @@ features:
 :image[]{src="/images/home3d/uwb-tag-3d.gif" width=600 }
 
 UWB development environment
-:button[]{link="/docs/networks/ultrawideband/" label="Networks / Ultra Wide Band RTLS" }
+:button[]{link="/protocols/ultrawideband/" label="Networks / Ultra Wide Band RTLS" }
 
 Support, reviews, experience exchange and ideas related to this page content can be discussed in the dedicated forum category
 :button[]{link="https://github.com/HomeSmartMesh/smart_home_3d_webapp/discussions" label="Discussions - 3d webapp " icon="github" }
@@ -79,7 +79,7 @@ send_custom_event("three_param",{name:"Kitchen", push:0.3});
 
 Step by step details with 12 example in the link below :
 
-:button[]{link="/docs/applications/web_three_interface/" label="Web Three Interface" }
+:button[]{link="/web/web-three-interface/" label="Web Three Interface"}
 
 ## Hue lights usage
 Note : This project is not related to the hue devices supplier and is a simple user of the provided API.
@@ -236,7 +236,7 @@ The [web_three_interface](https://github.com/HomeSmartMesh/web_three_interface) 
 * 3d slider positioning relative to child world coordinate
 * glTF model with custom properties (hue, mqtt, mouse)
 * mqtt: events forward to javascript events
-* stats and fps. (can be disabled in [config.json](./config.js))
+* stats and fps. (can be disabled in [config.json](https://github.com/HomeSmartMesh/smart_home_3d_webapp/blob/master/config.js))
 * heaters pi_heating_demand on heater mesh colors
 * rooms temperature on floor color
 * EffectComposer and outlinePass for app selected interactive objects (`three_param:outline`)

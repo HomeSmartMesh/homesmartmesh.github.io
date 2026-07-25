@@ -8,8 +8,8 @@ image: []
 # Relates to
 :button[]{link="/microcontrollers/esp32/esp-mesh_wrapper/" label="ESP-Now Wrapper" }
 ## Mesh Alternatives
-:button[]{link="/networks/thread/" label="Thread" }
-:button[]{link="/networks/thread/" label="Zigbee" }
+:button[]{link="/protocols/thread/" label="Thread"}
+:button[]{link="/protocols/zigbee/" label="Zigbee" }
 :button[]{link="/networks/nrf/" label="Simple Mesh" }
 
 # Github repo
@@ -220,5 +220,5 @@ If you need support, want to ask a question or suggest an idea, you can join the
 :button[]{link="https://github.com/HomeSmartMesh/website/discussions" icon="github" label="Home Smart Mesh - Discussions"}
 
 :::details{summary="What are the alternatives to ESP-Mesh ?"}
-The ESP devices do implement wifi and Bluetooth standards, when it comes to the ESP-Mesh, it is a custom protocol and not used beyond Espressif devices, therefore when it comes to 2.4 GHz mesh solutions, Standards exist and are in quick expansion such as [Zigbee](/docs/networks/zigbee/) and [Thread](/docs/networks/thread/).
+The ESP devices do implement wifi and Bluetooth standards, when it comes to the ESP-Mesh, it is a custom protocol and not used beyond Espressif devices, therefore when it comes to 2.4 GHz mesh solutions, Standards exist and are in quick expansion such as [Zigbee](/protocols/zigbee/) and [Thread](/protocols/thread/).
 :::

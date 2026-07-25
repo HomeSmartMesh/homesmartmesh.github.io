@@ -12,7 +12,7 @@ features:
 ---
 # Relates to
 :button[]{link="/frameworks/zephyr/" label="Zephyr RTOS"}
-:button[]{link="/networks/thread/" label="OpenThread Guide"}
+:button[]{link="/protocols/thread/" label="OpenThread Guide"}
 
 previously known as `CHIP`
 
