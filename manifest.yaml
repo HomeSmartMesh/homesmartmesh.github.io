@@ -1,0 +1,20 @@
+# Workspace configuration for the @microwebstacks/md-render engine
+# (https://github.com/MicroWebStacks/astro-huge-doc).
+#
+# Only values that differ from the engine defaults are set here; everything
+# else (collect settings, code highlighting languages, output paths) comes
+# from the engine's own DEFAULT_MANIFEST. The engine build is driven from
+# .github/workflows/deploy.yml, which owns site/base and the output path.
+render:
+  folder: content
+
+# The engine defaults to a local Kroki instance (http://localhost:18000),
+# which does not exist on a GitHub runner. Point it at the public service.
+kroki:
+  server: https://kroki.io
+
+diagram:
+  languages:
+    plantuml: client
+    mermaid: client
+    blockdiag: kroki

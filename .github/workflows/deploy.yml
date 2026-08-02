@@ -1,11 +1,17 @@
 name: Deploy to GitHub Pages
 
+# The site is rendered by the MicroWebStacks md-render engine
+# (https://github.com/MicroWebStacks/astro-huge-doc), not by an Astro project
+# checked into this repository. This repository owns content/, public/,
+# manifest.yaml and this workflow; the renderer is pinned below and installed
+# by the Action.
+
 on:
   # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch’s name
   push:
     branches: [ main ]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
+  # Allows a render-only test run from any branch: the deploy job is gated to
+  # main, so a branch run builds and uploads the artifact without publishing.
   workflow_dispatch:
 
 # Allow this job to clone the repo and create a page deployment
@@ -14,21 +20,42 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
-  build:
+  render:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
-      - name: Install, build, and upload your site
-        uses: withastro/action@v2
+
+      - name: Render static site
+        id: render
+        # Pinned to a SHA: astro-huge-doc has no release tags yet.
+        uses: MicroWebStacks/astro-huge-doc@fc0d7d2314abcb46830708dde46de9b0d90049db
         with:
-          # path: . # The root location of your Astro project inside the repository. (optional)
-          node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 20. (optional)
-          package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+          # Exact @microwebstacks/md-render version. There is no default on
+          # purpose: versions before 0.0.24 lack the `build` command the
+          # Action calls.
+          engine-version: '0.0.24'
+          # Node 20 is deprecated on runners; the engine requires 22+ and the
+          # Action rejects anything lower before it installs.
+          node-version: '24'
+          workspace: '.'
+          out-dir: 'dist'
+          # User/org Pages site, served from the domain root, so no `base`.
+          site: 'https://homesmartmesh.github.io/'
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ steps.render.outputs.artifact-path }}
 
   deploy:
-    needs: build
+    needs: render
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
